@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "Ezan Vakti Pro+",
+    "slug": "ezan-vakti-pro",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0d7a3e"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ezanvakti.pro",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Kible yonunu ve namaz vakitlerini hesaplamak icin konumunuz gerekli.",
+        "NSMotionUsageDescription": "Kible pusulasi icin hareket sensoru gerekli."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0d7a3e"
+      },
+      "package": "com.ezanvakti.pro",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "VIBRATE",
+        "RECEIVE_BOOT_COMPLETED"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-location",
+      "expo-sensors",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#0d7a3e"
+        }
+      ],
+      "expo-font"
+    ],
+    "scheme": "ezanvakti"
+  }
+}
