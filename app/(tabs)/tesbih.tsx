@@ -5,265 +5,215 @@ import {
   StyleSheet,
   TouchableOpacity,
   useColorScheme,
+  TextInput,
+  ActivityIndicator,
+  Platform,
   Dimensions,
   ScrollView,
-  Animated,
 } from 'react-native';
-import * as Haptics from 'expo-haptics';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import Svg, { Circle } from 'react-native-svg';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Colors, Spacing, FontSize, BorderRadius, Shadows } from '@/constants/theme';
+import * as Haptics from 'expo-haptics';
+import { safeHaptics } from '@/lib/haptics';
+import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const { width } = Dimensions.get('window');
-const BUTTON_SIZE = width * 0.65;
-
-interface DhikrType {
+interface Dhikr {
   id: string;
-  arabic: string;
-  turkish: string;
-  meaning: string;
-  defaultTarget: number;
+  name: string;
+  target: number;
+  count: number;
 }
 
-const dhikrTypes: DhikrType[] = [
-  {
-    id: 'subhanallah',
-    arabic: 'سُبْحَانَ اللّهِ',
-    turkish: 'Subhanallah',
-    meaning: "Allah'ı tüm eksikliklerden tenzih ederim",
-    defaultTarget: 33,
-  },
-  {
-    id: 'elhamdulillah',
-    arabic: 'الْحَمْدُ لِلّهِ',
-    turkish: 'Elhamdulillah',
-    meaning: "Hamd Allah'a mahsustur",
-    defaultTarget: 33,
-  },
-  {
-    id: 'allahuekber',
-    arabic: 'اللّهُ أَكْبَرُ',
-    turkish: 'Allahu Ekber',
-    meaning: 'Allah en büyüktür',
-    defaultTarget: 33,
-  },
-  {
-    id: 'lailaheillallah',
-    arabic: 'لَا إِلَهَ إِلَّا اللّهُ',
-    turkish: 'La İlahe İllallah',
-    meaning: "Allah'tan başka ilah yoktur",
-    defaultTarget: 100,
-  },
-  {
-    id: 'estagfirullah',
-    arabic: 'أَسْتَغْفِرُ اللّهَ',
-    turkish: 'Estağfirullah',
-    meaning: "Allah'tan bağışlanma dilerim",
-    defaultTarget: 100,
-  },
-  {
-    id: 'salavat',
-    arabic: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ',
-    turkish: 'Salavat',
-    meaning: "Allah'ım Muhammed'e salat eyle",
-    defaultTarget: 100,
-  },
+const DEFAULT_DHIKRS: Dhikr[] = [
+  { id: '1', name: 'Sübhânallâh', target: 33, count: 0 },
+  { id: '2', name: 'Elhamdülillâh', target: 33, count: 0 },
+  { id: '3', name: 'Allâhuekber', target: 33, count: 0 },
+  { id: '4', name: 'Lâ ilâhe illallâh', target: 100, count: 0 },
+  { id: '5', name: 'Estağfirullâh', target: 100, count: 0 },
 ];
 
 export default function TesbihScreen() {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
-  const [selectedDhikr, setSelectedDhikr] = useState<DhikrType>(dhikrTypes[0]);
-  const [count, setCount] = useState(0);
-  const [target, setTarget] = useState(33);
-  const [totalCount, setTotalCount] = useState(0);
-  const [vibrationEnabled, setVibrationEnabled] = useState(true);
-  const [scaleAnim] = useState(new Animated.Value(1));
+  const [dhikrs, setDhikrs] = useState<Dhikr[]>(DEFAULT_DHIKRS);
+  const [activeDhikrIndex, setActiveDhikrIndex] = useState(0);
 
   useEffect(() => {
     loadData();
   }, []);
 
-  useEffect(() => {
-    saveData();
-  }, [totalCount]);
-
   const loadData = async () => {
     try {
-      const savedTotal = await AsyncStorage.getItem('tesbih_total');
-      if (savedTotal) {
-        setTotalCount(parseInt(savedTotal, 10));
+      const saved = await AsyncStorage.getItem('dhikrs_data');
+      if (saved) {
+        setDhikrs(JSON.parse(saved));
       }
     } catch (error) {
-      console.log('Veri yüklenemedi:', error);
+      console.log('Error loading dhikrs:', error);
     }
   };
 
-  const saveData = async () => {
+  const saveData = async (newData: Dhikr[]) => {
     try {
-      await AsyncStorage.setItem('tesbih_total', totalCount.toString());
+      await AsyncStorage.setItem('dhikrs_data', JSON.stringify(newData));
     } catch (error) {
-      console.log('Veri kaydedilemedi:', error);
+      console.log('Error saving dhikrs:', error);
     }
-  };
-
-  const animateButton = () => {
-    Animated.sequence([
-      Animated.timing(scaleAnim, {
-        toValue: 0.95,
-        duration: 50,
-        useNativeDriver: true,
-      }),
-      Animated.timing(scaleAnim, {
-        toValue: 1,
-        duration: 50,
-        useNativeDriver: true,
-      }),
-    ]).start();
   };
 
   const handlePress = () => {
-    const newCount = count + 1;
-    setCount(newCount);
-    setTotalCount((prev) => prev + 1);
-    animateButton();
-
-    if (vibrationEnabled) {
-      if (newCount >= target) {
-        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-      } else if (newCount % 33 === 0) {
-        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
-      } else {
-        Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-      }
+    const newDhikrs = [...dhikrs];
+    const dhikr = newDhikrs[activeDhikrIndex];
+    
+    dhikr.count += 1;
+    
+    if (dhikr.count === dhikr.target) {
+      safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+      
+      // Otomatik bir sonraki zikre gecis
+      setTimeout(() => {
+        if (activeDhikrIndex < dhikrs.length - 1) {
+          setActiveDhikrIndex(prev => prev + 1);
+        } else {
+          // Sonuncudaysa basa don (opsiyonel, genelde namaz tesbihati icin kullanilir)
+          setActiveDhikrIndex(0);
+        }
+      }, 500); // Kullanicinin 33 oldugunu gormesi icin kisa bir gecikme
+    } else {
+      safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     }
+
+    setDhikrs(newDhikrs);
+    saveData(newDhikrs);
   };
 
-  const handleReset = () => {
-    setCount(0);
-    if (vibrationEnabled) {
-      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
-    }
+  const resetCount = () => {
+    const newDhikrs = [...dhikrs];
+    newDhikrs[activeDhikrIndex].count = 0;
+    setDhikrs(newDhikrs);
+    saveData(newDhikrs);
+    safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
   };
 
-  const selectDhikr = (dhikr: DhikrType) => {
-    setSelectedDhikr(dhikr);
-    setTarget(dhikr.defaultTarget);
-    setCount(0);
-  };
-
-  const progress = Math.min((count / target) * 100, 100);
+  const currentDhikr = dhikrs[activeDhikrIndex];
+  const progress = Math.min(currentDhikr.count / currentDhikr.target, 1);
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
-      <LinearGradient
-        colors={[colors.primary, colors.secondary]}
-        style={styles.header}
-      >
-        <View style={styles.totalBadge}>
-          <Text style={styles.totalLabel}>Toplam Zikir</Text>
-          <Text style={styles.totalValue}>{totalCount.toLocaleString()}</Text>
-        </View>
-        <TouchableOpacity 
-          style={styles.vibrationToggle}
-          onPress={() => setVibrationEnabled(!vibrationEnabled)}
-        >
-          <Ionicons 
-            name={vibrationEnabled ? "notifications" : "notifications-off"} 
-            size={24} 
-            color="#fff" 
-          />
-        </TouchableOpacity>
+      <LinearGradient colors={Gradients.premium} style={styles.header}>
+        <Text style={styles.headerTitle}>TESBİHMATİK</Text>
+        <Text style={styles.headerSubtitle}>Zikir ve Tesbihat</Text>
       </LinearGradient>
 
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        style={styles.dhikrSelector}
-        contentContainerStyle={styles.dhikrSelectorContent}
+      <ScrollView 
+        style={styles.mainContent} 
+        contentContainerStyle={styles.scrollContent}
+        showsVerticalScrollIndicator={false}
       >
-        {dhikrTypes.map((dhikr) => (
-          <TouchableOpacity
-            key={dhikr.id}
-            style={[
-              styles.dhikrChip,
-              {
-                backgroundColor: selectedDhikr.id === dhikr.id ? colors.primary : colors.card,
-                borderColor: selectedDhikr.id === dhikr.id ? colors.primary : colors.border,
-              },
-              Shadows.light,
-            ]}
-            onPress={() => selectDhikr(dhikr)}
-          >
-            <Text
-              style={[
-                styles.dhikrChipText,
-                { color: selectedDhikr.id === dhikr.id ? '#fff' : colors.text },
-              ]}
+        {/* Main Counter Display */}
+        <View style={styles.counterSection}>
+          <View style={styles.ringWrapper}>
+            {/* SVG Circular Progress */}
+            <Svg width={240} height={240} style={styles.progressSvg}>
+              {/* Background Circle */}
+              <Circle
+                cx="120"
+                cy="120"
+                r="105"
+                stroke={colors.primary + '10'}
+                strokeWidth="10"
+                fill="transparent"
+              />
+              {/* Progress Circle */}
+              <Circle
+                cx="120"
+                cy="120"
+                r="105"
+                stroke={colors.primary}
+                strokeWidth="10"
+                fill="transparent"
+                strokeDasharray={`${2 * Math.PI * 105}`}
+                strokeDashoffset={`${2 * Math.PI * 105 * (1 - progress)}`}
+                strokeLinecap="round"
+                transform="rotate(-90 120 120)"
+              />
+            </Svg>
+
+            <LinearGradient
+              colors={[colors.surface, colors.background]}
+              style={[styles.innerCircle, Shadows.premium]}
             >
-              {dhikr.turkish}
-            </Text>
-          </TouchableOpacity>
-        ))}
-      </ScrollView>
+              <Text style={[styles.currentDhikrName, { color: colors.primary }]}>
+                {currentDhikr.name}
+              </Text>
+              <Text style={[styles.counterText, { color: colors.text }]}>
+                {currentDhikr.count}
+              </Text>
+              <View style={[styles.targetBadge, { backgroundColor: colors.primary + '10' }]}>
+                <Text style={[styles.targetText, { color: colors.primary }]}>
+                  HEDEF: {currentDhikr.target}
+                </Text>
+              </View>
+            </LinearGradient>
+          </View>
 
-      <View style={styles.content}>
-        <View style={styles.textSection}>
-          <Text style={[styles.arabicText, { color: colors.primary }]}>
-            {selectedDhikr.arabic}
-          </Text>
-          <Text style={[styles.meaningText, { color: colors.textSecondary }]}>
-            {selectedDhikr.meaning}
-          </Text>
-        </View>
-
-        <View style={styles.counterContainer}>
-          <Animated.View style={{ transform: [{ scale: scaleAnim }] }}>
-            <TouchableOpacity
-              onPress={handlePress}
-              activeOpacity={1}
+          {/* Large Tactile Button */}
+          <TouchableOpacity
+            activeOpacity={0.8}
+            onPress={handlePress}
+            style={styles.mainButtonWrapper}
+          >
+            <LinearGradient
+              colors={Gradients.primary}
               style={[styles.mainButton, Shadows.premium]}
             >
-              <LinearGradient
-                colors={[colors.primary, colors.secondary]}
-                style={styles.buttonGradient}
-              >
-                <View style={styles.counterDisplay}>
-                  <Text style={styles.countText}>{count}</Text>
-                  <View style={styles.targetIndicator}>
-                    <Text style={styles.targetText}>HEDEF: {target}</Text>
-                  </View>
-                </View>
-                
-                {/* Simulated Progress Ring */}
-                <View style={[styles.progressRing, { borderColor: 'rgba(255,255,255,0.2)' }]} />
-                <View 
-                  style={[
-                    styles.progressRingFill, 
-                    { 
-                      borderColor: colors.accent,
-                      borderRightColor: progress > 25 ? colors.accent : 'transparent',
-                      borderBottomColor: progress > 50 ? colors.accent : 'transparent',
-                      borderLeftColor: progress > 75 ? colors.accent : 'transparent',
-                    }
-                  ]} 
-                />
-              </LinearGradient>
-            </TouchableOpacity>
-          </Animated.View>
-        </View>
+              <Ionicons name="finger-print" size={42} color="#fff" />
+              <Text style={styles.buttonText}>ZİKRET</Text>
+            </LinearGradient>
+          </TouchableOpacity>
 
-        <View style={styles.footer}>
-          <TouchableOpacity
-            style={[styles.resetButton, { backgroundColor: colors.card }, Shadows.medium]}
-            onPress={handleReset}
-          >
-            <Ionicons name="refresh" size={28} color={colors.primary} />
-            <Text style={[styles.resetText, { color: colors.primary }]}>SIFIRLA</Text>
+          <TouchableOpacity onPress={resetCount} style={styles.resetBtn}>
+            <Ionicons name="refresh" size={24} color={colors.textMuted} />
+            <Text style={[styles.resetText, { color: colors.textMuted }]}>Sıfırla</Text>
           </TouchableOpacity>
         </View>
-      </View>
+
+        {/* Dhikr List */}
+        <View style={styles.listSection}>
+          <Text style={[styles.listTitle, { color: colors.textSecondary }]}>ZİKİR SEÇİMİ</Text>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.scrollList}>
+            {dhikrs.map((item, index) => (
+              <TouchableOpacity
+                key={item.id}
+                onPress={() => {
+                  setActiveDhikrIndex(index);
+                  safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                }}
+                style={[
+                  styles.dhikrCard,
+                  { backgroundColor: activeDhikrIndex === index ? colors.primary : colors.surface },
+                  activeDhikrIndex === index ? Shadows.medium : Shadows.light
+                ]}
+              >
+                <Text style={[styles.dhikrCardName, { color: activeDhikrIndex === index ? '#fff' : colors.text }]}>
+                  {item.name}
+                </Text>
+                <View style={[styles.dhikrCardInfo, { borderTopColor: activeDhikrIndex === index ? 'rgba(255,255,255,0.2)' : colors.border }]}>
+                  <Text style={[styles.dhikrCardCount, { color: activeDhikrIndex === index ? '#fff' : colors.primary }]}>
+                    {item.count}
+                  </Text>
+                  <Text style={[styles.dhikrCardTarget, { color: activeDhikrIndex === index ? 'rgba(255,255,255,0.6)' : colors.textMuted }]}>
+                    / {item.target}
+                  </Text>
+                </View>
+              </TouchableOpacity>
+            ))}
+          </ScrollView>
+        </View>
+        <View style={{ height: 100 }} />
+      </ScrollView>
     </View>
   );
 }
@@ -273,146 +223,150 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    paddingTop: 60,
-    paddingBottom: 20,
+    paddingTop: Platform.OS === 'ios' ? 60 : 40,
+    paddingBottom: 40,
     paddingHorizontal: Spacing.lg,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
     borderBottomLeftRadius: BorderRadius.xl,
     borderBottomRightRadius: BorderRadius.xl,
+    alignItems: 'center',
   },
-  totalBadge: {
-    backgroundColor: 'rgba(255,255,255,0.2)',
-    paddingHorizontal: Spacing.md,
-    paddingVertical: Spacing.sm,
-    borderRadius: BorderRadius.lg,
+  headerTitle: {
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: '900',
+    letterSpacing: 4,
   },
-  totalLabel: {
-    color: 'rgba(255,255,255,0.8)',
-    fontSize: 10,
-    fontWeight: '700',
+  headerSubtitle: {
+    color: 'rgba(255,255,255,0.7)',
+    fontSize: 12,
+    fontWeight: '600',
+    marginTop: 4,
     textTransform: 'uppercase',
-  },
-  totalValue: {
-    color: '#fff',
-    fontSize: FontSize.lg,
-    fontWeight: '800',
-  },
-  vibrationToggle: {
-    width: 44,
-    height: 44,
-    borderRadius: 22,
-    backgroundColor: 'rgba(255,255,255,0.2)',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  dhikrSelector: {
-    maxHeight: 60,
-    marginTop: Spacing.md,
-  },
-  dhikrSelectorContent: {
-    paddingHorizontal: Spacing.md,
-    gap: Spacing.sm,
-    height: 50,
-  },
-  dhikrChip: {
-    paddingHorizontal: Spacing.lg,
-    justifyContent: 'center',
-    borderRadius: BorderRadius.full,
-    borderWidth: 1,
-    height: 40,
-  },
-  dhikrChipText: {
-    fontSize: FontSize.sm,
-    fontWeight: '700',
-  },
-  content: {
-    flex: 1,
-    justifyContent: 'space-between',
-    paddingVertical: Spacing.xl,
-  },
-  textSection: {
-    alignItems: 'center',
-    paddingHorizontal: Spacing.xl,
-  },
-  arabicText: {
-    fontSize: 36,
-    fontWeight: '700',
-    textAlign: 'center',
-    marginBottom: Spacing.sm,
-  },
-  meaningText: {
-    fontSize: FontSize.sm,
-    textAlign: 'center',
-    fontStyle: 'italic',
-  },
-  counterContainer: {
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  mainButton: {
-    width: BUTTON_SIZE,
-    height: BUTTON_SIZE,
-    borderRadius: BUTTON_SIZE / 2,
-    overflow: 'hidden',
-  },
-  buttonGradient: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  counterDisplay: {
-    alignItems: 'center',
-  },
-  countText: {
-    fontSize: 84,
-    fontWeight: '800',
-    color: '#fff',
-  },
-  targetIndicator: {
-    backgroundColor: 'rgba(255,255,255,0.2)',
-    paddingHorizontal: Spacing.md,
-    paddingVertical: 4,
-    borderRadius: BorderRadius.full,
-    marginTop: -10,
-  },
-  targetText: {
-    color: '#fff',
-    fontSize: 10,
-    fontWeight: '700',
     letterSpacing: 1,
   },
-  progressRing: {
-    position: 'absolute',
-    width: BUTTON_SIZE - 20,
-    height: BUTTON_SIZE - 20,
-    borderRadius: (BUTTON_SIZE - 20) / 2,
-    borderWidth: 2,
+  mainContent: {
+    flex: 1,
+    marginTop: -20,
   },
-  progressRingFill: {
-    position: 'absolute',
-    width: BUTTON_SIZE - 20,
-    height: BUTTON_SIZE - 20,
-    borderRadius: (BUTTON_SIZE - 20) / 2,
-    borderWidth: 6,
-    transform: [{ rotate: '-45deg' }],
+  scrollContent: {
+    paddingBottom: 40,
   },
-  footer: {
+  counterSection: {
     alignItems: 'center',
+    paddingTop: Spacing.xl,
     paddingBottom: Spacing.xl,
   },
-  resetButton: {
+  ringWrapper: {
+    width: 240,
+    height: 240,
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
+    marginBottom: Spacing.xl,
+  },
+  progressSvg: {
+    position: 'absolute',
+  },
+  innerCircle: {
+    width: 190,
+    height: 190,
+    borderRadius: 95,
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 1,
+  },
+  currentDhikrName: {
+    fontSize: 14,
+    fontWeight: '800',
+    textTransform: 'uppercase',
+    letterSpacing: 1,
+    marginBottom: Spacing.sm,
+  },
+  counterText: {
+    fontSize: 64,
+    fontWeight: '900',
+    fontVariant: ['tabular-nums'],
+  },
+  targetBadge: {
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: BorderRadius.full,
+    marginTop: Spacing.md,
+  },
+  targetText: {
+    fontSize: 10,
+    fontWeight: '900',
+    letterSpacing: 1,
+  },
+  mainButtonWrapper: {
+    marginBottom: Spacing.xl,
+  },
+  mainButton: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 4,
+    borderColor: 'rgba(255,255,255,0.2)',
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 12,
+    fontWeight: '900',
+    marginTop: 8,
+    letterSpacing: 1,
+  },
+  resetBtn: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: Spacing.sm,
-    paddingHorizontal: Spacing.xl,
-    paddingVertical: Spacing.md,
-    borderRadius: BorderRadius.full,
+    gap: 4,
+    opacity: 0.6,
   },
   resetText: {
+    fontSize: 14,
+    fontWeight: '700',
+  },
+  listSection: {
+    marginTop: Spacing.lg,
+    paddingLeft: Spacing.md,
+  },
+  listTitle: {
+    fontSize: 11,
     fontWeight: '800',
-    letterSpacing: 1,
-    fontSize: FontSize.sm,
+    letterSpacing: 2,
+    marginBottom: Spacing.md,
+  },
+  scrollList: {
+    paddingRight: Spacing.md,
+    gap: Spacing.md,
+  },
+  dhikrCard: {
+    width: 140,
+    padding: Spacing.lg,
+    borderRadius: BorderRadius.lg,
+    justifyContent: 'space-between',
+    minHeight: 100,
+  },
+  dhikrCardName: {
+    fontSize: 13,
+    fontWeight: '700',
+    lineHeight: 18,
+  },
+  dhikrCardInfo: {
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    marginTop: Spacing.sm,
+    paddingTop: Spacing.sm,
+    borderTopWidth: 1,
+  },
+  dhikrCardCount: {
+    fontSize: 18,
+    fontWeight: '800',
+  },
+  dhikrCardTarget: {
+    fontSize: 10,
+    fontWeight: '600',
+    marginLeft: 2,
   },
 });

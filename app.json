@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Ezan Vakti Pro+",
-    "slug": "ezan-vakti-pro",
+    "name": "Ezan Vakti + Hatim",
+    "slug": "ezan-vakti-hatim",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -16,7 +16,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.ezanvakti.pro",
+      "bundleIdentifier": "com.ezanvakti.hatim",
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "Kible yonunu ve namaz vakitlerini hesaplamak icin konumunuz gerekli.",
         "NSMotionUsageDescription": "Kible pusulasi icin hareket sensoru gerekli."
@@ -27,7 +27,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0d7a3e"
       },
-      "package": "com.ezanvakti.pro",
+      "package": "com.ezanvakti.hatim",
       "permissions": [
         "ACCESS_FINE_LOCATION",
         "ACCESS_COARSE_LOCATION",
@@ -52,6 +52,6 @@
       ],
       "expo-font"
     ],
-    "scheme": "ezanvakti"
+    "scheme": "ezanvaktihatim"
   }
 }

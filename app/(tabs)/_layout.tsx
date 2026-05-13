@@ -1,7 +1,7 @@
 import { Tabs } from 'expo-router';
-import { useColorScheme } from 'react-native';
+import { useColorScheme, View, Platform } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { Colors } from '@/constants/theme';
+import { Colors, Shadows, BorderRadius } from '@/constants/theme';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme() ?? 'light';
@@ -12,41 +12,43 @@ export default function TabLayout() {
       screenOptions={{
         tabBarActiveTintColor: colors.primary,
         tabBarInactiveTintColor: colors.textMuted,
+        headerShown: false, // Sayfa içlerinde özel header kullanacağız
         tabBarStyle: {
-          backgroundColor: colors.card,
-          borderTopColor: colors.border,
-          height: 60,
-          paddingBottom: 8,
-          paddingTop: 8,
+          backgroundColor: colors.surface,
+          borderTopWidth: 0,
+          height: Platform.OS === 'ios' ? 88 : 68,
+          paddingBottom: Platform.OS === 'ios' ? 28 : 12,
+          paddingTop: 12,
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          ...Shadows.medium,
         },
         tabBarLabelStyle: {
-          fontSize: 11,
-          fontWeight: '600',
-        },
-        headerStyle: {
-          backgroundColor: colors.primary,
-        },
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-          fontWeight: 'bold',
+          fontSize: 10,
+          fontWeight: '700',
+          marginTop: 4,
+          textTransform: 'uppercase',
+          letterSpacing: 0.5,
         },
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Namaz Vakitleri',
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="time-outline" size={size} color={color} />
+          title: 'Vakitler',
+          tabBarIcon: ({ color, focused }: { color: string; focused: boolean }) => (
+            <Ionicons name={focused ? "time" : "time-outline"} size={24} color={color} />
           ),
         }}
       />
       <Tabs.Screen
         name="kible"
         options={{
-          title: 'Kible',
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="compass-outline" size={size} color={color} />
+          title: 'Kıble',
+          tabBarIcon: ({ color, focused }: { color: string; focused: boolean }) => (
+            <Ionicons name={focused ? "compass" : "compass-outline"} size={24} color={color} />
           ),
         }}
       />
@@ -54,8 +56,8 @@ export default function TabLayout() {
         name="tesbih"
         options={{
           title: 'Tesbih',
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="radio-button-on-outline" size={size} color={color} />
+          tabBarIcon: ({ color, focused }: { color: string; focused: boolean }) => (
+            <Ionicons name={focused ? "radio-button-on" : "radio-button-on-outline"} size={24} color={color} />
           ),
         }}
       />
@@ -63,17 +65,17 @@ export default function TabLayout() {
         name="hatim"
         options={{
           title: 'Hatim',
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="book-outline" size={size} color={color} />
+          tabBarIcon: ({ color, focused }: { color: string; focused: boolean }) => (
+            <Ionicons name={focused ? "book" : "book-outline"} size={24} color={color} />
           ),
         }}
       />
       <Tabs.Screen
         name="dua"
         options={{
-          title: 'Dua',
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="heart-outline" size={size} color={color} />
+          title: 'Dualar',
+          tabBarIcon: ({ color, focused }: { color: string; focused: boolean }) => (
+            <Ionicons name={focused ? "heart" : "heart-outline"} size={24} color={color} />
           ),
         }}
       />

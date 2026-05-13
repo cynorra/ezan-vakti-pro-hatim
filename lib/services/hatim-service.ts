@@ -1,5 +1,4 @@
 import { supabase } from '../supabase';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export interface SharedHatim {
   id: string;
@@ -21,34 +20,8 @@ export interface SharedHatimJuz {
   completed_at?: string;
 }
 
-const IS_MOCK = !process.env.EXPO_PUBLIC_SUPABASE_URL || process.env.EXPO_PUBLIC_SUPABASE_URL === 'https://placeholder.supabase.co';
-
 export const hatimService = {
   async getSharedHatims(): Promise<SharedHatim[]> {
-    if (IS_MOCK) {
-      const mockData: SharedHatim[] = [
-        {
-          id: '1',
-          title: 'Ramazan Ayı Genel Hatim',
-          description: 'Hep birlikte Ramazan ayını hatimle taçlandırıyoruz.',
-          total_juz: 30,
-          completed_count: 18,
-          participants_count: 12,
-          ends_at: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).toISOString(),
-        },
-        {
-          id: '2',
-          title: 'Filistin İçin Fetih Suresi Hatmi',
-          description: 'Zulüm altındaki kardeşlerimiz için dualarımızla birleşiyoruz.',
-          total_juz: 30,
-          completed_count: 25,
-          participants_count: 28,
-          ends_at: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000).toISOString(),
-        }
-      ];
-      return mockData;
-    }
-
     const { data, error } = await supabase
       .from('shared_hatims')
       .select('*')
@@ -59,17 +32,6 @@ export const hatimService = {
   },
 
   async getHatimDetails(hatimId: string): Promise<SharedHatimJuz[]> {
-    if (IS_MOCK) {
-      // Return 30 juz with some completed
-      return Array.from({ length: 30 }, (_, i) => ({
-        id: `${hatimId}-${i + 1}`,
-        hatim_id: hatimId,
-        juz_number: i + 1,
-        is_completed: i < (hatimId === '1' ? 18 : 25),
-        user_name: i < (hatimId === '1' ? 18 : 25) ? 'Kullanıcı' : undefined,
-      }));
-    }
-
     const { data, error } = await supabase
       .from('shared_hatim_progress')
       .select('*')
@@ -81,11 +43,6 @@ export const hatimService = {
   },
 
   async joinHatim(hatimId: string, juzNumber: number, userName: string) {
-    if (IS_MOCK) {
-      console.log(`Joined hatim ${hatimId}, juz ${juzNumber} as ${userName}`);
-      return { success: true };
-    }
-
     const { error } = await supabase
       .from('shared_hatim_progress')
       .insert([
@@ -99,6 +56,25 @@ export const hatimService = {
       ]);
 
     if (error) throw error;
+    
+    // Ayrıca participants_count ve completed_count güncellenebilir (opsiyonel, şu an client-side hesaplanıyor)
     return { success: true };
+  },
+
+  async createSharedHatim(title: string, description: string, endsAt: string): Promise<SharedHatim> {
+    const { data, error } = await supabase
+      .from('shared_hatims')
+      .insert([
+        {
+          title,
+          description,
+          ends_at: endsAt,
+        }
+      ])
+      .select()
+      .single();
+
+    if (error) throw error;
+    return data;
   }
 };

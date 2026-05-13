@@ -4,198 +4,134 @@ import {
   Text,
   StyleSheet,
   useColorScheme,
-  Dimensions,
-  Platform,
   Animated,
+  Platform,
 } from 'react-native';
-import * as Haptics from 'expo-haptics';
-import { Magnetometer } from 'expo-sensors';
-import * as Location from 'expo-location';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Colors, Spacing, FontSize, BorderRadius, Shadows } from '@/constants/theme';
-
-const { width } = Dimensions.get('window');
-const COMPASS_SIZE = width * 0.85;
-
-// Kabe koordinatları
-const KAABA_LAT = 21.4225;
-const KAABA_LNG = 39.8262;
+import * as Location from 'expo-location';
+import * as Haptics from 'expo-haptics';
+import { safeHaptics } from '@/lib/haptics';
+import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 
 export default function KibleScreen() {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const [heading, setHeading] = useState(0);
-  const [qiblaDirection, setQiblaDirection] = useState(0);
-  const [locationError, setLocationError] = useState<string | null>(null);
-  const [rotationAnim] = useState(new Animated.Value(0));
-
-  const [wasPointing, setWasPointing] = useState(false);
+  const [qiblaDir, setQiblaDir] = useState(0);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   useEffect(() => {
-    const checkPointing = () => {
-      const isPointing = isPointingToQibla();
-      if (isPointing && !wasPointing) {
-        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-      }
-      setWasPointing(isPointing);
-    };
-    checkPointing();
-  }, [heading, qiblaDirection]);
-
-  useEffect(() => {
-    let subscription: { remove: () => void } | null = null;
-
-    const startCompass = async () => {
-      const { status: locationStatus } = await Location.requestForegroundPermissionsAsync();
-      if (locationStatus !== 'granted') {
-        setLocationError('Konum izni gerekli');
+    (async () => {
+      let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== 'granted') {
+        setErrorMsg('Konum izni verilmedi.');
         return;
       }
 
-      try {
-        const location = await Location.getCurrentPositionAsync({});
-        const qibla = calculateQiblaDirection(
-          location.coords.latitude,
-          location.coords.longitude
-        );
-        setQiblaDirection(qibla);
-      } catch (error) {
-        setLocationError('Konum alınamadı');
-      }
+      const location = await Location.getCurrentPositionAsync({});
+      // Kible acisi hesaplama (Kabe: 21.4225, 39.8262)
+      const lat1 = location.coords.latitude * Math.PI / 180;
+      const lon1 = location.coords.longitude * Math.PI / 180;
+      const lat2 = 21.4225 * Math.PI / 180;
+      const lon2 = 39.8262 * Math.PI / 180;
 
-      const isAvailable = await Magnetometer.isAvailableAsync();
-      if (!isAvailable) {
-        setLocationError('Pusula sensörü bulunamadı');
-        return;
-      }
+      const y = Math.sin(lon2 - lon1);
+      const x = Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(lon2 - lon1);
+      const qibla = (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
+      setQiblaDir(qibla);
 
-      Magnetometer.setUpdateInterval(100);
-      subscription = Magnetometer.addListener((data) => {
-        let angle = Math.atan2(data.y, data.x) * (180 / Math.PI);
-        if (Platform.OS === 'ios') {
-          angle = angle - 90;
+      Location.watchHeadingAsync((data) => {
+        setHeading(data.trueHeading);
+        
+        // Kibleye yaklasinca haptik geri bildirim
+        const diff = Math.abs(data.trueHeading - qibla);
+        if (diff < 2 || diff > 358) {
+          safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
         }
-        if (angle < 0) {
-          angle += 360;
-        }
-        setHeading(angle);
       });
-    };
-
-    startCompass();
-
-    return () => {
-      if (subscription) {
-        subscription.remove();
-      }
-    };
+    })();
   }, []);
 
-  const calculateQiblaDirection = (lat: number, lng: number): number => {
-    const latRad = (lat * Math.PI) / 180;
-    const lngRad = (lng * Math.PI) / 180;
-    const kaabaLatRad = (KAABA_LAT * Math.PI) / 180;
-    const kaabaLngRad = (KAABA_LNG * Math.PI) / 180;
-
-    const y = Math.sin(kaabaLngRad - lngRad);
-    const x =
-      Math.cos(latRad) * Math.tan(kaabaLatRad) -
-      Math.sin(latRad) * Math.cos(kaabaLngRad - lngRad);
-
-    let qibla = Math.atan2(y, x) * (180 / Math.PI);
-    if (qibla < 0) {
-      qibla += 360;
-    }
-    return qibla;
-  };
-
-  const getRotation = () => {
-    return qiblaDirection - heading;
-  };
-
-  const isPointingToQibla = () => {
-    const diff = Math.abs((getRotation() + 360) % 360);
-    return diff < 8 || diff > 352;
-  };
-
-  if (locationError) {
-    return (
-      <View style={[styles.container, { backgroundColor: colors.background }]}>
-        <View style={[styles.errorCard, Shadows.medium]}>
-          <Ionicons name="warning" size={64} color={colors.error} />
-          <Text style={[styles.errorTitle, { color: colors.text }]}>Hata Oluştu</Text>
-          <Text style={[styles.errorText, { color: colors.textSecondary }]}>{locationError}</Text>
-        </View>
-      </View>
-    );
-  }
+  const rotateValue = (heading - qiblaDir);
+  const isAligned = Math.abs(heading - qiblaDir) < 5 || Math.abs(heading - qiblaDir) > 355;
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
-      <LinearGradient
-        colors={[colors.primary, colors.secondary]}
-        style={styles.header}
-      >
+      <LinearGradient colors={Gradients.premium} style={styles.header}>
         <Text style={styles.headerTitle}>KIBLE PUSULASI</Text>
-        <View style={styles.headerInfo}>
-          <Ionicons name="compass-outline" size={20} color="rgba(255,255,255,0.7)" />
-          <Text style={styles.headerSubtitle}>Doğru sonuç için düz tutun</Text>
-        </View>
+        <Text style={styles.headerSubtitle}>Kabe Yönü Tayini</Text>
       </LinearGradient>
 
       <View style={styles.compassSection}>
-        <View style={[styles.compassOuter, { backgroundColor: colors.card }, Shadows.premium]}>
-          {/* Compass Rose */}
-          <View style={[styles.compassRose, { transform: [{ rotate: `${-heading}deg` }] }]}>
-            {['K', 'D', 'G', 'B'].map((dir, i) => (
-              <View key={dir} style={[styles.dirMark, { transform: [{ rotate: `${i * 90}deg` }] }]}>
-                <Text style={[styles.dirText, { color: dir === 'K' ? colors.error : colors.textMuted }]}>
-                  {dir}
-                </Text>
+        {/* Outer Ring */}
+        <View style={[styles.outerRing, { borderColor: colors.primary + '10' }]}>
+          {/* Compass Image / Graphic */}
+          <Animated.View 
+            style={[
+              styles.compassContainer, 
+              { transform: [{ rotate: `${-heading}deg` }] }
+            ]}
+          >
+            {/* North Indicator */}
+            <View style={styles.northMarker}>
+              <Text style={[styles.northText, { color: colors.error }]}>N</Text>
+            </View>
+            
+            {/* Degree Markers */}
+            {[0, 45, 90, 135, 180, 225, 270, 315].map((deg) => (
+              <View 
+                key={deg} 
+                style={[styles.marker, { transform: [{ rotate: `${deg}deg` }] }]}
+              >
+                <View style={[styles.markerLine, { backgroundColor: colors.border }]} />
               </View>
             ))}
-            
-            {/* Degree marks */}
-            {[...Array(12)].map((_, i) => (
-              <View key={i} style={[styles.tick, { transform: [{ rotate: `${i * 30}deg` }] }]} />
-            ))}
-          </View>
+          </Animated.View>
 
-          {/* Qibla Needle */}
-          <View style={[styles.needleContainer, { transform: [{ rotate: `${getRotation()}deg` }] }]}>
-            <View style={[styles.needleArrow, { borderBottomColor: colors.accent }]} />
-            <View style={[styles.needleTail, { backgroundColor: colors.accent }]} />
-            <View style={styles.kaabaIconContainer}>
-               <Text style={styles.kaabaIcon}>🕋</Text>
+          {/* Qibla Needle (Fixed relative to compass or pointing) */}
+          <Animated.View 
+            style={[
+              styles.needleContainer, 
+              { transform: [{ rotate: `${qiblaDir - heading}deg` }] }
+            ]}
+          >
+            <View style={[styles.qiblaNeedle, { borderBottomColor: colors.primary }]}>
+              <View style={styles.needleIcon}>
+                <Ionicons name="navigate" size={24} color={colors.accent} />
+              </View>
             </View>
-          </View>
+          </Animated.View>
 
-          {/* Center Point */}
-          <View style={[styles.centerPoint, { backgroundColor: colors.primary }]} />
+          {/* Center Glow */}
+          {isAligned && (
+            <View style={[styles.glowEffect, { backgroundColor: colors.accent + '20' }]} />
+          )}
         </View>
-      </View>
 
-      <View style={styles.footer}>
-        <View style={[
-          styles.statusCard, 
-          { backgroundColor: isPointingToQibla() ? colors.primary : colors.card },
-          Shadows.medium
-        ]}>
-          <Ionicons 
-            name={isPointingToQibla() ? "checkmark-circle" : "navigate-circle"} 
-            size={32} 
-            color={isPointingToQibla() ? "#fff" : colors.primary} 
-          />
-          <View style={styles.statusInfo}>
-            <Text style={[styles.statusTitle, { color: isPointingToQibla() ? "#fff" : colors.text }]}>
-              {isPointingToQibla() ? "Kıble Yönündesiniz" : "Kıbleyi Bulun"}
-            </Text>
-            <Text style={[styles.statusSub, { color: isPointingToQibla() ? "rgba(255,255,255,0.8)" : colors.textSecondary }]}>
-              {isPointingToQibla() ? "Namaz için hazırsınız" : `Sola/Sağa ${Math.abs(getRotation()).toFixed(0)}° çevirin`}
-            </Text>
+        {/* Info Cards */}
+        <View style={styles.infoSection}>
+          <View style={[styles.infoCard, { backgroundColor: colors.surface }, Shadows.medium]}>
+            <Text style={[styles.infoLabel, { color: colors.textSecondary }]}>SİZİN YÖNÜNÜZ</Text>
+            <Text style={[styles.infoValue, { color: colors.text }]}>{Math.round(heading)}°</Text>
+          </View>
+          
+          <View style={[styles.infoCard, { backgroundColor: colors.surface }, Shadows.premium, isAligned && { borderColor: colors.accent, borderWidth: 2 }]}>
+            <Text style={[styles.infoLabel, { color: colors.textSecondary }]}>KIBLE AÇISI</Text>
+            <Text style={[styles.infoValue, { color: isAligned ? colors.primary : colors.text }]}>{Math.round(qiblaDir)}°</Text>
           </View>
         </View>
+
+        {isAligned ? (
+          <View style={[styles.successBadge, { backgroundColor: colors.success + '20' }]}>
+            <Ionicons name="checkmark-circle" size={20} color={colors.success} />
+            <Text style={[styles.successText, { color: colors.success }]}>KIBLEYE YÖNELDİNİZ</Text>
+          </View>
+        ) : (
+          <Text style={[styles.hintText, { color: colors.textMuted }]}>
+            Cihazınızı yatay tutun ve ok işaretini takip edin.
+          </Text>
+        )}
       </View>
     </View>
   );
@@ -206,137 +142,140 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    paddingTop: 60,
+    paddingTop: Platform.OS === 'ios' ? 60 : 40,
     paddingBottom: 40,
+    paddingHorizontal: Spacing.lg,
+    borderBottomLeftRadius: BorderRadius.xl,
+    borderBottomRightRadius: BorderRadius.xl,
     alignItems: 'center',
-    borderBottomLeftRadius: 40,
-    borderBottomRightRadius: 40,
   },
   headerTitle: {
     color: '#fff',
-    fontSize: FontSize.lg,
-    fontWeight: '800',
-    letterSpacing: 2,
-  },
-  headerInfo: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginTop: 8,
-    gap: 6,
+    fontSize: 20,
+    fontWeight: '900',
+    letterSpacing: 4,
   },
   headerSubtitle: {
     color: 'rgba(255,255,255,0.7)',
-    fontSize: FontSize.xs,
+    fontSize: 12,
+    fontWeight: '600',
+    marginTop: 4,
+    textTransform: 'uppercase',
+    letterSpacing: 1,
   },
   compassSection: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: -30,
+    paddingTop: Spacing.xl,
   },
-  compassOuter: {
-    width: COMPASS_SIZE,
-    height: COMPASS_SIZE,
-    borderRadius: COMPASS_SIZE / 2,
-    alignItems: 'center',
+  outerRing: {
+    width: 300,
+    height: 300,
+    borderRadius: 150,
+    borderWidth: 2,
     justifyContent: 'center',
+    alignItems: 'center',
     position: 'relative',
   },
-  compassRose: {
+  compassContainer: {
     width: '100%',
     height: '100%',
-    position: 'absolute',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
   },
-  dirMark: {
+  northMarker: {
+    position: 'absolute',
+    top: 10,
+    alignItems: 'center',
+  },
+  northText: {
+    fontSize: 18,
+    fontWeight: '900',
+  },
+  marker: {
+    position: 'absolute',
+    width: 2,
+    height: '100%',
+    alignItems: 'center',
+  },
+  markerLine: {
+    width: 1,
+    height: 10,
+  },
+  needleContainer: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  qiblaNeedle: {
+    width: 0,
+    height: 0,
+    borderLeftWidth: 15,
+    borderRightWidth: 15,
+    borderBottomWidth: 130,
+    borderLeftColor: 'transparent',
+    borderRightColor: 'transparent',
     position: 'absolute',
     top: 20,
     alignItems: 'center',
-    height: COMPASS_SIZE / 2 - 20,
   },
-  dirText: {
-    fontSize: 20,
+  needleIcon: {
+    position: 'absolute',
+    bottom: -140,
+    transform: [{ rotate: '180deg' }],
+  },
+  glowEffect: {
+    position: 'absolute',
+    width: 200,
+    height: 200,
+    borderRadius: 100,
+    zIndex: -1,
+  },
+  infoSection: {
+    flexDirection: 'row',
+    gap: Spacing.md,
+    marginTop: Spacing.xxl,
+    paddingHorizontal: Spacing.md,
+  },
+  infoCard: {
+    flex: 1,
+    padding: Spacing.md,
+    borderRadius: BorderRadius.lg,
+    alignItems: 'center',
+  },
+  infoLabel: {
+    fontSize: 10,
+    fontWeight: '800',
+    letterSpacing: 1,
+    marginBottom: 4,
+  },
+  infoValue: {
+    fontSize: 24,
     fontWeight: '900',
   },
-  tick: {
-    position: 'absolute',
-    top: 10,
-    width: 2,
-    backgroundColor: '#ddd',
-    height: COMPASS_SIZE / 2 - 10,
-  },
-  needleContainer: {
-    width: 100,
-    height: COMPASS_SIZE - 80,
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-  },
-  needleArrow: {
-    width: 0,
-    height: 0,
-    backgroundColor: 'transparent',
-    borderStyle: 'solid',
-    borderLeftWidth: 15,
-    borderRightWidth: 15,
-    borderBottomWidth: 40,
-    borderLeftColor: 'transparent',
-    borderRightColor: 'transparent',
-  },
-  needleTail: {
-    width: 4,
-    height: COMPASS_SIZE / 2 - 100,
-    borderRadius: 2,
-  },
-  kaabaIconContainer: {
-    marginTop: 10,
-  },
-  kaabaIcon: {
-    fontSize: 40,
-  },
-  centerPoint: {
-    width: 12,
-    height: 12,
-    borderRadius: 6,
-    position: 'absolute',
-    zIndex: 10,
-  },
-  footer: {
-    padding: Spacing.xl,
-    paddingBottom: 40,
-  },
-  statusCard: {
+  successBadge: {
     flexDirection: 'row',
     alignItems: 'center',
-    padding: Spacing.lg,
-    borderRadius: BorderRadius.xl,
-    gap: Spacing.md,
+    gap: 8,
+    marginTop: Spacing.xl,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: BorderRadius.full,
   },
-  statusInfo: {
-    flex: 1,
-  },
-  statusTitle: {
-    fontSize: FontSize.md,
+  successText: {
+    fontSize: 14,
     fontWeight: '800',
+    letterSpacing: 1,
   },
-  statusSub: {
-    fontSize: FontSize.xs,
-    marginTop: 2,
-  },
-  errorCard: {
-    padding: 40,
-    borderRadius: 20,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    margin: 20,
-  },
-  errorTitle: {
-    fontSize: 20,
-    fontWeight: '700',
-    marginTop: 20,
-  },
-  errorText: {
+  hintText: {
+    fontSize: 12,
+    marginTop: Spacing.xl,
     textAlign: 'center',
-    marginTop: 10,
+    paddingHorizontal: Spacing.xl,
+    fontWeight: '500',
+    lineHeight: 18,
   },
 });

@@ -11,11 +11,14 @@ import {
   SafeAreaView,
   TextInput,
   ActivityIndicator,
+  Platform,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Haptics from 'expo-haptics';
+import { safeHaptics } from '@/lib/haptics';
 import { Ionicons } from '@expo/vector-icons';
-import { Colors, Spacing, FontSize, BorderRadius, Shadows } from '@/constants/theme';
+import { LinearGradient } from 'expo-linear-gradient';
+import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { quranJuzData, Juz } from '@/lib/data/quran-juz';
 import { hatimService, SharedHatim, SharedHatimJuz } from '@/lib/services/hatim-service';
 
@@ -66,7 +69,7 @@ export default function HatimScreen() {
       const data = await hatimService.getSharedHatims();
       setSharedHatims(data);
     } catch (error) {
-      console.log('Ortak hatimler yüklenemedi:', error);
+      console.log('Shared hatims failed to load:', error);
     } finally {
       setLoading(false);
     }
@@ -80,7 +83,7 @@ export default function HatimScreen() {
       setSharedHatimDetails(details);
       setIsJoinModalVisible(true);
     } catch (error) {
-      console.log('Hatim detayları yüklenemedi:', error);
+      console.log('Hatim details failed to load:', error);
     } finally {
       setLoading(false);
     }
@@ -94,11 +97,9 @@ export default function HatimScreen() {
 
     try {
       await hatimService.joinHatim(selectedSharedHatim.id, juzNumber, userName);
-      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-      // Refresh details
+      safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
       const details = await hatimService.getHatimDetails(selectedSharedHatim.id);
       setSharedHatimDetails(details);
-      alert('Cüz başarıyla alındı!');
     } catch (error) {
       alert('Bir hata oluştu.');
     }
@@ -114,8 +115,9 @@ export default function HatimScreen() {
     }
 
     try {
-      // In a real app, this would call hatimService.createHatim
-      alert('Yeni hatim başarıyla oluşturuldu! (Simüle edildi)');
+      const endsAt = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString();
+      await hatimService.createSharedHatim(newHatimTitle, '', endsAt);
+      alert('Yeni hatim başarıyla oluşturuldu!');
       setIsCreateModalVisible(false);
       setNewHatimTitle('');
       loadSharedHatims();
@@ -143,7 +145,7 @@ export default function HatimScreen() {
         setProgress({});
       }
     } catch (error) {
-      console.log('Hatim verisi yüklenemedi:', error);
+      console.log('Progress load error:', error);
     }
   };
 
@@ -154,7 +156,7 @@ export default function HatimScreen() {
         setHistory(JSON.parse(savedHistory));
       }
     } catch (error) {
-      console.log('Hatim geçmişi yüklenemedi:', error);
+      console.log('History load error:', error);
     }
   };
 
@@ -165,7 +167,7 @@ export default function HatimScreen() {
         JSON.stringify(newProgress)
       );
     } catch (error) {
-      console.log('Hatim verisi kaydedilemedi:', error);
+      console.log('Progress save error:', error);
     }
   };
 
@@ -174,7 +176,7 @@ export default function HatimScreen() {
       await AsyncStorage.setItem('hatim_history', JSON.stringify(newHistory));
       setHistory(newHistory);
     } catch (error) {
-      console.log('Hatim geçmişi kaydedilemedi:', error);
+      console.log('History save error:', error);
     }
   };
 
@@ -185,7 +187,7 @@ export default function HatimScreen() {
     };
     setProgress(newProgress);
     saveProgress(newProgress);
-    Haptics.impactAsync(
+    safeHaptics.impactAsync(
       newProgress[juzNumber]
         ? Haptics.ImpactFeedbackStyle.Medium
         : Haptics.ImpactFeedbackStyle.Light
@@ -200,7 +202,7 @@ export default function HatimScreen() {
   const resetProgress = () => {
     setProgress({});
     saveProgress({});
-    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
+    safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
   };
 
   const completeHatim = () => {
@@ -213,7 +215,7 @@ export default function HatimScreen() {
     saveHistory(newHistory);
     setProgress({});
     saveProgress({});
-    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
     alert('Tebrikler! Hatminiz kaydedildi.');
   };
 
@@ -232,379 +234,286 @@ export default function HatimScreen() {
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
-      {/* Tabs */}
-      <View style={[styles.tabContainer, { backgroundColor: colors.card }]}>
+      {/* Premium Tab Bar */}
+      <View style={[styles.tabWrapper, { backgroundColor: colors.surface }, Shadows.glass]}>
         <TouchableOpacity 
-          style={[styles.tab, activeTab === 'individual' && { borderBottomColor: colors.primary }]} 
+          style={[styles.tabItem, activeTab === 'individual' && styles.tabItemActive]} 
           onPress={() => setActiveTab('individual')}
         >
-          <Text style={[styles.tabText, { color: activeTab === 'individual' ? colors.primary : colors.textSecondary }]}>
-            Bireysel Hatim
+          <Ionicons 
+            name="person" 
+            size={18} 
+            color={activeTab === 'individual' ? colors.primary : colors.textMuted} 
+          />
+          <Text style={[styles.tabLabel, { color: activeTab === 'individual' ? colors.primary : colors.textMuted }]}>
+            Bireysel
           </Text>
+          {activeTab === 'individual' && <View style={[styles.tabIndicator, { backgroundColor: colors.primary }]} />}
         </TouchableOpacity>
+        
         <TouchableOpacity 
-          style={[styles.tab, activeTab === 'collaborative' && { borderBottomColor: colors.primary }]} 
+          style={[styles.tabItem, activeTab === 'collaborative' && styles.tabItemActive]} 
           onPress={() => setActiveTab('collaborative')}
         >
-          <View style={styles.tabWithBadge}>
-            <Text style={[styles.tabText, { color: activeTab === 'collaborative' ? colors.primary : colors.textSecondary }]}>
-              Ortak Hatim
-            </Text>
-            <View style={[styles.onlineBadge, { backgroundColor: colors.success }]} />
+          <View style={styles.tabIconGroup}>
+            <Ionicons 
+              name="people" 
+              size={18} 
+              color={activeTab === 'collaborative' ? colors.primary : colors.textMuted} 
+            />
+            <View style={[styles.onlineDot, { backgroundColor: colors.success }]} />
           </View>
+          <Text style={[styles.tabLabel, { color: activeTab === 'collaborative' ? colors.primary : colors.textMuted }]}>
+            Ortak Hatim
+          </Text>
+          {activeTab === 'collaborative' && <View style={[styles.tabIndicator, { backgroundColor: colors.primary }]} />}
         </TouchableOpacity>
       </View>
 
-      {activeTab === 'individual' ? (
-        <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
-          {/* Progress Header */}
-          <View style={[styles.headerCard, { backgroundColor: colors.primary }, Shadows.medium]}>
-            <View style={styles.headerTop}>
-              <View>
-                <Text style={styles.headerTitle}>Haftalık Hatim</Text>
-                <Text style={styles.headerSubtitle}>{getWeekDateRange()}</Text>
-              </View>
-              <View style={styles.headerButtons}>
-                <TouchableOpacity 
-                  onPress={() => setIsHistoryVisible(true)} 
-                  style={[styles.resetButton, { marginRight: Spacing.sm }]}
-                >
-                  <Ionicons name="list" size={20} color="#fff" />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={resetProgress} style={styles.resetButton}>
-                  <Ionicons name="refresh" size={20} color="#fff" />
-                </TouchableOpacity>
-              </View>
-            </View>
-
-            <View style={styles.progressSection}>
-              <View style={styles.progressCircle}>
-                <Text style={styles.progressNumber}>{completedCount}</Text>
-                <Text style={styles.progressTotal}>/30</Text>
-              </View>
-              <View style={styles.progressInfo}>
-                <Text style={styles.progressLabel}>Cüz Tamamlandı</Text>
-                <View style={[styles.progressBarBg, { backgroundColor: 'rgba(255,255,255,0.3)' }]}>
-                  <View
-                    style={[
-                      styles.progressBarFill,
-                      { width: `${progressPercentage}%` },
-                    ]}
-                  />
+      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
+        {activeTab === 'individual' ? (
+          <>
+            {/* Progress HypeFrame */}
+            <LinearGradient colors={Gradients.premium} style={[styles.progressCard, Shadows.premium]}>
+              <View style={styles.progressHeader}>
+                <View>
+                  <Text style={styles.progressTitle}>Haftalık Hatim</Text>
+                  <Text style={styles.progressDates}>{getWeekDateRange()}</Text>
                 </View>
-                <Text style={styles.progressPercent}>%{progressPercentage}</Text>
+                <View style={styles.headerActionGroup}>
+                  <TouchableOpacity onPress={() => setIsHistoryVisible(true)} style={styles.circleAction}>
+                    <Ionicons name="calendar-sharp" size={20} color="#fff" />
+                  </TouchableOpacity>
+                  <TouchableOpacity onPress={resetProgress} style={styles.circleAction}>
+                    <Ionicons name="refresh-sharp" size={20} color="#fff" />
+                  </TouchableOpacity>
+                </View>
               </View>
-            </View>
 
-            {completedCount === 30 && (
-              <TouchableOpacity 
-                style={styles.completedBadge}
-                onPress={completeHatim}
-              >
-                <Ionicons name="checkmark-circle" size={20} color="#fff" />
-                <Text style={styles.completedText}>Hatmi Tamamla ve Kaydet</Text>
-              </TouchableOpacity>
-            )}
-          </View>
-
-          <View style={styles.juzGrid}>
-            {quranJuzData.map((juz) => (
-              <TouchableOpacity
-                key={juz.number}
-                style={[
-                  styles.juzCard,
-                  {
-                    backgroundColor: colors.card,
-                    borderColor: progress[juz.number] ? colors.primary : colors.border,
-                    borderWidth: progress[juz.number] ? 2 : 1,
-                  },
-                  Shadows.light,
-                ]}
-                onPress={() => toggleJuz(juz.number)}
-                onLongPress={() => showJuzDetails(juz)}
-              >
-                <View style={styles.juzHeader}>
-                  <Text
-                    style={[
-                      styles.juzNumber,
-                      { color: progress[juz.number] ? colors.primary : colors.text },
-                    ]}
-                  >
-                    {juz.number}. Cüz
-                  </Text>
-                  {progress[juz.number] && (
-                    <Ionicons name="checkmark-circle" size={16} color={colors.primary} />
+              <View style={styles.progressStats}>
+                <View style={styles.progressRingWrapper}>
+                  <Text style={styles.ringValue}>{completedCount}</Text>
+                  <Text style={styles.ringTotal}>/30</Text>
+                </View>
+                <View style={styles.statsRight}>
+                  <View style={styles.progressBarContainer}>
+                    <View style={[styles.progressBarBg, { backgroundColor: 'rgba(255,255,255,0.2)' }]}>
+                      <View style={[styles.progressBarFill, { width: `${progressPercentage}%` }]} />
+                    </View>
+                    <Text style={styles.percentText}>%{progressPercentage} Tamamlandı</Text>
+                  </View>
+                  {completedCount === 30 && (
+                    <TouchableOpacity style={styles.completeBtn} onPress={completeHatim}>
+                      <Text style={styles.completeBtnText}>HATMİ TAMAMLA</Text>
+                    </TouchableOpacity>
                   )}
                 </View>
-                <Text style={[styles.juzName, { color: colors.textSecondary }]} numberOfLines={1}>
-                  {juz.name}
-                </Text>
-                <Text style={[styles.juzSurah, { color: colors.textMuted }]} numberOfLines={1}>
-                  {juz.surahs}
-                </Text>
-              </TouchableOpacity>
-            ))}
-          </View>
-        </ScrollView>
-      ) : (
-        <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
-          <View style={styles.collaborativeHeader}>
-            <Text style={[styles.sectionTitle, { color: colors.text }]}>Devam Eden Ortak Hatimler</Text>
-            <Text style={[styles.sectionSubtitle, { color: colors.textSecondary }]}>
-              Bir cüz seçerek ortak hatme katkıda bulunabilirsiniz.
-            </Text>
-          </View>
-
-          {loading && <ActivityIndicator size="large" color={colors.primary} style={{ marginTop: 20 }} />}
-
-          {sharedHatims.map((hatim) => (
-            <TouchableOpacity 
-              key={hatim.id} 
-              style={[styles.collabCard, { backgroundColor: colors.card, borderColor: colors.border }, Shadows.medium]}
-              onPress={() => handleOpenSharedHatim(hatim)}
-            >
-              <View style={styles.collabTop}>
-                <View style={styles.collabInfo}>
-                  <Text style={[styles.collabTitle, { color: colors.text }]}>{hatim.title}</Text>
-                  <View style={styles.collabMeta}>
-                    <Ionicons name="people" size={14} color={colors.primary} />
-                    <Text style={[styles.collabMetaText, { color: colors.textSecondary }]}>
-                      {hatim.participants_count} Katılımcı
-                    </Text>
-                    <Ionicons name="time-outline" size={14} color={colors.error} style={{ marginLeft: 8 }} />
-                    <Text style={[styles.collabMetaText, { color: colors.textSecondary }]}>
-                      {new Date(hatim.ends_at).toLocaleDateString('tr-TR')}
-                    </Text>
-                  </View>
-                </View>
-                <View style={[styles.collabProgressCircle, { borderColor: colors.primary }]}>
-                  <Text style={[styles.collabPercent, { color: colors.primary }]}>
-                    %{Math.round((hatim.completed_count / hatim.total_juz) * 100)}
-                  </Text>
-                </View>
               </View>
-              
-              <View style={styles.collabProgressBarContainer}>
-                <View style={[styles.collabProgressBarBg, { backgroundColor: colors.border }]}>
-                  <View 
+            </LinearGradient>
+
+            {/* Juz Grid */}
+            <View style={styles.gridContainer}>
+              <Text style={[styles.sectionLabel, { color: colors.textSecondary }]}>CÜZ SEÇİMİ</Text>
+              <View style={styles.juzGrid}>
+                {quranJuzData.map((juz) => (
+                  <TouchableOpacity
+                    key={juz.number}
+                    onPress={() => toggleJuz(juz.number)}
+                    onLongPress={() => showJuzDetails(juz)}
                     style={[
-                      styles.collabProgressBarFill, 
-                      { 
-                        backgroundColor: colors.primary, 
-                        width: `${(hatim.completed_count / hatim.total_juz) * 100}%` 
-                      }
-                    ]} 
-                  />
-                </View>
-                <Text style={[styles.collabProgressText, { color: colors.textMuted }]}>
-                  {hatim.completed_count} / {hatim.total_juz} Cüz tamamlandı
-                </Text>
+                      styles.juzBox,
+                      { backgroundColor: progress[juz.number] ? colors.primary : colors.surface },
+                      progress[juz.number] ? Shadows.medium : Shadows.light
+                    ]}
+                  >
+                    <Text style={[styles.juzNum, { color: progress[juz.number] ? '#fff' : colors.primary }]}>
+                      {juz.number}
+                    </Text>
+                    <Text style={[styles.juzName, { color: progress[juz.number] ? 'rgba(255,255,255,0.7)' : colors.textMuted }]}>
+                      {juz.name.split(' ')[0]}
+                    </Text>
+                    {progress[juz.number] && (
+                      <Ionicons name="checkmark-circle" size={14} color={colors.accent} style={styles.checkIcon} />
+                    )}
+                  </TouchableOpacity>
+                ))}
               </View>
+            </View>
+          </>
+        ) : (
+          <View style={styles.collaborativeSection}>
+            <View style={styles.collabHeader}>
+              <Text style={[styles.sectionLabel, { color: colors.textSecondary }]}>AKTİF HATİMLER</Text>
+              <TouchableOpacity 
+                style={[styles.createBtn, { backgroundColor: colors.primary }]}
+                onPress={() => setIsCreateModalVisible(true)}
+              >
+                <Ionicons name="add" size={20} color="#fff" />
+                <Text style={styles.createBtnText}>Yeni Başlat</Text>
+              </TouchableOpacity>
+            </View>
 
-              <View style={[styles.joinButton, { backgroundColor: colors.primary }]}>
-                <Text style={styles.joinButtonText}>Cüz Seç ve Katıl</Text>
+            {loading ? (
+              <ActivityIndicator size="large" color={colors.primary} style={{ marginTop: 40 }} />
+            ) : sharedHatims.length === 0 ? (
+              <View style={styles.emptyState}>
+                <Ionicons name="book-outline" size={64} color={colors.textMuted} />
+                <Text style={[styles.emptyText, { color: colors.textSecondary }]}>Henüz aktif bir ortak hatim yok.</Text>
               </View>
-            </TouchableOpacity>
-          ))}
-
-          <TouchableOpacity 
-            style={[styles.createButton, { borderColor: colors.primary }]}
-            onPress={() => setIsCreateModalVisible(true)}
-          >
-            <Ionicons name="add-circle-outline" size={20} color={colors.primary} />
-            <Text style={[styles.createButtonText, { color: colors.primary }]}>Yeni Ortak Hatim Başlat</Text>
-          </TouchableOpacity>
-        </ScrollView>
-      )}
-
-      {/* Create Hatim Modal */}
-      <Modal
-        animationType="fade"
-        transparent={true}
-        visible={isCreateModalVisible}
-        onRequestClose={() => setIsCreateModalVisible(false)}
-      >
-        <Pressable style={styles.modalOverlay} onPress={() => setIsCreateModalVisible(false)}>
-          <View style={[styles.modalContent, { backgroundColor: colors.card }, Shadows.premium]}>
-            <Text style={[styles.modalTitle, { color: colors.text, marginBottom: Spacing.md }]}>Yeni Ortak Hatim</Text>
-            <TextInput
-              style={[styles.userNameInput, { backgroundColor: colors.background, color: colors.text, borderColor: colors.border, marginBottom: Spacing.lg }]}
-              placeholder="Hatim Başlığı (Örn: Cuma Hatmi)"
-              placeholderTextColor={colors.textMuted}
-              value={newHatimTitle}
-              onChangeText={setNewHatimTitle}
-            />
-            <TouchableOpacity
-              style={[styles.modalButton, { backgroundColor: colors.primary }]}
-              onPress={handleCreateHatim}
-            >
-              <Text style={styles.modalButtonText}>Oluştur</Text>
-            </TouchableOpacity>
+            ) : (
+              sharedHatims.map((hatim) => (
+                <TouchableOpacity
+                  key={hatim.id}
+                  style={[styles.collabCard, { backgroundColor: colors.surface }, Shadows.medium]}
+                  onPress={() => handleOpenSharedHatim(hatim)}
+                >
+                  <View style={styles.collabCardTop}>
+                    <Text style={[styles.collabTitle, { color: colors.text }]}>{hatim.title}</Text>
+                    <View style={[styles.participantBadge, { backgroundColor: colors.primary + '10' }]}>
+                      <Ionicons name="people" size={12} color={colors.primary} />
+                      <Text style={[styles.participantText, { color: colors.primary }]}>{hatim.participants_count}</Text>
+                    </View>
+                  </View>
+                  
+                  <View style={styles.collabProgress}>
+                    <View style={[styles.progressBarBg, { backgroundColor: colors.border, height: 6 }]}>
+                      <View 
+                        style={[
+                          styles.progressBarFill, 
+                          { 
+                            backgroundColor: colors.primary, 
+                            width: `${(hatim.completed_count / hatim.total_juz) * 100}%` 
+                          }
+                        ]} 
+                      />
+                    </View>
+                    <View style={styles.collabStats}>
+                      <Text style={[styles.collabStatText, { color: colors.textSecondary }]}>
+                        {hatim.completed_count} / {hatim.total_juz} Cüz
+                      </Text>
+                      <Text style={[styles.collabStatText, { color: colors.primary, fontWeight: '700' }]}>
+                        %{Math.round((hatim.completed_count / hatim.total_juz) * 100)}
+                      </Text>
+                    </View>
+                  </View>
+                </TouchableOpacity>
+              ))
+            )}
           </View>
-        </Pressable>
+        )}
+        <View style={{ height: 120 }} />
+      </ScrollView>
+
+      {/* Jüz Detay Modal */}
+      <Modal visible={isModalVisible} transparent animationType="fade">
+        <View style={styles.modalOverlay}>
+          <View style={[styles.modalContent, { backgroundColor: colors.surface }, Shadows.premium]}>
+            <View style={[styles.modalHeader, { backgroundColor: colors.primary }]}>
+              <Text style={styles.modalTitle}>{selectedJuz?.number}. Cüz Detayları</Text>
+              <TouchableOpacity onPress={() => setIsModalVisible(false)}>
+                <Ionicons name="close" size={24} color="#fff" />
+              </TouchableOpacity>
+            </View>
+            <View style={styles.modalBody}>
+              <View style={styles.detailRow}>
+                <Text style={styles.detailLabel}>Başlangıç Suresi:</Text>
+                <Text style={[styles.detailValue, { color: colors.primary }]}>{selectedJuz?.startSurah}</Text>
+              </View>
+              <View style={styles.detailRow}>
+                <Text style={styles.detailLabel}>Sayfalar:</Text>
+                <Text style={styles.detailValue}>{selectedJuz?.pages}</Text>
+              </View>
+              <View style={styles.detailRow}>
+                <Text style={styles.detailLabel}>İçerdiği Sureler:</Text>
+                <Text style={[styles.detailValue, { fontSize: 10, flex: 1, textAlign: 'right' }]}>{selectedJuz?.surahs}</Text>
+              </View>
+            </View>
+          </View>
+        </View>
       </Modal>
 
-      {/* Shared Hatim Detail / Join Modal */}
-      <Modal
-        animationType="slide"
-        visible={isJoinModalVisible}
-        onRequestClose={() => setIsJoinModalVisible(false)}
-      >
-        <SafeAreaView style={[styles.joinModalContainer, { backgroundColor: colors.background }]}>
-          <View style={[styles.joinModalHeader, { borderBottomColor: colors.border }]}>
-            <View>
-              <Text style={[styles.joinModalTitle, { color: colors.text }]}>{selectedSharedHatim?.title}</Text>
-              <Text style={[styles.joinModalSub, { color: colors.textSecondary }]}>Cüz Seçimi</Text>
-            </View>
-            <TouchableOpacity onPress={() => setIsJoinModalVisible(false)}>
-              <Ionicons name="close" size={28} color={colors.text} />
+      {/* Ortak Hatim Jüz Seçim Modal */}
+      <Modal visible={isJoinModalVisible} animationType="slide">
+        <SafeAreaView style={[styles.modalContainer, { backgroundColor: colors.background }]}>
+          <View style={styles.modalFullHeader}>
+            <TouchableOpacity onPress={() => setIsJoinModalVisible(false)} style={styles.closeBtn}>
+              <Ionicons name="chevron-back" size={28} color={colors.primary} />
             </TouchableOpacity>
+            <Text style={[styles.modalFullTitle, { color: colors.text }]}>{selectedSharedHatim?.title}</Text>
+            <View style={{ width: 40 }} />
           </View>
 
-          <View style={styles.userNameContainer}>
-            <Text style={[styles.inputLabel, { color: colors.textSecondary }]}>Adınız (Diğer katılımcılar görebilir):</Text>
+          <View style={styles.userNameSection}>
+            <Text style={[styles.inputLabel, { color: colors.textSecondary }]}>Katılımcı Adı</Text>
             <TextInput
-              style={[styles.userNameInput, { backgroundColor: colors.card, color: colors.text, borderColor: colors.border }]}
-              placeholder="Adınızı giriniz..."
+              style={[styles.nameInput, { backgroundColor: colors.surface, color: colors.text, borderColor: colors.border }]}
+              placeholder="Adınızı yazınız..."
               placeholderTextColor={colors.textMuted}
               value={userName}
               onChangeText={setUserName}
             />
           </View>
 
-          <ScrollView contentContainerStyle={styles.joinJuzGrid}>
-            {sharedHatimDetails.map((juz) => (
-              <TouchableOpacity
-                key={juz.juz_number}
-                disabled={juz.is_completed}
-                style={[
-                  styles.joinJuzCard,
-                  { 
-                    backgroundColor: juz.is_completed ? colors.border : colors.card,
-                    borderColor: juz.is_completed ? colors.border : colors.primary 
-                  }
-                ]}
-                onPress={() => handleJoinJuz(juz.juz_number)}
+          <ScrollView contentContainerStyle={styles.juzListContent}>
+            <View style={styles.juzGrid}>
+              {Array.from({ length: 30 }, (_, i) => i + 1).map((num) => {
+                const juzDetail = sharedHatimDetails.find(d => d.juz_number === num);
+                const isTaken = !!juzDetail;
+                return (
+                  <TouchableOpacity
+                    key={num}
+                    onPress={() => !isTaken && handleJoinJuz(num)}
+                    disabled={isTaken}
+                    style={[
+                      styles.juzBox,
+                      { 
+                        backgroundColor: isTaken ? colors.border : colors.surface,
+                        opacity: isTaken ? 0.6 : 1
+                      }
+                    ]}
+                  >
+                    <Text style={[styles.juzNum, { color: isTaken ? colors.textMuted : colors.primary }]}>{num}</Text>
+                    {isTaken ? (
+                      <Text style={styles.takenText} numberOfLines={1}>{juzDetail.user_name}</Text>
+                    ) : (
+                      <Text style={[styles.juzAction, { color: colors.success }]}>AL</Text>
+                    )}
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
+          </ScrollView>
+        </SafeAreaView>
+      </Modal>
+
+      {/* Yeni Hatim Başlat Modal */}
+      <Modal visible={isCreateModalVisible} transparent animationType="slide">
+        <View style={styles.modalOverlay}>
+          <View style={[styles.modalContent, { backgroundColor: colors.surface, padding: 0 }, Shadows.premium]}>
+            <View style={[styles.modalHeader, { backgroundColor: colors.primary }]}>
+              <Text style={styles.modalTitle}>Yeni Ortak Hatim</Text>
+              <TouchableOpacity onPress={() => setIsCreateModalVisible(false)}>
+                <Ionicons name="close" size={24} color="#fff" />
+              </TouchableOpacity>
+            </View>
+            <View style={{ padding: Spacing.lg }}>
+              <Text style={[styles.inputLabel, { color: colors.textSecondary }]}>Hatim Başlığı</Text>
+              <TextInput
+                style={[styles.nameInput, { backgroundColor: colors.background, color: colors.text, borderColor: colors.border }]}
+                placeholder="Örn: Ramazan Hatmi"
+                value={newHatimTitle}
+                onChangeText={setNewHatimTitle}
+                autoFocus
+              />
+              <TouchableOpacity 
+                style={[styles.submitBtn, { backgroundColor: colors.primary }]}
+                onPress={handleCreateHatim}
               >
-                <Text style={[styles.joinJuzNumber, { color: juz.is_completed ? colors.textMuted : colors.primary }]}>
-                  {juz.juz_number}. Cüz
-                </Text>
-                {juz.is_completed ? (
-                  <Text style={[styles.joinJuzUser, { color: colors.textMuted }]}>{juz.user_name || 'Alındı'}</Text>
-                ) : (
-                  <Text style={[styles.joinJuzAction, { color: colors.primary }]}>Müsait</Text>
-                )}
-              </TouchableOpacity>
-            ))}
-          </ScrollView>
-        </SafeAreaView>
-      </Modal>
-
-      {/* Juz Details Modal (Bireysel) */}
-      <Modal
-        animationType="fade"
-        transparent={true}
-        visible={isModalVisible}
-        onRequestClose={() => setIsModalVisible(false)}
-      >
-        <Pressable 
-          style={styles.modalOverlay} 
-          onPress={() => setIsModalVisible(false)}
-        >
-          <View style={[styles.modalContent, { backgroundColor: colors.card }, Shadows.premium]}>
-            <View style={styles.modalHeaderTitle}>
-              <Text style={[styles.modalTitle, { color: colors.text }]}>
-                {selectedJuz?.number}. Cüz Detayları
-              </Text>
-              <TouchableOpacity onPress={() => setIsModalVisible(false)}>
-                <Ionicons name="close" size={24} color={colors.text} />
+                <Text style={styles.submitBtnText}>BAŞLAT</Text>
               </TouchableOpacity>
             </View>
-
-            <View style={styles.modalBody}>
-              <View style={styles.detailRow}>
-                <Text style={[styles.detailLabel, { color: colors.textMuted }]}>Başlangıç</Text>
-                <Text style={[styles.detailValue, { color: colors.text }]}>{selectedJuz?.name}</Text>
-              </View>
-              <View style={styles.detailRow}>
-                <Text style={[styles.detailLabel, { color: colors.textMuted }]}>Sureler</Text>
-                <Text style={[styles.detailValue, { color: colors.text }]}>{selectedJuz?.surahs}</Text>
-              </View>
-              <View style={styles.detailRow}>
-                <Text style={[styles.detailLabel, { color: colors.textMuted }]}>Sayfa Aralığı</Text>
-                <Text style={[styles.detailValue, { color: colors.text }]}>
-                  {selectedJuz ? `${((selectedJuz.number - 1) * 20) + 1} - ${selectedJuz.number * 20}` : '-'}
-                </Text>
-              </View>
-            </View>
-
-            <TouchableOpacity
-              style={[
-                styles.modalButton,
-                { backgroundColor: (selectedJuz && progress[selectedJuz.number]) ? colors.error : colors.primary }
-              ]}
-              onPress={() => {
-                if (selectedJuz) {
-                  toggleJuz(selectedJuz.number);
-                  setIsModalVisible(false);
-                }
-              }}
-            >
-              <Text style={styles.modalButtonText}>
-                {(selectedJuz && progress[selectedJuz.number]) ? 'Tamamlanmadı Olarak İşaretle' : 'Tamamlandı Olarak İşaretle'}
-              </Text>
-            </TouchableOpacity>
           </View>
-        </Pressable>
-      </Modal>
-
-      {/* History Modal */}
-      <Modal
-        animationType="slide"
-        visible={isHistoryVisible}
-        onRequestClose={() => setIsHistoryVisible(false)}
-      >
-        <SafeAreaView style={[styles.historyContainer, { backgroundColor: colors.background }]}>
-          <View style={[styles.historyHeader, { borderBottomColor: colors.border }]}>
-            <Text style={[styles.historyTitle, { color: colors.text }]}>Geçmiş Hatimler</Text>
-            <TouchableOpacity onPress={() => setIsHistoryVisible(false)}>
-              <Ionicons name="close" size={24} color={colors.text} />
-            </TouchableOpacity>
-          </View>
-
-          <ScrollView style={styles.historyList}>
-            {history.length === 0 ? (
-              <View style={styles.emptyHistory}>
-                <Ionicons name="book-outline" size={64} color={colors.textMuted} />
-                <Text style={[styles.emptyHistoryText, { color: colors.textSecondary }]}>
-                  Henüz tamamlanmış hatim bulunmuyor.
-                </Text>
-              </View>
-            ) : (
-              history.map((item) => (
-                <View 
-                  key={item.id} 
-                  style={[styles.historyItem, { backgroundColor: colors.card, borderColor: colors.border }, Shadows.light]}
-                >
-                  <View style={styles.historyItemIcon}>
-                    <Ionicons name="checkmark-circle" size={24} color={colors.primary} />
-                  </View>
-                  <View style={styles.historyItemContent}>
-                    <Text style={[styles.historyItemTitle, { color: colors.text }]}>
-                      Hatim Tamamlandı
-                    </Text>
-                    <Text style={[styles.historyItemDate, { color: colors.textSecondary }]}>
-                      Tarih: {new Date(item.date).toLocaleDateString('tr-TR')}
-                    </Text>
-                    <Text style={[styles.historyItemRange, { color: colors.textMuted }]}>
-                      Hafta: {item.weekRange}
-                    </Text>
-                  </View>
-                </View>
-              ))
-            )}
-          </ScrollView>
-        </SafeAreaView>
+        </View>
       </Modal>
     </View>
   );
@@ -614,418 +523,353 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  tabContainer: {
+  tabWrapper: {
     flexDirection: 'row',
-    paddingTop: Spacing.xl,
     paddingHorizontal: Spacing.md,
+    paddingTop: Platform.OS === 'ios' ? 60 : 40,
+    paddingBottom: Spacing.sm,
   },
-  tab: {
+  tabItem: {
     flex: 1,
-    paddingVertical: Spacing.md,
-    alignItems: 'center',
-    borderBottomWidth: 3,
-    borderBottomColor: 'transparent',
-  },
-  tabWithBadge: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 6,
+    justifyContent: 'center',
+    paddingVertical: Spacing.md,
+    gap: 8,
   },
-  onlineBadge: {
-    width: 6,
-    height: 6,
-    borderRadius: 3,
+  tabItemActive: {
+    // Optional active state style
   },
-  tabText: {
-    fontSize: FontSize.sm,
-    fontWeight: '700',
+  tabLabel: {
+    fontSize: 13,
+    fontWeight: '800',
+    letterSpacing: 0.5,
   },
-  headerCard: {
+  tabIndicator: {
+    position: 'absolute',
+    bottom: 0,
+    height: 3,
+    width: '60%',
+    borderTopLeftRadius: 3,
+    borderTopRightRadius: 3,
+  },
+  tabIconGroup: {
+    position: 'relative',
+  },
+  onlineDot: {
+    position: 'absolute',
+    top: -2,
+    right: -4,
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    borderWidth: 1.5,
+    borderColor: '#fff',
+  },
+  content: {
+    flex: 1,
+  },
+  progressCard: {
     margin: Spacing.md,
-    padding: Spacing.lg,
+    padding: Spacing.xl,
     borderRadius: BorderRadius.xl,
   },
-  headerTop: {
+  progressHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
+    marginBottom: Spacing.xl,
   },
-  headerButtons: {
-    flexDirection: 'row',
-  },
-  headerTitle: {
+  progressTitle: {
     color: '#fff',
-    fontSize: FontSize.xl,
-    fontWeight: '700',
+    fontSize: 18,
+    fontWeight: '800',
+    letterSpacing: 1,
   },
-  headerSubtitle: {
-    color: 'rgba(255,255,255,0.8)',
-    fontSize: FontSize.sm,
-    marginTop: Spacing.xs,
+  progressDates: {
+    color: 'rgba(255,255,255,0.7)',
+    fontSize: 12,
+    marginTop: 2,
+    fontWeight: '600',
   },
-  resetButton: {
-    padding: Spacing.sm,
-    backgroundColor: 'rgba(255,255,255,0.2)',
-    borderRadius: BorderRadius.full,
+  headerActionGroup: {
+    flexDirection: 'row',
+    gap: Spacing.sm,
   },
-  progressSection: {
+  circleAction: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: 'rgba(255,255,255,0.15)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  progressStats: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: Spacing.lg,
-    gap: Spacing.lg,
+    gap: Spacing.xl,
   },
-  progressCircle: {
+  progressRingWrapper: {
     width: 80,
     height: 80,
     borderRadius: 40,
-    backgroundColor: 'rgba(255,255,255,0.2)',
-    alignItems: 'center',
+    borderWidth: 6,
+    borderColor: 'rgba(255,255,255,0.15)',
     justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(255,255,255,0.05)',
   },
-  progressNumber: {
+  ringValue: {
     color: '#fff',
-    fontSize: FontSize.xxl,
-    fontWeight: '700',
+    fontSize: 28,
+    fontWeight: '800',
   },
-  progressTotal: {
-    color: 'rgba(255,255,255,0.7)',
-    fontSize: FontSize.sm,
+  ringTotal: {
+    color: 'rgba(255,255,255,0.5)',
+    fontSize: 12,
+    marginTop: -4,
   },
-  progressInfo: {
+  statsRight: {
     flex: 1,
   },
-  progressLabel: {
-    color: 'rgba(255,255,255,0.9)',
-    fontSize: FontSize.sm,
-    fontWeight: '600',
+  progressBarContainer: {
+    marginBottom: Spacing.md,
   },
   progressBarBg: {
     height: 8,
     borderRadius: 4,
-    marginTop: Spacing.sm,
     overflow: 'hidden',
+    marginBottom: 6,
   },
   progressBarFill: {
     height: '100%',
     backgroundColor: '#fff',
     borderRadius: 4,
   },
-  progressPercent: {
-    color: 'rgba(255,255,255,0.8)',
-    fontSize: FontSize.sm,
-    marginTop: Spacing.xs,
-  },
-  completedBadge: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: Spacing.sm,
-    backgroundColor: 'rgba(255,255,255,0.2)',
-    paddingVertical: Spacing.sm,
-    paddingHorizontal: Spacing.md,
-    borderRadius: BorderRadius.full,
-    marginTop: Spacing.md,
-  },
-  completedText: {
+  percentText: {
     color: '#fff',
-    fontSize: FontSize.sm,
-    fontWeight: '600',
+    fontSize: 11,
+    fontWeight: '700',
+    opacity: 0.8,
   },
-  scrollView: {
-    flex: 1,
+  completeBtn: {
+    backgroundColor: '#fff',
+    paddingVertical: 10,
+    borderRadius: BorderRadius.lg,
+    alignItems: 'center',
+  },
+  completeBtnText: {
+    color: Colors.light.primary,
+    fontWeight: '900',
+    fontSize: 12,
+    letterSpacing: 1,
+  },
+  gridContainer: {
+    padding: Spacing.md,
+  },
+  sectionLabel: {
+    fontSize: 11,
+    fontWeight: '800',
+    letterSpacing: 1.5,
+    marginBottom: Spacing.md,
+    marginLeft: 4,
   },
   juzGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    padding: Spacing.sm,
     gap: Spacing.sm,
-    paddingBottom: Spacing.xxl,
-  },
-  juzCard: {
-    width: '31%',
-    padding: Spacing.md,
-    borderRadius: BorderRadius.lg,
-    borderWidth: 1,
-  },
-  juzHeader: {
-    flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
   },
-  juzNumber: {
-    fontSize: FontSize.sm,
-    fontWeight: '700',
-  },
-  juzName: {
-    fontSize: FontSize.xs,
-    marginTop: Spacing.xs,
-  },
-  juzSurah: {
-    fontSize: FontSize.xs,
-    marginTop: 2,
-  },
-  modalOverlay: {
-    flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.5)',
+  juzBox: {
+    width: '18%',
+    aspectRatio: 1,
+    borderRadius: BorderRadius.md,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: Spacing.lg,
+    marginBottom: Spacing.xs,
   },
-  modalContent: {
-    width: '100%',
-    borderRadius: BorderRadius.lg,
-    padding: Spacing.lg,
+  juzNum: {
+    fontSize: 18,
+    fontWeight: '800',
   },
-  modalHeaderTitle: {
+  juzName: {
+    fontSize: 8,
+    fontWeight: '700',
+    textTransform: 'uppercase',
+  },
+  checkIcon: {
+    position: 'absolute',
+    top: 4,
+    right: 4,
+  },
+  collaborativeSection: {
+    padding: Spacing.md,
+  },
+  collabHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: Spacing.lg,
   },
-  modalTitle: {
-    fontSize: FontSize.lg,
-    fontWeight: 'bold',
-  },
-  modalBody: {
-    gap: Spacing.md,
-    marginBottom: Spacing.xl,
-  },
-  detailRow: {
+  createBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderRadius: BorderRadius.full,
     gap: 4,
   },
-  detailLabel: {
-    fontSize: FontSize.xs,
-    fontWeight: '600',
-    textTransform: 'uppercase',
-  },
-  detailValue: {
-    fontSize: FontSize.md,
-    lineHeight: 22,
-  },
-  modalButton: {
-    paddingVertical: Spacing.md,
-    borderRadius: BorderRadius.md,
-    alignItems: 'center',
-  },
-  modalButtonText: {
+  createBtnText: {
     color: '#fff',
-    fontSize: FontSize.md,
-    fontWeight: '600',
-  },
-  historyContainer: {
-    flex: 1,
-  },
-  historyHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: Spacing.lg,
-    borderBottomWidth: 1,
-  },
-  historyTitle: {
-    fontSize: FontSize.xl,
-    fontWeight: '700',
-  },
-  historyList: {
-    flex: 1,
-    padding: Spacing.md,
-  },
-  emptyHistory: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 100,
-    gap: Spacing.md,
-  },
-  emptyHistoryText: {
-    fontSize: FontSize.md,
-    textAlign: 'center',
-  },
-  historyItem: {
-    flexDirection: 'row',
-    padding: Spacing.lg,
-    borderRadius: BorderRadius.lg,
-    borderWidth: 1,
-    marginBottom: Spacing.md,
-    alignItems: 'center',
-    gap: Spacing.md,
-  },
-  historyItemIcon: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    backgroundColor: 'rgba(0,0,0,0.05)',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  historyItemContent: {
-    flex: 1,
-  },
-  historyItemTitle: {
-    fontSize: FontSize.md,
-    fontWeight: '700',
-  },
-  historyItemDate: {
-    fontSize: FontSize.sm,
-    marginTop: 2,
-  },
-  historyItemRange: {
-    fontSize: FontSize.xs,
-    marginTop: 2,
-  },
-  collaborativeHeader: {
-    padding: Spacing.lg,
-  },
-  sectionTitle: {
-    fontSize: FontSize.lg,
-    fontWeight: '700',
-  },
-  sectionSubtitle: {
-    fontSize: FontSize.sm,
-    marginTop: Spacing.xs,
+    fontWeight: '800',
+    fontSize: 12,
   },
   collabCard: {
-    marginHorizontal: Spacing.md,
-    marginBottom: Spacing.md,
     padding: Spacing.lg,
     borderRadius: BorderRadius.xl,
-    borderWidth: 1,
+    marginBottom: Spacing.md,
   },
-  collabTop: {
+  collabCardTop: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-  },
-  collabInfo: {
-    flex: 1,
+    marginBottom: Spacing.lg,
   },
   collabTitle: {
-    fontSize: FontSize.md,
-    fontWeight: '700',
-    marginBottom: Spacing.sm,
+    fontSize: 16,
+    fontWeight: '800',
+    flex: 1,
+    marginRight: Spacing.md,
   },
-  collabMeta: {
+  participantBadge: {
     flexDirection: 'row',
     alignItems: 'center',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 12,
+    gap: 4,
   },
-  collabMetaText: {
-    fontSize: FontSize.xs,
-    marginLeft: 4,
-  },
-  collabProgressCircle: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    borderWidth: 3,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginLeft: Spacing.md,
-  },
-  collabPercent: {
-    fontSize: FontSize.sm,
+  participantText: {
+    fontSize: 12,
     fontWeight: '700',
   },
-  collabProgressBarContainer: {
-    marginTop: Spacing.lg,
-  },
-  collabProgressBarBg: {
-    height: 6,
-    borderRadius: 3,
-    overflow: 'hidden',
-  },
-  collabProgressBarFill: {
-    height: '100%',
-    borderRadius: 3,
-  },
-  collabProgressText: {
-    fontSize: FontSize.xs,
+  collabProgress: {
     marginTop: Spacing.sm,
   },
-  joinButton: {
-    marginTop: Spacing.lg,
-    paddingVertical: Spacing.md,
-    borderRadius: BorderRadius.lg,
-    alignItems: 'center',
-  },
-  joinButtonText: {
-    color: '#fff',
-    fontSize: FontSize.md,
-    fontWeight: '700',
-  },
-  createButton: {
-    margin: Spacing.md,
-    padding: Spacing.lg,
-    borderRadius: BorderRadius.xl,
-    borderWidth: 2,
-    borderStyle: 'dashed',
+  collabStats: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 8,
+  },
+  collabStatText: {
+    fontSize: 11,
+  },
+  emptyState: {
     alignItems: 'center',
-    justifyContent: 'center',
-    gap: Spacing.sm,
-    marginBottom: Spacing.xxl,
+    marginTop: 60,
+    opacity: 0.5,
   },
-  createButtonText: {
-    fontSize: FontSize.md,
-    fontWeight: '700',
+  emptyText: {
+    marginTop: Spacing.md,
+    fontSize: 14,
+    fontWeight: '600',
   },
-  joinModalContainer: {
+  modalOverlay: {
     flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.6)',
+    justifyContent: 'center',
+    padding: Spacing.xl,
   },
-  joinModalHeader: {
+  modalContent: {
+    borderRadius: BorderRadius.xl,
+    overflow: 'hidden',
+  },
+  modalHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: Spacing.lg,
-    borderBottomWidth: 1,
   },
-  joinModalTitle: {
-    fontSize: FontSize.lg,
+  modalTitle: {
+    color: '#fff',
+    fontSize: 18,
     fontWeight: '800',
   },
-  joinModalSub: {
-    fontSize: FontSize.xs,
-    marginTop: 2,
+  modalBody: {
+    padding: Spacing.lg,
+    gap: Spacing.md,
   },
-  userNameContainer: {
+  detailRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  detailLabel: {
+    fontWeight: '600',
+    opacity: 0.6,
+  },
+  detailValue: {
+    fontWeight: '800',
+  },
+  modalContainer: {
+    flex: 1,
+  },
+  modalFullHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: Spacing.md,
+    height: 60,
+  },
+  modalFullTitle: {
+    fontSize: 18,
+    fontWeight: '800',
+  },
+  userNameSection: {
     padding: Spacing.lg,
   },
   inputLabel: {
-    fontSize: FontSize.xs,
-    fontWeight: '700',
-    marginBottom: Spacing.sm,
+    fontSize: 12,
+    fontWeight: '800',
+    marginBottom: 8,
+    textTransform: 'uppercase',
+    letterSpacing: 1,
   },
-  userNameInput: {
+  nameInput: {
     height: 50,
-    borderRadius: BorderRadius.lg,
+    borderRadius: BorderRadius.md,
     paddingHorizontal: Spacing.md,
     borderWidth: 1,
+    fontSize: 16,
   },
-  joinJuzGrid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    padding: Spacing.sm,
-    gap: Spacing.sm,
-    paddingBottom: 40,
-  },
-  joinJuzCard: {
-    width: '31%',
+  juzListContent: {
     padding: Spacing.md,
-    borderRadius: BorderRadius.lg,
-    borderWidth: 1,
-    alignItems: 'center',
   },
-  joinJuzNumber: {
-    fontSize: FontSize.sm,
-    fontWeight: '800',
-  },
-  joinJuzUser: {
-    fontSize: 10,
-    marginTop: 4,
+  takenText: {
+    fontSize: 8,
+    fontWeight: '600',
+    width: '100%',
     textAlign: 'center',
-  },
-  joinJuzAction: {
-    fontSize: 10,
-    fontWeight: '700',
     marginTop: 4,
-    textTransform: 'uppercase',
+  },
+  juzAction: {
+    fontSize: 10,
+    fontWeight: '900',
+    marginTop: 2,
+  },
+  submitBtn: {
+    height: 54,
+    borderRadius: BorderRadius.lg,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: Spacing.xl,
+  },
+  submitBtnText: {
+    color: '#fff',
+    fontWeight: '900',
+    fontSize: 16,
+    letterSpacing: 2,
+  },
+  closeBtn: {
+    padding: 8,
   },
 });

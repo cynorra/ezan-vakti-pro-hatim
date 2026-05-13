@@ -14,40 +14,53 @@ export function ReligiousDaysCard() {
   if (upcomingDays.length === 0) return null;
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.card }, Shadows.medium]}>
+    <View style={[styles.container, { backgroundColor: colors.surface }, Shadows.medium]}>
       <View style={styles.header}>
-        <Text style={[styles.title, { color: colors.text }]}>Önemli Dini Günler</Text>
-        <Ionicons name="calendar-outline" size={20} color={colors.primary} />
+        <View style={styles.headerTitleRow}>
+          <View style={[styles.titleDot, { backgroundColor: colors.accent }]} />
+          <Text style={[styles.title, { color: colors.text }]}>ÖNEMLİ GÜNLER</Text>
+        </View>
+        <Ionicons name="calendar-sharp" size={18} color={colors.primary} />
       </View>
 
-      {upcomingDays.map((day, index) => {
-        const date = new Date(day.date);
-        const dayStr = date.getDate().toString().padStart(2, '0');
-        const monthStr = (date.getMonth() + 1).toString().padStart(2, '0');
-        
-        return (
-          <View 
-            key={day.name + day.date} 
-            style={[
-              styles.dayRow, 
-              index !== upcomingDays.length - 1 && { borderBottomWidth: 1, borderBottomColor: colors.border }
-            ]}
-          >
-            <View style={[styles.dateBadge, { backgroundColor: colors.primary + '15' }]}>
-              <Text style={[styles.dateText, { color: colors.primary }]}>{dayStr}.{monthStr}</Text>
+      <View style={styles.list}>
+        {upcomingDays.map((day, index) => {
+          const date = new Date(day.date);
+          const dayStr = date.getDate().toString().padStart(2, '0');
+          const monthStr = date.toLocaleString('tr-TR', { month: 'short' }).toUpperCase();
+          
+          return (
+            <View 
+              key={day.name + day.date} 
+              style={[
+                styles.dayRow, 
+                index !== upcomingDays.length - 1 && { borderBottomWidth: 1, borderBottomColor: colors.border }
+              ]}
+            >
+              <View style={[styles.dateBadge, { backgroundColor: colors.primary + '10' }]}>
+                <Text style={[styles.dateDay, { color: colors.primary }]}>{dayStr}</Text>
+                <Text style={[styles.dateMonth, { color: colors.primary }]}>{monthStr}</Text>
+              </View>
+              
+              <View style={styles.content}>
+                <Text style={[styles.dayName, { color: colors.text }]}>{day.name}</Text>
+                <View style={styles.typeRow}>
+                  <Ionicons 
+                    name={day.type === 'eid' ? "star" : "bookmark"} 
+                    size={10} 
+                    color={day.type === 'eid' ? colors.accent : colors.textMuted} 
+                  />
+                  <Text style={[styles.dayType, { color: colors.textSecondary }]}>
+                    {day.type === 'kandil' ? 'Kandil Gecesi' : day.type === 'eid' ? 'Dini Bayram' : 'Mübarek Gün'}
+                  </Text>
+                </View>
+              </View>
+
+              <Ionicons name="chevron-forward" size={16} color={colors.border} />
             </View>
-            <View style={styles.content}>
-              <Text style={[styles.dayName, { color: colors.text }]}>{day.name}</Text>
-              <Text style={[styles.dayType, { color: colors.textSecondary }]}>
-                {day.type === 'kandil' ? 'Kandil' : day.type === 'eid' ? 'Bayram' : 'Özel Gün'}
-              </Text>
-            </View>
-            {day.type === 'eid' && (
-              <Ionicons name="star" size={16} color={colors.accent} />
-            )}
-          </View>
-        );
-      })}
+          );
+        })}
+      </View>
     </View>
   );
 }
@@ -55,49 +68,74 @@ export function ReligiousDaysCard() {
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: Spacing.md,
-    marginTop: Spacing.md,
     borderRadius: BorderRadius.xl,
-    padding: Spacing.md,
+    overflow: 'hidden',
   },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: Spacing.md,
+    paddingHorizontal: Spacing.lg,
+    paddingVertical: Spacing.lg,
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(0,0,0,0.03)',
+  },
+  headerTitleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  titleDot: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
   },
   title: {
-    fontSize: FontSize.md,
-    fontWeight: '700',
-    textTransform: 'uppercase',
-    letterSpacing: 1,
+    fontSize: 12,
+    fontWeight: '800',
+    letterSpacing: 1.5,
+  },
+  list: {
+    paddingVertical: Spacing.xs,
   },
   dayRow: {
     flexDirection: 'row',
     alignItems: 'center',
+    paddingHorizontal: Spacing.lg,
     paddingVertical: Spacing.md,
     gap: Spacing.md,
   },
   dateBadge: {
-    paddingHorizontal: Spacing.sm,
-    paddingVertical: Spacing.xs,
+    width: 54,
+    height: 54,
     borderRadius: BorderRadius.md,
-    minWidth: 50,
     alignItems: 'center',
+    justifyContent: 'center',
   },
-  dateText: {
-    fontSize: FontSize.sm,
-    fontWeight: '700',
-    fontFamily: 'monospace',
+  dateDay: {
+    fontSize: 20,
+    fontWeight: '800',
+  },
+  dateMonth: {
+    fontSize: 10,
+    fontWeight: '900',
+    marginTop: -2,
   },
   content: {
     flex: 1,
   },
   dayName: {
-    fontSize: FontSize.sm,
-    fontWeight: '600',
+    fontSize: FontSize.md,
+    fontWeight: '700',
+    marginBottom: 2,
+  },
+  typeRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
   },
   dayType: {
-    fontSize: FontSize.xs,
-    marginTop: 2,
+    fontSize: 11,
+    fontWeight: '600',
   },
 });
