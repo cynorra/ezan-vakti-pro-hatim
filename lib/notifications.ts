@@ -32,7 +32,7 @@ export async function schedulePrayerNotification(
       hour: hours,
       minute: minutes,
       repeats: true,
-    },
+    } as any,
   });
 }
 

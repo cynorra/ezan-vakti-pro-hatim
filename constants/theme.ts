@@ -39,14 +39,15 @@ export const Colors = {
     overlay: 'rgba(0, 0, 0, 0.8)',
     white: '#FFFFFF',
   },
+  get unspecified() { return this.light; }
 };
 
 export const Gradients = {
-  primary: ['#0A5C36', '#1B4332'],
-  premium: ['#0A5C36', '#052F1C'],
-  accent: ['#D4AF37', '#B8860B'],
-  surface: ['#FFFFFF', '#F0F4F2'],
-  darkSurface: ['#0D1F16', '#05100B'],
+  primary: ['#0A5C36', '#1B4332'] as const,
+  premium: ['#0A5C36', '#052F1C'] as const,
+  accent: ['#D4AF37', '#B8860B'] as const,
+  surface: ['#FFFFFF', '#F0F4F2'] as const,
+  darkSurface: ['#0D1F16', '#05100B'] as const,
 };
 
 export const Spacing = {
