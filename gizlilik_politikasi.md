@@ -44,3 +44,6 @@ Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Herhangi bir değişi
 
 Gizlilik politikamız ile ilgili herhangi bir sorunuz, öneriniz veya şikayetiniz olması durumunda bizimle iletişime geçebilirsiniz.
 Geliştirici İletişim E-posta Adresi: iletisim@cynnora.com
+
+**8. KVKK / Gizlilik Politikası Web Adresi**
+Bu metnin yayında olduğu resmî adres: https://sites.google.com/view/ezan-vakti-hatim/ana-sayfa
