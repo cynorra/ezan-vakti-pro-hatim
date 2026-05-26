@@ -16,7 +16,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.ezanvakti.hatim",
+      "bundleIdentifier": "com.cynnora.ezanvakti",
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "Kible yonunu ve namaz vakitlerini hesaplamak icin konumunuz gerekli.",
         "NSMotionUsageDescription": "Kible pusulasi icin hareket sensoru gerekli."
@@ -27,7 +27,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0d7a3e"
       },
-      "package": "com.ezanvakti.hatim",
+      "package": "com.cynnora.ezanvakti",
       "permissions": [
         "ACCESS_FINE_LOCATION",
         "ACCESS_COARSE_LOCATION",
