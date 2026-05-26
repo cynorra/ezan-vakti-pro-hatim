@@ -1,0 +1,8 @@
+{
+  "tabs": { "home": "首页", "qibla": "朝向", "hatim": "通读", "dua": "祈祷", "dhikr": "赞念" },
+  "home": { "nextPrayerCountdown": "剩余时间", "verseOfTheDay": "今日经文", "hadithOfTheDay": "今日圣训", "esmaOfTheDay": "今日尊名" },
+  "prayerTimes": { "imsak": "晨礼", "gunes": "日出", "ogle": "晌礼", "ikindi": "晡礼", "aksam": "昏礼", "yatsi": "宵礼" },
+  "hatim": { "individual": "个人", "collaborative": "合作", "weeklyHatim": "每周通读", "completed": "已完成", "completeHatimBtn": "完成通读", "juzSelection": "选择卷", "activeHatims": "进行中的通读", "startNew": "开始新的", "noActiveHatim": "暂无合作通读。", "newCollaborativeHatim": "新的合作通读", "hatimTitleLabel": "通读标题", "hatimTitlePlaceholder": "例如：斋月通读", "startBtn": "开始", "participantName": "参与者姓名", "namePlaceholder": "输入你的名字...", "takeJuz": "认领", "juzDetails": "卷详情", "startSurah": "起始章:", "pages": "页数:", "containsSurahs": "包含章节:", "congratsSaved": "恭喜！你的通读已保存。" },
+  "settings": { "title": "设置", "notifications": "通知", "language": "语言" },
+  "common": { "cancel": "取消", "save": "保存", "close": "关闭", "search": "搜索..." }
+}

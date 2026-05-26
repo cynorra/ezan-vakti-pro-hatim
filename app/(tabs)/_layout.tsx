@@ -2,10 +2,12 @@ import { Tabs } from 'expo-router';
 import { useColorScheme, View, Platform } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors, Shadows, BorderRadius } from '@/constants/theme';
+import { useTranslation } from 'react-i18next';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
+  const { t } = useTranslation();
 
   return (
     <Tabs
@@ -37,7 +39,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Vakitler',
+          title: t('tabs.home'),
           tabBarIcon: ({ color, focused }: { color: string; focused: boolean }) => (
             <Ionicons name={focused ? "time" : "time-outline"} size={24} color={color} />
           ),
@@ -46,7 +48,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="kible"
         options={{
-          title: 'Kıble',
+          title: t('tabs.qibla'),
           tabBarIcon: ({ color, focused }: { color: string; focused: boolean }) => (
             <Ionicons name={focused ? "compass" : "compass-outline"} size={24} color={color} />
           ),
@@ -55,7 +57,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="tesbih"
         options={{
-          title: 'Tesbih',
+          title: t('tabs.dhikr'),
           tabBarIcon: ({ color, focused }: { color: string; focused: boolean }) => (
             <Ionicons name={focused ? "radio-button-on" : "radio-button-on-outline"} size={24} color={color} />
           ),
@@ -64,7 +66,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="hatim"
         options={{
-          title: 'Hatim',
+          title: t('tabs.hatim'),
           tabBarIcon: ({ color, focused }: { color: string; focused: boolean }) => (
             <Ionicons name={focused ? "book" : "book-outline"} size={24} color={color} />
           ),
@@ -73,7 +75,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="dua"
         options={{
-          title: 'Dualar',
+          title: t('tabs.dua'),
           tabBarIcon: ({ color, focused }: { color: string; focused: boolean }) => (
             <Ionicons name={focused ? "heart" : "heart-outline"} size={24} color={color} />
           ),

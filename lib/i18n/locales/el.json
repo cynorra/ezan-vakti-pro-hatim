@@ -1,0 +1,8 @@
+{
+  "tabs": { "home": "Αρχική", "qibla": "Κίμπλα", "hatim": "Χατίμ", "dua": "Ντούα", "dhikr": "Ζικρ" },
+  "home": { "nextPrayerCountdown": "Υπολειπόμενος χρόνος", "verseOfTheDay": "Στίχος της Ημέρας", "hadithOfTheDay": "Χαντίθ της Ημέρας", "esmaOfTheDay": "Όνομα της Ημέρας" },
+  "prayerTimes": { "imsak": "Φατζρ", "gunes": "Ανατολή", "ogle": "Ντουχρ", "ikindi": "Ασρ", "aksam": "Μαγκρίμπ", "yatsi": "Ισά" },
+  "hatim": { "individual": "Ατομικό", "collaborative": "Συλλογικό", "weeklyHatim": "Εβδομαδιαίο Χατίμ", "completed": "Ολοκληρώθηκε", "completeHatimBtn": "ΟΛΟΚΛΗΡΩΣΗ ΧΑΤΙΜ", "juzSelection": "ΕΠΙΛΟΓΗ ΤΖΟΥΖ", "activeHatims": "ΕΝΕΡΓΑ ΧΑΤΙΜ", "startNew": "Έναρξη Νέου", "noActiveHatim": "Δεν υπάρχει ενεργό συλλογικό χατίμ ακόμα.", "newCollaborativeHatim": "Νέο Συλλογικό Χατίμ", "hatimTitleLabel": "Τίτλος Χατίμ", "hatimTitlePlaceholder": "π.χ., Χατίμ Ραμαζανιού", "startBtn": "ΕΝΑΡΞΗ", "participantName": "Όνομα Συμμετέχοντα", "namePlaceholder": "Εισάγετε το όνομά σας...", "takeJuz": "ΠΑΡΕ", "juzDetails": "Λεπτομέρειες Τζουζ", "startSurah": "Αρχική Σούρα:", "pages": "Σελίδες:", "containsSurahs": "Περιέχει Σούρες:", "congratsSaved": "Συγχαρητήρια! Το Χατίμ σας αποθηκεύτηκε." },
+  "settings": { "title": "Ρυθμίσεις", "notifications": "Ειδοποιήσεις", "language": "Γλώσσα" },
+  "common": { "cancel": "Ακύρωση", "save": "Αποθήκευση", "close": "Κλείσιμο", "search": "Αναζήτηση..." }
+}

@@ -1,0 +1,8 @@
+{
+  "tabs": { "home": "Accueil", "qibla": "Qibla", "hatim": "Khatm", "dua": "Doua", "dhikr": "Dhikr" },
+  "home": { "nextPrayerCountdown": "Temps restant", "verseOfTheDay": "Verset du jour", "hadithOfTheDay": "Hadith du jour", "esmaOfTheDay": "Nom du jour" },
+  "prayerTimes": { "imsak": "Fajr", "gunes": "Lever du soleil", "ogle": "Dhuhr", "ikindi": "Asr", "aksam": "Maghrib", "yatsi": "Isha" },
+  "hatim": { "individual": "Individuel", "collaborative": "Collaboratif", "weeklyHatim": "Khatm Hebdomadaire", "completed": "Terminé", "completeHatimBtn": "TERMINER KHATM", "juzSelection": "SÉLECTION DE JUZ", "activeHatims": "KHATMS ACTIFS", "startNew": "Démarrer nouveau", "noActiveHatim": "Aucun khatm collaboratif actif.", "newCollaborativeHatim": "Nouveau Khatm Collaboratif", "hatimTitleLabel": "Titre du Khatm", "hatimTitlePlaceholder": "ex: Khatm Ramadan", "startBtn": "DÉMARRER", "participantName": "Nom du participant", "namePlaceholder": "Entrez votre nom...", "takeJuz": "PRENDRE", "juzDetails": "Détails du Juz", "startSurah": "Sourate de début:", "pages": "Pages:", "containsSurahs": "Contient les sourates:", "congratsSaved": "Félicitations! Votre Khatm est enregistré." },
+  "settings": { "title": "Paramètres", "notifications": "Notifications", "language": "Langue" },
+  "common": { "cancel": "Annuler", "save": "Enregistrer", "close": "Fermer", "search": "Rechercher..." }
+}

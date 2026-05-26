@@ -1,0 +1,8 @@
+{
+  "tabs": { "home": "হোম", "qibla": "কিবলা", "hatim": "খতম", "dua": "দুআ", "dhikr": "জিকির" },
+  "home": { "nextPrayerCountdown": "বাকি সময়", "verseOfTheDay": "আজকের আয়াত", "hadithOfTheDay": "আজকের হাদিস", "esmaOfTheDay": "আজকের নাম" },
+  "prayerTimes": { "imsak": "ফজর", "gunes": "সূর্যোদয়", "ogle": "যোহর", "ikindi": "আসর", "aksam": "মাগরিব", "yatsi": "এশা" },
+  "hatim": { "individual": "ব্যক্তিগত", "collaborative": "সম্মিলিত", "weeklyHatim": "সাপ্তাহিক খতম", "completed": "সম্পন্ন", "completeHatimBtn": "খতম সম্পন্ন করুন", "juzSelection": "পারা নির্বাচন", "activeHatims": "সক্রিয় খতম", "startNew": "নতুন শুরু করুন", "noActiveHatim": "এখনো কোনো সক্রিয় সম্মিলিত খতম নেই।", "newCollaborativeHatim": "নতুন সম্মিলিত খতম", "hatimTitleLabel": "খতমের শিরোনাম", "hatimTitlePlaceholder": "যেমন, রমজান খতম", "startBtn": "শুরু করুন", "participantName": "অংশগ্রহণকারীর নাম", "namePlaceholder": "আপনার নাম লিখুন...", "takeJuz": "নিন", "juzDetails": "পারা বিস্তারিত", "startSurah": "শুরুর সূরা:", "pages": "পৃষ্ঠা:", "containsSurahs": "যেসব সূরা আছে:", "congratsSaved": "অভিনন্দন! আপনার খতম সেভ হয়েছে।" },
+  "settings": { "title": "সেটিংস", "notifications": "বিজ্ঞপ্তি", "language": "ভাষা" },
+  "common": { "cancel": "বাতিল", "save": "সেভ", "close": "বন্ধ", "search": "অনুসন্ধান..." }
+}

@@ -1,0 +1,8 @@
+{
+  "tabs": { "home": "Beranda", "qibla": "Kiblat", "hatim": "Khatam", "dua": "Doa", "dhikr": "Zikir" },
+  "home": { "nextPrayerCountdown": "Waktu tersisa", "verseOfTheDay": "Ayat Hari Ini", "hadithOfTheDay": "Hadits Hari Ini", "esmaOfTheDay": "Nama Hari Ini" },
+  "prayerTimes": { "imsak": "Subuh", "gunes": "Terbit", "ogle": "Zuhur", "ikindi": "Ashar", "aksam": "Maghrib", "yatsi": "Isya" },
+  "hatim": { "individual": "Individu", "collaborative": "Kolaboratif", "weeklyHatim": "Khatam Mingguan", "completed": "Selesai", "completeHatimBtn": "SELESAIKAN KHATAM", "juzSelection": "PILIHAN JUZ", "activeHatims": "KHATAM AKTIF", "startNew": "Mulai Baru", "noActiveHatim": "Belum ada khatam kolaboratif yang aktif.", "newCollaborativeHatim": "Khatam Kolaboratif Baru", "hatimTitleLabel": "Judul Khatam", "hatimTitlePlaceholder": "misal, Khatam Ramadhan", "startBtn": "MULAI", "participantName": "Nama Peserta", "namePlaceholder": "Masukkan nama Anda...", "takeJuz": "AMBIL", "juzDetails": "Detail Juz", "startSurah": "Surah Awal:", "pages": "Halaman:", "containsSurahs": "Berisi Surah:", "congratsSaved": "Selamat! Khatam Anda telah disimpan." },
+  "settings": { "title": "Pengaturan", "notifications": "Notifikasi", "language": "Bahasa" },
+  "common": { "cancel": "Batal", "save": "Simpan", "close": "Tutup", "search": "Cari..." }
+}

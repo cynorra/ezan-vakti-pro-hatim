@@ -1,0 +1,57 @@
+{
+  "tabs": {
+    "home": "الرئيسية",
+    "qibla": "القبلة",
+    "hatim": "ختم",
+    "dua": "دعاء",
+    "dhikr": "تسبيح"
+  },
+  "home": {
+    "nextPrayerCountdown": "الوقت المتبقي",
+    "verseOfTheDay": "آية اليوم",
+    "hadithOfTheDay": "حديث اليوم",
+    "esmaOfTheDay": "اسم اليوم"
+  },
+  "prayerTimes": {
+    "imsak": "الفجر",
+    "gunes": "الشروق",
+    "ogle": "الظهر",
+    "ikindi": "العصر",
+    "aksam": "المغرب",
+    "yatsi": "العشاء"
+  },
+  "hatim": {
+    "individual": "فردي",
+    "collaborative": "ختم مشترك",
+    "weeklyHatim": "ختم أسبوعي",
+    "completed": "مكتمل",
+    "completeHatimBtn": "إتمام الختم",
+    "juzSelection": "اختيار الجزء",
+    "activeHatims": "الختمات النشطة",
+    "startNew": "بدء جديد",
+    "noActiveHatim": "لا يوجد ختم مشترك نشط حتى الآن.",
+    "newCollaborativeHatim": "ختم مشترك جديد",
+    "hatimTitleLabel": "عنوان الختم",
+    "hatimTitlePlaceholder": "مثال: ختم رمضان",
+    "startBtn": "ابدأ",
+    "participantName": "اسم المشارك",
+    "namePlaceholder": "أدخل اسمك...",
+    "takeJuz": "أخذ",
+    "juzDetails": "تفاصيل الجزء",
+    "startSurah": "سورة البداية:",
+    "pages": "الصفحات:",
+    "containsSurahs": "يحتوي على السور:",
+    "congratsSaved": "تهانينا! تم حفظ ختمك."
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "notifications": "الإشعارات",
+    "language": "اللغة"
+  },
+  "common": {
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "close": "إغلاق",
+    "search": "بحث..."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "tabs": { "home": "ہوم", "qibla": "قبلہ", "hatim": "ختم", "dua": "دعا", "dhikr": "ذکر" },
+  "home": { "nextPrayerCountdown": "باقی وقت", "verseOfTheDay": "آج کی آیت", "hadithOfTheDay": "آج کی حدیث", "esmaOfTheDay": "آج کا نام" },
+  "prayerTimes": { "imsak": "فجر", "gunes": "طلوع آفتاب", "ogle": "ظہر", "ikindi": "عصر", "aksam": "مغرب", "yatsi": "عشاء" },
+  "hatim": { "individual": "انفرادی", "collaborative": "اجتماعی", "weeklyHatim": "ہفتہ وار ختم", "completed": "مکمل", "completeHatimBtn": "ختم مکمل کریں", "juzSelection": "پارہ کا انتخاب", "activeHatims": "فعال ختم", "startNew": "نیا شروع کریں", "noActiveHatim": "ابھی تک کوئی فعال اجتماعی ختم نہیں ہے۔", "newCollaborativeHatim": "نیا اجتماعی ختم", "hatimTitleLabel": "ختم کا عنوان", "hatimTitlePlaceholder": "مثال کے طور پر، رمضان ختم", "startBtn": "شروع کریں", "participantName": "حصہ لینے والے کا نام", "namePlaceholder": "اپنا نام درج کریں...", "takeJuz": "لیں", "juzDetails": "پارہ کی تفصیلات", "startSurah": "شروع کی سورہ:", "pages": "صفحات:", "containsSurahs": "شامل سورتیں:", "congratsSaved": "مبارک ہو! آپ کا ختم محفوظ ہو گیا ہے۔" },
+  "settings": { "title": "ترتیبات", "notifications": "اطلاعات", "language": "زبان" },
+  "common": { "cancel": "منسوخ کریں", "save": "محفوظ کریں", "close": "بند کریں", "search": "تلاش کریں..." }
+}

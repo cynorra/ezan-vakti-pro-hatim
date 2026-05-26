@@ -1,0 +1,8 @@
+{
+  "tabs": { "home": "होम", "qibla": "क़िबला", "hatim": "खत्म", "dua": "दुआ", "dhikr": "ज़िक्र" },
+  "home": { "nextPrayerCountdown": "शेष समय", "verseOfTheDay": "आज की आयत", "hadithOfTheDay": "आज की हदीस", "esmaOfTheDay": "आज का नाम" },
+  "prayerTimes": { "imsak": "फ़ज्र", "gunes": "सूर्योदय", "ogle": "ज़ुहर", "ikindi": "असर", "aksam": "मग़रिब", "yatsi": "ईशा" },
+  "hatim": { "individual": "व्यक्तिगत", "collaborative": "सामूहिक", "weeklyHatim": "साप्ताहिक खत्म", "completed": "पूरा हुआ", "completeHatimBtn": "खत्म पूरा करें", "juzSelection": "पारा चयन", "activeHatims": "सक्रिय खत्म", "startNew": "नया शुरू करें", "noActiveHatim": "अभी कोई सामूहिक खत्म नहीं है।", "newCollaborativeHatim": "नया सामूहिक खत्म", "hatimTitleLabel": "खत्म शीर्षक", "hatimTitlePlaceholder": "उदा., रमज़ान खत्म", "startBtn": "शुरू करें", "participantName": "प्रतिभागी का नाम", "namePlaceholder": "अपना नाम दर्ज करें...", "takeJuz": "लें", "juzDetails": "पारा विवरण", "startSurah": "शुरुआती सूरह:", "pages": "पृष्ठ:", "containsSurahs": "शामिल सूरह:", "congratsSaved": "बधाई हो! आपका खत्म सेव हो गया।" },
+  "settings": { "title": "सेटिंग्स", "notifications": "सूचनाएं", "language": "भाषा" },
+  "common": { "cancel": "रद्द करें", "save": "सेव करें", "close": "बंद करें", "search": "खोजें..." }
+}

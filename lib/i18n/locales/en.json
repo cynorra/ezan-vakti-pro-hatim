@@ -1,0 +1,57 @@
+{
+  "tabs": {
+    "home": "Home",
+    "qibla": "Qibla",
+    "hatim": "Khatm",
+    "dua": "Dua",
+    "dhikr": "Dhikr"
+  },
+  "home": {
+    "nextPrayerCountdown": "Time remaining",
+    "verseOfTheDay": "Verse of the Day",
+    "hadithOfTheDay": "Hadith of the Day",
+    "esmaOfTheDay": "Name of the Day"
+  },
+  "prayerTimes": {
+    "imsak": "Fajr",
+    "gunes": "Sunrise",
+    "ogle": "Dhuhr",
+    "ikindi": "Asr",
+    "aksam": "Maghrib",
+    "yatsi": "Isha"
+  },
+  "hatim": {
+    "individual": "Individual",
+    "collaborative": "Collaborative",
+    "weeklyHatim": "Weekly Khatm",
+    "completed": "Completed",
+    "completeHatimBtn": "COMPLETE KHATM",
+    "juzSelection": "JUZ SELECTION",
+    "activeHatims": "ACTIVE KHATMS",
+    "startNew": "Start New",
+    "noActiveHatim": "No active collaborative khatm yet.",
+    "newCollaborativeHatim": "New Collaborative Khatm",
+    "hatimTitleLabel": "Khatm Title",
+    "hatimTitlePlaceholder": "e.g., Ramadan Khatm",
+    "startBtn": "START",
+    "participantName": "Participant Name",
+    "namePlaceholder": "Enter your name...",
+    "takeJuz": "TAKE",
+    "juzDetails": "Juz Details",
+    "startSurah": "Starting Surah:",
+    "pages": "Pages:",
+    "containsSurahs": "Contains Surahs:",
+    "congratsSaved": "Congratulations! Your Khatm is saved."
+  },
+  "settings": {
+    "title": "Settings",
+    "notifications": "Notifications",
+    "language": "Language"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "close": "Close",
+    "search": "Search..."
+  }
+}

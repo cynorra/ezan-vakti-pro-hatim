@@ -12,6 +12,7 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
+import { SEOHead } from '@/components/SEOHead';
 
 interface Dua {
   id: string;
@@ -80,7 +81,13 @@ export default function DuaScreen() {
   };
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <>
+      <SEOHead 
+        title="Dua Kitaplığı | Ezan Vakti ve Hatim"
+        description="Kur'an-ı Kerim'den ve Peygamber Efendimizden günlük dualar. Şifa, korunma, rızık ve yemek duaları Türkçe anlamlarıyla."
+        keywords="dualar, günlük dualar, şifa duası, peygamber duaları, kuran duaları, ayetel kürsi"
+      />
+      <View style={[styles.container, { backgroundColor: colors.background }]}>
       <LinearGradient colors={Gradients.premium} style={styles.header}>
         <Text style={styles.headerTitle}>DUA KİTAPLIĞI</Text>
         <Text style={styles.headerSubtitle}>Müminin Silahı Duadır</Text>
@@ -160,6 +167,7 @@ export default function DuaScreen() {
         <View style={{ height: 100 }} />
       </ScrollView>
     </View>
+    </>
   );
 }
 

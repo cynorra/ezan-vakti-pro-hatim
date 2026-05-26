@@ -1,0 +1,57 @@
+{
+  "tabs": {
+    "home": "Ana Sayfa",
+    "qibla": "Kıble",
+    "hatim": "Hatim",
+    "dua": "Dua",
+    "dhikr": "Tesbih"
+  },
+  "home": {
+    "nextPrayerCountdown": "Vaktin çıkmasına",
+    "verseOfTheDay": "Günün Ayeti",
+    "hadithOfTheDay": "Günün Hadisi",
+    "esmaOfTheDay": "Günün Esması"
+  },
+  "prayerTimes": {
+    "imsak": "İmsak",
+    "gunes": "Güneş",
+    "ogle": "Öğle",
+    "ikindi": "İkindi",
+    "aksam": "Akşam",
+    "yatsi": "Yatsı"
+  },
+  "hatim": {
+    "individual": "Bireysel",
+    "collaborative": "Ortak Hatim",
+    "weeklyHatim": "Haftalık Hatim",
+    "completed": "Tamamlandı",
+    "completeHatimBtn": "HATMİ TAMAMLA",
+    "juzSelection": "CÜZ SEÇİMİ",
+    "activeHatims": "AKTİF HATİMLER",
+    "startNew": "Yeni Başlat",
+    "noActiveHatim": "Henüz aktif bir ortak hatim yok.",
+    "newCollaborativeHatim": "Yeni Ortak Hatim",
+    "hatimTitleLabel": "Hatim Başlığı",
+    "hatimTitlePlaceholder": "Örn: Ramazan Hatmi",
+    "startBtn": "BAŞLAT",
+    "participantName": "Katılımcı Adı",
+    "namePlaceholder": "Adınızı yazınız...",
+    "takeJuz": "AL",
+    "juzDetails": "Cüz Detayları",
+    "startSurah": "Başlangıç Suresi:",
+    "pages": "Sayfalar:",
+    "containsSurahs": "İçerdiği Sureler:",
+    "congratsSaved": "Tebrikler! Hatminiz kaydedildi."
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "notifications": "Bildirimler",
+    "language": "Dil Seçimi"
+  },
+  "common": {
+    "cancel": "İptal",
+    "save": "Kaydet",
+    "close": "Kapat",
+    "search": "Ara..."
+  }
+}

@@ -18,6 +18,7 @@ import * as Haptics from 'expo-haptics';
 import { safeHaptics } from '@/lib/haptics';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { SEOHead } from '@/components/SEOHead';
 
 interface Dhikr {
   id: string;
@@ -101,7 +102,13 @@ export default function TesbihScreen() {
   const progress = Math.min(currentDhikr.count / currentDhikr.target, 1);
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <>
+      <SEOHead 
+        title="Dijital Tesbih ve Zikirmatik | Ezan Vakti ve Hatim"
+        description="Gelişmiş dijital zikirmatik ve tesbihmatik uygulaması. Günlük zikirlerinizi takip edin, kaydedin ve hedeflerinize ulaşın."
+        keywords="zikirmatik, tesbihmatik, dijital tesbih, zikir çek, günlük zikirler, sübhanallah"
+      />
+      <View style={[styles.container, { backgroundColor: colors.background }]}>
       <LinearGradient colors={Gradients.premium} style={styles.header}>
         <Text style={styles.headerTitle}>TESBİHMATİK</Text>
         <Text style={styles.headerSubtitle}>Zikir ve Tesbihat</Text>
@@ -215,6 +222,7 @@ export default function TesbihScreen() {
         <View style={{ height: 100 }} />
       </ScrollView>
     </View>
+    </>
   );
 }
 

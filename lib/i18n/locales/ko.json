@@ -1,0 +1,8 @@
+{
+  "tabs": { "home": "홈", "qibla": "키블라", "hatim": "하틈", "dua": "두아", "dhikr": "디크르" },
+  "home": { "nextPrayerCountdown": "남은 시간", "verseOfTheDay": "오늘의 구절", "hadithOfTheDay": "오늘의 하디스", "esmaOfTheDay": "오늘의 이름" },
+  "prayerTimes": { "imsak": "파즈르", "gunes": "일출", "ogle": "두흐르", "ikindi": "아스르", "aksam": "마그리브", "yatsi": "이샤" },
+  "hatim": { "individual": "개인", "collaborative": "공동", "weeklyHatim": "주간 하틈", "completed": "완료됨", "completeHatimBtn": "하틈 완료", "juzSelection": "주즈 선택", "activeHatims": "활성 하틈", "startNew": "새로 시작", "noActiveHatim": "활성화된 공동 하틈이 없습니다.", "newCollaborativeHatim": "새로운 공동 하틈", "hatimTitleLabel": "하틈 제목", "hatimTitlePlaceholder": "예: 라마단 하틈", "startBtn": "시작", "participantName": "참가자 이름", "namePlaceholder": "이름을 입력하세요...", "takeJuz": "선택", "juzDetails": "주즈 세부정보", "startSurah": "시작 수라:", "pages": "페이지:", "containsSurahs": "포함된 수라:", "congratsSaved": "축하합니다! 하틈이 저장되었습니다." },
+  "settings": { "title": "설정", "notifications": "알림", "language": "언어" },
+  "common": { "cancel": "취소", "save": "저장", "close": "닫기", "search": "검색..." }
+}

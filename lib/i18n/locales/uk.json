@@ -1,0 +1,8 @@
+{
+  "tabs": { "home": "Головна", "qibla": "Кібла", "hatim": "Хатм", "dua": "Дуа", "dhikr": "Зікр" },
+  "home": { "nextPrayerCountdown": "Час, що залишився", "verseOfTheDay": "Аят дня", "hadithOfTheDay": "Хадіс дня", "esmaOfTheDay": "Ім'я дня" },
+  "prayerTimes": { "imsak": "Фаджр", "gunes": "Схід сонця", "ogle": "Зухр", "ikindi": "Аср", "aksam": "Магріб", "yatsi": "Іша" },
+  "hatim": { "individual": "Індивідуально", "collaborative": "Спільно", "weeklyHatim": "Щотижневий Хатм", "completed": "Завершено", "completeHatimBtn": "ЗАВЕРШИТИ ХАТМ", "juzSelection": "ВИБІР ДЖУЗУ", "activeHatims": "АКТИВНІ ХАТМИ", "startNew": "Почати новий", "noActiveHatim": "Ще немає активного спільного хатму.", "newCollaborativeHatim": "Новий Спільний Хатм", "hatimTitleLabel": "Назва Хатму", "hatimTitlePlaceholder": "напр., Хатм Рамадану", "startBtn": "СТАРТ", "participantName": "Ім'я учасника", "namePlaceholder": "Введіть ваше ім'я...", "takeJuz": "ВЗЯТИ", "juzDetails": "Деталі Джузу", "startSurah": "Початкова Сура:", "pages": "Сторінки:", "containsSurahs": "Містить Сури:", "congratsSaved": "Вітаємо! Ваш Хатм збережено." },
+  "settings": { "title": "Налаштування", "notifications": "Сповіщення", "language": "Мова" },
+  "common": { "cancel": "Скасувати", "save": "Зберегти", "close": "Закрити", "search": "Пошук..." }
+}

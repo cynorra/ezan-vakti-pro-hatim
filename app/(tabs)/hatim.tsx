@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   View,
   Text,
@@ -15,6 +16,8 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Haptics from 'expo-haptics';
+import { supabase } from '@/lib/supabase';
+import { SEOHead } from '@/components/SEOHead';
 import { safeHaptics } from '@/lib/haptics';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -33,6 +36,7 @@ interface HatimHistoryItem {
 }
 
 export default function HatimScreen() {
+  const { t } = useTranslation();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const [progress, setProgress] = useState<JuzProgress>({});
@@ -233,7 +237,19 @@ export default function HatimScreen() {
   };
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <>
+      <SEOHead 
+        title="Ortak Hatim | Ezan Vakti ve Hatim"
+        description="Türkiye'nin en gelişmiş dijital ortak hatim platformu. Cüzünüzü alın, binlerce kişiyle aynı anda hatim indirin."
+        keywords="ortak hatim, hatim cüz, online hatim, kuran hatmi, ramazan hatmi"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "CommunityHealth",
+          "name": "Ortak Hatim Platformu",
+          "description": "Kullanıcıların cüz alarak birlikte Kuran hatmi yapabildiği topluluk etkinliği."
+        }}
+      />
+      <View style={[styles.container, { backgroundColor: colors.background }]}>
       {/* Premium Tab Bar */}
       <View style={[styles.tabWrapper, { backgroundColor: colors.surface }, Shadows.glass]}>
         <TouchableOpacity 
@@ -246,7 +262,7 @@ export default function HatimScreen() {
             color={activeTab === 'individual' ? colors.primary : colors.textMuted} 
           />
           <Text style={[styles.tabLabel, { color: activeTab === 'individual' ? colors.primary : colors.textMuted }]}>
-            Bireysel
+            {t('hatim.individual')}
           </Text>
           {activeTab === 'individual' && <View style={[styles.tabIndicator, { backgroundColor: colors.primary }]} />}
         </TouchableOpacity>
@@ -264,7 +280,7 @@ export default function HatimScreen() {
             <View style={[styles.onlineDot, { backgroundColor: colors.success }]} />
           </View>
           <Text style={[styles.tabLabel, { color: activeTab === 'collaborative' ? colors.primary : colors.textMuted }]}>
-            Ortak Hatim
+            {t('hatim.collaborative')}
           </Text>
           {activeTab === 'collaborative' && <View style={[styles.tabIndicator, { backgroundColor: colors.primary }]} />}
         </TouchableOpacity>
@@ -277,7 +293,7 @@ export default function HatimScreen() {
             <LinearGradient colors={Gradients.premium} style={[styles.progressCard, Shadows.premium]}>
               <View style={styles.progressHeader}>
                 <View>
-                  <Text style={styles.progressTitle}>Haftalık Hatim</Text>
+                  <Text style={styles.progressTitle}>{t('hatim.weeklyHatim')}</Text>
                   <Text style={styles.progressDates}>{getWeekDateRange()}</Text>
                 </View>
                 <View style={styles.headerActionGroup}>
@@ -300,11 +316,11 @@ export default function HatimScreen() {
                     <View style={[styles.progressBarBg, { backgroundColor: 'rgba(255,255,255,0.2)' }]}>
                       <View style={[styles.progressBarFill, { width: `${progressPercentage}%` }]} />
                     </View>
-                    <Text style={styles.percentText}>%{progressPercentage} Tamamlandı</Text>
+                    <Text style={styles.percentText}>%{progressPercentage} {t('hatim.completed')}</Text>
                   </View>
                   {completedCount === 30 && (
                     <TouchableOpacity style={styles.completeBtn} onPress={completeHatim}>
-                      <Text style={styles.completeBtnText}>HATMİ TAMAMLA</Text>
+                      <Text style={styles.completeBtnText}>{t('hatim.completeHatimBtn')}</Text>
                     </TouchableOpacity>
                   )}
                 </View>
@@ -313,7 +329,7 @@ export default function HatimScreen() {
 
             {/* Juz Grid */}
             <View style={styles.gridContainer}>
-              <Text style={[styles.sectionLabel, { color: colors.textSecondary }]}>CÜZ SEÇİMİ</Text>
+              <Text style={[styles.sectionLabel, { color: colors.textSecondary }]}>{t('hatim.juzSelection')}</Text>
               <View style={styles.juzGrid}>
                 {quranJuzData.map((juz) => (
                   <TouchableOpacity
@@ -343,13 +359,13 @@ export default function HatimScreen() {
         ) : (
           <View style={styles.collaborativeSection}>
             <View style={styles.collabHeader}>
-              <Text style={[styles.sectionLabel, { color: colors.textSecondary }]}>AKTİF HATİMLER</Text>
+              <Text style={[styles.sectionLabel, { color: colors.textSecondary }]}>{t('hatim.activeHatims')}</Text>
               <TouchableOpacity 
                 style={[styles.createBtn, { backgroundColor: colors.primary }]}
                 onPress={() => setIsCreateModalVisible(true)}
               >
                 <Ionicons name="add" size={20} color="#fff" />
-                <Text style={styles.createBtnText}>Yeni Başlat</Text>
+                <Text style={styles.createBtnText}>{t('hatim.startNew')}</Text>
               </TouchableOpacity>
             </View>
 
@@ -358,7 +374,7 @@ export default function HatimScreen() {
             ) : sharedHatims.length === 0 ? (
               <View style={styles.emptyState}>
                 <Ionicons name="book-outline" size={64} color={colors.textMuted} />
-                <Text style={[styles.emptyText, { color: colors.textSecondary }]}>Henüz aktif bir ortak hatim yok.</Text>
+                <Text style={[styles.emptyText, { color: colors.textSecondary }]}>{t('hatim.noActiveHatim')}</Text>
               </View>
             ) : (
               sharedHatims.map((hatim) => (
@@ -516,6 +532,7 @@ export default function HatimScreen() {
         </View>
       </Modal>
     </View>
+    </>
   );
 }
 

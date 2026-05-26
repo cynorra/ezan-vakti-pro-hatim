@@ -1,0 +1,8 @@
+{
+  "tabs": { "home": "ホーム", "qibla": "キブラ", "hatim": "ハティム", "dua": "ドゥアー", "dhikr": "ズィクル" },
+  "home": { "nextPrayerCountdown": "残り時間", "verseOfTheDay": "今日の節", "hadithOfTheDay": "今日のハディース", "esmaOfTheDay": "今日の御名" },
+  "prayerTimes": { "imsak": "ファジュル", "gunes": "日の出", "ogle": "ズフル", "ikindi": "アスル", "aksam": "マグリブ", "yatsi": "イシャー" },
+  "hatim": { "individual": "個人", "collaborative": "共同", "weeklyHatim": "週のハティム", "completed": "完了", "completeHatimBtn": "ハティム完了", "juzSelection": "ジュズ選択", "activeHatims": "進行中のハティム", "startNew": "新しく始める", "noActiveHatim": "現在共同ハティムはありません。", "newCollaborativeHatim": "新しい共同ハティム", "hatimTitleLabel": "ハティムのタイトル", "hatimTitlePlaceholder": "例：ラマダン・ハティム", "startBtn": "開始", "participantName": "参加者名", "namePlaceholder": "名前を入力...", "takeJuz": "取る", "juzDetails": "ジュズの詳細", "startSurah": "開始の章:", "pages": "ページ数:", "containsSurahs": "含まれる章:", "congratsSaved": "おめでとうございます！ハティムが保存されました。" },
+  "settings": { "title": "設定", "notifications": "通知", "language": "言語" },
+  "common": { "cancel": "キャンセル", "save": "保存", "close": "閉じる", "search": "検索..." }
+}

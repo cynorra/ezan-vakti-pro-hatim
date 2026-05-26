@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, View, Text, StyleSheet, TouchableOpacity, ScrollView, Pressable, useColorScheme, Switch } from 'react-native';
+import { useTranslation } from 'react-i18next';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -18,6 +19,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   notificationsEnabled,
   onToggleNotifications,
 }) => {
+  const { t, i18n } = useTranslation();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const [ezanSound, setEzanSound] = useState('İstanbul Ezanı');
@@ -109,7 +111,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
       <Pressable style={styles.overlay} onPress={onClose}>
         <View style={[styles.content, { backgroundColor: colors.background }]}>
           <View style={styles.header}>
-            <Text style={[styles.title, { color: colors.text }]}>Ayarlar</Text>
+            <Text style={[styles.title, { color: colors.text }]}>{t('settings.title')}</Text>
             <TouchableOpacity onPress={onClose} style={styles.closeButton}>
               <Ionicons name="close" size={24} color={colors.text} />
             </TouchableOpacity>
@@ -117,10 +119,10 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
 
           <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.section}>
-              <Text style={[styles.sectionTitle, { color: colors.primary }]}>Uygulama Ayarları</Text>
+              <Text style={[styles.sectionTitle, { color: colors.primary }]}>{t('settings.title')}</Text>
               <SettingRow 
                 icon="notifications-outline" 
-                label="Namaz Vakti Bildirimleri" 
+                label={t('settings.notifications')} 
                 type="switch" 
                 value={notificationsEnabled}
                 onPress={onToggleNotifications}
@@ -165,8 +167,15 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               />
               <SettingRow 
                 icon="language-outline" 
-                label="Dil" 
-                value="Türkçe"
+                label={t('settings.language')} 
+                value={i18n.language.toUpperCase()}
+                onPress={async () => {
+                  const langs = ['tr', 'en', 'ar', 'ru'];
+                  const nextIndex = (langs.indexOf(i18n.language) + 1) % langs.length;
+                  const newLang = langs[nextIndex];
+                  await i18n.changeLanguage(newLang);
+                  await AsyncStorage.setItem('appLanguage', newLang);
+                }}
               />
             </View>
 

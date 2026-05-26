@@ -1,0 +1,8 @@
+{
+  "tabs": { "home": "Hem", "qibla": "Qibla", "hatim": "Khatm", "dua": "Dua", "dhikr": "Dhikr" },
+  "home": { "nextPrayerCountdown": "Återstående tid", "verseOfTheDay": "Dagens vers", "hadithOfTheDay": "Dagens hadith", "esmaOfTheDay": "Dagens namn" },
+  "prayerTimes": { "imsak": "Fajr", "gunes": "Soluppgång", "ogle": "Dhuhr", "ikindi": "Asr", "aksam": "Maghrib", "yatsi": "Isha" },
+  "hatim": { "individual": "Individuell", "collaborative": "Gemensam", "weeklyHatim": "Veckans Khatm", "completed": "Slutförd", "completeHatimBtn": "SLUTFÖR KHATM", "juzSelection": "JUZ VAL", "activeHatims": "AKTIVA KHATMS", "startNew": "Starta ny", "noActiveHatim": "Ingen aktiv gemensam khatm ännu.", "newCollaborativeHatim": "Ny Gemensam Khatm", "hatimTitleLabel": "Khatm Titel", "hatimTitlePlaceholder": "t.ex. Ramadan Khatm", "startBtn": "START", "participantName": "Deltagarnamn", "namePlaceholder": "Ange ditt namn...", "takeJuz": "TA", "juzDetails": "Juz Detaljer", "startSurah": "Start Sura:", "pages": "Sidor:", "containsSurahs": "Innehåller Suror:", "congratsSaved": "Grattis! Din Khatm är sparad." },
+  "settings": { "title": "Inställningar", "notifications": "Aviseringar", "language": "Språk" },
+  "common": { "cancel": "Avbryt", "save": "Spara", "close": "Stäng", "search": "Sök..." }
+}

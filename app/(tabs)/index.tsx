@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   View,
   Text,
@@ -24,8 +25,10 @@ import { CitySelector } from '@/components/CitySelector';
 import { NextPrayerCountdown } from '@/components/NextPrayerCountdown';
 import { PrayerTimesCard } from '@/components/PrayerTimesCard';
 import { ReligiousDaysCard } from '@/components/ReligiousDaysCard';
+import { SEOHead } from '@/components/SEOHead';
 
 export default function HomeScreen() {
+  const { t } = useTranslation();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const [selectedCity, setSelectedCity] = useState<City>(turkishCities[33]); // Istanbul
@@ -124,13 +127,41 @@ export default function HomeScreen() {
   };
 
   return (
-    <ScrollView
-      style={[styles.container, { backgroundColor: colors.background }]}
-      contentContainerStyle={styles.contentContainer}
-      refreshControl={
-        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.primary} />
-      }
-    >
+    <>
+      <SEOHead 
+        cityName={selectedCity.name}
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Ezan Vakti ve Hatim",
+            "applicationCategory": "LifestyleApplication",
+            "operatingSystem": "Web, iOS, Android",
+            "description": "Diyanet uyumlu namaz vakitleri, kıble bulucu, tesbih, dua ve Türkiye'nin en gelişmiş ortak hatim platformu."
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": `${selectedCity.name} Günlük Namaz Vakitleri`,
+            "startDate": new Date().toISOString().split('T')[0],
+            "location": {
+              "@type": "Place",
+              "name": selectedCity.name,
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "TR"
+              }
+            }
+          }
+        ]}
+      />
+      <ScrollView
+        style={[styles.container, { backgroundColor: colors.background }]}
+        contentContainerStyle={styles.contentContainer}
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.primary} />
+        }
+      >
       {/* Premium Header */}
       <LinearGradient colors={Gradients.premium} style={styles.header}>
         <View style={styles.headerTop}>
@@ -185,7 +216,7 @@ export default function HomeScreen() {
               />
             </View>
             <Text style={[styles.cardTitle, { color: colors.primary }]}>
-              Günün {getDailyWisdom().type === 'verse' ? 'Ayeti' : 'Hadisi'}
+              {getDailyWisdom().type === 'verse' ? t('home.verseOfTheDay') : t('home.hadithOfTheDay')}
             </Text>
           </View>
           
@@ -211,7 +242,7 @@ export default function HomeScreen() {
             style={styles.esmaContainer}
           >
             <View style={styles.esmaBadge}>
-              <Text style={[styles.esmaBadgeText, { color: colors.accent }]}>GÜNÜN ESMASI</Text>
+              <Text style={[styles.esmaBadgeText, { color: colors.accent }]}>{t('home.esmaOfTheDay').toUpperCase()}</Text>
             </View>
             <Text style={[styles.esmaArabic, { color: colors.primary }]}>الرَّحْمَنُ</Text>
             <Text style={[styles.esmaTurkish, { color: colors.text }]}>Er-Rahmân</Text>
@@ -246,6 +277,7 @@ export default function HomeScreen() {
         onToggleNotifications={handleNotificationToggle}
       />
     </ScrollView>
+    </>
   );
 }
 

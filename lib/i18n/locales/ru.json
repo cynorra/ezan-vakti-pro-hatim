@@ -1,0 +1,57 @@
+{
+  "tabs": {
+    "home": "Главная",
+    "qibla": "Кибла",
+    "hatim": "Хатм",
+    "dua": "Дуа",
+    "dhikr": "Зикр"
+  },
+  "home": {
+    "nextPrayerCountdown": "Осталось времени",
+    "verseOfTheDay": "Аят дня",
+    "hadithOfTheDay": "Хадис дня",
+    "esmaOfTheDay": "Имя дня"
+  },
+  "prayerTimes": {
+    "imsak": "Фаджр",
+    "gunes": "Восход",
+    "ogle": "Зухр",
+    "ikindi": "Аср",
+    "aksam": "Магриб",
+    "yatsi": "Иша"
+  },
+  "hatim": {
+    "individual": "Индивидуально",
+    "collaborative": "Совместный хатм",
+    "weeklyHatim": "Еженедельный хатм",
+    "completed": "Завершено",
+    "completeHatimBtn": "ЗАВЕРШИТЬ ХАТМ",
+    "juzSelection": "ВЫБОР ДЖУЗА",
+    "activeHatims": "АКТИВНЫЕ ХАТМЫ",
+    "startNew": "Начать новый",
+    "noActiveHatim": "Пока нет активных совместных хатмов.",
+    "newCollaborativeHatim": "Новый совместный хатм",
+    "hatimTitleLabel": "Название хатма",
+    "hatimTitlePlaceholder": "Напр.: Хатм в Рамадан",
+    "startBtn": "НАЧАТЬ",
+    "participantName": "Имя участника",
+    "namePlaceholder": "Введите ваше имя...",
+    "takeJuz": "ВЗЯТЬ",
+    "juzDetails": "Детали джуза",
+    "startSurah": "Начальная сура:",
+    "pages": "Страницы:",
+    "containsSurahs": "Содержит суры:",
+    "congratsSaved": "Поздравляем! Ваш хатм сохранен."
+  },
+  "settings": {
+    "title": "Настройки",
+    "notifications": "Уведомления",
+    "language": "Язык"
+  },
+  "common": {
+    "cancel": "Отмена",
+    "save": "Сохранить",
+    "close": "Закрыть",
+    "search": "Поиск..."
+  }
+}

@@ -13,6 +13,7 @@ import * as Location from 'expo-location';
 import * as Haptics from 'expo-haptics';
 import { safeHaptics } from '@/lib/haptics';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
+import { SEOHead } from '@/components/SEOHead';
 
 export default function KibleScreen() {
   const colorScheme = useColorScheme() ?? 'light';
@@ -57,7 +58,13 @@ export default function KibleScreen() {
   const isAligned = Math.abs(heading - qiblaDir) < 5 || Math.abs(heading - qiblaDir) > 355;
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <>
+      <SEOHead 
+        title="Kıble Pusulası | Ezan Vakti ve Hatim"
+        description="GPS destekli hassas kıble pusulası. Dünyanın her yerinden Kabe yönünü saniyeler içinde hatasız olarak bulun."
+        keywords="kıble bulucu, kıble pusulası, kabe yönü, kıble yönü bul, kıble açısı"
+      />
+      <View style={[styles.container, { backgroundColor: colors.background }]}>
       <LinearGradient colors={Gradients.premium} style={styles.header}>
         <Text style={styles.headerTitle}>KIBLE PUSULASI</Text>
         <Text style={styles.headerSubtitle}>Kabe Yönü Tayini</Text>
@@ -134,6 +141,7 @@ export default function KibleScreen() {
         )}
       </View>
     </View>
+    </>
   );
 }
 
