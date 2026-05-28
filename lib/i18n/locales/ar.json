@@ -46,7 +46,27 @@
   "settings": {
     "title": "الإعدادات",
     "notifications": "الإشعارات",
-    "language": "اللغة"
+    "language": "اللغة",
+    "sound": "صوت الأذان",
+    "reminder": "منبه قبل الصلاة",
+    "theme": "المظهر",
+    "themeLight": "فاتح",
+    "themeDark": "داكن",
+    "support": "الدعم والمعلومات",
+    "rateApp": "تقييم التطبيق",
+    "feedback": "إرسال الملاحظات",
+    "about": "حول التطبيق",
+    "widgetPreview": "معاينة الويدجت",
+    "widgetNext": "التالي",
+    "widgetHint": "اضغط مع الاستمرار على الشاشة الرئيسية لإضافة الويدجت."
+  },
+  "qibla": {
+    "title": "بوصلة القبلة",
+    "subtitle": "تحديد اتجاه الكعبة",
+    "yourDirection": "اتجاهك الحالي",
+    "qiblaAngle": "زاوية القبلة",
+    "aligned": "أنت متجه إلى القبلة",
+    "hint": "ضع جهازك بشكل مستوٍ واتبع السهم."
   },
   "common": {
     "cancel": "إلغاء",
