@@ -3,11 +3,13 @@ import { useColorScheme, View, Platform } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors, Shadows, BorderRadius } from '@/constants/theme';
 import { useTranslation } from 'react-i18next';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const { t } = useTranslation();
+  const insets = useSafeAreaInsets();
 
   return (
     <Tabs
@@ -18,8 +20,10 @@ export default function TabLayout() {
         tabBarStyle: {
           backgroundColor: colors.surface,
           borderTopWidth: 0,
-          height: Platform.OS === 'ios' ? 88 : 68,
-          paddingBottom: Platform.OS === 'ios' ? 28 : 12,
+          height: Platform.OS === 'ios' 
+            ? (insets.bottom > 0 ? 60 + insets.bottom : 88) 
+            : (60 + insets.bottom),
+          paddingBottom: insets.bottom > 0 ? insets.bottom : (Platform.OS === 'ios' ? 28 : 12),
           paddingTop: 12,
           position: 'absolute',
           bottom: 0,
@@ -33,6 +37,7 @@ export default function TabLayout() {
           marginTop: 4,
           textTransform: 'uppercase',
           letterSpacing: 0.5,
+          paddingBottom: Platform.OS === 'android' && insets.bottom > 0 ? 4 : 0,
         },
       }}
     >

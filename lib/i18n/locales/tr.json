@@ -46,7 +46,27 @@
   "settings": {
     "title": "Ayarlar",
     "notifications": "Bildirimler",
-    "language": "Dil Seçimi"
+    "language": "Dil Seçimi",
+    "sound": "Ezan Sesi",
+    "reminder": "Vakit Öncesi Hatırlatıcı",
+    "theme": "Tema",
+    "themeLight": "Aydınlık",
+    "themeDark": "Karanlık",
+    "support": "Destek & Bilgi",
+    "rateApp": "Uygulamayı Puanla",
+    "feedback": "Geri Bildirim Gönder",
+    "about": "Hakkında",
+    "widgetPreview": "WIDGET ÖNİZLEME",
+    "widgetNext": "Sıradaki",
+    "widgetHint": "Widget'ı eklemek için ana ekranınıza basılı tutun."
+  },
+  "qibla": {
+    "title": "KIBLE PUSULASI",
+    "subtitle": "Kabe Yönü Tayini",
+    "yourDirection": "SİZİN YÖNÜNÜZ",
+    "qiblaAngle": "KIBLE AÇISI",
+    "aligned": "KIBLEYE YÖNELDİNİZ",
+    "hint": "Cihazınızı yatay tutun ve ok işaretini takip edin."
   },
   "common": {
     "cancel": "İptal",

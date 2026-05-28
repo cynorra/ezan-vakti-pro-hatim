@@ -130,17 +130,17 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               
               {notificationsEnabled && (
                 <View style={styles.subSection}>
-                  <SettingRow label="İmsak" type="switch" value={prayerNotifications.fajr} onPress={() => togglePrayerNotification('fajr')} isSubRow />
-                  <SettingRow label="Güneş" type="switch" value={prayerNotifications.sunrise} onPress={() => togglePrayerNotification('sunrise')} isSubRow />
-                  <SettingRow label="Öğle" type="switch" value={prayerNotifications.dhuhr} onPress={() => togglePrayerNotification('dhuhr')} isSubRow />
-                  <SettingRow label="İkindi" type="switch" value={prayerNotifications.asr} onPress={() => togglePrayerNotification('asr')} isSubRow />
-                  <SettingRow label="Akşam" type="switch" value={prayerNotifications.maghrib} onPress={() => togglePrayerNotification('maghrib')} isSubRow />
-                  <SettingRow label="Yatsı" type="switch" value={prayerNotifications.isha} onPress={() => togglePrayerNotification('isha')} isSubRow />
+                  <SettingRow label={t('prayerTimes.imsak')} type="switch" value={prayerNotifications.fajr} onPress={() => togglePrayerNotification('fajr')} isSubRow />
+                  <SettingRow label={t('prayerTimes.gunes')} type="switch" value={prayerNotifications.sunrise} onPress={() => togglePrayerNotification('sunrise')} isSubRow />
+                  <SettingRow label={t('prayerTimes.ogle')} type="switch" value={prayerNotifications.dhuhr} onPress={() => togglePrayerNotification('dhuhr')} isSubRow />
+                  <SettingRow label={t('prayerTimes.ikindi')} type="switch" value={prayerNotifications.asr} onPress={() => togglePrayerNotification('asr')} isSubRow />
+                  <SettingRow label={t('prayerTimes.aksam')} type="switch" value={prayerNotifications.maghrib} onPress={() => togglePrayerNotification('maghrib')} isSubRow />
+                  <SettingRow label={t('prayerTimes.yatsi')} type="switch" value={prayerNotifications.isha} onPress={() => togglePrayerNotification('isha')} isSubRow />
                 </View>
               )}
               <SettingRow 
                 icon="volume-high-outline" 
-                label="Ezan Sesi" 
+                label={t('settings.sound')} 
                 value={ezanSound}
                 onPress={() => {
                   const sounds = ['İstanbul Ezanı', 'Mekke Ezanı', 'Medine Ezanı', 'Mısır Ezanı'];
@@ -151,7 +151,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               />
               <SettingRow 
                 icon="alarm-outline" 
-                label="Vakit Öncesi Hatırlatıcı" 
+                label={t('settings.reminder')} 
                 value={reminderTime}
                 onPress={() => {
                   const times = ['Kapalı', '5 dk önce', '10 dk önce', '15 dk önce', '30 dk önce'];
@@ -162,8 +162,8 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               />
               <SettingRow 
                 icon="color-palette-outline" 
-                label="Tema" 
-                value={colorScheme === 'dark' ? 'Karanlık' : 'Aydınlık'}
+                label={t('settings.theme')} 
+                value={colorScheme === 'dark' ? t('settings.themeDark') : t('settings.themeLight')}
               />
               <SettingRow 
                 icon="language-outline" 
@@ -180,13 +180,13 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             </View>
 
             <View style={styles.section}>
-              <Text style={[styles.sectionTitle, { color: colors.primary }]}>Destek & Bilgi</Text>
-              <SettingRow icon="star-outline" label="Uygulamayı Puanla" />
-              <SettingRow icon="mail-outline" label="Geri Bildirim Gönder" />
-              <SettingRow icon="information-circle-outline" label="Hakkında" value="v1.0.0" />
+              <Text style={[styles.sectionTitle, { color: colors.primary }]}>{t('settings.support')}</Text>
+              <SettingRow icon="star-outline" label={t('settings.rateApp')} />
+              <SettingRow icon="mail-outline" label={t('settings.feedback')} />
+              <SettingRow icon="information-circle-outline" label={t('settings.about')} value="v1.0.0" />
             </View>
 
-            <Text style={[styles.sectionTitle, { color: colors.textSecondary }]}>WIDGET ÖNİZLEME</Text>
+            <Text style={[styles.sectionTitle, { color: colors.textSecondary }]}>{t('settings.widgetPreview')}</Text>
             <View style={[styles.widgetPreview, { backgroundColor: colors.card, borderColor: colors.border }, Shadows.medium]}>
               <LinearGradient
                 colors={[colors.primary, colors.secondary]}
@@ -200,14 +200,14 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 </View>
                 <View style={styles.widgetBottom}>
                   <View>
-                    <Text style={styles.widgetLabel}>Sıradaki</Text>
-                    <Text style={styles.widgetPrayer}>Öğle</Text>
+                    <Text style={styles.widgetLabel}>{t('settings.widgetNext')}</Text>
+                    <Text style={styles.widgetPrayer}>{t('prayerTimes.ogle')}</Text>
                   </View>
                   <Text style={styles.widgetTime}>13:12</Text>
                 </View>
               </LinearGradient>
               <Text style={[styles.widgetHint, { color: colors.textMuted }]}>
-                Widget'ı eklemek için ana ekranınıza basılı tutun.
+                {t('settings.widgetHint')}
               </Text>
             </View>
 

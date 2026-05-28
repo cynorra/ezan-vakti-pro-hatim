@@ -46,7 +46,27 @@
   "settings": {
     "title": "Settings",
     "notifications": "Notifications",
-    "language": "Language"
+    "language": "Language",
+    "sound": "Adhan Sound",
+    "reminder": "Pre-Prayer Reminder",
+    "theme": "Theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "support": "Support & Info",
+    "rateApp": "Rate App",
+    "feedback": "Send Feedback",
+    "about": "About",
+    "widgetPreview": "WIDGET PREVIEW",
+    "widgetNext": "Next",
+    "widgetHint": "Press and hold on your home screen to add the widget."
+  },
+  "qibla": {
+    "title": "QIBLA COMPASS",
+    "subtitle": "Qibla Direction Finder",
+    "yourDirection": "YOUR DIRECTION",
+    "qiblaAngle": "QIBLA ANGLE",
+    "aligned": "ALIGNED TO QIBLA",
+    "hint": "Keep your device flat and follow the needle."
   },
   "common": {
     "cancel": "Cancel",

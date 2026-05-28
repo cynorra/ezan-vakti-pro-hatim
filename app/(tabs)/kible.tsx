@@ -14,6 +14,8 @@ import * as Haptics from 'expo-haptics';
 import { safeHaptics } from '@/lib/haptics';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { SEOHead } from '@/components/SEOHead';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useTranslation } from 'react-i18next';
 
 export default function KibleScreen() {
   const colorScheme = useColorScheme() ?? 'light';
@@ -21,6 +23,8 @@ export default function KibleScreen() {
   const [heading, setHeading] = useState(0);
   const [qiblaDir, setQiblaDir] = useState(0);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const insets = useSafeAreaInsets();
+  const { t } = useTranslation();
 
   useEffect(() => {
     (async () => {
@@ -66,11 +70,11 @@ export default function KibleScreen() {
       />
       <View style={[styles.container, { backgroundColor: colors.background }]}>
       <LinearGradient colors={Gradients.premium} style={styles.header}>
-        <Text style={styles.headerTitle}>KIBLE PUSULASI</Text>
-        <Text style={styles.headerSubtitle}>Kabe Yönü Tayini</Text>
+        <Text style={styles.headerTitle}>{t('qibla.title')}</Text>
+        <Text style={styles.headerSubtitle}>{t('qibla.subtitle')}</Text>
       </LinearGradient>
 
-      <View style={styles.compassSection}>
+      <View style={[styles.compassSection, { paddingBottom: 60 + insets.bottom }]}>
         {/* Outer Ring */}
         <View style={[styles.outerRing, { borderColor: colors.primary + '10' }]}>
           {/* Compass Image / Graphic */}
@@ -119,12 +123,12 @@ export default function KibleScreen() {
         {/* Info Cards */}
         <View style={styles.infoSection}>
           <View style={[styles.infoCard, { backgroundColor: colors.surface }, Shadows.medium]}>
-            <Text style={[styles.infoLabel, { color: colors.textSecondary }]}>SİZİN YÖNÜNÜZ</Text>
+            <Text style={[styles.infoLabel, { color: colors.textSecondary }]}>{t('qibla.yourDirection')}</Text>
             <Text style={[styles.infoValue, { color: colors.text }]}>{Math.round(heading)}°</Text>
           </View>
           
           <View style={[styles.infoCard, { backgroundColor: colors.surface }, Shadows.premium, isAligned && { borderColor: colors.accent, borderWidth: 2 }]}>
-            <Text style={[styles.infoLabel, { color: colors.textSecondary }]}>KIBLE AÇISI</Text>
+            <Text style={[styles.infoLabel, { color: colors.textSecondary }]}>{t('qibla.qiblaAngle')}</Text>
             <Text style={[styles.infoValue, { color: isAligned ? colors.primary : colors.text }]}>{Math.round(qiblaDir)}°</Text>
           </View>
         </View>
@@ -132,11 +136,11 @@ export default function KibleScreen() {
         {isAligned ? (
           <View style={[styles.successBadge, { backgroundColor: colors.success + '20' }]}>
             <Ionicons name="checkmark-circle" size={20} color={colors.success} />
-            <Text style={[styles.successText, { color: colors.success }]}>KIBLEYE YÖNELDİNİZ</Text>
+            <Text style={[styles.successText, { color: colors.success }]}>{t('qibla.aligned')}</Text>
           </View>
         ) : (
           <Text style={[styles.hintText, { color: colors.textMuted }]}>
-            Cihazınızı yatay tutun ve ok işaretini takip edin.
+            {t('qibla.hint')}
           </Text>
         )}
       </View>
