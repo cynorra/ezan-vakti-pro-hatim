@@ -6,7 +6,7 @@ import mobileAds, { AdsConsent, MaxAdContentRating } from 'react-native-google-m
 export const initializeAds = async (): Promise<boolean> => {
   try {
     // 1. Request consent info update (Google User Messaging Platform)
-    const consentInfo = await AdsConsent.requestConsentInfoUpdate({
+    const consentInfo = await AdsConsent.requestInfoUpdate({
       tagForUnderAgeOfConsent: false,
     });
 
@@ -55,7 +55,7 @@ export const initializeAds = async (): Promise<boolean> => {
  */
 export const getConsentStatus = async () => {
   try {
-    const consentInfo = await AdsConsent.requestConsentInfoUpdate();
+    const consentInfo = await AdsConsent.requestInfoUpdate();
     return consentInfo.status;
   } catch (error) {
     console.error('[AdMob Consent Status Error]:', error);
