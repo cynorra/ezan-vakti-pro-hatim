@@ -17,6 +17,7 @@ import {
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Haptics from 'expo-haptics';
 import { supabase } from '@/lib/supabase';
+import { logHatimCreated, logJuzSelected, logEvent } from '@/lib/analytics';
 import { SEOHead } from '@/components/SEOHead';
 import { safeHaptics } from '@/lib/haptics';
 import { Ionicons } from '@expo/vector-icons';
@@ -36,7 +37,7 @@ interface HatimHistoryItem {
 }
 
 export default function HatimScreen() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const [progress, setProgress] = useState<JuzProgress>({});
@@ -102,6 +103,7 @@ export default function HatimScreen() {
     try {
       await hatimService.joinHatim(selectedSharedHatim.id, juzNumber, userName);
       safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+      logJuzSelected(juzNumber, selectedSharedHatim.id);
       const details = await hatimService.getHatimDetails(selectedSharedHatim.id);
       setSharedHatimDetails(details);
     } catch (error) {
@@ -121,6 +123,7 @@ export default function HatimScreen() {
     try {
       const endsAt = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString();
       await hatimService.createSharedHatim(newHatimTitle, '', endsAt);
+      logHatimCreated(newHatimTitle, i18n.language || 'tr');
       alert('Yeni hatim başarıyla oluşturuldu!');
       setIsCreateModalVisible(false);
       setNewHatimTitle('');
@@ -191,6 +194,7 @@ export default function HatimScreen() {
     };
     setProgress(newProgress);
     saveProgress(newProgress);
+    logEvent('individual_juz_toggle', { juz_number: juzNumber, completed: newProgress[juzNumber] });
     safeHaptics.impactAsync(
       newProgress[juzNumber]
         ? Haptics.ImpactFeedbackStyle.Medium
@@ -219,6 +223,7 @@ export default function HatimScreen() {
     saveHistory(newHistory);
     setProgress({});
     saveProgress({});
+    logEvent('individual_hatim_completed');
     safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
     alert('Tebrikler! Hatminiz kaydedildi.');
   };

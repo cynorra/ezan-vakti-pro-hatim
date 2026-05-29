@@ -19,6 +19,7 @@ import { safeHaptics } from '@/lib/haptics';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SEOHead } from '@/components/SEOHead';
+import { logTesbihStarted, logEvent } from '@/lib/analytics';
 
 interface Dhikr {
   id: string;
@@ -69,9 +70,11 @@ export default function TesbihScreen() {
     const dhikr = newDhikrs[activeDhikrIndex];
     
     dhikr.count += 1;
+    logEvent('tesbih_incremented', { dhikr_name: dhikr.name, current_count: dhikr.count });
     
     if (dhikr.count === dhikr.target) {
       safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+      logEvent('tesbih_target_reached', { dhikr_name: dhikr.name, target: dhikr.target });
       
       // Otomatik bir sonraki zikre gecis
       setTimeout(() => {
@@ -197,6 +200,7 @@ export default function TesbihScreen() {
                 onPress={() => {
                   setActiveDhikrIndex(index);
                   safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                  logTesbihStarted(item.name, item.count);
                 }}
                 style={[
                   styles.dhikrCard,
