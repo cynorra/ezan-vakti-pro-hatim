@@ -6,7 +6,7 @@ import { BannerAd as AdMobBanner, BannerAdSize, TestIds } from 'react-native-goo
 const adUnitId = __DEV__
   ? TestIds.BANNER
   : Platform.select({
-      android: 'ca-app-pub-3940256099942544/6300978111', // Replace with real Android Banner ID in production
+      android: 'ca-app-pub-4674211063760769/3925185177', // Real Android Banner ID
       ios: 'ca-app-pub-3940256099942544/2934735716',     // Replace with real iOS Banner ID in production
       default: TestIds.BANNER,
     });
