@@ -28,36 +28,54 @@ export default function KibleScreen() {
   const { t } = useTranslation();
 
   useEffect(() => {
+    let headingSubscription: Location.LocationSubscription | null = null;
+
     (async () => {
-      let { status } = await Location.requestForegroundPermissionsAsync();
-      if (status !== 'granted') {
-        setErrorMsg('Konum izni verilmedi.');
-        return;
-      }
-
-      const location = await Location.getCurrentPositionAsync({});
-      // Kible acisi hesaplama (Kabe: 21.4225, 39.8262)
-      const lat1 = location.coords.latitude * Math.PI / 180;
-      const lon1 = location.coords.longitude * Math.PI / 180;
-      const lat2 = 21.4225 * Math.PI / 180;
-      const lon2 = 39.8262 * Math.PI / 180;
-
-      const y = Math.sin(lon2 - lon1);
-      const x = Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(lon2 - lon1);
-      const qibla = (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
-      setQiblaDir(qibla);
-
-      Location.watchHeadingAsync((data) => {
-        setHeading(data.trueHeading);
-        
-        // Kibleye yaklasinca haptik geri bildirim
-        const diff = Math.abs(data.trueHeading - qibla);
-        if (diff < 2 || diff > 358) {
-          safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+      try {
+        let { status } = await Location.requestForegroundPermissionsAsync();
+        if (status !== 'granted') {
+          setErrorMsg('Konum izni verilmedi.');
+          return;
         }
-      });
-      logQiblaSearched();
+
+        const location = await Location.getCurrentPositionAsync({
+          accuracy: Location.Accuracy.Balanced,
+        });
+        
+        // Kible acisi hesaplama (Kabe: 21.4225, 39.8262)
+        const lat1 = location.coords.latitude * Math.PI / 180;
+        const lon1 = location.coords.longitude * Math.PI / 180;
+        const lat2 = 21.4225 * Math.PI / 180;
+        const lon2 = 39.8262 * Math.PI / 180;
+
+        const y = Math.sin(lon2 - lon1);
+        const x = Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(lon2 - lon1);
+        const qibla = (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
+        setQiblaDir(qibla);
+
+        headingSubscription = await Location.watchHeadingAsync((data) => {
+          const headingValue = data?.trueHeading >= 0 ? data.trueHeading : (data?.magHeading ?? 0);
+          setHeading(headingValue);
+          
+          // Kibleye yaklasinca haptik geri bildirim
+          const diff = Math.abs(headingValue - qibla);
+          if (diff < 2 || diff > 358) {
+            safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+          }
+        });
+        
+        logQiblaSearched();
+      } catch (err) {
+        console.log('Qibla initialization error:', err);
+        setErrorMsg('Pusula veya konum yüklenemedi. Lütfen sensörlerinizin ve konum servisinizin açık olduğunu kontrol edin.');
+      }
     })();
+
+    return () => {
+      if (headingSubscription) {
+        headingSubscription.remove();
+      }
+    };
   }, []);
 
   const rotateValue = (heading - qiblaDir);

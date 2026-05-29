@@ -68,6 +68,7 @@ export default function TesbihScreen() {
   const handlePress = () => {
     const newDhikrs = [...dhikrs];
     const dhikr = newDhikrs[activeDhikrIndex];
+    if (!dhikr) return;
     
     dhikr.count += 1;
     logEvent('tesbih_incremented', { dhikr_name: dhikr.name, current_count: dhikr.count });
@@ -95,14 +96,16 @@ export default function TesbihScreen() {
 
   const resetCount = () => {
     const newDhikrs = [...dhikrs];
-    newDhikrs[activeDhikrIndex].count = 0;
-    setDhikrs(newDhikrs);
-    saveData(newDhikrs);
-    safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
+    if (newDhikrs[activeDhikrIndex]) {
+      newDhikrs[activeDhikrIndex].count = 0;
+      setDhikrs(newDhikrs);
+      saveData(newDhikrs);
+      safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
+    }
   };
 
-  const currentDhikr = dhikrs[activeDhikrIndex];
-  const progress = Math.min(currentDhikr.count / currentDhikr.target, 1);
+  const currentDhikr = dhikrs[activeDhikrIndex] || DEFAULT_DHIKRS[0] || { name: 'Zikir', target: 33, count: 0 };
+  const progress = currentDhikr.target > 0 ? Math.min(currentDhikr.count / currentDhikr.target, 1) : 0;
 
   return (
     <>
