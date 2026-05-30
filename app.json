@@ -56,12 +56,15 @@
       ],
       "expo-font",
       "@react-native-firebase/app",
-      "react-native-google-mobile-ads"
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-4674211063760769~2314766209",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511"
+        }
+      ],
+      "expo-secure-store"
     ],
     "scheme": "ezanvaktihatim"
-  },
-  "react-native-google-mobile-ads": {
-    "androidAppId": "ca-app-pub-4674211063760769~2314766209",
-    "iosAppId": "ca-app-pub-3940256099942544~1458002511"
   }
 }
