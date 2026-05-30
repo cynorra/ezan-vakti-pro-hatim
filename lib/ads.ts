@@ -3,12 +3,21 @@ import mobileAds, { AdsConsent, MaxAdContentRating } from 'react-native-google-m
 /**
  * Handles GDPR / KVKK UMP Consent Form and Google Mobile Ads SDK initialization
  */
+const withTimeout = <T>(promise: Promise<T>, ms: number): Promise<T> =>
+  Promise.race([
+    promise,
+    new Promise<T>((_, reject) =>
+      setTimeout(() => reject(new Error('AdMob timeout')), ms)
+    ),
+  ]);
+
 export const initializeAds = async (): Promise<boolean> => {
   try {
     // 1. Request consent info update (Google User Messaging Platform)
-    const consentInfo = await AdsConsent.requestInfoUpdate({
-      tagForUnderAgeOfConsent: false,
-    });
+    const consentInfo = await withTimeout(
+      AdsConsent.requestInfoUpdate({ tagForUnderAgeOfConsent: false }),
+      8000
+    );
 
     if (__DEV__) {
       console.log('[AdMob ConsentInfo]:', consentInfo);
@@ -41,7 +50,7 @@ export const initializeAds = async (): Promise<boolean> => {
     
     // Attempt fallback initialization of Mobile Ads directly in case UMP fails (e.g. offline)
     try {
-      await mobileAds().initialize();
+      await withTimeout(mobileAds().initialize(), 8000);
       return true;
     } catch (fallbackError) {
       console.error('[AdMob Fallback Error]: Direct initialization failed:', fallbackError);
