@@ -1,0 +1,77 @@
+{
+  "tabs": {
+    "home": "خانه",
+    "qibla": "قبله",
+    "hatim": "ختم",
+    "dua": "دعا",
+    "dhikr": "ذکر"
+  },
+  "home": {
+    "nextPrayerCountdown": "زمان باقیمانده",
+    "verseOfTheDay": "آیه روز",
+    "hadithOfTheDay": "حدیث روز",
+    "esmaOfTheDay": "اسم روز"
+  },
+  "prayerTimes": {
+    "imsak": "اذان صبح",
+    "gunes": "طلوع آفتاب",
+    "ogle": "ظهر",
+    "ikindi": "عصر",
+    "aksam": "مغرب",
+    "yatsi": "عشاء"
+  },
+  "hatim": {
+    "individual": "فردی",
+    "collaborative": "گروهی",
+    "weeklyHatim": "ختم هفتگی",
+    "completed": "تکمیل شد",
+    "completeHatimBtn": "تکمیل ختم",
+    "juzSelection": "انتخاب جزء",
+    "activeHatims": "ختم‌های فعال",
+    "startNew": "شروع جدید",
+    "noActiveHatim": "هنوز ختم گروهی فعالی وجود ندارد.",
+    "newCollaborativeHatim": "ختم گروهی جدید",
+    "hatimTitleLabel": "عنوان ختم",
+    "hatimTitlePlaceholder": "مثال: ختم رمضان",
+    "startBtn": "شروع",
+    "participantName": "نام شرکت‌کننده",
+    "namePlaceholder": "نام خود را وارد کنید...",
+    "takeJuz": "انتخاب",
+    "juzDetails": "جزئیات جزء",
+    "startSurah": "سوره آغازین:",
+    "pages": "صفحات:",
+    "containsSurahs": "سوره‌های موجود:",
+    "congratsSaved": "تبریک! ختم شما ذخیره شد."
+  },
+  "settings": {
+    "title": "تنظیمات",
+    "notifications": "اعلان‌ها",
+    "language": "زبان",
+    "sound": "صدای اذان",
+    "reminder": "یادآوری قبل از نماز",
+    "theme": "تم",
+    "themeLight": "روشن",
+    "themeDark": "تاریک",
+    "support": "پشتیبانی و اطلاعات",
+    "rateApp": "امتیاز دهید",
+    "feedback": "ارسال بازخورد",
+    "about": "درباره",
+    "widgetPreview": "پیش‌نمایش ویجت",
+    "widgetNext": "بعدی",
+    "widgetHint": "برای افزودن ویجت روی صفحه اصلی نگه دارید."
+  },
+  "qibla": {
+    "title": "قبله‌نما",
+    "subtitle": "یافتن جهت قبله",
+    "yourDirection": "جهت شما",
+    "qiblaAngle": "زاویه قبله",
+    "aligned": "رو به قبله هستید",
+    "hint": "دستگاه را صاف نگه دارید و سوزن را دنبال کنید."
+  },
+  "common": {
+    "cancel": "لغو",
+    "save": "ذخیره",
+    "close": "بستن",
+    "search": "جستجو..."
+  }
+}

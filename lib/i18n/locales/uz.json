@@ -1,0 +1,77 @@
+{
+  "tabs": {
+    "home": "Bosh sahifa",
+    "qibla": "Qibla",
+    "hatim": "Xatm",
+    "dua": "Dua",
+    "dhikr": "Zikr"
+  },
+  "home": {
+    "nextPrayerCountdown": "Qolgan vaqt",
+    "verseOfTheDay": "Kunlik oyat",
+    "hadithOfTheDay": "Kunlik hadis",
+    "esmaOfTheDay": "Kunlik ism"
+  },
+  "prayerTimes": {
+    "imsak": "Bomdod",
+    "gunes": "Quyosh chiqishi",
+    "ogle": "Peshin",
+    "ikindi": "Asr",
+    "aksam": "Shom",
+    "yatsi": "Xufton"
+  },
+  "hatim": {
+    "individual": "Shaxsiy",
+    "collaborative": "Jamoa",
+    "weeklyHatim": "Haftalik Xatm",
+    "completed": "Tugallandi",
+    "completeHatimBtn": "XATMNI YAKUNLA",
+    "juzSelection": "JUZ TANLASH",
+    "activeHatims": "FAOL XATMLAR",
+    "startNew": "Yangi boshlash",
+    "noActiveHatim": "Hali faol jamoa xatmi yo'q.",
+    "newCollaborativeHatim": "Yangi Jamoa Xatmi",
+    "hatimTitleLabel": "Xatm sarlavhasi",
+    "hatimTitlePlaceholder": "Masalan: Ramazon Xatmi",
+    "startBtn": "BOSHLASH",
+    "participantName": "Ishtirokchi ismi",
+    "namePlaceholder": "Ismingizni kiriting...",
+    "takeJuz": "OLISH",
+    "juzDetails": "Juz tafsilotlari",
+    "startSurah": "Boshlang'ich sura:",
+    "pages": "Sahifalar:",
+    "containsSurahs": "Suralar:",
+    "congratsSaved": "Tabriklaymiz! Xatmingiz saqlandi."
+  },
+  "settings": {
+    "title": "Sozlamalar",
+    "notifications": "Bildirishnomalar",
+    "language": "Til",
+    "sound": "Azon ovozi",
+    "reminder": "Namozdan oldin eslatma",
+    "theme": "Mavzu",
+    "themeLight": "Yorug'",
+    "themeDark": "Qorong'i",
+    "support": "Yordam va ma'lumot",
+    "rateApp": "Ilovani baholang",
+    "feedback": "Fikr-mulohaza yuborish",
+    "about": "Haqida",
+    "widgetPreview": "VIDJET KO'RINISHI",
+    "widgetNext": "Keyingi",
+    "widgetHint": "Vidjet qo'shish uchun asosiy ekranda ushlab turing."
+  },
+  "qibla": {
+    "title": "QIBLA KOMPASI",
+    "subtitle": "Qibla yo'nalishini aniqlash",
+    "yourDirection": "SIZNING YO'NALISHINGIZ",
+    "qiblaAngle": "QIBLA BURCHAGI",
+    "aligned": "QIBLAGA YUZLANDINGIZ",
+    "hint": "Qurilmani gorizontal ushlab igna yo'nalishini kuzating."
+  },
+  "common": {
+    "cancel": "Bekor qilish",
+    "save": "Saqlash",
+    "close": "Yopish",
+    "search": "Qidirish..."
+  }
+}

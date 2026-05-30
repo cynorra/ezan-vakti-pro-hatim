@@ -1,0 +1,77 @@
+{
+  "tabs": {
+    "home": "Utama",
+    "qibla": "Kiblat",
+    "hatim": "Khatam",
+    "dua": "Doa",
+    "dhikr": "Zikir"
+  },
+  "home": {
+    "nextPrayerCountdown": "Masa berbaki",
+    "verseOfTheDay": "Ayat Hari Ini",
+    "hadithOfTheDay": "Hadis Hari Ini",
+    "esmaOfTheDay": "Asmaul Husna Hari Ini"
+  },
+  "prayerTimes": {
+    "imsak": "Subuh",
+    "gunes": "Syuruk",
+    "ogle": "Zohor",
+    "ikindi": "Asar",
+    "aksam": "Maghrib",
+    "yatsi": "Isyak"
+  },
+  "hatim": {
+    "individual": "Individu",
+    "collaborative": "Berkumpulan",
+    "weeklyHatim": "Khatam Mingguan",
+    "completed": "Selesai",
+    "completeHatimBtn": "SELESAIKAN KHATAM",
+    "juzSelection": "PILIH JUZ",
+    "activeHatims": "KHATAM AKTIF",
+    "startNew": "Mulakan Baru",
+    "noActiveHatim": "Tiada khatam berkumpulan aktif lagi.",
+    "newCollaborativeHatim": "Khatam Berkumpulan Baru",
+    "hatimTitleLabel": "Tajuk Khatam",
+    "hatimTitlePlaceholder": "Cth: Khatam Ramadan",
+    "startBtn": "MULAKAN",
+    "participantName": "Nama Peserta",
+    "namePlaceholder": "Masukkan nama anda...",
+    "takeJuz": "AMBIL",
+    "juzDetails": "Butiran Juz",
+    "startSurah": "Surah Permulaan:",
+    "pages": "Halaman:",
+    "containsSurahs": "Mengandungi Surah:",
+    "congratsSaved": "Tahniah! Khatam anda telah disimpan."
+  },
+  "settings": {
+    "title": "Tetapan",
+    "notifications": "Pemberitahuan",
+    "language": "Bahasa",
+    "sound": "Bunyi Azan",
+    "reminder": "Peringatan Sebelum Solat",
+    "theme": "Tema",
+    "themeLight": "Cerah",
+    "themeDark": "Gelap",
+    "support": "Sokongan & Maklumat",
+    "rateApp": "Nilai Aplikasi",
+    "feedback": "Hantar Maklum Balas",
+    "about": "Tentang",
+    "widgetPreview": "PRATONTON WIDGET",
+    "widgetNext": "Seterusnya",
+    "widgetHint": "Tekan lama pada skrin utama untuk menambah widget."
+  },
+  "qibla": {
+    "title": "KOMPAS KIBLAT",
+    "subtitle": "Penentuan Arah Kiblat",
+    "yourDirection": "ARAH ANDA",
+    "qiblaAngle": "SUDUT KIBLAT",
+    "aligned": "MENGHADAP KIBLAT",
+    "hint": "Pegang peranti secara mendatar dan ikuti jarum."
+  },
+  "common": {
+    "cancel": "Batal",
+    "save": "Simpan",
+    "close": "Tutup",
+    "search": "Cari..."
+  }
+}

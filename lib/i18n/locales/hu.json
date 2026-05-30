@@ -1,0 +1,77 @@
+{
+  "tabs": {
+    "home": "Főoldal",
+    "qibla": "Kibla",
+    "hatim": "Hatim",
+    "dua": "Dua",
+    "dhikr": "Zikr"
+  },
+  "home": {
+    "nextPrayerCountdown": "Hátralévő idő",
+    "verseOfTheDay": "Napi ige",
+    "hadithOfTheDay": "Napi hadísz",
+    "esmaOfTheDay": "Napi iszm"
+  },
+  "prayerTimes": {
+    "imsak": "Fajr",
+    "gunes": "Napkelte",
+    "ogle": "Dhuhr",
+    "ikindi": "Asr",
+    "aksam": "Maghrib",
+    "yatsi": "Isha"
+  },
+  "hatim": {
+    "individual": "Egyéni",
+    "collaborative": "Közös",
+    "weeklyHatim": "Heti Hatim",
+    "completed": "Befejezve",
+    "completeHatimBtn": "HATIM BEFEJEZÉSE",
+    "juzSelection": "DZSÚZ KIVÁLASZTÁSA",
+    "activeHatims": "AKTÍV HATIMOK",
+    "startNew": "Új indítása",
+    "noActiveHatim": "Még nincs aktív közös hatim.",
+    "newCollaborativeHatim": "Új közös Hatim",
+    "hatimTitleLabel": "Hatim címe",
+    "hatimTitlePlaceholder": "Pl.: Ramadán Hatim",
+    "startBtn": "INDÍTÁS",
+    "participantName": "Résztvevő neve",
+    "namePlaceholder": "Adja meg nevét...",
+    "takeJuz": "KIVÁLASZT",
+    "juzDetails": "Dzsúz részletei",
+    "startSurah": "Kezdő szúra:",
+    "pages": "Oldalak:",
+    "containsSurahs": "Tartalmazza:",
+    "congratsSaved": "Gratulálunk! A Hatim mentve."
+  },
+  "settings": {
+    "title": "Beállítások",
+    "notifications": "Értesítések",
+    "language": "Nyelv",
+    "sound": "Ezán hang",
+    "reminder": "Ima előtti emlékeztető",
+    "theme": "Téma",
+    "themeLight": "Világos",
+    "themeDark": "Sötét",
+    "support": "Támogatás és info",
+    "rateApp": "Értékelje az alkalmazást",
+    "feedback": "Visszajelzés küldése",
+    "about": "Névjegy",
+    "widgetPreview": "WIDGET ELŐNÉZET",
+    "widgetNext": "Következő",
+    "widgetHint": "Nyomja hosszan a főképernyőt a widget hozzáadásához."
+  },
+  "qibla": {
+    "title": "KIBLA IRÁNYTŰ",
+    "subtitle": "Kibla irányának meghatározása",
+    "yourDirection": "AZ ÖN IRÁNYA",
+    "qiblaAngle": "KIBLA SZÖG",
+    "aligned": "KIBLA IRÁNYÁBAN ÁLL",
+    "hint": "Tartsa az eszközt vízszintesen és kövesse a mutatót."
+  },
+  "common": {
+    "cancel": "Mégse",
+    "save": "Mentés",
+    "close": "Bezárás",
+    "search": "Keresés..."
+  }
+}

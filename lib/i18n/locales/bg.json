@@ -1,0 +1,77 @@
+{
+  "tabs": {
+    "home": "Начало",
+    "qibla": "Кибла",
+    "hatim": "Хатим",
+    "dua": "Дуа",
+    "dhikr": "Зикр"
+  },
+  "home": {
+    "nextPrayerCountdown": "Оставащо време",
+    "verseOfTheDay": "Аят на деня",
+    "hadithOfTheDay": "Хадис на деня",
+    "esmaOfTheDay": "Исм на деня"
+  },
+  "prayerTimes": {
+    "imsak": "Фаджр",
+    "gunes": "Изгрев",
+    "ogle": "Духр",
+    "ikindi": "Аср",
+    "aksam": "Магриб",
+    "yatsi": "Иша"
+  },
+  "hatim": {
+    "individual": "Индивидуален",
+    "collaborative": "Групов",
+    "weeklyHatim": "Седмичен Хатим",
+    "completed": "Завършен",
+    "completeHatimBtn": "ЗАВЪРШИ ХАТИМ",
+    "juzSelection": "ИЗБОР НА ДЖУз",
+    "activeHatims": "АКТИВНИ ХАТИМИ",
+    "startNew": "Нов старт",
+    "noActiveHatim": "Все още няма активен групов хатим.",
+    "newCollaborativeHatim": "Нов групов Хатим",
+    "hatimTitleLabel": "Заглавие на Хатима",
+    "hatimTitlePlaceholder": "Напр.: Рамадански Хатим",
+    "startBtn": "СТАРТ",
+    "participantName": "Име на участника",
+    "namePlaceholder": "Въведете вашето име...",
+    "takeJuz": "ИЗБЕРИ",
+    "juzDetails": "Детайли на Джуз",
+    "startSurah": "Начална сура:",
+    "pages": "Страници:",
+    "containsSurahs": "Съдържа сури:",
+    "congratsSaved": "Поздравления! Хатимът е запазен."
+  },
+  "settings": {
+    "title": "Настройки",
+    "notifications": "Известия",
+    "language": "Език",
+    "sound": "Азан звук",
+    "reminder": "Напомняне преди молитва",
+    "theme": "Тема",
+    "themeLight": "Светла",
+    "themeDark": "Тъмна",
+    "support": "Поддръжка и информация",
+    "rateApp": "Оценете приложението",
+    "feedback": "Изпратете отзив",
+    "about": "За нас",
+    "widgetPreview": "ПРЕГЛЕД НА ПРИДЖЕТ",
+    "widgetNext": "Следваща",
+    "widgetHint": "Задръжте на началния екран за добавяне на приджет."
+  },
+  "qibla": {
+    "title": "КИБЛА КОМПАС",
+    "subtitle": "Определяне на посоката на Кибла",
+    "yourDirection": "ВАШАТА ПОСОКА",
+    "qiblaAngle": "ЪГЪЛ НА КИБЛА",
+    "aligned": "НАСОЧЕНИ КЪМ КИБЛА",
+    "hint": "Дръжте устройството хоризонтално и следвайте стрелката."
+  },
+  "common": {
+    "cancel": "Отказ",
+    "save": "Запази",
+    "close": "Затвори",
+    "search": "Търсене..."
+  }
+}

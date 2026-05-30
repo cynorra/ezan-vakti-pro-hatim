@@ -1,0 +1,77 @@
+{
+  "tabs": {
+    "home": "Басты бет",
+    "qibla": "Қибла",
+    "hatim": "Хатым",
+    "dua": "Дұға",
+    "dhikr": "Зікір"
+  },
+  "home": {
+    "nextPrayerCountdown": "Қалған уақыт",
+    "verseOfTheDay": "Күннің аяты",
+    "hadithOfTheDay": "Күннің хадисі",
+    "esmaOfTheDay": "Күннің есімі"
+  },
+  "prayerTimes": {
+    "imsak": "Бамдат",
+    "gunes": "Күн шығысы",
+    "ogle": "Бесін",
+    "ikindi": "Екінді",
+    "aksam": "Ақшам",
+    "yatsi": "Құптан"
+  },
+  "hatim": {
+    "individual": "Жеке",
+    "collaborative": "Топтық",
+    "weeklyHatim": "Апталық Хатым",
+    "completed": "Аяқталды",
+    "completeHatimBtn": "ХАТЫМДЫ АЯҚТАУ",
+    "juzSelection": "ЖҮЗ ТАҢДАУ",
+    "activeHatims": "БЕЛСЕНДІ ХАТЫМДАР",
+    "startNew": "Жаңа бастау",
+    "noActiveHatim": "Белсенді топтық хатым жоқ.",
+    "newCollaborativeHatim": "Жаңа топтық хатым",
+    "hatimTitleLabel": "Хатым атауы",
+    "hatimTitlePlaceholder": "Мысалы: Рамазан Хатымы",
+    "startBtn": "БАСТАУ",
+    "participantName": "Қатысушы аты",
+    "namePlaceholder": "Атыңызды енгізіңіз...",
+    "takeJuz": "АЛУ",
+    "juzDetails": "Жүз мәліметтері",
+    "startSurah": "Бастапқы сүре:",
+    "pages": "Беттер:",
+    "containsSurahs": "Сүрелер:",
+    "congratsSaved": "Құттықтаймыз! Хатымыңыз сақталды."
+  },
+  "settings": {
+    "title": "Параметрлер",
+    "notifications": "Хабарландырулар",
+    "language": "Тіл",
+    "sound": "Азан дыбысы",
+    "reminder": "Намаздан бұрын еске салу",
+    "theme": "Тақырып",
+    "themeLight": "Жарық",
+    "themeDark": "Қараңғы",
+    "support": "Қолдау және ақпарат",
+    "rateApp": "Қолданбаны бағалау",
+    "feedback": "Пікір жіберу",
+    "about": "Туралы",
+    "widgetPreview": "ВИДЖЕТ АЛДЫН АЛА КӨРІНІСІ",
+    "widgetNext": "Келесі",
+    "widgetHint": "Виджет қосу үшін негізгі экранды ұзақ басыңыз."
+  },
+  "qibla": {
+    "title": "ҚИБЛА КОМПАСЫ",
+    "subtitle": "Қибла бағытын анықтау",
+    "yourDirection": "СІЗДІҢ БАҒЫТЫҢЫЗ",
+    "qiblaAngle": "ҚИБЛА БҰРЫШЫ",
+    "aligned": "ҚИБЛАҒА ҚАРАДЫҢЫЗ",
+    "hint": "Құрылғыны көлденең ұстап, стрелканы қадағалаңыз."
+  },
+  "common": {
+    "cancel": "Болдырмау",
+    "save": "Сақтау",
+    "close": "Жабу",
+    "search": "Іздеу..."
+  }
+}

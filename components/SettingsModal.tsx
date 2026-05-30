@@ -1,10 +1,43 @@
 import React, { useState, useEffect } from 'react';
-import { Modal, View, Text, StyleSheet, TouchableOpacity, ScrollView, Pressable, useColorScheme, Switch } from 'react-native';
+import { Modal, View, Text, StyleSheet, TouchableOpacity, ScrollView, Pressable, useColorScheme, Switch, FlatList } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows } from '@/constants/theme';
+
+const LANGUAGES = [
+  { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
+  { code: 'en', name: 'English', flag: '🇬🇧' },
+  { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+  { code: 'fa', name: 'فارسی', flag: '🇮🇷' },
+  { code: 'ur', name: 'اردو', flag: '🇵🇰' },
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷' },
+  { code: 'es', name: 'Español', flag: '🇪🇸' },
+  { code: 'it', name: 'Italiano', flag: '🇮🇹' },
+  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+  { code: 'uk', name: 'Українська', flag: '🇺🇦' },
+  { code: 'pl', name: 'Polski', flag: '🇵🇱' },
+  { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
+  { code: 'pt', name: 'Português', flag: '🇧🇷' },
+  { code: 'sv', name: 'Svenska', flag: '🇸🇪' },
+  { code: 'el', name: 'Ελληνικά', flag: '🇬🇷' },
+  { code: 'hu', name: 'Magyar', flag: '🇭🇺' },
+  { code: 'bg', name: 'Български', flag: '🇧🇬' },
+  { code: 'ro', name: 'Română', flag: '🇷🇴' },
+  { code: 'bs', name: 'Bosanski', flag: '🇧🇦' },
+  { code: 'az', name: 'Azərbaycan', flag: '🇦🇿' },
+  { code: 'uz', name: "O'zbek tili", flag: '🇺🇿' },
+  { code: 'kk', name: 'Қазақ тілі', flag: '🇰🇿' },
+  { code: 'id', name: 'Bahasa Indonesia', flag: '🇮🇩' },
+  { code: 'ms', name: 'Bahasa Melayu', flag: '🇲🇾' },
+  { code: 'bn', name: 'বাংলা', flag: '🇧🇩' },
+  { code: 'hi', name: 'हिन्दी', flag: '🇮🇳' },
+  { code: 'zh', name: '中文', flag: '🇨🇳' },
+  { code: 'ja', name: '日本語', flag: '🇯🇵' },
+  { code: 'ko', name: '한국어', flag: '🇰🇷' },
+];
 
 interface SettingsModalProps {
   visible: boolean;
@@ -24,6 +57,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   const colors = Colors[colorScheme];
   const [ezanSound, setEzanSound] = useState('İstanbul Ezanı');
   const [reminderTime, setReminderTime] = useState('15 dk önce');
+  const [showLangPicker, setShowLangPicker] = useState(false);
   const [prayerNotifications, setPrayerNotifications] = useState({
     fajr: true,
     sunrise: false,
@@ -42,7 +76,6 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
       const sound = await AsyncStorage.getItem('ezan_sound');
       const reminder = await AsyncStorage.getItem('reminder_time');
       const prayers = await AsyncStorage.getItem('prayer_notifications');
-      
       if (sound) setEzanSound(sound);
       if (reminder) setReminderTime(reminder);
       if (prayers) setPrayerNotifications(JSON.parse(prayers));
@@ -65,13 +98,17 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
     }
   };
 
+  const currentLang = LANGUAGES.find(l => l.code === i18n.language) || LANGUAGES[0];
+
+  const handleSelectLanguage = async (code: string) => {
+    await i18n.changeLanguage(code);
+    await AsyncStorage.setItem('appLanguage', code);
+    setShowLangPicker(false);
+  };
+
   const SettingRow = ({ icon, label, value, onPress, type = 'chevron', isSubRow = false }: any) => (
-    <TouchableOpacity 
-      style={[
-        styles.row, 
-        { borderBottomColor: colors.border },
-        isSubRow && { paddingLeft: Spacing.xl, height: 44 }
-      ]} 
+    <TouchableOpacity
+      style={[styles.row, { borderBottomColor: colors.border }, isSubRow && { paddingLeft: Spacing.xl, height: 44 }]}
       onPress={type === 'switch' ? undefined : onPress}
       disabled={type === 'switch'}
     >
@@ -86,8 +123,8 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
         <Text style={[styles.rowLabel, { color: colors.text }, isSubRow && { fontSize: FontSize.sm }]}>{label}</Text>
       </View>
       {type === 'switch' ? (
-        <Switch 
-          value={value} 
+        <Switch
+          value={value}
           onValueChange={onPress}
           trackColor={{ false: colors.border, true: colors.primary }}
           thumbColor="#fff"
@@ -102,124 +139,150 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   );
 
   return (
-    <Modal
-      animationType="slide"
-      transparent={true}
-      visible={visible}
-      onRequestClose={onClose}
-    >
-      <Pressable style={styles.overlay} onPress={onClose}>
-        <View style={[styles.content, { backgroundColor: colors.background }]}>
-          <View style={styles.header}>
-            <Text style={[styles.title, { color: colors.text }]}>{t('settings.title')}</Text>
-            <TouchableOpacity onPress={onClose} style={styles.closeButton}>
-              <Ionicons name="close" size={24} color={colors.text} />
-            </TouchableOpacity>
-          </View>
-
-          <ScrollView showsVerticalScrollIndicator={false}>
-            <View style={styles.section}>
-              <Text style={[styles.sectionTitle, { color: colors.primary }]}>{t('settings.title')}</Text>
-              <SettingRow 
-                icon="notifications-outline" 
-                label={t('settings.notifications')} 
-                type="switch" 
-                value={notificationsEnabled}
-                onPress={onToggleNotifications}
-              />
-              
-              {notificationsEnabled && (
-                <View style={styles.subSection}>
-                  <SettingRow label={t('prayerTimes.imsak')} type="switch" value={prayerNotifications.fajr} onPress={() => togglePrayerNotification('fajr')} isSubRow />
-                  <SettingRow label={t('prayerTimes.gunes')} type="switch" value={prayerNotifications.sunrise} onPress={() => togglePrayerNotification('sunrise')} isSubRow />
-                  <SettingRow label={t('prayerTimes.ogle')} type="switch" value={prayerNotifications.dhuhr} onPress={() => togglePrayerNotification('dhuhr')} isSubRow />
-                  <SettingRow label={t('prayerTimes.ikindi')} type="switch" value={prayerNotifications.asr} onPress={() => togglePrayerNotification('asr')} isSubRow />
-                  <SettingRow label={t('prayerTimes.aksam')} type="switch" value={prayerNotifications.maghrib} onPress={() => togglePrayerNotification('maghrib')} isSubRow />
-                  <SettingRow label={t('prayerTimes.yatsi')} type="switch" value={prayerNotifications.isha} onPress={() => togglePrayerNotification('isha')} isSubRow />
-                </View>
-              )}
-              <SettingRow 
-                icon="volume-high-outline" 
-                label={t('settings.sound')} 
-                value={ezanSound}
-                onPress={() => {
-                  const sounds = ['İstanbul Ezanı', 'Mekke Ezanı', 'Medine Ezanı', 'Mısır Ezanı'];
-                  const nextIndex = (sounds.indexOf(ezanSound) + 1) % sounds.length;
-                  setEzanSound(sounds[nextIndex]);
-                  saveSetting('ezan_sound', sounds[nextIndex]);
-                }}
-              />
-              <SettingRow 
-                icon="alarm-outline" 
-                label={t('settings.reminder')} 
-                value={reminderTime}
-                onPress={() => {
-                  const times = ['Kapalı', '5 dk önce', '10 dk önce', '15 dk önce', '30 dk önce'];
-                  const nextIndex = (times.indexOf(reminderTime) + 1) % times.length;
-                  setReminderTime(times[nextIndex]);
-                  saveSetting('reminder_time', times[nextIndex]);
-                }}
-              />
-              <SettingRow 
-                icon="color-palette-outline" 
-                label={t('settings.theme')} 
-                value={colorScheme === 'dark' ? t('settings.themeDark') : t('settings.themeLight')}
-              />
-              <SettingRow 
-                icon="language-outline" 
-                label={t('settings.language')} 
-                value={i18n.language.toUpperCase()}
-                onPress={async () => {
-                  const langs = ['tr', 'en', 'ar', 'ru'];
-                  const nextIndex = (langs.indexOf(i18n.language) + 1) % langs.length;
-                  const newLang = langs[nextIndex];
-                  await i18n.changeLanguage(newLang);
-                  await AsyncStorage.setItem('appLanguage', newLang);
-                }}
-              />
+    <>
+      <Modal animationType="slide" transparent={true} visible={visible} onRequestClose={onClose}>
+        <Pressable style={styles.overlay} onPress={onClose}>
+          <View style={[styles.content, { backgroundColor: colors.background }]}>
+            <View style={styles.handle} />
+            <View style={styles.header}>
+              <Text style={[styles.title, { color: colors.text }]}>{t('settings.title')}</Text>
+              <TouchableOpacity onPress={onClose} style={styles.closeButton}>
+                <Ionicons name="close" size={24} color={colors.text} />
+              </TouchableOpacity>
             </View>
 
-            <View style={styles.section}>
-              <Text style={[styles.sectionTitle, { color: colors.primary }]}>{t('settings.support')}</Text>
-              <SettingRow icon="star-outline" label={t('settings.rateApp')} />
-              <SettingRow icon="mail-outline" label={t('settings.feedback')} />
-              <SettingRow icon="information-circle-outline" label={t('settings.about')} value="v1.0.0" />
-            </View>
-
-            <Text style={[styles.sectionTitle, { color: colors.textSecondary }]}>{t('settings.widgetPreview')}</Text>
-            <View style={[styles.widgetPreview, { backgroundColor: colors.card, borderColor: colors.border }, Shadows.medium]}>
-              <LinearGradient
-                colors={[colors.primary, colors.secondary]}
-                style={styles.widgetGradient}
-                start={{ x: 0, y: 0 }}
-                end={{ x: 1, y: 0 }}
-              >
-                <View style={styles.widgetTop}>
-                  <Text style={styles.widgetCity}>İstanbul</Text>
-                  <Text style={styles.widgetDate}>21 Ramazan</Text>
-                </View>
-                <View style={styles.widgetBottom}>
-                  <View>
-                    <Text style={styles.widgetLabel}>{t('settings.widgetNext')}</Text>
-                    <Text style={styles.widgetPrayer}>{t('prayerTimes.ogle')}</Text>
+            <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: 40 }}>
+              <View style={styles.section}>
+                <Text style={[styles.sectionTitle, { color: colors.primary }]}>{t('settings.title')}</Text>
+                <SettingRow
+                  icon="notifications-outline"
+                  label={t('settings.notifications')}
+                  type="switch"
+                  value={notificationsEnabled}
+                  onPress={onToggleNotifications}
+                />
+                {notificationsEnabled && (
+                  <View style={styles.subSection}>
+                    <SettingRow label={t('prayerTimes.imsak')} type="switch" value={prayerNotifications.fajr} onPress={() => togglePrayerNotification('fajr')} isSubRow />
+                    <SettingRow label={t('prayerTimes.gunes')} type="switch" value={prayerNotifications.sunrise} onPress={() => togglePrayerNotification('sunrise')} isSubRow />
+                    <SettingRow label={t('prayerTimes.ogle')} type="switch" value={prayerNotifications.dhuhr} onPress={() => togglePrayerNotification('dhuhr')} isSubRow />
+                    <SettingRow label={t('prayerTimes.ikindi')} type="switch" value={prayerNotifications.asr} onPress={() => togglePrayerNotification('asr')} isSubRow />
+                    <SettingRow label={t('prayerTimes.aksam')} type="switch" value={prayerNotifications.maghrib} onPress={() => togglePrayerNotification('maghrib')} isSubRow />
+                    <SettingRow label={t('prayerTimes.yatsi')} type="switch" value={prayerNotifications.isha} onPress={() => togglePrayerNotification('isha')} isSubRow />
                   </View>
-                  <Text style={styles.widgetTime}>13:12</Text>
-                </View>
-              </LinearGradient>
-              <Text style={[styles.widgetHint, { color: colors.textMuted }]}>
-                {t('settings.widgetHint')}
-              </Text>
-            </View>
+                )}
+                <SettingRow
+                  icon="volume-high-outline"
+                  label={t('settings.sound')}
+                  value={ezanSound}
+                  onPress={() => {
+                    const sounds = ['İstanbul Ezanı', 'Mekke Ezanı', 'Medine Ezanı', 'Mısır Ezanı'];
+                    const nextIndex = (sounds.indexOf(ezanSound) + 1) % sounds.length;
+                    setEzanSound(sounds[nextIndex]);
+                    saveSetting('ezan_sound', sounds[nextIndex]);
+                  }}
+                />
+                <SettingRow
+                  icon="alarm-outline"
+                  label={t('settings.reminder')}
+                  value={reminderTime}
+                  onPress={() => {
+                    const times = ['Kapalı', '5 dk önce', '10 dk önce', '15 dk önce', '30 dk önce'];
+                    const nextIndex = (times.indexOf(reminderTime) + 1) % times.length;
+                    setReminderTime(times[nextIndex]);
+                    saveSetting('reminder_time', times[nextIndex]);
+                  }}
+                />
+                <SettingRow
+                  icon="color-palette-outline"
+                  label={t('settings.theme')}
+                  value={colorScheme === 'dark' ? t('settings.themeDark') : t('settings.themeLight')}
+                />
+                <SettingRow
+                  icon="language-outline"
+                  label={t('settings.language')}
+                  value={`${currentLang.flag} ${currentLang.name}`}
+                  onPress={() => setShowLangPicker(true)}
+                />
+              </View>
 
-            <View style={styles.footer}>
-              <Text style={[styles.footerText, { color: colors.textMuted }]}>
-                Ezan Vakti Pro+ © 2026
-              </Text>
+              <View style={styles.section}>
+                <Text style={[styles.sectionTitle, { color: colors.primary }]}>{t('settings.support')}</Text>
+                <SettingRow icon="star-outline" label={t('settings.rateApp')} />
+                <SettingRow icon="mail-outline" label={t('settings.feedback')} />
+                <SettingRow icon="information-circle-outline" label={t('settings.about')} value="v1.0.2" />
+              </View>
+
+              <Text style={[styles.sectionTitle, { color: colors.textSecondary }]}>{t('settings.widgetPreview')}</Text>
+              <View style={[styles.widgetPreview, { backgroundColor: colors.card, borderColor: colors.border }, Shadows.medium]}>
+                <LinearGradient
+                  colors={[colors.primary, colors.secondary]}
+                  style={styles.widgetGradient}
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 0 }}
+                >
+                  <View style={styles.widgetTop}>
+                    <Text style={styles.widgetCity}>İstanbul</Text>
+                    <Text style={styles.widgetDate}>21 Ramazan</Text>
+                  </View>
+                  <View style={styles.widgetBottom}>
+                    <View>
+                      <Text style={styles.widgetLabel}>{t('settings.widgetNext')}</Text>
+                      <Text style={styles.widgetPrayer}>{t('prayerTimes.ogle')}</Text>
+                    </View>
+                    <Text style={styles.widgetTime}>13:12</Text>
+                  </View>
+                </LinearGradient>
+                <Text style={[styles.widgetHint, { color: colors.textMuted }]}>
+                  {t('settings.widgetHint')}
+                </Text>
+              </View>
+
+              <View style={styles.footer}>
+                <Text style={[styles.footerText, { color: colors.textMuted }]}>
+                  Ezan Vakti Pro+ © 2026
+                </Text>
+              </View>
+            </ScrollView>
+          </View>
+        </Pressable>
+      </Modal>
+
+      {/* Language Picker Modal */}
+      <Modal animationType="slide" transparent={true} visible={showLangPicker} onRequestClose={() => setShowLangPicker(false)}>
+        <Pressable style={styles.overlay} onPress={() => setShowLangPicker(false)}>
+          <View style={[styles.langPickerContent, { backgroundColor: colors.background }]}>
+            <View style={styles.handle} />
+            <View style={styles.header}>
+              <Text style={[styles.title, { color: colors.text }]}>{t('settings.language')}</Text>
+              <TouchableOpacity onPress={() => setShowLangPicker(false)} style={styles.closeButton}>
+                <Ionicons name="close" size={24} color={colors.text} />
+              </TouchableOpacity>
             </View>
-          </ScrollView>
-        </View>
-      </Pressable>
-    </Modal>
+            <FlatList
+              data={LANGUAGES}
+              keyExtractor={item => item.code}
+              showsVerticalScrollIndicator={false}
+              renderItem={({ item }) => {
+                const isSelected = i18n.language === item.code;
+                return (
+                  <TouchableOpacity
+                    style={[styles.langRow, { borderBottomColor: colors.border }, isSelected && { backgroundColor: colors.primary + '15' }]}
+                    onPress={() => handleSelectLanguage(item.code)}
+                  >
+                    <Text style={styles.langFlag}>{item.flag}</Text>
+                    <Text style={[styles.langName, { color: colors.text }, isSelected && { color: colors.primary, fontWeight: '700' }]}>
+                      {item.name}
+                    </Text>
+                    {isSelected && <Ionicons name="checkmark" size={20} color={colors.primary} />}
+                  </TouchableOpacity>
+                );
+              }}
+            />
+          </View>
+        </Pressable>
+      </Modal>
+    </>
   );
 };
 
@@ -230,10 +293,24 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   content: {
-    height: '80%',
+    height: '85%',
     borderTopLeftRadius: BorderRadius.xl,
     borderTopRightRadius: BorderRadius.xl,
     padding: Spacing.lg,
+  },
+  langPickerContent: {
+    height: '75%',
+    borderTopLeftRadius: BorderRadius.xl,
+    borderTopRightRadius: BorderRadius.xl,
+    padding: Spacing.lg,
+  },
+  handle: {
+    width: 40,
+    height: 4,
+    backgroundColor: '#ccc',
+    borderRadius: 2,
+    alignSelf: 'center',
+    marginBottom: Spacing.md,
   },
   header: {
     flexDirection: 'row',
@@ -275,6 +352,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.md,
+    flex: 1,
   },
   iconContainer: {
     width: 36,
@@ -286,14 +364,34 @@ const styles = StyleSheet.create({
   rowLabel: {
     fontSize: FontSize.md,
     fontWeight: '500',
+    flex: 1,
   },
   rowRight: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.xs,
+    maxWidth: '50%',
   },
   rowValue: {
     fontSize: FontSize.sm,
+    textAlign: 'right',
+  },
+  langRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 14,
+    paddingHorizontal: Spacing.sm,
+    borderBottomWidth: 1,
+    gap: Spacing.md,
+    borderRadius: BorderRadius.sm,
+    marginHorizontal: 4,
+  },
+  langFlag: {
+    fontSize: 24,
+  },
+  langName: {
+    fontSize: FontSize.md,
+    flex: 1,
   },
   footer: {
     alignItems: 'center',

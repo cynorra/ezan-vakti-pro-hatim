@@ -23,6 +23,15 @@ import bn from './locales/bn.json';
 import ur from './locales/ur.json';
 import id from './locales/id.json';
 import el from './locales/el.json';
+import fa from './locales/fa.json';
+import hu from './locales/hu.json';
+import bg from './locales/bg.json';
+import ro from './locales/ro.json';
+import ms from './locales/ms.json';
+import uz from './locales/uz.json';
+import kk from './locales/kk.json';
+import az from './locales/az.json';
+import bs from './locales/bs.json';
 
 const resources = {
   tr: { translation: tr },
@@ -46,6 +55,15 @@ const resources = {
   ur: { translation: ur },
   id: { translation: id },
   el: { translation: el },
+  fa: { translation: fa },
+  hu: { translation: hu },
+  bg: { translation: bg },
+  ro: { translation: ro },
+  ms: { translation: ms },
+  uz: { translation: uz },
+  kk: { translation: kk },
+  az: { translation: az },
+  bs: { translation: bs },
 };
 
 const initI18n = async () => {

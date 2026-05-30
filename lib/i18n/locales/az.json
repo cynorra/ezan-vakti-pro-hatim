@@ -1,0 +1,77 @@
+{
+  "tabs": {
+    "home": "Ana səhifə",
+    "qibla": "Qiblə",
+    "hatim": "Xətm",
+    "dua": "Dua",
+    "dhikr": "Zikr"
+  },
+  "home": {
+    "nextPrayerCountdown": "Qalan vaxt",
+    "verseOfTheDay": "Günün ayəsi",
+    "hadithOfTheDay": "Günün hədisi",
+    "esmaOfTheDay": "Günün ismi"
+  },
+  "prayerTimes": {
+    "imsak": "Sübh",
+    "gunes": "Günəş çıxışı",
+    "ogle": "Günorta",
+    "ikindi": "İkindi",
+    "aksam": "Axşam",
+    "yatsi": "Gecə"
+  },
+  "hatim": {
+    "individual": "Fərdi",
+    "collaborative": "Qrup",
+    "weeklyHatim": "Həftəlik Xətm",
+    "completed": "Tamamlandı",
+    "completeHatimBtn": "XƏTMİ TAMAMLA",
+    "juzSelection": "CÜZ SEÇİMİ",
+    "activeHatims": "AKTİV XƏTMLƏr",
+    "startNew": "Yeni başlat",
+    "noActiveHatim": "Hələ aktiv qrup xətmi yoxdur.",
+    "newCollaborativeHatim": "Yeni Qrup Xətmi",
+    "hatimTitleLabel": "Xətm başlığı",
+    "hatimTitlePlaceholder": "Məs.: Ramazan Xətmi",
+    "startBtn": "BAŞLAT",
+    "participantName": "İştirakçı adı",
+    "namePlaceholder": "Adınızı daxil edin...",
+    "takeJuz": "AL",
+    "juzDetails": "Cüz təfərrüatları",
+    "startSurah": "Başlanğıc surə:",
+    "pages": "Səhifələr:",
+    "containsSurahs": "Surələr:",
+    "congratsSaved": "Təbriklər! Xətminiz saxlanıldı."
+  },
+  "settings": {
+    "title": "Parametrlər",
+    "notifications": "Bildirişlər",
+    "language": "Dil",
+    "sound": "Azan səsi",
+    "reminder": "Namaz öncəsi xatırlatma",
+    "theme": "Mövzu",
+    "themeLight": "Açıq",
+    "themeDark": "Qaranlıq",
+    "support": "Dəstək və məlumat",
+    "rateApp": "Tətbiqi qiymətləndir",
+    "feedback": "Rəy göndər",
+    "about": "Haqqında",
+    "widgetPreview": "VİDCET ÖNİZLƏMƏSİ",
+    "widgetNext": "Növbəti",
+    "widgetHint": "Vidcet əlavə etmək üçün ana ekranda uzun basın."
+  },
+  "qibla": {
+    "title": "QİBLƏ KOMPASı",
+    "subtitle": "Qiblə istiqamətinin müəyyən edilməsi",
+    "yourDirection": "SİZİN İSTİQAMƏTİNİZ",
+    "qiblaAngle": "QİBLƏ BUCAĞI",
+    "aligned": "QİBLƏYƏ YÖNƏLDINIZ",
+    "hint": "Cihazı üfüqi saxlayın və oxu izləyin."
+  },
+  "common": {
+    "cancel": "Ləğv et",
+    "save": "Saxla",
+    "close": "Bağla",
+    "search": "Axtar..."
+  }
+}

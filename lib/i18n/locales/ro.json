@@ -1,0 +1,77 @@
+{
+  "tabs": {
+    "home": "Acasă",
+    "qibla": "Qibla",
+    "hatim": "Hatim",
+    "dua": "Dua",
+    "dhikr": "Zikr"
+  },
+  "home": {
+    "nextPrayerCountdown": "Timp rămas",
+    "verseOfTheDay": "Versetul zilei",
+    "hadithOfTheDay": "Hadithul zilei",
+    "esmaOfTheDay": "Numele zilei"
+  },
+  "prayerTimes": {
+    "imsak": "Fajr",
+    "gunes": "Răsărit",
+    "ogle": "Dhuhr",
+    "ikindi": "Asr",
+    "aksam": "Maghrib",
+    "yatsi": "Isha"
+  },
+  "hatim": {
+    "individual": "Individual",
+    "collaborative": "Colaborativ",
+    "weeklyHatim": "Hatim Săptămânal",
+    "completed": "Finalizat",
+    "completeHatimBtn": "FINALIZEAZĂ HATIM",
+    "juzSelection": "SELECTARE JUZ",
+    "activeHatims": "HATIM-URI ACTIVE",
+    "startNew": "Începe nou",
+    "noActiveHatim": "Nu există încă niciun hatim colaborativ activ.",
+    "newCollaborativeHatim": "Hatim Colaborativ Nou",
+    "hatimTitleLabel": "Titlul Hatim-ului",
+    "hatimTitlePlaceholder": "Ex.: Hatim Ramadan",
+    "startBtn": "ÎNCEPE",
+    "participantName": "Numele participantului",
+    "namePlaceholder": "Introduceți numele...",
+    "takeJuz": "ALEGE",
+    "juzDetails": "Detalii Juz",
+    "startSurah": "Sura de început:",
+    "pages": "Pagini:",
+    "containsSurahs": "Conține sure:",
+    "congratsSaved": "Felicitări! Hatim-ul a fost salvat."
+  },
+  "settings": {
+    "title": "Setări",
+    "notifications": "Notificări",
+    "language": "Limbă",
+    "sound": "Sunet Ezan",
+    "reminder": "Memento înainte de rugăciune",
+    "theme": "Temă",
+    "themeLight": "Luminos",
+    "themeDark": "Întunecat",
+    "support": "Suport și informații",
+    "rateApp": "Evaluați aplicația",
+    "feedback": "Trimiteți feedback",
+    "about": "Despre",
+    "widgetPreview": "PREVIZUALIZARE WIDGET",
+    "widgetNext": "Următor",
+    "widgetHint": "Apăsați lung pe ecranul principal pentru a adăuga widget-ul."
+  },
+  "qibla": {
+    "title": "BUSOLA QIBLA",
+    "subtitle": "Determinarea direcției Qibla",
+    "yourDirection": "DIRECȚIA DVSTRĂ",
+    "qiblaAngle": "UNGHIUL QIBLA",
+    "aligned": "ORIENTAT SPRE QIBLA",
+    "hint": "Țineți dispozitivul orizontal și urmați acul."
+  },
+  "common": {
+    "cancel": "Anulare",
+    "save": "Salvare",
+    "close": "Închide",
+    "search": "Căutare..."
+  }
+}

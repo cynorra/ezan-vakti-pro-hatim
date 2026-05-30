@@ -1,0 +1,77 @@
+{
+  "tabs": {
+    "home": "Početna",
+    "qibla": "Kibla",
+    "hatim": "Hatma",
+    "dua": "Dova",
+    "dhikr": "Zikr"
+  },
+  "home": {
+    "nextPrayerCountdown": "Preostalo vrijeme",
+    "verseOfTheDay": "Ajet dana",
+    "hadithOfTheDay": "Hadis dana",
+    "esmaOfTheDay": "Ime dana"
+  },
+  "prayerTimes": {
+    "imsak": "Sabah",
+    "gunes": "Izlazak sunca",
+    "ogle": "Podne",
+    "ikindi": "Ikindija",
+    "aksam": "Akšam",
+    "yatsi": "Jacija"
+  },
+  "hatim": {
+    "individual": "Individualno",
+    "collaborative": "Grupno",
+    "weeklyHatim": "Sedmična Hatma",
+    "completed": "Završeno",
+    "completeHatimBtn": "ZAVRŠI HATMU",
+    "juzSelection": "ODABIR DŽUZA",
+    "activeHatims": "AKTIVNE HATME",
+    "startNew": "Novo",
+    "noActiveHatim": "Još nema aktivne grupne hatme.",
+    "newCollaborativeHatim": "Nova Grupna Hatma",
+    "hatimTitleLabel": "Naslov Hatme",
+    "hatimTitlePlaceholder": "Npr.: Ramazanska Hatma",
+    "startBtn": "POČNI",
+    "participantName": "Ime učesnika",
+    "namePlaceholder": "Unesite vaše ime...",
+    "takeJuz": "UZMI",
+    "juzDetails": "Detalji Džuza",
+    "startSurah": "Početna sura:",
+    "pages": "Stranice:",
+    "containsSurahs": "Sadrži sure:",
+    "congratsSaved": "Čestitamo! Vaša Hatma je sačuvana."
+  },
+  "settings": {
+    "title": "Postavke",
+    "notifications": "Obavještenja",
+    "language": "Jezik",
+    "sound": "Zvuk Ezana",
+    "reminder": "Podsjetnik prije namaza",
+    "theme": "Tema",
+    "themeLight": "Svijetla",
+    "themeDark": "Tamna",
+    "support": "Podrška i informacije",
+    "rateApp": "Ocijeni aplikaciju",
+    "feedback": "Pošalji povratnu informaciju",
+    "about": "O aplikaciji",
+    "widgetPreview": "PREGLED WIDGETA",
+    "widgetNext": "Sljedeći",
+    "widgetHint": "Pritisnite dugo na početnom ekranu za dodavanje widgeta."
+  },
+  "qibla": {
+    "title": "KIBLA KOMPAS",
+    "subtitle": "Određivanje pravca Kible",
+    "yourDirection": "VAŠ PRAVAC",
+    "qiblaAngle": "KUT KIBLE",
+    "aligned": "OKRENUTI STE PREMA KIBLI",
+    "hint": "Držite uređaj horizontalno i pratite iglu."
+  },
+  "common": {
+    "cancel": "Otkaži",
+    "save": "Sačuvaj",
+    "close": "Zatvori",
+    "search": "Pretraži..."
+  }
+}
