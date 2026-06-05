@@ -23,7 +23,7 @@
       }
     },
     "android": {
-      "versionCode": 3,
+      "versionCode": 5,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0d7a3e"
@@ -36,7 +36,8 @@
         "VIBRATE",
         "RECEIVE_BOOT_COMPLETED",
         "POST_NOTIFICATIONS",
-        "SCHEDULE_EXACT_ALARM"
+        "SCHEDULE_EXACT_ALARM",
+        "com.google.android.gms.permission.AD_ID"
       ]
     },
     "web": {
