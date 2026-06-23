@@ -96,6 +96,15 @@ export default function TabLayout() {
             ),
           }}
         />
+        <Tabs.Screen
+          name="kaza"
+          options={{
+            title: t('tabs.kaza') || 'Kaza',
+            tabBarIcon: ({ color, focused }: { color: string; focused: boolean }) => (
+              <Ionicons name={focused ? "checkbox" : "checkbox-outline"} size={24} color={color} />
+            ),
+          }}
+        />
       </Tabs>
       <View
         style={{

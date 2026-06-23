@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useRouter } from 'expo-router';
 import * as Location from 'expo-location';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { turkishCities, City } from '@/lib/data/cities';
@@ -26,9 +27,11 @@ import { NextPrayerCountdown } from '@/components/NextPrayerCountdown';
 import { PrayerTimesCard } from '@/components/PrayerTimesCard';
 import { ReligiousDaysCard } from '@/components/ReligiousDaysCard';
 import { SEOHead } from '@/components/SEOHead';
+import { getRandomEsma, Esma } from '@/lib/data/esma';
 
 export default function HomeScreen() {
   const { t } = useTranslation();
+  const router = useRouter();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const [selectedCity, setSelectedCity] = useState<City>(turkishCities[33]); // Istanbul
@@ -39,6 +42,11 @@ export default function HomeScreen() {
   const [refreshing, setRefreshing] = useState(false);
   const [currentDate, setCurrentDate] = useState(new Date());
   const [notificationsEnabled, setNotificationsEnabled] = useState(false);
+  const [dailyEsma, setDailyEsma] = useState<Esma | null>(null);
+
+  useEffect(() => {
+    setDailyEsma(getRandomEsma());
+  }, []);
 
   const loadPrayerTimes = useCallback(() => {
     const times = calculatePrayerTimes(
@@ -236,21 +244,27 @@ export default function HomeScreen() {
         </View>
 
         {/* Günün Esması Card */}
-        <View style={[styles.card, { backgroundColor: colors.surface, padding: 0 }, Shadows.premium]}>
-          <LinearGradient
-            colors={[colors.primary + '05', colors.secondary + '10']}
-            style={styles.esmaContainer}
+        {dailyEsma && (
+          <TouchableOpacity 
+            activeOpacity={0.8}
+            onPress={() => router.push('/esmaul-husna')}
+            style={[styles.card, { backgroundColor: colors.surface, padding: 0 }, Shadows.premium]}
           >
-            <View style={styles.esmaBadge}>
-              <Text style={[styles.esmaBadgeText, { color: colors.accent }]}>{t('home.esmaOfTheDay').toUpperCase()}</Text>
-            </View>
-            <Text style={[styles.esmaArabic, { color: colors.primary }]}>الرَّحْمَنُ</Text>
-            <Text style={[styles.esmaTurkish, { color: colors.text }]}>Er-Rahmân</Text>
-            <Text style={[styles.esmaMeaning, { color: colors.textSecondary }]}>
-              Dünyada bütün mahlükata merhamet eden, şefkat gösteren, ihsan eden.
-            </Text>
-          </LinearGradient>
-        </View>
+            <LinearGradient
+              colors={[colors.primary + '05', colors.secondary + '10']}
+              style={styles.esmaContainer}
+            >
+              <View style={styles.esmaBadge}>
+                <Text style={[styles.esmaBadgeText, { color: colors.accent }]}>{t('home.esmaOfTheDay') ? t('home.esmaOfTheDay').toUpperCase() : 'GÜNÜN ESMASI'}</Text>
+              </View>
+              <Text style={[styles.esmaArabic, { color: colors.primary }]}>{dailyEsma.arabic}</Text>
+              <Text style={[styles.esmaTurkish, { color: colors.text }]}>{dailyEsma.turkish}</Text>
+              <Text style={[styles.esmaMeaning, { color: colors.textSecondary }]}>
+                {dailyEsma.meaning}
+              </Text>
+            </LinearGradient>
+          </TouchableOpacity>
+        )}
 
         {/* Daily Checklist */}
         <DailyChecklist />

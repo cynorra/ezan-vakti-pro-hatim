@@ -4,7 +4,22 @@
     "qibla": "Kıble",
     "hatim": "Hatim",
     "dua": "Dua",
-    "dhikr": "Tesbih"
+    "dhikr": "Tesbih",
+    "kaza": "Kaza"
+  },
+  "esma": {
+    "title": "Esmaül Hüsna",
+    "search": "İsim veya anlam ara..."
+  },
+  "kaza": {
+    "title": "KAZA NAMAZI",
+    "subtitle": "Kılınmamış Namazların Takibi",
+    "sabah": "Sabah",
+    "ogle": "Öğle",
+    "ikindi": "İkindi",
+    "aksam": "Akşam",
+    "yatsi": "Yatsı",
+    "vitir": "Vitir"
   },
   "home": {
     "nextPrayerCountdown": "Vaktin çıkmasına",

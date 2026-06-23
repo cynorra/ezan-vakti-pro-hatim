@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, useColorScheme, Platform } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { PrayerTimes, getNextPrayer } from '@/lib/prayer-times';
+import { updateWidget } from '@/lib/widget';
 
 interface NextPrayerCountdownProps {
   prayerTimes: PrayerTimes;
@@ -15,6 +16,8 @@ export function NextPrayerCountdown({ prayerTimes }: NextPrayerCountdownProps) {
   const nextPrayer = useMemo(() => getNextPrayer(prayerTimes), [prayerTimes]);
 
   useEffect(() => {
+    updateWidget(nextPrayer.name, nextPrayer.time);
+    
     const calculateCountdown = () => {
       const now = new Date();
       const [hours, minutes] = nextPrayer.time.split(':').map(Number);

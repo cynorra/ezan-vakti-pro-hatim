@@ -4,7 +4,22 @@
     "qibla": "Qibla",
     "hatim": "Khatm",
     "dua": "Dua",
-    "dhikr": "Dhikr"
+    "dhikr": "Dhikr",
+    "kaza": "Qada"
+  },
+  "esma": {
+    "title": "Names of Allah",
+    "search": "Search name or meaning..."
+  },
+  "kaza": {
+    "title": "MISSED PRAYERS",
+    "subtitle": "Track your missed prayers",
+    "sabah": "Fajr",
+    "ogle": "Dhuhr",
+    "ikindi": "Asr",
+    "aksam": "Maghrib",
+    "yatsi": "Isha",
+    "vitir": "Witr"
   },
   "home": {
     "nextPrayerCountdown": "Time remaining",

@@ -1,0 +1,224 @@
+import { useState, useEffect } from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  useColorScheme,
+  ScrollView,
+  Platform,
+} from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
+import * as Haptics from 'expo-haptics';
+import { safeHaptics } from '@/lib/haptics';
+import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { SEOHead } from '@/components/SEOHead';
+import { useTranslation } from 'react-i18next';
+
+interface KazaData {
+  sabah: number;
+  ogle: number;
+  ikindi: number;
+  aksam: number;
+  yatsi: number;
+  vitir: number;
+}
+
+const defaultKazaData: KazaData = {
+  sabah: 0,
+  ogle: 0,
+  ikindi: 0,
+  aksam: 0,
+  yatsi: 0,
+  vitir: 0,
+};
+
+export default function KazaScreen() {
+  const { t } = useTranslation();
+  const colorScheme = useColorScheme() ?? 'light';
+  const colors = Colors[colorScheme];
+  const [kazaData, setKazaData] = useState<KazaData>(defaultKazaData);
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  const loadData = async () => {
+    try {
+      const saved = await AsyncStorage.getItem('kaza_data');
+      if (saved) {
+        setKazaData(JSON.parse(saved));
+      }
+    } catch (error) {
+      console.log('Error loading kaza data:', error);
+    }
+  };
+
+  const saveData = async (newData: KazaData) => {
+    try {
+      await AsyncStorage.setItem('kaza_data', JSON.stringify(newData));
+    } catch (error) {
+      console.log('Error saving kaza data:', error);
+    }
+  };
+
+  const updateCount = (key: keyof KazaData, delta: number) => {
+    setKazaData((prev) => {
+      const newCount = prev[key] + delta;
+      if (newCount < 0) return prev; // Negatif olmasın
+      
+      const newData = { ...prev, [key]: newCount };
+      saveData(newData);
+      
+      if (delta > 0) {
+        safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+      } else {
+        safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+      }
+      
+      return newData;
+    });
+  };
+
+  const renderPrayerCard = (key: keyof KazaData, title: string, icon: keyof typeof Ionicons.glyphMap) => {
+    return (
+      <View style={[styles.card, { backgroundColor: colors.surface }, Shadows.medium]}>
+        <View style={styles.cardInfo}>
+          <View style={[styles.iconWrapper, { backgroundColor: colors.primary + '15' }]}>
+            <Ionicons name={icon} size={24} color={colors.primary} />
+          </View>
+          <Text style={[styles.prayerName, { color: colors.text }]}>{title}</Text>
+        </View>
+        
+        <View style={styles.counterSection}>
+          <TouchableOpacity 
+            style={[styles.btn, { backgroundColor: colors.background }]} 
+            onPress={() => updateCount(key, -1)}
+          >
+            <Ionicons name="remove" size={24} color={colors.error || '#e74c3c'} />
+          </TouchableOpacity>
+          
+          <Text style={[styles.countText, { color: colors.primary }]}>{kazaData[key]}</Text>
+          
+          <TouchableOpacity 
+            style={[styles.btn, { backgroundColor: colors.background }]} 
+            onPress={() => updateCount(key, 1)}
+          >
+            <Ionicons name="add" size={24} color={colors.success || '#2ecc71'} />
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  };
+
+  return (
+    <>
+      <SEOHead 
+        title="Kaza Namazı Takipçisi | Ezan Vakti ve Hatim"
+        description="Kılınmamış kaza namazlarınızı kaydedin ve takip edin. Sabah, öğle, ikindi, akşam, yatsı ve vitir kaza hesaplama."
+      />
+      <View style={[styles.container, { backgroundColor: colors.background }]}>
+        <LinearGradient colors={Gradients.premium} style={styles.header}>
+          <Text style={styles.headerTitle}>{t('kaza.title') || 'KAZA NAMAZI'}</Text>
+          <Text style={styles.headerSubtitle}>{t('kaza.subtitle') || 'Kılınmamış Namazların Takibi'}</Text>
+        </LinearGradient>
+
+        <ScrollView 
+          style={styles.mainContent} 
+          contentContainerStyle={styles.scrollContent}
+          showsVerticalScrollIndicator={false}
+        >
+          {renderPrayerCard('sabah', t('kaza.sabah') || 'Sabah', 'partly-sunny-outline')}
+          {renderPrayerCard('ogle', t('kaza.ogle') || 'Öğle', 'sunny-outline')}
+          {renderPrayerCard('ikindi', t('kaza.ikindi') || 'İkindi', 'cloud-outline')}
+          {renderPrayerCard('aksam', t('kaza.aksam') || 'Akşam', 'moon-outline')}
+          {renderPrayerCard('yatsi', t('kaza.yatsi') || 'Yatsı', 'star-outline')}
+          {renderPrayerCard('vitir', t('kaza.vitir') || 'Vitir', 'heart-outline')}
+          
+          <View style={{ height: 100 }} />
+        </ScrollView>
+      </View>
+    </>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  header: {
+    paddingTop: Platform.OS === 'ios' ? 60 : 40,
+    paddingBottom: 40,
+    paddingHorizontal: Spacing.lg,
+    borderBottomLeftRadius: BorderRadius.xl,
+    borderBottomRightRadius: BorderRadius.xl,
+    alignItems: 'center',
+  },
+  headerTitle: {
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: '900',
+    letterSpacing: 4,
+  },
+  headerSubtitle: {
+    color: 'rgba(255,255,255,0.7)',
+    fontSize: 12,
+    fontWeight: '600',
+    marginTop: 4,
+    textTransform: 'uppercase',
+    letterSpacing: 1,
+  },
+  mainContent: {
+    flex: 1,
+    marginTop: -20,
+    paddingHorizontal: Spacing.md,
+  },
+  scrollContent: {
+    paddingBottom: 40,
+    gap: Spacing.md,
+  },
+  card: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: Spacing.lg,
+    borderRadius: BorderRadius.lg,
+  },
+  cardInfo: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.md,
+  },
+  iconWrapper: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  prayerName: {
+    fontSize: FontSize.md,
+    fontWeight: '700',
+    letterSpacing: 0.5,
+  },
+  counterSection: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.md,
+  },
+  countText: {
+    fontSize: FontSize.lg,
+    fontWeight: '900',
+    minWidth: 36,
+    textAlign: 'center',
+  },
+  btn: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});

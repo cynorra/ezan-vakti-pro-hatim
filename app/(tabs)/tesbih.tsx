@@ -10,6 +10,7 @@ import {
   Platform,
   Dimensions,
   ScrollView,
+  Modal,
 } from 'react-native';
 import Svg, { Circle } from 'react-native-svg';
 import { Ionicons } from '@expo/vector-icons';
@@ -41,6 +42,8 @@ export default function TesbihScreen() {
   const colors = Colors[colorScheme];
   const [dhikrs, setDhikrs] = useState<Dhikr[]>(DEFAULT_DHIKRS);
   const [activeDhikrIndex, setActiveDhikrIndex] = useState(0);
+  const [editTargetModalVisible, setEditTargetModalVisible] = useState(false);
+  const [tempTarget, setTempTarget] = useState('');
 
   useEffect(() => {
     loadData();
@@ -86,6 +89,8 @@ export default function TesbihScreen() {
           setActiveDhikrIndex(0);
         }
       }, 500); // Kullanicinin 33 oldugunu gormesi icin kisa bir gecikme
+    } else if (dhikr.count === 33 || dhikr.count === 66 || dhikr.count === 99) {
+      safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
     } else {
       safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     }
@@ -102,6 +107,19 @@ export default function TesbihScreen() {
       saveData(newDhikrs);
       safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
     }
+  };
+
+  const saveTarget = () => {
+    const targetValue = parseInt(tempTarget, 10);
+    if (!isNaN(targetValue) && targetValue > 0) {
+      const newDhikrs = [...dhikrs];
+      if (newDhikrs[activeDhikrIndex]) {
+        newDhikrs[activeDhikrIndex].target = targetValue;
+        setDhikrs(newDhikrs);
+        saveData(newDhikrs);
+      }
+    }
+    setEditTargetModalVisible(false);
   };
 
   const currentDhikr = dhikrs[activeDhikrIndex] || DEFAULT_DHIKRS[0] || { name: 'Zikir', target: 33, count: 0 };
@@ -164,11 +182,17 @@ export default function TesbihScreen() {
               <Text style={[styles.counterText, { color: colors.text }]}>
                 {currentDhikr.count}
               </Text>
-              <View style={[styles.targetBadge, { backgroundColor: colors.primary + '10' }]}>
+              <TouchableOpacity 
+                style={[styles.targetBadge, { backgroundColor: colors.primary + '10' }]}
+                onPress={() => {
+                  setTempTarget(currentDhikr.target.toString());
+                  setEditTargetModalVisible(true);
+                }}
+              >
                 <Text style={[styles.targetText, { color: colors.primary }]}>
-                  HEDEF: {currentDhikr.target}
+                  HEDEF: {currentDhikr.target} ✎
                 </Text>
-              </View>
+              </TouchableOpacity>
             </LinearGradient>
           </View>
 
@@ -228,6 +252,41 @@ export default function TesbihScreen() {
         </View>
         <View style={{ height: 100 }} />
       </ScrollView>
+
+      {/* Hedef Düzenleme Modalı */}
+      <Modal
+        visible={editTargetModalVisible}
+        transparent={true}
+        animationType="fade"
+      >
+        <View style={styles.modalOverlay}>
+          <View style={[styles.modalContent, { backgroundColor: colors.surface }]}>
+            <Text style={[styles.modalTitle, { color: colors.text }]}>Hedef Belirle</Text>
+            <TextInput
+              style={[styles.modalInput, { color: colors.text, borderColor: colors.border }]}
+              keyboardType="number-pad"
+              value={tempTarget}
+              onChangeText={setTempTarget}
+              maxLength={5}
+            />
+            <View style={styles.modalButtons}>
+              <TouchableOpacity 
+                style={styles.modalBtnCancel} 
+                onPress={() => setEditTargetModalVisible(false)}
+              >
+                <Text style={styles.modalBtnCancelText}>İptal</Text>
+              </TouchableOpacity>
+              <TouchableOpacity 
+                style={[styles.modalBtnSave, { backgroundColor: colors.primary }]} 
+                onPress={saveTarget}
+              >
+                <Text style={styles.modalBtnSaveText}>Kaydet</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </Modal>
+
     </View>
     </>
   );
@@ -383,5 +442,57 @@ const styles = StyleSheet.create({
     fontSize: 10,
     fontWeight: '600',
     marginLeft: 2,
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modalContent: {
+    width: '80%',
+    padding: Spacing.xl,
+    borderRadius: BorderRadius.xl,
+    alignItems: 'center',
+  },
+  modalTitle: {
+    fontSize: FontSize.lg,
+    fontWeight: '800',
+    marginBottom: Spacing.lg,
+  },
+  modalInput: {
+    width: '100%',
+    borderWidth: 1,
+    borderRadius: BorderRadius.md,
+    padding: Spacing.md,
+    fontSize: FontSize.xl,
+    textAlign: 'center',
+    marginBottom: Spacing.xl,
+    fontWeight: '700',
+  },
+  modalButtons: {
+    flexDirection: 'row',
+    gap: Spacing.md,
+  },
+  modalBtnCancel: {
+    flex: 1,
+    padding: Spacing.md,
+    borderRadius: BorderRadius.md,
+    backgroundColor: 'rgba(0,0,0,0.05)',
+    alignItems: 'center',
+  },
+  modalBtnCancelText: {
+    fontWeight: '700',
+    color: '#666',
+  },
+  modalBtnSave: {
+    flex: 1,
+    padding: Spacing.md,
+    borderRadius: BorderRadius.md,
+    alignItems: 'center',
+  },
+  modalBtnSaveText: {
+    color: '#fff',
+    fontWeight: '700',
   },
 });
