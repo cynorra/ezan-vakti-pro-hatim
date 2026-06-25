@@ -31,8 +31,8 @@ android {
         applicationId 'com.cynnora.ezanvakti'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 5
-        versionName "1.0.2"
+        versionCode 6
+        versionName "1.0.3"
         buildConfigField "String", "REACT_NATIVE_RELEASE_LEVEL", "\"${findProperty('reactNativeReleaseLevel') ?: 'stable'}\""
 
     }
@@ -105,7 +105,10 @@ def recreateDummyCodegenFiles = {
             cmakeFile.text = "cmake_minimum_required(VERSION 3.13)\nproject(${libName})\nadd_library(${libName} SHARED dummy.cpp)\n"
         }
         def cppFile = file("${dir}/dummy.cpp")
-        if (!cppFile.exists()) cppFile.text = "void dummy() {}\n"
+        if (!cppFile.exists()) {
+            def libName = relPath.contains("async-storage") ? "rnasyncstorage" : "RNGoogleMobileAdsSpec"
+            cppFile.text = "namespace ${libName} { void dummy() {} }\n"
+        }
     }
 }
 
