@@ -1,0 +1,118 @@
+apply plugin: "com.android.application"
+apply plugin: "org.jetbrains.kotlin.android"
+apply plugin: "com.facebook.react"
+
+def projectRoot = rootDir.getAbsoluteFile().getParentFile().getAbsolutePath()
+
+react {
+    entryFile = file(["node", "-e", "require('expo/scripts/resolveAppEntry')", projectRoot, "android", "absolute"].execute(null, rootDir).text.trim())
+    reactNativeDir = new File(["node", "--print", "require.resolve('react-native/package.json')"].execute(null, rootDir).text.trim()).getParentFile().getAbsoluteFile()
+    hermesCommand = new File(["node", "--print", "require.resolve('hermes-compiler/package.json', { paths: [require.resolve('react-native/package.json')] })"].execute(null, rootDir).text.trim()).getParentFile().getAbsolutePath() + "/hermesc/%OS-BIN%/hermesc"
+    codegenDir = new File(["node", "--print", "require.resolve('@react-native/codegen/package.json', { paths: [require.resolve('react-native/package.json')] })"].execute(null, rootDir).text.trim()).getParentFile().getAbsoluteFile()
+
+    enableBundleCompression = (findProperty('android.enableBundleCompression') ?: false).toBoolean()
+    cliFile = new File(["node", "--print", "require.resolve('@expo/cli', { paths: [require.resolve('expo/package.json')] })"].execute(null, rootDir).text.trim())
+    bundleCommand = "export:embed"
+
+    nodeExecutableAndArgs = ["node", "--max-old-space-size=8192"]
+    autolinkLibrariesWithApp()
+}
+
+def enableMinifyInReleaseBuilds = (findProperty('android.enableMinifyInReleaseBuilds') ?: false).toBoolean()
+def jscFlavor = 'io.github.react-native-community:jsc-android:2026004.+'
+
+android {
+    ndkVersion rootProject.ext.ndkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdk rootProject.ext.compileSdkVersion
+
+    namespace 'com.cynnora.ezanvakti'
+    defaultConfig {
+        applicationId 'com.cynnora.ezanvakti'
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 5
+        versionName "1.0.2"
+        buildConfigField "String", "REACT_NATIVE_RELEASE_LEVEL", "\"${findProperty('reactNativeReleaseLevel') ?: 'stable'}\""
+
+    }
+    
+    signingConfigs {
+        debug {
+            storeFile file('debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+    }
+    
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            signingConfig signingConfigs.debug
+            minifyEnabled enableMinifyInReleaseBuilds
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+
+        }
+    }
+    
+    packaging {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+        resources {
+            pickFirsts.add("**/libc++_shared.so")
+            pickFirsts.add("**/libhermes.so")
+            pickFirsts.add("**/libjsc.so")
+        }
+    }
+}
+
+dependencies {
+    implementation("com.facebook.react:react-android")
+    
+    def frescoVersion = expoLibs.versions.fresco.get()
+    if ((findProperty('expo.gif.enabled') ?: "") == "true") {
+        implementation("com.facebook.fresco:animated-gif:${frescoVersion}")
+    }
+    if ((findProperty('expo.webp.enabled') ?: "") == "true") {
+        implementation("com.facebook.fresco:webpsupport:${frescoVersion}")
+        if ((findProperty('expo.webp.animated') ?: "") == "true") {
+            implementation("com.facebook.fresco:animated-webp:${frescoVersion}")
+        }
+    }
+
+    if ((findProperty('hermesEnabled') ?: "false").toBoolean()) {
+        implementation("com.facebook.react:hermes-android")
+    } else {
+        implementation jscFlavor
+    }
+}
+
+def recreateDummyCodegenFiles = {
+    def paths = [
+        "node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni",
+        "node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni"
+    ]
+    paths.each { relPath ->
+        def dir = file("${projectRoot}/${relPath}")
+        if (!dir.exists()) dir.mkdirs()
+        def cmakeFile = file("${dir}/CMakeLists.txt")
+        if (!cmakeFile.exists()) {
+            def libName = relPath.contains("async-storage") ? "react_codegen_rnasyncstorage" : "react_codegen_RNGoogleMobileAdsSpec"
+            cmakeFile.text = "cmake_minimum_required(VERSION 3.13)\nproject(${libName})\nadd_library(${libName} SHARED dummy.cpp)\n"
+        }
+        def cppFile = file("${dir}/dummy.cpp")
+        if (!cppFile.exists()) cppFile.text = "void dummy() {}\n"
+    }
+}
+
+recreateDummyCodegenFiles()
+
+tasks.configureEach { task ->
+    if (task.name.startsWith("externalNativeBuildClean")) {
+        task.doFirst { recreateDummyCodegenFiles() }
+    }
+}
