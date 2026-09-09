@@ -126,5 +126,50 @@
     "streakReminder": "Your {{streak}}-day streak is going, keep it up today too 🔥",
     "prayerTitle": "{{prayer}} Time",
     "prayerBody": "It's {{prayer}} time for {{city}}."
+  },
+  "ramadan": {
+    "badge": "RAMADAN",
+    "untilIftar": "Time Until Iftar",
+    "untilSahur": "Time Until Suhoor",
+    "hours": "Hours",
+    "minutes": "Min",
+    "seconds": "Sec"
+  },
+  "zekat": {
+    "title": "ZAKAT CALCULATOR",
+    "amountDue": "Zakat Due",
+    "wealthBase": "Zakatable Wealth",
+    "nisabInfo": "Zakat is due at 2.5% on wealth that reaches the nisab threshold (roughly the value of 85g of gold) and has been held for a full lunar year. Debts are subtracted from total wealth.",
+    "cash": "Cash / Bank",
+    "gold": "Gold",
+    "silver": "Silver",
+    "trade": "Trade Goods",
+    "debt": "Debts"
+  },
+  "abdest": {
+    "title": "How to Perform Wudu",
+    "subtitle": "A step-by-step guide with its obligatory and recommended acts",
+    "step1": "Make the intention and begin by saying \"Bismillah\".",
+    "step2": "Wash both hands up to the wrists three times, rubbing between the fingers.",
+    "step3": "Rinse the mouth with water three times (madmada).",
+    "step4": "Sniff water into the nose and clean it three times (istinshaq).",
+    "step5": "Wash the face three times, from the hairline to the chin and ear to ear.",
+    "step6": "Wash the right then the left arm, including the elbows, three times each.",
+    "step7": "Wipe a quarter of the head, then wipe the ears and the back of the neck.",
+    "step8": "Wash the right then the left foot, including the ankles, three times each.",
+    "note": "Wudu is invalidated by things like using the toilet, sleeping, or bleeding, and must be renewed. This guide is for general information; minor differences may exist between schools of thought."
+  },
+  "mosques": {
+    "title": "Nearby Mosques",
+    "locationDenied": "Location permission is needed to show nearby mosques.",
+    "loadError": "Something went wrong loading mosques. Please try again.",
+    "loading": "Searching for nearby mosques...",
+    "retry": "RETRY",
+    "empty": "No registered mosques found nearby."
+  },
+  "quickAccess": {
+    "mosques": "Nearby Mosques",
+    "zekat": "Zakat Calculator",
+    "abdest": "Wudu Guide"
   }
 }

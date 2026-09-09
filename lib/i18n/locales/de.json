@@ -126,5 +126,50 @@
     "streakReminder": "Deine Serie von {{streak}} Tagen läuft, halte sie auch heute aufrecht 🔥",
     "prayerTitle": "Zeit für {{prayer}}",
     "prayerBody": "Es ist Zeit für das {{prayer}}-Gebet in {{city}}."
+  },
+  "ramadan": {
+    "badge": "RAMADAN",
+    "untilIftar": "Zeit bis zum Iftar",
+    "untilSahur": "Zeit bis zum Sahur",
+    "hours": "Stunden",
+    "minutes": "Min",
+    "seconds": "Sek"
+  },
+  "zekat": {
+    "title": "ZAKAT-RECHNER",
+    "amountDue": "Fällige Zakat",
+    "wealthBase": "Zakatpflichtiges Vermögen",
+    "nisabInfo": "Zakat beträgt 2,5 % auf Vermögen, das den Nisab-Schwellenwert (ungefähr den Wert von 85 g Gold) erreicht und für ein volles Mondjahr gehalten wurde. Schulden werden vom Gesamtvermögen abgezogen.",
+    "cash": "Bargeld / Bank",
+    "gold": "Gold",
+    "silver": "Silber",
+    "trade": "Handelswaren",
+    "debt": "Schulden"
+  },
+  "abdest": {
+    "title": "Anleitung zum Wudu",
+    "subtitle": "Eine Schritt-für-Schritt-Anleitung mit den Pflichten und empfohlenen Handlungen",
+    "step1": "Fasse die Absicht und beginne mit „Bismillah“.",
+    "step2": "Wasche beide Hände dreimal bis zu den Handgelenken und reibe zwischen den Fingern.",
+    "step3": "Spüle den Mund dreimal gründlich aus (Madmada).",
+    "step4": "Ziehe dreimal Wasser in die Nase und reinige sie (Istinschaq).",
+    "step5": "Wasche das Gesicht dreimal, vom Haaransatz bis zum Kinn und von Ohr zu Ohr.",
+    "step6": "Wasche den rechten, dann den linken Arm einschließlich der Ellenbogen jeweils dreimal.",
+    "step7": "Streiche über ein Viertel des Kopfes und streiche dann über die Ohren und den Nacken.",
+    "step8": "Wasche den rechten, dann den linken Fuß einschließlich der Knöchel jeweils dreimal.",
+    "note": "Wudu wird durch Dinge wie Toilettengang, Schlaf oder Bluten ungültig und muss erneuert werden. Diese Anleitung dient der allgemeinen Information; kleine Unterschiede zwischen den Rechtsschulen sind möglich."
+  },
+  "mosques": {
+    "title": "Moscheen in der Nähe",
+    "locationDenied": "Standortberechtigung wird benötigt, um Moscheen in der Nähe anzuzeigen.",
+    "loadError": "Fehler beim Laden der Moscheen. Bitte versuche es erneut.",
+    "loading": "Suche nach Moscheen in der Nähe...",
+    "retry": "ERNEUT VERSUCHEN",
+    "empty": "Keine registrierten Moscheen in der Nähe gefunden."
+  },
+  "quickAccess": {
+    "mosques": "Moscheen in der Nähe",
+    "zekat": "Zakat-Rechner",
+    "abdest": "Wudu-Anleitung"
   }
 }

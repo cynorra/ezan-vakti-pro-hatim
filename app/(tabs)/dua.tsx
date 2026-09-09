@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   View,
@@ -12,9 +12,13 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
+import { captureRef } from 'react-native-view-shot';
+import * as Sharing from 'expo-sharing';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { SEOHead } from '@/components/SEOHead';
+import { ShareableDuaCard } from '@/components/ShareableDuaCard';
 import { dailyDuas, duaCategories, getDailyDua, Dua } from '@/lib/data/duas';
+import { recordGrowthShare } from '@/lib/rewards';
 
 const CATEGORY_ICONS: Record<string, string> = {
   all: 'apps-outline',
@@ -33,6 +37,7 @@ export default function DuaScreen() {
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const duaOfTheDay = getDailyDua();
+  const shareCardRef = useRef<View>(null);
 
   const filteredDualar = selectedCategory === 'all'
     ? dailyDuas
@@ -50,6 +55,24 @@ export default function DuaScreen() {
       });
     } catch (error) {
       console.log(error);
+    }
+  };
+
+  // Günün duasını marka kartlı görsel olarak yakalayıp paylaşır (WhatsApp durumu,
+  // Instagram/TikTok hikayesi gibi sadece görsel kabul eden hedefler için).
+  const handleShareAsImage = async () => {
+    try {
+      const uri = await captureRef(shareCardRef, { format: 'png', quality: 1 });
+      const canShare = await Sharing.isAvailableAsync();
+      if (canShare) {
+        await Sharing.shareAsync(uri, { mimeType: 'image/png', dialogTitle: duaOfTheDay.title });
+        await recordGrowthShare();
+      } else {
+        await handleShare(duaOfTheDay);
+      }
+    } catch (error) {
+      console.log('Image share error:', error);
+      await handleShare(duaOfTheDay);
     }
   };
 
@@ -84,11 +107,18 @@ export default function DuaScreen() {
             </View>
             <View style={styles.duaFooter}>
               <Text style={[styles.sourceText, { color: colors.textMuted }]}>{duaOfTheDay.source}</Text>
-              <TouchableOpacity onPress={() => handleShare(duaOfTheDay)} style={styles.shareButton}>
-                <Ionicons name="share-social-outline" size={20} color={colors.primary} />
-              </TouchableOpacity>
+              <View style={{ flexDirection: 'row', gap: 8 }}>
+                <TouchableOpacity onPress={handleShareAsImage} style={[styles.shareButton, { backgroundColor: colors.accent + '20' }]}>
+                  <Ionicons name="image-outline" size={20} color={colors.accent} />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => handleShare(duaOfTheDay)} style={styles.shareButton}>
+                  <Ionicons name="share-social-outline" size={20} color={colors.primary} />
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
+
+          <ShareableDuaCard ref={shareCardRef} dua={duaOfTheDay} />
 
           {/* Categories Horizontal Scroll */}
           <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.categoryList}>

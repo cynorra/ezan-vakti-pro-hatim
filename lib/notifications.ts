@@ -37,6 +37,29 @@ async function getEnabledPrayerNames(): Promise<Record<string, boolean> | null> 
   }
 }
 
+// SettingsModal, seçilen ezan sesini burada AsyncStorage'a yazıyor ama şimdiye kadar
+// hiçbir yerde okunmuyordu. Gerçek ses dosyaları henüz yok (assets/sounds/README.md'ye
+// bakın) — dosya eklenip app.json'daki expo-notifications sounds dizisine girilince bu
+// eşleme otomatik devreye girer; o ana kadar Android bilinmeyen ses adında sessizce
+// varsayılan bildirim sesine düşer (hata vermez).
+const EZAN_SOUND_KEY = 'ezan_sound';
+const EZAN_SOUND_TO_FILE: Record<string, string> = {
+  'İstanbul Ezanı': 'ezan_istanbul.mp3',
+  'Mekke Ezanı': 'ezan_mekke.mp3',
+  'Medine Ezanı': 'ezan_medine.mp3',
+  'Mısır Ezanı': 'ezan_misir.mp3',
+};
+
+async function getPrayerNotificationSound(): Promise<string | true> {
+  if (Platform.OS !== 'android') return true;
+  try {
+    const selected = await AsyncStorage.getItem(EZAN_SOUND_KEY);
+    return (selected && EZAN_SOUND_TO_FILE[selected]) || true;
+  } catch {
+    return true;
+  }
+}
+
 const PRAYER_PREFIX = 'prayer-';
 const DAILY_DUA_PREFIX = 'daily-dua-';
 const ENGAGEMENT_ID = 'engagement-evening';
@@ -100,6 +123,7 @@ export async function schedulePrayerNotification(
   const [hours, minutes] = timeStr.split(':').map(Number);
   const i18nKey = PRAYER_NAME_TO_I18N_KEY[prayerName];
   const displayName = i18nKey ? i18n.t(`prayerTimes.${i18nKey}`) : prayerName;
+  const sound = await getPrayerNotificationSound();
 
   // Her gun ayni saatte tekrarla
   await Notifications.scheduleNotificationAsync({
@@ -107,7 +131,7 @@ export async function schedulePrayerNotification(
     content: {
       title: i18n.t('notifications.prayerTitle', { prayer: displayName }),
       body: i18n.t('notifications.prayerBody', { prayer: displayName, city }),
-      sound: true,
+      sound,
       data: { prayerName, city },
     },
     trigger: {
@@ -237,12 +261,12 @@ export async function scheduleAllPrayers(prayerTimes: any, city: string) {
   await cancelPrayerNotifications();
 
   const prayers = [
-    { name: 'İmsak', time: prayerTimes.imsak },
-    { name: 'Güneş', time: prayerTimes.gunes },
-    { name: 'Öğle', time: prayerTimes.ogle },
-    { name: 'İkindi', time: prayerTimes.ikindi },
-    { name: 'Akşam', time: prayerTimes.aksam },
-    { name: 'Yatsı', time: prayerTimes.yatsi },
+    { name: 'İmsak', time: prayerTimes.fajr },
+    { name: 'Güneş', time: prayerTimes.sunrise },
+    { name: 'Öğle', time: prayerTimes.dhuhr },
+    { name: 'İkindi', time: prayerTimes.asr },
+    { name: 'Akşam', time: prayerTimes.maghrib },
+    { name: 'Yatsı', time: prayerTimes.isha },
   ];
 
   const enabledPrayers = await getEnabledPrayerNames();

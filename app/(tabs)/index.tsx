@@ -32,6 +32,7 @@ import { SettingsModal } from '@/components/SettingsModal';
 import { DailyChecklist } from '@/components/DailyChecklist';
 import { CitySelector } from '@/components/CitySelector';
 import { NextPrayerCountdown } from '@/components/NextPrayerCountdown';
+import { RamadanCountdown } from '@/components/RamadanCountdown';
 import { PrayerTimesCard } from '@/components/PrayerTimesCard';
 import { ReligiousDaysCard } from '@/components/ReligiousDaysCard';
 import { SEOHead } from '@/components/SEOHead';
@@ -228,11 +229,41 @@ export default function HomeScreen() {
       </LinearGradient>
 
       <View style={styles.mainContent}>
+        {/* Ramazan Modu: sadece Hicri Ramazan ayında (9. ay) görünür */}
+        {prayerTimes && getHijriDate().month === 9 && (
+          <RamadanCountdown prayerTimes={prayerTimes} />
+        )}
+
         {/* Next Prayer Countdown */}
         {prayerTimes && <NextPrayerCountdown prayerTimes={prayerTimes} />}
 
         {/* Prayer Times Card */}
         {prayerTimes && <PrayerTimesCard prayerTimes={prayerTimes} />}
+
+        {/* Hızlı Erişim */}
+        <View style={styles.quickAccessRow}>
+          <TouchableOpacity
+            style={[styles.quickAccessItem, { backgroundColor: colors.surface }, Shadows.light]}
+            onPress={() => router.push('/mosques')}
+          >
+            <Ionicons name="business" size={22} color={colors.primary} />
+            <Text style={[styles.quickAccessLabel, { color: colors.text }]}>{t('quickAccess.mosques')}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.quickAccessItem, { backgroundColor: colors.surface }, Shadows.light]}
+            onPress={() => router.push('/zekat')}
+          >
+            <Ionicons name="calculator" size={22} color={colors.primary} />
+            <Text style={[styles.quickAccessLabel, { color: colors.text }]}>{t('quickAccess.zekat')}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.quickAccessItem, { backgroundColor: colors.surface }, Shadows.light]}
+            onPress={() => router.push('/abdest')}
+          >
+            <Ionicons name="water" size={22} color={colors.primary} />
+            <Text style={[styles.quickAccessLabel, { color: colors.text }]}>{t('quickAccess.abdest')}</Text>
+          </TouchableOpacity>
+        </View>
 
         {/* Religious Days Card */}
         <ReligiousDaysCard />
@@ -440,6 +471,22 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.md,
     marginTop: -20,
     gap: Spacing.md,
+  },
+  quickAccessRow: {
+    flexDirection: 'row',
+    gap: Spacing.sm,
+  },
+  quickAccessItem: {
+    flex: 1,
+    alignItems: 'center',
+    paddingVertical: Spacing.md,
+    borderRadius: BorderRadius.lg,
+    gap: 6,
+  },
+  quickAccessLabel: {
+    fontSize: 11,
+    fontWeight: '700',
+    textAlign: 'center',
   },
   card: {
     borderRadius: BorderRadius.xl,

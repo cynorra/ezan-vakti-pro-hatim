@@ -126,5 +126,50 @@
     "streakReminder": "{{streak}} günlük serin devam ediyor, bugünü de kaçırma 🔥",
     "prayerTitle": "{{prayer}} Vakti",
     "prayerBody": "{{city}} için {{prayer}} vakti geldi."
+  },
+  "ramadan": {
+    "badge": "RAMAZAN",
+    "untilIftar": "İftara Kalan Süre",
+    "untilSahur": "Sahura Kalan Süre",
+    "hours": "Saat",
+    "minutes": "Dk.",
+    "seconds": "Sn."
+  },
+  "zekat": {
+    "title": "ZEKAT HESAPLAMA",
+    "amountDue": "Verilecek Zekat",
+    "wealthBase": "Zekata Tabi Varlık",
+    "nisabInfo": "Zekat, nisap miktarına (yaklaşık 85 gr altın değeri) ulaşan ve üzerinden bir yıl geçen varlıklardan %2,5 oranında verilir. Borçlar toplam varlıktan düşülür.",
+    "cash": "Nakit / Banka",
+    "gold": "Altın",
+    "silver": "Gümüş",
+    "trade": "Ticari Mal",
+    "debt": "Borçlar"
+  },
+  "abdest": {
+    "title": "Abdest Nasıl Alınır",
+    "subtitle": "Farz ve sünnetleriyle adım adım abdest rehberi",
+    "step1": "Niyet et ve \"Bismillah\" diyerek başla.",
+    "step2": "Elleri bileklere kadar üçer kez yıka, parmak aralarını ovala.",
+    "step3": "Ağza üç kez su vererek ağzı çalkala (mazmaza).",
+    "step4": "Buruna üç kez su çekip temizle (istinşak).",
+    "step5": "Yüzü saçların bittiği yerden çeneye, kulaktan kulağa kadar üç kez yıka.",
+    "step6": "Önce sağ, sonra sol kolu dirseklerle birlikte üçer kez yıka.",
+    "step7": "Başın dörtte birini meshet, kulakları ve ense/boynu meshet.",
+    "step8": "Önce sağ, sonra sol ayağı topuklarla birlikte üçer kez yıka.",
+    "note": "Abdest bozulduğunda (tuvalet ihtiyacı, uyku, kan çıkması vb.) yeniden alınması gerekir. Bu rehber genel bilgi amaçlıdır, mezhebe göre küçük farklılıklar olabilir."
+  },
+  "mosques": {
+    "title": "Yakın Camiler",
+    "locationDenied": "Yakın camileri gösterebilmek için konum izni gerekiyor.",
+    "loadError": "Camiler yüklenirken bir hata oluştu. Lütfen tekrar deneyin.",
+    "loading": "Yakındaki camiler aranıyor...",
+    "retry": "TEKRAR DENE",
+    "empty": "Yakınında kayıtlı cami bulunamadı."
+  },
+  "quickAccess": {
+    "mosques": "Yakın Camiler",
+    "zekat": "Zekat Hesapla",
+    "abdest": "Abdest Rehberi"
   }
 }

@@ -119,3 +119,5 @@ tasks.configureEach { task ->
         task.doFirst { recreateDummyCodegenFiles() }
     }
 }
+
+apply plugin: 'com.google.gms.google-services'
