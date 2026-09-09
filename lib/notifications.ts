@@ -38,10 +38,12 @@ async function getEnabledPrayerNames(): Promise<Record<string, boolean> | null> 
 }
 
 // SettingsModal, seçilen ezan sesini burada AsyncStorage'a yazıyor ama şimdiye kadar
-// hiçbir yerde okunmuyordu. Gerçek ses dosyaları henüz yok (assets/sounds/README.md'ye
-// bakın) — dosya eklenip app.json'daki expo-notifications sounds dizisine girilince bu
-// eşleme otomatik devreye girer; o ana kadar Android bilinmeyen ses adında sessizce
-// varsayılan bildirim sesine düşer (hata vermez).
+// hiçbir yerde okunmuyordu. Gerçek ses dosyaları henüz eklenmedi (bkz.
+// assets/sounds/README.md) — o yüzden bu eşleme bilerek KAPALI tutuluyor
+// (SOUND_FILES_READY = false) ve normal/varsayılan bildirim sesi korunuyor.
+// Dosyalar assets/sounds/'a eklenip app.json'daki expo-notifications sounds
+// dizisine girilip yeniden build alındığında SOUND_FILES_READY'yi true yapın.
+const SOUND_FILES_READY = false;
 const EZAN_SOUND_KEY = 'ezan_sound';
 const EZAN_SOUND_TO_FILE: Record<string, string> = {
   'İstanbul Ezanı': 'ezan_istanbul.mp3',
@@ -51,7 +53,7 @@ const EZAN_SOUND_TO_FILE: Record<string, string> = {
 };
 
 async function getPrayerNotificationSound(): Promise<string | true> {
-  if (Platform.OS !== 'android') return true;
+  if (!SOUND_FILES_READY || Platform.OS !== 'android') return true;
   try {
     const selected = await AsyncStorage.getItem(EZAN_SOUND_KEY);
     return (selected && EZAN_SOUND_TO_FILE[selected]) || true;
