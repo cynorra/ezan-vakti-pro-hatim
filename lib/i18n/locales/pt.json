@@ -126,5 +126,50 @@
     "streakReminder": "Sua sequência de {{streak}} dias continua, mantenha o ritmo hoje também 🔥",
     "prayerTitle": "Horário de {{prayer}}",
     "prayerBody": "É hora da oração do {{prayer}} em {{city}}."
+  },
+  "ramadan": {
+    "badge": "RAMADÃ",
+    "untilIftar": "Tempo até o Iftar",
+    "untilSahur": "Tempo até o Suhur",
+    "hours": "Horas",
+    "minutes": "Min",
+    "seconds": "Seg"
+  },
+  "zekat": {
+    "title": "CALCULADORA DE ZAKAT",
+    "amountDue": "Zakat devido",
+    "wealthBase": "Bens tributáveis",
+    "nisabInfo": "O Zakat incide à taxa de 2,5% sobre os bens que atingem o limiar do Nisab (cerca de 85 g de ouro) mantidos por um ano lunar completo. As dívidas são deduzidas do valor total.",
+    "cash": "Dinheiro / Banco",
+    "gold": "Ouro",
+    "silver": "Prata",
+    "trade": "Mercadorias comerciais",
+    "debt": "Dívidas"
+  },
+  "abdest": {
+    "title": "Como fazer o Wudu (Ablução)",
+    "subtitle": "Guia passo a passo com atos obrigatórios e recomendados",
+    "step1": "Faça a intenção e comece dizendo \"Bismillah\".",
+    "step2": "Lave as duas mãos até os pulsos três vezes, esfregando entre os dedos.",
+    "step3": "Enxágue a boca com água três vezes (madmada).",
+    "step4": "Aspire água no nariz e limpe-o três vezes (istinshaq).",
+    "step5": "Lave o rosto três vezes, da raiz do cabelo ao queixo e de orelha a orelha.",
+    "step6": "Lave o braço direito e depois o esquerdo, incluindo os cotovelos, três vezes cada.",
+    "step7": "Passe as mãos molhadas sobre a cabeça, depois limpe as orelhas e a nuca.",
+    "step8": "Lave o pé direito e depois o esquerdo, incluindo os tornozelos, três vezes cada.",
+    "note": "O Wudu é anulado por uso do sanitário, sono ou sangramento, devendo ser refeito. Este guia tem fins informativos; pequenas diferenças podem existir conforme as escolas jurídicas."
+  },
+  "mosques": {
+    "title": "Mesquitas próximas",
+    "locationDenied": "A permissão de localização é necessária para exibir as mesquitas próximas.",
+    "loadError": "Ocorreu um erro ao carregar as mesquitas. Tente novamente.",
+    "loading": "Buscando mesquitas próximas...",
+    "retry": "TENTAR NOVAMENTE",
+    "empty": "Nenhuma mesquita registrada foi encontrada por perto."
+  },
+  "quickAccess": {
+    "mosques": "Mesquitas próximas",
+    "zekat": "Calculadora de Zakat",
+    "abdest": "Guia de Wudu"
   }
 }

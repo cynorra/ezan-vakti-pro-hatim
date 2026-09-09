@@ -126,5 +126,50 @@
     "streakReminder": "Din svit på {{streak}} dagar pågår, fortsätt så idag med 🔥",
     "prayerTitle": "Tid för {{prayer}}",
     "prayerBody": "Det är dags för {{prayer}} i {{city}}."
+  },
+  "ramadan": {
+    "badge": "RAMADAN",
+    "untilIftar": "Tid kvar till Iftar",
+    "untilSahur": "Tid kvar till Suhur",
+    "hours": "Tim",
+    "minutes": "Min",
+    "seconds": "Sek"
+  },
+  "zekat": {
+    "title": "ZAKAT-RÄKNARE",
+    "amountDue": "Zakat att betala",
+    "wealthBase": "Zakat-pliktiga tillgångar",
+    "nisabInfo": "Zakat är 2,5 % på tillgångar som når nisab-gränsen (motsvarande ca 85 g guld) och har innehafts under ett helt månår. Skulder dras av från de totala tillgångarna.",
+    "cash": "Kontanter / Bank",
+    "gold": "Guld",
+    "silver": "Silver",
+    "trade": "Handelsvaror",
+    "debt": "Skulder"
+  },
+  "abdest": {
+    "title": "Hur man utför Wudu (tvagning)",
+    "subtitle": "En steg-för-steg-guide med obligatoriska och rekommenderade moment",
+    "step1": "Ha rätt avsikt och börja med att säga \"Bismillah\".",
+    "step2": "Tvätta båda händerna upp till handlederna tre gånger och gnid mellan fingrarna.",
+    "step3": "Skölj munnen med vatten tre gånger (madmada).",
+    "step4": "Dra in vatten i näsan och snyt ut tre gånger (istinshaq).",
+    "step5": "Tvätta ansiktet tre gånger, från hårfästet till hakan och från öra till öra.",
+    "step6": "Tvätta höger och sedan vänster arm upp till och med armbågarna, tre gånger vardera.",
+    "step7": "Stryk med fuktiga händer över en del av huvudet, och torka sedan öronen och nacken.",
+    "step8": "Tvätta höger och sedan vänster fot upp till och med vristerna, tre gånger vardera.",
+    "note": "Wudu bryts av toalettbesök, sömn eller blödning och måste då göras om. Denna guide är informativ; mindre skillnader kan förekomma mellan rättsskolor."
+  },
+  "mosques": {
+    "title": "Moskéer i närheten",
+    "locationDenied": "Platstillgång krävs för att visa moskéer i närheten.",
+    "loadError": "Något gick fel när moskéer skulle laddas. Försök igen.",
+    "loading": "Söker efter närliggande moskéer...",
+    "retry": "FÖRSÖK IGEN",
+    "empty": "Inga registrerade moskéer hittades i närheten."
+  },
+  "quickAccess": {
+    "mosques": "Moskéer i närheten",
+    "zekat": "Zakat-räknare",
+    "abdest": "Wudu-guide"
   }
 }

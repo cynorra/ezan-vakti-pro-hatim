@@ -126,5 +126,50 @@
     "streakReminder": "Streak {{streak}} hari Anda sedang berjalan, pertahankan hari ini juga! 🔥",
     "prayerTitle": "Waktu Shalat {{prayer}}",
     "prayerBody": "Waktu shalat {{prayer}} telah tiba untuk {{city}}."
+  },
+  "ramadan": {
+    "badge": "RAMADAN",
+    "untilIftar": "Waktu Menuju Buka Puasa",
+    "untilSahur": "Waktu Menuju Sahur",
+    "hours": "Jam",
+    "minutes": "Mnt",
+    "seconds": "Dtk"
+  },
+  "zekat": {
+    "title": "KALKULATOR ZAKAT",
+    "amountDue": "Zakat yang Harus Dibayar",
+    "wealthBase": "Harta Wajib Zakat",
+    "nisabInfo": "Zakat wajib ditunaikan sebesar 2,5% atas harta yang mencapai batas nisab (setara nilai 85 gr emas) dan telah dimiliki selama satu tahun hijriah (haul). Utang dikurangkan dari total harta.",
+    "cash": "Uang Tunai / Tabungan",
+    "gold": "Emas",
+    "silver": "Perak",
+    "trade": "Aset Perdagangan",
+    "debt": "Utang"
+  },
+  "abdest": {
+    "title": "Tata Cara Wudhu",
+    "subtitle": "Panduan langkah demi langkah beserta rukun dan sunnahnya",
+    "step1": "Niatkan dalam hati dan mulailah dengan membaca \"Bismillah\".",
+    "step2": "Basuh kedua telapak tangan hingga pergelangan sebanyak tiga kali sambil menyela-nyela jari.",
+    "step3": "Berkumur-kumur sebanyak tiga kali (madmadah).",
+    "step4": "Hirup air ke hidung lalu hembuskan untuk membersihkannya sebanyak tiga kali (istinshaq).",
+    "step5": "Basuh seluruh wajah sebanyak tiga kali, dari tumbuhnya rambut hingga dagu dan dari telinga ke telinga.",
+    "step6": "Basuh tangan kanan lalu tangan kiri hingga siku, masing-masing tiga kali.",
+    "step7": "Usap sebagian kepala dengan tangan basah, lalu usap telinga dan tengkuk.",
+    "step8": "Basuh kaki kanan lalu kaki kiri hingga mata kaki, masing-masing tiga kali.",
+    "note": "Wudhu batal karena buang air, tidur nyenyak, atau keluarnya darah, dan harus diulangi. Panduan ini bersifat umum; perbedaan kecil dapat ditemukan antar mazhab."
+  },
+  "mosques": {
+    "title": "Masjid Terdekat",
+    "locationDenied": "Izin lokasi diperlukan untuk menampilkan masjid terdekat.",
+    "loadError": "Terjadi kesalahan saat memuat data masjid. Silakan coba lagi.",
+    "loading": "Mencari masjid terdekat...",
+    "retry": "COBA LAGI",
+    "empty": "Tidak ada masjid terdaftar di sekitar Anda."
+  },
+  "quickAccess": {
+    "mosques": "Masjid Terdekat",
+    "zekat": "Kalkulator Zakat",
+    "abdest": "Panduan Wudhu"
   }
 }

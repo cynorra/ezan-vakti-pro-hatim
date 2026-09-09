@@ -126,5 +126,50 @@
     "streakReminder": "Twoja seria {{streak}} dni trwa, utrzymaj ją również dzisiaj 🔥",
     "prayerTitle": "Czas na {{prayer}}",
     "prayerBody": "Nadszedł czas na modlitwę {{prayer}} w mieście {{city}}."
+  },
+  "ramadan": {
+    "badge": "RAMADAN",
+    "untilIftar": "Czas do Iftaru",
+    "untilSahur": "Czas do Suhur",
+    "hours": "Godz.",
+    "minutes": "Min",
+    "seconds": "Sek"
+  },
+  "zekat": {
+    "title": "KALKULATOR ZAKATU",
+    "amountDue": "Należny Zakat",
+    "wealthBase": "Majątek podlegający opodatkowaniu",
+    "nisabInfo": "Zakat wynosi 2,5% od majątku przekraczającego próg nisab (równowartość ok. 85 g złota), posiadanego przez pełny rok księżycowy. Długi są odejmowane od majątku.",
+    "cash": "Gotówka / Konto bankowe",
+    "gold": "Złoto",
+    "silver": "Srebro",
+    "trade": "Towary handlowe",
+    "debt": "Długi i zobowiązania"
+  },
+  "abdest": {
+    "title": "Jak wykonać Wudu (Ablucję)",
+    "subtitle": "Przewodnik krok po kroku z czynnościami obowiązkowymi i zalecanymi",
+    "step1": "Wzbudź intencję i rozpocznij, mówiąc \"Bismillah\".",
+    "step2": "Umyj obie dłonie aż po nadgarstki trzykrotnie, przecierając między palcami.",
+    "step3": "Przepłucz usta wodą trzy razy (madmada).",
+    "step4": "Wciągnij wodę do nosa i wydmuchaj ją trzy razy (istinshaq).",
+    "step5": "Umyj twarz trzy razy, od linii włosów po brodę oraz od ucha do ucha.",
+    "step6": "Umyj prawe, a następnie lewe ramię wraz z łokciami, po trzy razy.",
+    "step7": "Przetrzyj mokrymi dłońmi część głowy, a następnie uszy i kark.",
+    "step8": "Umyj prawą, a następnie lewą stopę wraz z kostkami, po trzy razy.",
+    "note": "Wudu unieważniają m.in. skorzystanie z toalety, głęboki sen lub krwawienie. Przewodnik ma charakter informacyjny; szkoły prawne mogą różnić się drobnymi szczegółami."
+  },
+  "mosques": {
+    "title": "Meczety w pobliżu",
+    "locationDenied": "Dostęp do lokalizacji jest wymagany, aby pokazać pobliskie meczety.",
+    "loadError": "Wystąpił błąd podczas ładowania meczetów. Spróbuj ponownie.",
+    "loading": "Wyszukiwanie pobliskich meczetów...",
+    "retry": "PONÓW",
+    "empty": "Nie znaleziono zarejestrowanych meczetów w pobliżu."
+  },
+  "quickAccess": {
+    "mosques": "Meczety w pobliżu",
+    "zekat": "Kalkulator Zakatu",
+    "abdest": "Przewodnik po Wudu"
   }
 }

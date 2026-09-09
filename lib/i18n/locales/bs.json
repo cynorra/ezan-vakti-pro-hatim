@@ -126,5 +126,50 @@
     "streakReminder": "Vaš niz od {{streak}} dana traje, nastavite tako i danas! 🔥",
     "prayerTitle": "{{prayer}} vakat",
     "prayerBody": "Nastupio je {{prayer}} vakat za grad {{city}}."
+  },
+  "ramadan": {
+    "badge": "RAMAZAN",
+    "untilIftar": "Vrijeme do iftara",
+    "untilSahur": "Vrijeme do sehura",
+    "hours": "Sati",
+    "minutes": "Min",
+    "seconds": "Sek"
+  },
+  "zekat": {
+    "title": "ZEKAT KALKULATOR",
+    "amountDue": "Iznos zekata za uplatu",
+    "wealthBase": "Imovina koja podliježe zekatu",
+    "nisabInfo": "Zekat se izdvaja u iznosu od 2,5% na imovinu koja dostiže nisab (vrijednost otprilike 85 g zlata) i bila je u posjedu cijelu lunarnu godinu. Dugovi se oduzimaju od ukupne imovine.",
+    "cash": "Gotovina / Banka",
+    "gold": "Zlato",
+    "silver": "Srebro",
+    "trade": "Trgovačka roba",
+    "debt": "Dugovanja"
+  },
+  "abdest": {
+    "title": "Kako uzeti abdest",
+    "subtitle": "Vodič korak po korak sa svim farzovima i sunnetima",
+    "step1": "Učinite nijjet i počnite izgovaranjem \"Bismillah\".",
+    "step2": "Operite obje šake do članaka tri puta, trljajući između prstiju.",
+    "step3": "Isperite usta vodom tri puta (madmada).",
+    "step4": "Ušmrknite vodu u nos i dobro ga izduvajte tri puta (istinšak).",
+    "step5": "Operite lice tri puta, od vrha čela do podbratka i od uha do uha.",
+    "step6": "Operite desnu, a zatim lijevu ruku do iza lakata, po tri puta.",
+    "step7": "Potirite mokrom rukom dio glave (mesh), a zatim potirite uši i vrat.",
+    "step8": "Operite desnu, a zatim lijevu nogu do iza članaka, po tri puta.",
+    "note": "Abdest kvare fiziološke potrebe, san ili krvarenje, nakon čega se mora ponoviti. Ovaj vodič služi za opšte informisanje; moguće su manje razlike među mezhebima."
+  },
+  "mosques": {
+    "title": "Džamije u blizini",
+    "locationDenied": "Za prikazivanje obližnjih džamija potrebna je dozvola za lokaciju.",
+    "loadError": "Došlo je do greške prilikom učitavanja džamija. Pokušajte ponovo.",
+    "loading": "Pretraživanje obližnjih džamija...",
+    "retry": "POKUŠAJ PONOVO",
+    "empty": "U blizini nisu pronađene registrovane džamije."
+  },
+  "quickAccess": {
+    "mosques": "Obližnje džamije",
+    "zekat": "Zekat kalkulator",
+    "abdest": "Vodič za abdest"
   }
 }

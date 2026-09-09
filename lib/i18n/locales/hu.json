@@ -126,5 +126,50 @@
     "streakReminder": "Már {{streak}} napos a sorozata, folytassa ma is! 🔥",
     "prayerTitle": "{{prayer}} ideje",
     "prayerBody": "Eljött a(z) {{prayer}} ideje itt: {{city}}."
+  },
+  "ramadan": {
+    "badge": "RAMADÁN",
+    "untilIftar": "Iftárig hátralévő idő",
+    "untilSahur": "Szuhúrig hátralévő idő",
+    "hours": "Óra",
+    "minutes": "Perc",
+    "seconds": "Mp"
+  },
+  "zekat": {
+    "title": "ZAKÁT KALKULÁTOR",
+    "amountDue": "Fizetendő Zakát",
+    "wealthBase": "Zakátköteles vagyon",
+    "nisabInfo": "A Zakát mértéke 2,5% azon vagyon után, amely eléri a niszáb szintjét (kb. 85 g arany értéke), és egy teljes holdéven át a tulajdonodban volt. A tartozások levonandók a teljes vagyonból.",
+    "cash": "Készpénz / Bankbetét",
+    "gold": "Arany",
+    "silver": "Ezüst",
+    "trade": "Kereskedelmi áruk",
+    "debt": "Tartozások"
+  },
+  "abdest": {
+    "title": "Hogyan végezzük a Wudut (mosakodást)",
+    "subtitle": "Lépésről lépésre útmutató a kötelező és ajánlott cselekedetekkel",
+    "step1": "Tedd meg a szándékot, és kezdd a \"Bismillah\" kiejtésével.",
+    "step2": "Mosd meg mindkét kezed csuklóig háromszor, átdörzsölve az ujjak közötti részt is.",
+    "step3": "Öblítsd ki a szádat vízzel háromszor (madmada).",
+    "step4": "Szippants vizet az orrodba, majd fújd ki háromszor (isztinsák).",
+    "step5": "Mosd meg az arcod háromszor, a hajvonaltól az állig és fültől fülig.",
+    "step6": "Mosd meg a jobb, majd a bal karodat könyökkel együtt, háromszor mindkettőt.",
+    "step7": "Töröld át nedves kézzel a fejed egy részét, majd tisztítsd meg a füleket és a tarkót.",
+    "step8": "Mosd meg a jobb, majd a bal lábad bokáig, háromszor mindkettőt.",
+    "note": "A Wudut érvényteleníti a toalett használata, az alvás vagy a vérzés, ilyenkor meg kell ismételni. Ez általános útmutató; kisebb eltérések lehetnek a jogi iskolák között."
+  },
+  "mosques": {
+    "title": "Közeli mecsetek",
+    "locationDenied": "A közeli mecsetek megjelenítéséhez helyhozzáférés szükséges.",
+    "loadError": "Hiba történt a mecsetek betöltésekor. Kérjük, próbáld újra.",
+    "loading": "Közeli mecsetek keresése...",
+    "retry": "ÚJRA",
+    "empty": "Nem található regisztrált mecset a közelben."
+  },
+  "quickAccess": {
+    "mosques": "Közeli mecsetek",
+    "zekat": "Zakát kalkulátor",
+    "abdest": "Wudu útmutató"
   }
 }

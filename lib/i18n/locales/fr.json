@@ -126,5 +126,50 @@
     "streakReminder": "Votre série de {{streak}} jours continue, maintenez-la aujourd'hui aussi 🔥",
     "prayerTitle": "Heure de {{prayer}}",
     "prayerBody": "C'est l'heure de {{prayer}} à {{city}}."
+  },
+  "ramadan": {
+    "badge": "RAMADAN",
+    "untilIftar": "Temps restant avant l'Iftar",
+    "untilSahur": "Temps restant avant le Suhour",
+    "hours": "Heures",
+    "minutes": "Min",
+    "seconds": "Sec"
+  },
+  "zekat": {
+    "title": "CALCULATEUR DE ZAKAT",
+    "amountDue": "Zakat à payer",
+    "wealthBase": "Biens imposables",
+    "nisabInfo": "La Zakat est de 2,5 % sur les biens atteignant le seuil du Nissab (environ 85 g d'or) et détenus pendant une année lunaire complète. Les dettes sont déduites du patrimoine total.",
+    "cash": "Espèces / Banque",
+    "gold": "Or",
+    "silver": "Argent",
+    "trade": "Marchandises commerciales",
+    "debt": "Dettes"
+  },
+  "abdest": {
+    "title": "Comment faire ses ablutions (Wudu)",
+    "subtitle": "Un guide étape par étape avec les actes obligatoires et recommandés",
+    "step1": "Formuler l'intention et commencer par dire \"Bismillah\".",
+    "step2": "Laver les deux mains jusqu'aux poignets trois fois, en frottant entre les doigts.",
+    "step3": "Se rincer la bouche avec de l'eau trois fois (Madmada).",
+    "step4": "Rincer le nez avec de l'eau et le moucher trois fois (Istinshaq).",
+    "step5": "Laver le visage trois fois, de la racine des cheveux au menton et d'une oreille à l'autre.",
+    "step6": "Laver le bras droit puis le bras gauche, coudes compris, trois fois chacun.",
+    "step7": "Essuyer une partie de la tête, puis essuyer les oreilles et la nuque.",
+    "step8": "Laver le pied droit puis le pied gauche, chevilles comprises, trois fois chacun.",
+    "note": "Les ablutions sont invalidées par le passage aux toilettes, le sommeil ou les saignements, et doivent être renouvelées. Ce guide est informatif ; de légères différences peuvent exister selon les écoles juridiques."
+  },
+  "mosques": {
+    "title": "Mosquées à proximité",
+    "locationDenied": "L'autorisation de localisation est nécessaire pour afficher les mosquées à proximité.",
+    "loadError": "Une erreur s'est produite lors du chargement des mosquées. Veuillez réessayer.",
+    "loading": "Recherche de mosquées à proximité...",
+    "retry": "RÉESSAYER",
+    "empty": "Aucune mosquée trouvée à proximité."
+  },
+  "quickAccess": {
+    "mosques": "Mosquées à proximité",
+    "zekat": "Calculateur de Zakat",
+    "abdest": "Guide des ablutions"
   }
 }

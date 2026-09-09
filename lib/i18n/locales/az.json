@@ -126,5 +126,50 @@
     "streakReminder": "{{streak}} günlük seriyanız davam edir, bu gün də davam etdirin! 🔥",
     "prayerTitle": "{{prayer}} Vaxtı",
     "prayerBody": "{{city}} üçün {{prayer}} vaxtı girdi."
+  },
+  "ramadan": {
+    "badge": "RAMAZAN",
+    "untilIftar": "İftara qalan vaxt",
+    "untilSahur": "Suhura qalan vaxt",
+    "hours": "Saat",
+    "minutes": "Dəq",
+    "seconds": "San"
+  },
+  "zekat": {
+    "title": "ZƏKAT KALKULYATORU",
+    "amountDue": "Ödənilməli zəkat",
+    "wealthBase": "Zəkata tabe olan sərvət",
+    "nisabInfo": "Zəkat nisab həddinə (təxminən 85 q qızıl dəyərində) çatan və tam bir qəməri il saxlanılan sərvətdən 2,5% dərəcəsində verilir. Borclar ümumi məbləğdən çıxılır.",
+    "cash": "Nağd pul / Bank hesabı",
+    "gold": "Qızıl",
+    "silver": "Gümüş",
+    "trade": "Ticarət malları",
+    "debt": "Borclar"
+  },
+  "abdest": {
+    "title": "Dəstəmaz necə alınır",
+    "subtitle": "Fərz və sünnələri ilə addım-addım bələdçi",
+    "step1": "Niyyət edin və \"Bismillah\" deyərək başlayın.",
+    "step2": "Barmaqların arasını ovuşduraraq hər iki əli biləklərə qədər üç dəfə yuyun.",
+    "step3": "Ağzınızı su ilə üç dəfə yaxalayın (məzməzə).",
+    "step4": "Burnunuza su çəkib üç dəfə təmizləyin (istinşaq).",
+    "step5": "Üzünüzü saçın bitdiyi yerdən çənəyə qədər və qulaqdan qulağa üç dəfə yuyun.",
+    "step6": "Əvvəlcə sağ, sonra sol qolu dirsəklərlə birlikdə üç dəfə yuyun.",
+    "step7": "Başın dörddə birinə məsh çəkin, sonra qulaqları və boynu məsh edin.",
+    "step8": "Əvvəlcə sağ, sonra sol ayağı topuqlarla birlikdə üç dəfə yuyun.",
+    "note": "Təbii ehtiyaclar, dərin yuxu və ya qanaxma nəticəsində dəstəmaz pozulur və yenilənməlidir. Bu ümumi məlumatdır; məzhəblər arasında cüzi fərqlər ola bilər."
+  },
+  "mosques": {
+    "title": "Yaxınlıqdakı məscidlər",
+    "locationDenied": "Yaxınlıqdakı məscidləri görmək üçün məkan icazəsi lazımdır.",
+    "loadError": "Məscidlər yüklənərkən xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.",
+    "loading": "Yaxınlıqdakı məscidlər axtarılır...",
+    "retry": "YENİDƏN CƏHD EDİN",
+    "empty": "Yaxınlıqda qeydiyyatda olan məscid tapılmadı."
+  },
+  "quickAccess": {
+    "mosques": "Yaxın məscidlər",
+    "zekat": "Zəkat kalkulyatoru",
+    "abdest": "Dəstəmaz bələdçisi"
   }
 }

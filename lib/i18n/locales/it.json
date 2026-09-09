@@ -126,5 +126,50 @@
     "streakReminder": "La tua serie di {{streak}} giorni continua, mantienila anche oggi 🔥",
     "prayerTitle": "Ora di {{prayer}}",
     "prayerBody": "È l'ora di {{prayer}} a {{city}}."
+  },
+  "ramadan": {
+    "badge": "RAMADAN",
+    "untilIftar": "Tempo fino all'Iftar",
+    "untilSahur": "Tempo fino al Suhur",
+    "hours": "Ore",
+    "minutes": "Min",
+    "seconds": "Sec"
+  },
+  "zekat": {
+    "title": "CALCOLATORE DELLA ZAKAT",
+    "amountDue": "Zakat dovuta",
+    "wealthBase": "Patrimonio imponibile",
+    "nisabInfo": "La Zakat è dovuta al 2,5% sul patrimonio che raggiunge la soglia del Nisab (circa 85 g d'oro) ed è stato posseduto per un intero anno lunare. I debiti vanno detratti.",
+    "cash": "Contanti / Banca",
+    "gold": "Oro",
+    "silver": "Argento",
+    "trade": "Beni commerciali",
+    "debt": "Debiti"
+  },
+  "abdest": {
+    "title": "Come fare il Wudu (Abluzione)",
+    "subtitle": "Guida passo dopo passo con atti obbligatori e raccomandati",
+    "step1": "Formula l'intenzione e inizia dicendo \"Bismillah\".",
+    "step2": "Lava le mani fino ai polsi tre volte, strofinando tra le dita.",
+    "step3": "Sciacqua la bocca con acqua tre volte (madmada).",
+    "step4": "Aspira l'acqua nel naso e soffialo tre volte (istinshaq).",
+    "step5": "Lava il viso tre volte, dall'attaccatura dei capelli al mento e da un orecchio all'altro.",
+    "step6": "Lava il braccio destro e poi il sinistro, compresi i gomiti, tre volte ciascuno.",
+    "step7": "Passa le mani bagnate su una parte della testa, poi sulle orecchie e sulla nuca.",
+    "step8": "Lava il piede destro e poi il sinistro, caviglie comprese, tre volte ciascuno.",
+    "note": "Il Wudu è invalidato da bisogni fisiologici, sonno o sanguinamento, e va rinnovato. Guida a scopo informativo; potrebbero esserci lievi differenze tra le scuole giuridiche."
+  },
+  "mosques": {
+    "title": "Moschee vicine",
+    "locationDenied": "È necessaria l'autorizzazione alla posizione per mostrare le moschee vicine.",
+    "loadError": "Errore durante il caricamento delle moschee. Riprova.",
+    "loading": "Ricerca delle moschee vicine...",
+    "retry": "RIPROVA",
+    "empty": "Nessuna moschea registrata trovata nelle vicinanze."
+  },
+  "quickAccess": {
+    "mosques": "Moschee vicine",
+    "zekat": "Calcolatore Zakat",
+    "abdest": "Guida al Wudu"
   }
 }

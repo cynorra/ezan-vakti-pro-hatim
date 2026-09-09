@@ -126,5 +126,50 @@
     "streakReminder": "您已连续坚持 {{streak}} 天，今天也请继续加油 🔥",
     "prayerTitle": "{{prayer}} 时间",
     "prayerBody": "{{city}} 已到 {{prayer}} 时间。"
+  },
+  "ramadan": {
+    "badge": "斋月",
+    "untilIftar": "距离开斋时间",
+    "untilSahur": "距离封斋时间",
+    "hours": "时",
+    "minutes": "分",
+    "seconds": "秒"
+  },
+  "zekat": {
+    "title": "天课计算器",
+    "amountDue": "应付天课",
+    "wealthBase": "应税净资产",
+    "nisabInfo": "天课是对达到起征点（尼斯卜，约折合85克黄金价值）并持满一个完整伊斯兰阴历年的财富，按2.5%计征。债务需从总资产中扣除。",
+    "cash": "现金 / 银行存款",
+    "gold": "黄金",
+    "silver": "白银",
+    "trade": "商贸货物",
+    "debt": "欠款与负债"
+  },
+  "abdest": {
+    "title": "小净（武杜）方法",
+    "subtitle": "包含主命与圣行步骤的逐项指南",
+    "step1": "立意并念诵“太斯米”（\"Bismillah\"）开始。",
+    "step2": "清洗双手至手腕三次，揉搓洗净指缝。",
+    "step3": "用水漱口三次（Madmada）。",
+    "step4": "吸水呛鼻并擤出净鼻三次（Istinshaq）。",
+    "step5": "洗脸三次，上至发际、下至下巴，两耳之间。",
+    "step6": "先右后左清洗双臂至肘部，各三次。",
+    "step7": "以湿手抹头前部四分之一，接着抹两耳及后颈。",
+    "step8": "先右后左清洗双脚至脚踝，各三次。",
+    "note": "如厕、熟睡、流血等均会破坏小净，须重新净身。本指南仅供参考，各教法学派细节或有微小差异。"
+  },
+  "mosques": {
+    "title": "附近的清真寺",
+    "locationDenied": "需要位置权限以显示附近的清真寺。",
+    "loadError": "加载清真寺信息时出错，请重试。",
+    "loading": "正在搜索附近的清真寺...",
+    "retry": "重试",
+    "empty": "附近未找到已登记的清真寺。"
+  },
+  "quickAccess": {
+    "mosques": "附近清真寺",
+    "zekat": "天课计算器",
+    "abdest": "小净指南"
   }
 }

@@ -126,5 +126,50 @@
     "streakReminder": "{{streak}} kunlik davomiyligingiz davom etmoqda, bugun ham davom ettiring! 🔥",
     "prayerTitle": "{{prayer}} vaqti",
     "prayerBody": "{{city}} uchun {{prayer}} namozi vaqti kirdi."
+  },
+  "ramadan": {
+    "badge": "RAMAZON",
+    "untilIftar": "Iftorgacha qolgan vaqt",
+    "untilSahur": "Saharlikkacha qolgan vaqt",
+    "hours": "Soat",
+    "minutes": "Daq",
+    "seconds": "Soniya"
+  },
+  "zekat": {
+    "title": "ZAKOT KALKULYATORI",
+    "amountDue": "To'lanishi kerak bo'lgan zakot",
+    "wealthBase": "Zakotga tortiladigan mol-mulk",
+    "nisabInfo": "Zakot nisob miqdoriga (taxminan 85 g oltin qiymati) yetgan va to'liq bir qamariy yil davomida saqlangan mol-mulkdan 2,5% miqdorida beriladi. Qarzdorliklar umumiy boylikdan ayirib tashlanadi.",
+    "cash": "Naqd pul / Bankdagi mablag'",
+    "gold": "Oltin",
+    "silver": "Kumush",
+    "trade": "Tijorat mollari",
+    "debt": "Qarzlar"
+  },
+  "abdest": {
+    "title": "Tahorat olish tartibi",
+    "subtitle": "Farz va sunnat amallari bilan bosqichma-bosqich qo'llanma",
+    "step1": "Niyat qiling va \"Bismillah\" deb boshlang.",
+    "step2": "Ikkala qo'lni barmoqlar orasini ishqalab, bilaklargacha uch marta yuving.",
+    "step3": "Og'izni suv bilan uch marta g'arg'ara qilib chaying (madmada).",
+    "step4": "Burunga suv tortib, uch marta qoqib tozalang (istinshoq).",
+    "step5": "Yuzni soch chiqqan joydan iyakgacha va ikki quloq oralig'ida uch marta yuving.",
+    "step6": "Avval o'ng, so'ng chap qo'lni tirsaklar bilan birga uch martadan yuving.",
+    "step7": "Boshning to'rtdan biriga mash torting, so'ng quloqlar va bo'yinga mash torting.",
+    "step8": "Avval o'ng, so'ng chap oyoqni to'piqlari bilan birga uch martadan yuving.",
+    "note": "Qazoi hojat, uxlash yoki qon oqishi kabi holatlarda tahorat sinadi va yangilanishi lozim. Bu umumiy qo'llanma bo'lib, mazhablar o'rtasida kichik farqlar bo'lishi mumkin."
+  },
+  "mosques": {
+    "title": "Yaqin-atrofdagi masjidlar",
+    "locationDenied": "Yaqin-atrofdagi masjidlarni ko'rsatish uchun joylashuv ruxsati kerak.",
+    "loadError": "Masjidlarni yuklashda xatolik yuz berdi. Qaytadan urinib ko'ring.",
+    "loading": "Yaqin atrofdagi masjidlar qidirilmoqda...",
+    "retry": "QAYTA URINISH",
+    "empty": "Yaqin-atrofda ro'yxatga olingan masjidlar topilmadi."
+  },
+  "quickAccess": {
+    "mosques": "Yaqin masjidlar",
+    "zekat": "Zakot kalkulyatori",
+    "abdest": "Tahorat qo'llanmasi"
   }
 }

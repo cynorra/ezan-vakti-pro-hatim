@@ -126,5 +126,50 @@
     "streakReminder": "Rentetan {{streak}} hari anda sedang berjalan, teruskan hari ini juga! 🔥",
     "prayerTitle": "Waktu {{prayer}}",
     "prayerBody": "Telah masuk waktu {{prayer}} bagi kawasan {{city}}."
+  },
+  "ramadan": {
+    "badge": "RAMADAN",
+    "untilIftar": "Masa Hingga Berbuka",
+    "untilSahur": "Masa Hingga Sahur",
+    "hours": "Jam",
+    "minutes": "Min",
+    "seconds": "Saat"
+  },
+  "zekat": {
+    "title": "KALKULATOR ZAKAT",
+    "amountDue": "Zakat Wajib Dibayar",
+    "wealthBase": "Harta Layak Zakat",
+    "nisabInfo": "Zakat dikenakan sebanyak 2.5% ke atas harta yang mencapai nisab (anggaran nilai 85g emas) dan cukup haul selama setahun hijrah. Hutang ditolak daripada jumlah harta.",
+    "cash": "Tunai / Simpanan Bank",
+    "gold": "Emas",
+    "silver": "Perak",
+    "trade": "Barangan Perniagaan",
+    "debt": "Hutang"
+  },
+  "abdest": {
+    "title": "Cara Mengambil Wuduk",
+    "subtitle": "Panduan langkah demi langkah merangkumi perkara wajib dan sunat",
+    "step1": "Niat dalam hati dan mulakan dengan membaca \"Bismillah\".",
+    "step2": "Basuh kedua-dua tangan hingga ke pergelangan sebanyak tiga kali sambil menyela jari.",
+    "step3": "Berkumur-kumur sebanyak tiga kali (madmadah).",
+    "step4": "Memasukkan air ke dalam hidung dan mengeluarkannya sebanyak tiga kali (istinshaq).",
+    "step5": "Membasuh muka sebanyak tiga kali, dari anak rambut hingga dagu dan dari telinga ke telinga.",
+    "step6": "Membasuh tangan kanan kemudian kiri hingga ke siku, sebanyak tiga kali setiap satu.",
+    "step7": "Menyapu sebahagian kepala dengan air, kemudian menyapu telinga dan leher.",
+    "step8": "Membasuh kaki kanan kemudian kiri hingga buku lali, sebanyak tiga kali setiap satu.",
+    "note": "Wuduk terbatal akibat buang air, tidur lelap, atau keluar darah, dan perlu diperbaharui. Panduan ini untuk maklumat umum; mungkin terdapat sedikit perbezaan mengikut mazhab."
+  },
+  "mosques": {
+    "title": "Masjid Berdekatan",
+    "locationDenied": "Kebenaran lokasi diperlukan untuk memaparkan masjid berdekatan.",
+    "loadError": "Ralat berlaku semasa memuatkan senarai masjid. Sila cuba lagi.",
+    "loading": "Mencari masjid berdekatan...",
+    "retry": "CUBA LAGI",
+    "empty": "Tiada masjid berdaftar ditemui berhampiran anda."
+  },
+  "quickAccess": {
+    "mosques": "Masjid Berdekatan",
+    "zekat": "Kalkulator Zakat",
+    "abdest": "Panduan Wuduk"
   }
 }

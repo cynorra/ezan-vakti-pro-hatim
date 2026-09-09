@@ -126,5 +126,50 @@
     "streakReminder": "Je reeks van {{streak}} dagen is bezig, zet hem vandaag ook voort 🔥",
     "prayerTitle": "Tijd voor {{prayer}}",
     "prayerBody": "Het is tijd voor {{prayer}} in {{city}}."
+  },
+  "ramadan": {
+    "badge": "RAMADAN",
+    "untilIftar": "Tijd tot Iftar",
+    "untilSahur": "Tijd tot Suhoor",
+    "hours": "Uur",
+    "minutes": "Min",
+    "seconds": "Sec"
+  },
+  "zekat": {
+    "title": "ZAKAT CALCULATOR",
+    "amountDue": "Verschuldigde Zakat",
+    "wealthBase": "Zakat-plichtig vermogen",
+    "nisabInfo": "Zakat bedraagt 2,5% over vermogen dat de nisab-drempel bereikt (ongeveer 85g goud) en een heel maanjaar in bezit is. Schulden worden van het totale vermogen afgetrokken.",
+    "cash": "Contant geld / Bank",
+    "gold": "Goud",
+    "silver": "Zilver",
+    "trade": "Handelsgoederen",
+    "debt": "Schulden"
+  },
+  "abdest": {
+    "title": "Hoe verricht je de Wudu",
+    "subtitle": "Een stapsgewijze handleiding met verplichte en aanbevolen handelingen",
+    "step1": "Maak de intentie en begin door \"Bismillah\" te zeggen.",
+    "step2": "Was beide handen drie keer tot aan de polsen en wrijf goed tussen de vingers.",
+    "step3": "Spoel de mond drie keer met water (madmada).",
+    "step4": "Snuif drie keer water op in de neus en snuit het uit (istinshaq).",
+    "step5": "Was het gezicht drie keer, van de haarlijn tot de kin en van oor tot oor.",
+    "step6": "Was de rechter- en daarna de linkerarm drie keer, inclusief de ellebogen.",
+    "step7": "Wrijf over een kwart van het hoofd met natte handen, en veeg daarna de oren en de nek af.",
+    "step8": "Was de rechter- en daarna de linkervoet drie keer, inclusief de enkels.",
+    "note": "De wudu wordt verbroken door toiletbezoek, slaap of bloeden, en moet dan opnieuw worden verricht. Dit is een algemene gids; er kunnen kleine verschillen zijn tussen leerscholen."
+  },
+  "mosques": {
+    "title": "Moskeeën in de buurt",
+    "locationDenied": "Locatietoestemming is vereist om moskeeën in de buurt te tonen.",
+    "loadError": "Er is iets misgegaan bij het laden van moskeeën. Probeer het opnieuw.",
+    "loading": "Zoeken naar moskeeën in de buurt...",
+    "retry": "OPNIEUW PROBEREN",
+    "empty": "Geen geregistreerde moskeeën in de buurt gevonden."
+  },
+  "quickAccess": {
+    "mosques": "Moskeeën in de buurt",
+    "zekat": "Zakat Calculator",
+    "abdest": "Wudu-gids"
   }
 }

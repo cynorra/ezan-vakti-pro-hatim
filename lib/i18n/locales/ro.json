@@ -126,5 +126,50 @@
     "streakReminder": "Seria ta de {{streak}} zile continuă, menține-o și astăzi! 🔥",
     "prayerTitle": "Timpul pentru {{prayer}}",
     "prayerBody": "A sosit timpul pentru rugăciunea {{prayer}} în {{city}}."
+  },
+  "ramadan": {
+    "badge": "RAMADAN",
+    "untilIftar": "Timp până la Iftar",
+    "untilSahur": "Timp până la Suhur",
+    "hours": "Ore",
+    "minutes": "Min",
+    "seconds": "Sec"
+  },
+  "zekat": {
+    "title": "CALCULATOR ZAKAT",
+    "amountDue": "Zakat datorat",
+    "wealthBase": "Avere supusă Zakat-ului",
+    "nisabInfo": "Zakat-ul este de 2,5% din averea ce depășește pragul nisab (echivalentul a aprox. 85 g de aur) și a fost deținută timp de un an lunar complet. Datoriile se scad din averea totală.",
+    "cash": "Numerar / Bancă",
+    "gold": "Aur",
+    "silver": "Argint",
+    "trade": "Mărfuri comerciale",
+    "debt": "Datorii"
+  },
+  "abdest": {
+    "title": "Cum se face Wudu (Abluțiunea)",
+    "subtitle": "Ghid pas cu pas cu actele obligatorii și recomandate",
+    "step1": "Formulează intenția și începe spunând \"Bismillah\".",
+    "step2": "Spală ambele mâini până la încheieturi de trei ori, frecând între degete.",
+    "step3": "Clătește gura cu apă de trei ori (madmada).",
+    "step4": "Trage apă în nas și curăță-l de trei ori (istinshaq).",
+    "step5": "Spală fața de trei ori, de la linia părului până la bărbie și de la o ureche la cealaltă.",
+    "step6": "Spală brațul drept și apoi cel stâng, inclusiv coatele, de câte trei ori.",
+    "step7": "Șterge cu mâinile umede o parte a capului, apoi curăță urechile și ceafa.",
+    "step8": "Spală piciorul drept și apoi cel stâng, inclusiv gleznele, de câte trei ori.",
+    "note": "Wudu este anulat de nevoile fiziologice, somn sau sângerare și trebuie reînnoit. Acest ghid este informativ; pot exista mici diferențe între școlile juridice."
+  },
+  "mosques": {
+    "title": "Moschei din apropiere",
+    "locationDenied": "Este necesară permisiunea de localizare pentru a afișa moscheile din apropiere.",
+    "loadError": "A apărut o problemă la încărcarea moscheilor. Vă rugăm să încercați din nou.",
+    "loading": "Se caută moschei în apropiere...",
+    "retry": "REÎNCEARCĂ",
+    "empty": "Nu s-au găsit moschei înregistrate în apropiere."
+  },
+  "quickAccess": {
+    "mosques": "Moschei apropiate",
+    "zekat": "Calculator Zakat",
+    "abdest": "Ghid Wudu"
   }
 }
