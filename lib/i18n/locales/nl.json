@@ -1,8 +1,130 @@
 {
-  "tabs": { "home": "Home", "qibla": "Qibla", "hatim": "Khatm", "dua": "Dua", "dhikr": "Dhikr" },
-  "home": { "nextPrayerCountdown": "Resterende tijd", "verseOfTheDay": "Vers van de dag", "hadithOfTheDay": "Hadith van de dag", "esmaOfTheDay": "Naam van de dag" },
-  "prayerTimes": { "imsak": "Fajr", "gunes": "Zonsopkomst", "ogle": "Dhuhr", "ikindi": "Asr", "aksam": "Maghrib", "yatsi": "Isha" },
-  "hatim": { "individual": "Individueel", "collaborative": "Gezamenlijk", "weeklyHatim": "Wekelijkse Khatm", "completed": "Voltooid", "completeHatimBtn": "VOLTOOI KHATM", "juzSelection": "JUZ SELECTIE", "activeHatims": "ACTIEVE KHATMS", "startNew": "Start nieuwe", "noActiveHatim": "Nog geen actieve gezamenlijke khatm.", "newCollaborativeHatim": "Nieuwe Gezamenlijke Khatm", "hatimTitleLabel": "Khatm Titel", "hatimTitlePlaceholder": "bijv., Ramadan Khatm", "startBtn": "START", "participantName": "Naam deelnemer", "namePlaceholder": "Voer uw naam in...", "takeJuz": "NEMEN", "juzDetails": "Juz Details", "startSurah": "Start Soera:", "pages": "Pagina's:", "containsSurahs": "Bevat Soera's:", "congratsSaved": "Gefeliciteerd! Uw Khatm is opgeslagen." },
-  "settings": { "title": "Instellingen", "notifications": "Meldingen", "language": "Taal" },
-  "common": { "cancel": "Annuleren", "save": "Opslaan", "close": "Sluiten", "search": "Zoeken..." }
+  "tabs": {
+    "home": "Home",
+    "qibla": "Qibla",
+    "hatim": "Khatm",
+    "dua": "Dua",
+    "dhikr": "Dhikr",
+    "kaza": "Inhaalgebeden"
+  },
+  "home": {
+    "nextPrayerCountdown": "Resterende tijd",
+    "verseOfTheDay": "Vers van de dag",
+    "hadithOfTheDay": "Hadith van de dag",
+    "esmaOfTheDay": "Naam van de dag",
+    "duaOfTheDay": "Dua van de Dag"
+  },
+  "prayerTimes": {
+    "imsak": "Fajr",
+    "gunes": "Zonsopkomst",
+    "ogle": "Dhuhr",
+    "ikindi": "Asr",
+    "aksam": "Maghrib",
+    "yatsi": "Isha"
+  },
+  "hatim": {
+    "individual": "Individueel",
+    "collaborative": "Gezamenlijk",
+    "weeklyHatim": "Wekelijkse Khatm",
+    "completed": "Voltooid",
+    "completeHatimBtn": "VOLTOOI KHATM",
+    "juzSelection": "JUZ SELECTIE",
+    "activeHatims": "ACTIEVE KHATMS",
+    "startNew": "Start nieuwe",
+    "noActiveHatim": "Nog geen actieve gezamenlijke khatm.",
+    "newCollaborativeHatim": "Nieuwe Gezamenlijke Khatm",
+    "hatimTitleLabel": "Khatm Titel",
+    "hatimTitlePlaceholder": "bijv., Ramadan Khatm",
+    "startBtn": "START",
+    "participantName": "Naam deelnemer",
+    "namePlaceholder": "Voer uw naam in...",
+    "takeJuz": "NEMEN",
+    "juzDetails": "Juz Details",
+    "startSurah": "Start Soera:",
+    "pages": "Pagina's:",
+    "containsSurahs": "Bevat Soera's:",
+    "congratsSaved": "Gefeliciteerd! Uw Khatm is opgeslagen.",
+    "enterNameAlert": "Voer je naam in.",
+    "enterTitleAlert": "Voer een titel in.",
+    "topHatimBadge": "MEEST ACTIEVE KHATM",
+    "leaderboardTitle": "TOP BIJDRAGERS",
+    "unnamedParticipant": "Anoniem",
+    "inviteShareMessage": "Doe mee met de gezamenlijke khatm \"{{title}}\", neem een juz en laten we samen de Koran lezen 🕌📖\n\nAls je de app al hebt: {{deepLink}}\n\nZo niet: {{playStore}}",
+    "completionShareMessage": "🎉 Ik heb alle 30 juz voltooid, mijn khatm is af! Alhamdulillah 📖🕌\n\nDit is mijn khatm #{{count}}. Begin ook met het bijhouden van de jouwe: {{playStore}}",
+    "progressShareMessage": "📖 Ik heb deze week {{completed}}/30 juz voltooid ({{percentage}}%).\n\nHoud de jouwe bij met Ezan Vakti + Hatim: {{playStore}}",
+    "rewardUnlocked": "🎁 Geweldig! Dankzij jouw delen heb je {{days}} reclamevrije dagen ontgrendeld.",
+    "rewardBannerText": "Deel nog {{count}} keer om {{days}} reclamevrije dagen te ontgrendelen 🎁",
+    "juzCountShort": "juz"
+  },
+  "settings": {
+    "title": "Instellingen",
+    "notifications": "Meldingen",
+    "language": "Taal",
+    "sound": "Adhan-geluid",
+    "reminder": "Herinnering vóór gebed",
+    "theme": "Thema",
+    "themeLight": "Licht",
+    "themeDark": "Donker",
+    "support": "Ondersteuning & Info",
+    "rateApp": "Beoordeel de app",
+    "feedback": "Feedback sturen",
+    "about": "Over",
+    "widgetPreview": "WIDGET-VOORBEELD",
+    "widgetNext": "Volgende",
+    "widgetHint": "Houd het startscherm ingedrukt om de widget toe te voegen."
+  },
+  "common": {
+    "cancel": "Annuleren",
+    "save": "Opslaan",
+    "close": "Sluiten",
+    "search": "Zoeken...",
+    "errorGeneric": "Er is iets misgegaan."
+  },
+  "esma": {
+    "title": "Namen van Allah",
+    "search": "Zoek naam of betekenis..."
+  },
+  "kaza": {
+    "title": "INHAALGEBEDEN",
+    "subtitle": "Houd je gemiste gebeden bij",
+    "sabah": "Fajr",
+    "ogle": "Dhuhr",
+    "ikindi": "Asr",
+    "aksam": "Maghrib",
+    "yatsi": "Isha",
+    "vitir": "Witr",
+    "completionShareMessage": "🎉 Ik heb al mijn inhaalgebeden afgerond, Alhamdulillah! 🕌\n\nHoud je inhaalgebeden bij met Ezan Vakti + Hatim: {{playStore}}"
+  },
+  "qibla": {
+    "title": "QIBLA-KOMPAS",
+    "subtitle": "Qibla-richtingzoeker",
+    "yourDirection": "JOUW RICHTING",
+    "qiblaAngle": "QIBLA-HOEK",
+    "aligned": "GERICHT OP DE QIBLA",
+    "hint": "Houd je toestel plat en volg de naald."
+  },
+  "dua": {
+    "headerTitle": "DUA-BIBLIOTHEEK",
+    "headerSubtitle": "Het Gebed Is het Wapen van de Gelovige",
+    "featuredBadge": "DUA VAN DE DAG",
+    "meaningLabel": "BETEKENIS",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nBetekenis: {{meaning}}\n\nBron: {{source}}\n\nGedeeld via Ezan Vakti + Hatim."
+  },
+  "splash": {
+    "subtitle": "Gebedstijden, khatm en dua samen"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 Dua van de Dag",
+    "dailyDuaBody": "{{title}} — tik om te lezen",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "Vergeet niet om vandaag een vers toe te voegen aan je khatm 📖",
+    "eveningMsg2": "Nu de avond nadert, stel je hart gerust met een dua 🤲",
+    "eveningMsg3": "Heb je een paar minuten voor je inhaalgebeden? 🕌",
+    "eveningMsg4": "Heb je vandaag je dhikr gedaan? Gedenken brengt rust in het hart ✨",
+    "noJuzThisWeek": "Je hebt deze week nog geen juz gemarkeerd, waarom begin je er niet mee? 📖",
+    "kazaDebtReminder": "Er wachten {{count}} inhaalgebeden op je, je zou er vanavond een paar kunnen inhalen 🕌",
+    "streakReminder": "Je reeks van {{streak}} dagen is bezig, zet hem vandaag ook voort 🔥",
+    "prayerTitle": "Tijd voor {{prayer}}",
+    "prayerBody": "Het is tijd voor {{prayer}} in {{city}}."
+  }
 }

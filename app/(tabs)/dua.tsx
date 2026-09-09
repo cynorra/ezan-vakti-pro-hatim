@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   View,
   Text,
@@ -13,67 +14,39 @@ import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { SEOHead } from '@/components/SEOHead';
+import { dailyDuas, duaCategories, getDailyDua, Dua } from '@/lib/data/duas';
 
-interface Dua {
-  id: string;
-  title: string;
-  content: string;
-  arabic?: string;
-  translation: string;
-  source?: string;
-  category: 'daily' | 'prophetic' | 'quranic' | 'protection';
-}
-
-const DUALAR: Dua[] = [
-  {
-    id: '1',
-    title: 'Yemek Duası',
-    category: 'daily',
-    content: 'Elhamdülillâhillezî et\'amenâ ve sekânâ ve cealenâ müslimîn.',
-    translation: 'Bizi yediren, içiren ve bizi Müslümanlardan kılan Allah\'a hamdolsun.',
-    source: 'Ebu Davud, Et\'ime, 52',
-  },
-  {
-    id: '2',
-    title: 'Ayetel Kürsi',
-    category: 'quranic',
-    arabic: 'اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ...',
-    content: 'Allâhü lâ ilâhe illâ hüvel hayyül kayyûm, lâ te\'huzühû sinetün velâ nevm...',
-    translation: 'Allah o Allah\'tır ki, kendisinden başka hiçbir ilah yoktur. Diridir, her şeyi yönetendir...',
-    source: 'Bakara Suresi, 255',
-  },
-  {
-    id: '3',
-    title: 'Şifa Duası',
-    category: 'protection',
-    content: 'Ezhibi\'l-be\'se rabbe\'n-nâsi ve\'şfi ente\'ş-şâfî lâ şifâe illâ şifâüke şifâen lâ yüğâdiru sekamâ.',
-    translation: 'Bu hastalığı gider ey insanların Rabbi! Şifa ver, çünkü şifa verici sensin...',
-    source: 'Buhari, Merda, 20',
-  },
-];
-
-const CATEGORIES = [
-  { id: 'all', name: 'Tümü', icon: 'apps-outline' },
-  { id: 'daily', name: 'Günlük', icon: 'sunny-outline' },
-  { id: 'quranic', name: 'Kur\'an-ı Kerim', icon: 'book-outline' },
-  { id: 'prophetic', name: 'Peygamberimizden', icon: 'heart-outline' },
-  { id: 'protection', name: 'Korunma', icon: 'shield-checkmark-outline' },
-];
+const CATEGORY_ICONS: Record<string, string> = {
+  all: 'apps-outline',
+  daily: 'sunny-outline',
+  worship: 'heart-outline',
+  protection: 'shield-checkmark-outline',
+  family: 'people-outline',
+  other: 'ellipsis-horizontal-outline',
+};
 
 export default function DuaScreen() {
+  const { t } = useTranslation();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
-  const filteredDualar = selectedCategory === 'all' 
-    ? DUALAR 
-    : DUALAR.filter(d => d.category === selectedCategory);
+  const duaOfTheDay = getDailyDua();
+
+  const filteredDualar = selectedCategory === 'all'
+    ? dailyDuas
+    : dailyDuas.filter((d) => d.category === selectedCategory);
 
   const handleShare = async (dua: Dua) => {
     try {
       await Share.share({
-        message: `${dua.title}\n\n${dua.content}\n\nAnlamı: ${dua.translation}\n\nKaynak: ${dua.source}`,
+        message: t('dua.shareMessage', {
+          title: dua.title,
+          transliteration: dua.transliteration,
+          meaning: dua.turkish,
+          source: dua.source,
+        }),
       });
     } catch (error) {
       console.log(error);
@@ -82,91 +55,113 @@ export default function DuaScreen() {
 
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title="Dua Kitaplığı | Ezan Vakti ve Hatim"
         description="Kur'an-ı Kerim'den ve Peygamber Efendimizden günlük dualar. Şifa, korunma, rızık ve yemek duaları Türkçe anlamlarıyla."
         keywords="dualar, günlük dualar, şifa duası, peygamber duaları, kuran duaları, ayetel kürsi"
       />
       <View style={[styles.container, { backgroundColor: colors.background }]}>
-      <LinearGradient colors={Gradients.premium} style={styles.header}>
-        <Text style={styles.headerTitle}>DUA KİTAPLIĞI</Text>
-        <Text style={styles.headerSubtitle}>Müminin Silahı Duadır</Text>
-      </LinearGradient>
+        <LinearGradient colors={Gradients.premium} style={styles.header}>
+          <Text style={styles.headerTitle}>{t('dua.headerTitle')}</Text>
+          <Text style={styles.headerSubtitle}>{t('dua.headerSubtitle')}</Text>
+        </LinearGradient>
 
-      {/* Categories Horizontal Scroll */}
-      <View style={styles.categoryWrapper}>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.categoryList}>
-          {CATEGORIES.map((cat) => (
-            <TouchableOpacity
-              key={cat.id}
-              onPress={() => setSelectedCategory(cat.id)}
-              style={[
-                styles.categoryItem,
-                selectedCategory === cat.id && { backgroundColor: colors.primary }
-              ]}
+        <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
+          {/* Günün Duası */}
+          <View style={[styles.featuredCard, { backgroundColor: colors.surface }, Shadows.medium]}>
+            <View style={styles.featuredBadge}>
+              <Ionicons name="star" size={12} color="#052F1C" />
+              <Text style={styles.featuredBadgeText}>{t('dua.featuredBadge')}</Text>
+            </View>
+            <Text style={[styles.duaTitle, { color: colors.text, marginTop: Spacing.sm }]}>
+              {duaOfTheDay.title}
+            </Text>
+            <Text style={[styles.arabicText, { color: colors.primary }]}>{duaOfTheDay.arabic}</Text>
+            <Text style={[styles.contentText, { color: colors.text }]}>{duaOfTheDay.transliteration}</Text>
+            <View style={[styles.translationBox, { backgroundColor: colors.background }]}>
+              <Text style={[styles.translationLabel, { color: colors.primary }]}>{t('dua.meaningLabel')}</Text>
+              <Text style={[styles.translationText, { color: colors.textSecondary }]}>{duaOfTheDay.turkish}</Text>
+            </View>
+            <View style={styles.duaFooter}>
+              <Text style={[styles.sourceText, { color: colors.textMuted }]}>{duaOfTheDay.source}</Text>
+              <TouchableOpacity onPress={() => handleShare(duaOfTheDay)} style={styles.shareButton}>
+                <Ionicons name="share-social-outline" size={20} color={colors.primary} />
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          {/* Categories Horizontal Scroll */}
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.categoryList}>
+            {duaCategories.map((cat) => (
+              <TouchableOpacity
+                key={cat.id}
+                onPress={() => setSelectedCategory(cat.id)}
+                style={[
+                  styles.categoryItem,
+                  { backgroundColor: colors.surface },
+                  selectedCategory === cat.id && { backgroundColor: colors.primary },
+                ]}
+              >
+                <Ionicons
+                  name={CATEGORY_ICONS[cat.id] as any}
+                  size={18}
+                  color={selectedCategory === cat.id ? '#fff' : colors.textSecondary}
+                />
+                <Text
+                  style={[
+                    styles.categoryText,
+                    { color: selectedCategory === cat.id ? '#fff' : colors.textSecondary },
+                  ]}
+                >
+                  {cat.name}
+                </Text>
+              </TouchableOpacity>
+            ))}
+          </ScrollView>
+
+          {filteredDualar.map((dua) => (
+            <View
+              key={dua.id}
+              style={[styles.duaCard, { backgroundColor: colors.surface }, Shadows.medium]}
             >
-              <Ionicons 
-                name={cat.icon as any} 
-                size={18} 
-                color={selectedCategory === cat.id ? '#fff' : colors.textSecondary} 
-              />
-              <Text style={[
-                styles.categoryText, 
-                { color: selectedCategory === cat.id ? '#fff' : colors.textSecondary }
-              ]}>
-                {cat.name}
-              </Text>
-            </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => setExpandedId(expandedId === dua.id ? null : dua.id)}
+                style={styles.duaHeader}
+              >
+                <View style={styles.duaTitleRow}>
+                  <View style={[styles.titleLine, { backgroundColor: colors.accent }]} />
+                  <Text style={[styles.duaTitle, { color: colors.text }]}>{dua.title}</Text>
+                </View>
+                <Ionicons
+                  name={expandedId === dua.id ? 'chevron-up' : 'chevron-down'}
+                  size={20}
+                  color={colors.textMuted}
+                />
+              </TouchableOpacity>
+
+              {expandedId === dua.id && (
+                <View style={styles.duaBody}>
+                  <Text style={[styles.arabicText, { color: colors.primary }]}>{dua.arabic}</Text>
+                  <Text style={[styles.contentText, { color: colors.text }]}>{dua.transliteration}</Text>
+
+                  <View style={[styles.translationBox, { backgroundColor: colors.background }]}>
+                    <Text style={[styles.translationLabel, { color: colors.primary }]}>{t('dua.meaningLabel')}</Text>
+                    <Text style={[styles.translationText, { color: colors.textSecondary }]}>{dua.turkish}</Text>
+                  </View>
+
+                  <View style={styles.duaFooter}>
+                    <Text style={[styles.sourceText, { color: colors.textMuted }]}>{dua.source}</Text>
+                    <TouchableOpacity onPress={() => handleShare(dua)} style={styles.shareButton}>
+                      <Ionicons name="share-social-outline" size={20} color={colors.primary} />
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              )}
+            </View>
           ))}
+          <View style={{ height: 100 }} />
         </ScrollView>
       </View>
-
-      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
-        {filteredDualar.map((dua) => (
-          <View 
-            key={dua.id} 
-            style={[styles.duaCard, { backgroundColor: colors.surface }, Shadows.medium]}
-          >
-            <TouchableOpacity 
-              onPress={() => setExpandedId(expandedId === dua.id ? null : dua.id)}
-              style={styles.duaHeader}
-            >
-              <View style={styles.duaTitleRow}>
-                <View style={[styles.titleLine, { backgroundColor: colors.accent }]} />
-                <Text style={[styles.duaTitle, { color: colors.text }]}>{dua.title}</Text>
-              </View>
-              <Ionicons 
-                name={expandedId === dua.id ? "chevron-up" : "chevron-down"} 
-                size={20} 
-                color={colors.textMuted} 
-              />
-            </TouchableOpacity>
-
-            {(expandedId === dua.id || filteredDualar.length < 3) && (
-              <View style={styles.duaBody}>
-                {dua.arabic && (
-                  <Text style={[styles.arabicText, { color: colors.primary }]}>{dua.arabic}</Text>
-                )}
-                <Text style={[styles.contentText, { color: colors.text }]}>{dua.content}</Text>
-                
-                <View style={[styles.translationBox, { backgroundColor: colors.background }]}>
-                  <Text style={[styles.translationLabel, { color: colors.primary }]}>ANLAMI</Text>
-                  <Text style={[styles.translationText, { color: colors.textSecondary }]}>{dua.translation}</Text>
-                </View>
-
-                <View style={styles.duaFooter}>
-                  <Text style={[styles.sourceText, { color: colors.textMuted }]}>{dua.source}</Text>
-                  <TouchableOpacity onPress={() => handleShare(dua)} style={styles.shareButton}>
-                    <Ionicons name="share-social-outline" size={20} color={colors.primary} />
-                  </TouchableOpacity>
-                </View>
-              </View>
-            )}
-          </View>
-        ))}
-        <View style={{ height: 100 }} />
-      </ScrollView>
-    </View>
     </>
   );
 }
@@ -197,18 +192,40 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     letterSpacing: 1,
   },
-  categoryWrapper: {
+  content: {
+    paddingHorizontal: Spacing.md,
     marginTop: -25,
+  },
+  featuredCard: {
+    borderRadius: BorderRadius.xl,
     marginBottom: Spacing.md,
+    padding: Spacing.lg,
+    borderWidth: 1.5,
+    borderColor: '#D4AF37',
+  },
+  featuredBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'flex-start',
+    backgroundColor: '#D4AF37',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: BorderRadius.full,
+    gap: 4,
+  },
+  featuredBadgeText: {
+    color: '#052F1C',
+    fontSize: 10,
+    fontWeight: '900',
+    letterSpacing: 1,
   },
   categoryList: {
-    paddingHorizontal: Spacing.md,
+    paddingVertical: Spacing.md,
     gap: Spacing.sm,
   },
   categoryItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#fff',
     paddingHorizontal: 16,
     paddingVertical: 10,
     borderRadius: BorderRadius.full,
@@ -218,9 +235,6 @@ const styles = StyleSheet.create({
   categoryText: {
     fontSize: 13,
     fontWeight: '700',
-  },
-  content: {
-    paddingHorizontal: Spacing.md,
   },
   duaCard: {
     borderRadius: BorderRadius.xl,

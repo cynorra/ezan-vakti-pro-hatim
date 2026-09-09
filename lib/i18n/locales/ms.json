@@ -4,13 +4,15 @@
     "qibla": "Kiblat",
     "hatim": "Khatam",
     "dua": "Doa",
-    "dhikr": "Zikir"
+    "dhikr": "Zikir",
+    "kaza": "Qada"
   },
   "home": {
     "nextPrayerCountdown": "Masa berbaki",
     "verseOfTheDay": "Ayat Hari Ini",
     "hadithOfTheDay": "Hadis Hari Ini",
-    "esmaOfTheDay": "Asmaul Husna Hari Ini"
+    "esmaOfTheDay": "Asmaul Husna Hari Ini",
+    "duaOfTheDay": "Doa Hari Ini"
   },
   "prayerTimes": {
     "imsak": "Subuh",
@@ -41,7 +43,18 @@
     "startSurah": "Surah Permulaan:",
     "pages": "Halaman:",
     "containsSurahs": "Mengandungi Surah:",
-    "congratsSaved": "Tahniah! Khatam anda telah disimpan."
+    "congratsSaved": "Tahniah! Khatam anda telah disimpan.",
+    "enterNameAlert": "Sila masukkan nama anda.",
+    "enterTitleAlert": "Sila masukkan tajuk.",
+    "topHatimBadge": "KHATAM PALING AKTIF",
+    "leaderboardTitle": "PENYUMBANG TERATAS",
+    "unnamedParticipant": "Tanpa Nama",
+    "inviteShareMessage": "Sertai khatam berkumpulan \"{{title}}\", ambil satu juzuk dan mari membaca Al-Quran bersama-sama 🕌📖\n\nJika anda sudah mempunyai aplikasi: {{deepLink}}\n\nJika belum: {{playStore}}",
+    "completionShareMessage": "🎉 Saya telah menyelesaikan kesemua 30 juzuk dan mengkhatamkan Al-Quran! Alhamdulillah 📖🕌\n\nIni adalah khatam ke-{{count}} saya. Mulakan penjejakan anda juga: {{playStore}}",
+    "progressShareMessage": "📖 Minggu ini saya selesai {{completed}}/30 juzuk ({{percentage}}%).\n\nJejak kemajuan anda bersama Ezan Vakti + Hatim: {{playStore}}",
+    "rewardUnlocked": "🎁 Hebat! Hasil perkongsian anda, anda telah membuka {{days}} hari tanpa iklan.",
+    "rewardBannerText": "Kongsi {{count}} kali lagi untuk membuka {{days}} hari tanpa iklan 🎁",
+    "juzCountShort": "juzuk"
   },
   "settings": {
     "title": "Tetapan",
@@ -72,6 +85,46 @@
     "cancel": "Batal",
     "save": "Simpan",
     "close": "Tutup",
-    "search": "Cari..."
+    "search": "Cari...",
+    "errorGeneric": "Sesuatu telah berlaku."
+  },
+  "esma": {
+    "title": "Asmaul Husna",
+    "search": "Cari nama atau makna..."
+  },
+  "kaza": {
+    "title": "SOLAT QADA",
+    "subtitle": "Jejak solat yang terlepas",
+    "sabah": "Subuh",
+    "ogle": "Zohor",
+    "ikindi": "Asar",
+    "aksam": "Maghrib",
+    "yatsi": "Isyak",
+    "vitir": "Witir",
+    "completionShareMessage": "🎉 Saya telah menggantikan semua solat qada saya, Alhamdulillah! 🕌\n\nJejak solat qada anda bersama Ezan Vakti + Hatim: {{playStore}}"
+  },
+  "dua": {
+    "headerTitle": "KOLEKSI DOA",
+    "headerSubtitle": "Doa Adalah Senjata Orang Mukmin",
+    "featuredBadge": "DOA HARI INI",
+    "meaningLabel": "MAKSUD",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nMaksud: {{meaning}}\n\nSumber: {{source}}\n\nDikongsi dari Ezan Vakti + Hatim."
+  },
+  "splash": {
+    "subtitle": "Waktu solat, khatam dan doa di satu tempat"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 Doa Hari Ini",
+    "dailyDuaBody": "{{title}} — ketik untuk membaca",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "Jangan lupa membaca beberapa ayat untuk khatam anda hari ini 📖",
+    "eveningMsg2": "Menjelang petang, tenangkan hati dengan berdoa 🤲",
+    "eveningMsg3": "Ada masa beberapa minit untuk solat qada anda? 🕌",
+    "eveningMsg4": "Sudahkah anda berzikir hari ini? Mengingati Allah menenangkan jiwa ✨",
+    "noJuzThisWeek": "Anda belum menandakan sebarang juzuk minggu ini, apa kata mulakan dengan satu? 📖",
+    "kazaDebtReminder": "Anda mempunyai {{count}} solat qada yang tertunggak, anda boleh ganti beberapa solat malam ini 🕌",
+    "streakReminder": "Rentetan {{streak}} hari anda sedang berjalan, teruskan hari ini juga! 🔥",
+    "prayerTitle": "Waktu {{prayer}}",
+    "prayerBody": "Telah masuk waktu {{prayer}} bagi kawasan {{city}}."
   }
 }

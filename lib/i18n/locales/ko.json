@@ -1,8 +1,130 @@
 {
-  "tabs": { "home": "홈", "qibla": "키블라", "hatim": "하틈", "dua": "두아", "dhikr": "디크르" },
-  "home": { "nextPrayerCountdown": "남은 시간", "verseOfTheDay": "오늘의 구절", "hadithOfTheDay": "오늘의 하디스", "esmaOfTheDay": "오늘의 이름" },
-  "prayerTimes": { "imsak": "파즈르", "gunes": "일출", "ogle": "두흐르", "ikindi": "아스르", "aksam": "마그리브", "yatsi": "이샤" },
-  "hatim": { "individual": "개인", "collaborative": "공동", "weeklyHatim": "주간 하틈", "completed": "완료됨", "completeHatimBtn": "하틈 완료", "juzSelection": "주즈 선택", "activeHatims": "활성 하틈", "startNew": "새로 시작", "noActiveHatim": "활성화된 공동 하틈이 없습니다.", "newCollaborativeHatim": "새로운 공동 하틈", "hatimTitleLabel": "하틈 제목", "hatimTitlePlaceholder": "예: 라마단 하틈", "startBtn": "시작", "participantName": "참가자 이름", "namePlaceholder": "이름을 입력하세요...", "takeJuz": "선택", "juzDetails": "주즈 세부정보", "startSurah": "시작 수라:", "pages": "페이지:", "containsSurahs": "포함된 수라:", "congratsSaved": "축하합니다! 하틈이 저장되었습니다." },
-  "settings": { "title": "설정", "notifications": "알림", "language": "언어" },
-  "common": { "cancel": "취소", "save": "저장", "close": "닫기", "search": "검색..." }
+  "tabs": {
+    "home": "홈",
+    "qibla": "키블라",
+    "hatim": "하틈",
+    "dua": "두아",
+    "dhikr": "디크르",
+    "kaza": "카다"
+  },
+  "home": {
+    "nextPrayerCountdown": "남은 시간",
+    "verseOfTheDay": "오늘의 구절",
+    "hadithOfTheDay": "오늘의 하디스",
+    "esmaOfTheDay": "오늘의 이름",
+    "duaOfTheDay": "오늘의 두아"
+  },
+  "prayerTimes": {
+    "imsak": "파즈르",
+    "gunes": "일출",
+    "ogle": "두흐르",
+    "ikindi": "아스르",
+    "aksam": "마그리브",
+    "yatsi": "이샤"
+  },
+  "hatim": {
+    "individual": "개인",
+    "collaborative": "공동",
+    "weeklyHatim": "주간 하틈",
+    "completed": "완료됨",
+    "completeHatimBtn": "하틈 완료",
+    "juzSelection": "주즈 선택",
+    "activeHatims": "활성 하틈",
+    "startNew": "새로 시작",
+    "noActiveHatim": "활성화된 공동 하틈이 없습니다.",
+    "newCollaborativeHatim": "새로운 공동 하틈",
+    "hatimTitleLabel": "하틈 제목",
+    "hatimTitlePlaceholder": "예: 라마단 하틈",
+    "startBtn": "시작",
+    "participantName": "참가자 이름",
+    "namePlaceholder": "이름을 입력하세요...",
+    "takeJuz": "선택",
+    "juzDetails": "주즈 세부정보",
+    "startSurah": "시작 수라:",
+    "pages": "페이지:",
+    "containsSurahs": "포함된 수라:",
+    "congratsSaved": "축하합니다! 하틈이 저장되었습니다.",
+    "enterNameAlert": "이름을 입력해 주세요.",
+    "enterTitleAlert": "제목을 입력해 주세요.",
+    "topHatimBadge": "가장 활발한 완독",
+    "leaderboardTitle": "최고 기여자",
+    "unnamedParticipant": "익명",
+    "inviteShareMessage": "\"{{title}}\" 공동 완독에 참여하여 주즈를 선택하고 함께 쿠란을 읽어보세요 🕌📖\n\n앱이 이미 있으신 경우: {{deepLink}}\n\n없으신 경우: {{playStore}}",
+    "completionShareMessage": "🎉 30주즈를 모두 읽고 쿠란 완독을 마쳤습니다! 알함둘릴라 📖🕌\n\n나의 {{count}}번째 완독입니다. 여러분도 함께 시작해보세요: {{playStore}}",
+    "progressShareMessage": "📖 이번 주에 {{completed}}/30 주즈를 완료했습니다 ({{percentage}}%).\n\nEzan Vakti + Hatim으로 완독을 기록해보세요: {{playStore}}",
+    "rewardUnlocked": "🎁 멋져요! 공유해 주신 덕분에 {{days}}일간 광고 없이 이용할 수 있습니다.",
+    "rewardBannerText": "{{count}}번 더 공유하고 {{days}}일간 광고 제거 혜택을 받으세요 🎁",
+    "juzCountShort": "주즈"
+  },
+  "settings": {
+    "title": "설정",
+    "notifications": "알림",
+    "language": "언어",
+    "sound": "아잔 소리",
+    "reminder": "기도 전 알림",
+    "theme": "테마",
+    "themeLight": "라이트",
+    "themeDark": "다크",
+    "support": "지원 및 정보",
+    "rateApp": "앱 평가하기",
+    "feedback": "피드백 보내기",
+    "about": "앱 정보",
+    "widgetPreview": "위젯 미리보기",
+    "widgetNext": "다음",
+    "widgetHint": "홈 화면을 길게 눌러 위젯을 추가하세요."
+  },
+  "common": {
+    "cancel": "취소",
+    "save": "저장",
+    "close": "닫기",
+    "search": "검색...",
+    "errorGeneric": "문제가 발생했습니다."
+  },
+  "esma": {
+    "title": "알라의 아름다운 이름들",
+    "search": "이름 또는 의미 검색..."
+  },
+  "kaza": {
+    "title": "미뤄진 기도",
+    "subtitle": "미뤄진 기도를 기록하세요",
+    "sabah": "파즈르",
+    "ogle": "두흐르",
+    "ikindi": "아스르",
+    "aksam": "마그리브",
+    "yatsi": "이샤",
+    "vitir": "비트르",
+    "completionShareMessage": "🎉 미뤄진 기도를 모두 완료했습니다, 알함둘릴라! 🕌\n\nEzan Vakti + Hatim으로 미뤄진 기도를 기록해보세요: {{playStore}}"
+  },
+  "qibla": {
+    "title": "키블라 나침반",
+    "subtitle": "키블라 방향 찾기",
+    "yourDirection": "내 방향",
+    "qiblaAngle": "키블라 각도",
+    "aligned": "키블라 방향 일치",
+    "hint": "기기를 평평하게 들고 바늘을 따라가세요."
+  },
+  "dua": {
+    "headerTitle": "두아 라이브러리",
+    "headerSubtitle": "기도는 신앙인의 무기입니다",
+    "featuredBadge": "오늘의 두아",
+    "meaningLabel": "의미",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\n의미: {{meaning}}\n\n출처: {{source}}\n\nEzan Vakti + Hatim에서 공유됨."
+  },
+  "splash": {
+    "subtitle": "기도 시간, 쿠란 완독, 두아를 한곳에서"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 오늘의 두아",
+    "dailyDuaBody": "{{title}} — 누르면 읽을 수 있습니다",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "오늘 쿠란 완독 기록을 남기는 것을 잊지 마세요 📖",
+    "eveningMsg2": "저녁이 다가오는 시간, 두아로 마음의 평안을 찾아보세요 🤲",
+    "eveningMsg3": "미뤄진 기도를 위해 잠시 시간을 내어보시는 건 어떨까요? 🕌",
+    "eveningMsg4": "오늘 디크르를 하셨나요? 알라를 기억함은 마음에 평안을 가져다줍니다 ✨",
+    "noJuzThisWeek": "이번 주에 아직 주즈를 기록하지 않으셨네요. 하나 시작해보는 건 어떨까요? 📖",
+    "kazaDebtReminder": "미뤄진 기도가 {{count}}개 남아있습니다. 오늘 밤 몇 개를 이행해보세요 🕌",
+    "streakReminder": "{{streak}}일 연속 기록이 진행 중입니다. 오늘도 계속 이어가보세요 🔥",
+    "prayerTitle": "{{prayer}} 시간",
+    "prayerBody": "{{city}}의 {{prayer}} 시간입니다."
+  }
 }

@@ -1,8 +1,130 @@
 {
-  "tabs": { "home": "ホーム", "qibla": "キブラ", "hatim": "ハティム", "dua": "ドゥアー", "dhikr": "ズィクル" },
-  "home": { "nextPrayerCountdown": "残り時間", "verseOfTheDay": "今日の節", "hadithOfTheDay": "今日のハディース", "esmaOfTheDay": "今日の御名" },
-  "prayerTimes": { "imsak": "ファジュル", "gunes": "日の出", "ogle": "ズフル", "ikindi": "アスル", "aksam": "マグリブ", "yatsi": "イシャー" },
-  "hatim": { "individual": "個人", "collaborative": "共同", "weeklyHatim": "週のハティム", "completed": "完了", "completeHatimBtn": "ハティム完了", "juzSelection": "ジュズ選択", "activeHatims": "進行中のハティム", "startNew": "新しく始める", "noActiveHatim": "現在共同ハティムはありません。", "newCollaborativeHatim": "新しい共同ハティム", "hatimTitleLabel": "ハティムのタイトル", "hatimTitlePlaceholder": "例：ラマダン・ハティム", "startBtn": "開始", "participantName": "参加者名", "namePlaceholder": "名前を入力...", "takeJuz": "取る", "juzDetails": "ジュズの詳細", "startSurah": "開始の章:", "pages": "ページ数:", "containsSurahs": "含まれる章:", "congratsSaved": "おめでとうございます！ハティムが保存されました。" },
-  "settings": { "title": "設定", "notifications": "通知", "language": "言語" },
-  "common": { "cancel": "キャンセル", "save": "保存", "close": "閉じる", "search": "検索..." }
+  "tabs": {
+    "home": "ホーム",
+    "qibla": "キブラ",
+    "hatim": "ハティム",
+    "dua": "ドゥアー",
+    "dhikr": "ズィクル",
+    "kaza": "カザー"
+  },
+  "home": {
+    "nextPrayerCountdown": "残り時間",
+    "verseOfTheDay": "今日の節",
+    "hadithOfTheDay": "今日のハディース",
+    "esmaOfTheDay": "今日の御名",
+    "duaOfTheDay": "今日のドゥアー"
+  },
+  "prayerTimes": {
+    "imsak": "ファジュル",
+    "gunes": "日の出",
+    "ogle": "ズフル",
+    "ikindi": "アスル",
+    "aksam": "マグリブ",
+    "yatsi": "イシャー"
+  },
+  "hatim": {
+    "individual": "個人",
+    "collaborative": "共同",
+    "weeklyHatim": "週のハティム",
+    "completed": "完了",
+    "completeHatimBtn": "ハティム完了",
+    "juzSelection": "ジュズ選択",
+    "activeHatims": "進行中のハティム",
+    "startNew": "新しく始める",
+    "noActiveHatim": "現在共同ハティムはありません。",
+    "newCollaborativeHatim": "新しい共同ハティム",
+    "hatimTitleLabel": "ハティムのタイトル",
+    "hatimTitlePlaceholder": "例：ラマダン・ハティム",
+    "startBtn": "開始",
+    "participantName": "参加者名",
+    "namePlaceholder": "名前を入力...",
+    "takeJuz": "取る",
+    "juzDetails": "ジュズの詳細",
+    "startSurah": "開始の章:",
+    "pages": "ページ数:",
+    "containsSurahs": "含まれる章:",
+    "congratsSaved": "おめでとうございます！ハティムが保存されました。",
+    "enterNameAlert": "名前を入力してください。",
+    "enterTitleAlert": "タイトルを入力してください。",
+    "topHatimBadge": "最もアクティブなハトム",
+    "leaderboardTitle": "トップ貢献者",
+    "unnamedParticipant": "匿名",
+    "inviteShareMessage": "「{{title}}」の共同ハトム（完読）に参加して、ジュズを担当して一緒にクルアーンを読みましょう 🕌📖\n\nアプリをお持ちの方：{{deepLink}}\n\nまだお持ちでない方：{{playStore}}",
+    "completionShareMessage": "🎉 全30ジュズを読み終え、ハトムを達成しました！アルハムドゥリッラー 📖🕌\n\n今回で{{count}}回目のハトムです。あなたも記録を始めましょう：{{playStore}}",
+    "progressShareMessage": "📖 今週は {{completed}}/30 ジュズ（{{percentage}}%）を完了しました。\n\n「Ezan Vakti + Hatim」で記録しよう：{{playStore}}",
+    "rewardUnlocked": "🎁 素晴らしい！共有のおかげで{{days}}日間の広告非表示特典を獲得しました。",
+    "rewardBannerText": "あと{{count}}回共有して{{days}}日間の広告非表示特典を獲得しよう 🎁",
+    "juzCountShort": "ジュズ"
+  },
+  "settings": {
+    "title": "設定",
+    "notifications": "通知",
+    "language": "言語",
+    "sound": "アザーン音",
+    "reminder": "礼拝前のリマインダー",
+    "theme": "テーマ",
+    "themeLight": "ライト",
+    "themeDark": "ダーク",
+    "support": "サポートと情報",
+    "rateApp": "アプリを評価",
+    "feedback": "フィードバックを送信",
+    "about": "アプリについて",
+    "widgetPreview": "ウィジェットプレビュー",
+    "widgetNext": "次へ",
+    "widgetHint": "ホーム画面を長押ししてウィジェットを追加できます。"
+  },
+  "common": {
+    "cancel": "キャンセル",
+    "save": "保存",
+    "close": "閉じる",
+    "search": "検索...",
+    "errorGeneric": "エラーが発生しました。"
+  },
+  "esma": {
+    "title": "アッラーの美名",
+    "search": "名前や意味を検索..."
+  },
+  "kaza": {
+    "title": "未実施の礼拝",
+    "subtitle": "欠かした礼拝の記録・管理",
+    "sabah": "ファジュル",
+    "ogle": "ズフル",
+    "ikindi": "アスル",
+    "aksam": "マグリブ",
+    "yatsi": "イーシャー",
+    "vitir": "ウィトル",
+    "completionShareMessage": "🎉 カザー（未実施の礼拝）をすべて完了しました。アルハムドゥリッラー！ 🕌\n\n「Ezan Vakti + Hatim」で未実施の礼拝を記録しよう：{{playStore}}"
+  },
+  "qibla": {
+    "title": "キブラコンパス",
+    "subtitle": "キブラ方向検出",
+    "yourDirection": "現在の向き",
+    "qiblaAngle": "キブラの角度",
+    "aligned": "キブラに向いています",
+    "hint": "端末を水平に保ち、針に従ってください。"
+  },
+  "dua": {
+    "headerTitle": "ドゥアーライブラリ",
+    "headerSubtitle": "祈りは信者の武器",
+    "featuredBadge": "今日のドゥアー",
+    "meaningLabel": "意味",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\n意味：{{meaning}}\n\n出典：{{source}}\n\nEzan Vakti + Hatim より共有"
+  },
+  "splash": {
+    "subtitle": "礼拝時間、ハトム、ドゥアーをこれひとつで"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 今日のドゥアー",
+    "dailyDuaBody": "{{title}} — タップして読む",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "今日もハトムの読誦を進めるのをお忘れなく 📖",
+    "eveningMsg2": "夕暮れ時に、ドゥアーで心を穏やかにしましょう 🤲",
+    "eveningMsg3": "少し時間をつくって、未実施の礼拝（カザー）を行いましょう 🕌",
+    "eveningMsg4": "今日ズィクルを行いましたか？神を想うことは心に平安をもたらします ✨",
+    "noJuzThisWeek": "今週はまだジュズを記録していません。ひとつ始めてみませんか？ 📖",
+    "kazaDebtReminder": "未実施の礼拝が{{count}}回残っています。今夜いくつか行ってみませんか？ 🕌",
+    "streakReminder": "{{streak}}日連続記録が続いています！今日も頑張りましょう 🔥",
+    "prayerTitle": "{{prayer}}の時間",
+    "prayerBody": "{{city}}の{{prayer}}の時間になりました。"
+  }
 }

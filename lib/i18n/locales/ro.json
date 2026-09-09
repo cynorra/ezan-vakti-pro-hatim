@@ -4,13 +4,15 @@
     "qibla": "Qibla",
     "hatim": "Hatim",
     "dua": "Dua",
-    "dhikr": "Zikr"
+    "dhikr": "Zikr",
+    "kaza": "Qada"
   },
   "home": {
     "nextPrayerCountdown": "Timp rămas",
     "verseOfTheDay": "Versetul zilei",
     "hadithOfTheDay": "Hadithul zilei",
-    "esmaOfTheDay": "Numele zilei"
+    "esmaOfTheDay": "Numele zilei",
+    "duaOfTheDay": "Dua zilei"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -41,7 +43,18 @@
     "startSurah": "Sura de început:",
     "pages": "Pagini:",
     "containsSurahs": "Conține sure:",
-    "congratsSaved": "Felicitări! Hatim-ul a fost salvat."
+    "congratsSaved": "Felicitări! Hatim-ul a fost salvat.",
+    "enterNameAlert": "Vă rugăm să introduceți numele.",
+    "enterTitleAlert": "Vă rugăm să introduceți un titlu.",
+    "topHatimBadge": "CEL MAI ACTIV HATIM",
+    "leaderboardTitle": "TOP CONTRIBUITORI",
+    "unnamedParticipant": "Anonim",
+    "inviteShareMessage": "Alătură-te la khatmul colectiv „{{title}}”, alege un juz și hai să citim Coranul împreună 🕌📖\n\nDacă ai deja aplicația: {{deepLink}}\n\nDacă nu: {{playStore}}",
+    "completionShareMessage": "🎉 Am citit toate cele 30 de juz-uri și am terminat khatmul! Alhamdulillah 📖🕌\n\nAcesta este khatmul meu #{{count}}. Începe să-ți monitorizezi lectura: {{playStore}}",
+    "progressShareMessage": "📖 Am completat {{completed}}/30 de juz-uri în această săptămână ({{percentage}}%).\n\nUrmărește progresul cu Ezan Vakti + Hatim: {{playStore}}",
+    "rewardUnlocked": "🎁 Minunat! Datorită distribuirilor tale, ai deblocat {{days}} zile fără reclame.",
+    "rewardBannerText": "Distribuie încă de {{count}} ori pentru a debloca {{days}} zile fără reclame 🎁",
+    "juzCountShort": "juz"
   },
   "settings": {
     "title": "Setări",
@@ -72,6 +85,46 @@
     "cancel": "Anulare",
     "save": "Salvare",
     "close": "Închide",
-    "search": "Căutare..."
+    "search": "Căutare...",
+    "errorGeneric": "A apărut o eroare."
+  },
+  "esma": {
+    "title": "Numele lui Allah",
+    "search": "Căutați nume sau semnificație..."
+  },
+  "kaza": {
+    "title": "RUGĂCIUNI RECUPERABILE",
+    "subtitle": "Urmăriți rugăciunile ratate",
+    "sabah": "Fajr",
+    "ogle": "Dhuhr",
+    "ikindi": "Asr",
+    "aksam": "Maghrib",
+    "yatsi": "Isha",
+    "vitir": "Witr",
+    "completionShareMessage": "🎉 Am recuperat toate rugăciunile mele ratate, Alhamdulillah! 🕌\n\nUrmărește-ți rugăciunile recuperabile cu Ezan Vakti + Hatim: {{playStore}}"
+  },
+  "dua": {
+    "headerTitle": "BIBLIOTECĂ DE DUA",
+    "headerSubtitle": "Rugăciunea este arma credinciosului",
+    "featuredBadge": "DUA ZILEI",
+    "meaningLabel": "SEMNIFICAȚIE",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nSemnificație: {{meaning}}\n\nSursă: {{source}}\n\nDistribuit din Ezan Vakti + Hatim."
+  },
+  "splash": {
+    "subtitle": "Orele de rugăciune, khatm și dua într-un singur loc"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 Dua zilei",
+    "dailyDuaBody": "{{title}} — atinge pentru a citi",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "Nu uita să citești câteva versete pentru khatmul tău astăzi 📖",
+    "eveningMsg2": "Odată cu lăsarea serii, liniștește-ți inima cu o rugăciune dua 🤲",
+    "eveningMsg3": "Ai câteva minute pentru rugăciunile ratate? 🕌",
+    "eveningMsg4": "Ai făcut dhikr astăzi? Pomenirea lui Allah aduce liniște în suflet ✨",
+    "noJuzThisWeek": "Nu ai marcat niciun juz săptămâna aceasta, ce-ar fi să începi cu unul? 📖",
+    "kazaDebtReminder": "Ai {{count}} rugăciuni de recuperat în așteptare, poți recupera câteva în această seară 🕌",
+    "streakReminder": "Seria ta de {{streak}} zile continuă, menține-o și astăzi! 🔥",
+    "prayerTitle": "Timpul pentru {{prayer}}",
+    "prayerBody": "A sosit timpul pentru rugăciunea {{prayer}} în {{city}}."
   }
 }

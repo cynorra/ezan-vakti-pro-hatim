@@ -1,8 +1,130 @@
 {
-  "tabs": { "home": "Accueil", "qibla": "Qibla", "hatim": "Khatm", "dua": "Doua", "dhikr": "Dhikr" },
-  "home": { "nextPrayerCountdown": "Temps restant", "verseOfTheDay": "Verset du jour", "hadithOfTheDay": "Hadith du jour", "esmaOfTheDay": "Nom du jour" },
-  "prayerTimes": { "imsak": "Fajr", "gunes": "Lever du soleil", "ogle": "Dhuhr", "ikindi": "Asr", "aksam": "Maghrib", "yatsi": "Isha" },
-  "hatim": { "individual": "Individuel", "collaborative": "Collaboratif", "weeklyHatim": "Khatm Hebdomadaire", "completed": "Terminé", "completeHatimBtn": "TERMINER KHATM", "juzSelection": "SÉLECTION DE JUZ", "activeHatims": "KHATMS ACTIFS", "startNew": "Démarrer nouveau", "noActiveHatim": "Aucun khatm collaboratif actif.", "newCollaborativeHatim": "Nouveau Khatm Collaboratif", "hatimTitleLabel": "Titre du Khatm", "hatimTitlePlaceholder": "ex: Khatm Ramadan", "startBtn": "DÉMARRER", "participantName": "Nom du participant", "namePlaceholder": "Entrez votre nom...", "takeJuz": "PRENDRE", "juzDetails": "Détails du Juz", "startSurah": "Sourate de début:", "pages": "Pages:", "containsSurahs": "Contient les sourates:", "congratsSaved": "Félicitations! Votre Khatm est enregistré." },
-  "settings": { "title": "Paramètres", "notifications": "Notifications", "language": "Langue" },
-  "common": { "cancel": "Annuler", "save": "Enregistrer", "close": "Fermer", "search": "Rechercher..." }
+  "tabs": {
+    "home": "Accueil",
+    "qibla": "Qibla",
+    "hatim": "Khatm",
+    "dua": "Doua",
+    "dhikr": "Dhikr",
+    "kaza": "Qada"
+  },
+  "home": {
+    "nextPrayerCountdown": "Temps restant",
+    "verseOfTheDay": "Verset du jour",
+    "hadithOfTheDay": "Hadith du jour",
+    "esmaOfTheDay": "Nom du jour",
+    "duaOfTheDay": "Invocation du jour"
+  },
+  "prayerTimes": {
+    "imsak": "Fajr",
+    "gunes": "Lever du soleil",
+    "ogle": "Dhuhr",
+    "ikindi": "Asr",
+    "aksam": "Maghrib",
+    "yatsi": "Isha"
+  },
+  "hatim": {
+    "individual": "Individuel",
+    "collaborative": "Collaboratif",
+    "weeklyHatim": "Khatm Hebdomadaire",
+    "completed": "Terminé",
+    "completeHatimBtn": "TERMINER KHATM",
+    "juzSelection": "SÉLECTION DE JUZ",
+    "activeHatims": "KHATMS ACTIFS",
+    "startNew": "Démarrer nouveau",
+    "noActiveHatim": "Aucun khatm collaboratif actif.",
+    "newCollaborativeHatim": "Nouveau Khatm Collaboratif",
+    "hatimTitleLabel": "Titre du Khatm",
+    "hatimTitlePlaceholder": "ex: Khatm Ramadan",
+    "startBtn": "DÉMARRER",
+    "participantName": "Nom du participant",
+    "namePlaceholder": "Entrez votre nom...",
+    "takeJuz": "PRENDRE",
+    "juzDetails": "Détails du Juz",
+    "startSurah": "Sourate de début:",
+    "pages": "Pages:",
+    "containsSurahs": "Contient les sourates:",
+    "congratsSaved": "Félicitations! Votre Khatm est enregistré.",
+    "enterNameAlert": "Veuillez entrer votre nom.",
+    "enterTitleAlert": "Veuillez entrer un titre.",
+    "topHatimBadge": "KHATM LE PLUS ACTIF",
+    "leaderboardTitle": "MEILLEURS CONTRIBUTEURS",
+    "unnamedParticipant": "Anonyme",
+    "inviteShareMessage": "Rejoignez le khatm collectif « {{title}} », prenez un juz et lisons le Coran ensemble 🕌📖\n\nSi vous avez déjà l'application : {{deepLink}}\n\nSinon : {{playStore}}",
+    "completionShareMessage": "🎉 J'ai terminé les 30 juz, mon khatm est accompli ! Alhamdulillah 📖🕌\n\nC'est mon khatm n°{{count}}. Commencez à suivre le vôtre aussi : {{playStore}}",
+    "progressShareMessage": "📖 J'ai terminé {{completed}}/30 juz cette semaine ({{percentage}}%).\n\nSuivez le vôtre avec Ezan Vakti + Hatim : {{playStore}}",
+    "rewardUnlocked": "🎁 Génial ! Grâce à vos partages, vous avez débloqué {{days}} jours sans publicité.",
+    "rewardBannerText": "Partagez encore {{count}} fois pour débloquer {{days}} jours sans publicité 🎁",
+    "juzCountShort": "juz"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "notifications": "Notifications",
+    "language": "Langue",
+    "sound": "Son de l'Adhan",
+    "reminder": "Rappel avant la prière",
+    "theme": "Thème",
+    "themeLight": "Clair",
+    "themeDark": "Sombre",
+    "support": "Support & Infos",
+    "rateApp": "Évaluer l'application",
+    "feedback": "Envoyer vos remarques",
+    "about": "À propos",
+    "widgetPreview": "APERÇU DU WIDGET",
+    "widgetNext": "Prochaine",
+    "widgetHint": "Appuyez longuement sur votre écran d'accueil pour ajouter le widget."
+  },
+  "common": {
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "close": "Fermer",
+    "search": "Rechercher...",
+    "errorGeneric": "Une erreur est survenue."
+  },
+  "esma": {
+    "title": "Les Noms d'Allah",
+    "search": "Rechercher un nom ou un sens..."
+  },
+  "kaza": {
+    "title": "PRIÈRES MANQUÉES",
+    "subtitle": "Suivez vos prières manquées",
+    "sabah": "Fajr",
+    "ogle": "Dhuhr",
+    "ikindi": "Asr",
+    "aksam": "Maghrib",
+    "yatsi": "Isha",
+    "vitir": "Witr",
+    "completionShareMessage": "🎉 J'ai rattrapé toutes mes prières manquées, Alhamdulillah ! 🕌\n\nSuivez vos prières manquées avec Ezan Vakti + Hatim : {{playStore}}"
+  },
+  "qibla": {
+    "title": "BOUSSOLE QIBLA",
+    "subtitle": "Recherche de la direction de la Qibla",
+    "yourDirection": "VOTRE DIRECTION",
+    "qiblaAngle": "ANGLE DE LA QIBLA",
+    "aligned": "ALIGNÉ AVEC LA QIBLA",
+    "hint": "Posez votre appareil à plat et suivez l'aiguille."
+  },
+  "dua": {
+    "headerTitle": "BIBLIOTHÈQUE D'INVOCATIONS",
+    "headerSubtitle": "L'invocation est l'arme du croyant",
+    "featuredBadge": "INVOCATION DU JOUR",
+    "meaningLabel": "SIGNIFICATION",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nSignification : {{meaning}}\n\nSource : {{source}}\n\nPartagé depuis Ezan Vakti + Hatim."
+  },
+  "splash": {
+    "subtitle": "Heures de prière, khatm et invocations réunis"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 Invocation du jour",
+    "dailyDuaBody": "{{title}} — appuyez pour lire",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "N'oubliez pas de lire un verset pour votre khatm aujourd'hui 📖",
+    "eveningMsg2": "À l'approche du soir, apaisez votre cœur avec une invocation 🤲",
+    "eveningMsg3": "Avez-vous quelques minutes pour vos prières manquées ? 🕌",
+    "eveningMsg4": "Avez-vous fait votre dhikr aujourd'hui ? Le souvenir apporte la paix au cœur ✨",
+    "noJuzThisWeek": "Vous n'avez pas encore validé de juz cette semaine, pourquoi ne pas commencer ? 📖",
+    "kazaDebtReminder": "Vous avez {{count}} prières manquées en attente, vous pourriez en rattraper ce soir 🕌",
+    "streakReminder": "Votre série de {{streak}} jours continue, maintenez-la aujourd'hui aussi 🔥",
+    "prayerTitle": "Heure de {{prayer}}",
+    "prayerBody": "C'est l'heure de {{prayer}} à {{city}}."
+  }
 }

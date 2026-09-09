@@ -1,8 +1,130 @@
 {
-  "tabs": { "home": "হোম", "qibla": "কিবলা", "hatim": "খতম", "dua": "দুআ", "dhikr": "জিকির" },
-  "home": { "nextPrayerCountdown": "বাকি সময়", "verseOfTheDay": "আজকের আয়াত", "hadithOfTheDay": "আজকের হাদিস", "esmaOfTheDay": "আজকের নাম" },
-  "prayerTimes": { "imsak": "ফজর", "gunes": "সূর্যোদয়", "ogle": "যোহর", "ikindi": "আসর", "aksam": "মাগরিব", "yatsi": "এশা" },
-  "hatim": { "individual": "ব্যক্তিগত", "collaborative": "সম্মিলিত", "weeklyHatim": "সাপ্তাহিক খতম", "completed": "সম্পন্ন", "completeHatimBtn": "খতম সম্পন্ন করুন", "juzSelection": "পারা নির্বাচন", "activeHatims": "সক্রিয় খতম", "startNew": "নতুন শুরু করুন", "noActiveHatim": "এখনো কোনো সক্রিয় সম্মিলিত খতম নেই।", "newCollaborativeHatim": "নতুন সম্মিলিত খতম", "hatimTitleLabel": "খতমের শিরোনাম", "hatimTitlePlaceholder": "যেমন, রমজান খতম", "startBtn": "শুরু করুন", "participantName": "অংশগ্রহণকারীর নাম", "namePlaceholder": "আপনার নাম লিখুন...", "takeJuz": "নিন", "juzDetails": "পারা বিস্তারিত", "startSurah": "শুরুর সূরা:", "pages": "পৃষ্ঠা:", "containsSurahs": "যেসব সূরা আছে:", "congratsSaved": "অভিনন্দন! আপনার খতম সেভ হয়েছে।" },
-  "settings": { "title": "সেটিংস", "notifications": "বিজ্ঞপ্তি", "language": "ভাষা" },
-  "common": { "cancel": "বাতিল", "save": "সেভ", "close": "বন্ধ", "search": "অনুসন্ধান..." }
+  "tabs": {
+    "home": "হোম",
+    "qibla": "কিবলা",
+    "hatim": "খতম",
+    "dua": "দুআ",
+    "dhikr": "জিকির",
+    "kaza": "ক্বাযা"
+  },
+  "home": {
+    "nextPrayerCountdown": "বাকি সময়",
+    "verseOfTheDay": "আজকের আয়াত",
+    "hadithOfTheDay": "আজকের হাদিস",
+    "esmaOfTheDay": "আজকের নাম",
+    "duaOfTheDay": "আজকের দু'আ"
+  },
+  "prayerTimes": {
+    "imsak": "ফজর",
+    "gunes": "সূর্যোদয়",
+    "ogle": "যোহর",
+    "ikindi": "আসর",
+    "aksam": "মাগরিব",
+    "yatsi": "এশা"
+  },
+  "hatim": {
+    "individual": "ব্যক্তিগত",
+    "collaborative": "সম্মিলিত",
+    "weeklyHatim": "সাপ্তাহিক খতম",
+    "completed": "সম্পন্ন",
+    "completeHatimBtn": "খতম সম্পন্ন করুন",
+    "juzSelection": "পারা নির্বাচন",
+    "activeHatims": "সক্রিয় খতম",
+    "startNew": "নতুন শুরু করুন",
+    "noActiveHatim": "এখনো কোনো সক্রিয় সম্মিলিত খতম নেই।",
+    "newCollaborativeHatim": "নতুন সম্মিলিত খতম",
+    "hatimTitleLabel": "খতমের শিরোনাম",
+    "hatimTitlePlaceholder": "যেমন, রমজান খতম",
+    "startBtn": "শুরু করুন",
+    "participantName": "অংশগ্রহণকারীর নাম",
+    "namePlaceholder": "আপনার নাম লিখুন...",
+    "takeJuz": "নিন",
+    "juzDetails": "পারা বিস্তারিত",
+    "startSurah": "শুরুর সূরা:",
+    "pages": "পৃষ্ঠা:",
+    "containsSurahs": "যেসব সূরা আছে:",
+    "congratsSaved": "অভিনন্দন! আপনার খতম সেভ হয়েছে।",
+    "enterNameAlert": "অনুগ্রহ করে আপনার নাম লিখুন।",
+    "enterTitleAlert": "অনুগ্রহ করে একটি শিরোনাম লিখুন।",
+    "topHatimBadge": "সর্বাধিক সক্রিয় খতম",
+    "leaderboardTitle": "শীর্ষ অংশগ্রহণকারী",
+    "unnamedParticipant": "বেনামী",
+    "inviteShareMessage": "«{{title}}» সম্মিলিত খতমে যোগ দিন, একটি পারা বেছে নিন এবং একসাথে কুরআন তিলাওয়াত করি 🕌📖\n\nযদি আপনার অ্যাপটি ইনস্টল করা থাকে: {{deepLink}}\n\nনা থাকলে: {{playStore}}",
+    "completionShareMessage": "🎉 আলহামদুলিল্লাহ, আমি ৩০ পারা সম্পন্ন করে খতম শেষ করেছি! 📖🕌\n\nএটি আমার #{{count}} তম খতম। আপনিও শুরু করুন: {{playStore}}",
+    "progressShareMessage": "📖 এই সপ্তাহে আমি {{completed}}/30 পারা সম্পন্ন করেছি ({{percentage}}%)।\n\nEzan Vakti + Hatim দিয়ে আপনার অগ্রগতি ট্র্যাক করুন: {{playStore}}",
+    "rewardUnlocked": "🎁 অসাধারণ! শেয়ার করার জন্য আপনি {{days}} দিন বিজ্ঞাপন-মুক্ত সুবিধা আনলক করেছেন।",
+    "rewardBannerText": "আরও {{count}} বার শেয়ার করে {{days}} দিনের বিজ্ঞাপন-মুক্ত সুবিধা আনলক করুন 🎁",
+    "juzCountShort": "পারা"
+  },
+  "settings": {
+    "title": "সেটিংস",
+    "notifications": "বিজ্ঞপ্তি",
+    "language": "ভাষা",
+    "sound": "আযানের সুর",
+    "reminder": "নামাজের পূর্ব সতর্কতা",
+    "theme": "থিম",
+    "themeLight": "লাইট",
+    "themeDark": "ডার্ক",
+    "support": "সহায়তা ও তথ্য",
+    "rateApp": "রেটিং দিন",
+    "feedback": "মতামত পাঠান",
+    "about": "সম্পর্কে",
+    "widgetPreview": "উইজেট প্রিভিউ",
+    "widgetNext": "পরবর্তী",
+    "widgetHint": "উইজেট যোগ করতে হোম স্ক্রিনে চেপে ধরে রাখুন।"
+  },
+  "common": {
+    "cancel": "বাতিল",
+    "save": "সেভ",
+    "close": "বন্ধ",
+    "search": "অনুসন্ধান...",
+    "errorGeneric": "একটি ত্রুটি ঘটেছে।"
+  },
+  "esma": {
+    "title": "আল্লাহর নামসমূহ",
+    "search": "নাম বা অর্থ অনুসন্ধান করুন..."
+  },
+  "kaza": {
+    "title": "ক্বাযা নামাজ",
+    "subtitle": "আপনার ক্বাযা নামাজের হিসাব রাখুন",
+    "sabah": "ফজর",
+    "ogle": "যোহর",
+    "ikindi": "আসর",
+    "aksam": "মাগরিব",
+    "yatsi": "ইশা",
+    "vitir": "বিতর",
+    "completionShareMessage": "🎉 আলহামদুলিল্লাহ, আমি আমার সমস্ত ক্বাযা নামাজ সম্পন্ন করেছি! 🕌\n\nEzan Vakti + Hatim অ্যাপের মাধ্যমে আপনার ক্বাযা নামাজের হিসাব রাখুন: {{playStore}}"
+  },
+  "qibla": {
+    "title": "কিবলা কম্পাস",
+    "subtitle": "কিবলার দিক নির্দেশক",
+    "yourDirection": "আপনার দিক",
+    "qiblaAngle": "কিবলার কোণ",
+    "aligned": "কিবলামুখী হয়েছে",
+    "hint": "ফোনটি সমতলে রাখুন এবং নির্দেশক কাঁটা অনুসরণ করুন।"
+  },
+  "dua": {
+    "headerTitle": "দু'আ ভাণ্ডার",
+    "headerSubtitle": "দু'আ মুমিনের হাতিয়ার",
+    "featuredBadge": "আজকের দু'আ",
+    "meaningLabel": "অর্থ",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nঅর্থ: {{meaning}}\n\nউৎস: {{source}}\n\nEzan Vakti + Hatim থেকে শেয়ার করা হয়েছে।"
+  },
+  "splash": {
+    "subtitle": "নামাজের সময়সূচি, খতম এবং দু'আ এক সাথে"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 আজকের দু'আ",
+    "dailyDuaBody": "{{title}} — পড়তে ট্যাপ করুন",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "আজ আপনার খতমের কিছু আয়াত তিলাওয়াত করতে ভুলবেন না 📖",
+    "eveningMsg2": "সন্ধ্যা ঘনিয়ে আসছে, দু'আ দিয়ে মনকে প্রশান্ত করুন 🤲",
+    "eveningMsg3": "ক্বাযা নামাজের জন্য কয়েক মিনিট সময় হবে কি? 🕌",
+    "eveningMsg4": "আজ যিকির করেছেন তো? আল্লাহর স্মরণেই অন্তরে প্রশান্তি মেলে ✨",
+    "noJuzThisWeek": "এই সপ্তাহে এখনও কোনো পারা চিহ্নিত করেননি, আজ একটি দিয়ে শুরু করবেন? 📖",
+    "kazaDebtReminder": "আপনার {{count}}টি ক্বাযা নামাজ বাকি রয়েছে, আজ রাতে কিছু আদায় করে নিতে পারেন 🕌",
+    "streakReminder": "আপনার {{streak}} দিনের ধারাবাহিকতা চলছে, আজকেও বজায় রাখুন 🔥",
+    "prayerTitle": "{{prayer}}-এর ওয়াক্ত",
+    "prayerBody": "{{city}}-তে এখন {{prayer}}-এর ওয়াক্ত শুরু হয়েছে।"
+  }
 }

@@ -4,13 +4,15 @@
     "qibla": "Кибла",
     "hatim": "Хатм",
     "dua": "Дуа",
-    "dhikr": "Зикр"
+    "dhikr": "Зикр",
+    "kaza": "Каза"
   },
   "home": {
     "nextPrayerCountdown": "Осталось времени",
     "verseOfTheDay": "Аят дня",
     "hadithOfTheDay": "Хадис дня",
-    "esmaOfTheDay": "Имя дня"
+    "esmaOfTheDay": "Имя дня",
+    "duaOfTheDay": "Дуа дня"
   },
   "prayerTimes": {
     "imsak": "Фаджр",
@@ -41,7 +43,18 @@
     "startSurah": "Начальная сура:",
     "pages": "Страницы:",
     "containsSurahs": "Содержит суры:",
-    "congratsSaved": "Поздравляем! Ваш хатм сохранен."
+    "congratsSaved": "Поздравляем! Ваш хатм сохранен.",
+    "enterNameAlert": "Пожалуйста, введите ваше имя.",
+    "enterTitleAlert": "Пожалуйста, введите название.",
+    "topHatimBadge": "САМЫЙ АКТИВНЫЙ ХАТМ",
+    "leaderboardTitle": "ТОП УЧАСТНИКОВ",
+    "unnamedParticipant": "Аноним",
+    "inviteShareMessage": "Присоединяйтесь к совместному хатму «{{title}}», возьмите джуз и давайте читать Коран вместе 🕌📖\n\nЕсли приложение уже установлено: {{deepLink}}\n\nЕсли нет: {{playStore}}",
+    "completionShareMessage": "🎉 Я прочитал(а) все 30 джузов и завершил(а) хатм! Альхамдулиллях 📖🕌\n\nЭто мой хатм №{{count}}. Начните отслеживать свой: {{playStore}}",
+    "progressShareMessage": "📖 На этой неделе я прочитал(а) {{completed}}/30 джузов ({{percentage}}%).\n\nОтслеживайте свой прогресс с Ezan Vakti + Hatim: {{playStore}}",
+    "rewardUnlocked": "🎁 Отлично! Благодаря вашим репостам вы получили {{days}} дн. без рекламы.",
+    "rewardBannerText": "Поделитесь еще {{count}} раз(а), чтобы получить {{days}} дн. без рекламы 🎁",
+    "juzCountShort": "джуз"
   },
   "settings": {
     "title": "Настройки",
@@ -72,6 +85,46 @@
     "cancel": "Отмена",
     "save": "Сохранить",
     "close": "Закрыть",
-    "search": "Поиск..."
+    "search": "Поиск...",
+    "errorGeneric": "Что-то пошло не так."
+  },
+  "esma": {
+    "title": "Имена Аллаха",
+    "search": "Поиск по имени или значению..."
+  },
+  "kaza": {
+    "title": "ПРОПУЩЕННЫЕ НАМАЗЫ",
+    "subtitle": "Отслеживайте пропущенные намазы",
+    "sabah": "Фаджр",
+    "ogle": "Зухр",
+    "ikindi": "Аср",
+    "aksam": "Магриб",
+    "yatsi": "Иша",
+    "vitir": "Витр",
+    "completionShareMessage": "🎉 Я восполнил(а) все пропущенные намазы, Альхамдулиллях! 🕌\n\nОтслеживайте пропущенные намазы в Ezan Vakti + Hatim: {{playStore}}"
+  },
+  "dua": {
+    "headerTitle": "БИБЛИОТЕКА ДУА",
+    "headerSubtitle": "Дуа — оружие верующего",
+    "featuredBadge": "ДУА ДНЯ",
+    "meaningLabel": "ЗНАЧЕНИЕ",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nЗначение: {{meaning}}\n\nИсточник: {{source}}\n\nОтправлено из Ezan Vakti + Hatim."
+  },
+  "splash": {
+    "subtitle": "Время намаза, хатм и дуа в одном месте"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 Дуа дня",
+    "dailyDuaBody": "{{title}} — нажмите, чтобы прочитать",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "Не забудьте сегодня почитать Коран для хатма 📖",
+    "eveningMsg2": "С наступлением вечера утешьте свое сердце дуа 🤲",
+    "eveningMsg3": "Есть пару минут для пропущенных намазов? 🕌",
+    "eveningMsg4": "Вы совершали сегодня зикр? Поминание приносит покой в сердце ✨",
+    "noJuzThisWeek": "Вы еще не отмечали джуз на этой неделе, почему бы не начать? 📖",
+    "kazaDebtReminder": "У вас {{count}} пропущенных намазов. Можно восполнить несколько сегодня вечером 🕌",
+    "streakReminder": "Ваша серия длится {{streak}} дн. Продолжайте в том же духе 🔥",
+    "prayerTitle": "Время намаза {{prayer}}",
+    "prayerBody": "Наступило время намаза {{prayer}} для {{city}}."
   }
 }

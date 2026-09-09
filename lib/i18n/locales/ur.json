@@ -1,8 +1,130 @@
 {
-  "tabs": { "home": "ہوم", "qibla": "قبلہ", "hatim": "ختم", "dua": "دعا", "dhikr": "ذکر" },
-  "home": { "nextPrayerCountdown": "باقی وقت", "verseOfTheDay": "آج کی آیت", "hadithOfTheDay": "آج کی حدیث", "esmaOfTheDay": "آج کا نام" },
-  "prayerTimes": { "imsak": "فجر", "gunes": "طلوع آفتاب", "ogle": "ظہر", "ikindi": "عصر", "aksam": "مغرب", "yatsi": "عشاء" },
-  "hatim": { "individual": "انفرادی", "collaborative": "اجتماعی", "weeklyHatim": "ہفتہ وار ختم", "completed": "مکمل", "completeHatimBtn": "ختم مکمل کریں", "juzSelection": "پارہ کا انتخاب", "activeHatims": "فعال ختم", "startNew": "نیا شروع کریں", "noActiveHatim": "ابھی تک کوئی فعال اجتماعی ختم نہیں ہے۔", "newCollaborativeHatim": "نیا اجتماعی ختم", "hatimTitleLabel": "ختم کا عنوان", "hatimTitlePlaceholder": "مثال کے طور پر، رمضان ختم", "startBtn": "شروع کریں", "participantName": "حصہ لینے والے کا نام", "namePlaceholder": "اپنا نام درج کریں...", "takeJuz": "لیں", "juzDetails": "پارہ کی تفصیلات", "startSurah": "شروع کی سورہ:", "pages": "صفحات:", "containsSurahs": "شامل سورتیں:", "congratsSaved": "مبارک ہو! آپ کا ختم محفوظ ہو گیا ہے۔" },
-  "settings": { "title": "ترتیبات", "notifications": "اطلاعات", "language": "زبان" },
-  "common": { "cancel": "منسوخ کریں", "save": "محفوظ کریں", "close": "بند کریں", "search": "تلاش کریں..." }
+  "tabs": {
+    "home": "ہوم",
+    "qibla": "قبلہ",
+    "hatim": "ختم",
+    "dua": "دعا",
+    "dhikr": "ذکر",
+    "kaza": "قضاء"
+  },
+  "home": {
+    "nextPrayerCountdown": "باقی وقت",
+    "verseOfTheDay": "آج کی آیت",
+    "hadithOfTheDay": "آج کی حدیث",
+    "esmaOfTheDay": "آج کا نام",
+    "duaOfTheDay": "آج کی دعا"
+  },
+  "prayerTimes": {
+    "imsak": "فجر",
+    "gunes": "طلوع آفتاب",
+    "ogle": "ظہر",
+    "ikindi": "عصر",
+    "aksam": "مغرب",
+    "yatsi": "عشاء"
+  },
+  "hatim": {
+    "individual": "انفرادی",
+    "collaborative": "اجتماعی",
+    "weeklyHatim": "ہفتہ وار ختم",
+    "completed": "مکمل",
+    "completeHatimBtn": "ختم مکمل کریں",
+    "juzSelection": "پارہ کا انتخاب",
+    "activeHatims": "فعال ختم",
+    "startNew": "نیا شروع کریں",
+    "noActiveHatim": "ابھی تک کوئی فعال اجتماعی ختم نہیں ہے۔",
+    "newCollaborativeHatim": "نیا اجتماعی ختم",
+    "hatimTitleLabel": "ختم کا عنوان",
+    "hatimTitlePlaceholder": "مثال کے طور پر، رمضان ختم",
+    "startBtn": "شروع کریں",
+    "participantName": "حصہ لینے والے کا نام",
+    "namePlaceholder": "اپنا نام درج کریں...",
+    "takeJuz": "لیں",
+    "juzDetails": "پارہ کی تفصیلات",
+    "startSurah": "شروع کی سورہ:",
+    "pages": "صفحات:",
+    "containsSurahs": "شامل سورتیں:",
+    "congratsSaved": "مبارک ہو! آپ کا ختم محفوظ ہو گیا ہے۔",
+    "enterNameAlert": "براہ کرم اپنا نام درج کریں۔",
+    "enterTitleAlert": "براہ کرم عنوان درج کریں۔",
+    "topHatimBadge": "سب سے زیادہ فعال ختم",
+    "leaderboardTitle": "نمایاں معاونین",
+    "unnamedParticipant": "گمنام",
+    "inviteShareMessage": "مشترکہ ختم قران \"{{title}}\" میں شامل ہوں، ایک پارہ لیں اور ساتھ مل کر قرآن پڑھیں 🕌📖\n\nاگر ایپ پہلے سے موجود ہے: {{deepLink}}\n\nاگر نہیں ہے تو ڈاؤنلوڈ کریں: {{playStore}}",
+    "completionShareMessage": "🎉 الحمد للہ، میں نے پورے 30 پارے مکمل کر کے اپنا ختم مکمل کر لیا! 📖🕌\n\nیہ میرا ختم نمبر {{count}} ہے۔ آپ بھی آغاز کریں: {{playStore}}",
+    "progressShareMessage": "📖 میں نے اس ہفتے {{completed}}/30 پارے مکمل کیے ہیں ({{percentage}}%)۔\n\nEzan Vakti + Hatim کے ساتھ اپنی پیش رفت درج کریں: {{playStore}}",
+    "rewardUnlocked": "🎁 زبردست! شیئر کرنے پر آپ کو {{days}} دن بغیر اشتہارات کے مل گئے ہیں۔",
+    "rewardBannerText": "{{days}} دن اشتہارات سے پاک ایپ کے لیے مزید {{count}} بار شیئر کریں 🎁",
+    "juzCountShort": "پارہ"
+  },
+  "settings": {
+    "title": "ترتیبات",
+    "notifications": "اطلاعات",
+    "language": "زبان",
+    "sound": "آوازِ اذان",
+    "reminder": "نماز سے قبل یاد دہانی",
+    "theme": "تھیم",
+    "themeLight": "لائٹ",
+    "themeDark": "ڈارک",
+    "support": "مدد و معلومات",
+    "rateApp": "ایپ کی درجہ بندی کریں",
+    "feedback": "رائے بھیجیں",
+    "about": "ایپ کے بارے میں",
+    "widgetPreview": "وجٹ کا پیش منظر",
+    "widgetNext": "اگلا",
+    "widgetHint": "وجٹ شامل کرنے کے لیے ہوم اسکرین پر دبا کر رکھیں۔"
+  },
+  "common": {
+    "cancel": "منسوخ کریں",
+    "save": "محفوظ کریں",
+    "close": "بند کریں",
+    "search": "تلاش کریں...",
+    "errorGeneric": "کوئی خرابی پیش آ گئی ہے۔"
+  },
+  "esma": {
+    "title": "اسمائے حسنیٰ",
+    "search": "نام یا معنی تلاش کریں..."
+  },
+  "kaza": {
+    "title": "قضاء نمازیں",
+    "subtitle": "اپنی قضاء نمازوں کا حساب رکھیں",
+    "sabah": "فجر",
+    "ogle": "ظہر",
+    "ikindi": "عصر",
+    "aksam": "مغرب",
+    "yatsi": "عشاء",
+    "vitir": "وتر",
+    "completionShareMessage": "🎉 الحمد للہ، میں نے اپنی تمام قضاء نمازیں مکمل کر لیں! 🕌\n\nEzan Vakti + Hatim کے ساتھ اپنی قضاء نمازوں کا حساب رکھیں: {{playStore}}"
+  },
+  "qibla": {
+    "title": "قبلہ نما",
+    "subtitle": "سمتِ قبلہ معلوم کریں",
+    "yourDirection": "آپ کا رخ",
+    "qiblaAngle": "زاویہ قبلہ",
+    "aligned": "قبلہ رخ ہو گیا",
+    "hint": "موبائل کو سیدھا رکھیں اور سوئی کی سمت دیکھیں۔"
+  },
+  "dua": {
+    "headerTitle": "مجموعہ دعائیں",
+    "headerSubtitle": "دعا مومن کا ہتھیار ہے",
+    "featuredBadge": "آج کی دعا",
+    "meaningLabel": "ترجمہ",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nترجمہ: {{meaning}}\n\nحوالہ: {{source}}\n\nEzan Vakti + Hatim سے شیئر کی گئی۔"
+  },
+  "splash": {
+    "subtitle": "اوقاتِ نماز، ختم اور دعائیں ایک ساتھ"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 آج کی دعا",
+    "dailyDuaBody": "{{title}} — پڑھنے کے لیے ٹیپ کریں",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "آج اپنے ختمِ قرآن میں سے چند آیات پڑھنا مت بھولیں 📖",
+    "eveningMsg2": "شام کے لمحات میں دعا کے ذریعے دل کو سکون بخشیں 🤲",
+    "eveningMsg3": "کیا قضاء نمازوں کے لیے چند منٹ نکال سکتے ہیں؟ 🕌",
+    "eveningMsg4": "کیا آج ذکر کیا؟ دلوں کا سکون اللہ کی یاد میں ہے ✨",
+    "noJuzThisWeek": "آپ نے اس ہفتے کوئی پارہ مکمل نہیں کیا، کیوں نہ ایک پارے سے شروعات کریں؟ 📖",
+    "kazaDebtReminder": "آپ کی {{count}} قضاء نمازیں باقی ہیں، آج رات کچھ ادا کر لیجیے 🕌",
+    "streakReminder": "آپ کا {{streak}} دن کا تسلسل جاری ہے، اسے آج بھی برقرار رکھیں 🔥",
+    "prayerTitle": "وقتِ {{prayer}}",
+    "prayerBody": "{{city}} میں {{prayer}} کا وقت ہو گیا ہے۔"
+  }
 }

@@ -19,13 +19,15 @@
     "ikindi": "العصر",
     "aksam": "المغرب",
     "yatsi": "العشاء",
-    "vitir": "الوتر"
+    "vitir": "الوتر",
+    "completionShareMessage": "🎉 أتممت قضاء جميع صلواتي الفائتة، الحمد لله! 🕌\n\nتتبع صلواتك الفائتة مع Ezan Vakti + Hatim: {{playStore}}"
   },
   "home": {
     "nextPrayerCountdown": "الوقت المتبقي",
     "verseOfTheDay": "آية اليوم",
     "hadithOfTheDay": "حديث اليوم",
-    "esmaOfTheDay": "اسم اليوم"
+    "esmaOfTheDay": "اسم اليوم",
+    "duaOfTheDay": "دعاء اليوم"
   },
   "prayerTimes": {
     "imsak": "الفجر",
@@ -56,7 +58,18 @@
     "startSurah": "سورة البداية:",
     "pages": "الصفحات:",
     "containsSurahs": "يحتوي على السور:",
-    "congratsSaved": "تهانينا! تم حفظ ختمك."
+    "congratsSaved": "تهانينا! تم حفظ ختمك.",
+    "enterNameAlert": "يرجى إدخال اسمك.",
+    "enterTitleAlert": "يرجى إدخال العنوان.",
+    "topHatimBadge": "الختمة الأكثر نشاطًا",
+    "leaderboardTitle": "أبرز المساهمين",
+    "unnamedParticipant": "مجهول",
+    "inviteShareMessage": "شارِك في ختمة \"{{title}}\" الجماعية، اختر جزءًا ولنقرأ القرآن معًا 🕌📖\n\nإذا كان التطبيق لديك بالفعل: {{deepLink}}\n\nإذا لم يكن لديك: {{playStore}}",
+    "completionShareMessage": "🎉 أتممت الـ 30 جزءًا وأنهيت ختمتي! الحمد لله 📖🕌\n\nهذه هي الختمة رقم {{count}} لي. ابدأ بتتبع ختمتك أيضًا: {{playStore}}",
+    "progressShareMessage": "📖 أتممت {{completed}}/30 جزءًا هذا الأسبوع ({{percentage}}%).\n\nتتبع ختمتك مع Ezan Vakti + Hatim: {{playStore}}",
+    "rewardUnlocked": "🎁 رائع! بفضل مشاركاتك، حصلت على {{days}} أيام بدون إعلانات.",
+    "rewardBannerText": "شارك {{count}} مرة إضافية للحصول على {{days}} أيام بدون إعلانات 🎁",
+    "juzCountShort": "جزء"
   },
   "settings": {
     "title": "الإعدادات",
@@ -87,6 +100,31 @@
     "cancel": "إلغاء",
     "save": "حفظ",
     "close": "إغلاق",
-    "search": "بحث..."
+    "search": "بحث...",
+    "errorGeneric": "حدث خطأ ما."
+  },
+  "dua": {
+    "headerTitle": "مكتبة الأدعية",
+    "headerSubtitle": "الدعاء سلاح المؤمن",
+    "featuredBadge": "دعاء اليوم",
+    "meaningLabel": "المعنى",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nالمعنى: {{meaning}}\n\nالمصدر: {{source}}\n\nتمت المشاركة من Ezan Vakti + Hatim."
+  },
+  "splash": {
+    "subtitle": "أوقات الصلاة والختمات والأدعية في مكان واحد"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 دعاء اليوم",
+    "dailyDuaBody": "{{title}} — اضغط للقراءة",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "لا تنسَ إضافة آية إلى ختمتك اليوم 📖",
+    "eveningMsg2": "مع حلول المساء، أرح قلبك بالدعاء 🤲",
+    "eveningMsg3": "هل لديك بضع دقائق لقضاء صلواتك الفائتة؟ 🕌",
+    "eveningMsg4": "هل أتممت أذكارك اليوم؟ بذكر الله تطمئن القلوب ✨",
+    "noJuzThisWeek": "لم تُكمل أي جزء هذا الأسبوع بعد، لمَ لا تبدأ بجزء الآن؟ 📖",
+    "kazaDebtReminder": "لديك {{count}} صلاة فائتة، يمكنك قضاء بعض منها الليلة 🕌",
+    "streakReminder": "سلسلة إنجازك مستمرة لـ {{streak}} يومًا، حافظ عليها اليوم أيضًا 🔥",
+    "prayerTitle": "وقت صلاة {{prayer}}",
+    "prayerBody": "حان وقت صلاة {{prayer}} في {{city}}."
   }
 }

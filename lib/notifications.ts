@@ -1,5 +1,76 @@
 import * as Notifications from 'expo-notifications';
 import { Platform } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { getDailyDua } from './data/duas';
+import { getCurrentStreak } from './streak';
+import i18n from './i18n';
+
+// SettingsModal, her namaz için ayrı aç/kapa tercihini bu anahtar altında saklıyor
+// (fajr/sunrise/dhuhr/asr/maghrib/isha). Türkçe vakit adları burada dahili anahtar
+// olarak kullanılıyor (kimlik/identifier üretimi ve ayar eşlemesi için) — bunlar
+// görüntülenen metin DEĞİL, sadece kod içi sabitler; kullanıcıya gösterilen isim
+// PRAYER_NAME_TO_I18N_KEY üzerinden ayrıca çevriliyor.
+const PRAYER_SETTINGS_KEY = 'prayer_notifications';
+const PRAYER_NAME_TO_SETTINGS_KEY: Record<string, string> = {
+  'İmsak': 'fajr',
+  'Güneş': 'sunrise',
+  'Öğle': 'dhuhr',
+  'İkindi': 'asr',
+  'Akşam': 'maghrib',
+  'Yatsı': 'isha',
+};
+const PRAYER_NAME_TO_I18N_KEY: Record<string, string> = {
+  'İmsak': 'imsak',
+  'Güneş': 'gunes',
+  'Öğle': 'ogle',
+  'İkindi': 'ikindi',
+  'Akşam': 'aksam',
+  'Yatsı': 'yatsi',
+};
+
+async function getEnabledPrayerNames(): Promise<Record<string, boolean> | null> {
+  try {
+    const raw = await AsyncStorage.getItem(PRAYER_SETTINGS_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
+const PRAYER_PREFIX = 'prayer-';
+const DAILY_DUA_PREFIX = 'daily-dua-';
+const ENGAGEMENT_ID = 'engagement-evening';
+const DAILY_DUA_WINDOW_DAYS = 7;
+const DAILY_DUA_HOUR = 9;
+const DAILY_DUA_MINUTE = 0;
+
+const EVENING_MESSAGE_KEYS = [
+  'notifications.eveningMsg1',
+  'notifications.eveningMsg2',
+  'notifications.eveningMsg3',
+  'notifications.eveningMsg4',
+];
+
+// Uygulama önplandayken de bildirim banner'ı ve sesi gösterilsin (varsayılan davranış sessizdir)
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowBanner: true,
+    shouldShowList: true,
+    shouldPlaySound: true,
+    shouldSetBadge: false,
+  }),
+});
+
+export async function configureNotificationChannel() {
+  if (Platform.OS !== 'android') return;
+  await Notifications.setNotificationChannelAsync('default', {
+    name: 'Ezan Vakti + Hatim',
+    importance: Notifications.AndroidImportance.HIGH,
+    vibrationPattern: [0, 200, 100, 200],
+    lightColor: '#D4AF37',
+    sound: 'default',
+  });
+}
 
 export async function requestNotificationPermissions() {
   const { status: existingStatus } = await Notifications.getPermissionsAsync();
@@ -11,6 +82,14 @@ export async function requestNotificationPermissions() {
   return finalStatus === 'granted';
 }
 
+// İzin istemeden sadece mevcut durumu okur; uygulama açılışında anahtarın
+// gerçek durumu yansıtması için kullanılır (daha önce reset oluyordu).
+export async function hasNotificationPermission() {
+  if (Platform.OS === 'web') return false;
+  const { status } = await Notifications.getPermissionsAsync();
+  return status === 'granted';
+}
+
 export async function schedulePrayerNotification(
   prayerName: string,
   timeStr: string,
@@ -19,12 +98,15 @@ export async function schedulePrayerNotification(
   if (Platform.OS === 'web') return;
 
   const [hours, minutes] = timeStr.split(':').map(Number);
-  
+  const i18nKey = PRAYER_NAME_TO_I18N_KEY[prayerName];
+  const displayName = i18nKey ? i18n.t(`prayerTimes.${i18nKey}`) : prayerName;
+
   // Her gun ayni saatte tekrarla
   await Notifications.scheduleNotificationAsync({
+    identifier: `${PRAYER_PREFIX}${prayerName}`,
     content: {
-      title: `${prayerName} Vakti`,
-      body: `${city} için ${prayerName} vakti geldi.`,
+      title: i18n.t('notifications.prayerTitle', { prayer: displayName }),
+      body: i18n.t('notifications.prayerBody', { prayer: displayName, city }),
       sound: true,
       data: { prayerName, city },
     },
@@ -41,11 +123,119 @@ export async function cancelAllNotifications() {
   await Notifications.cancelAllScheduledNotificationsAsync();
 }
 
+async function cancelPrayerNotifications() {
+  if (Platform.OS === 'web') return;
+  const scheduled = await Notifications.getAllScheduledNotificationsAsync();
+  await Promise.all(
+    scheduled
+      .filter((n) => n.identifier.startsWith(PRAYER_PREFIX))
+      .map((n) => Notifications.cancelScheduledNotificationAsync(n.identifier))
+  );
+}
+
+// Günün duasını her gün önceden hesaplanabildiğinden (getDailyDua tarihe göre
+// deterministik döner), ileriye dönük N günü ayrı ayrı zamanlıyoruz; bu sayede
+// bildirim içeriği "Namaz Vakti" gibi statik kalmayıp her gün gerçekten değişiyor.
+export async function scheduleDailyDuaReminders() {
+  if (Platform.OS === 'web') return;
+
+  const scheduled = await Notifications.getAllScheduledNotificationsAsync();
+  await Promise.all(
+    scheduled
+      .filter((n) => n.identifier.startsWith(DAILY_DUA_PREFIX))
+      .map((n) => Notifications.cancelScheduledNotificationAsync(n.identifier))
+  );
+
+  const now = new Date();
+  for (let i = 0; i < DAILY_DUA_WINDOW_DAYS; i++) {
+    const targetDate = new Date(now);
+    targetDate.setDate(now.getDate() + i);
+    targetDate.setHours(DAILY_DUA_HOUR, DAILY_DUA_MINUTE, 0, 0);
+    if (targetDate.getTime() <= now.getTime()) continue;
+
+    const dua = getDailyDua(targetDate);
+    await Notifications.scheduleNotificationAsync({
+      identifier: `${DAILY_DUA_PREFIX}${targetDate.toISOString().slice(0, 10)}`,
+      content: {
+        title: i18n.t('notifications.dailyDuaTitle'),
+        body: i18n.t('notifications.dailyDuaBody', { title: dua.title }),
+        sound: true,
+        data: { screen: 'dua', duaId: dua.id },
+      },
+      trigger: { type: Notifications.SchedulableTriggerInputTypes.DATE, date: targetDate } as any,
+    });
+  }
+}
+
+function getWeekStartISO(date = new Date()) {
+  const d = new Date(date);
+  const dayOfWeek = d.getDay();
+  const diff = d.getDate() - dayOfWeek + (dayOfWeek === 0 ? -6 : 1);
+  const monday = new Date(d.setDate(diff));
+  return monday.toISOString().split('T')[0];
+}
+
+// Sabit dönen mesajlar yerine gerçek ilerlemeye bakar: bu hafta hiç cüz işlenmemişse,
+// kaza borç varsa ya da seri devam ediyorsa buna uygun, daha etkili bir metin üretir.
+// Not: yerel bildirimler zamanlamada sabitlendiği için bu, uygulama her açıldığında
+// (scheduleAllPrayers her prayerTimes değişiminde tekrar çağrılıyor) yeniden hesaplanır.
+async function getPersonalizedEveningMessage(): Promise<string> {
+  try {
+    const weekStart = getWeekStartISO();
+    const hatimRaw = await AsyncStorage.getItem(`hatim_progress_${weekStart}`);
+    const hatimProgress = hatimRaw ? JSON.parse(hatimRaw) : {};
+    const hatimCount = Object.values(hatimProgress).filter(Boolean).length;
+
+    const kazaRaw = await AsyncStorage.getItem('kaza_data');
+    const kazaData = kazaRaw ? JSON.parse(kazaRaw) : null;
+    const kazaTotal: number = kazaData
+      ? Object.values(kazaData).reduce((sum: number, v) => sum + (Number(v) || 0), 0)
+      : 0;
+
+    const streak = await getCurrentStreak();
+
+    if (hatimCount === 0) {
+      return i18n.t('notifications.noJuzThisWeek');
+    }
+    if (kazaTotal > 0) {
+      return i18n.t('notifications.kazaDebtReminder', { count: kazaTotal });
+    }
+    if (streak >= 3) {
+      return i18n.t('notifications.streakReminder', { streak });
+    }
+  } catch (error) {
+    console.log('Personalized reminder error:', error);
+  }
+
+  const dayOfYear = Math.floor(
+    (Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24)
+  );
+  return i18n.t(EVENING_MESSAGE_KEYS[dayOfYear % EVENING_MESSAGE_KEYS.length]);
+}
+
+export async function scheduleEveningEngagementReminder() {
+  if (Platform.OS === 'web') return;
+
+  await Notifications.cancelScheduledNotificationAsync(ENGAGEMENT_ID).catch(() => {});
+
+  const message = await getPersonalizedEveningMessage();
+
+  await Notifications.scheduleNotificationAsync({
+    identifier: ENGAGEMENT_ID,
+    content: {
+      title: i18n.t('notifications.eveningTitle'),
+      body: message,
+      sound: true,
+    },
+    trigger: { hour: 20, minute: 30, repeats: true } as any,
+  });
+}
+
 export async function scheduleAllPrayers(prayerTimes: any, city: string) {
   if (Platform.OS === 'web') return;
-  
-  await cancelAllNotifications();
-  
+
+  await cancelPrayerNotifications();
+
   const prayers = [
     { name: 'İmsak', time: prayerTimes.imsak },
     { name: 'Güneş', time: prayerTimes.gunes },
@@ -55,9 +245,16 @@ export async function scheduleAllPrayers(prayerTimes: any, city: string) {
     { name: 'Yatsı', time: prayerTimes.yatsi },
   ];
 
+  const enabledPrayers = await getEnabledPrayerNames();
+
   for (const prayer of prayers) {
-    if (prayer.time) {
+    const settingsKey = PRAYER_NAME_TO_SETTINGS_KEY[prayer.name];
+    const isEnabled = !enabledPrayers || enabledPrayers[settingsKey] !== false;
+    if (prayer.time && isEnabled) {
       await schedulePrayerNotification(prayer.name, prayer.time, city);
     }
   }
+
+  await scheduleDailyDuaReminders();
+  await scheduleEveningEngagementReminder();
 }

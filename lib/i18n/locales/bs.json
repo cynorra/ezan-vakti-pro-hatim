@@ -4,13 +4,15 @@
     "qibla": "Kibla",
     "hatim": "Hatma",
     "dua": "Dova",
-    "dhikr": "Zikr"
+    "dhikr": "Zikr",
+    "kaza": "Kada"
   },
   "home": {
     "nextPrayerCountdown": "Preostalo vrijeme",
     "verseOfTheDay": "Ajet dana",
     "hadithOfTheDay": "Hadis dana",
-    "esmaOfTheDay": "Ime dana"
+    "esmaOfTheDay": "Ime dana",
+    "duaOfTheDay": "Dova dana"
   },
   "prayerTimes": {
     "imsak": "Sabah",
@@ -41,7 +43,18 @@
     "startSurah": "Početna sura:",
     "pages": "Stranice:",
     "containsSurahs": "Sadrži sure:",
-    "congratsSaved": "Čestitamo! Vaša Hatma je sačuvana."
+    "congratsSaved": "Čestitamo! Vaša Hatma je sačuvana.",
+    "enterNameAlert": "Molimo unesite svoje ime.",
+    "enterTitleAlert": "Molimo unesite naslov.",
+    "topHatimBadge": "NAJAKTIVNIJA HATMA",
+    "leaderboardTitle": "NAJBOLJI UČESNICI",
+    "unnamedParticipant": "Anonimno",
+    "inviteShareMessage": "Pridružite se zajedničkoj hatmi „{{title}}“, odaberite džuz i učimo Kur'an zajedno 🕌📖\n\nAko već imate aplikaciju: {{deepLink}}\n\nAko nemate: {{playStore}}",
+    "completionShareMessage": "🎉 Proučio/la sam svih 30 džuzeva i završio/la svoju hatmu! Elhamdulillah 📖🕌\n\nOvo je moja hatma br. {{count}}. Započnite i vi praćenje: {{playStore}}",
+    "progressShareMessage": "📖 Ove sedmice sam završio/la {{completed}}/30 džuzeva ({{percentage}}%).\n\nPratite svoj napredak uz Ezan Vakti + Hatim: {{playStore}}",
+    "rewardUnlocked": "🎁 Sjajno! Zahvaljujući vašim dijeljenjima, otključali ste {{days}} dana bez reklama.",
+    "rewardBannerText": "Podijelite još {{count}} put(a) za {{days}} dana bez reklama 🎁",
+    "juzCountShort": "džuz"
   },
   "settings": {
     "title": "Postavke",
@@ -72,6 +85,46 @@
     "cancel": "Otkaži",
     "save": "Sačuvaj",
     "close": "Zatvori",
-    "search": "Pretraži..."
+    "search": "Pretraži...",
+    "errorGeneric": "Došlo je do greške."
+  },
+  "esma": {
+    "title": "Allahova lijepa imena",
+    "search": "Pretraži ime ili značenje..."
+  },
+  "kaza": {
+    "title": "NAKAZANI NAMAZI",
+    "subtitle": "Pratite propuštene namaze",
+    "sabah": "Sabah",
+    "ogle": "Podne",
+    "ikindi": "Ikindija",
+    "aksam": "Akšam",
+    "yatsi": "Jacija",
+    "vitir": "Vitr",
+    "completionShareMessage": "🎉 Nadoknadio/la sam sve propuštene namaze, Elhamdulillah! 🕌\n\nPratite svoje propuštene namaze uz Ezan Vakti + Hatim: {{playStore}}"
+  },
+  "dua": {
+    "headerTitle": "ZBIRKA DOVA",
+    "headerSubtitle": "Dova je oružje vjernika",
+    "featuredBadge": "DOVA DANA",
+    "meaningLabel": "ZNAČENJE",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nZnačenje: {{meaning}}\n\nIzvor: {{source}}\n\nPodijeljeno iz aplikacije Ezan Vakti + Hatim."
+  },
+  "splash": {
+    "subtitle": "Vaktija, hatma i dove na jednom mjestu"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 Dova dana",
+    "dailyDuaBody": "{{title}} — dodirnite za čitanje",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "Ne zaboravite danas proučiti nekoliko ajeta za svoju hatmu 📖",
+    "eveningMsg2": "Kako se veče približava, smirite svoje srce dovom 🤲",
+    "eveningMsg3": "Imate li nekoliko minuta za propuštene namaze? 🕌",
+    "eveningMsg4": "Jeste li činili zikr danas? Spominjanje Allaha smiruje srca ✨",
+    "noJuzThisWeek": "Ove sedmice još niste označili nijedan džuz, zašto ne biste počeli s jednim? 📖",
+    "kazaDebtReminder": "Imate {{count}} propuštenih namaza na čekanju, mogli biste nadoknaditi nekoliko večeras 🕌",
+    "streakReminder": "Vaš niz od {{streak}} dana traje, nastavite tako i danas! 🔥",
+    "prayerTitle": "{{prayer}} vakat",
+    "prayerBody": "Nastupio je {{prayer}} vakat za grad {{city}}."
   }
 }

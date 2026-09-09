@@ -1,8 +1,130 @@
 {
-  "tabs": { "home": "Головна", "qibla": "Кібла", "hatim": "Хатм", "dua": "Дуа", "dhikr": "Зікр" },
-  "home": { "nextPrayerCountdown": "Час, що залишився", "verseOfTheDay": "Аят дня", "hadithOfTheDay": "Хадіс дня", "esmaOfTheDay": "Ім'я дня" },
-  "prayerTimes": { "imsak": "Фаджр", "gunes": "Схід сонця", "ogle": "Зухр", "ikindi": "Аср", "aksam": "Магріб", "yatsi": "Іша" },
-  "hatim": { "individual": "Індивідуально", "collaborative": "Спільно", "weeklyHatim": "Щотижневий Хатм", "completed": "Завершено", "completeHatimBtn": "ЗАВЕРШИТИ ХАТМ", "juzSelection": "ВИБІР ДЖУЗУ", "activeHatims": "АКТИВНІ ХАТМИ", "startNew": "Почати новий", "noActiveHatim": "Ще немає активного спільного хатму.", "newCollaborativeHatim": "Новий Спільний Хатм", "hatimTitleLabel": "Назва Хатму", "hatimTitlePlaceholder": "напр., Хатм Рамадану", "startBtn": "СТАРТ", "participantName": "Ім'я учасника", "namePlaceholder": "Введіть ваше ім'я...", "takeJuz": "ВЗЯТИ", "juzDetails": "Деталі Джузу", "startSurah": "Початкова Сура:", "pages": "Сторінки:", "containsSurahs": "Містить Сури:", "congratsSaved": "Вітаємо! Ваш Хатм збережено." },
-  "settings": { "title": "Налаштування", "notifications": "Сповіщення", "language": "Мова" },
-  "common": { "cancel": "Скасувати", "save": "Зберегти", "close": "Закрити", "search": "Пошук..." }
+  "tabs": {
+    "home": "Головна",
+    "qibla": "Кібла",
+    "hatim": "Хатм",
+    "dua": "Дуа",
+    "dhikr": "Зікр",
+    "kaza": "Каза"
+  },
+  "home": {
+    "nextPrayerCountdown": "Час, що залишився",
+    "verseOfTheDay": "Аят дня",
+    "hadithOfTheDay": "Хадіс дня",
+    "esmaOfTheDay": "Ім'я дня",
+    "duaOfTheDay": "Дуа дня"
+  },
+  "prayerTimes": {
+    "imsak": "Фаджр",
+    "gunes": "Схід сонця",
+    "ogle": "Зухр",
+    "ikindi": "Аср",
+    "aksam": "Магріб",
+    "yatsi": "Іша"
+  },
+  "hatim": {
+    "individual": "Індивідуально",
+    "collaborative": "Спільно",
+    "weeklyHatim": "Щотижневий Хатм",
+    "completed": "Завершено",
+    "completeHatimBtn": "ЗАВЕРШИТИ ХАТМ",
+    "juzSelection": "ВИБІР ДЖУЗУ",
+    "activeHatims": "АКТИВНІ ХАТМИ",
+    "startNew": "Почати новий",
+    "noActiveHatim": "Ще немає активного спільного хатму.",
+    "newCollaborativeHatim": "Новий Спільний Хатм",
+    "hatimTitleLabel": "Назва Хатму",
+    "hatimTitlePlaceholder": "напр., Хатм Рамадану",
+    "startBtn": "СТАРТ",
+    "participantName": "Ім'я учасника",
+    "namePlaceholder": "Введіть ваше ім'я...",
+    "takeJuz": "ВЗЯТИ",
+    "juzDetails": "Деталі Джузу",
+    "startSurah": "Початкова Сура:",
+    "pages": "Сторінки:",
+    "containsSurahs": "Містить Сури:",
+    "congratsSaved": "Вітаємо! Ваш Хатм збережено.",
+    "enterNameAlert": "Будь ласка, введіть ваше ім'я.",
+    "enterTitleAlert": "Будь ласка, введіть назву.",
+    "topHatimBadge": "НАЙАКТИВНІШИЙ ХАТМ",
+    "leaderboardTitle": "ЛІДЕРИ ВНЕСКУ",
+    "unnamedParticipant": "Анонімно",
+    "inviteShareMessage": "Приєднуйтесь до спільного хатму «{{title}}», оберіть джуз і читаймо Коран разом 🕌📖\n\nЯкщо у вас уже є додаток: {{deepLink}}\n\nЯкщо ні: {{playStore}}",
+    "completionShareMessage": "🎉 Я прочитав усі 30 джузів і завершив свій хатм! Альхамдуліллях 📖🕌\n\nЦе мій хатм №{{count}}. Почніть відстежувати свій: {{playStore}}",
+    "progressShareMessage": "📖 Цього тижня я завершив {{completed}}/30 джузів ({{percentage}}%).\n\nВідстежуйте свій прогрес з Ezan Vakti + Hatim: {{playStore}}",
+    "rewardUnlocked": "🎁 Чудово! Завдяки вашим поширенням ви розблокували {{days}} днів без реклами.",
+    "rewardBannerText": "Поділіться ще {{count}} раз(и), щоб розблокувати {{days}} днів без реклами 🎁",
+    "juzCountShort": "джуз"
+  },
+  "settings": {
+    "title": "Налаштування",
+    "notifications": "Сповіщення",
+    "language": "Мова",
+    "sound": "Звук азану",
+    "reminder": "Нагадування перед намазом",
+    "theme": "Тема",
+    "themeLight": "Світла",
+    "themeDark": "Темна",
+    "support": "Підтримка та інформація",
+    "rateApp": "Оцінити додаток",
+    "feedback": "Надіслати відгук",
+    "about": "Про додаток",
+    "widgetPreview": "ПОПЕРЕДНІЙ ПЕРЕГЛЯД ВІДЖЕТА",
+    "widgetNext": "Далі",
+    "widgetHint": "Натисніть і утримуйте на головному екрані, щоб додати віджет."
+  },
+  "common": {
+    "cancel": "Скасувати",
+    "save": "Зберегти",
+    "close": "Закрити",
+    "search": "Пошук...",
+    "errorGeneric": "Щось пішло не так."
+  },
+  "esma": {
+    "title": "Імена Аллага",
+    "search": "Пошук імені або значення..."
+  },
+  "kaza": {
+    "title": "ПРОПУЩЕНІ НАМАЗИ",
+    "subtitle": "Відстежуйте пропущені намази",
+    "sabah": "Фаджр",
+    "ogle": "Зухр",
+    "ikindi": "Аср",
+    "aksam": "Магріб",
+    "yatsi": "Іша",
+    "vitir": "Вітр",
+    "completionShareMessage": "🎉 Я надолужив усі пропущені намази, Альхамдуліллях! 🕌\n\nВідстежуйте свої пропущені намази з Ezan Vakti + Hatim: {{playStore}}"
+  },
+  "qibla": {
+    "title": "КОМПАС КІБЛИ",
+    "subtitle": "Визначення напрямку Кібли",
+    "yourDirection": "ВАШ НАПРЯМОК",
+    "qiblaAngle": "КУТ КІБЛИ",
+    "aligned": "СПРЯМОВАНО НА КІБЛУ",
+    "hint": "Тримайте пристрій горизонтально та слідкуйте за стрілкою."
+  },
+  "dua": {
+    "headerTitle": "БІБЛІОТЕКА ДУА",
+    "headerSubtitle": "Молитва — зброя віруючого",
+    "featuredBadge": "ДУА ДНЯ",
+    "meaningLabel": "ЗНАЧЕННЯ",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nЗначення: {{meaning}}\n\nДжерело: {{source}}\n\nПоділено з Ezan Vakti + Hatim."
+  },
+  "splash": {
+    "subtitle": "Час намазу, хатм і дуа в одному додатку"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 Дуа дня",
+    "dailyDuaBody": "{{title}} — натисніть, щоб прочитати",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "Не забудьте прочитати аяти для свого хатму сьогодні 📖",
+    "eveningMsg2": "З настанням вечора заспокойте серце щирим дуа 🤲",
+    "eveningMsg3": "Знайдете кілька хвилин для пропущених намазів? 🕌",
+    "eveningMsg4": "Чи робили ви сьогодні зікр? Поминання Аллага приносить спокій серцю ✨",
+    "noJuzThisWeek": "Ви ще не відзначили жодного джузу цього тижня, почнемо хоча б з одного? 📖",
+    "kazaDebtReminder": "У вас накопичилося {{count}} пропущених намазів, надолужте кілька сьогодні ввечері 🕌",
+    "streakReminder": "Ваша серія триває вже {{streak}} дн. Продовжуйте й сьогодні! 🔥",
+    "prayerTitle": "Час намазу {{prayer}}",
+    "prayerBody": "Настав час намазу {{prayer}} для міста {{city}}."
+  }
 }

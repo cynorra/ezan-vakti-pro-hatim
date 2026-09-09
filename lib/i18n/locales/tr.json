@@ -19,13 +19,15 @@
     "ikindi": "İkindi",
     "aksam": "Akşam",
     "yatsi": "Yatsı",
-    "vitir": "Vitir"
+    "vitir": "Vitir",
+    "completionShareMessage": "🎉 Tüm kaza namazlarımı tamamladım, Elhamdülillah! 🕌\n\nSen de kaza namazlarını Ezan Vakti + Hatim ile takip et: {{playStore}}"
   },
   "home": {
     "nextPrayerCountdown": "Vaktin çıkmasına",
     "verseOfTheDay": "Günün Ayeti",
     "hadithOfTheDay": "Günün Hadisi",
-    "esmaOfTheDay": "Günün Esması"
+    "esmaOfTheDay": "Günün Esması",
+    "duaOfTheDay": "Günün Duası"
   },
   "prayerTimes": {
     "imsak": "İmsak",
@@ -56,7 +58,18 @@
     "startSurah": "Başlangıç Suresi:",
     "pages": "Sayfalar:",
     "containsSurahs": "İçerdiği Sureler:",
-    "congratsSaved": "Tebrikler! Hatminiz kaydedildi."
+    "congratsSaved": "Tebrikler! Hatminiz kaydedildi.",
+    "enterNameAlert": "Lütfen adınızı giriniz.",
+    "enterTitleAlert": "Lütfen bir başlık giriniz.",
+    "topHatimBadge": "EN AKTİF HATİM",
+    "leaderboardTitle": "EN ÇOK CÜZ ALANLAR",
+    "unnamedParticipant": "İsimsiz",
+    "inviteShareMessage": "\"{{title}}\" ortak hatmine katıl, bir cüz al, birlikte Kur'an okuyalım 🕌📖\n\nUygulama zaten yüklüyse: {{deepLink}}\n\nYüklü değilse: {{playStore}}",
+    "completionShareMessage": "🎉 30 cüzü tamamladım, hatmimi bitirdim! Elhamdülillah 📖🕌\n\nBu benim {{count}}. hatmim. Sen de takip etmeye başla: {{playStore}}",
+    "progressShareMessage": "📖 Bu hafta {{completed}}/30 cüz tamamladım (%{{percentage}}).\n\nSen de Ezan Vakti + Hatim ile takip et: {{playStore}}",
+    "rewardUnlocked": "🎁 Harika! Paylaşımların sayesinde {{days}} gün reklamsız kullanım kazandın.",
+    "rewardBannerText": "{{count}} paylaşım daha yap, {{days}} gün reklamsız kazan 🎁",
+    "juzCountShort": "cüz"
   },
   "settings": {
     "title": "Ayarlar",
@@ -87,6 +100,31 @@
     "cancel": "İptal",
     "save": "Kaydet",
     "close": "Kapat",
-    "search": "Ara..."
+    "search": "Ara...",
+    "errorGeneric": "Bir hata oluştu."
+  },
+  "dua": {
+    "headerTitle": "DUA KİTAPLIĞI",
+    "headerSubtitle": "Müminin Silahı Duadır",
+    "featuredBadge": "GÜNÜN DUASI",
+    "meaningLabel": "ANLAMI",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nAnlamı: {{meaning}}\n\nKaynak: {{source}}\n\nEzan Vakti + Hatim uygulamasından paylaşıldı."
+  },
+  "splash": {
+    "subtitle": "Namaz vakti, hatim ve dua bir arada"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 Günün Duası",
+    "dailyDuaBody": "{{title}} — okumak için dokun",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "Bugün hatimine ayet eklemeyi unutma 📖",
+    "eveningMsg2": "Akşam vaktine yaklaşırken bir dua ile içini rahatlat 🤲",
+    "eveningMsg3": "Kaza namazların için birkaç dakikan var mı? 🕌",
+    "eveningMsg4": "Tesbihatını bugün yaptın mı? Zikir kalbe huzur verir ✨",
+    "noJuzThisWeek": "Bu hafta henüz hiç cüz işaretlemedin, bir cüz ile başlasan nasıl olur? 📖",
+    "kazaDebtReminder": "{{count}} kaza namazın seni bekliyor, bu akşam birkaçını tamamlayabilirsin 🕌",
+    "streakReminder": "{{streak}} günlük serin devam ediyor, bugünü de kaçırma 🔥",
+    "prayerTitle": "{{prayer}} Vakti",
+    "prayerBody": "{{city}} için {{prayer}} vakti geldi."
   }
 }

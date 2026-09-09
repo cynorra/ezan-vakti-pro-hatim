@@ -4,13 +4,15 @@
     "qibla": "Kibla",
     "hatim": "Hatim",
     "dua": "Dua",
-    "dhikr": "Zikr"
+    "dhikr": "Zikr",
+    "kaza": "Kaza"
   },
   "home": {
     "nextPrayerCountdown": "Hátralévő idő",
     "verseOfTheDay": "Napi ige",
     "hadithOfTheDay": "Napi hadísz",
-    "esmaOfTheDay": "Napi iszm"
+    "esmaOfTheDay": "Napi iszm",
+    "duaOfTheDay": "A nap duája"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -41,7 +43,18 @@
     "startSurah": "Kezdő szúra:",
     "pages": "Oldalak:",
     "containsSurahs": "Tartalmazza:",
-    "congratsSaved": "Gratulálunk! A Hatim mentve."
+    "congratsSaved": "Gratulálunk! A Hatim mentve.",
+    "enterNameAlert": "Kérjük, adja meg a nevét.",
+    "enterTitleAlert": "Kérjük, adjon meg egy címet.",
+    "topHatimBadge": "LEGAKTÍVABB HATIM",
+    "leaderboardTitle": "LEGJOBB RÉSZTVEVŐK",
+    "unnamedParticipant": "Névtelen",
+    "inviteShareMessage": "Csatlakozzon a(z) „{{title}}” közös hatimhoz, válasszon egy dzsuzt, és olvassuk együtt a Koránt 🕌📖\n\nHa már telepítette az alkalmazást: {{deepLink}}\n\nHa még nem: {{playStore}}",
+    "completionShareMessage": "🎉 Befejeztem mind a 30 dzsuzt, sikeresen elvégeztem a hatimot! Alhamdülilláh 📖🕌\n\nEz a(z) #{{count}}. hatimom. Kezdje el Ön is: {{playStore}}",
+    "progressShareMessage": "📖 Ezen a héten {{completed}}/30 dzsuzt fejeztem be ({{percentage}}%).\n\nKövesse haladását az Ezan Vakti + Hatim segítségével: {{playStore}}",
+    "rewardUnlocked": "🎁 Nagyszerű! A megosztások révén {{days}} reklámmentes napot nyert.",
+    "rewardBannerText": "Ossza meg még {{count}} alkalommal a(z) {{days}} reklámmentes napért 🎁",
+    "juzCountShort": "dzsuz"
   },
   "settings": {
     "title": "Beállítások",
@@ -72,6 +85,46 @@
     "cancel": "Mégse",
     "save": "Mentés",
     "close": "Bezárás",
-    "search": "Keresés..."
+    "search": "Keresés...",
+    "errorGeneric": "Valami hiba történt."
+  },
+  "esma": {
+    "title": "Allah nevei",
+    "search": "Név vagy jelentés keresése..."
+  },
+  "kaza": {
+    "title": "ELMULASZTOTT IMÁK",
+    "subtitle": "Kövesse nyomon pótolandó imáit",
+    "sabah": "Fadzsr",
+    "ogle": "Dhuhr",
+    "ikindi": "Aszr",
+    "aksam": "Maghrib",
+    "yatsi": "Isa",
+    "vitir": "Vitr",
+    "completionShareMessage": "🎉 Pótoltam az összes elmaradt imámat, Alhamdülilláh! 🕌\n\nKövesse nyomon imáit az Ezan Vakti + Hatim alkalmazással: {{playStore}}"
+  },
+  "dua": {
+    "headerTitle": "DUA KÖNYVTÁR",
+    "headerSubtitle": "A fohász a hívő fegyvere",
+    "featuredBadge": "A NAP DUÁJA",
+    "meaningLabel": "JELENTÉS",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nJelentés: {{meaning}}\n\nForrás: {{source}}\n\nMegosztva az Ezan Vakti + Hatim alkalmazásból."
+  },
+  "splash": {
+    "subtitle": "Imaidők, hatim és fohászok egy helyen"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 A nap duája",
+    "dailyDuaBody": "{{title}} — koppintson az olvasáshoz",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "Ne felejtsen el elolvasni néhány áját a mai hatimjához 📖",
+    "eveningMsg2": "Az este közeledtével nyugtassa meg szívét egy fohásszal 🤲",
+    "eveningMsg3": "Van pár perce pótolni az elmaradt imákat? 🕌",
+    "eveningMsg4": "Végzett ma dhikrt? Allah megemlékezése békét hoz a szívnek ✨",
+    "noJuzThisWeek": "Ezen a héten még nem jelölt meg dzsuzt. Miért nem kezd el egyet? 📖",
+    "kazaDebtReminder": "{{count}} pótolandó imája van, ma este bepótolhatna belőlük 🕌",
+    "streakReminder": "Már {{streak}} napos a sorozata, folytassa ma is! 🔥",
+    "prayerTitle": "{{prayer}} ideje",
+    "prayerBody": "Eljött a(z) {{prayer}} ideje itt: {{city}}."
   }
 }

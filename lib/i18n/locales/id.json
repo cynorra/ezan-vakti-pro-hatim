@@ -1,8 +1,130 @@
 {
-  "tabs": { "home": "Beranda", "qibla": "Kiblat", "hatim": "Khatam", "dua": "Doa", "dhikr": "Zikir" },
-  "home": { "nextPrayerCountdown": "Waktu tersisa", "verseOfTheDay": "Ayat Hari Ini", "hadithOfTheDay": "Hadits Hari Ini", "esmaOfTheDay": "Nama Hari Ini" },
-  "prayerTimes": { "imsak": "Subuh", "gunes": "Terbit", "ogle": "Zuhur", "ikindi": "Ashar", "aksam": "Maghrib", "yatsi": "Isya" },
-  "hatim": { "individual": "Individu", "collaborative": "Kolaboratif", "weeklyHatim": "Khatam Mingguan", "completed": "Selesai", "completeHatimBtn": "SELESAIKAN KHATAM", "juzSelection": "PILIHAN JUZ", "activeHatims": "KHATAM AKTIF", "startNew": "Mulai Baru", "noActiveHatim": "Belum ada khatam kolaboratif yang aktif.", "newCollaborativeHatim": "Khatam Kolaboratif Baru", "hatimTitleLabel": "Judul Khatam", "hatimTitlePlaceholder": "misal, Khatam Ramadhan", "startBtn": "MULAI", "participantName": "Nama Peserta", "namePlaceholder": "Masukkan nama Anda...", "takeJuz": "AMBIL", "juzDetails": "Detail Juz", "startSurah": "Surah Awal:", "pages": "Halaman:", "containsSurahs": "Berisi Surah:", "congratsSaved": "Selamat! Khatam Anda telah disimpan." },
-  "settings": { "title": "Pengaturan", "notifications": "Notifikasi", "language": "Bahasa" },
-  "common": { "cancel": "Batal", "save": "Simpan", "close": "Tutup", "search": "Cari..." }
+  "tabs": {
+    "home": "Beranda",
+    "qibla": "Kiblat",
+    "hatim": "Khatam",
+    "dua": "Doa",
+    "dhikr": "Zikir",
+    "kaza": "Qadha"
+  },
+  "home": {
+    "nextPrayerCountdown": "Waktu tersisa",
+    "verseOfTheDay": "Ayat Hari Ini",
+    "hadithOfTheDay": "Hadits Hari Ini",
+    "esmaOfTheDay": "Nama Hari Ini",
+    "duaOfTheDay": "Doa Hari Ini"
+  },
+  "prayerTimes": {
+    "imsak": "Subuh",
+    "gunes": "Terbit",
+    "ogle": "Zuhur",
+    "ikindi": "Ashar",
+    "aksam": "Maghrib",
+    "yatsi": "Isya"
+  },
+  "hatim": {
+    "individual": "Individu",
+    "collaborative": "Kolaboratif",
+    "weeklyHatim": "Khatam Mingguan",
+    "completed": "Selesai",
+    "completeHatimBtn": "SELESAIKAN KHATAM",
+    "juzSelection": "PILIHAN JUZ",
+    "activeHatims": "KHATAM AKTIF",
+    "startNew": "Mulai Baru",
+    "noActiveHatim": "Belum ada khatam kolaboratif yang aktif.",
+    "newCollaborativeHatim": "Khatam Kolaboratif Baru",
+    "hatimTitleLabel": "Judul Khatam",
+    "hatimTitlePlaceholder": "misal, Khatam Ramadhan",
+    "startBtn": "MULAI",
+    "participantName": "Nama Peserta",
+    "namePlaceholder": "Masukkan nama Anda...",
+    "takeJuz": "AMBIL",
+    "juzDetails": "Detail Juz",
+    "startSurah": "Surah Awal:",
+    "pages": "Halaman:",
+    "containsSurahs": "Berisi Surah:",
+    "congratsSaved": "Selamat! Khatam Anda telah disimpan.",
+    "enterNameAlert": "Silakan masukkan nama Anda.",
+    "enterTitleAlert": "Silakan masukkan judul.",
+    "topHatimBadge": "KHATM PALING AKTIF",
+    "leaderboardTitle": "KONTRIBUTOR TERATAS",
+    "unnamedParticipant": "Anonim",
+    "inviteShareMessage": "Mari bergabung dalam khataman bersama \"{{title}}\", ambil satu juz dan membaca Al-Qur'an bersama 🕌📖\n\nJika sudah punya aplikasi: {{deepLink}}\n\nJika belum: {{playStore}}",
+    "completionShareMessage": "🎉 Alhamdulillah, saya telah menyelesaikan 30 juz dan mengkhatamkan Al-Qur'an! 📖🕌\n\nIni adalah khatam ke-{{count}} saya. Mulai pantau khatam Anda: {{playStore}}",
+    "progressShareMessage": "📖 Minggu ini saya telah menyelesaikan {{completed}}/30 juz ({{percentage}}%).\n\nPantau kemajuan Anda dengan Ezan Vakti + Hatim: {{playStore}}",
+    "rewardUnlocked": "🎁 Luar biasa! Terima kasih telah berbagi, Anda membuka {{days}} hari bebas iklan.",
+    "rewardBannerText": "Bagikan {{count}} kali lagi untuk membuka {{days}} hari bebas iklan 🎁",
+    "juzCountShort": "juz"
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "notifications": "Notifikasi",
+    "language": "Bahasa",
+    "sound": "Suara Azan",
+    "reminder": "Pengingat Sebelum Shalat",
+    "theme": "Tema",
+    "themeLight": "Terang",
+    "themeDark": "Gelap",
+    "support": "Dukungan & Informasi",
+    "rateApp": "Beri Nilai Aplikasi",
+    "feedback": "Kirim Masukan",
+    "about": "Tentang",
+    "widgetPreview": "PRATINJAU WIDGET",
+    "widgetNext": "Lanjut",
+    "widgetHint": "Tekan dan tahan pada layar utama untuk menambahkan widget."
+  },
+  "common": {
+    "cancel": "Batal",
+    "save": "Simpan",
+    "close": "Tutup",
+    "search": "Cari...",
+    "errorGeneric": "Terjadi kesalahan."
+  },
+  "esma": {
+    "title": "Asmaul Husna",
+    "search": "Cari nama atau arti..."
+  },
+  "kaza": {
+    "title": "SHALAT QADHA",
+    "subtitle": "Pantau shalat yang terlewat",
+    "sabah": "Subuh",
+    "ogle": "Zuhur",
+    "ikindi": "Ashar",
+    "aksam": "Maghrib",
+    "yatsi": "Isya",
+    "vitir": "Witir",
+    "completionShareMessage": "🎉 Alhamdulillah, saya telah menyelesaikan semua shalat qadha saya! 🕌\n\nPantau shalat qadha Anda dengan Ezan Vakti + Hatim: {{playStore}}"
+  },
+  "qibla": {
+    "title": "KOMPAS KIBLAT",
+    "subtitle": "Penunjuk Arah Kiblat",
+    "yourDirection": "ARAH ANDA",
+    "qiblaAngle": "SUDUT KIBLAT",
+    "aligned": "TEPAT KE KIBLAT",
+    "hint": "Pegang perangkat secara mendatar dan ikuti jarum penunjuk."
+  },
+  "dua": {
+    "headerTitle": "KUMPULAN DOA",
+    "headerSubtitle": "Doa Adalah Senjata Orang Beriman",
+    "featuredBadge": "DOA HARI INI",
+    "meaningLabel": "ARTI",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nArti: {{meaning}}\n\nSumber: {{source}}\n\nDibagikan dari Ezan Vakti + Hatim."
+  },
+  "splash": {
+    "subtitle": "Jadwal shalat, khataman, dan doa dalam satu aplikasi"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 Doa Hari Ini",
+    "dailyDuaBody": "{{title}} — ketuk untuk membaca",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "Jangan lupa membaca beberapa ayat untuk khataman Anda hari ini 📖",
+    "eveningMsg2": "Menjelang malam, tenangkan hati dengan berdoa 🤲",
+    "eveningMsg3": "Punya waktu beberapa menit untuk mengqadha shalat? 🕌",
+    "eveningMsg4": "Sudahkah Anda berdzikir hari ini? Mengingat Allah menentramkan hati ✨",
+    "noJuzThisWeek": "Anda belum menandai juz minggu ini, mari mulai dari satu juz? 📖",
+    "kazaDebtReminder": "Anda memiliki {{count}} shalat qadha yang tersisa, Anda bisa mengqadhanya malam ini 🕌",
+    "streakReminder": "Streak {{streak}} hari Anda sedang berjalan, pertahankan hari ini juga! 🔥",
+    "prayerTitle": "Waktu Shalat {{prayer}}",
+    "prayerBody": "Waktu shalat {{prayer}} telah tiba untuk {{city}}."
+  }
 }

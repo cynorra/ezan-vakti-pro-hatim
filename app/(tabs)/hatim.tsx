@@ -13,7 +13,9 @@ import {
   TextInput,
   ActivityIndicator,
   Platform,
+  Share,
 } from 'react-native';
+import { useLocalSearchParams } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Haptics from 'expo-haptics';
 import { supabase } from '@/lib/supabase';
@@ -25,6 +27,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { quranJuzData, Juz } from '@/lib/data/quran-juz';
 import { hatimService, SharedHatim, SharedHatimJuz } from '@/lib/services/hatim-service';
+import { PLAY_STORE_URL, recordGrowthShare, getSharesUntilNextReward, REWARD_DAYS } from '@/lib/rewards';
 
 interface JuzProgress {
   [key: number]: boolean;
@@ -40,6 +43,7 @@ export default function HatimScreen() {
   const { t, i18n } = useTranslation();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
+  const { hatimId } = useLocalSearchParams<{ hatimId?: string }>();
   const [progress, setProgress] = useState<JuzProgress>({});
   const [weekStart, setWeekStart] = useState<string>('');
   const [selectedJuz, setSelectedJuz] = useState<Juz | null>(null);
@@ -55,12 +59,57 @@ export default function HatimScreen() {
   const [sharedHatimDetails, setSharedHatimDetails] = useState<SharedHatimJuz[]>([]);
   const [isJoinModalVisible, setIsJoinModalVisible] = useState(false);
   const [userName, setUserName] = useState('');
+  const [sharesUntilReward, setSharesUntilReward] = useState<number | null>(null);
 
   useEffect(() => {
     initializeWeek();
     loadHistory();
     loadSharedHatims();
+    refreshShareRewardProgress();
   }, []);
+
+  const refreshShareRewardProgress = async () => {
+    setSharesUntilReward(await getSharesUntilNextReward());
+  };
+
+  // Davet linkiyle gelen kullanıcı: ortak hatim sekmesini açıp doğrudan ilgili hatmi göster
+  useEffect(() => {
+    if (hatimId) {
+      setActiveTab('collaborative');
+      hatimService
+        .getSharedHatims()
+        .then((data) => {
+          const target = data.find((h) => h.id === hatimId);
+          if (target) handleOpenSharedHatim(target);
+        })
+        .catch(() => {});
+    }
+  }, [hatimId]);
+
+  const handleInviteToHatim = async (hatim: SharedHatim) => {
+    try {
+      const deepLink = `ezanvaktihatim://hatim?hatimId=${hatim.id}`;
+      const result = await Share.share({
+        message: t('hatim.inviteShareMessage', { title: hatim.title, deepLink, playStore: PLAY_STORE_URL }),
+      });
+      logEvent('hatim_invite_shared', { hatim_id: hatim.id });
+      if (result.action !== Share.dismissedAction) {
+        await notifyGrowthShareReward();
+      }
+    } catch (error) {
+      console.log('Invite share error:', error);
+    }
+  };
+
+  // Paylaşım eylemini ödül sayacına ekler; her 3 paylaşımda bir reklamsız gün kazandırır
+  const notifyGrowthShareReward = async () => {
+    const { justUnlocked } = await recordGrowthShare();
+    if (justUnlocked) {
+      safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+      alert(t('hatim.rewardUnlocked', { days: REWARD_DAYS }));
+    }
+    await refreshShareRewardProgress();
+  };
 
   useEffect(() => {
     if (weekStart) {
@@ -96,7 +145,7 @@ export default function HatimScreen() {
 
   const handleJoinJuz = async (juzNumber: number) => {
     if (!selectedSharedHatim || !userName.trim()) {
-      alert('Lütfen adınızı giriniz.');
+      alert(t('hatim.enterNameAlert'));
       return;
     }
 
@@ -107,7 +156,7 @@ export default function HatimScreen() {
       const details = await hatimService.getHatimDetails(selectedSharedHatim.id);
       setSharedHatimDetails(details);
     } catch (error) {
-      alert('Bir hata oluştu.');
+      alert(t('common.errorGeneric'));
     }
   };
 
@@ -116,20 +165,21 @@ export default function HatimScreen() {
 
   const handleCreateHatim = async () => {
     if (!newHatimTitle.trim()) {
-      alert('Lütfen bir başlık giriniz.');
+      alert(t('hatim.enterTitleAlert'));
       return;
     }
 
     try {
       const endsAt = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString();
-      await hatimService.createSharedHatim(newHatimTitle, '', endsAt);
+      const created = await hatimService.createSharedHatim(newHatimTitle, '', endsAt);
       logHatimCreated(newHatimTitle, i18n.language || 'tr');
-      alert('Yeni hatim başarıyla oluşturuldu!');
       setIsCreateModalVisible(false);
       setNewHatimTitle('');
       loadSharedHatims();
+      // Oluşturma anı, arkadaşları davet etmek için en motive olunan an
+      await handleInviteToHatim(created);
     } catch (error) {
-      alert('Bir hata oluştu.');
+      alert(t('common.errorGeneric'));
     }
   };
 
@@ -213,7 +263,7 @@ export default function HatimScreen() {
     safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
   };
 
-  const completeHatim = () => {
+  const completeHatim = async () => {
     const newHistoryItem = {
       id: Date.now().toString(),
       date: new Date().toISOString(),
@@ -225,11 +275,59 @@ export default function HatimScreen() {
     saveProgress({});
     logEvent('individual_hatim_completed');
     safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-    alert('Tebrikler! Hatminiz kaydedildi.');
+
+    try {
+      const result = await Share.share({
+        message: t('hatim.completionShareMessage', { count: newHistory.length, playStore: PLAY_STORE_URL }),
+      });
+      if (result.action !== Share.dismissedAction) {
+        await notifyGrowthShareReward();
+      }
+    } catch (error) {
+      console.log('Completion share error:', error);
+    }
+  };
+
+  const handleShareProgress = async () => {
+    try {
+      const result = await Share.share({
+        message: t('hatim.progressShareMessage', {
+          completed: completedCount,
+          percentage: progressPercentage,
+          playStore: PLAY_STORE_URL,
+        }),
+      });
+      logEvent('individual_progress_shared', { completed_count: completedCount });
+      if (result.action !== Share.dismissedAction) {
+        await notifyGrowthShareReward();
+      }
+    } catch (error) {
+      console.log('Progress share error:', error);
+    }
   };
 
   const completedCount = Object.values(progress).filter(Boolean).length;
   const progressPercentage = Math.round((completedCount / 30) * 100);
+
+  // Liderlik: en yüksek tamamlanma yüzdesine sahip (ve en az 1 cüz alınmış) ortak hatim
+  const topHatimId = sharedHatims.reduce<string | undefined>((topId, h) => {
+    if (h.completed_count <= 0 || !h.total_juz) return topId;
+    const pct = h.completed_count / h.total_juz;
+    const top = sharedHatims.find((x) => x.id === topId);
+    const topPct = top ? top.completed_count / top.total_juz : -1;
+    return pct > topPct ? h.id : topId;
+  }, undefined);
+
+  // Açık ortak hatim için katılımcı bazında cüz sayımı (en çok cüz alanlar)
+  const leaderboard = Object.entries(
+    sharedHatimDetails.reduce<Record<string, number>>((acc, juz) => {
+      const name = juz.user_name || t('hatim.unnamedParticipant');
+      acc[name] = (acc[name] || 0) + 1;
+      return acc;
+    }, {})
+  )
+    .map(([name, count]) => ({ name, count }))
+    .sort((a, b) => b.count - a.count);
 
   const getWeekDateRange = () => {
     if (!weekStart) return '';
@@ -302,6 +400,11 @@ export default function HatimScreen() {
                   <Text style={styles.progressDates}>{getWeekDateRange()}</Text>
                 </View>
                 <View style={styles.headerActionGroup}>
+                  {completedCount > 0 && (
+                    <TouchableOpacity onPress={handleShareProgress} style={styles.circleAction}>
+                      <Ionicons name="share-social" size={18} color="#fff" />
+                    </TouchableOpacity>
+                  )}
                   <TouchableOpacity onPress={() => setIsHistoryVisible(true)} style={styles.circleAction}>
                     <Ionicons name="calendar-sharp" size={20} color="#fff" />
                   </TouchableOpacity>
@@ -363,6 +466,14 @@ export default function HatimScreen() {
           </>
         ) : (
           <View style={styles.collaborativeSection}>
+            {sharesUntilReward !== null && (
+              <View style={[styles.rewardBanner, { backgroundColor: colors.accent + '15' }]}>
+                <Ionicons name="gift" size={16} color={colors.accent} />
+                <Text style={[styles.rewardBannerText, { color: colors.text }]}>
+                  {t('hatim.rewardBannerText', { count: sharesUntilReward, days: REWARD_DAYS })}
+                </Text>
+              </View>
+            )}
             <View style={styles.collabHeader}>
               <Text style={[styles.sectionLabel, { color: colors.textSecondary }]}>{t('hatim.activeHatims')}</Text>
               <TouchableOpacity 
@@ -388,11 +499,25 @@ export default function HatimScreen() {
                   style={[styles.collabCard, { backgroundColor: colors.surface }, Shadows.medium]}
                   onPress={() => handleOpenSharedHatim(hatim)}
                 >
+                  {hatim.id === topHatimId && (
+                    <View style={[styles.topBadge, { backgroundColor: colors.accent + '20' }]}>
+                      <Ionicons name="trophy" size={11} color={colors.accent} />
+                      <Text style={[styles.topBadgeText, { color: colors.accent }]}>{t('hatim.topHatimBadge')}</Text>
+                    </View>
+                  )}
                   <View style={styles.collabCardTop}>
                     <Text style={[styles.collabTitle, { color: colors.text }]}>{hatim.title}</Text>
-                    <View style={[styles.participantBadge, { backgroundColor: colors.primary + '10' }]}>
-                      <Ionicons name="people" size={12} color={colors.primary} />
-                      <Text style={[styles.participantText, { color: colors.primary }]}>{hatim.participants_count}</Text>
+                    <View style={styles.collabCardActions}>
+                      <View style={[styles.participantBadge, { backgroundColor: colors.primary + '10' }]}>
+                        <Ionicons name="people" size={12} color={colors.primary} />
+                        <Text style={[styles.participantText, { color: colors.primary }]}>{hatim.participants_count}</Text>
+                      </View>
+                      <TouchableOpacity
+                        onPress={() => handleInviteToHatim(hatim)}
+                        style={[styles.inviteIconBtn, { backgroundColor: colors.accent + '20' }]}
+                      >
+                        <Ionicons name="share-social" size={14} color={colors.accent} />
+                      </TouchableOpacity>
                     </View>
                   </View>
                   
@@ -430,22 +555,22 @@ export default function HatimScreen() {
         <View style={styles.modalOverlay}>
           <View style={[styles.modalContent, { backgroundColor: colors.surface }, Shadows.premium]}>
             <View style={[styles.modalHeader, { backgroundColor: colors.primary }]}>
-              <Text style={styles.modalTitle}>{selectedJuz?.number}. Cüz Detayları</Text>
+              <Text style={styles.modalTitle}>{selectedJuz?.number}. {t('hatim.juzDetails')}</Text>
               <TouchableOpacity onPress={() => setIsModalVisible(false)}>
                 <Ionicons name="close" size={24} color="#fff" />
               </TouchableOpacity>
             </View>
             <View style={styles.modalBody}>
               <View style={styles.detailRow}>
-                <Text style={styles.detailLabel}>Başlangıç Suresi:</Text>
+                <Text style={styles.detailLabel}>{t('hatim.startSurah')}</Text>
                 <Text style={[styles.detailValue, { color: colors.primary }]}>{selectedJuz?.startSurah}</Text>
               </View>
               <View style={styles.detailRow}>
-                <Text style={styles.detailLabel}>Sayfalar:</Text>
+                <Text style={styles.detailLabel}>{t('hatim.pages')}</Text>
                 <Text style={styles.detailValue}>{selectedJuz?.pages}</Text>
               </View>
               <View style={styles.detailRow}>
-                <Text style={styles.detailLabel}>İçerdiği Sureler:</Text>
+                <Text style={styles.detailLabel}>{t('hatim.containsSurahs')}</Text>
                 <Text style={[styles.detailValue, { fontSize: 10, flex: 1, textAlign: 'right' }]}>{selectedJuz?.surahs}</Text>
               </View>
             </View>
@@ -460,20 +585,40 @@ export default function HatimScreen() {
             <TouchableOpacity onPress={() => setIsJoinModalVisible(false)} style={styles.closeBtn}>
               <Ionicons name="chevron-back" size={28} color={colors.primary} />
             </TouchableOpacity>
-            <Text style={[styles.modalFullTitle, { color: colors.text }]}>{selectedSharedHatim?.title}</Text>
-            <View style={{ width: 40 }} />
+            <Text style={[styles.modalFullTitle, { color: colors.text }]} numberOfLines={1}>{selectedSharedHatim?.title}</Text>
+            <TouchableOpacity
+              onPress={() => selectedSharedHatim && handleInviteToHatim(selectedSharedHatim)}
+              style={styles.closeBtn}
+            >
+              <Ionicons name="share-social" size={22} color={colors.primary} />
+            </TouchableOpacity>
           </View>
 
           <View style={styles.userNameSection}>
-            <Text style={[styles.inputLabel, { color: colors.textSecondary }]}>Katılımcı Adı</Text>
+            <Text style={[styles.inputLabel, { color: colors.textSecondary }]}>{t('hatim.participantName')}</Text>
             <TextInput
               style={[styles.nameInput, { backgroundColor: colors.surface, color: colors.text, borderColor: colors.border }]}
-              placeholder="Adınızı yazınız..."
+              placeholder={t('hatim.namePlaceholder')}
               placeholderTextColor={colors.textMuted}
               value={userName}
               onChangeText={setUserName}
             />
           </View>
+
+          {leaderboard.length > 0 && (
+            <View style={styles.leaderboardWrapper}>
+              <Text style={[styles.sectionLabel, { color: colors.textSecondary }]}>{t('hatim.leaderboardTitle')}</Text>
+              {leaderboard.slice(0, 3).map((entry, index) => (
+                <View key={entry.name} style={styles.leaderboardRow}>
+                  <Text style={[styles.leaderboardRank, { color: colors.accent }]}>
+                    {['🥇', '🥈', '🥉'][index]}
+                  </Text>
+                  <Text style={[styles.leaderboardName, { color: colors.text }]} numberOfLines={1}>{entry.name}</Text>
+                  <Text style={[styles.leaderboardCount, { color: colors.primary }]}>{entry.count} {t('hatim.juzCountShort')}</Text>
+                </View>
+              ))}
+            </View>
+          )}
 
           <ScrollView contentContainerStyle={styles.juzListContent}>
             <View style={styles.juzGrid}>
@@ -497,7 +642,7 @@ export default function HatimScreen() {
                     {isTaken ? (
                       <Text style={styles.takenText} numberOfLines={1}>{juzDetail.user_name}</Text>
                     ) : (
-                      <Text style={[styles.juzAction, { color: colors.success }]}>AL</Text>
+                      <Text style={[styles.juzAction, { color: colors.success }]}>{t('hatim.takeJuz')}</Text>
                     )}
                   </TouchableOpacity>
                 );
@@ -512,16 +657,16 @@ export default function HatimScreen() {
         <View style={styles.modalOverlay}>
           <View style={[styles.modalContent, { backgroundColor: colors.surface, padding: 0 }, Shadows.premium]}>
             <View style={[styles.modalHeader, { backgroundColor: colors.primary }]}>
-              <Text style={styles.modalTitle}>Yeni Ortak Hatim</Text>
+              <Text style={styles.modalTitle}>{t('hatim.newCollaborativeHatim')}</Text>
               <TouchableOpacity onPress={() => setIsCreateModalVisible(false)}>
                 <Ionicons name="close" size={24} color="#fff" />
               </TouchableOpacity>
             </View>
             <View style={{ padding: Spacing.lg }}>
-              <Text style={[styles.inputLabel, { color: colors.textSecondary }]}>Hatim Başlığı</Text>
+              <Text style={[styles.inputLabel, { color: colors.textSecondary }]}>{t('hatim.hatimTitleLabel')}</Text>
               <TextInput
                 style={[styles.nameInput, { backgroundColor: colors.background, color: colors.text, borderColor: colors.border }]}
-                placeholder="Örn: Ramazan Hatmi"
+                placeholder={t('hatim.hatimTitlePlaceholder')}
                 value={newHatimTitle}
                 onChangeText={setNewHatimTitle}
                 autoFocus
@@ -530,7 +675,7 @@ export default function HatimScreen() {
                 style={[styles.submitBtn, { backgroundColor: colors.primary }]}
                 onPress={handleCreateHatim}
               >
-                <Text style={styles.submitBtnText}>BAŞLAT</Text>
+                <Text style={styles.submitBtnText}>{t('hatim.startBtn')}</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -762,6 +907,69 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     flex: 1,
     marginRight: Spacing.md,
+  },
+  rewardBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: Spacing.md,
+    borderRadius: BorderRadius.lg,
+    gap: 8,
+    marginBottom: Spacing.md,
+  },
+  rewardBannerText: {
+    fontSize: 12,
+    fontWeight: '700',
+    flex: 1,
+  },
+  topBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 10,
+    gap: 3,
+    marginBottom: 6,
+    alignSelf: 'flex-start',
+  },
+  topBadgeText: {
+    fontSize: 10,
+    fontWeight: '800',
+  },
+  leaderboardWrapper: {
+    paddingHorizontal: Spacing.md,
+    marginBottom: Spacing.sm,
+  },
+  leaderboardRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 6,
+    gap: 8,
+  },
+  leaderboardRank: {
+    width: 20,
+    fontSize: 12,
+    fontWeight: '900',
+  },
+  leaderboardName: {
+    flex: 1,
+    fontSize: 13,
+    fontWeight: '600',
+  },
+  leaderboardCount: {
+    fontSize: 12,
+    fontWeight: '800',
+  },
+  collabCardActions: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  inviteIconBtn: {
+    width: 26,
+    height: 26,
+    borderRadius: 13,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   participantBadge: {
     flexDirection: 'row',

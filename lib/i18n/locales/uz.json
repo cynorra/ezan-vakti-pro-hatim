@@ -4,13 +4,15 @@
     "qibla": "Qibla",
     "hatim": "Xatm",
     "dua": "Dua",
-    "dhikr": "Zikr"
+    "dhikr": "Zikr",
+    "kaza": "Qazo"
   },
   "home": {
     "nextPrayerCountdown": "Qolgan vaqt",
     "verseOfTheDay": "Kunlik oyat",
     "hadithOfTheDay": "Kunlik hadis",
-    "esmaOfTheDay": "Kunlik ism"
+    "esmaOfTheDay": "Kunlik ism",
+    "duaOfTheDay": "Kunning duosi"
   },
   "prayerTimes": {
     "imsak": "Bomdod",
@@ -41,7 +43,18 @@
     "startSurah": "Boshlang'ich sura:",
     "pages": "Sahifalar:",
     "containsSurahs": "Suralar:",
-    "congratsSaved": "Tabriklaymiz! Xatmingiz saqlandi."
+    "congratsSaved": "Tabriklaymiz! Xatmingiz saqlandi.",
+    "enterNameAlert": "Iltimos, ismingizni kiriting.",
+    "enterTitleAlert": "Iltimos, sarlavha kiriting.",
+    "topHatimBadge": "ENG FAOL XATMOΝΑ",
+    "leaderboardTitle": "ENG FAOL QATNASHCHILAR",
+    "unnamedParticipant": "Anonim",
+    "inviteShareMessage": "«{{title}}» jamoaviy xatmiga qo'shiling, bir pora oling va Qur'onni birga o'qiylik 🕌📖\n\nIlova o'rnatilgan bo'lsa: {{deepLink}}\n\nBo'lmasa: {{playStore}}",
+    "completionShareMessage": "🎉 30 porani to'liq o'qib, xatmni yakunladim! Alhamdulillah 📖🕌\n\nBu mening #{{count}}-xatmim. Siz ham kuzatishni boshlang: {{playStore}}",
+    "progressShareMessage": "📖 Bu hafta {{completed}}/30 porani o'qib tugatdim ({{percentage}}%).\n\nO'z natijalaringizni Ezan Vakti + Hatim bilan kuzating: {{playStore}}",
+    "rewardUnlocked": "🎁 Ajoyib! Ulashganingiz uchun {{days}} kunlik reklamasiz rejimga ega bo'ldingiz.",
+    "rewardBannerText": "{{days}} kun reklamasiz rejimga ega bo'lish uchun yana {{count}} marta ulashing 🎁",
+    "juzCountShort": "pora"
   },
   "settings": {
     "title": "Sozlamalar",
@@ -72,6 +85,46 @@
     "cancel": "Bekor qilish",
     "save": "Saqlash",
     "close": "Yopish",
-    "search": "Qidirish..."
+    "search": "Qidirish...",
+    "errorGeneric": "Nimadir xato ketdi."
+  },
+  "esma": {
+    "title": "Allohning ismlari",
+    "search": "Ism yoki ma'nosini qidiring..."
+  },
+  "kaza": {
+    "title": "QAZO NAMOZLARI",
+    "subtitle": "Qazo namozlaringizni kuzatib boring",
+    "sabah": "Bomdod",
+    "ogle": "Peshin",
+    "ikindi": "Asr",
+    "aksam": "Shom",
+    "yatsi": "Xufton",
+    "vitir": "Vitr",
+    "completionShareMessage": "🎉 Barcha qazo namozlarimni o'qib tugatdim, Alhamdulillah! 🕌\n\nQazo namozlaringizni Ezan Vakti + Hatim bilan hisoblab boring: {{playStore}}"
+  },
+  "dua": {
+    "headerTitle": "DUOLAR TO'PLAMI",
+    "headerSubtitle": "Duo — mo'minning qurolidir",
+    "featuredBadge": "KUNNING DUOSI",
+    "meaningLabel": "MA'NOSI",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nMa'nosi: {{meaning}}\n\nManba: {{source}}\n\nEzan Vakti + Hatim ilovasidan ulashildi."
+  },
+  "splash": {
+    "subtitle": "Namoz vaqtlari, xatm va duolar bitta ilovada"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 Kunning duosi",
+    "dailyDuaBody": "{{title}} — o'qish uchun bosing",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "Bugun xatmingiz uchun bir necha oyat o'qishni unutmang 📖",
+    "eveningMsg2": "Oqshom yaqinlashganda, dilingizga duo bilan sokinlik bering 🤲",
+    "eveningMsg3": "Qazo namozlari uchun bir necha daqiqa ajrata olasizmi? 🕌",
+    "eveningMsg4": "Bugun zikr qildingizmi? Allohni eslash qalblarga orom beradi ✨",
+    "noJuzThisWeek": "Bu hafta hali birorta pora belgilamadingiz, bittasidan boshlaysizmi? 📖",
+    "kazaDebtReminder": "Sizda {{count}} ta o'qilmagan qazo namozi bor, bugun oqshom bir nechtasini o'qib olishingiz mumkin 🕌",
+    "streakReminder": "{{streak}} kunlik davomiyligingiz davom etmoqda, bugun ham davom ettiring! 🔥",
+    "prayerTitle": "{{prayer}} vaqti",
+    "prayerBody": "{{city}} uchun {{prayer}} namozi vaqti kirdi."
   }
 }

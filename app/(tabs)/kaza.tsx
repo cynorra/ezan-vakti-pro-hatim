@@ -7,6 +7,7 @@ import {
   useColorScheme,
   ScrollView,
   Platform,
+  Share,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -16,6 +17,8 @@ import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/c
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SEOHead } from '@/components/SEOHead';
 import { useTranslation } from 'react-i18next';
+import { logEvent } from '@/lib/analytics';
+import { PLAY_STORE_URL, recordGrowthShare, REWARD_DAYS } from '@/lib/rewards';
 
 interface KazaData {
   sabah: number;
@@ -64,20 +67,45 @@ export default function KazaScreen() {
     }
   };
 
+  const totalKaza = (data: KazaData) =>
+    Object.values(data).reduce((sum, v) => sum + v, 0);
+
+  const celebrateKazaCompleted = async () => {
+    safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    logEvent('kaza_debt_cleared');
+    try {
+      const result = await Share.share({
+        message: t('kaza.completionShareMessage', { playStore: PLAY_STORE_URL }),
+      });
+      if (result.action !== Share.dismissedAction) {
+        const { justUnlocked } = await recordGrowthShare();
+        if (justUnlocked) {
+          alert(t('hatim.rewardUnlocked', { days: REWARD_DAYS }));
+        }
+      }
+    } catch (error) {
+      console.log('Kaza completion share error:', error);
+    }
+  };
+
   const updateCount = (key: keyof KazaData, delta: number) => {
     setKazaData((prev) => {
       const newCount = prev[key] + delta;
       if (newCount < 0) return prev; // Negatif olmasın
-      
+
       const newData = { ...prev, [key]: newCount };
       saveData(newData);
-      
+
       if (delta > 0) {
         safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
       } else {
         safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
       }
-      
+
+      if (totalKaza(prev) > 0 && totalKaza(newData) === 0) {
+        celebrateKazaCompleted();
+      }
+
       return newData;
     });
   };

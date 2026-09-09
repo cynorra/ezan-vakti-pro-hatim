@@ -19,13 +19,15 @@
     "ikindi": "Asr",
     "aksam": "Maghrib",
     "yatsi": "Isha",
-    "vitir": "Witr"
+    "vitir": "Witr",
+    "completionShareMessage": "🎉 I completed all my missed prayers, Alhamdulillah! 🕌\n\nTrack your missed prayers with Ezan Vakti + Hatim: {{playStore}}"
   },
   "home": {
     "nextPrayerCountdown": "Time remaining",
     "verseOfTheDay": "Verse of the Day",
     "hadithOfTheDay": "Hadith of the Day",
-    "esmaOfTheDay": "Name of the Day"
+    "esmaOfTheDay": "Name of the Day",
+    "duaOfTheDay": "Dua of the Day"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -56,7 +58,18 @@
     "startSurah": "Starting Surah:",
     "pages": "Pages:",
     "containsSurahs": "Contains Surahs:",
-    "congratsSaved": "Congratulations! Your Khatm is saved."
+    "congratsSaved": "Congratulations! Your Khatm is saved.",
+    "enterNameAlert": "Please enter your name.",
+    "enterTitleAlert": "Please enter a title.",
+    "topHatimBadge": "MOST ACTIVE KHATM",
+    "leaderboardTitle": "TOP CONTRIBUTORS",
+    "unnamedParticipant": "Anonymous",
+    "inviteShareMessage": "Join the \"{{title}}\" collaborative khatm, take a juz, let's read the Quran together 🕌📖\n\nIf you already have the app: {{deepLink}}\n\nIf not: {{playStore}}",
+    "completionShareMessage": "🎉 I completed all 30 juz, finished my khatm! Alhamdulillah 📖🕌\n\nThis is my khatm #{{count}}. Start tracking yours too: {{playStore}}",
+    "progressShareMessage": "📖 I completed {{completed}}/30 juz this week ({{percentage}}%).\n\nTrack yours with Ezan Vakti + Hatim: {{playStore}}",
+    "rewardUnlocked": "🎁 Awesome! Thanks to your shares, you unlocked {{days}} ad-free days.",
+    "rewardBannerText": "Share {{count}} more time(s) to unlock {{days}} ad-free days 🎁",
+    "juzCountShort": "juz"
   },
   "settings": {
     "title": "Settings",
@@ -87,6 +100,31 @@
     "cancel": "Cancel",
     "save": "Save",
     "close": "Close",
-    "search": "Search..."
+    "search": "Search...",
+    "errorGeneric": "Something went wrong."
+  },
+  "dua": {
+    "headerTitle": "DUA LIBRARY",
+    "headerSubtitle": "Prayer Is the Weapon of the Believer",
+    "featuredBadge": "DUA OF THE DAY",
+    "meaningLabel": "MEANING",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nMeaning: {{meaning}}\n\nSource: {{source}}\n\nShared from Ezan Vakti + Hatim."
+  },
+  "splash": {
+    "subtitle": "Prayer times, khatm and dua together"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 Dua of the Day",
+    "dailyDuaBody": "{{title}} — tap to read",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "Don't forget to add a verse to your khatm today 📖",
+    "eveningMsg2": "As evening approaches, ease your heart with a dua 🤲",
+    "eveningMsg3": "Got a few minutes for your missed prayers? 🕌",
+    "eveningMsg4": "Did you do your dhikr today? Remembrance brings peace to the heart ✨",
+    "noJuzThisWeek": "You haven't marked a juz this week yet, why not start with one? 📖",
+    "kazaDebtReminder": "You have {{count}} missed prayers waiting, you could catch up on a few tonight 🕌",
+    "streakReminder": "Your {{streak}}-day streak is going, keep it up today too 🔥",
+    "prayerTitle": "{{prayer}} Time",
+    "prayerBody": "It's {{prayer}} time for {{city}}."
   }
 }

@@ -4,13 +4,15 @@
     "qibla": "قبله",
     "hatim": "ختم",
     "dua": "دعا",
-    "dhikr": "ذکر"
+    "dhikr": "ذکر",
+    "kaza": "قضا"
   },
   "home": {
     "nextPrayerCountdown": "زمان باقیمانده",
     "verseOfTheDay": "آیه روز",
     "hadithOfTheDay": "حدیث روز",
-    "esmaOfTheDay": "اسم روز"
+    "esmaOfTheDay": "اسم روز",
+    "duaOfTheDay": "دعای روز"
   },
   "prayerTimes": {
     "imsak": "اذان صبح",
@@ -41,7 +43,18 @@
     "startSurah": "سوره آغازین:",
     "pages": "صفحات:",
     "containsSurahs": "سوره‌های موجود:",
-    "congratsSaved": "تبریک! ختم شما ذخیره شد."
+    "congratsSaved": "تبریک! ختم شما ذخیره شد.",
+    "enterNameAlert": "لطفاً نام خود را وارد کنید.",
+    "enterTitleAlert": "لطفاً یک عنوان وارد کنید.",
+    "topHatimBadge": "فعال‌ترین ختم",
+    "leaderboardTitle": "بیشترین مشارکت",
+    "unnamedParticipant": "ناشناس",
+    "inviteShareMessage": "به ختم جمعی «{{title}}» بپیوندید، یک جزء بردارید تا با هم قرآن بخوانیم 🕌📖\n\nاگر برنامه را دارید: {{deepLink}}\n\nاگر ندارید: {{playStore}}",
+    "completionShareMessage": "🎉 با خواندن هر ۳۰ جزء، ختم قرآن را به پایان رساندم! الحمدلله 📖🕌\n\nاین ختم شماره {{count}} من است. شما هم شروع کنید: {{playStore}}",
+    "progressShareMessage": "📖 این هفته {{completed}} جزء از ۳۰ جزء را تکمیل کردم ({{percentage}}٪).\n\nپیشرفت خود را با Ezan Vakti + Hatim دنبال کنید: {{playStore}}",
+    "rewardUnlocked": "🎁 فوق‌العاده است! با اشتراک‌گذاری‌های خود، {{days}} روز استفاده بدون تبلیغات دریافت کردید.",
+    "rewardBannerText": "برای دریافت {{days}} روز بدون تبلیغات، {{count}} بار دیگر به اشتراک بگذارید 🎁",
+    "juzCountShort": "جزء"
   },
   "settings": {
     "title": "تنظیمات",
@@ -72,6 +85,46 @@
     "cancel": "لغو",
     "save": "ذخیره",
     "close": "بستن",
-    "search": "جستجو..."
+    "search": "جستجو...",
+    "errorGeneric": "مشکلی پیش آمد."
+  },
+  "esma": {
+    "title": "اسماء الحسنی",
+    "search": "جستجوی نام یا معنی..."
+  },
+  "kaza": {
+    "title": "نمازهای قضا",
+    "subtitle": "نمازهای قضای خود را پیگیری کنید",
+    "sabah": "صبح",
+    "ogle": "ظهر",
+    "ikindi": "عصر",
+    "aksam": "مغرب",
+    "yatsi": "عشاء",
+    "vitir": "وتر",
+    "completionShareMessage": "🎉 الحمدلله، تمام نمازهای قضای خود را به جا آوردم! 🕌\n\nپیگیری نمازهای قضا با Ezan Vakti + Hatim:\n{{playStore}}"
+  },
+  "dua": {
+    "headerTitle": "بانک ادعیه",
+    "headerSubtitle": "دعا سلاح مؤمن است",
+    "featuredBadge": "دعای روز",
+    "meaningLabel": "ترجمه",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nترجمه: {{meaning}}\n\nمنبع: {{source}}\n\nبه اشتراک گذاشته شده از Ezan Vakti + Hatim."
+  },
+  "splash": {
+    "subtitle": "اوقات شرعی، ختم قرآن و ادعیه در یک برنامه"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 دعای روز",
+    "dailyDuaBody": "{{title}} — برای خواندن لمس کنید",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "امروز تلاوت آیاتی از ختم خود را فراموش نکنید 📖",
+    "eveningMsg2": "با نزدیک شدن غروب، با یک دعا به دلتان آرامش ببخشید 🤲",
+    "eveningMsg3": "چند دقیقه برای ادای نمازهای قضا وقت دارید؟ 🕌",
+    "eveningMsg4": "آیا امروز ذکر گفتید؟ یاد خدا آرام‌بخش دل‌هاست ✨",
+    "noJuzThisWeek": "این هفته هنوز جزئی ثبت نکرده‌اید، چطور است با یک جزء شروع کنید؟ 📖",
+    "kazaDebtReminder": "{{count}} نماز قضا در انتظار شماست، می‌توانید امشب چندتایی را به جا آورید 🕌",
+    "streakReminder": "زنجیره {{streak}} روزه شما ادامه دارد، امروز هم ادامه‌اش دهید 🔥",
+    "prayerTitle": "وقت اذان {{prayer}}",
+    "prayerBody": "زمان اذان {{prayer}} به افق {{city}} فرا رسید."
   }
 }

@@ -4,13 +4,15 @@
     "qibla": "Қибла",
     "hatim": "Хатым",
     "dua": "Дұға",
-    "dhikr": "Зікір"
+    "dhikr": "Зікір",
+    "kaza": "Қаза"
   },
   "home": {
     "nextPrayerCountdown": "Қалған уақыт",
     "verseOfTheDay": "Күннің аяты",
     "hadithOfTheDay": "Күннің хадисі",
-    "esmaOfTheDay": "Күннің есімі"
+    "esmaOfTheDay": "Күннің есімі",
+    "duaOfTheDay": "Күн дұғасы"
   },
   "prayerTimes": {
     "imsak": "Бамдат",
@@ -41,7 +43,18 @@
     "startSurah": "Бастапқы сүре:",
     "pages": "Беттер:",
     "containsSurahs": "Сүрелер:",
-    "congratsSaved": "Құттықтаймыз! Хатымыңыз сақталды."
+    "congratsSaved": "Құттықтаймыз! Хатымыңыз сақталды.",
+    "enterNameAlert": "Атыңызды енгізіңіз.",
+    "enterTitleAlert": "Тақырыбын енгізіңіз.",
+    "topHatimBadge": "ЕҢ БЕЛСЕНДІ ХАТЫМ",
+    "leaderboardTitle": "ҮЗДІК ҚАТЫСУШЫЛАР",
+    "unnamedParticipant": "Аноним",
+    "inviteShareMessage": "«{{title}}» ортақ хатымына қосылыңыз, бір пара алыңыз, Құранды бірге оқиық 🕌📖\n\nЕгер қосымша бар болса: {{deepLink}}\n\nЖоқ болса: {{playStore}}",
+    "completionShareMessage": "🎉 30 параны толық оқып, хатымды аяқтадым! Әлхамдулиллаһ 📖🕌\n\nБұл менің #{{count}}-хатымым. Сіз де есебін жүргізуді бастаңыз: {{playStore}}",
+    "progressShareMessage": "📖 Осы аптада {{completed}}/30 параны аяқтадым ({{percentage}}%).\n\nӨз нәтижеңізді Ezan Vakti + Hatim-мен бақылаңыз: {{playStore}}",
+    "rewardUnlocked": "🎁 Керемет! Бөліскеніңіз үшін {{days}} күндік жарнамасыз нұсқаға ие болдыңыз.",
+    "rewardBannerText": "{{days}} күн жарнамасыз пайдалану үшін тағы {{count}} рет бөлісіңіз 🎁",
+    "juzCountShort": "пара"
   },
   "settings": {
     "title": "Параметрлер",
@@ -72,6 +85,46 @@
     "cancel": "Болдырмау",
     "save": "Сақтау",
     "close": "Жабу",
-    "search": "Іздеу..."
+    "search": "Іздеу...",
+    "errorGeneric": "Бір кінәрат орын алды."
+  },
+  "esma": {
+    "title": "Алланың есімдері",
+    "search": "Есімді немесе мағынасын іздеу..."
+  },
+  "kaza": {
+    "title": "ҚАЗА НАМАЗДАР",
+    "subtitle": "Қаза намаздарыңызды есептеңіз",
+    "sabah": "Таң",
+    "ogle": "Бесін",
+    "ikindi": "Екінті",
+    "aksam": "Ақшам",
+    "yatsi": "Құптан",
+    "vitir": "Үтір",
+    "completionShareMessage": "🎉 Барлық қаза намаздарымды өтеп бітірдім, Әлхамдулиллаһ! 🕌\n\nҚаза намаздарыңызды Ezan Vakti + Hatim қосымшасымен қадағалаңыз: {{playStore}}"
+  },
+  "dua": {
+    "headerTitle": "ДҰҒАЛАР ЖИНАҒЫ",
+    "headerSubtitle": "Дұға — мүміннің қаруы",
+    "featuredBadge": "КҮН ДҰҒАСЫ",
+    "meaningLabel": "МАҒЫНАСЫ",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nМағынасы: {{meaning}}\n\nДереккөз: {{source}}\n\nEzan Vakti + Hatim қосымшасынан бөлісілді."
+  },
+  "splash": {
+    "subtitle": "Намаз уақыттары, хатым және дұғалар бір жерде"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 Күн дұғасы",
+    "dailyDuaBody": "{{title}} — оқу үшін түртіңіз",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "Бүгін хатымыңыз үшін бірнеше аят оқуды ұмытпаңыз 📖",
+    "eveningMsg2": "Кеш батқанда, жүрегіңізді дұғамен тыныштандырыңыз 🤲",
+    "eveningMsg3": "Қаза намаздарыңыз үшін бірнеше минут таба аласыз ба? 🕌",
+    "eveningMsg4": "Бүгін зікір айттыңыз ба? Алланы еске алу жүрекке тыныштық береді ✨",
+    "noJuzThisWeek": "Бұл аптада әлі пара белгілемедіңіз, біреуінен бастап көрмейсіз бе? 📖",
+    "kazaDebtReminder": "Өтелмеген {{count}} қаза намазыңыз бар, бүгін түнде бірнешеуін өтеп алыңыз 🕌",
+    "streakReminder": "{{streak}} күндік үздіксіздігіңіз сақталуда, бүгін де жалғастырыңыз! 🔥",
+    "prayerTitle": "{{prayer}} намазының уақыты",
+    "prayerBody": "{{city}} қаласында {{prayer}} намазының уақыты кірді."
   }
 }

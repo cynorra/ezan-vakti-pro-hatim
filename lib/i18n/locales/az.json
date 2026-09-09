@@ -4,13 +4,15 @@
     "qibla": "Qiblə",
     "hatim": "Xətm",
     "dua": "Dua",
-    "dhikr": "Zikr"
+    "dhikr": "Zikr",
+    "kaza": "Qəza"
   },
   "home": {
     "nextPrayerCountdown": "Qalan vaxt",
     "verseOfTheDay": "Günün ayəsi",
     "hadithOfTheDay": "Günün hədisi",
-    "esmaOfTheDay": "Günün ismi"
+    "esmaOfTheDay": "Günün ismi",
+    "duaOfTheDay": "Günün Duası"
   },
   "prayerTimes": {
     "imsak": "Sübh",
@@ -41,7 +43,18 @@
     "startSurah": "Başlanğıc surə:",
     "pages": "Səhifələr:",
     "containsSurahs": "Surələr:",
-    "congratsSaved": "Təbriklər! Xətminiz saxlanıldı."
+    "congratsSaved": "Təbriklər! Xətminiz saxlanıldı.",
+    "enterNameAlert": "Zəhmət olmasa, adınızı daxil edin.",
+    "enterTitleAlert": "Zəhmət olmasa, başlıq daxil edin.",
+    "topHatimBadge": "ƏN AKTİV XƏTM",
+    "leaderboardTitle": "ƏN ÇOX OXUYANLAR",
+    "unnamedParticipant": "Anonim",
+    "inviteShareMessage": "«{{title}}» ortaq xətminə qoşulun, bir cüz götürün və Quranı birlikdə oxuyaq 🕌📖\n\nTətbiqiniz varsa: {{deepLink}}\n\nYoxdursa: {{playStore}}",
+    "completionShareMessage": "🎉 30 cüzün hamısını oxuyub xətmimi bitirdim! Əlhəmdulillah 📖🕌\n\nBu mənim #{{count}} saylı xətmimdir. Siz də izləməyə başlayın: {{playStore}}",
+    "progressShareMessage": "📖 Bu həftə {{completed}}/30 cüz tamamladım ({{percentage}}%).\n\nİrəliləyişinizi Ezan Vakti + Hatim ilə izləyin: {{playStore}}",
+    "rewardUnlocked": "🎁 Əla! Paylaşımlarınız sayəsində {{days}} günlük reklamsız istifadə qazandınız.",
+    "rewardBannerText": "{{days}} gün reklamsız istifadə üçün daha {{count}} dəfə paylaşın 🎁",
+    "juzCountShort": "cüz"
   },
   "settings": {
     "title": "Parametrlər",
@@ -72,6 +85,46 @@
     "cancel": "Ləğv et",
     "save": "Saxla",
     "close": "Bağla",
-    "search": "Axtar..."
+    "search": "Axtar...",
+    "errorGeneric": "Xəta baş verdi."
+  },
+  "esma": {
+    "title": "Əsmaül-Hüsna",
+    "search": "Ad və ya məna axtar..."
+  },
+  "kaza": {
+    "title": "QƏZA NAMAZLARI",
+    "subtitle": "Qəza namazlarınızı izləyin",
+    "sabah": "Sübh",
+    "ogle": "Zöhr",
+    "ikindi": "Əsr",
+    "aksam": "Məğrib",
+    "yatsi": "İşa",
+    "vitir": "Vitr",
+    "completionShareMessage": "🎉 Bütün qəza namazlarımı tamamladım, Əlhəmdulillah! 🕌\n\nQəza namazlarınızı Ezan Vakti + Hatim ilə izləyin: {{playStore}}"
+  },
+  "dua": {
+    "headerTitle": "DUA KİTABXANASI",
+    "headerSubtitle": "Dua Möminin Silahıdır",
+    "featuredBadge": "GÜNÜN DUASI",
+    "meaningLabel": "MƏNASI",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nMənası: {{meaning}}\n\nMənbə: {{source}}\n\nEzan Vakti + Hatim tətbiqindən paylaşıldı."
+  },
+  "splash": {
+    "subtitle": "Namaz vaxtları, xətm və dualar bir arada"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 Günün Duası",
+    "dailyDuaBody": "{{title}} — oxumaq üçün toxunun",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "Bu gün xətminiz üçün bir neçə ayə oxumağı unutmayın 📖",
+    "eveningMsg2": "Axşam düşərkən qəlbinizi dua ilə sakitləşdirin 🤲",
+    "eveningMsg3": "Qəza namazlarınız üçün bir neçə dəqiqəniz var? 🕌",
+    "eveningMsg4": "Bu gün zikr etdinizmi? Allahı zikr etmək qəlblərə rahatlıq gətirər ✨",
+    "noJuzThisWeek": "Bu həftə hələ heç bir cüz qeyd etməmisiniz, bəlkə biri ilə başlayasınız? 📖",
+    "kazaDebtReminder": "{{count}} qəza namazınız qalıb, bu axşam bir neçəsini qıla bilərsiniz 🕌",
+    "streakReminder": "{{streak}} günlük seriyanız davam edir, bu gün də davam etdirin! 🔥",
+    "prayerTitle": "{{prayer}} Vaxtı",
+    "prayerBody": "{{city}} üçün {{prayer}} vaxtı girdi."
   }
 }

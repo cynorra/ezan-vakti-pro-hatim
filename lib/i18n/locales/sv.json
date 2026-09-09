@@ -1,8 +1,130 @@
 {
-  "tabs": { "home": "Hem", "qibla": "Qibla", "hatim": "Khatm", "dua": "Dua", "dhikr": "Dhikr" },
-  "home": { "nextPrayerCountdown": "Återstående tid", "verseOfTheDay": "Dagens vers", "hadithOfTheDay": "Dagens hadith", "esmaOfTheDay": "Dagens namn" },
-  "prayerTimes": { "imsak": "Fajr", "gunes": "Soluppgång", "ogle": "Dhuhr", "ikindi": "Asr", "aksam": "Maghrib", "yatsi": "Isha" },
-  "hatim": { "individual": "Individuell", "collaborative": "Gemensam", "weeklyHatim": "Veckans Khatm", "completed": "Slutförd", "completeHatimBtn": "SLUTFÖR KHATM", "juzSelection": "JUZ VAL", "activeHatims": "AKTIVA KHATMS", "startNew": "Starta ny", "noActiveHatim": "Ingen aktiv gemensam khatm ännu.", "newCollaborativeHatim": "Ny Gemensam Khatm", "hatimTitleLabel": "Khatm Titel", "hatimTitlePlaceholder": "t.ex. Ramadan Khatm", "startBtn": "START", "participantName": "Deltagarnamn", "namePlaceholder": "Ange ditt namn...", "takeJuz": "TA", "juzDetails": "Juz Detaljer", "startSurah": "Start Sura:", "pages": "Sidor:", "containsSurahs": "Innehåller Suror:", "congratsSaved": "Grattis! Din Khatm är sparad." },
-  "settings": { "title": "Inställningar", "notifications": "Aviseringar", "language": "Språk" },
-  "common": { "cancel": "Avbryt", "save": "Spara", "close": "Stäng", "search": "Sök..." }
+  "tabs": {
+    "home": "Hem",
+    "qibla": "Qibla",
+    "hatim": "Khatm",
+    "dua": "Dua",
+    "dhikr": "Dhikr",
+    "kaza": "Qada"
+  },
+  "home": {
+    "nextPrayerCountdown": "Återstående tid",
+    "verseOfTheDay": "Dagens vers",
+    "hadithOfTheDay": "Dagens hadith",
+    "esmaOfTheDay": "Dagens namn",
+    "duaOfTheDay": "Dagens dua"
+  },
+  "prayerTimes": {
+    "imsak": "Fajr",
+    "gunes": "Soluppgång",
+    "ogle": "Dhuhr",
+    "ikindi": "Asr",
+    "aksam": "Maghrib",
+    "yatsi": "Isha"
+  },
+  "hatim": {
+    "individual": "Individuell",
+    "collaborative": "Gemensam",
+    "weeklyHatim": "Veckans Khatm",
+    "completed": "Slutförd",
+    "completeHatimBtn": "SLUTFÖR KHATM",
+    "juzSelection": "JUZ VAL",
+    "activeHatims": "AKTIVA KHATMS",
+    "startNew": "Starta ny",
+    "noActiveHatim": "Ingen aktiv gemensam khatm ännu.",
+    "newCollaborativeHatim": "Ny Gemensam Khatm",
+    "hatimTitleLabel": "Khatm Titel",
+    "hatimTitlePlaceholder": "t.ex. Ramadan Khatm",
+    "startBtn": "START",
+    "participantName": "Deltagarnamn",
+    "namePlaceholder": "Ange ditt namn...",
+    "takeJuz": "TA",
+    "juzDetails": "Juz Detaljer",
+    "startSurah": "Start Sura:",
+    "pages": "Sidor:",
+    "containsSurahs": "Innehåller Suror:",
+    "congratsSaved": "Grattis! Din Khatm är sparad.",
+    "enterNameAlert": "Vänligen ange ditt namn.",
+    "enterTitleAlert": "Vänligen ange en titel.",
+    "topHatimBadge": "MEST AKTIVA KHATM",
+    "leaderboardTitle": "TOPPBIDRAGSGIVARE",
+    "unnamedParticipant": "Anonym",
+    "inviteShareMessage": "Gå med i den gemensamma khatmen \"{{title}}\", ta en juz och låt oss läsa Koranen tillsammans 🕌📖\n\nOm du redan har appen: {{deepLink}}\n\nOm inte: {{playStore}}",
+    "completionShareMessage": "🎉 Jag har slutfört alla 30 juz och gjort klart min khatm! Alhamdulillah 📖🕌\n\nDet här är min khatm nr {{count}}. Börja följa din med: {{playStore}}",
+    "progressShareMessage": "📖 Jag har slutfört {{completed}}/30 juz denna vecka ({{percentage}}%).\n\nFölj din resa med Ezan Vakti + Hatim: {{playStore}}",
+    "rewardUnlocked": "🎁 Fantastiskt! Tack vare att du delade har du låst upp {{days}} reklamfria dagar.",
+    "rewardBannerText": "Dela {{count}} gång(er) till för att låsa upp {{days}} reklamfria dagar 🎁",
+    "juzCountShort": "juz"
+  },
+  "settings": {
+    "title": "Inställningar",
+    "notifications": "Aviseringar",
+    "language": "Språk",
+    "sound": "Adhan-ljud",
+    "reminder": "Påminnelse före bön",
+    "theme": "Tema",
+    "themeLight": "Ljust",
+    "themeDark": "Mörkt",
+    "support": "Support & info",
+    "rateApp": "Betygsätt appen",
+    "feedback": "Skicka feedback",
+    "about": "Om",
+    "widgetPreview": "FÖRHANDSVISNING AV WIDGET",
+    "widgetNext": "Nästa",
+    "widgetHint": "Tryck och håll på hemskärmen för att lägga till widgeten."
+  },
+  "common": {
+    "cancel": "Avbryt",
+    "save": "Spara",
+    "close": "Stäng",
+    "search": "Sök...",
+    "errorGeneric": "Något gick fel."
+  },
+  "esma": {
+    "title": "Allahs namn",
+    "search": "Sök namn eller betydelse..."
+  },
+  "kaza": {
+    "title": "MISSADE BÖNER",
+    "subtitle": "Håll koll på dina missade böner",
+    "sabah": "Fajr",
+    "ogle": "Dhuhr",
+    "ikindi": "Asr",
+    "aksam": "Maghrib",
+    "yatsi": "Isha",
+    "vitir": "Witr",
+    "completionShareMessage": "🎉 Jag har klarat av alla mina missade böner, Alhamdulillah! 🕌\n\nHåll koll på dina missade böner med Ezan Vakti + Hatim: {{playStore}}"
+  },
+  "qibla": {
+    "title": "QIBLA-KOMPASS",
+    "subtitle": "Hitta riktningen till Qibla",
+    "yourDirection": "DIN RIKTNING",
+    "qiblaAngle": "QIBLA-VINKEL",
+    "aligned": "RIKTAD MOT QIBLA",
+    "hint": "Håll enheten plant och följ nålen."
+  },
+  "dua": {
+    "headerTitle": "DUA-BIBLIOTEK",
+    "headerSubtitle": "Bönen är den troendes vapen",
+    "featuredBadge": "DAGENS DUA",
+    "meaningLabel": "BETYDELSE",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nBetydelse: {{meaning}}\n\nKälla: {{source}}\n\nDelat från Ezan Vakti + Hatim."
+  },
+  "splash": {
+    "subtitle": "Bönestunder, khatm och dua på ett ställe"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 Dagens dua",
+    "dailyDuaBody": "{{title}} – tryck för att läsa",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "Glöm inte att lägga till en vers till din khatm idag 📖",
+    "eveningMsg2": "När kvällen närmar sig, ge ditt hjärta ro med en dua 🤲",
+    "eveningMsg3": "Har du några minuter över för dina missade böner? 🕌",
+    "eveningMsg4": "Har du gjort din dhikr idag? Att minnas Allah ger frid i hjärtat ✨",
+    "noJuzThisWeek": "Du har inte markerat någon juz den här veckan än, varför inte börja med en? 📖",
+    "kazaDebtReminder": "Du har {{count}} missade böner kvar, du kan ta igen några ikväll 🕌",
+    "streakReminder": "Din svit på {{streak}} dagar pågår, fortsätt så idag med 🔥",
+    "prayerTitle": "Tid för {{prayer}}",
+    "prayerBody": "Det är dags för {{prayer}} i {{city}}."
+  }
 }

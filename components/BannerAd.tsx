@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Platform } from 'react-native';
 import { BannerAd as AdMobBanner, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
+import { isAdFreeActive } from '@/lib/rewards';
 
 // Official test banner unit IDs or safe wrapper TestIds.BANNER
 const adUnitId = __DEV__
@@ -17,9 +18,14 @@ interface BannerAdProps {
 
 export const BannerAd: React.FC<BannerAdProps> = ({ size = BannerAdSize.ANCHORED_ADAPTIVE_BANNER }) => {
   const [hasError, setHasError] = useState(false);
+  const [adFree, setAdFree] = useState(false);
 
-  if (hasError) {
-    return null; // Gracefully hide the component if loading fails or there's an error
+  useEffect(() => {
+    isAdFreeActive().then(setAdFree);
+  }, []);
+
+  if (hasError || adFree) {
+    return null; // Reklamsız ödül aktifse veya yükleme başarısızsa gösterme
   }
 
   return (

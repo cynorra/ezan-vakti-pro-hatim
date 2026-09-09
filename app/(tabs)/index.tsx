@@ -18,7 +18,15 @@ import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/c
 import { turkishCities, City } from '@/lib/data/cities';
 import { calculatePrayerTimes, PrayerTimes } from '@/lib/prayer-times';
 import { getDailyWisdom } from '@/lib/data/daily-content';
-import { requestNotificationPermissions, scheduleAllPrayers } from '@/lib/notifications';
+import { getDailyDua } from '@/lib/data/duas';
+import { recordAppOpenAndGetStreak } from '@/lib/streak';
+import {
+  requestNotificationPermissions,
+  scheduleAllPrayers,
+  hasNotificationPermission,
+  configureNotificationChannel,
+  cancelAllNotifications,
+} from '@/lib/notifications';
 import { getHijriDate } from '@/lib/hijri';
 import { SettingsModal } from '@/components/SettingsModal';
 import { DailyChecklist } from '@/components/DailyChecklist';
@@ -43,9 +51,16 @@ export default function HomeScreen() {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [notificationsEnabled, setNotificationsEnabled] = useState(false);
   const [dailyEsma, setDailyEsma] = useState<Esma | null>(null);
+  const [streak, setStreak] = useState(0);
 
   useEffect(() => {
     setDailyEsma(getRandomEsma());
+    recordAppOpenAndGetStreak().then(setStreak);
+  }, []);
+
+  useEffect(() => {
+    configureNotificationChannel();
+    hasNotificationPermission().then(setNotificationsEnabled);
   }, []);
 
   const loadPrayerTimes = useCallback(() => {
@@ -119,6 +134,7 @@ export default function HomeScreen() {
       }
     } else {
       setNotificationsEnabled(false);
+      await cancelAllNotifications();
     }
   };
 
@@ -197,9 +213,17 @@ export default function HomeScreen() {
           </View>
         </View>
 
-        <View style={styles.headerDateInfo}>
-          <Text style={styles.headerHijri}>{formatHijriDate()}</Text>
-          <Text style={styles.headerGregorian}>{formatGregorianDate()}</Text>
+        <View style={[styles.headerDateInfo, styles.headerDateRow]}>
+          <View>
+            <Text style={styles.headerHijri}>{formatHijriDate()}</Text>
+            <Text style={styles.headerGregorian}>{formatGregorianDate()}</Text>
+          </View>
+          {streak > 0 && (
+            <View style={styles.streakBadge}>
+              <Ionicons name="flame" size={16} color="#F4D03F" />
+              <Text style={styles.streakText}>{streak}</Text>
+            </View>
+          )}
         </View>
       </LinearGradient>
 
@@ -242,6 +266,34 @@ export default function HomeScreen() {
             </Text>
           </View>
         </View>
+
+        {/* Günün Duası Card */}
+        <TouchableOpacity
+          activeOpacity={0.85}
+          onPress={() => router.push('/dua')}
+          style={[styles.card, { backgroundColor: colors.surface }, Shadows.medium]}
+        >
+          <View style={styles.cardHeader}>
+            <View style={[styles.cardIconWrapper, { backgroundColor: colors.accent + '20' }]}>
+              <Ionicons name="hand-left" size={20} color={colors.accent} />
+            </View>
+            <Text style={[styles.cardTitle, { color: colors.primary }]}>{t('home.duaOfTheDay')}</Text>
+            <View style={{ flex: 1 }} />
+            <Ionicons name="chevron-forward" size={18} color={colors.textMuted} />
+          </View>
+
+          <View style={styles.wisdomBody}>
+            <Text style={[styles.arabicText, { color: colors.primary }]}>
+              {getDailyDua().arabic}
+            </Text>
+            <Text style={[styles.wisdomContent, { color: colors.text }]}>
+              "{getDailyDua().turkish}"
+            </Text>
+            <Text style={[styles.wisdomSource, { color: colors.textSecondary }]}>
+              — {getDailyDua().source}
+            </Text>
+          </View>
+        </TouchableOpacity>
 
         {/* Günün Esması Card */}
         {dailyEsma && (
@@ -352,6 +404,25 @@ const styles = StyleSheet.create({
   },
   headerDateInfo: {
     marginTop: Spacing.xl,
+  },
+  headerDateRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+  },
+  streakBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'rgba(255,255,255,0.15)',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: BorderRadius.full,
+    gap: 4,
+  },
+  streakText: {
+    color: '#fff',
+    fontSize: FontSize.md,
+    fontWeight: '800',
   },
   headerHijri: {
     color: '#fff',

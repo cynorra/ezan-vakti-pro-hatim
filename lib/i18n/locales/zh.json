@@ -1,8 +1,130 @@
 {
-  "tabs": { "home": "首页", "qibla": "朝向", "hatim": "通读", "dua": "祈祷", "dhikr": "赞念" },
-  "home": { "nextPrayerCountdown": "剩余时间", "verseOfTheDay": "今日经文", "hadithOfTheDay": "今日圣训", "esmaOfTheDay": "今日尊名" },
-  "prayerTimes": { "imsak": "晨礼", "gunes": "日出", "ogle": "晌礼", "ikindi": "晡礼", "aksam": "昏礼", "yatsi": "宵礼" },
-  "hatim": { "individual": "个人", "collaborative": "合作", "weeklyHatim": "每周通读", "completed": "已完成", "completeHatimBtn": "完成通读", "juzSelection": "选择卷", "activeHatims": "进行中的通读", "startNew": "开始新的", "noActiveHatim": "暂无合作通读。", "newCollaborativeHatim": "新的合作通读", "hatimTitleLabel": "通读标题", "hatimTitlePlaceholder": "例如：斋月通读", "startBtn": "开始", "participantName": "参与者姓名", "namePlaceholder": "输入你的名字...", "takeJuz": "认领", "juzDetails": "卷详情", "startSurah": "起始章:", "pages": "页数:", "containsSurahs": "包含章节:", "congratsSaved": "恭喜！你的通读已保存。" },
-  "settings": { "title": "设置", "notifications": "通知", "language": "语言" },
-  "common": { "cancel": "取消", "save": "保存", "close": "关闭", "search": "搜索..." }
+  "tabs": {
+    "home": "首页",
+    "qibla": "朝向",
+    "hatim": "通读",
+    "dua": "祈祷",
+    "dhikr": "赞念",
+    "kaza": "补拜"
+  },
+  "home": {
+    "nextPrayerCountdown": "剩余时间",
+    "verseOfTheDay": "今日经文",
+    "hadithOfTheDay": "今日圣训",
+    "esmaOfTheDay": "今日尊名",
+    "duaOfTheDay": "每日祈祷"
+  },
+  "prayerTimes": {
+    "imsak": "晨礼",
+    "gunes": "日出",
+    "ogle": "晌礼",
+    "ikindi": "晡礼",
+    "aksam": "昏礼",
+    "yatsi": "宵礼"
+  },
+  "hatim": {
+    "individual": "个人",
+    "collaborative": "合作",
+    "weeklyHatim": "每周通读",
+    "completed": "已完成",
+    "completeHatimBtn": "完成通读",
+    "juzSelection": "选择卷",
+    "activeHatims": "进行中的通读",
+    "startNew": "开始新的",
+    "noActiveHatim": "暂无合作通读。",
+    "newCollaborativeHatim": "新的合作通读",
+    "hatimTitleLabel": "通读标题",
+    "hatimTitlePlaceholder": "例如：斋月通读",
+    "startBtn": "开始",
+    "participantName": "参与者姓名",
+    "namePlaceholder": "输入你的名字...",
+    "takeJuz": "认领",
+    "juzDetails": "卷详情",
+    "startSurah": "起始章:",
+    "pages": "页数:",
+    "containsSurahs": "包含章节:",
+    "congratsSaved": "恭喜！你的通读已保存。",
+    "enterNameAlert": "请输入您的姓名。",
+    "enterTitleAlert": "请输入标题。",
+    "topHatimBadge": "最活跃通读",
+    "leaderboardTitle": "贡献榜",
+    "unnamedParticipant": "匿名",
+    "inviteShareMessage": "加入“{{title}}”集体通读，认领一卷，让我们一起诵读《古兰经》🕌📖\n\n如果您已安装应用：{{deepLink}}\n\n如果尚未安装：{{playStore}}",
+    "completionShareMessage": "🎉 感赞安拉，我已完成全部30卷诵读，顺利完经！📖🕌\n\n这是我的第 {{count}} 次通读。快来记录您的诵读吧：{{playStore}}",
+    "progressShareMessage": "📖 本周我已完成 {{completed}}/30 卷（{{percentage}}%）。\n\n使用 Ezan Vakti + Hatim 记录您的进度：{{playStore}}",
+    "rewardUnlocked": "🎁 太棒了！感谢您的分享，您已解锁 {{days}} 天无广告体验。",
+    "rewardBannerText": "再分享 {{count}} 次即可解锁 {{days}} 天无广告体验 🎁",
+    "juzCountShort": "卷"
+  },
+  "settings": {
+    "title": "设置",
+    "notifications": "通知",
+    "language": "语言",
+    "sound": "宣礼音效",
+    "reminder": "拜前提醒",
+    "theme": "主题",
+    "themeLight": "浅色",
+    "themeDark": "深色",
+    "support": "支持与信息",
+    "rateApp": "评价应用",
+    "feedback": "发送反馈",
+    "about": "关于",
+    "widgetPreview": "小工具预览",
+    "widgetNext": "下一个",
+    "widgetHint": "长按主屏幕即可添加小工具。"
+  },
+  "common": {
+    "cancel": "取消",
+    "save": "保存",
+    "close": "关闭",
+    "search": "搜索...",
+    "errorGeneric": "出错了，请稍后再试。"
+  },
+  "esma": {
+    "title": "真主的尊名",
+    "search": "搜索尊名或含义..."
+  },
+  "kaza": {
+    "title": "欠拜记录",
+    "subtitle": "记录并管理您的欠拜",
+    "sabah": "晨礼",
+    "ogle": "晌礼",
+    "ikindi": "晡礼",
+    "aksam": "昏礼",
+    "yatsi": "宵礼",
+    "vitir": "奇数拜",
+    "completionShareMessage": "🎉 感赞安拉，我已补完所有欠拜！🕌\n\n使用 Ezan Vakti + Hatim 记录您的欠拜：{{playStore}}"
+  },
+  "qibla": {
+    "title": "朝向罗盘",
+    "subtitle": "克尔白朝向定位",
+    "yourDirection": "您的方向",
+    "qiblaAngle": "朝向角度",
+    "aligned": "已对准朝向",
+    "hint": "请平放设备并跟随指针。"
+  },
+  "dua": {
+    "headerTitle": "祈祷词库",
+    "headerSubtitle": "祈祷是信士的武器",
+    "featuredBadge": "每日祈祷",
+    "meaningLabel": "译意",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\n译意：{{meaning}}\n\n出处：{{source}}\n\n分享自 Ezan Vakti + Hatim。"
+  },
+  "splash": {
+    "subtitle": "礼拜时间、通读经文与祈祷助手"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 每日祈祷",
+    "dailyDuaBody": "{{title}} — 点击阅读",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "别忘了今天为您的通读增加一段经文 📖",
+    "eveningMsg2": "夜幕降临，做个祈祷安抚心灵吧 🤲",
+    "eveningMsg3": "抽出几分钟来补礼吗？🕌",
+    "eveningMsg4": "今天赞念真主了吗？赞念能带来心灵的平静 ✨",
+    "noJuzThisWeek": "您本周尚未标记诵读卷数，不妨现在开始读一卷吧？📖",
+    "kazaDebtReminder": "您还有 {{count}} 次欠拜，今晚可以补上几拜 🕌",
+    "streakReminder": "您已连续坚持 {{streak}} 天，今天也请继续加油 🔥",
+    "prayerTitle": "{{prayer}} 时间",
+    "prayerBody": "{{city}} 已到 {{prayer}} 时间。"
+  }
 }

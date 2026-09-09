@@ -1,8 +1,130 @@
 {
-  "tabs": { "home": "Αρχική", "qibla": "Κίμπλα", "hatim": "Χατίμ", "dua": "Ντούα", "dhikr": "Ζικρ" },
-  "home": { "nextPrayerCountdown": "Υπολειπόμενος χρόνος", "verseOfTheDay": "Στίχος της Ημέρας", "hadithOfTheDay": "Χαντίθ της Ημέρας", "esmaOfTheDay": "Όνομα της Ημέρας" },
-  "prayerTimes": { "imsak": "Φατζρ", "gunes": "Ανατολή", "ogle": "Ντουχρ", "ikindi": "Ασρ", "aksam": "Μαγκρίμπ", "yatsi": "Ισά" },
-  "hatim": { "individual": "Ατομικό", "collaborative": "Συλλογικό", "weeklyHatim": "Εβδομαδιαίο Χατίμ", "completed": "Ολοκληρώθηκε", "completeHatimBtn": "ΟΛΟΚΛΗΡΩΣΗ ΧΑΤΙΜ", "juzSelection": "ΕΠΙΛΟΓΗ ΤΖΟΥΖ", "activeHatims": "ΕΝΕΡΓΑ ΧΑΤΙΜ", "startNew": "Έναρξη Νέου", "noActiveHatim": "Δεν υπάρχει ενεργό συλλογικό χατίμ ακόμα.", "newCollaborativeHatim": "Νέο Συλλογικό Χατίμ", "hatimTitleLabel": "Τίτλος Χατίμ", "hatimTitlePlaceholder": "π.χ., Χατίμ Ραμαζανιού", "startBtn": "ΕΝΑΡΞΗ", "participantName": "Όνομα Συμμετέχοντα", "namePlaceholder": "Εισάγετε το όνομά σας...", "takeJuz": "ΠΑΡΕ", "juzDetails": "Λεπτομέρειες Τζουζ", "startSurah": "Αρχική Σούρα:", "pages": "Σελίδες:", "containsSurahs": "Περιέχει Σούρες:", "congratsSaved": "Συγχαρητήρια! Το Χατίμ σας αποθηκεύτηκε." },
-  "settings": { "title": "Ρυθμίσεις", "notifications": "Ειδοποιήσεις", "language": "Γλώσσα" },
-  "common": { "cancel": "Ακύρωση", "save": "Αποθήκευση", "close": "Κλείσιμο", "search": "Αναζήτηση..." }
+  "tabs": {
+    "home": "Αρχική",
+    "qibla": "Κίμπλα",
+    "hatim": "Χατίμ",
+    "dua": "Ντούα",
+    "dhikr": "Ζικρ",
+    "kaza": "Καζά"
+  },
+  "home": {
+    "nextPrayerCountdown": "Υπολειπόμενος χρόνος",
+    "verseOfTheDay": "Στίχος της Ημέρας",
+    "hadithOfTheDay": "Χαντίθ της Ημέρας",
+    "esmaOfTheDay": "Όνομα της Ημέρας",
+    "duaOfTheDay": "Ντούα της Ημέρας"
+  },
+  "prayerTimes": {
+    "imsak": "Φατζρ",
+    "gunes": "Ανατολή",
+    "ogle": "Ντουχρ",
+    "ikindi": "Ασρ",
+    "aksam": "Μαγκρίμπ",
+    "yatsi": "Ισά"
+  },
+  "hatim": {
+    "individual": "Ατομικό",
+    "collaborative": "Συλλογικό",
+    "weeklyHatim": "Εβδομαδιαίο Χατίμ",
+    "completed": "Ολοκληρώθηκε",
+    "completeHatimBtn": "ΟΛΟΚΛΗΡΩΣΗ ΧΑΤΙΜ",
+    "juzSelection": "ΕΠΙΛΟΓΗ ΤΖΟΥΖ",
+    "activeHatims": "ΕΝΕΡΓΑ ΧΑΤΙΜ",
+    "startNew": "Έναρξη Νέου",
+    "noActiveHatim": "Δεν υπάρχει ενεργό συλλογικό χατίμ ακόμα.",
+    "newCollaborativeHatim": "Νέο Συλλογικό Χατίμ",
+    "hatimTitleLabel": "Τίτλος Χατίμ",
+    "hatimTitlePlaceholder": "π.χ., Χατίμ Ραμαζανιού",
+    "startBtn": "ΕΝΑΡΞΗ",
+    "participantName": "Όνομα Συμμετέχοντα",
+    "namePlaceholder": "Εισάγετε το όνομά σας...",
+    "takeJuz": "ΠΑΡΕ",
+    "juzDetails": "Λεπτομέρειες Τζουζ",
+    "startSurah": "Αρχική Σούρα:",
+    "pages": "Σελίδες:",
+    "containsSurahs": "Περιέχει Σούρες:",
+    "congratsSaved": "Συγχαρητήρια! Το Χατίμ σας αποθηκεύτηκε.",
+    "enterNameAlert": "Παρακαλώ εισαγάγετε το όνομά σας.",
+    "enterTitleAlert": "Παρακαλώ εισαγάγετε έναν τίτλο.",
+    "topHatimBadge": "ΠΙΟ ΕΝΕΡΓΟ ΧΑΤΜ",
+    "leaderboardTitle": "ΚΟΡΥΦΑΙΟΙ ΣΥΜΜΕΤΕΧΟΝΤΕΣ",
+    "unnamedParticipant": "Ανώνυμος",
+    "inviteShareMessage": "Ελάτε στο κοινό χάτμ «{{title}}», διαλέξτε ένα τζουζ και ας διαβάσουμε το Κοράνι μαζί 🕌📖\n\nΑν έχετε ήδη την εφαρμογή: {{deepLink}}\n\nΑν όχι: {{playStore}}",
+    "completionShareMessage": "🎉 Ολοκλήρωσα και τα 30 τζουζ, τελείωσα το χάτμ μου! Αλχαμντουλιλλάχ 📖🕌\n\nΑυτό είναι το χάτμ μου #{{count}}. Ξεκινήστε να παρακολουθείτε και το δικό σας: {{playStore}}",
+    "progressShareMessage": "📖 Αυτή την εβδομάδα ολοκλήρωσα {{completed}}/30 τζουζ ({{percentage}}%).\n\nΠαρακολουθήστε την πρόοδό σας με το Ezan Vakti + Hatim: {{playStore}}",
+    "rewardUnlocked": "🎁 Υπέροχα! Χάρη στις κοινοποιήσεις σας, ξεκλειδώσατε {{days}} ημέρες χωρίς διαφημίσεις.",
+    "rewardBannerText": "Κοινοποιήστε {{count}} ακόμη φορά/ές για να ξεκλειδώσετε {{days}} ημέρες χωρίς διαφημίσεις 🎁",
+    "juzCountShort": "τζουζ"
+  },
+  "settings": {
+    "title": "Ρυθμίσεις",
+    "notifications": "Ειδοποιήσεις",
+    "language": "Γλώσσα",
+    "sound": "Ήχος Αζάν",
+    "reminder": "Υπενθύμιση πριν την προσευχή",
+    "theme": "Θέμα",
+    "themeLight": "Φωτεινό",
+    "themeDark": "Σκοτεινό",
+    "support": "Υποστήριξη & Πληροφορίες",
+    "rateApp": "Βαθμολογήστε την εφαρμογή",
+    "feedback": "Αποστολή σχολίων",
+    "about": "Σχετικά",
+    "widgetPreview": "ΠΡΟΕΠΙΣΚΟΠΗΣΗ WIDGET",
+    "widgetNext": "Επόμενο",
+    "widgetHint": "Πατήστε παρατεταμένα στην αρχική οθόνη για να προσθέσετε το widget."
+  },
+  "common": {
+    "cancel": "Ακύρωση",
+    "save": "Αποθήκευση",
+    "close": "Κλείσιμο",
+    "search": "Αναζήτηση...",
+    "errorGeneric": "Κάτι πήγε στραβά."
+  },
+  "esma": {
+    "title": "Τα Ονόματα του Αλλάχ",
+    "search": "Αναζήτηση ονόματος ή σημασίας..."
+  },
+  "kaza": {
+    "title": "ΠΑΡΑΛΕΙΦΘΕΙΣΕΣ ΠΡΟΣΕΥΧΕΣ",
+    "subtitle": "Παρακολουθήστε τις παραλειφθείσες προσευχές σας",
+    "sabah": "Φατζρ",
+    "ogle": "Ντουχρ",
+    "ikindi": "Ασρ",
+    "aksam": "Μαγρίμπ",
+    "yatsi": "Ισά",
+    "vitir": "Βιτρ",
+    "completionShareMessage": "🎉 Ολοκλήρωσα όλες τις παραλειφθείσες προσευχές μου, Αλχαμντουλιλλάχ! 🕌\n\nΠαρακολουθήστε τις προσευχές σας με το Ezan Vakti + Hatim: {{playStore}}"
+  },
+  "qibla": {
+    "title": "ΠΥΞΙΔΑ ΚΙΜΠΛΑ",
+    "subtitle": "Εύρεση Κατεύθυνσης Κίμπλα",
+    "yourDirection": "Η ΚΑΤΕΥΘΥΝΣΗ ΣΑΣ",
+    "qiblaAngle": "ΓΩΝΙΑ ΚΙΜΠΛΑ",
+    "aligned": "ΕΥΘΥΓΡΑΜΜΙΣΜΕΝΟ ΜΕ ΤΗΝ ΚΙΜΠΛΑ",
+    "hint": "Κρατήστε τη συσκευή οριζόντια και ακολουθήστε τη βελόνα."
+  },
+  "dua": {
+    "headerTitle": "ΒΙΒΛΙΟΘΗΚΗ ΝΤΟΥΑ",
+    "headerSubtitle": "Η προσευχή είναι το όπλο του πιστού",
+    "featuredBadge": "ΝΤΟΥΑ ΤΗΣ ΗΜΕΡΑΣ",
+    "meaningLabel": "ΣΗΜΑΣΙΑ",
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nΣημασία: {{meaning}}\n\nΠηγή: {{source}}\n\nΚοινοποιήθηκε από το Ezan Vakti + Hatim."
+  },
+  "splash": {
+    "subtitle": "Ώρες προσευχής, χάτμ και ντούα μαζί"
+  },
+  "notifications": {
+    "dailyDuaTitle": "🤲 Ντούα της Ημέρας",
+    "dailyDuaBody": "{{title}} — πατήστε για ανάγνωση",
+    "eveningTitle": "Ezan Vakti + Hatim",
+    "eveningMsg1": "Μην ξεχάσετε να διαβάσετε εδάφια για το χάτμ σας σήμερα 📖",
+    "eveningMsg2": "Καθώς πλησιάζει το βράδυ, γαληνέψτε την καρδιά σας με μια ντούα 🤲",
+    "eveningMsg3": "Έχετε λίγα λεπτά για τις παραλειφθείσες προσευχές σας; 🕌",
+    "eveningMsg4": "Κάνατε ντικρ σήμερα; Η ενθύμηση του Αλλάχ φέρνει γαλήνη στην καρδιά ✨",
+    "noJuzThisWeek": "Δεν έχετε σημειώσει κάποιο τζουζ αυτή την εβδομάδα, τι λέτε να ξεκινήσετε με ένα; 📖",
+    "kazaDebtReminder": "Έχετε {{count}} παραλειφθείσες προσευχές, μπορείτε να αναπληρώσετε μερικές απόψε 🕌",
+    "streakReminder": "Το σερί σας των {{streak}} ημερών συνεχίζεται, κρατήστε το και σήμερα! 🔥",
+    "prayerTitle": "Ώρα για {{prayer}}",
+    "prayerBody": "Είναι η ώρα για {{prayer}} στην πόλη {{city}}."
+  }
 }
