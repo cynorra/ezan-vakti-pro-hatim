@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   View,
@@ -9,16 +9,25 @@ import {
   useColorScheme,
   Platform,
   Share,
+  ActivityIndicator,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { captureRef } from 'react-native-view-shot';
 import * as Sharing from 'expo-sharing';
+import * as Haptics from 'expo-haptics';
+import { safeHaptics } from '@/lib/haptics';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { SEOHead } from '@/components/SEOHead';
 import { ShareableDuaCard } from '@/components/ShareableDuaCard';
 import { dailyDuas, duaCategories, getDailyDua, Dua } from '@/lib/data/duas';
-import { recordGrowthShare } from '@/lib/rewards';
+import {
+  recordGrowthShare,
+  getShareCount,
+  getAdFreeRemainingDays,
+  formatDuaShareMessage,
+  SHARES_PER_REWARD,
+} from '@/lib/rewards';
 
 const CATEGORY_ICONS: Record<string, string> = {
   all: 'apps-outline',
@@ -35,46 +44,87 @@ export default function DuaScreen() {
   const colors = Colors[colorScheme];
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [isSharingImage, setIsSharingImage] = useState(false);
+
+  // Rewards tracking
+  const [shareCount, setShareCount] = useState(0);
+  const [adFreeDays, setAdFreeDays] = useState(0);
 
   const duaOfTheDay = getDailyDua();
+  const [targetDuaForCard, setTargetDuaForCard] = useState<Dua>(duaOfTheDay);
   const shareCardRef = useRef<View>(null);
+
+  const loadRewardStatus = useCallback(async () => {
+    const count = await getShareCount();
+    const remainingDays = await getAdFreeRemainingDays();
+    setShareCount(count);
+    setAdFreeDays(remainingDays);
+  }, []);
+
+  useEffect(() => {
+    loadRewardStatus();
+  }, [loadRewardStatus]);
 
   const filteredDualar = selectedCategory === 'all'
     ? dailyDuas
     : dailyDuas.filter((d) => d.category === selectedCategory);
 
-  const handleShare = async (dua: Dua) => {
+  const handleShareText = async (dua: Dua) => {
+    safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     try {
+      const message = formatDuaShareMessage(dua);
       await Share.share({
-        message: t('dua.shareMessage', {
-          title: dua.title,
-          transliteration: dua.transliteration,
-          meaning: dua.turkish,
-          source: dua.source,
-        }),
+        message,
+        title: dua.title,
       });
+      const result = await recordGrowthShare();
+      await loadRewardStatus();
+      if (result.justUnlocked) {
+        safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+      }
     } catch (error) {
-      console.log(error);
+      console.log('Share text error:', error);
     }
   };
 
-  // Günün duasını marka kartlı görsel olarak yakalayıp paylaşır (WhatsApp durumu,
-  // Instagram/TikTok hikayesi gibi sadece görsel kabul eden hedefler için).
-  const handleShareAsImage = async () => {
-    try {
-      const uri = await captureRef(shareCardRef, { format: 'png', quality: 1 });
-      const canShare = await Sharing.isAvailableAsync();
-      if (canShare) {
-        await Sharing.shareAsync(uri, { mimeType: 'image/png', dialogTitle: duaOfTheDay.title });
-        await recordGrowthShare();
-      } else {
-        await handleShare(duaOfTheDay);
+  const handleShareAsImage = async (dua: Dua) => {
+    safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    setTargetDuaForCard(dua);
+    setIsSharingImage(true);
+
+    // Kısa bir gecikme verip React state'in render olmasını bekliyoruz
+    setTimeout(async () => {
+      try {
+        if (!shareCardRef.current) {
+          setIsSharingImage(false);
+          return;
+        }
+        const uri = await captureRef(shareCardRef, { format: 'png', quality: 1 });
+        const canShare = await Sharing.isAvailableAsync();
+        if (canShare) {
+          await Sharing.shareAsync(uri, {
+            mimeType: 'image/png',
+            dialogTitle: dua.title,
+            UTI: 'public.png',
+          });
+          const result = await recordGrowthShare();
+          await loadRewardStatus();
+          if (result.justUnlocked) {
+            safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+          }
+        } else {
+          await handleShareText(dua);
+        }
+      } catch (error) {
+        console.log('Image share error:', error);
+        await handleShareText(dua);
+      } finally {
+        setIsSharingImage(false);
       }
-    } catch (error) {
-      console.log('Image share error:', error);
-      await handleShare(duaOfTheDay);
-    }
+    }, 120);
   };
+
+  const progressInCycle = shareCount % SHARES_PER_REWARD;
 
   return (
     <>
@@ -90,6 +140,38 @@ export default function DuaScreen() {
         </LinearGradient>
 
         <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
+          {/* Growth & Reward Banner */}
+          <View style={[styles.rewardBanner, { backgroundColor: colors.surface }, Shadows.light]}>
+            <View style={styles.rewardIconBadge}>
+              <Ionicons name="gift" size={20} color="#052F1C" />
+            </View>
+            <View style={{ flex: 1 }}>
+              <Text style={[styles.rewardTitle, { color: colors.text }]}>
+                {adFreeDays > 0
+                  ? t('dua.adFreeActive', { days: adFreeDays })
+                  : t('dua.rewardBannerTitle')}
+              </Text>
+              <Text style={[styles.rewardSub, { color: colors.textSecondary }]}>
+                {t('dua.rewardBannerSub')}
+              </Text>
+              {/* Progress bar */}
+              <View style={styles.progressBarBg}>
+                <View
+                  style={[
+                    styles.progressBarFill,
+                    {
+                      width: `${(progressInCycle / SHARES_PER_REWARD) * 100}%`,
+                      backgroundColor: '#D4AF37',
+                    },
+                  ]}
+                />
+              </View>
+              <Text style={[styles.progressText, { color: colors.textMuted }]}>
+                {t('dua.rewardProgress', { count: progressInCycle })}
+              </Text>
+            </View>
+          </View>
+
           {/* Günün Duası */}
           <View style={[styles.featuredCard, { backgroundColor: colors.surface }, Shadows.medium]}>
             <View style={styles.featuredBadge}>
@@ -108,24 +190,38 @@ export default function DuaScreen() {
             <View style={styles.duaFooter}>
               <Text style={[styles.sourceText, { color: colors.textMuted }]}>{duaOfTheDay.source}</Text>
               <View style={{ flexDirection: 'row', gap: 8 }}>
-                <TouchableOpacity onPress={handleShareAsImage} style={[styles.shareButton, { backgroundColor: colors.accent + '20' }]}>
-                  <Ionicons name="image-outline" size={20} color={colors.accent} />
+                <TouchableOpacity
+                  onPress={() => handleShareAsImage(duaOfTheDay)}
+                  style={[styles.shareButtonAction, { backgroundColor: colors.accent + '20' }]}
+                >
+                  <Ionicons name="image" size={16} color={colors.accent} />
+                  <Text style={[styles.shareBtnText, { color: colors.accent }]}>
+                    {t('dua.shareImage')}
+                  </Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => handleShare(duaOfTheDay)} style={styles.shareButton}>
-                  <Ionicons name="share-social-outline" size={20} color={colors.primary} />
+
+                <TouchableOpacity
+                  onPress={() => handleShareText(duaOfTheDay)}
+                  style={[styles.shareButtonAction, { backgroundColor: colors.primary + '15' }]}
+                >
+                  <Ionicons name="share-social" size={16} color={colors.primary} />
+                  <Text style={[styles.shareBtnText, { color: colors.primary }]}>
+                    {t('dua.shareText')}
+                  </Text>
                 </TouchableOpacity>
               </View>
             </View>
           </View>
-
-          <ShareableDuaCard ref={shareCardRef} dua={duaOfTheDay} />
 
           {/* Categories Horizontal Scroll */}
           <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.categoryList}>
             {duaCategories.map((cat) => (
               <TouchableOpacity
                 key={cat.id}
-                onPress={() => setSelectedCategory(cat.id)}
+                onPress={() => {
+                  safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                  setSelectedCategory(cat.id);
+                }}
                 style={[
                   styles.categoryItem,
                   { backgroundColor: colors.surface },
@@ -149,41 +245,76 @@ export default function DuaScreen() {
             ))}
           </ScrollView>
 
+          {/* Dua List */}
           {filteredDualar.map((dua) => (
             <View
               key={dua.id}
               style={[styles.duaCard, { backgroundColor: colors.surface }, Shadows.medium]}
             >
               <TouchableOpacity
-                onPress={() => setExpandedId(expandedId === dua.id ? null : dua.id)}
+                onPress={() => {
+                  safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                  setExpandedId(expandedId === dua.id ? null : dua.id);
+                }}
                 style={styles.duaHeader}
               >
                 <View style={styles.duaTitleRow}>
                   <View style={[styles.titleLine, { backgroundColor: colors.accent }]} />
                   <Text style={[styles.duaTitle, { color: colors.text }]}>{dua.title}</Text>
                 </View>
-                <Ionicons
-                  name={expandedId === dua.id ? 'chevron-up' : 'chevron-down'}
-                  size={20}
-                  color={colors.textMuted}
-                />
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                  <TouchableOpacity
+                    onPress={() => handleShareText(dua)}
+                    style={styles.headerShareIcon}
+                  >
+                    <Ionicons name="share-social-outline" size={18} color={colors.primary} />
+                  </TouchableOpacity>
+                  <Ionicons
+                    name={expandedId === dua.id ? 'chevron-up' : 'chevron-down'}
+                    size={20}
+                    color={colors.textMuted}
+                  />
+                </View>
               </TouchableOpacity>
 
               {expandedId === dua.id && (
                 <View style={styles.duaBody}>
-                  <Text style={[styles.arabicText, { color: colors.primary }]}>{dua.arabic}</Text>
-                  <Text style={[styles.contentText, { color: colors.text }]}>{dua.transliteration}</Text>
+                  {dua.arabic ? (
+                    <Text style={[styles.arabicText, { color: colors.primary }]}>{dua.arabic}</Text>
+                  ) : null}
+                  {dua.transliteration ? (
+                    <Text style={[styles.contentText, { color: colors.text }]}>{dua.transliteration}</Text>
+                  ) : null}
 
-                  <View style={[styles.translationBox, { backgroundColor: colors.background }]}>
-                    <Text style={[styles.translationLabel, { color: colors.primary }]}>{t('dua.meaningLabel')}</Text>
-                    <Text style={[styles.translationText, { color: colors.textSecondary }]}>{dua.turkish}</Text>
-                  </View>
+                  {dua.turkish ? (
+                    <View style={[styles.translationBox, { backgroundColor: colors.background }]}>
+                      <Text style={[styles.translationLabel, { color: colors.primary }]}>{t('dua.meaningLabel')}</Text>
+                      <Text style={[styles.translationText, { color: colors.textSecondary }]}>{dua.turkish}</Text>
+                    </View>
+                  ) : null}
 
                   <View style={styles.duaFooter}>
                     <Text style={[styles.sourceText, { color: colors.textMuted }]}>{dua.source}</Text>
-                    <TouchableOpacity onPress={() => handleShare(dua)} style={styles.shareButton}>
-                      <Ionicons name="share-social-outline" size={20} color={colors.primary} />
-                    </TouchableOpacity>
+                    <View style={{ flexDirection: 'row', gap: 8 }}>
+                      <TouchableOpacity
+                        onPress={() => handleShareAsImage(dua)}
+                        style={[styles.shareButtonAction, { backgroundColor: colors.accent + '20' }]}
+                      >
+                        <Ionicons name="image" size={16} color={colors.accent} />
+                        <Text style={[styles.shareBtnText, { color: colors.accent }]}>
+                          {t('dua.shareImage')}
+                        </Text>
+                      </TouchableOpacity>
+                      <TouchableOpacity
+                        onPress={() => handleShareText(dua)}
+                        style={[styles.shareButtonAction, { backgroundColor: colors.primary + '15' }]}
+                      >
+                        <Ionicons name="share-social" size={16} color={colors.primary} />
+                        <Text style={[styles.shareBtnText, { color: colors.primary }]}>
+                          {t('dua.shareText')}
+                        </Text>
+                      </TouchableOpacity>
+                    </View>
                   </View>
                 </View>
               )}
@@ -191,6 +322,21 @@ export default function DuaScreen() {
           ))}
           <View style={{ height: 100 }} />
         </ScrollView>
+
+        {/* Off-screen Image Card for Dynamic Capture */}
+        <ShareableDuaCard ref={shareCardRef} dua={targetDuaForCard} />
+
+        {/* Image generation loading indicator */}
+        {isSharingImage && (
+          <View style={styles.loadingOverlay}>
+            <View style={[styles.loadingBox, { backgroundColor: colors.surface }]}>
+              <ActivityIndicator size="large" color={colors.primary} />
+              <Text style={[styles.loadingText, { color: colors.text }]}>
+                Dua Kartı Hazırlanıyor...
+              </Text>
+            </View>
+          </View>
+        )}
       </View>
     </>
   );
@@ -225,6 +371,50 @@ const styles = StyleSheet.create({
   content: {
     paddingHorizontal: Spacing.md,
     marginTop: -25,
+  },
+  rewardBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: Spacing.md,
+    borderRadius: BorderRadius.lg,
+    marginBottom: Spacing.md,
+    gap: 12,
+    borderWidth: 1,
+    borderColor: 'rgba(212,175,55,0.3)',
+  },
+  rewardIconBadge: {
+    width: 38,
+    height: 38,
+    borderRadius: 19,
+    backgroundColor: '#D4AF37',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  rewardTitle: {
+    fontSize: 13,
+    fontWeight: '800',
+    marginBottom: 2,
+  },
+  rewardSub: {
+    fontSize: 11,
+    lineHeight: 15,
+    marginBottom: 6,
+  },
+  progressBarBg: {
+    height: 5,
+    backgroundColor: 'rgba(0,0,0,0.06)',
+    borderRadius: 3,
+    overflow: 'hidden',
+  },
+  progressBarFill: {
+    height: '100%',
+    borderRadius: 3,
+  },
+  progressText: {
+    fontSize: 10,
+    fontWeight: '700',
+    marginTop: 3,
+    alignSelf: 'flex-end',
   },
   featuredCard: {
     borderRadius: BorderRadius.xl,
@@ -281,6 +471,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 12,
+    flex: 1,
+    paddingRight: 8,
   },
   titleLine: {
     width: 3,
@@ -288,27 +480,31 @@ const styles = StyleSheet.create({
     borderRadius: 2,
   },
   duaTitle: {
-    fontSize: 16,
+    fontSize: 15.5,
     fontWeight: '800',
-    letterSpacing: 0.5,
+    letterSpacing: 0.3,
+  },
+  headerShareIcon: {
+    padding: 6,
+    marginRight: 4,
   },
   duaBody: {
     paddingHorizontal: Spacing.lg,
     paddingBottom: Spacing.lg,
   },
   arabicText: {
-    fontSize: 26,
+    fontSize: 24,
     textAlign: 'center',
-    lineHeight: 45,
-    marginBottom: Spacing.lg,
+    lineHeight: 42,
+    marginBottom: Spacing.md,
     fontFamily: Platform.OS === 'ios' ? 'Traditional Arabic' : 'serif',
   },
   contentText: {
-    fontSize: 15,
-    lineHeight: 24,
+    fontSize: 14,
+    lineHeight: 22,
     textAlign: 'center',
     fontWeight: '600',
-    marginBottom: Spacing.lg,
+    marginBottom: Spacing.md,
   },
   translationBox: {
     padding: Spacing.md,
@@ -322,8 +518,8 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   translationText: {
-    fontSize: 14,
-    lineHeight: 22,
+    fontSize: 13.5,
+    lineHeight: 20,
     fontStyle: 'italic',
   },
   duaFooter: {
@@ -331,18 +527,43 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginTop: Spacing.sm,
+    flexWrap: 'wrap',
+    gap: 8,
   },
   sourceText: {
     fontSize: 11,
     fontWeight: '600',
     fontStyle: 'italic',
   },
-  shareButton: {
-    width: 36,
-    height: 36,
-    borderRadius: 18,
-    backgroundColor: 'rgba(0,0,0,0.03)',
+  shareButtonAction: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+    paddingVertical: 7,
+    borderRadius: BorderRadius.md,
+    gap: 5,
+  },
+  shareBtnText: {
+    fontSize: 11.5,
+    fontWeight: '700',
+  },
+  loadingOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0,0,0,0.4)',
     justifyContent: 'center',
     alignItems: 'center',
+    zIndex: 999,
+  },
+  loadingBox: {
+    padding: 24,
+    borderRadius: 16,
+    alignItems: 'center',
+    gap: 12,
+    ...Shadows.premium,
+  },
+  loadingText: {
+    fontSize: 13,
+    fontWeight: '700',
   },
 });
+

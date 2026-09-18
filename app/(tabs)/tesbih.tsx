@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import {
   View,
   Text,
@@ -11,6 +11,7 @@ import {
   Dimensions,
   ScrollView,
   Modal,
+  Animated,
 } from 'react-native';
 import Svg, { Circle } from 'react-native-svg';
 import { Ionicons } from '@expo/vector-icons';
@@ -45,6 +46,11 @@ export default function TesbihScreen() {
   const [editTargetModalVisible, setEditTargetModalVisible] = useState(false);
   const [tempTarget, setTempTarget] = useState('');
 
+  // Micro-interaction Animated Values
+  const buttonScale = useRef(new Animated.Value(1)).current;
+  const numberScale = useRef(new Animated.Value(1)).current;
+  const ringScale = useRef(new Animated.Value(1)).current;
+
   useEffect(() => {
     loadData();
   }, []);
@@ -68,6 +74,36 @@ export default function TesbihScreen() {
     }
   };
 
+  const triggerPressAnimation = () => {
+    // Button spring press effect
+    buttonScale.setValue(0.90);
+    Animated.spring(buttonScale, {
+      toValue: 1,
+      friction: 4,
+      tension: 140,
+      useNativeDriver: true,
+    }).start();
+
+    // Number pop effect
+    numberScale.setValue(1.18);
+    Animated.spring(numberScale, {
+      toValue: 1,
+      friction: 5,
+      tension: 160,
+      useNativeDriver: true,
+    }).start();
+  };
+
+  const triggerMilestoneAnimation = () => {
+    ringScale.setValue(1.08);
+    Animated.spring(ringScale, {
+      toValue: 1,
+      friction: 3,
+      tension: 100,
+      useNativeDriver: true,
+    }).start();
+  };
+
   const handlePress = () => {
     const newDhikrs = [...dhikrs];
     const dhikr = newDhikrs[activeDhikrIndex];
@@ -75,22 +111,24 @@ export default function TesbihScreen() {
     
     dhikr.count += 1;
     logEvent('tesbih_incremented', { dhikr_name: dhikr.name, current_count: dhikr.count });
-    
+    triggerPressAnimation();
+
     if (dhikr.count === dhikr.target) {
       safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
       logEvent('tesbih_target_reached', { dhikr_name: dhikr.name, target: dhikr.target });
-      
+      triggerMilestoneAnimation();
+
       // Otomatik bir sonraki zikre gecis
       setTimeout(() => {
         if (activeDhikrIndex < dhikrs.length - 1) {
           setActiveDhikrIndex(prev => prev + 1);
         } else {
-          // Sonuncudaysa basa don (opsiyonel, genelde namaz tesbihati icin kullanilir)
           setActiveDhikrIndex(0);
         }
-      }, 500); // Kullanicinin 33 oldugunu gormesi icin kisa bir gecikme
+      }, 500);
     } else if (dhikr.count === 33 || dhikr.count === 66 || dhikr.count === 99) {
       safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
+      triggerMilestoneAnimation();
     } else {
       safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     }
@@ -145,7 +183,7 @@ export default function TesbihScreen() {
       >
         {/* Main Counter Display */}
         <View style={styles.counterSection}>
-          <View style={styles.ringWrapper}>
+          <Animated.View style={[styles.ringWrapper, { transform: [{ scale: ringScale }] }]}>
             {/* SVG Circular Progress */}
             <Svg width={240} height={240} style={styles.progressSvg}>
               {/* Background Circle */}
@@ -179,9 +217,14 @@ export default function TesbihScreen() {
               <Text style={[styles.currentDhikrName, { color: colors.primary }]}>
                 {currentDhikr.name}
               </Text>
-              <Text style={[styles.counterText, { color: colors.text }]}>
+              <Animated.Text
+                style={[
+                  styles.counterText,
+                  { color: colors.text, transform: [{ scale: numberScale }] },
+                ]}
+              >
                 {currentDhikr.count}
-              </Text>
+              </Animated.Text>
               <TouchableOpacity 
                 style={[styles.targetBadge, { backgroundColor: colors.primary + '10' }]}
                 onPress={() => {
@@ -194,21 +237,23 @@ export default function TesbihScreen() {
                 </Text>
               </TouchableOpacity>
             </LinearGradient>
-          </View>
+          </Animated.View>
 
-          {/* Large Tactile Button */}
+          {/* Large Tactile Button with Spring Bounce */}
           <TouchableOpacity
-            activeOpacity={0.8}
+            activeOpacity={0.85}
             onPress={handlePress}
             style={styles.mainButtonWrapper}
           >
-            <LinearGradient
-              colors={Gradients.primary}
-              style={[styles.mainButton, Shadows.premium]}
-            >
-              <Ionicons name="finger-print" size={42} color="#fff" />
-              <Text style={styles.buttonText}>ZİKRET</Text>
-            </LinearGradient>
+            <Animated.View style={{ transform: [{ scale: buttonScale }] }}>
+              <LinearGradient
+                colors={Gradients.primary}
+                style={[styles.mainButton, Shadows.premium]}
+              >
+                <Ionicons name="finger-print" size={42} color="#fff" />
+                <Text style={styles.buttonText}>ZİKRET</Text>
+              </LinearGradient>
+            </Animated.View>
           </TouchableOpacity>
 
           <TouchableOpacity onPress={resetCount} style={styles.resetBtn}>

@@ -108,7 +108,13 @@
     "headerSubtitle": "Prayer Is the Weapon of the Believer",
     "featuredBadge": "DUA OF THE DAY",
     "meaningLabel": "MEANING",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nMeaning: {{meaning}}\n\nSource: {{source}}\n\nShared from Ezan Vakti + Hatim."
+    "shareMessage": "🤲 {{title}}\n\n{{transliteration}}\n\nMeaning: {{meaning}}\n\nSource: {{source}}\n\n📲 Download Ezan Vakti + Hatim for free:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
+    "shareImage": "Share Card",
+    "shareText": "Share Text",
+    "rewardBannerTitle": "Share 3 Duas, Get 3 Days Ad-Free!",
+    "rewardBannerSub": "Share with friends to spread good deeds and enjoy an ad-free experience.",
+    "rewardProgress": "{{count}} / 3 Shared",
+    "adFreeActive": "Ad-Free Active ({{days}} days left)"
   },
   "splash": {
     "subtitle": "Prayer times, khatm and dua together"
@@ -116,6 +122,8 @@
   "notifications": {
     "dailyDuaTitle": "🤲 Dua of the Day",
     "dailyDuaBody": "{{title}} — tap to read",
+    "fridayTitle": "🕌 Blessed Friday",
+    "fridayBody": "Have a blessed Friday! Don't forget to read Surah Al-Kahf and make dua today ✨",
     "eveningTitle": "Ezan Vakti + Hatim",
     "eveningMsg1": "Don't forget to add a verse to your khatm today 📖",
     "eveningMsg2": "As evening approaches, ease your heart with a dua 🤲",

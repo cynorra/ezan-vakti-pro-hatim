@@ -257,6 +257,30 @@ export async function scheduleEveningEngagementReminder() {
   });
 }
 
+const FRIDAY_REMINDER_ID = 'friday-morning-reminder';
+
+export async function scheduleFridayReminder() {
+  if (Platform.OS === 'web') return;
+
+  await Notifications.cancelScheduledNotificationAsync(FRIDAY_REMINDER_ID).catch(() => {});
+
+  await Notifications.scheduleNotificationAsync({
+    identifier: FRIDAY_REMINDER_ID,
+    content: {
+      title: i18n.t('notifications.fridayTitle'),
+      body: i18n.t('notifications.fridayBody'),
+      sound: true,
+      data: { screen: 'dua' },
+    },
+    trigger: {
+      weekday: 6, // Cuma (1 = Pazar, 6 = Cuma)
+      hour: 10,
+      minute: 0,
+      repeats: true,
+    } as any,
+  });
+}
+
 export async function scheduleAllPrayers(prayerTimes: any, city: string) {
   if (Platform.OS === 'web') return;
 
@@ -283,4 +307,6 @@ export async function scheduleAllPrayers(prayerTimes: any, city: string) {
 
   await scheduleDailyDuaReminders();
   await scheduleEveningEngagementReminder();
+  await scheduleFridayReminder();
 }
+

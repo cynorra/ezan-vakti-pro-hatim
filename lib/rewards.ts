@@ -38,9 +38,44 @@ export async function isAdFreeActive(): Promise<boolean> {
   return Number(raw) > Date.now();
 }
 
-export async function getSharesUntilNextReward(): Promise<number> {
+export async function getShareCount(): Promise<number> {
   const raw = await AsyncStorage.getItem(SHARE_COUNT_KEY);
-  const count = raw ? parseInt(raw, 10) : 0;
+  return raw ? parseInt(raw, 10) : 0;
+}
+
+export async function getAdFreeRemainingDays(): Promise<number> {
+  const currentUntilRaw = await AsyncStorage.getItem(AD_FREE_UNTIL_KEY);
+  if (!currentUntilRaw) return 0;
+  const remainingMs = Number(currentUntilRaw) - Date.now();
+  if (remainingMs <= 0) return 0;
+  return Math.ceil(remainingMs / (24 * 60 * 60 * 1000));
+}
+
+export async function getSharesUntilNextReward(): Promise<number> {
+  const count = await getShareCount();
   const remainder = count % SHARES_PER_REWARD;
   return remainder === 0 ? SHARES_PER_REWARD : SHARES_PER_REWARD - remainder;
 }
+
+export function formatDuaShareMessage(dua: {
+  title: string;
+  transliteration?: string;
+  turkish?: string;
+  source?: string;
+}): string {
+  const parts: string[] = [
+    `🤲 *${dua.title}*`,
+  ];
+  if (dua.transliteration) {
+    parts.push(`\n"${dua.transliteration}"`);
+  }
+  if (dua.turkish) {
+    parts.push(`\n*Anlamı:* ${dua.turkish}`);
+  }
+  if (dua.source) {
+    parts.push(`\n*Kaynak:* ${dua.source}`);
+  }
+  parts.push(`\n📲 *Ezan Vakti + Hatim* uygulamasını ücretsiz indirin:\n${PLAY_STORE_URL}`);
+  return parts.join('\n');
+}
+

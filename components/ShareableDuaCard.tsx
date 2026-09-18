@@ -1,52 +1,78 @@
 import { forwardRef } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, Platform } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 import { Dua } from '@/lib/data/duas';
 
 interface ShareableDuaCardProps {
-  dua: Dua;
+  dua: Dua | null;
+  customBadge?: string;
 }
 
 // Sosyal medya paylaşımı (WhatsApp durumu, Instagram/TikTok hikayesi) için sabit
 // boyutlu, ekran dışında render edilip react-native-view-shot ile görsele
-// dönüştürülen marka kartı. Uygulama içindeki karttan bilerek ayrı tutuldu —
-// burada UI kontrolleri (paylaş ikonu vb.) yok, sadece marka + davet var.
-export const ShareableDuaCard = forwardRef<View, ShareableDuaCardProps>(({ dua }, ref) => {
+// dönüştürülen marka kartı.
+export const ShareableDuaCard = forwardRef<View, ShareableDuaCardProps>(({ dua, customBadge }, ref) => {
+  if (!dua) return null;
+
+  const badgeText = customBadge || (dua.category ? dua.category.toUpperCase() : 'DUA PAYLAŞIMI');
+
   return (
     <View style={styles.wrapper} ref={ref} collapsable={false}>
-      <LinearGradient colors={['#0d7a3e', '#0A5C36', '#052F1C']} style={StyleSheet.absoluteFill} />
+      <LinearGradient colors={['#064e2b', '#0A5C36', '#032516']} style={StyleSheet.absoluteFill} />
 
+      {/* Brand Header */}
       <View style={styles.brandRow}>
         <Image source={require('../assets/icon.png')} style={styles.logo} />
-        <Text style={styles.brandText}>Ezan Vakti + Hatim</Text>
+        <View>
+          <Text style={styles.brandText}>Ezan Vakti + Hatim</Text>
+          <Text style={styles.brandSlogan}>Namaz Vakitleri & Hatim Takibi</Text>
+        </View>
       </View>
 
+      <View style={styles.divider} />
+
+      {/* Category / Featured Badge */}
       <View style={styles.badge}>
-        <Ionicons name="star" size={13} color="#052F1C" />
-        <Text style={styles.badgeText}>GÜNÜN DUASI</Text>
+        <Ionicons name="sparkles" size={13} color="#052F1C" />
+        <Text style={styles.badgeText}>{badgeText}</Text>
       </View>
 
+      {/* Dua Content */}
       <Text style={styles.title}>{dua.title}</Text>
-      <Text style={styles.arabic}>{dua.arabic}</Text>
-      <Text style={styles.transliteration}>{dua.transliteration}</Text>
+      
+      {dua.arabic ? (
+        <Text style={styles.arabic}>{dua.arabic}</Text>
+      ) : null}
 
-      <View style={styles.meaningBox}>
-        <Text style={styles.meaningLabel}>ANLAMI</Text>
-        <Text style={styles.meaning}>{dua.turkish}</Text>
-      </View>
+      {dua.transliteration ? (
+        <Text style={styles.transliteration}>{dua.transliteration}</Text>
+      ) : null}
 
-      <Text style={styles.source}>{dua.source}</Text>
+      {dua.turkish ? (
+        <View style={styles.meaningBox}>
+          <Text style={styles.meaningLabel}>TÜRKÇE ANLAMI</Text>
+          <Text style={styles.meaning}>{dua.turkish}</Text>
+        </View>
+      ) : null}
 
-      <View style={styles.footer}>
-        <Ionicons name="download" size={14} color="#F4D03F" />
-        <Text style={styles.footerText}>Ezan Vakti + Hatim uygulamasını indir</Text>
+      {dua.source ? (
+        <Text style={styles.source}>Kaynak: {dua.source}</Text>
+      ) : null}
+
+      {/* Footer Play Store Call To Action */}
+      <View style={styles.footerContainer}>
+        <View style={styles.storeBadge}>
+          <Ionicons name="logo-google-playstore" size={16} color="#D4AF37" />
+          <Text style={styles.footerText}>Google Play'den Ücretsiz İndir</Text>
+        </View>
+        <Text style={styles.footerAppId}>Ezan Vakti + Hatim</Text>
       </View>
     </View>
   );
 });
 
-const CARD_WIDTH = 360;
+const CARD_WIDTH = 380;
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -54,105 +80,145 @@ const styles = StyleSheet.create({
     top: -9999,
     left: 0,
     width: CARD_WIDTH,
-    height: 560,
-    paddingVertical: 32,
-    paddingHorizontal: 24,
+    minHeight: 580,
+    paddingVertical: 28,
+    paddingHorizontal: 22,
     alignItems: 'center',
+    justifyContent: 'space-between',
     overflow: 'hidden',
+    borderRadius: 20,
   },
   brandRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
-    marginBottom: 20,
+    gap: 10,
+    marginBottom: 8,
   },
   logo: {
-    width: 26,
-    height: 26,
-    borderRadius: 7,
+    width: 34,
+    height: 34,
+    borderRadius: 9,
+    borderWidth: 1,
+    borderColor: 'rgba(212, 175, 55, 0.4)',
   },
   brandText: {
-    color: 'rgba(255,255,255,0.85)',
-    fontSize: 13,
-    fontWeight: '700',
+    color: '#ffffff',
+    fontSize: 15,
+    fontWeight: '800',
+    letterSpacing: 0.5,
+  },
+  brandSlogan: {
+    color: 'rgba(255,255,255,0.65)',
+    fontSize: 10,
+    fontWeight: '600',
+  },
+  divider: {
+    width: '90%',
+    height: 1,
+    backgroundColor: 'rgba(212, 175, 55, 0.25)',
+    marginVertical: 10,
   },
   badge: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#D4AF37',
-    paddingHorizontal: 12,
-    paddingVertical: 5,
+    paddingHorizontal: 14,
+    paddingVertical: 4,
     borderRadius: 999,
-    gap: 4,
-    marginBottom: 18,
+    gap: 5,
+    marginBottom: 14,
   },
   badgeText: {
     color: '#052F1C',
-    fontSize: 11,
+    fontSize: 10,
     fontWeight: '900',
     letterSpacing: 1,
   },
   title: {
     color: '#fff',
-    fontSize: 20,
+    fontSize: 19,
     fontWeight: '800',
     textAlign: 'center',
-    marginBottom: 16,
+    marginBottom: 12,
+    lineHeight: 25,
   },
   arabic: {
     color: '#F4D03F',
-    fontSize: 24,
+    fontSize: 22,
     textAlign: 'center',
-    lineHeight: 40,
-    marginBottom: 14,
-    fontFamily: 'serif',
+    lineHeight: 38,
+    marginBottom: 12,
+    fontFamily: Platform.OS === 'ios' ? 'Traditional Arabic' : 'serif',
+    paddingHorizontal: 8,
   },
   transliteration: {
-    color: 'rgba(255,255,255,0.9)',
-    fontSize: 14,
-    lineHeight: 21,
+    color: 'rgba(255,255,255,0.92)',
+    fontSize: 13,
+    lineHeight: 20,
     textAlign: 'center',
     fontWeight: '600',
-    marginBottom: 18,
+    marginBottom: 12,
   },
   meaningBox: {
-    backgroundColor: 'rgba(255,255,255,0.1)',
-    borderRadius: 14,
-    padding: 14,
+    backgroundColor: 'rgba(255,255,255,0.08)',
+    borderColor: 'rgba(212, 175, 55, 0.2)',
+    borderWidth: 1,
+    borderRadius: 12,
+    padding: 12,
     width: '100%',
-    marginBottom: 12,
+    marginBottom: 10,
   },
   meaningLabel: {
     color: '#F4D03F',
-    fontSize: 10,
+    fontSize: 9,
     fontWeight: '900',
     letterSpacing: 1,
     marginBottom: 4,
     textAlign: 'center',
   },
   meaning: {
-    color: '#fff',
-    fontSize: 13,
-    lineHeight: 19,
+    color: '#ffffff',
+    fontSize: 12.5,
+    lineHeight: 18,
     fontStyle: 'italic',
     textAlign: 'center',
   },
   source: {
     color: 'rgba(255,255,255,0.6)',
-    fontSize: 11,
+    fontSize: 10.5,
     fontWeight: '600',
-    marginBottom: 24,
+    marginBottom: 16,
+    textAlign: 'center',
   },
-  footer: {
+  footerContainer: {
+    alignItems: 'center',
+    gap: 3,
+    marginTop: 8,
+    paddingTop: 8,
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(255,255,255,0.1)',
+    width: '100%',
+  },
+  storeBadge: {
     flexDirection: 'row',
     alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.3)',
+    borderColor: 'rgba(212,175,55,0.3)',
+    borderWidth: 1,
+    paddingHorizontal: 12,
+    paddingVertical: 5,
+    borderRadius: 20,
     gap: 6,
-    position: 'absolute',
-    bottom: 26,
   },
   footerText: {
-    color: 'rgba(255,255,255,0.8)',
+    color: '#F4D03F',
     fontSize: 11,
     fontWeight: '700',
   },
+  footerAppId: {
+    color: 'rgba(255,255,255,0.5)',
+    fontSize: 9.5,
+    fontWeight: '600',
+  },
 });
+

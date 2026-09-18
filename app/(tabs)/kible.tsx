@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import {
   View,
   Text,
@@ -26,6 +26,40 @@ export default function KibleScreen() {
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const insets = useSafeAreaInsets();
   const { t } = useTranslation();
+
+  // Animation values for smooth damped movement
+  const animatedHeading = useRef(new Animated.Value(0)).current;
+  const currentHeadingRef = useRef(0);
+  const pulseAnim = useRef(new Animated.Value(1)).current;
+
+  const isAligned = Math.abs(heading - qiblaDir) < 5 || Math.abs(heading - qiblaDir) > 355;
+
+  // Pulse animation when aligned with Qibla
+  useEffect(() => {
+    let loopAnim: Animated.CompositeAnimation | null = null;
+    if (isAligned) {
+      loopAnim = Animated.loop(
+        Animated.sequence([
+          Animated.timing(pulseAnim, {
+            toValue: 1.12,
+            duration: 700,
+            useNativeDriver: true,
+          }),
+          Animated.timing(pulseAnim, {
+            toValue: 1,
+            duration: 700,
+            useNativeDriver: true,
+          }),
+        ])
+      );
+      loopAnim.start();
+    } else {
+      pulseAnim.setValue(1);
+    }
+    return () => {
+      if (loopAnim) loopAnim.stop();
+    };
+  }, [isAligned, pulseAnim]);
 
   useEffect(() => {
     let headingSubscription: Location.LocationSubscription | null = null;
@@ -56,10 +90,24 @@ export default function KibleScreen() {
         headingSubscription = await Location.watchHeadingAsync((data) => {
           const headingValue = data?.trueHeading >= 0 ? data.trueHeading : (data?.magHeading ?? 0);
           setHeading(headingValue);
+
+          // Calculate shortest path to avoid 359 -> 0 full spin jitter
+          let prev = currentHeadingRef.current;
+          let diff = headingValue - (prev % 360);
+          if (diff > 180) diff -= 360;
+          if (diff < -180) diff += 360;
+          const nextTarget = prev + diff;
+          currentHeadingRef.current = nextTarget;
+
+          Animated.timing(animatedHeading, {
+            toValue: nextTarget,
+            duration: 120,
+            useNativeDriver: true,
+          }).start();
           
           // Kibleye yaklasinca haptik geri bildirim
-          const diff = Math.abs(headingValue - qibla);
-          if (diff < 2 || diff > 358) {
+          const angleDiff = Math.abs(headingValue - qibla);
+          if (angleDiff < 2 || angleDiff > 358) {
             safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
           }
         });
@@ -78,8 +126,15 @@ export default function KibleScreen() {
     };
   }, []);
 
-  const rotateValue = (heading - qiblaDir);
-  const isAligned = Math.abs(heading - qiblaDir) < 5 || Math.abs(heading - qiblaDir) > 355;
+  const compassRotation = animatedHeading.interpolate({
+    inputRange: [0, 360],
+    outputRange: ['0deg', '-360deg'],
+  });
+
+  const needleRotation = animatedHeading.interpolate({
+    inputRange: [0, 360],
+    outputRange: [`${qiblaDir}deg`, `${qiblaDir - 360}deg`],
+  });
 
   return (
     <>
@@ -96,12 +151,18 @@ export default function KibleScreen() {
 
       <View style={[styles.compassSection, { paddingBottom: 60 + insets.bottom }]}>
         {/* Outer Ring */}
-        <View style={[styles.outerRing, { borderColor: colors.primary + '10' }]}>
-          {/* Compass Image / Graphic */}
+        <Animated.View
+          style={[
+            styles.outerRing,
+            { borderColor: isAligned ? '#D4AF37' : colors.primary + '15' },
+            isAligned && { transform: [{ scale: pulseAnim }] },
+          ]}
+        >
+          {/* Compass Graphic */}
           <Animated.View 
             style={[
               styles.compassContainer, 
-              { transform: [{ rotate: `${-heading}deg` }] }
+              { transform: [{ rotate: compassRotation }] }
             ]}
           >
             {/* North Indicator */}
@@ -120,25 +181,25 @@ export default function KibleScreen() {
             ))}
           </Animated.View>
 
-          {/* Qibla Needle (Fixed relative to compass or pointing) */}
+          {/* Qibla Needle */}
           <Animated.View 
             style={[
               styles.needleContainer, 
-              { transform: [{ rotate: `${qiblaDir - heading}deg` }] }
+              { transform: [{ rotate: needleRotation }] }
             ]}
           >
-            <View style={[styles.qiblaNeedle, { borderBottomColor: colors.primary }]}>
+            <View style={[styles.qiblaNeedle, { borderBottomColor: isAligned ? '#D4AF37' : colors.primary }]}>
               <View style={styles.needleIcon}>
-                <Ionicons name="navigate" size={24} color={colors.accent} />
+                <Ionicons name="navigate" size={24} color={isAligned ? '#052F1C' : colors.accent} />
               </View>
             </View>
           </Animated.View>
 
           {/* Center Glow */}
           {isAligned && (
-            <View style={[styles.glowEffect, { backgroundColor: colors.accent + '20' }]} />
+            <View style={[styles.glowEffect, { backgroundColor: '#D4AF3740' }]} />
           )}
-        </View>
+        </Animated.View>
 
         {/* Info Cards */}
         <View style={styles.infoSection}>

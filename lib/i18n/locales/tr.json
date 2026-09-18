@@ -108,7 +108,13 @@
     "headerSubtitle": "Müminin Silahı Duadır",
     "featuredBadge": "GÜNÜN DUASI",
     "meaningLabel": "ANLAMI",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nAnlamı: {{meaning}}\n\nKaynak: {{source}}\n\nEzan Vakti + Hatim uygulamasından paylaşıldı."
+    "shareMessage": "🤲 {{title}}\n\n{{transliteration}}\n\nAnlamı: {{meaning}}\n\nKaynak: {{source}}\n\n📲 Ezan Vakti + Hatim uygulamasını ücretsiz indirin:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
+    "shareImage": "Görsel Paylaş",
+    "shareText": "Metin Paylaş",
+    "rewardBannerTitle": "3 Dua Paylaş, 3 Gün Reklamsız Kazan!",
+    "rewardBannerSub": "Yakınlarınla paylaşarak hem hayra vesile ol hem reklamsız kullanım kazan.",
+    "rewardProgress": "{{count}} / 3 Paylaşım",
+    "adFreeActive": "Reklamsız Kullanım Aktif ({{days}} gün kaldı)"
   },
   "splash": {
     "subtitle": "Namaz vakti, hatim ve dua bir arada"
@@ -116,6 +122,8 @@
   "notifications": {
     "dailyDuaTitle": "🤲 Günün Duası",
     "dailyDuaBody": "{{title}} — okumak için dokun",
+    "fridayTitle": "🕌 Hayırlı Cumalar",
+    "fridayBody": "Cumanız mübarek olsun. Bugün Kehf Suresi okumayı ve dua etmeyi unutmayın ✨",
     "eveningTitle": "Ezan Vakti + Hatim",
     "eveningMsg1": "Bugün hatimine ayet eklemeyi unutma 📖",
     "eveningMsg2": "Akşam vaktine yaklaşırken bir dua ile içini rahatlat 🤲",
