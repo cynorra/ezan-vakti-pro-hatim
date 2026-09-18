@@ -54,6 +54,8 @@ Lütfen mobil "Ezan Vakti + Hatim" uygulaması için bugüne özel, gönüllere 
 }
 `;
 
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 async function getAvailableGeminiModels() {
   try {
     const listEndpoint = `https://generativelanguage.googleapis.com/v1beta/models?key=${GEMINI_API_KEY}`;
@@ -65,12 +67,25 @@ async function getAvailableGeminiModels() {
     const data = await res.json();
     if (!data.models || !Array.isArray(data.models)) return [];
 
-    // generateContent destekleyen modelleri filtrele
+    // İstenmeyen özel amaçlı (TTS, Image, Audio, Clip, Robotik vs.) modelleri filtrele
+    const excludedPatterns = /image|tts|transcribe|clip|audio|robotics|computer-use|deep-research/i;
+
     const usableModels = data.models
-      .filter(m => Array.isArray(m.supportedGenerationMethods) && m.supportedGenerationMethods.includes('generateContent'))
+      .filter(m => 
+        Array.isArray(m.supportedGenerationMethods) && 
+        m.supportedGenerationMethods.includes('generateContent') &&
+        !excludedPatterns.test(m.name)
+      )
       .map(m => m.name.replace(/^models\//, ''));
 
-    console.log(`📋 Hesabınızda aktif bulunan Gemini modelleri: ${usableModels.join(', ')}`);
+    // Free planda en kararlı ve yüksek kotalı 'flash' modellerini en başa al
+    usableModels.sort((a, b) => {
+      const aScore = a.includes('flash-lite') ? 3 : a.includes('flash-latest') ? 2 : a.includes('flash') ? 1 : 0;
+      const bScore = b.includes('flash-lite') ? 3 : b.includes('flash-latest') ? 2 : b.includes('flash') ? 1 : 0;
+      return bScore - aScore;
+    });
+
+    console.log(`📋 Hesabınızda metin üretimi için kullanılabilir modeller: ${usableModels.slice(0, 8).join(', ')}`);
     return usableModels;
   } catch (e) {
     console.warn('⚠️ ListModels çağrılırken hata:', e.message);
@@ -84,16 +99,22 @@ async function fetchFromGemini() {
     return null;
   }
 
-  // Önce API'den hesabın aktif modellerini dinamik olarak çekelim
+  // Önce API'den hesabın aktif modellerini çekelim
   const discoveredModels = await getAvailableGeminiModels();
 
-  // Dinamik modeller + sabit adaylar
+  // Öncelikli Free tier modelleri
+  const preferredModels = [
+    'gemini-flash-latest',
+    'gemini-flash-lite-latest',
+    'gemini-3.5-flash-lite',
+    'gemini-3.5-flash',
+    'gemini-2.5-flash-lite',
+    'gemini-pro-latest'
+  ];
+
   const modelCandidates = Array.from(new Set([
-    ...discoveredModels,
-    'gemini-2.5-flash',
-    'gemini-2.0-flash',
-    'gemini-1.5-flash',
-    'gemini-1.5-pro'
+    ...preferredModels,
+    ...discoveredModels
   ]));
 
   let lastError = null;
@@ -111,7 +132,7 @@ async function fetchFromGemini() {
         ],
         generationConfig: {
           temperature: 0.7,
-          maxOutputTokens: 1000
+          maxOutputTokens: 1200
         }
       };
 
@@ -125,6 +146,12 @@ async function fetchFromGemini() {
         const errText = await response.text();
         console.warn(`⚠️ ${model} yanıt vermedi (${response.status}): ${errText.slice(0, 150)}`);
         lastError = new Error(`HTTP ${response.status}: ${errText}`);
+        
+        // Free tier kota aşımı (429) durumunda bir sonraki model için 3 saniye bekle
+        if (response.status === 429) {
+          console.log('⏳ Free tier kota limiti (429) nedeniyle 3 saniye bekleniyor...');
+          await sleep(3000);
+        }
         continue;
       }
 
@@ -135,20 +162,20 @@ async function fetchFromGemini() {
         continue;
       }
 
-      // Markdown backtick temizleme
-      let cleanText = textContent.trim();
-      if (cleanText.startsWith('```json')) {
-        cleanText = cleanText.replace(/^```json\s*/i, '').replace(/```$/, '').trim();
-      } else if (cleanText.startsWith('```')) {
-        cleanText = cleanText.replace(/^```\s*/, '').replace(/```$/, '').trim();
+      // Güvenli JSON ayıklama (Model başında veya sonunda metin/markdown olsa bile { ... } arasını alır)
+      const jsonMatch = textContent.match(/\{[\s\S]*\}/);
+      if (!jsonMatch) {
+        throw new Error(`Model çıktısında geçerli JSON nesnesi bulunamadı: ${textContent.slice(0, 100)}`);
       }
 
-      const parsed = JSON.parse(cleanText);
+      const parsed = JSON.parse(jsonMatch[0]);
       console.log(`✨ ${model} ile başarıyla içerik üretildi.`);
       return parsed;
     } catch (err) {
       console.warn(`⚠️ ${model} hatası:`, err.message);
       lastError = err;
+      // Hata durumunda kısa bir nefes payı
+      await sleep(1500);
     }
   }
 
