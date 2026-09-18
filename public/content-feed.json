@@ -1,30 +1,30 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-09-18T18:19:11.862Z",
+  "updatedAt": "2026-09-18T18:20:55.319Z",
   "date": "2026-09-18",
   "isFriday": true,
   "featuredDua": {
-    "title": "Zihin Açıklığı ve İlim Duası",
-    "arabic": "رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي",
-    "turkish": "Rabbim! Gönlüme ferahlık ver, işimi bana kolaylaştır.",
-    "transliteration": "Rabbisrah li sadri ve yessir li emri",
-    "source": "Tâhâ Suresi, 25-26",
+    "title": "Cuma Günü ve Anı Ferahlatan Dua",
+    "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالحَزَنِ، وَأَعُوذُ بِكَ مِنَ الْعَجْزِ وَالكَسَلِ، وَأَعُوذُ بِكَ مِنَ الْبُخْلِ وَالْجُبْنِ، وَأَعُوذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ وَقَهْرِ الرِّجَالِ",
+    "turkish": "Allah'ım! Kederden ve hüzünden sana sığınırım. Acizlikten ve tembellikten sana sığınırım. Korkaklıktan ve cimrilikten sana sığınırım. Borcun altından kalkamamaktan ve insanların kahredici baskısından sana sığınırım.",
+    "transliteration": "Allahümme inni euzü bike minel-hemmi vel-hazen, ve euzü bike minel-aczi vel-kesel, ve euzü bike minel-buhli vel-cübn, ve euzü bike min غalebetid-deyni ve kahrir-rical.",
+    "source": "Buhari, Deavat, 36",
     "category": "worship"
   },
   "featuredVerse": {
-    "arabic": "فَاِنَّ مَعَ الْعُسْرِ يُسْراًۜ اِنَّ مَعَ الْعُسْرِ يُسْراً",
-    "turkish": "Şüphesiz her güçlükle beraber bir kolaylık vardır.",
+    "arabic": "إِنَّ مَعَ الْعُسْرِ يُسْراً",
+    "turkish": "Şüphesiz güçlükle beraber bir kolaylık vardır.",
     "surah": "İnşirâh Suresi",
-    "verseNumber": 5,
-    "theme": "sabir"
+    "verseNumber": 6,
+    "theme": "huzur"
   },
   "featuredHadith": {
-    "arabic": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ",
-    "turkish": "Ameller niyetlere göredir. Herkese niyet ettiği şeyin karşılığı vardır.",
-    "source": "Buhari, Bed'ü'l-Vahy, 1"
+    "arabic": "خَيْرُ يَوْمٍ طَلَعَتْ عَلَيْهِ الشَّمْسُ يَوْمُ الْجُمُعَةِ؛ فِيهِ خُلِقَ آدَمُ، وَفِيهِ أُدْخِلَ الْجَنَّةَ، وَفِيهِ أُخْرِجَ مِنْهَا، وَلَا تَقُومُ السَّاعَةُ إِلَّا فِي يَوْمِ الْجُمُعَةِ",
+    "turkish": "Üzerine güneşin doğduğu en hayırlı gün Cuma günüdür. Âdem o gün yaratılmış, o gün cennete konmuş ve o gün cennetten çıkarılmıştır. Kıyamet de ancak Cuma günü kopacaktır.",
+    "source": "Müslim, Cuma, 18"
   },
   "dailyWisdom": {
-    "title": "Kolaylık Müjdesi",
-    "message": "Karşılaştığın her zorluğun arkasında gizlenmiş bir kolaylık vardır. Sabret ve namazla yardım dile."
+    "title": "Günün Manevi Mesajı",
+    "message": "Hayırlı Cumalar! Kalbinizi dünya meşgalelerinden arındırıp Rabb'inize yönelin; çünkü O, duaları en güzel şekilde kabul eden ve kullarına şah damarından daha yakın olandır."
   }
 }
