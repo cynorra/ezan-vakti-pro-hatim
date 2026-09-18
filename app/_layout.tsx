@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import { Stack } from 'expo-router';
+import { useState, useEffect } from 'react';
+import { Stack, useRouter } from 'expo-router';
 import { Colors } from '@/constants/theme';
 import { useColorScheme, Text } from 'react-native';
+import * as Notifications from 'expo-notifications';
 import { AnimatedSplash } from '@/components/AnimatedSplash';
 import '@/lib/i18n';
 
@@ -15,6 +16,32 @@ export default function RootLayout() {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const [showSplash, setShowSplash] = useState(true);
+  const router = useRouter();
+
+  useEffect(() => {
+    const subscription = Notifications.addNotificationResponseReceivedListener((response) => {
+      try {
+        const data = response.notification.request.content.data;
+        if (data?.screen) {
+          if (data.screen === 'dua') {
+            router.push('/(tabs)/dua');
+          } else if (data.screen === 'tesbih') {
+            router.push('/(tabs)/tesbih');
+          } else if (data.screen === 'hatim') {
+            router.push('/(tabs)/hatim');
+          } else if (data.screen === 'kaza') {
+            router.push('/(tabs)/kaza');
+          } else if (data.screen === 'home') {
+            router.push('/(tabs)');
+          }
+        }
+      } catch (err) {
+        console.log('Notification navigation error:', err);
+      }
+    });
+
+    return () => subscription.remove();
+  }, [router]);
 
   return (
     <>
@@ -31,3 +58,4 @@ export default function RootLayout() {
     </>
   );
 }
+

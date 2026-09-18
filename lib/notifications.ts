@@ -115,6 +115,19 @@ export async function hasNotificationPermission() {
   return status === 'granted';
 }
 
+async function getReminderMinutes(): Promise<number> {
+  try {
+    const raw = await AsyncStorage.getItem('reminder_time');
+    if (!raw) return 15;
+    if (raw.includes('30')) return 30;
+    if (raw.includes('45')) return 45;
+    if (raw.includes('Tam')) return 0;
+    return 15;
+  } catch {
+    return 15;
+  }
+}
+
 export async function schedulePrayerNotification(
   prayerName: string,
   timeStr: string,
@@ -127,14 +140,14 @@ export async function schedulePrayerNotification(
   const displayName = i18nKey ? i18n.t(`prayerTimes.${i18nKey}`) : prayerName;
   const sound = await getPrayerNotificationSound();
 
-  // Her gun ayni saatte tekrarla
+  // Vakit anı bildirimi
   await Notifications.scheduleNotificationAsync({
     identifier: `${PRAYER_PREFIX}${prayerName}`,
     content: {
       title: i18n.t('notifications.prayerTitle', { prayer: displayName }),
       body: i18n.t('notifications.prayerBody', { prayer: displayName, city }),
       sound,
-      data: { prayerName, city },
+      data: { screen: 'home', prayerName, city },
     },
     trigger: {
       hour: hours,
@@ -142,6 +155,32 @@ export async function schedulePrayerNotification(
       repeats: true,
     } as any,
   });
+
+  // Vakit öncesi hatırlatıcı
+  const reminderMins = await getReminderMinutes();
+  if (reminderMins > 0) {
+    let preMinute = minutes - reminderMins;
+    let preHour = hours;
+    if (preMinute < 0) {
+      preMinute += 60;
+      preHour = (preHour - 1 + 24) % 24;
+    }
+
+    await Notifications.scheduleNotificationAsync({
+      identifier: `${PRAYER_PREFIX}pre-${prayerName}`,
+      content: {
+        title: i18n.t('notifications.prayerPreReminderTitle', { prayer: displayName, minutes: reminderMins }),
+        body: i18n.t('notifications.prayerPreReminderBody', { prayer: displayName, city, minutes: reminderMins }),
+        sound: true,
+        data: { screen: 'home', prayerName, city },
+      },
+      trigger: {
+        hour: preHour,
+        minute: preMinute,
+        repeats: true,
+      } as any,
+    });
+  }
 }
 
 export async function cancelAllNotifications() {
@@ -281,6 +320,29 @@ export async function scheduleFridayReminder() {
   });
 }
 
+const MIDDAY_REMINDER_ID = 'midday-inspiration-reminder';
+
+export async function scheduleMiddayInspirationReminder() {
+  if (Platform.OS === 'web') return;
+
+  await Notifications.cancelScheduledNotificationAsync(MIDDAY_REMINDER_ID).catch(() => {});
+
+  await Notifications.scheduleNotificationAsync({
+    identifier: MIDDAY_REMINDER_ID,
+    content: {
+      title: i18n.t('notifications.middayTitle'),
+      body: i18n.t('notifications.middayBody'),
+      sound: true,
+      data: { screen: 'tesbih' },
+    },
+    trigger: {
+      hour: 14,
+      minute: 15,
+      repeats: true,
+    } as any,
+  });
+}
+
 export async function scheduleAllPrayers(prayerTimes: any, city: string) {
   if (Platform.OS === 'web') return;
 
@@ -306,6 +368,7 @@ export async function scheduleAllPrayers(prayerTimes: any, city: string) {
   }
 
   await scheduleDailyDuaReminders();
+  await scheduleMiddayInspirationReminder();
   await scheduleEveningEngagementReminder();
   await scheduleFridayReminder();
 }
