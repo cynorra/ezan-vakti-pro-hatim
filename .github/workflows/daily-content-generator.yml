@@ -1,0 +1,42 @@
+﻿name: Daily AI Content Generator (Dua & Ayet)
+
+on:
+  schedule:
+    # Her gun gece 00:00 UTC (Turkiye saatiyle 03:00) otomatik calisir
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-content:
+    name: Generate Daily Dua & Quran Verses with AI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate Content
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          node scripts/generate-daily-content.mjs
+
+      - name: Commit and Push if updated
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/content-feed.json
+          if git diff --staged --quiet; then
+            echo "Icerik degismedi, commit gerekmiyor."
+          else
+            git commit -m "chore(content): gunluk AI dua ve sifa ayeti beslemesi guncellendi [skip ci]"
+            git push origin main
+          fi

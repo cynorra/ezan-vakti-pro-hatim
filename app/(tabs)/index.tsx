@@ -41,6 +41,7 @@ import { PrayerTimesCard } from '@/components/PrayerTimesCard';
 import { ReligiousDaysCard } from '@/components/ReligiousDaysCard';
 import { SEOHead } from '@/components/SEOHead';
 import { getRandomEsma, Esma } from '@/lib/data/esma';
+import { syncRemoteContent } from '@/lib/services/content-sync';
 
 export default function HomeScreen() {
   const { t } = useTranslation();
@@ -59,6 +60,7 @@ export default function HomeScreen() {
   const [streak, setStreak] = useState(0);
 
   useEffect(() => {
+    syncRemoteContent().catch(() => {});
     setDailyEsma(getRandomEsma());
     recordAppOpenAndGetStreak().then(setStreak);
   }, []);
