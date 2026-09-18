@@ -9,11 +9,15 @@ import {
   useColorScheme,
   RefreshControl,
   Platform,
+  Share,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import * as Location from 'expo-location';
+import * as Haptics from 'expo-haptics';
+import { safeHaptics } from '@/lib/haptics';
+import { recordGrowthShare } from '@/lib/rewards';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { turkishCities, City } from '@/lib/data/cities';
 import { calculatePrayerTimes, PrayerTimes } from '@/lib/prayer-times';
@@ -121,6 +125,20 @@ export default function HomeScreen() {
       setSelectedDistrict(nearestCity.districts[0] || 'Merkez');
     } catch (error) {
       console.log('Location error:', error);
+    }
+  };
+
+  const isFriday = currentDate.getDay() === 5;
+
+  const handleShareFridayGreeting = async () => {
+    safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    try {
+      await Share.share({
+        message: t('hatim.fridayShareMessage'),
+      });
+      await recordGrowthShare();
+    } catch (error) {
+      console.log('Friday share error:', error);
     }
   };
 
@@ -267,6 +285,32 @@ export default function HomeScreen() {
 
         {/* Religious Days Card */}
         <ReligiousDaysCard />
+
+        {/* Friday Special Card */}
+        {isFriday && (
+          <LinearGradient
+            colors={['#064e2b', '#0A5C36', '#032516']}
+            style={[styles.fridayCard, Shadows.premium]}
+          >
+            <View style={styles.fridayHeaderRow}>
+              <View style={styles.fridayBadge}>
+                <Ionicons name="sparkles" size={12} color="#052F1C" />
+                <Text style={styles.fridayBadgeText}>{t('hatim.fridayCardTitle').toUpperCase()}</Text>
+              </View>
+              <Ionicons name="moon" size={18} color="#D4AF37" />
+            </View>
+            <Text style={styles.fridayTitle}>Cumanız Mübarek Olsun 🕌</Text>
+            <Text style={styles.fridayDesc}>{t('hatim.fridayCardDesc')}</Text>
+            <TouchableOpacity
+              activeOpacity={0.85}
+              onPress={handleShareFridayGreeting}
+              style={styles.fridayShareBtn}
+            >
+              <Ionicons name="logo-whatsapp" size={18} color="#052F1C" />
+              <Text style={styles.fridayShareBtnText}>{t('hatim.fridayShareBtn')}</Text>
+            </TouchableOpacity>
+          </LinearGradient>
+        )}
 
         {/* Daily Wisdom Card */}
         <View style={[styles.card, { backgroundColor: colors.surface }, Shadows.medium]}>
@@ -569,5 +613,60 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     opacity: 0.8,
     paddingHorizontal: Spacing.md,
+  },
+  fridayCard: {
+    padding: Spacing.lg,
+    borderRadius: BorderRadius.xl,
+    borderWidth: 1.5,
+    borderColor: '#D4AF37',
+  },
+  fridayHeaderRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: Spacing.sm,
+  },
+  fridayBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#D4AF37',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: BorderRadius.full,
+    gap: 4,
+  },
+  fridayBadgeText: {
+    color: '#052F1C',
+    fontSize: 10,
+    fontWeight: '900',
+    letterSpacing: 1,
+  },
+  fridayTitle: {
+    color: '#ffffff',
+    fontSize: 18,
+    fontWeight: '800',
+    marginBottom: 4,
+  },
+  fridayDesc: {
+    color: 'rgba(255,255,255,0.85)',
+    fontSize: 12.5,
+    lineHeight: 18,
+    marginBottom: Spacing.md,
+  },
+  fridayShareBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#D4AF37',
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    borderRadius: BorderRadius.lg,
+    gap: 8,
+  },
+  fridayShareBtnText: {
+    color: '#052F1C',
+    fontSize: 13,
+    fontWeight: '800',
+    letterSpacing: 0.5,
   },
 });

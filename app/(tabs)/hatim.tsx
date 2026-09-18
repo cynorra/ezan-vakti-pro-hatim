@@ -424,7 +424,13 @@ export default function HatimScreen() {
                     <View style={[styles.progressBarBg, { backgroundColor: 'rgba(255,255,255,0.2)' }]}>
                       <View style={[styles.progressBarFill, { width: `${progressPercentage}%` }]} />
                     </View>
-                    <Text style={styles.percentText}>%{progressPercentage} {t('hatim.completed')}</Text>
+                    <View style={styles.progressBottomRow}>
+                      <Text style={styles.percentText}>%{progressPercentage} {t('hatim.completed')}</Text>
+                      <TouchableOpacity onPress={handleShareProgress} style={styles.shareBadgeBtn}>
+                        <Ionicons name="share-social-outline" size={13} color="#fff" />
+                        <Text style={styles.shareBadgeText}>{t('hatim.shareProgressBtn')}</Text>
+                      </TouchableOpacity>
+                    </View>
                   </View>
                   {completedCount === 30 && (
                     <TouchableOpacity style={styles.completeBtn} onPress={completeHatim}>
@@ -593,6 +599,26 @@ export default function HatimScreen() {
               <Ionicons name="share-social" size={22} color={colors.primary} />
             </TouchableOpacity>
           </View>
+
+          {/* WhatsApp & Social Media Invite Banner */}
+          <TouchableOpacity
+            activeOpacity={0.8}
+            onPress={() => selectedSharedHatim && handleInviteToHatim(selectedSharedHatim)}
+            style={[styles.modalInviteBanner, { backgroundColor: colors.surface }, Shadows.light]}
+          >
+            <View style={[styles.modalInviteIconCircle, { backgroundColor: '#25D36620' }]}>
+              <Ionicons name="logo-whatsapp" size={22} color="#25D366" />
+            </View>
+            <View style={{ flex: 1 }}>
+              <Text style={[styles.modalInviteTitle, { color: colors.text }]}>
+                {t('hatim.inviteFriendsBtn')}
+              </Text>
+              <Text style={[styles.modalInviteSub, { color: colors.textSecondary }]}>
+                Hatmin hızla tamamlanması için WhatsApp & gruplarda paylaş
+              </Text>
+            </View>
+            <Ionicons name="share-social-outline" size={20} color={colors.primary} />
+          </TouchableOpacity>
 
           <View style={styles.userNameSection}>
             <Text style={[styles.inputLabel, { color: colors.textSecondary }]}>{t('hatim.participantName')}</Text>
@@ -1101,5 +1127,53 @@ const styles = StyleSheet.create({
   },
   closeBtn: {
     padding: 8,
+  },
+  progressBottomRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 6,
+  },
+  shareBadgeBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'rgba(255,255,255,0.22)',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: BorderRadius.full,
+    gap: 4,
+  },
+  shareBadgeText: {
+    color: '#fff',
+    fontSize: 11,
+    fontWeight: '700',
+  },
+  modalInviteBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginHorizontal: Spacing.md,
+    marginTop: Spacing.xs,
+    marginBottom: Spacing.sm,
+    padding: Spacing.md,
+    borderRadius: BorderRadius.lg,
+    gap: 12,
+    borderWidth: 1,
+    borderColor: 'rgba(37, 211, 102, 0.25)',
+  },
+  modalInviteIconCircle: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modalInviteTitle: {
+    fontSize: 13.5,
+    fontWeight: '800',
+    marginBottom: 2,
+  },
+  modalInviteSub: {
+    fontSize: 11,
+    lineHeight: 15,
   },
 });

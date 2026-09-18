@@ -69,7 +69,14 @@
     "progressShareMessage": "📖 Bu hafta {{completed}}/30 cüz tamamladım (%{{percentage}}).\n\nSen de Ezan Vakti + Hatim ile takip et: {{playStore}}",
     "rewardUnlocked": "🎁 Harika! Paylaşımların sayesinde {{days}} gün reklamsız kullanım kazandın.",
     "rewardBannerText": "{{count}} paylaşım daha yap, {{days}} gün reklamsız kazan 🎁",
-    "juzCountShort": "cüz"
+    "juzCountShort": "cüz",
+    "shareProgressBtn": "İlerlemeyi Paylaş",
+    "inviteFriendsBtn": "Arkadaşlarını Davet Et",
+    "hatimDuasiTitle": "Hatim Duası",
+    "fridayCardTitle": "Hayırlı Cumalar",
+    "fridayCardDesc": "Cumanız mübarek olsun. Sevdiklerinizle Cuma tebriğini paylaşın.",
+    "fridayShareBtn": "Cuma Mesajı Paylaş",
+    "fridayShareMessage": "🕌 Hayırlı Cumalar! Cumanız mübarek, dualarınız ve ibadetleriniz kabul olsun ✨\n\n📲 Ezan Vakti + Hatim uygulamasını ücretsiz indirin:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti"
   },
   "settings": {
     "title": "Ayarlar",

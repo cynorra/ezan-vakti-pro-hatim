@@ -122,6 +122,7 @@ export default function KazaScreen() {
         
         <View style={styles.counterSection}>
           <TouchableOpacity 
+            activeOpacity={0.7}
             style={[styles.btn, { backgroundColor: colors.background }]} 
             onPress={() => updateCount(key, -1)}
           >
@@ -131,6 +132,7 @@ export default function KazaScreen() {
           <Text style={[styles.countText, { color: colors.primary }]}>{kazaData[key]}</Text>
           
           <TouchableOpacity 
+            activeOpacity={0.7}
             style={[styles.btn, { backgroundColor: colors.background }]} 
             onPress={() => updateCount(key, 1)}
           >
@@ -140,6 +142,8 @@ export default function KazaScreen() {
       </View>
     );
   };
+
+  const total = totalKaza(kazaData);
 
   return (
     <>
@@ -158,6 +162,22 @@ export default function KazaScreen() {
           contentContainerStyle={styles.scrollContent}
           showsVerticalScrollIndicator={false}
         >
+          {/* Total Summary Card */}
+          <View style={[styles.summaryCard, { backgroundColor: colors.surface }, Shadows.medium]}>
+            <View style={styles.summaryLeft}>
+              <Text style={[styles.summaryLabel, { color: colors.textSecondary }]}>TOPLAM KAZA BORCU</Text>
+              <Text style={[styles.summaryCount, { color: total === 0 ? colors.success : colors.primary }]}>
+                {total} Vakit
+              </Text>
+            </View>
+            <TouchableOpacity
+              onPress={celebrateKazaCompleted}
+              style={[styles.shareKazaBtn, { backgroundColor: colors.accent + '20' }]}
+            >
+              <Ionicons name="share-social" size={18} color={colors.accent} />
+            </TouchableOpacity>
+          </View>
+
           {renderPrayerCard('sabah', t('kaza.sabah') || 'Sabah', 'partly-sunny-outline')}
           {renderPrayerCard('ogle', t('kaza.ogle') || 'Öğle', 'sunny-outline')}
           {renderPrayerCard('ikindi', t('kaza.ikindi') || 'İkindi', 'cloud-outline')}
@@ -246,6 +266,34 @@ const styles = StyleSheet.create({
     width: 36,
     height: 36,
     borderRadius: 18,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  summaryCard: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: Spacing.lg,
+    borderRadius: BorderRadius.xl,
+    borderWidth: 1,
+    borderColor: 'rgba(212, 175, 55, 0.25)',
+  },
+  summaryLeft: {
+    gap: 2,
+  },
+  summaryLabel: {
+    fontSize: 10,
+    fontWeight: '900',
+    letterSpacing: 1.5,
+  },
+  summaryCount: {
+    fontSize: 22,
+    fontWeight: '900',
+  },
+  shareKazaBtn: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',
   },

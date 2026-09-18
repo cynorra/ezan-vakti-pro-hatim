@@ -1,5 +1,5 @@
-import { useState, useEffect, useMemo } from 'react';
-import { View, Text, StyleSheet, useColorScheme, Platform } from 'react-native';
+import { useState, useEffect, useMemo, useRef } from 'react';
+import { View, Text, StyleSheet, useColorScheme, Platform, Animated } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { PrayerTimes, getNextPrayer } from '@/lib/prayer-times';
@@ -14,6 +14,35 @@ export function NextPrayerCountdown({ prayerTimes }: NextPrayerCountdownProps) {
   const colors = Colors[colorScheme];
   const [countdown, setCountdown] = useState({ hours: 0, minutes: 0, seconds: 0 });
   const nextPrayer = useMemo(() => getNextPrayer(prayerTimes), [prayerTimes]);
+  const pulseAnim = useRef(new Animated.Value(1)).current;
+
+  const isSoon = countdown.hours === 0 && countdown.minutes < 30;
+
+  useEffect(() => {
+    let anim: Animated.CompositeAnimation | null = null;
+    if (isSoon) {
+      anim = Animated.loop(
+        Animated.sequence([
+          Animated.timing(pulseAnim, {
+            toValue: 1.04,
+            duration: 900,
+            useNativeDriver: true,
+          }),
+          Animated.timing(pulseAnim, {
+            toValue: 1,
+            duration: 900,
+            useNativeDriver: true,
+          }),
+        ])
+      );
+      anim.start();
+    } else {
+      pulseAnim.setValue(1);
+    }
+    return () => {
+      if (anim) anim.stop();
+    };
+  }, [isSoon, pulseAnim]);
 
   useEffect(() => {
     updateWidget(nextPrayer.name, nextPrayer.time);
@@ -45,36 +74,40 @@ export function NextPrayerCountdown({ prayerTimes }: NextPrayerCountdownProps) {
   const formatNumber = (num: number) => num.toString().padStart(2, '0');
 
   return (
-    <LinearGradient
-      colors={Gradients.premium}
-      style={[styles.container, Shadows.premium]}
-      start={{ x: 0, y: 0 }}
-      end={{ x: 1, y: 1 }}
-    >
-      <View style={styles.badge}>
-        <Text style={styles.badgeText}>SIRADAKİ VAKİT</Text>
-      </View>
-      
-      <Text style={styles.prayerName}>{nextPrayer.name.toUpperCase()}</Text>
-      <Text style={styles.prayerTime}>{nextPrayer.time}</Text>
-      
-      <View style={styles.countdownWrapper}>
-        <View style={styles.countdownBox}>
-          <Text style={styles.countdownNumber}>{formatNumber(countdown.hours)}</Text>
-          <Text style={styles.countdownLabel}>Saat</Text>
+    <Animated.View style={{ transform: [{ scale: pulseAnim }] }}>
+      <LinearGradient
+        colors={Gradients.premium}
+        style={[styles.container, Shadows.premium, isSoon && styles.containerSoon]}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+      >
+        <View style={[styles.badge, isSoon && styles.badgeSoon]}>
+          <Text style={styles.badgeText}>
+            {isSoon ? '⏳ VAKTE AZ KALDI' : 'SIRADAKİ VAKİT'}
+          </Text>
         </View>
-        <Text style={styles.separator}>:</Text>
-        <View style={styles.countdownBox}>
-          <Text style={styles.countdownNumber}>{formatNumber(countdown.minutes)}</Text>
-          <Text style={styles.countdownLabel}>Dk.</Text>
+        
+        <Text style={styles.prayerName}>{nextPrayer.name.toUpperCase()}</Text>
+        <Text style={styles.prayerTime}>{nextPrayer.time}</Text>
+        
+        <View style={styles.countdownWrapper}>
+          <View style={[styles.countdownBox, isSoon && styles.countdownBoxSoon]}>
+            <Text style={styles.countdownNumber}>{formatNumber(countdown.hours)}</Text>
+            <Text style={styles.countdownLabel}>Saat</Text>
+          </View>
+          <Text style={styles.separator}>:</Text>
+          <View style={[styles.countdownBox, isSoon && styles.countdownBoxSoon]}>
+            <Text style={styles.countdownNumber}>{formatNumber(countdown.minutes)}</Text>
+            <Text style={styles.countdownLabel}>Dk.</Text>
+          </View>
+          <Text style={styles.separator}>:</Text>
+          <View style={[styles.countdownBox, isSoon && styles.countdownBoxSoon]}>
+            <Text style={styles.countdownNumber}>{formatNumber(countdown.seconds)}</Text>
+            <Text style={styles.countdownLabel}>Sn.</Text>
+          </View>
         </View>
-        <Text style={styles.separator}>:</Text>
-        <View style={styles.countdownBox}>
-          <Text style={styles.countdownNumber}>{formatNumber(countdown.seconds)}</Text>
-          <Text style={styles.countdownLabel}>Sn.</Text>
-        </View>
-      </View>
-    </LinearGradient>
+      </LinearGradient>
+    </Animated.View>
   );
 }
 
@@ -146,5 +179,16 @@ const styles = StyleSheet.create({
     color: 'rgba(255,255,255,0.3)',
     fontSize: 24,
     fontWeight: '800',
+  },
+  containerSoon: {
+    borderWidth: 1.5,
+    borderColor: '#D4AF37',
+  },
+  badgeSoon: {
+    backgroundColor: '#D4AF37',
+  },
+  countdownBoxSoon: {
+    backgroundColor: 'rgba(212, 175, 55, 0.2)',
+    borderColor: 'rgba(212, 175, 55, 0.4)',
   },
 });
