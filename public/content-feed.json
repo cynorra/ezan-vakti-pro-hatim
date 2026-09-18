@@ -1,30 +1,30 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-09-18T18:20:55.319Z",
+  "updatedAt": "2026-09-18T18:24:16.953Z",
   "date": "2026-09-18",
   "isFriday": true,
   "featuredDua": {
-    "title": "Cuma Günü ve Anı Ferahlatan Dua",
-    "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالحَزَنِ، وَأَعُوذُ بِكَ مِنَ الْعَجْزِ وَالكَسَلِ، وَأَعُوذُ بِكَ مِنَ الْبُخْلِ وَالْجُبْنِ، وَأَعُوذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ وَقَهْرِ الرِّجَالِ",
-    "turkish": "Allah'ım! Kederden ve hüzünden sana sığınırım. Acizlikten ve tembellikten sana sığınırım. Korkaklıktan ve cimrilikten sana sığınırım. Borcun altından kalkamamaktan ve insanların kahredici baskısından sana sığınırım.",
-    "transliteration": "Allahümme inni euzü bike minel-hemmi vel-hazen, ve euzü bike minel-aczi vel-kesel, ve euzü bike minel-buhli vel-cübn, ve euzü bike min غalebetid-deyni ve kahrir-rical.",
-    "source": "Buhari, Deavat, 36",
-    "category": "worship"
+    "title": "Cuma Günü ve Anı İçi Ferahlık Duası",
+    "arabic": "اللَّهُمَّ إِنِّى أَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ، وَالْجبْنِ وَالْهَرَمِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، وَأَعُوذُ بِكَ مِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ",
+    "turkish": "Allah'ım! Acizlikten, tembellikten, korkaklıktan ve yaşlılığın düşkünlüğünden sana sığınırım. Kabir azabından sana sığınırım. Hayat ve ölüm fitnesinden de sana sığınırım.",
+    "transliteration": "Allahümme inni euzü bike minel-aczi vel-keseli, vel-cübni vel-heremi, ve euzü bike min azabil-kabri, ve euzü bike min fitnetil-mahya vel-memat.",
+    "source": "Buhari, Deavat, 38; Müslim, Zikir, 50",
+    "category": "daily"
   },
   "featuredVerse": {
-    "arabic": "إِنَّ مَعَ الْعُسْرِ يُسْراً",
-    "turkish": "Şüphesiz güçlükle beraber bir kolaylık vardır.",
+    "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْراً * إِنَّ مَعَ الْعُسْرِ يُسْراً",
+    "turkish": "Şüphesiz güçlükle beraber bir kolaylık vardır. Gerçekten, güçlükle beraber bir kolaylık vardır.",
     "surah": "İnşirâh Suresi",
-    "verseNumber": 6,
+    "verseNumber": 5,
     "theme": "huzur"
   },
   "featuredHadith": {
-    "arabic": "خَيْرُ يَوْمٍ طَلَعَتْ عَلَيْهِ الشَّمْسُ يَوْمُ الْجُمُعَةِ؛ فِيهِ خُلِقَ آدَمُ، وَفِيهِ أُدْخِلَ الْجَنَّةَ، وَفِيهِ أُخْرِجَ مِنْهَا، وَلَا تَقُومُ السَّاعَةُ إِلَّا فِي يَوْمِ الْجُمُعَةِ",
-    "turkish": "Üzerine güneşin doğduğu en hayırlı gün Cuma günüdür. Âdem o gün yaratılmış, o gün cennete konmuş ve o gün cennetten çıkarılmıştır. Kıyamet de ancak Cuma günü kopacaktır.",
-    "source": "Müslim, Cuma, 18"
+    "arabic": "مَنْ غَسَّلَ يَوْمَ الْجُمُعَةِ وَاغْتَسَلَ، ثُمَّ بَكَرَ وَابْتَكَرَ، وَمَشَى وَلَمْ يَرْكَبْ، فَدَنَا مِنَ الْإِمَامِ فَاسْتَمَعَ وَلَمْ يَلْغُ، كَانَ لَهُ بِكلِّ خُطْوَةٍ عَمَلُ سَنَةٍ، صِيَامُهَا وَقِيَامُهَا",
+    "turkish": "Kim cuma günü boy abdesti alır, erkenden mescide gider, İmam'a yakın oturur, hutbeyi sessizce dinler ve lağv (boş söz) ile meşgul olmazsa, attığı her adoma karşılık bir yıllık (oruç ve namazla geçen) nafile ibadet sevabı vardır.",
+    "source": "Ebu Davud, Taharet, 127; Tirmizi, Cum’a, 65"
   },
   "dailyWisdom": {
     "title": "Günün Manevi Mesajı",
-    "message": "Hayırlı Cumalar! Kalbinizi dünya meşgalelerinden arındırıp Rabb'inize yönelin; çünkü O, duaları en güzel şekilde kabul eden ve kullarına şah damarından daha yakın olandır."
+    "message": "Müminlerin bayramı olan bu mübarek Cuma gününde, kalbini dünya gürültüsünden arındırıp Sevgili Peygamberimiz'e (s.a.v.) bolca salatü selam getir; Ezan-ı Muhammedî ile birlikte ruhunu huzura, secdesini feraha kavuştur."
   }
 }
