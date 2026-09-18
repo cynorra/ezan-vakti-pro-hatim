@@ -54,20 +54,47 @@ Lütfen mobil "Ezan Vakti + Hatim" uygulaması için bugüne özel, gönüllere 
 }
 `;
 
+async function getAvailableGeminiModels() {
+  try {
+    const listEndpoint = `https://generativelanguage.googleapis.com/v1beta/models?key=${GEMINI_API_KEY}`;
+    const res = await fetch(listEndpoint);
+    if (!res.ok) {
+      console.warn(`⚠️ ListModels başarısız oldu (${res.status}): ${await res.text()}`);
+      return [];
+    }
+    const data = await res.json();
+    if (!data.models || !Array.isArray(data.models)) return [];
+
+    // generateContent destekleyen modelleri filtrele
+    const usableModels = data.models
+      .filter(m => Array.isArray(m.supportedGenerationMethods) && m.supportedGenerationMethods.includes('generateContent'))
+      .map(m => m.name.replace(/^models\//, ''));
+
+    console.log(`📋 Hesabınızda aktif bulunan Gemini modelleri: ${usableModels.join(', ')}`);
+    return usableModels;
+  } catch (e) {
+    console.warn('⚠️ ListModels çağrılırken hata:', e.message);
+    return [];
+  }
+}
+
 async function fetchFromGemini() {
   if (!GEMINI_API_KEY) {
     console.log('GEMINI_API_KEY bulunamadı, yedek içerik üreticisine geçiliyor...');
     return null;
   }
 
-  // Gemini model adayları sırasıyla denenir
-  const modelCandidates = [
+  // Önce API'den hesabın aktif modellerini dinamik olarak çekelim
+  const discoveredModels = await getAvailableGeminiModels();
+
+  // Dinamik modeller + sabit adaylar
+  const modelCandidates = Array.from(new Set([
+    ...discoveredModels,
+    'gemini-2.5-flash',
     'gemini-2.0-flash',
     'gemini-1.5-flash',
-    'gemini-1.5-flash-latest',
-    'gemini-1.5-pro',
-    'gemini-pro'
-  ];
+    'gemini-1.5-pro'
+  ]));
 
   let lastError = null;
 
