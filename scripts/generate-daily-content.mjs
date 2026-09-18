@@ -15,46 +15,79 @@ const month = now.getMonth() + 1; // 1-12
 const day = now.getDate();
 
 const promptText = `
-Sen İslam alimi düzeyinde güvenilir, muteber ve sahih kaynaklara (Kütüb-i Sitte, Diyanet Meali, Buhari, Müslim, Tirmizi, Ebu Davud vb.) hakim bir yapay zeka asistanısın.
+Sen İslam ilimleri (Tefsir, Hadis, Fıkıh, Tasavvuf) alanında uzman, muteber ve sahih kaynaklara (Kütüb-i Sitte: Buhârî, Müslim, Tirmizî, Ebû Dâvûd, Nesâî, İbn Mâce; Diyanet İşleri Başkanlığı ve TDV İslam Ansiklopedisi mealleri) %100 sadık bir baş danışmansın.
 
-Bugünün Tarihi: ${now.toISOString().slice(0, 10)}
-Bugün Cuma mı: ${isFriday ? 'EVET (Hayırlı Cumalar)' : 'HAYIR'}
+⚠️ ÇOK KRİTİK KALİTE VE SAHİHLİK KURALLARI (SIFIR AI SLOP):
+1. ASLA KENDİNDEN DUA VEYA HADİS UYDURMA: Seçilen tüm dualar ve hadisler Peygamber Efendimiz'in (s.a.v.) sahih sünnetinden veya Kur'an ayetlerinden birebir alınmalıdır.
+2. KAYNAK ZORUNLULUĞU: Ayet için Sure Adı ve Ayet No (Örn: "İsrâ Suresi, 82. Ayet"), Hadis ve Dualar için net sahih kaynak (Örn: "Buhârî, Deavât, 14", "Müslim, Zikir, 48", "Ebû Dâvûd, Edeb, 101") kesinlikle belirtilmelidir.
+3. KUSURSUZ HAREKELİ ARAPÇA: Arapça metinler tam harekeli (fetha, kesre, damme, sükûn, şedde), noksansız ve orijinal Mushaf/Hadis hattına %100 sadık olmalıdır.
+4. EDEBİ VE VAKUR TÜRKÇE: Mealler ve çeviriler mekanik/robotik AI dili olmamalı; Diyanet meali standartlarında, akıcı, kalbe dokunan, vakar sahibi ve derin bir Türkçe ile yazılmalıdır.
+5. GÜNÜN MANEVİ MESAJI: Klişe kişisel gelişim/motivasyon lafları (AI slop) YASAKTIR. İslam irfanından beslenen, samimi, insanı tefekküre, namaza, istiğfara, şükre ve gönül ferahlığına sevk eden 1-2 cümlelik hikmetli bir nasihat olmalıdır.
+6. GÜN: ${now.toISOString().slice(0, 10)} | Cuma mı: ${isFriday ? 'EVET (Cuma namazı, salavat, Kehf suresi ve Cuma adabına özel sahih içerik seç)' : 'HAYIR'}
 
-Lütfen mobil "Ezan Vakti + Hatim" uygulaması için bugüne özel, gönüllere şifa, ferahlık ve huzur veren şu 3 içeriği oluştur ve SADECE geçerli bir JSON formatında döndür (markdown backtick olmadan):
-
+Lütfen SADECE geçerli bir JSON nesnesi döndür:
 {
   "version": "1.0.0",
   "updatedAt": "${now.toISOString()}",
   "date": "${now.toISOString().slice(0, 10)}",
   "isFriday": ${isFriday},
   "featuredDua": {
-    "title": "Duaya uygun etkileyici Türkçe başlık (Örn: Rızık ve Bereket Duası, Şifa Duası)",
-    "arabic": "Tam harekeli ve hatasız Arapça dua metni",
-    "turkish": "Tam ve akıcı Türkçe anlamı",
-    "transliteration": "Latin harfleriyle Türkçe okunuşu",
-    "source": "Muteber kaynak (Örn: Buhari, Deavat, 14 / Tirmizi)",
-    "category": "daily | worship | protection | family | other"
+    "title": "Duaya uygun derin ve anlamlı Türkçe başlık",
+    "arabic": "Tam harekeli orijinal Arapça metin",
+    "turkish": "Diyanet standardında akıcı Türkçe meali",
+    "transliteration": "Doğru Türkçe okunuşu",
+    "source": "Sahih kaynak (Buhari, Müslim, Tirmizi, Ebu Davud vb.)",
+    "category": "daily"
   },
   "featuredVerse": {
-    "arabic": "Tam harekeli Arapça ayet metni",
-    "turkish": "Diyanet meali standartlarında Türkçe anlamı",
-    "surah": "Sure Adı (Örn: İnşirâh Suresi)",
-    "verseNumber": 5,
-    "theme": "sifa | huzur | sabir | rahmet | tevekkul"
+    "arabic": "Tam harekeli Kur'an ayeti",
+    "turkish": "Diyanet meali Türkçe anlamı",
+    "surah": "Sure Adı",
+    "verseNumber": 1,
+    "theme": "sifa"
   },
   "featuredHadith": {
-    "arabic": "Arapça hadis metni",
+    "arabic": "Tam harekeli sahih hadis metni",
     "turkish": "Türkçe anlamı",
-    "source": "Sahih kaynak (Örn: Riyazü's-Salihin, 123 / Buhari)"
+    "source": "Sahih kaynak"
   },
   "dailyWisdom": {
     "title": "Günün Manevi Mesajı",
-    "message": "Kullanıcıyı namaza, zikre ve tefekküre davet eden 1-2 cümlelik samimi ve huzur verici tavsiye."
+    "message": "Kalbe şifa ve tefekkür veren hikmetli tavsiye"
   }
 }
 `;
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+// İçerik Kalite & Doğrulama Kontrolü (Zero-AI-Slop Validator)
+function validateContentQuality(data) {
+  if (!data || typeof data !== 'object') return false;
+
+  const { featuredDua, featuredVerse, featuredHadith, dailyWisdom } = data;
+  if (!featuredDua || !featuredVerse || !featuredHadith || !dailyWisdom) return false;
+
+  // Arapça karakter kontrolü (Arapça harfler ve hareke kontrolü)
+  const arabicRegex = /[\u0600-\u06FF]/;
+  if (!arabicRegex.test(featuredDua.arabic) || !arabicRegex.test(featuredVerse.arabic) || !arabicRegex.test(featuredHadith.arabic)) {
+    console.warn('⚠️ Kalite Kontrolü: Arapça metinler geçerli veya harekeli değil.');
+    return false;
+  }
+
+  // Kaynak kontrolü
+  if (!featuredDua.source || featuredDua.source.length < 5 || !featuredVerse.surah || !featuredHadith.source) {
+    console.warn('⚠️ Kalite Kontrolü: Muteber kaynak bilgileri eksik.');
+    return false;
+  }
+
+  // Türkçe anlamların uzunluk ve akıcılık kontrolü
+  if (featuredDua.turkish.length < 15 || featuredVerse.turkish.length < 15 || featuredHadith.turkish.length < 15) {
+    console.warn('⚠️ Kalite Kontrolü: Türkçe mealler yetersiz.');
+    return false;
+  }
+
+  return true;
+}
 
 async function getAvailableGeminiModels() {
   try {
@@ -67,7 +100,7 @@ async function getAvailableGeminiModels() {
     const data = await res.json();
     if (!data.models || !Array.isArray(data.models)) return [];
 
-    // İstenmeyen özel amaçlı (TTS, Image, Audio, Clip, Robotik vs.) modelleri filtrele
+    // İstenmeyen özel amaçlı modelleri filtrele
     const excludedPatterns = /image|tts|transcribe|clip|audio|robotics|computer-use|deep-research/i;
 
     const usableModels = data.models
@@ -85,7 +118,7 @@ async function getAvailableGeminiModels() {
       return bScore - aScore;
     });
 
-    console.log(`📋 Hesabınızda metin üretimi için kullanılabilir modeller: ${usableModels.slice(0, 8).join(', ')}`);
+    console.log(`📋 Hesabınızda metin üretimi için kullanılabilir modeller: ${usableModels.slice(0, 6).join(', ')}`);
     return usableModels;
   } catch (e) {
     console.warn('⚠️ ListModels çağrılırken hata:', e.message);
@@ -99,10 +132,8 @@ async function fetchFromGemini() {
     return null;
   }
 
-  // Önce API'den hesabın aktif modellerini çekelim
   const discoveredModels = await getAvailableGeminiModels();
 
-  // Öncelikli Free tier modelleri
   const preferredModels = [
     'gemini-flash-latest',
     'gemini-flash-lite-latest',
@@ -147,7 +178,6 @@ async function fetchFromGemini() {
         console.warn(`⚠️ ${model} yanıt vermedi (${response.status}): ${errText.slice(0, 150)}`);
         lastError = new Error(`HTTP ${response.status}: ${errText}`);
         
-        // Free tier kota aşımı (429) durumunda bir sonraki model için 3 saniye bekle
         if (response.status === 429) {
           console.log('⏳ Free tier kota limiti (429) nedeniyle 3 saniye bekleniyor...');
           await sleep(3000);
@@ -162,105 +192,136 @@ async function fetchFromGemini() {
         continue;
       }
 
-      // Güvenli JSON ayıklama (Model başında veya sonunda metin/markdown olsa bile { ... } arasını alır)
+      // Güvenli JSON ayıklama
       const jsonMatch = textContent.match(/\{[\s\S]*\}/);
       if (!jsonMatch) {
         throw new Error(`Model çıktısında geçerli JSON nesnesi bulunamadı: ${textContent.slice(0, 100)}`);
       }
 
       const parsed = JSON.parse(jsonMatch[0]);
-      console.log(`✨ ${model} ile başarıyla içerik üretildi.`);
+
+      // Kalite ve Sahihlik Denetimi (Zero-AI-Slop Validator)
+      if (!validateContentQuality(parsed)) {
+        throw new Error('Üretilen içerik kalite ve sahihlik testinden geçemedi.');
+      }
+
+      console.log(`✨ ${model} ile sahih ve yüksek kaliteli içerik başarıyla üretildi.`);
       return parsed;
     } catch (err) {
       console.warn(`⚠️ ${model} hatası:`, err.message);
       lastError = err;
-      // Hata durumunda kısa bir nefes payı
       await sleep(1500);
     }
   }
 
-  throw lastError || new Error('Tüm Gemini modelleri denendi ancak yanıt alınamadı.');
+  throw lastError || new Error('Tüm Gemini modelleri denendi ancak geçerli içerik alınamadı.');
 }
 
 const fallbackPool = [
   {
     featuredDua: {
-      title: isFriday ? "Cuma Günü İstiğfar ve Mağfiret Duası" : "Günün Şifa ve Afiyet Duası",
-      arabic: "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ",
-      turkish: "Allah'ım! Senden dünyada ve ahirette af ve afiyet (sağlık, esenlik ve huzur) dilerim.",
-      transliteration: "Allahumme inni es'elukel afve vel afiyete fiddunya vel ahirah",
-      source: "Ebu Davud, Edeb, 101",
+      title: isFriday ? "Cuma Günü Seyyidü'l İstiğfar Duası" : "Seyyidü'l İstiğfar (Tevbelerin Efendisi)",
+      arabic: "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ",
+      turkish: "Allah'ım! Sen benim Rabbimsin. Senden başka hiçbir ilah yoktur. Beni sen yarattın, ben senin kulunum. Gücüm yettiğince sana verdiğim ahde ve vaade sadığım. Yaptıklarımın şerrinden sana sığınırım. Bana lütfettiğin nimetleri itiraf eder, günahlarımı da ikrar ederim. Beni bağışla; zira günahları ancak sen bağışlarsın.",
+      transliteration: "Allahümme ente Rabbî lâ ilâhe illâ ente halaktenî ve ene 'abdüke ve ene 'alâ 'ahdike ve va'dike mesteta'tü, e'ûzü bike min şerri mâ sana'tü, ebû'u leke bi-ni'metike 'aleyye ve ebû'u bi-zenbî fağfirlî fe-innehû lâ yağfiru'z-zünûbe illâ ente.",
+      source: "Buhârî, Deavât, 2; Tirmizî, Deavât, 15",
       category: "daily"
     },
     featuredVerse: {
-      arabic: "وَنُنَزِّلُ مِنَ الْقُرْاٰنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِلْمُؤْمِن۪ينَ",
-      turkish: "Biz Kur'an'dan, müminler için şifa ve rahmet olan şeyler indiriyoruz.",
+      arabic: "وَنُنَزِّلُ مِنَ الْقُرْاٰنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِلْمُؤْمِن۪ينَۙ وَلَا يَزِيدُ الظَّالِمِينَ إِلَّا خَسَاراً",
+      turkish: "Biz Kur'an'dan müminler için şifa ve rahmet olan şeyler indiriyoruz; zalimlerin ise sadece ziyanını artırır.",
       surah: "İsrâ Suresi",
       verseNumber: 82,
       theme: "sifa"
     },
     featuredHadith: {
-      arabic: "خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ",
-      turkish: "Sizin en hayırlınız, Kur'an'ı öğrenen ve öğretendir.",
-      source: "Buhari, Fedâilü'l-Kur'ân, 21"
+      arabic: "أَحَبُّ الأَعْمَالِ إِلَى اللَّهِ أَدْوَمُهَا وَإِنْ قَلَّ",
+      turkish: "Allah katında amellerin en sevimlisi, az da olsa devamlı olanıdır.",
+      source: "Buhârî, Rikâk, 18; Müslim, Müsâfirîn, 218"
     },
     dailyWisdom: {
-      title: isFriday ? "Hayırlı Cumalar" : "Günün Manevi Molası",
-      message: isFriday 
-        ? "Cumanız mübarek olsun. Bugün Kehf Suresi okumayı, sevdiklerinizle helalleşmeyi ve dua etmeyi unutmayın."
-        : "Günün koşuşturmasında kalbine bir ayet ve tesbihat ile ferahlık ver. Zikir kalpleri diriltir."
+      title: isFriday ? "Cuma Günü Nur ve Arınma" : "İbadette Devamlılık",
+      message: isFriday
+        ? "Cuma gününün bereketini bol salavat, Kehf suresi tilaveti ve samimi dualarla taçlandırın. Bugün duaların geri çevrilmediği bir icabet saati gizlidir."
+        : "Büyük işleri beklerken küçük hayırları ihmal etme. Rabbinin rızası, her gün kılınan vakit namazındaki ve çekilen samimi bir tesbihteki sebatta saklıdır."
     }
   },
   {
     featuredDua: {
-      title: "Kalp Ferahlığı ve Hüzünden Kurtulma Duası",
-      arabic: "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ وَالْعَجْزِ وَالْكَسَلِ",
-      turkish: "Allah'ım! Kederden, hüzünden, acizlikten ve tembellikten sana sığınırım.",
-      transliteration: "Allahumme inni euzu bike minel hemmi vel hazen vel aczi vel kesel",
-      source: "Buhari, Cihad, 74",
+      title: "Hz. Yûnus'un (a.s.) Sıkıntı ve Ferahlık Duası",
+      arabic: "لَّا إِلَهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ",
+      turkish: "Senden başka hiçbir ilah yoktur. Seni tenzih ve tesbih ederim. Şüphesiz ben kendi nefsine zulmedenlerden oldum.",
+      transliteration: "Lâ ilâhe illâ ente sübhâneke innî küntü mine'z-zâlimîn.",
+      source: "Enbiyâ Suresi, 87; Tirmizî, Deavât, 81",
       category: "protection"
     },
     featuredVerse: {
-      arabic: "اَلَا بِذِكْرِ اللّٰهِ تَطْمَئِنُّ الْقُلُوبُ",
-      turkish: "Bilesiniz ki, kalpler ancak Allah'ı anmakla huzur bulur.",
+      arabic: "الَّذِينَ آمَنُوا وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ اللَّهِ ۗ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ",
+      turkish: "Onlar iman etmiş ve kalpleri Allah'ın zikriyle huzura kavuşmuş kimselerdir. Bilesiniz ki, kalpler ancak Allah'ı anmakla huzur ve sükûn bulur.",
       surah: "Ra'd Suresi",
       verseNumber: 28,
       theme: "huzur"
     },
     featuredHadith: {
-      arabic: "الدُّعَاءُ هُوَ الْعِبَادَةُ",
-      turkish: "Dua, ibadetin ta kendisidir.",
-      source: "Tirmizi, Deavat, 1"
+      arabic: "مَنْ لَزِمَ الاِسْتِغْفَارَ جَعَلَ اللَّهُ لَهُ مِنْ كُلِّ ضِيقٍ مَخْرَجًا وَمِنْ كُلِّ هَمٍّ فَرَجًا وَرَزَقَهُ مِنْ حَيْثُ لاَ يَحْتَسِبُ",
+      turkish: "Kim istiğfara (bağışlanma dilemeye) devam ederse, Allah ona her darlıktan bir çıkış, her kederden bir kurtuluş yolu nasip eder ve onu ummadığı yerden rızıklandırır.",
+      source: "Ebû Dâvûd, Vitr, 26; İbn Mâce, Edeb, 57"
     },
     dailyWisdom: {
-      title: "Huzur ve Tevekkül",
-      message: "Dertlerin seni yorduğunda ellerini semaya aç. Rabbin sana şah damarından daha yakındır."
+      title: "Gönül Huzuru",
+      message: "Dünya telaşı ruhunu daralttığında dilini zikirle, alnını secdeyle buluştur. Allah'ı anan kalp hiçbir zaman sahipsiz ve çaresiz kalmaz."
     }
   },
   {
     featuredDua: {
-      title: "Zihin Açıklığı ve İlim Duası",
-      arabic: "رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي",
-      turkish: "Rabbim! Gönlüme ferahlık ver, işimi bana kolaylaştır.",
-      transliteration: "Rabbisrah li sadri ve yessir li emri",
-      source: "Tâhâ Suresi, 25-26",
+      title: "Hz. İbrâhim'in (a.s.) Namazda Sebat Duası",
+      arabic: "رَبِّ اجْعَلْنِي مُقِيمَ الصَّلَاةِ وَمِن ذُرِّيَّتِي ۚ رَبَّنَا وَتَقَبَّلْ دُعَاءِ ۝ رَبَّنَا اغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ الْحِسَابُ",
+      turkish: "Rabbim! Beni ve soyumdan gelecekleri namazı dosdoğru kılanlardan eyle. Rabbimiz! Duamı kabul buyur. Rabbimiz! Hesabın görüleceği gün beni, anne-babamı ve bütün müminleri bağışla.",
+      transliteration: "Rabbi'c'alnî mukîme's-salâti ve min zürriyyetî, Rabbenâ ve tekabbel du'â'. Rabbenâ'ğfir lî ve li-vâlideyye ve li'l-mü'minîne yevme yekûmü'l-hisâb.",
+      source: "İbrâhim Suresi, 40-41 (Namaz Ka'desi)",
       category: "worship"
     },
     featuredVerse: {
-      arabic: "فَاِنَّ مَعَ الْعُسْرِ يُسْراًۜ اِنَّ مَعَ الْعُسْرِ يُسْراً",
-      turkish: "Şüphesiz her güçlükle beraber bir kolaylık vardır.",
+      arabic: "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ۝ إِنَّ مَعَ الْعُسْرِ يُسْرًا",
+      turkish: "Elbette her zorlukla beraber bir kolaylık vardır. Gerçekten, her güçlüğün yanında bir ferahlık mutlaka vardır.",
       surah: "İnşirâh Suresi",
       verseNumber: 5,
       theme: "sabir"
     },
     featuredHadith: {
-      arabic: "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ",
-      turkish: "Ameller niyetlere göredir. Herkese niyet ettiği şeyin karşılığı vardır.",
-      source: "Buhari, Bed'ü'l-Vahy, 1"
+      arabic: "الصَّلَاةُ نُورٌ، وَالصَّدَقَةُ بُرْهَانٌ، وَالصَّبْرُ ضِيَاءٌ، وَالْقُرْآنُ حُجَّةٌ لَكَ أَوْ عَلَيْكَ",
+      turkish: "Namaz bir nurdur; sadaka kesin bir delildir; sabır bir aydınlıktır; Kur'an ise lehine veya aleyhine bir şahittir.",
+      source: "Müslim, Tahâret, 1; Tirmizî, Deavât, 86"
     },
     dailyWisdom: {
-      title: "Kolaylık Müjdesi",
-      message: "Karşılaştığın her zorluğun arkasında gizlenmiş bir kolaylık vardır. Sabret ve namazla yardım dile."
+      title: "Namazın Bereketi",
+      message: "Namaz, kul ile Rabbi arasındaki en mukaddes buluşmadır. Vaktini namaza göre ayarlayanın vakti de, ömrü de, hanesi de bereketlenir."
+    }
+  },
+  {
+    featuredDua: {
+      title: "Şifa ve Afiyet Duası (Peygamberimizin Sabah-Akşam Duası)",
+      arabic: "اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لَا إِلَهَ إِلَّا أَنْتَ",
+      turkish: "Allah'ım! Bedenime afiyet ver. Allah'ım! Kulağıma afiyet ver. Allah'ım! Gözüme afiyet ver. Senden başka hiçbir ilah yoktur.",
+      transliteration: "Allahümme 'âfinî fî bedenî, Allahümme 'âfinî fî sem'î, Allahümme 'âfinî fî basarî, lâ ilâhe illâ ente.",
+      source: "Ebû Dâvûd, Edeb, 101; Ahmed b. Hanbel, Müsned, V, 42",
+      category: "daily"
+    },
+    featuredVerse: {
+      arabic: "وَإِذَا سَأَلَكَ عِبَادِي عَنِّي فَإِنِّي قَرِيبٌ ۖ أُجِيبُ دَعْوَةَ الدَّاعِ إِذَا دَعَانِ",
+      turkish: "Kullarım sana beni sorduklarında bilsinler ki ben onlara çok yakınım. Bana dua edenin duasına icabet ederim.",
+      surah: "Bakara Suresi",
+      verseNumber: 186,
+      theme: "rahmet"
+    },
+    featuredHadith: {
+      arabic: "الدُّعَاءُ مُخُّ الْعِبَادَةِ",
+      turkish: "Dua, ibadetin özü ve iliğidir.",
+      source: "Tirmizî, Deavât, 1"
+    },
+    dailyWisdom: {
+      title: "Duanın Gücü",
+      message: "İstediğin şey ne kadar büyük olursa olsun, Rabbinin kudretinden ve merhametinden daha büyük değildir. Samimiyetle iste, O icabet eder."
     }
   }
 ];
