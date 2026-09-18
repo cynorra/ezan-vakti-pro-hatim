@@ -1,4 +1,4 @@
-﻿import fs from 'fs';
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -60,37 +60,72 @@ async function fetchFromGemini() {
     return null;
   }
 
-  const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+  // Gemini model adayları sırasıyla denenir
+  const modelCandidates = [
+    'gemini-2.0-flash',
+    'gemini-1.5-flash',
+    'gemini-1.5-flash-latest',
+    'gemini-1.5-pro',
+    'gemini-pro'
+  ];
 
-  const requestBody = {
-    contents: [
-      {
-        parts: [{ text: promptText }]
+  let lastError = null;
+
+  for (const model of modelCandidates) {
+    try {
+      console.log(`🤖 Model deneniyor: ${model}...`);
+      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${GEMINI_API_KEY}`;
+
+      const requestBody = {
+        contents: [
+          {
+            parts: [{ text: promptText }]
+          }
+        ],
+        generationConfig: {
+          temperature: 0.7,
+          maxOutputTokens: 1000
+        }
+      };
+
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(requestBody),
+      });
+
+      if (!response.ok) {
+        const errText = await response.text();
+        console.warn(`⚠️ ${model} yanıt vermedi (${response.status}): ${errText.slice(0, 150)}`);
+        lastError = new Error(`HTTP ${response.status}: ${errText}`);
+        continue;
       }
-    ],
-    generationConfig: {
-      temperature: 0.7,
-      maxOutputTokens: 1000,
-      responseMimeType: "application/json"
+
+      const json = await response.json();
+      const textContent = json?.candidates?.[0]?.content?.parts?.[0]?.text;
+      if (!textContent) {
+        console.warn(`⚠️ ${model} boş yanıt döndü.`);
+        continue;
+      }
+
+      // Markdown backtick temizleme
+      let cleanText = textContent.trim();
+      if (cleanText.startsWith('```json')) {
+        cleanText = cleanText.replace(/^```json\s*/i, '').replace(/```$/, '').trim();
+      } else if (cleanText.startsWith('```')) {
+        cleanText = cleanText.replace(/^```\s*/, '').replace(/```$/, '').trim();
+      }
+
+      const parsed = JSON.parse(cleanText);
+      console.log(`✨ ${model} ile başarıyla içerik üretildi.`);
+      return parsed;
+    } catch (err) {
+      console.warn(`⚠️ ${model} hatası:`, err.message);
+      lastError = err;
     }
-  };
-
-  const response = await fetch(endpoint, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(requestBody),
-  });
-
-  if (!response.ok) {
-    throw new Error(`Gemini API Error: ${response.status} ${response.statusText}`);
   }
 
-  const json = await response.json();
-  const textContent = json?.candidates?.[0]?.content?.parts?.[0]?.text;
-  if (!textContent) throw new Error('Boş Gemini yanıtı');
-
-  // JSON parse
-  return JSON.parse(textContent.trim());
+  throw lastError || new Error('Tüm Gemini modelleri denendi ancak yanıt alınamadı.');
 }
 
 const fallbackPool = [
