@@ -2,6 +2,7 @@ import * as Notifications from 'expo-notifications';
 import { Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getDailyDua } from './data/duas';
+import { getDailyHealingVerse } from './data/quran-verses';
 import { getCurrentStreak } from './streak';
 import i18n from './i18n';
 
@@ -232,6 +233,41 @@ export async function scheduleDailyDuaReminders() {
   }
 }
 
+const DAILY_VERSE_PREFIX = 'daily-verse-';
+const DAILY_VERSE_HOUR = 16;
+const DAILY_VERSE_MINUTE = 30;
+
+export async function scheduleDailyVerseReminders() {
+  if (Platform.OS === 'web') return;
+
+  const scheduled = await Notifications.getAllScheduledNotificationsAsync();
+  await Promise.all(
+    scheduled
+      .filter((n) => n.identifier.startsWith(DAILY_VERSE_PREFIX))
+      .map((n) => Notifications.cancelScheduledNotificationAsync(n.identifier))
+  );
+
+  const now = new Date();
+  for (let i = 0; i < DAILY_DUA_WINDOW_DAYS; i++) {
+    const targetDate = new Date(now);
+    targetDate.setDate(now.getDate() + i);
+    targetDate.setHours(DAILY_VERSE_HOUR, DAILY_VERSE_MINUTE, 0, 0);
+    if (targetDate.getTime() <= now.getTime()) continue;
+
+    const verse = getDailyHealingVerse(targetDate);
+    await Notifications.scheduleNotificationAsync({
+      identifier: `${DAILY_VERSE_PREFIX}${targetDate.toISOString().slice(0, 10)}`,
+      content: {
+        title: i18n.t('notifications.verseTitle') || '📖 Şifa & Huzur Ayeti',
+        body: `"${verse.turkish}" — ${verse.surah}, ${verse.verseNumber} ✨`,
+        sound: true,
+        data: { screen: 'home', verseId: verse.id },
+      },
+      trigger: { type: Notifications.SchedulableTriggerInputTypes.DATE, date: targetDate } as any,
+    });
+  }
+}
+
 function getWeekStartISO(date = new Date()) {
   const d = new Date(date);
   const dayOfWeek = d.getDay();
@@ -368,6 +404,7 @@ export async function scheduleAllPrayers(prayerTimes: any, city: string) {
   }
 
   await scheduleDailyDuaReminders();
+  await scheduleDailyVerseReminders();
   await scheduleMiddayInspirationReminder();
   await scheduleEveningEngagementReminder();
   await scheduleFridayReminder();

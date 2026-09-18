@@ -129,6 +129,7 @@
   "notifications": {
     "dailyDuaTitle": "🤲 Günün Şifa ve Huzur Duası",
     "dailyDuaBody": "{{title}} — Güne huzurla başlamak ve anlamını okumak için dokun ✨",
+    "verseTitle": "📖 Şifa & Huzur Ayeti",
     "middayTitle": "✨ Manevi Mola & Zikir",
     "middayBody": "Günün koşuşturmasında kalbine ferahlık ver. Bir dua ve tesbihat için dokun 📿",
     "fridayTitle": "🕌 Hayırlı Cumalar",
