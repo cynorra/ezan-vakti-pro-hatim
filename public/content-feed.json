@@ -1,1 +1,30 @@
-null
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-09-18T18:16:31.654Z",
+  "date": "2026-09-18",
+  "isFriday": true,
+  "featuredDua": {
+    "title": "Zihin Açıklığı ve İlim Duası",
+    "arabic": "رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي",
+    "turkish": "Rabbim! Gönlüme ferahlık ver, işimi bana kolaylaştır.",
+    "transliteration": "Rabbisrah li sadri ve yessir li emri",
+    "source": "Tâhâ Suresi, 25-26",
+    "category": "worship"
+  },
+  "featuredVerse": {
+    "arabic": "فَاِنَّ مَعَ الْعُسْرِ يُسْراًۜ اِنَّ مَعَ الْعُسْرِ يُسْراً",
+    "turkish": "Şüphesiz her güçlükle beraber bir kolaylık vardır.",
+    "surah": "İnşirâh Suresi",
+    "verseNumber": 5,
+    "theme": "sabir"
+  },
+  "featuredHadith": {
+    "arabic": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ",
+    "turkish": "Ameller niyetlere göredir. Herkese niyet ettiği şeyin karşılığı vardır.",
+    "source": "Buhari, Bed'ü'l-Vahy, 1"
+  },
+  "dailyWisdom": {
+    "title": "Kolaylık Müjdesi",
+    "message": "Karşılaştığın her zorluğun arkasında gizlenmiş bir kolaylık vardır. Sabret ve namazla yardım dile."
+  }
+}
