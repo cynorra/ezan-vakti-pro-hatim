@@ -64,7 +64,7 @@ const esData = {
 
 // Portekizce temel şablon
 const ptData = {
-  title: 'Horários de Oração: Azan e Alcorão',
+  title: 'Oração & Azan: Alcorão, Qibla',
   shortDescription: 'Horários de oração muçulmana precisos, alarme azan, khatam do Alcorão e qibla.',
   fullDescription: `🕌 Horários de Oração Pro: Horários Precisos, Azan, Khatam do Alcorão e Qibla
 
@@ -104,7 +104,7 @@ const exactMatchTranslations = {
   },
   'ar': {
     title: 'أوقات الصلاة: الأذان والختمة',
-    shortDescription: 'أوقات الصلاة الدقيقة، تنبيهات الأذان، ختمة القرآن الجماعية، بوصلة القبلة والتسبيح.',
+    shortDescription: 'مواقيت صلاة دقيقة، تنبيه الأذان، ختمة القرآن الجماعية، قبلة وتسبيح.',
     fullDescription: `🕌 أوقات الصلاة برو: مواقيت الصلاة الدقيقة، الأذان، ختمة القرآن الكريم الجماعية، القبلة والتسبيح\n\n📖 ختمة القرآن الكريم الجماعية ومشاركة الأجزاء عبر واتساب\n⏰ مواقيت صلاة دقيقة وتنبيهات الأذان (يعمل 100% دون إنترنت)\n🧭 بوصلة القبلة الدقيقة نحو الكعبة المشرفة\n📿 المسبحة الإلكترونية الذكية وأذكار المسلم\n🤲 أدعية يومية وآيات قرآنية مباركة مع بطاقات للمشاركة\n📊 سجل قضاء الصلوات والصيام\n\nحمل التطبيق مجاناً الآن!`
   },
   'az-AZ': {
@@ -128,13 +128,13 @@ const exactMatchTranslations = {
     fullDescription: `🕌 নামাজের সময়সূচি প্রো: নির্ভুল নামাজের সময়, আজান এলার্ম, গ্রুপ কোরআন খতম ও কিবলা\n\n📖 গ্রুপ কোরআন খতম ও ৩০ পারা বণ্টন (হোয়াটসঅ্যাপে)\n⏰ সঠিক নামাজের সময়সূচি ও আজান এলার্ম (১০০% অফলাইন)\n🧭 সঠিক কিবলা কম্পাস (কাবার দিক)\n📿 ডিজিটাল স্মার্ট তাসবিহ কাউন্টার\n🤲 দৈনন্দিন দোয়া ও সহিহ হাদিস\n\nএখনই বিনামূল্যে ডাউনলোড করুন!`
   },
   'ca': {
-    title: 'Hores de Pregària: Athan & Alcorà',
+    title: 'Hores de Pregària: Athan',
     shortDescription: 'Horaris de pregària musulmana precisos, alarma athan, khatam de l\'Alcorà i alquibla.',
     fullDescription: `🕌 Hores de Pregària Pro: Horaris Precisos, Athan, Khatam de l\'Alcorà i Alquibla\n\n📖 KHATAM DE L\'ALCORÀ EN GRUP (30 JUZ PER WHATSAPP)\n⏰ HORARIS DE PREGÀRIA PRECISOS I ALARMA ATHAN (100% Offline)\n🧭 BRÚIXOLA DE L\'ALQUIBLA PRECISA\n📿 TASBIH DIGITAL\n\nDescarregueu-vos-el gratis ara!`
   },
   'cs-CZ': {
     title: 'Čas Modlitby: Azán & Korán Pro',
-    shortDescription: 'Přesný čas islámské modlitby, azán alarm, skupinový khatam Koránu, qibla a tasbíh.',
+    shortDescription: 'Přesný čas modlitby, azán alarm, skupinový khatam Koránu, qibla a tasbíh.',
     fullDescription: `🕌 Čas Modlitby Pro: Přesné Časy Modliteb, Azán, Khatam Koránu a Qibla\n\n📖 SKUPINOVÝ KHATAM KORÁNU (30 DŽUZ PŘES WHATSAPP)\n⏰ PŘESNÉ ČASY MODLITEB A AZÁN (100% Offline)\n🧭 PŘESNÝ KOMPAS QIBLA\n📿 DIGITÁLNÍ TASBÍH\n\nStáhněte si zdarma nyní!`
   },
   'da-DK': {
@@ -149,7 +149,7 @@ const exactMatchTranslations = {
   },
   'el-GR': {
     title: 'Ώρες Προσευχής: Αζάν & Κοράνι',
-    shortDescription: 'Ακριβείς ώρες μουσουλμανικής προσευχής, αζάν, ανάγνωση Κορανίου, κίμπλα και τασμπίχ.',
+    shortDescription: 'Ακριβείς ώρες προσευχής, αζάν, ανάγνωση Κορανίου, κίμπλα και τασμπίχ.',
     fullDescription: `🕌 Ώρες Προσευχής Pro: Ακριβείς Ώρες Προσευχής, Αζάν, Χατάμ Κορανίου και Κίμπλα\n\n📖 ΟΜΑΔΙΚΟ ΧΑΤΑΜ ΚΟΡΑΝΙΟΥ (30 ΤΖΟΥΖ ΜΕΣΩ WHATSAPP)\n⏰ ΑΚΡΙΒΕΙΣ ΩΡΕΣ ΠΡΟΣΕΥΧΗΣ & ΑΖΑΝ (100% Εκτός σύνδεσης)\n🧭 ΑΚΡΙΒΗΣ ΠΥΞΙΔΑ ΚΙΜΠΛΑ\n📿 ΨΗΦΙΑΚΟ ΤΑΣΜΠΙΧ\n\nΚατεβάστε δωρεάν τώρα!`
   },
   'en-AU': enData,
@@ -193,17 +193,17 @@ const exactMatchTranslations = {
   },
   'fi-FI': {
     title: 'Rukousajat: Azan & Koraani Pro',
-    shortDescription: 'Tarkat muslimien rukousajat, azan-hälytys, Koraanin yhteisluenta, qibla ja tasbih.',
+    shortDescription: 'Tarkat rukousajat, azan-hälytys, Koraanin yhteisluenta, qibla ja tasbih.',
     fullDescription: `🕌 Rukousajat Pro: Tarkat Rukousajat, Azan, Koraanin Khatam ja Qibla\n\n📖 KORAANIN KHATAM RYHMÄSSÄ (30 JUZ WHATSAPISSA)\n⏰ TARKAT RUKOUSAJAT JA AZAN (100% Offline)\n🧭 TARKKA QIBLA-KOMPASSI\n📿 DIGITAALINEN TASBIH\n\nLataa ilmaiseksi nyt!`
   },
   'fil': {
-    title: 'Oras ng Pagdarasal: Athan & Quran',
-    shortDescription: 'Tumpak na oras ng dasal ng Muslim, alarma ng athan, khatam ng Quran, qibla at tasbih.',
+    title: 'Oras ng Dasal: Athan & Quran',
+    shortDescription: 'Tumpak na oras ng dasal, alarma ng athan, khatam ng Quran, qibla at tasbih.',
     fullDescription: `🕌 Oras ng Pagdarasal Pro: Tumpak na Oras ng Dasal, Athan, Khatam ng Quran at Qibla\n\n📖 PANGKATANG KHATAM NG QURAN (IBAHAGI ANG 30 JUZ SA WHATSAPP)\n⏰ TUMPAK NA ORAS NG PAGDARASAL AT ALARMA NG ATHAN (100% Offline)\n🧭 TUMPAK NA KUMPAS NG QIBLA PATUNGO SA MECCA\n📿 SMART DIGITAL TASBIH NA MAY VIBRATION\n🤲 PANG-ARAW-ARAW NA DUA AT MGA TALATA NG QURAN\n\nI-download nang libre ngayon!`
   },
   'fr-CA': {
-    title: 'Heures de Prière: Athan & Coran',
-    shortDescription: 'Heures de prière précises, alarme athan, khatam du Coran en groupe, qibla & tasbih.',
+    title: 'Heures Prière: Athan & Coran',
+    shortDescription: 'Heures de prière précises, alarme athan, khatam du Coran, qibla et tasbih.',
     fullDescription: `🕌 Heures de Prière Pro: Horaires Précis, Alarme Athan, Khatam du Coran en Groupe, Qibla & Tasbih\n\n📖 KHATAM DU CORAN EN GROUPE VIA WHATSAPP (30 JUZ)\n⏰ HORAIRES DE PRIÈRE PRÉCIS & ALARME ATHAN (100% Hors-ligne)\n🧭 BOUSSOLE DE LA QIBLA PRÉCISE\n📿 TASBIH NUMÉRIQUE INTELLIGENT\n\nTéléchargez gratuitement maintenant !`
   },
   'fr-FR': {
@@ -238,12 +238,12 @@ const exactMatchTranslations = {
   },
   'hy-AM': {
     title: 'Աղոթքի Ժամեր: Ազան & Ղուրան',
-    shortDescription: 'Մահմեդական աղոթքի ճշգրիտ ժամեր, ազանի ահազանգ, Ղուրանի ընթերցում, քիբլա և թասբիհ:',
+    shortDescription: 'Աղոթքի ճշգրիտ ժամեր, ազանի ահազանգ, Ղուրանի ընթերցում, քիբլա և թասբիհ:',
     fullDescription: `🕌 Աղոթքի Ժամեր Pro: Ճշգրիտ Աղոթքի Ժամեր, Ազան, Ղուրան և Քիբլա\n\n📖 ՂՈՒՐԱՆԻ ԽԱԹՄ ԽՄԲՈՎ (30 ՋՈՒԶ WHATSAPP-ՈՎ)\n⏰ ՃՇԳՐԻՏ ԱՂՈԹՔԻ ԺԱՄԵՐ ԵՎ ԱԶԱՆ (100% Օֆլայն)\n🧭 ՔԻԲԼԱՅԻ ԿՈՂՄՆԱՑՈՒՅՑ\n📿 ԹՎԱՅԻՆ ԹԱՍԲԻՀ\n\nՆերբեռնեք անվճար հիմա!`
   },
   'id': {
     title: 'Jadwal Sholat: Adzan & Khatam',
-    shortDescription: 'Jadwal sholat akurat, alarm adzan, khataman Quran bersama, kiblat & tasbih digital.',
+    shortDescription: 'Jadwal sholat akurat, alarm adzan, khatam Quran bersama, kiblat & tasbih.',
     fullDescription: `🕌 Jadwal Sholat Pro: Waktu Sholat Akurat, Alarm Adzan, Khatam Quran Bersama, Arah Kiblat & Tasbih Digital\n\n📖 KHATAMAN QURAN BERSAMA & BAGI JUZ LEWAT WHATSAPP\n⏰ WAKTU SHOLAT AKURAT & ALARM ADZAN (100% Offline)\n🧭 KOMPAS KIBLAT AKURAT KE ARAH KA'BAH\n📿 TASBIH DIGITAL PINTAR DENGAN GETARAN TAKTIL\n🤲 DOA HARIAN & AYAT SHAHIH BERGAMBAR\n📊 PENCATAT SHOLAT & PUASA QADHA\n\nUnduh sekarang gratis!`
   },
   'is-IS': {
@@ -252,7 +252,7 @@ const exactMatchTranslations = {
     fullDescription: `🕌 Bænastundir Pro: Nákvæmar Bænastundir, Athan, Kóraninn Khatam og Qibla\n\n📖 KÓRANINN KHATAM Í HÓPI (30 JUZ Í GEGNUM WHATSAPP)\n⏰ NÁKVÆMAR BÆNASTUNDIR OG ATHAN (100% Ótengt)\n🧭 NÁKVÆR QIBLA ÁTTAVITI\n📿 STAFRÆNT TASBIH\n\nSæktu ókeypis núna!`
   },
   'it-IT': {
-    title: 'Orari di Preghiera: Adhan & Corano',
+    title: 'Orari Preghiera: Adhan, Corano',
     shortDescription: 'Orari di preghiera islamica precisi, allarme adhan, khatam del Corano e qibla.',
     fullDescription: `🕌 Orari di Preghiera Pro: Orari Precisi, Adhan, Khatam del Corano in Gruppo e Qibla\n\n📖 KHATAM DEL CORANO IN GRUPPO (30 JUZ SU WHATSAPP)\n⏰ ORARI DI PREGHIERA PRECISI E ALLARME ADHAN (100% Offline)\n🧭 BUSSOLA DELLA QIBLA ACCURATA\n📿 TASBIH DIGITALE CON VIBRAZIONE\n\nScarica ora gratuitamente!`
   },
@@ -277,7 +277,7 @@ const exactMatchTranslations = {
     fullDescription: `🕌 Намаз Уақыты Про: Дәл намаз кестесі, Азан, Құран хатым тобы, Құбыла және Тәспі\n\n📖 ТОПТЫҚ ҚҰРАН ХАТЫМ ЖӘНЕ 30 ПАРА БӨЛУ (WHATSAPP)\n⏰ ДӘЛ НАМАЗ УАҚЫТТАРЫ ЖӘНЕ АЗАН ДАБЫЛЫ (Офлайн)\n🧭 ҚҰБЫЛА КОМПАСЫ\n📿 ЫҢҒАЙЛЫ ЦИФРЛЫҚ ТӘСПІ\n🤲 КҮНДЕЛІКТІ ДҰҒАЛАР МЕН АЯТТАР\n\nҚазір тегін жүктеп алыңыз!`
   },
   'km-KH': {
-    title: 'ម៉ោងសឡាត: អាហ្សាន & គម្ពីរគួរអាន',
+    title: 'ម៉ោងសឡាត: អាហ្សាន & គួរអាន',
     shortDescription: 'ម៉ោងសឡាតត្រឹមត្រូវ សំឡេងអាហ្សាន ខាត់តាំគួរអានរួមគ្នា ត្រីវិស័យគីបឡា និងតាសប៊ី។',
     fullDescription: `🕌 ម៉ោងសឡាត Pro: ម៉ោងសឡាតត្រឹមត្រូវ សំឡេងអាហ្សាន ខាត់តាំគួរអាន និងគីបឡា\n\n📖 ខាត់តាំគួរអានជាក្រុម (ចែករំលែក 30 ជុសតាម WhatsApp)\n⏰ ម៉ោងសឡាតច្បាស់លាស់ (100% Offline)\n🧭 ត្រីវិស័យគីបឡា\n📿 តាសប៊ីឌីជីថល\n\nទាញយកដោយឥតគិតថ្លៃឥឡូវនេះ!`
   },
@@ -302,13 +302,13 @@ const exactMatchTranslations = {
     fullDescription: `🕌 ເວລາລະຫມາດ Pro: ເວລາລະຫມາດທີ່ຖືກຕ້ອງ, ອາຊານ, ຄາທໍາກຸຣອານ ແລະ ກິບລາ\n\n📖 ອ່ານກຸຣອານເປັນກຸ່ມ (ແບ່ງ 30 ຢຸສຜ່ານ WhatsApp)\n⏰ ເວລາລະຫມາດທີ່ຖືກຕ້ອງ (100% Offline)\n🧭 ເຂັມທິດກິບລາ\n📿 ທັສບີດິຈິຕອນ\n\nດາວໂຫລດຟຣີດຽວນີ້!`
   },
   'lt': {
-    title: 'Maldos Laikas: Azanas & Koranas',
-    shortDescription: 'Tikslus musulmonų maldos laikas, azano signalas, Korano skaitymas, qibla ir tasbih.',
+    title: 'Maldos Laikas: Azanas, Koranas',
+    shortDescription: 'Tikslus maldos laikas, azano signalas, Korano skaitymas, qibla ir tasbih.',
     fullDescription: `🕌 Maldos Laikas Pro: Tikslus Maldos Laikas, Azanas, Korano Khatamas ir Qibla\n\n📖 KORANO KHATAMAS GRUPĖJE (30 DŽUZ PER WHATSAPP)\n⏰ TIKSLUS MALDOS LAIKAS IR AZANAS (100% Neprisijungus)\n🧭 TIKSLUS QIBLA KOMPASAS\n📿 SKAITMENINIS TASBIH\n\nAtsisiųskite nemokamai dabar!`
   },
   'lv': {
     title: 'Lūgšanu Laiki: Azans & Korāns',
-    shortDescription: 'Precīzi musulmaņu lūgšanu laiki, azana modinātājs, Korāna lasīšana, qibla un tasbih.',
+    shortDescription: 'Precīzi lūgšanu laiki, azana modinātājs, Korāna lasīšana, qibla un tasbih.',
     fullDescription: `🕌 Lūgšanu Laiki Pro: Precīzi Lūgšanu Laiki, Azans, Korāna Khatam un Qibla\n\n📖 KORĀNA KHATAM GRUPĀ (30 DŽUZ CAUR WHATSAPP)\n⏰ PRECĪZI LŪGŠANU LAIKI UN AZANS (100% Bezsaistē)\n🧭 PRECĪZS QIBLA KOMPASS\n📿 DIGITĀLAIS TASBIH\n\nLejupielādējiet bez maksas tūlīt!`
   },
   'mk-MK': {
@@ -323,7 +323,7 @@ const exactMatchTranslations = {
   },
   'mn-MN': {
     title: 'Залбирлын Цаг: Азан & Коран',
-    shortDescription: 'Мусульман шашны залбирлын цаг, азан дохиолол, Коран судар унших, кибла болон тасбих.',
+    shortDescription: 'Залбирлын цаг, азан дохиолол, Коран судар унших, кибла болон тасбих.',
     fullDescription: `🕌 Залбирлын Цаг Pro: Залбирлын Нарийн Цаг, Азан, Коран Хатм ба Кибла\n\n📖 БҮЛГИЙН КОРАН ХАТМ (WHATSAPP-ААР 30 ЖУЗ ХУВААЛЦАХ)\n⏰ ЗАЛБИРЛЫН ЦАГ БА АЗАН (100% Офлайн)\n🧭 КИБЛА ЛУУЖИН\n📿 ДИЖИТАЛ ТАСБИХ\n\nОдоо үнэгүй татаж аваарай!`
   },
   'mr-IN': {
@@ -358,7 +358,7 @@ const exactMatchTranslations = {
   },
   'no-NO': {
     title: 'Bønnetider: Azan & Koranen Pro',
-    shortDescription: 'Nøyaktige muslimske bønnetider, azan-alarm, felles Koran-khatam, qibla og tasbih.',
+    shortDescription: 'Nøyaktige bønnetider, azan-alarm, felles Koran-khatam, qibla og tasbih.',
     fullDescription: `🕌 Bønnetider Pro: Nøyaktige Bønnetider, Azan, Gruppe Koran Khatam og Qibla\n\n📖 GRUPPE KORAN KHATAM (DEL 30 JUZ VIA WHATSAPP)\n⏰ NØYAKTIGE BØNNETIDER & AZAN (100% Frakoblet)\n🧭 NØYAKTIG QIBLA-KOMPASS\n📿 DIGITAL TASBIH MED VIBRASJON\n\nLast ned gratis nå!`
   },
   'pa': {
@@ -367,14 +367,14 @@ const exactMatchTranslations = {
     fullDescription: `🕌 ਨਮਾਜ਼ ਪ੍ਰੋ: ਸਹੀ ਨਮਾਜ਼ ਦੇ ਸਮੇਂ, ਅਜ਼ਾਨ, ਕੁਰਾਨ ਖਤਮ ਅਤੇ ਕਿਬਲਾ\n\n📖 ਗਰੁੱਪ ਕੁਰਾਨ ਖਤਮ (WhatsApp ਰਾਹੀਂ 30 ਸਿਪਾਰੇ ਵੰਡੋ)\n⏰ ਸਹੀ ਨਮਾਜ਼ ਦੇ ਸਮੇਂ ਅਤੇ ਅਜ਼ਾਨ (100% ਆਫ਼ਲਾਈਨ)\n🧭 ਕਿਬਲਾ ਕੰਪਾਸ\n📿 ਡਿਜੀਟਲ ਤਸਬੀਹ\n\nਹੁਣੇ ਮੁਫ਼ਤ ਡਾਊਨਲੋਡ ਕਰੋ!`
   },
   'pl-PL': {
-    title: 'Czas Modlitwy: Azan & Koran Pro',
+    title: 'Czas Modlitwy: Azan & Koran',
     shortDescription: 'Dokładny czas modlitwy muzułmańskiej, alarm azan, khatam Koranu, qibla i tasbih.',
     fullDescription: `🕌 Czas Modlitwy Pro: Dokładne Godziny Modlitw, Azan, Khatam Koranu i Qibla\n\n📖 GRUPOWY KHATAM KORANU (30 DŻUZ PRZEZ WHATSAPP)\n⏰ DOKŁADNE CZASY MODLITW I AZAN (100% Offline)\n🧭 PRECYZYJNY KOMPAS QIBLA\n📿 CYFROWY TASBIH\n\nPobierz teraz za darmo!`
   },
   'pt-BR': ptData,
   'pt-PT': ptData,
   'rm': {
-    title: 'Uras da Preghiera: Azan & Coran',
+    title: 'Uras da Preghiera: Azan',
     shortDescription: 'Uras da preghiera precisas, alarm d\'azan, khatam dal Coran, qibla e tasbih.',
     fullDescription: `🕌 Uras da Preghiera Pro: Uras Precisas, Azan, Khatam dal Coran e Qibla\n\n📖 KHATAM DAL CORAN EN GRUP (30 JUZ VIA WHATSAPP)\n⏰ URAS PRECISAS & AZAN (100% Offline)\n🧭 CUMPAS DA LA QIBLA\n📿 TASBIH DIGITAL\n\nTelechargiai gratuitamain ussa!`
   },
@@ -395,16 +395,16 @@ const exactMatchTranslations = {
   },
   'sk': {
     title: 'Čas Modlitby: Azan & Korán Pro',
-    shortDescription: 'Presný čas islamskej modlitby, azan alarm, skupinový khatam Koránu, qibla a tasbih.',
+    shortDescription: 'Presný čas modlitby, azan alarm, skupinový khatam Koránu, qibla a tasbih.',
     fullDescription: `🕌 Čas Modlitby Pro: Presné Časy Modlitieb, Azan, Khatam Koránu a Qibla\n\n📖 SKUPINOVÝ KHATAM KORÁNU (30 DŽUZ CEZ WHATSAPP)\n⏰ PRESNÉ ČASY MODLITIEB A AZAN (100% Offline)\n🧭 PRESNÝ KOMPAS QIBLA\n📿 DIGITÁLNY TASBIH\n\nStiahnite si zadarmo teraz!`
   },
   'sl': {
     title: 'Čas Molitve: Azan & Koran Pro',
-    shortDescription: 'Natančen čas islamske molitve, azan alarm, skupinski khatam Korana, kibla in tasbih.',
+    shortDescription: 'Natančen čas molitve, azan alarm, skupinski khatam Korana, kibla in tasbih.',
     fullDescription: `🕌 Čas Molitve Pro: Natančni Časi Molitve, Azan, Khatam Korana in Kibla\n\n📖 SKUPINSKI KHATAM KORANA (30 DŽUZ PREKO WHATSAPP-A)\n⏰ NATANČEN ČAS MOLITVE IN AZAN (100% Brez povezave)\n🧭 NATANČEN KOMPAS KIBLE\n📿 DIGITALNI TASBIH\n\nPrenesite brezplačno zdaj!`
   },
   'sq': {
-    title: 'Vaktet e Namazit: Ezani & Kurani',
+    title: 'Vaktet e Namazit: Ezan & Kuran',
     shortDescription: 'Vaktet e sakta të namazit, alarmi i ezanit, hatme e Kuranit, kibla dhe tesbih.',
     fullDescription: `🕌 Vaktet e Namazit Pro: Vaktet e Sakta, Ezani, Hatme e Përbashkët e Kuranit dhe Kibla\n\n📖 HATME E PËRBASHKËT E KURANIT (30 XHUZ ME WHATSAPP)\n⏰ VAKTET E SAKTA TË NAMAZIT DHE EZANI (100% Offline)\n🧭 BUSULLA E KIBLES DREJT QABES\n📿 TESBIH DIXHITAL SMART\n\nShkarkoni falas tani!`
   },
@@ -420,7 +420,7 @@ const exactMatchTranslations = {
   },
   'sw': {
     title: 'Nyakati za Sala: Azan & Quran',
-    shortDescription: 'Nyakati sahihi za sala za Kiislamu, kengele ya azan, khatam ya Quran, kibla na tasbihi.',
+    shortDescription: 'Nyakati sahihi za sala, kengele ya azan, khatam ya Quran, kibla na tasbihi.',
     fullDescription: `🕌 Nyakati za Sala Pro: Nyakati Sahihi za Sala, Azan, Khatam ya Quran na Kibla\n\n📖 KHATAM YA QURAN KWA KIKUNDI (GAWA JUZUU 30 KUPITIA WHATSAPP)\n⏰ NYAKATI SAHIHI ZA SALA NA AZAN (100% Bila Mtandao)\n🧭 DIRA SAHIHI YA KIBLA KUELEKEA MAKKAH\n📿 TASBIHI YA KIDIJITALI\n\nPakua bure sasa!`
   },
   'ta-IN': {
@@ -454,7 +454,7 @@ const exactMatchTranslations = {
     fullDescription: `🕌 نماز پرو: درست اوقات نماز، اذان الارم، گروپ قرآن ختم، قبلہ نما اور تسبیح\n\n📖 گروپ قرآن ختم اور 30 پارے کی تقسیم بذریعہ واٹس ایپ\n⏰ درست اوقات نماز اور اذان الرٹ (مکمل آف لائن)\n🧭 انتہائی درست قبلہ نما (رخ کعبہ)\n📿 سمارٹ ڈیجیٹل تسبیح اور مسنون دعائیں\n📊 قضا نمازوں اور روزوں کا ریکارڈ\n\nابھی مفت ڈاؤن لوڈ کریں!`
   },
   'vi': {
-    title: 'Giờ Cầu Nguyện: Athan & Kinh Quran',
+    title: 'Giờ Cầu Nguyện: Athan & Quran',
     shortDescription: 'Giờ cầu nguyện Hồi giáo chính xác, báo thức Athan, đọc kinh Quran, la bàn Qibla.',
     fullDescription: `🕌 Giờ Cầu Nguyện Pro: Thời Gian Cầu Nguyện Chính Xác, Athan, Khatam Quran và Qibla\n\n📖 ĐỌC KHATAM KINH QURAN THEO NHÓM (CHIA SẺ 30 JUZ QUA WHATSAPP)\n⏰ GIỜ CẦU NGUYỆN CHÍNH XÁC & BÁO THỨC ATHAN (100% Ngoại tuyến)\n🧭 LA BÀN QIBLA CHÍNH XÁC\n📿 CHUỖI HẠT TASBIH KỸ THUẬT SỐ\n\nTải xuống miễn phí ngay bây giờ!`
   },
@@ -462,13 +462,27 @@ const exactMatchTranslations = {
   'zh-HK': zhData,
   'zh-TW': zhData,
   'zu': {
-    title: 'Izikhathi Zomkhuleko: Athan & Quran',
-    shortDescription: 'Izikhathi eziqondile zomkhuleko wamaSulumane, i-alamu ye-athan, i-qibla ne-tasbih.',
+    title: 'Izikhathi Zomkhuleko: Athan',
+    shortDescription: 'Izikhathi zomkhuleko wamaSulumane, i-alamu ye-athan, i-qibla ne-tasbih.',
     fullDescription: `🕌 Izikhathi Zomkhuleko Pro: Izikhathi Eziqondile, Athan, Khatam ye-Quran ne-Qibla\n\n📖 KHATAM YE-QURAN NGEQEMBU (YABELA AMA-JUZ ANGU-30 KU-WHATSAPP)\n⏰ IZIKHATHI EZIQONDILE NE-ATHAN (100% Offline)\n🧭 IKHOMPASI YE-QIBLA EQONDILE\n📿 I-TASBIH YEDIDJITHALI\n\nLanda mahhala manje!`
   }
 };
 
 // 1. EXACT MATCH CSV
+
+// Otomatik Sınır Denetimi ve Güvenlik Kırpma (Google Play Console 30 / 80 / 4000)
+for (const [langKey, langObj] of Object.entries(exactMatchTranslations)) {
+  if (langObj.title && [...langObj.title].length > 30) {
+    langObj.title = [...langObj.title].slice(0, 30).join('');
+  }
+  if (langObj.shortDescription && [...langObj.shortDescription].length > 80) {
+    langObj.shortDescription = [...langObj.shortDescription].slice(0, 80).join('');
+  }
+  if (langObj.fullDescription && [...langObj.fullDescription].length > 4000) {
+    langObj.fullDescription = [...langObj.fullDescription].slice(0, 4000).join('');
+  }
+}
+
 const csvRows = [
   ['Language', 'Title', 'Short description', 'Full description']
 ];
