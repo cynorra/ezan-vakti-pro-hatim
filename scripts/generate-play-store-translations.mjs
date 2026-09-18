@@ -92,6 +92,7 @@ const zhData = {
 };
 
 const exactMatchTranslations = {
+  'en-US': enData,
   'af': {
     title: 'Gebedstye: Athan & Koran Pro',
     shortDescription: 'Akkurate Moslem-gebedstye, athan-alarm, Koran-khatam, qibla en tasbih.',
@@ -499,7 +500,7 @@ for (const [lang, data] of Object.entries(exactMatchTranslations)) {
 
 const csvContent = csvRows.map(row => row.join(',')).join('\n');
 const csvPath = path.join(outputDir, 'google_play_exact_match_all.csv');
-fs.writeFileSync(csvPath, '\ufeff' + csvContent, 'utf-8');
+fs.writeFileSync(csvPath, csvContent, 'utf-8');
 console.log(`✅ GOOGLE PLAY KONSOLU İLE %100 BİREBİR EŞLEŞEN CSV OLUŞTURULDU: ${csvPath} (${Object.keys(exactMatchTranslations).length} Dil)`);
 
 // 2. EXACT MATCH ZIP
