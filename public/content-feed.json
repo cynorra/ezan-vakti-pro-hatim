@@ -1,1 +1,30 @@
-null
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-09-19T04:23:42.258Z",
+  "date": "2026-09-19",
+  "isFriday": false,
+  "featuredDua": {
+    "title": "İstimdat ve Selamet Duası",
+    "arabic": "اللَّهُمَّ إِنِّى أَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ، وَالْجُبْنِ وَالْهَرَمِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، وَأَعُوذُ بِكَ مِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ.",
+    "turkish": "Allah'ım! Acizlikten, tembellikten, korkaklıktan, ihtiyarlayıp ele avuca düşmekten ve cimrilikten sana sığınırım. Kabir azabından ve hayat ile ölüm fitnelerinden de sana sığınırım.",
+    "transliteration": "Allahümme inni eûzü bike minel-aczi vel-keseli, vel-cübni vel-heremi, ve eûzü bike min azâbil-kabri, ve eûzü bike min fitnetil-mahyâ vel-memât.",
+    "source": "Müslim, Zikir ve Dua, 50; Buhârî, Deavât, 38",
+    "category": "daily"
+  },
+  "featuredVerse": {
+    "arabic": "وَمَنْ يَتَّقِ اللَّهَ يَجْعَلْ لَهُ مَخْرَجًا ۝ وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ وَمَنْ يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ إِنَّ اللَّهَ بَالِغُ أَمْرِهِ قَدْ جَعَلَ اللَّهُ لِكُلِّ شَيْءٍ قَدْرًا",
+    "turkish": "Kim Allah'a karşı gelmekten sakınırsa, Allah ona bir çıkış yolu açar; onu beklemediği yerden rızıklandırır. Kim Allah'a güvenirse O, kendisine yetişir. Şüphesiz Allah, emrini yerine getirendir. Allah her şey için bir ölçü koymuştur.",
+    "surah": "Talâk Suresi",
+    "verseNumber": 3,
+    "theme": "tevekkül"
+  },
+  "featuredHadith": {
+    "arabic": "عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ، أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: «مَنْ نَفَّسَ عَنْ مُؤْمِنٍ كُرْبَةً مِنْ كُرَبِ الدُّنْيَا، نَفَّسَ اللَّهُ عَنْهُ كُرْبَةً مِنْ كُرَبِ يَوْمِ الْقِيَامَةِ، وَمَنْ يَسَّرَ عَلَى مُعْسِرٍ، يَسَّرَ اللَّهُ عَلَيْهِ فِي الدُّنْيَا وَالْآخِرَةِ»",
+    "turkish": "Ebu Hüseyin (R.anh)'den rivayet edildiğine göre Resûlullah (s.a.v.) şöyle buyurmuştur: \"Kim bir müminin dünya sıkıntılarından bir sıkıntısını giderirse, Allah da kıyamet gününde onun sıkıntılarından birini giderir. Kim darda kalana kolaylık sağlarsa, Allah da dünya ve ahirette ona kolaylık sağlar.\"",
+    "source": "Müslim, Zikir ve Dua, 38"
+  },
+  "dailyWisdom": {
+    "title": "Günün Manevi Mesajı",
+    "message": "Dünyanın geçici meşgaleleri kalbini daralttığında, secdeye var ve Rabbine sığın; zira kulun Allâh'a en yakın olduğu an, o mahviyet anıdır."
+  }
+}
