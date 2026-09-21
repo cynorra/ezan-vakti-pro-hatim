@@ -1,30 +1,30 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-09-20T04:42:02.866Z",
-  "date": "2026-09-20",
+  "updatedAt": "2026-09-21T04:40:36.329Z",
+  "date": "2026-09-21",
   "isFriday": false,
   "featuredDua": {
-    "title": "İstimdat ve Selamet Duası",
-    "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي",
-    "turkish": "Allah'ım! Senden dünya ve ahirette af ve afiyet (sağlık, huzur, her türlü sıkıntıdan güvende olma) istiyorum. Allah'ım! Senden dinim, dünyam, ailem ve malım için af ve afiyet niyaz ediyorum.",
-    "transliteration": "Allahümme inneî es’elüke’l-afve ve’l-âfiyete fi’d-dünyâ ve’l-âhira. Allahümme innî es’elüke’l-afve ve’l-âfiyete fî dînî ve dünyâye ve ehli ve mâlî.",
-    "source": "Ebû Dâvûd, Edeb, 101; İbn Mâce, Dua, 5",
+    "title": "Sabah ve Akşam Okunacak Korunma Duası",
+    "arabic": "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
+    "turkish": "İsmi anıldığında yerde ve gökte hiçbir şeyin zarar veremeyeceği Allah'ın adıyla. O, hakkıyla işitendir, bilendir.",
+    "transliteration": "Bismillâhillezî lâ yezurru ma'asmihi şey'un fil-ardı ve lâ fis-semâi ve huves-semîul-alîm.",
+    "source": "Ebû Dâvûd, Edeb, 101; Tirmizî, Deavât, 13",
     "category": "daily"
   },
   "featuredVerse": {
-    "arabic": "وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِلْمُؤْمِنِينَ ۙ وَلَا يَزِيدُ الظَّالِمِينَ إِلَّا خَسَارًا",
-    "turkish": "Biz, Kur'an'dan öyle bir şey indiriyoruz ki o, müminler için bir şifa ve rahmettir; zalimlerin ise ancak ziyanını artırır.",
+    "arabic": "وَنُنزلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِلْمُؤْمِنِينَ وَلَا يَزِيدُ الظَّالِمِينَ إِلَّا خَسَارًا",
+    "turkish": "Biz, Kur'an'dan öyle bir şey indiriyoruz ki o, müminler için bir şifa ve rahmettir; zalimlerin ise sadece ziyanını artırır.",
     "surah": "İsrâ Suresi",
     "verseNumber": 82,
     "theme": "sifa"
   },
   "featuredHadith": {
-    "arabic": "مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ طَرِيقًا إِلَى الْجَنَّةِ",
-    "turkish": "Kim ilim tahsil etmek amacıyla bir yola girerse, Allah o kişiye cennetin yolunu kolaylaştırır.",
-    "source": "Müslim, Zikir, 39"
+    "arabic": "مَنْ صَلَّى البَرْدَيْنِ دَخَلَ الجَنَّةَ",
+    "turkish": "Sabah ve ikindi namazlarını kılan kimse cennete girer.",
+    "source": "Buhârî, Mevâkîtü's-salât, 26"
   },
   "dailyWisdom": {
     "title": "Günün Manevi Mesajı",
-    "message": "Kalbin darlığı ancak Allah'ı zikretmekle ve Kur'an'ın feyziyle huzur bulur. Günün koşturmacası içinde ruhunuza durma fırsatı tanıyın, istiğfarla kalbinizi paslardan arındırın."
+    "message": "Kalbin darlığı, dünyevi hırsların ve bitmek bilmeyen arzuların yükündendir. Kul, zikir ile Rabbine sığındığı ve nza makamına razı olduğu ölçüde huzuru bulur."
   }
 }
