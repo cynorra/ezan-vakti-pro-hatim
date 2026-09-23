@@ -5,6 +5,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows } from '@/constants/theme';
+import { CALCULATION_METHODS, CALCULATION_METHOD_IDS, CalculationMethodId } from '@/lib/prayer-times';
+import type { MethodSetting } from '@/lib/location-settings';
 
 const LANGUAGES = [
   { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
@@ -44,6 +46,10 @@ interface SettingsModalProps {
   onClose: () => void;
   notificationsEnabled: boolean;
   onToggleNotifications: () => void;
+  methodSetting: MethodSetting;
+  /** The method actually in use (what 'auto' resolved to for the current location). */
+  resolvedMethod: CalculationMethodId;
+  onChangeMethod: (setting: MethodSetting) => void;
 }
 
 export const SettingsModal: React.FC<SettingsModalProps> = ({
@@ -51,6 +57,9 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   onClose,
   notificationsEnabled,
   onToggleNotifications,
+  methodSetting,
+  resolvedMethod,
+  onChangeMethod,
 }) => {
   const { t, i18n } = useTranslation();
   const colorScheme = useColorScheme() ?? 'light';
@@ -58,6 +67,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   const [ezanSound, setEzanSound] = useState('İstanbul Ezanı');
   const [reminderTime, setReminderTime] = useState('15 dk önce');
   const [showLangPicker, setShowLangPicker] = useState(false);
+  const [showMethodPicker, setShowMethodPicker] = useState(false);
   const [prayerNotifications, setPrayerNotifications] = useState({
     fajr: true,
     sunrise: false,
@@ -172,6 +182,16 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   </View>
                 )}
                 <SettingRow
+                  icon="calculator-outline"
+                  label={t('settings.calcMethod')}
+                  value={
+                    methodSetting === 'auto'
+                      ? `${t('settings.calcMethodAuto')} · ${CALCULATION_METHODS[resolvedMethod].name}`
+                      : CALCULATION_METHODS[methodSetting].name
+                  }
+                  onPress={() => setShowMethodPicker(true)}
+                />
+                <SettingRow
                   icon="volume-high-outline"
                   label={t('settings.sound')}
                   value={ezanSound}
@@ -244,6 +264,47 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 </Text>
               </View>
             </ScrollView>
+          </View>
+        </Pressable>
+      </Modal>
+
+      {/* Calculation Method Picker Modal */}
+      <Modal animationType="slide" transparent={true} visible={showMethodPicker} onRequestClose={() => setShowMethodPicker(false)}>
+        <Pressable style={styles.overlay} onPress={() => setShowMethodPicker(false)}>
+          <View style={[styles.langPickerContent, { backgroundColor: colors.background }]}>
+            <View style={styles.handle} />
+            <View style={styles.header}>
+              <Text style={[styles.title, { color: colors.text }]}>{t('settings.calcMethod')}</Text>
+              <TouchableOpacity onPress={() => setShowMethodPicker(false)} style={styles.closeButton}>
+                <Ionicons name="close" size={24} color={colors.text} />
+              </TouchableOpacity>
+            </View>
+            <FlatList
+              data={['auto', ...CALCULATION_METHOD_IDS] as MethodSetting[]}
+              keyExtractor={item => item}
+              showsVerticalScrollIndicator={false}
+              renderItem={({ item }) => {
+                const isSelected = methodSetting === item;
+                const label =
+                  item === 'auto'
+                    ? `${t('settings.calcMethodAuto')} (${CALCULATION_METHODS[resolvedMethod].name})`
+                    : CALCULATION_METHODS[item].name;
+                return (
+                  <TouchableOpacity
+                    style={[styles.langRow, { borderBottomColor: colors.border }, isSelected && { backgroundColor: colors.primary + '15' }]}
+                    onPress={() => {
+                      onChangeMethod(item);
+                      setShowMethodPicker(false);
+                    }}
+                  >
+                    <Text style={[styles.langName, { color: colors.text }, isSelected && { color: colors.primary, fontWeight: '700' }]}>
+                      {label}
+                    </Text>
+                    {isSelected && <Ionicons name="checkmark" size={20} color={colors.primary} />}
+                  </TouchableOpacity>
+                );
+              }}
+            />
           </View>
         </Pressable>
       </Modal>

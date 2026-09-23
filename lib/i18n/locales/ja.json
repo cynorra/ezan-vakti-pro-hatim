@@ -71,7 +71,9 @@
     "about": "アプリについて",
     "widgetPreview": "ウィジェットプレビュー",
     "widgetNext": "次へ",
-    "widgetHint": "ホーム画面を長押ししてウィジェットを追加できます。"
+    "widgetHint": "ホーム画面を長押ししてウィジェットを追加できます。",
+    "calcMethod": "計算方法",
+    "calcMethodAuto": "自動"
   },
   "common": {
     "cancel": "キャンセル",
@@ -171,5 +173,14 @@
     "mosques": "近くのモスク",
     "zekat": "ザカート計算機",
     "abdest": "ウドゥガイド"
+  },
+  "location": {
+    "selectCity": "都市を選択",
+    "selectDistrict": "{{city}} - 地区を選択",
+    "searchCity": "都市を検索...",
+    "searchDistrict": "地区を検索...",
+    "useGps": "現在地を使用",
+    "useGpsHint": "GPSで世界中どこでも正確な時刻",
+    "turkeyCities": "トルコの都市"
   }
 }

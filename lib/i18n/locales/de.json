@@ -71,7 +71,9 @@
     "about": "Über",
     "widgetPreview": "WIDGET-VORSCHAU",
     "widgetNext": "Weiter",
-    "widgetHint": "Tippe und halte auf deinen Startbildschirm, um das Widget hinzuzufügen."
+    "widgetHint": "Tippe und halte auf deinen Startbildschirm, um das Widget hinzuzufügen.",
+    "calcMethod": "Berechnungsmethode",
+    "calcMethodAuto": "Automatisch"
   },
   "common": {
     "cancel": "Abbrechen",
@@ -171,5 +173,14 @@
     "mosques": "Moscheen in der Nähe",
     "zekat": "Zakat-Rechner",
     "abdest": "Wudu-Anleitung"
+  },
+  "location": {
+    "selectCity": "Stadt wählen",
+    "selectDistrict": "{{city}} - Bezirk wählen",
+    "searchCity": "Stadt suchen...",
+    "searchDistrict": "Bezirk suchen...",
+    "useGps": "Meinen Standort verwenden",
+    "useGpsHint": "Genaue Zeiten weltweit per GPS",
+    "turkeyCities": "Städte in der Türkei"
   }
 }

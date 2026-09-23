@@ -71,7 +71,9 @@
     "about": "Over",
     "widgetPreview": "WIDGET-VOORBEELD",
     "widgetNext": "Volgende",
-    "widgetHint": "Houd het startscherm ingedrukt om de widget toe te voegen."
+    "widgetHint": "Houd het startscherm ingedrukt om de widget toe te voegen.",
+    "calcMethod": "Berekeningsmethode",
+    "calcMethodAuto": "Automatisch"
   },
   "common": {
     "cancel": "Annuleren",
@@ -171,5 +173,14 @@
     "mosques": "Moskeeën in de buurt",
     "zekat": "Zakat Calculator",
     "abdest": "Wudu-gids"
+  },
+  "location": {
+    "selectCity": "Kies stad",
+    "selectDistrict": "{{city}} - Kies district",
+    "searchCity": "Zoek stad...",
+    "searchDistrict": "Zoek district...",
+    "useGps": "Mijn locatie gebruiken",
+    "useGpsHint": "Nauwkeurige tijden wereldwijd via gps",
+    "turkeyCities": "Steden in Turkije"
   }
 }

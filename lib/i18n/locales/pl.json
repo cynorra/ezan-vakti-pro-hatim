@@ -71,7 +71,9 @@
     "about": "O aplikacji",
     "widgetPreview": "PODGLĄD WIDŻETU",
     "widgetNext": "Następna",
-    "widgetHint": "Naciśnij i przytrzymaj ekran główny, aby dodać widżet."
+    "widgetHint": "Naciśnij i przytrzymaj ekran główny, aby dodać widżet.",
+    "calcMethod": "Metoda obliczeń",
+    "calcMethodAuto": "Automatycznie"
   },
   "common": {
     "cancel": "Anuluj",
@@ -171,5 +173,14 @@
     "mosques": "Meczety w pobliżu",
     "zekat": "Kalkulator Zakatu",
     "abdest": "Przewodnik po Wudu"
+  },
+  "location": {
+    "selectCity": "Wybierz miasto",
+    "selectDistrict": "{{city}} - Wybierz dzielnicę",
+    "searchCity": "Szukaj miasta...",
+    "searchDistrict": "Szukaj dzielnicy...",
+    "useGps": "Użyj mojej lokalizacji",
+    "useGpsHint": "Dokładne godziny na całym świecie dzięki GPS",
+    "turkeyCities": "Miasta w Turcji"
   }
 }

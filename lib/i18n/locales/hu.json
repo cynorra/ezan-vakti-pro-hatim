@@ -71,7 +71,9 @@
     "about": "Névjegy",
     "widgetPreview": "WIDGET ELŐNÉZET",
     "widgetNext": "Következő",
-    "widgetHint": "Nyomja hosszan a főképernyőt a widget hozzáadásához."
+    "widgetHint": "Nyomja hosszan a főképernyőt a widget hozzáadásához.",
+    "calcMethod": "Számítási módszer",
+    "calcMethodAuto": "Automatikus"
   },
   "qibla": {
     "title": "KIBLA IRÁNYTŰ",
@@ -171,5 +173,14 @@
     "mosques": "Közeli mecsetek",
     "zekat": "Zakát kalkulátor",
     "abdest": "Wudu útmutató"
+  },
+  "location": {
+    "selectCity": "Város kiválasztása",
+    "selectDistrict": "{{city}} - Kerület kiválasztása",
+    "searchCity": "Város keresése...",
+    "searchDistrict": "Kerület keresése...",
+    "useGps": "Saját helyzetem használata",
+    "useGpsHint": "Pontos idők a világ bármely pontján GPS-szel",
+    "turkeyCities": "Törökországi városok"
   }
 }

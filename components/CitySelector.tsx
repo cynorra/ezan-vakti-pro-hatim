@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   View,
   Text,
@@ -18,6 +19,8 @@ interface CitySelectorProps {
   visible: boolean;
   onClose: () => void;
   onSelect: (city: City, district?: string) => void;
+  /** Worldwide option: use the device GPS position instead of a Turkish city. */
+  onUseGps?: () => void;
   selectedCity: City;
   selectedDistrict?: string;
 }
@@ -26,9 +29,11 @@ export function CitySelector({
   visible,
   onClose,
   onSelect,
+  onUseGps,
   selectedCity,
   selectedDistrict,
 }: CitySelectorProps) {
+  const { t } = useTranslation();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const [searchQuery, setSearchQuery] = useState('');
@@ -137,7 +142,7 @@ export function CitySelector({
             <Ionicons name={tempSelectedCity ? "arrow-back" : "close"} size={24} color={colors.text} />
           </TouchableOpacity>
           <Text style={[styles.title, { color: colors.text }]}>
-            {tempSelectedCity ? `${tempSelectedCity.name} - İlçe Seç` : 'Şehir Seç'}
+            {tempSelectedCity ? t('location.selectDistrict', { city: tempSelectedCity.name }) : t('location.selectCity')}
           </Text>
           <View style={{ width: 40 }} />
         </View>
@@ -146,7 +151,7 @@ export function CitySelector({
           <Ionicons name="search" size={20} color={colors.textMuted} />
           <TextInput
             style={[styles.searchInput, { color: colors.text }]}
-            placeholder={tempSelectedCity ? "İlçe ara..." : "Şehir ara..."}
+            placeholder={tempSelectedCity ? t('location.searchDistrict') : t('location.searchCity')}
             placeholderTextColor={colors.textMuted}
             value={searchQuery}
             onChangeText={setSearchQuery}
@@ -169,6 +174,32 @@ export function CitySelector({
             keyExtractor={(item) => item.id}
             showsVerticalScrollIndicator={false}
             contentContainerStyle={styles.listContent}
+            ListHeaderComponent={
+              onUseGps ? (
+                <>
+                  <TouchableOpacity
+                    style={[
+                      styles.cityItem,
+                      styles.gpsItem,
+                      {
+                        backgroundColor: selectedCity.id === 'gps' ? colors.primary + '10' : 'transparent',
+                        borderBottomColor: colors.border,
+                      },
+                    ]}
+                    onPress={onUseGps}
+                  >
+                    <Ionicons name="navigate-circle" size={24} color={colors.primary} />
+                    <View style={{ flex: 1 }}>
+                      <Text style={[styles.cityName, styles.cityNameSelected, { color: colors.primary }]}>
+                        {t('location.useGps')}
+                      </Text>
+                      <Text style={[styles.gpsHint, { color: colors.textMuted }]}>{t('location.useGpsHint')}</Text>
+                    </View>
+                  </TouchableOpacity>
+                  <Text style={[styles.sectionLabel, { color: colors.textMuted }]}>{t('location.turkeyCities')}</Text>
+                </>
+              ) : null
+            }
           />
         )}
       </SafeAreaView>
@@ -225,5 +256,22 @@ const styles = StyleSheet.create({
   },
   cityNameSelected: {
     fontWeight: '700',
+  },
+  gpsItem: {
+    justifyContent: 'flex-start',
+    gap: Spacing.md,
+  },
+  gpsHint: {
+    fontSize: FontSize.xs,
+    marginTop: 2,
+  },
+  sectionLabel: {
+    fontSize: FontSize.xs,
+    fontWeight: '700',
+    textTransform: 'uppercase',
+    letterSpacing: 1,
+    paddingHorizontal: Spacing.lg,
+    paddingTop: Spacing.lg,
+    paddingBottom: Spacing.sm,
   },
 });

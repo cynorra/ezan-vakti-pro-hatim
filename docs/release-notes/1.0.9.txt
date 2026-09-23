@@ -1,0 +1,30 @@
+<tr-TR>
+• Namaz vakitleri Diyanet takvimiyle birebir uyumlu hale getirildi (güneş, akşam ve ikindi temkinleri eklendi)
+• Dünyanın her yerinde doğru vakitler: "Konumumu kullan" ile GPS'e göre hesaplama
+• Ülkeye göre otomatik hesaplama yöntemi (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA ve daha fazlası)
+• Ayarlardan hesaplama yöntemini elle seçebilme
+• Seçtiğin şehir artık kaydediliyor
+• Hata düzeltmeleri ve performans iyileştirmeleri
+</tr-TR>
+<en-US>
+• Prayer times now match the official Diyanet calendar exactly
+• Accurate times anywhere in the world: "Use my location" calculates by GPS
+• Automatic calculation method by country (Kemenag, JAKIM, Umm al-Qura, ISNA, Diyanet and more)
+• Choose the calculation method manually in Settings
+• Your selected city is now remembered
+• Bug fixes and performance improvements
+</en-US>
+<id>
+• Waktu salat kini akurat di seluruh dunia dengan GPS ("Gunakan lokasi saya")
+• Metode perhitungan otomatis sesuai negara, termasuk Kemenag untuk Indonesia
+• Pilih metode perhitungan secara manual di Pengaturan
+• Kota pilihan Anda kini tersimpan
+• Perbaikan bug dan peningkatan performa
+</id>
+<ms>
+• Waktu solat kini tepat di seluruh dunia dengan GPS ("Guna lokasi saya")
+• Kaedah pengiraan automatik mengikut negara, termasuk JAKIM untuk Malaysia
+• Pilih kaedah pengiraan secara manual dalam Tetapan
+• Bandar pilihan anda kini disimpan
+• Pembaikan pepijat dan peningkatan prestasi
+</ms>

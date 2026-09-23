@@ -71,7 +71,9 @@
     "about": "Info sull'app",
     "widgetPreview": "ANTEPRIMA WIDGET",
     "widgetNext": "Prossimo",
-    "widgetHint": "Tieni premuto sulla schermata home per aggiungere il widget."
+    "widgetHint": "Tieni premuto sulla schermata home per aggiungere il widget.",
+    "calcMethod": "Metodo di calcolo",
+    "calcMethodAuto": "Automatico"
   },
   "common": {
     "cancel": "Annulla",
@@ -171,5 +173,14 @@
     "mosques": "Moschee vicine",
     "zekat": "Calcolatore Zakat",
     "abdest": "Guida al Wudu"
+  },
+  "location": {
+    "selectCity": "Scegli città",
+    "selectDistrict": "{{city}} - Scegli distretto",
+    "searchCity": "Cerca città...",
+    "searchDistrict": "Cerca distretto...",
+    "useGps": "Usa la mia posizione",
+    "useGpsHint": "Orari precisi in tutto il mondo tramite GPS",
+    "turkeyCities": "Città della Turchia"
   }
 }

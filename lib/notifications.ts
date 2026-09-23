@@ -398,7 +398,7 @@ export async function scheduleAllPrayers(prayerTimes: any, city: string) {
   for (const prayer of prayers) {
     const settingsKey = PRAYER_NAME_TO_SETTINGS_KEY[prayer.name];
     const isEnabled = !enabledPrayers || enabledPrayers[settingsKey] !== false;
-    if (prayer.time && isEnabled) {
+    if (prayer.time && /^\d{2}:\d{2}$/.test(prayer.time) && isEnabled) {
       await schedulePrayerNotification(prayer.name, prayer.time, city);
     }
   }

@@ -71,7 +71,9 @@
     "about": "درباره",
     "widgetPreview": "پیش‌نمایش ویجت",
     "widgetNext": "بعدی",
-    "widgetHint": "برای افزودن ویجت روی صفحه اصلی نگه دارید."
+    "widgetHint": "برای افزودن ویجت روی صفحه اصلی نگه دارید.",
+    "calcMethod": "روش محاسبه",
+    "calcMethodAuto": "خودکار"
   },
   "qibla": {
     "title": "قبله‌نما",
@@ -171,5 +173,14 @@
     "mosques": "مساجد نزدیک",
     "zekat": "محاسبه‌گر زکات",
     "abdest": "راهنمای وضو"
+  },
+  "location": {
+    "selectCity": "انتخاب شهر",
+    "selectDistrict": "{{city}} - انتخاب منطقه",
+    "searchCity": "جستجوی شهر...",
+    "searchDistrict": "جستجوی منطقه...",
+    "useGps": "استفاده از موقعیت من",
+    "useGpsHint": "اوقات دقیق در هر نقطه از جهان با GPS",
+    "turkeyCities": "شهرهای ترکیه"
   }
 }

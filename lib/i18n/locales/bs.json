@@ -71,7 +71,9 @@
     "about": "O aplikaciji",
     "widgetPreview": "PREGLED WIDGETA",
     "widgetNext": "Sljedeći",
-    "widgetHint": "Pritisnite dugo na početnom ekranu za dodavanje widgeta."
+    "widgetHint": "Pritisnite dugo na početnom ekranu za dodavanje widgeta.",
+    "calcMethod": "Metoda izračuna",
+    "calcMethodAuto": "Automatski"
   },
   "qibla": {
     "title": "KIBLA KOMPAS",
@@ -171,5 +173,14 @@
     "mosques": "Obližnje džamije",
     "zekat": "Zekat kalkulator",
     "abdest": "Vodič za abdest"
+  },
+  "location": {
+    "selectCity": "Odaberi grad",
+    "selectDistrict": "{{city}} - Odaberi općinu",
+    "searchCity": "Traži grad...",
+    "searchDistrict": "Traži općinu...",
+    "useGps": "Koristi moju lokaciju",
+    "useGpsHint": "Tačna vremena bilo gdje u svijetu putem GPS-a",
+    "turkeyCities": "Gradovi u Turskoj"
   }
 }

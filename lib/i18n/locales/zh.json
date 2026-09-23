@@ -71,7 +71,9 @@
     "about": "关于",
     "widgetPreview": "小工具预览",
     "widgetNext": "下一个",
-    "widgetHint": "长按主屏幕即可添加小工具。"
+    "widgetHint": "长按主屏幕即可添加小工具。",
+    "calcMethod": "计算方法",
+    "calcMethodAuto": "自动"
   },
   "common": {
     "cancel": "取消",
@@ -171,5 +173,14 @@
     "mosques": "附近清真寺",
     "zekat": "天课计算器",
     "abdest": "小净指南"
+  },
+  "location": {
+    "selectCity": "选择城市",
+    "selectDistrict": "{{city}} - 选择区县",
+    "searchCity": "搜索城市...",
+    "searchDistrict": "搜索区县...",
+    "useGps": "使用我的位置",
+    "useGpsHint": "通过 GPS 在全球任何地方获取准确时间",
+    "turkeyCities": "土耳其城市"
   }
 }

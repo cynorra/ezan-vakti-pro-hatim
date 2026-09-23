@@ -71,7 +71,9 @@
     "about": "Despre",
     "widgetPreview": "PREVIZUALIZARE WIDGET",
     "widgetNext": "Următor",
-    "widgetHint": "Apăsați lung pe ecranul principal pentru a adăuga widget-ul."
+    "widgetHint": "Apăsați lung pe ecranul principal pentru a adăuga widget-ul.",
+    "calcMethod": "Metodă de calcul",
+    "calcMethodAuto": "Automat"
   },
   "qibla": {
     "title": "BUSOLA QIBLA",
@@ -171,5 +173,14 @@
     "mosques": "Moschei apropiate",
     "zekat": "Calculator Zakat",
     "abdest": "Ghid Wudu"
+  },
+  "location": {
+    "selectCity": "Alege orașul",
+    "selectDistrict": "{{city}} - Alege districtul",
+    "searchCity": "Caută oraș...",
+    "searchDistrict": "Caută district...",
+    "useGps": "Folosește locația mea",
+    "useGpsHint": "Ore exacte oriunde în lume prin GPS",
+    "turkeyCities": "Orașe din Turcia"
   }
 }

@@ -71,7 +71,9 @@
     "about": "Om",
     "widgetPreview": "FÖRHANDSVISNING AV WIDGET",
     "widgetNext": "Nästa",
-    "widgetHint": "Tryck och håll på hemskärmen för att lägga till widgeten."
+    "widgetHint": "Tryck och håll på hemskärmen för att lägga till widgeten.",
+    "calcMethod": "Beräkningsmetod",
+    "calcMethodAuto": "Automatisk"
   },
   "common": {
     "cancel": "Avbryt",
@@ -171,5 +173,14 @@
     "mosques": "Moskéer i närheten",
     "zekat": "Zakat-räknare",
     "abdest": "Wudu-guide"
+  },
+  "location": {
+    "selectCity": "Välj stad",
+    "selectDistrict": "{{city}} - Välj distrikt",
+    "searchCity": "Sök stad...",
+    "searchDistrict": "Sök distrikt...",
+    "useGps": "Använd min plats",
+    "useGpsHint": "Exakta tider var som helst i världen via GPS",
+    "turkeyCities": "Städer i Turkiet"
   }
 }

@@ -71,7 +71,9 @@
     "about": "À propos",
     "widgetPreview": "APERÇU DU WIDGET",
     "widgetNext": "Prochaine",
-    "widgetHint": "Appuyez longuement sur votre écran d'accueil pour ajouter le widget."
+    "widgetHint": "Appuyez longuement sur votre écran d'accueil pour ajouter le widget.",
+    "calcMethod": "Méthode de calcul",
+    "calcMethodAuto": "Automatique"
   },
   "common": {
     "cancel": "Annuler",
@@ -171,5 +173,14 @@
     "mosques": "Mosquées à proximité",
     "zekat": "Calculateur de Zakat",
     "abdest": "Guide des ablutions"
+  },
+  "location": {
+    "selectCity": "Choisir une ville",
+    "selectDistrict": "{{city}} - Choisir un district",
+    "searchCity": "Rechercher une ville...",
+    "searchDistrict": "Rechercher un district...",
+    "useGps": "Utiliser ma position",
+    "useGpsHint": "Horaires précis partout dans le monde grâce au GPS",
+    "turkeyCities": "Villes de Turquie"
   }
 }

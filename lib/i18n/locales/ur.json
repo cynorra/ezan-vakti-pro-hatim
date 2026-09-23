@@ -71,7 +71,9 @@
     "about": "ایپ کے بارے میں",
     "widgetPreview": "وجٹ کا پیش منظر",
     "widgetNext": "اگلا",
-    "widgetHint": "وجٹ شامل کرنے کے لیے ہوم اسکرین پر دبا کر رکھیں۔"
+    "widgetHint": "وجٹ شامل کرنے کے لیے ہوم اسکرین پر دبا کر رکھیں۔",
+    "calcMethod": "حساب کا طریقہ",
+    "calcMethodAuto": "خودکار"
   },
   "common": {
     "cancel": "منسوخ کریں",
@@ -171,5 +173,14 @@
     "mosques": "قریبی مساجد",
     "zekat": "زکوٰۃ کیلکولیٹر",
     "abdest": "طریقہ وضو"
+  },
+  "location": {
+    "selectCity": "شہر منتخب کریں",
+    "selectDistrict": "{{city}} - ضلع منتخب کریں",
+    "searchCity": "شہر تلاش کریں...",
+    "searchDistrict": "ضلع تلاش کریں...",
+    "useGps": "میرا مقام استعمال کریں",
+    "useGpsHint": "GPS کے ذریعے دنیا بھر میں درست اوقات",
+    "turkeyCities": "ترکی کے شہر"
   }
 }

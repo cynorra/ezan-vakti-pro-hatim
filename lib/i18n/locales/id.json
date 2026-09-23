@@ -71,7 +71,9 @@
     "about": "Tentang",
     "widgetPreview": "PRATINJAU WIDGET",
     "widgetNext": "Lanjut",
-    "widgetHint": "Tekan dan tahan pada layar utama untuk menambahkan widget."
+    "widgetHint": "Tekan dan tahan pada layar utama untuk menambahkan widget.",
+    "calcMethod": "Metode perhitungan",
+    "calcMethodAuto": "Otomatis"
   },
   "common": {
     "cancel": "Batal",
@@ -171,5 +173,14 @@
     "mosques": "Masjid Terdekat",
     "zekat": "Kalkulator Zakat",
     "abdest": "Panduan Wudhu"
+  },
+  "location": {
+    "selectCity": "Pilih Kota",
+    "selectDistrict": "{{city}} - Pilih Kecamatan",
+    "searchCity": "Cari kota...",
+    "searchDistrict": "Cari kecamatan...",
+    "useGps": "Gunakan lokasi saya",
+    "useGpsHint": "Waktu salat akurat di mana pun lewat GPS",
+    "turkeyCities": "Kota di Turki"
   }
 }

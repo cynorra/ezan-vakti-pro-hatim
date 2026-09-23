@@ -71,7 +71,9 @@
     "about": "앱 정보",
     "widgetPreview": "위젯 미리보기",
     "widgetNext": "다음",
-    "widgetHint": "홈 화면을 길게 눌러 위젯을 추가하세요."
+    "widgetHint": "홈 화면을 길게 눌러 위젯을 추가하세요.",
+    "calcMethod": "계산 방법",
+    "calcMethodAuto": "자동"
   },
   "common": {
     "cancel": "취소",
@@ -171,5 +173,14 @@
     "mosques": "주변 모스크",
     "zekat": "자카트 계산기",
     "abdest": "우두 가이드"
+  },
+  "location": {
+    "selectCity": "도시 선택",
+    "selectDistrict": "{{city}} - 지역 선택",
+    "searchCity": "도시 검색...",
+    "searchDistrict": "지역 검색...",
+    "useGps": "내 위치 사용",
+    "useGpsHint": "GPS로 전 세계 어디서나 정확한 시간",
+    "turkeyCities": "터키 도시"
   }
 }

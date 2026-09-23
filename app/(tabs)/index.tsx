@@ -14,13 +14,24 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
-import * as Location from 'expo-location';
 import * as Haptics from 'expo-haptics';
 import { safeHaptics } from '@/lib/haptics';
 import { recordGrowthShare } from '@/lib/rewards';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
-import { turkishCities, City } from '@/lib/data/cities';
 import { calculatePrayerTimes, PrayerTimes } from '@/lib/prayer-times';
+import {
+  DEFAULT_LOCATION,
+  SavedLocation,
+  MethodSetting,
+  getDeviceRegion,
+  loadMethodSetting,
+  loadSavedLocation,
+  locateWithGps,
+  resolveMethod,
+  saveLocation,
+  saveMethodSetting,
+  turkishCityLocation,
+} from '@/lib/location-settings';
 import { getDailyWisdom } from '@/lib/data/daily-content';
 import { getDailyDua } from '@/lib/data/duas';
 import { recordAppOpenAndGetStreak } from '@/lib/streak';
@@ -48,8 +59,10 @@ export default function HomeScreen() {
   const router = useRouter();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
-  const [selectedCity, setSelectedCity] = useState<City>(turkishCities[33]); // Istanbul
-  const [selectedDistrict, setSelectedDistrict] = useState<string>('Merkez');
+  const [location, setLocation] = useState<SavedLocation>(DEFAULT_LOCATION);
+  const [methodSetting, setMethodSetting] = useState<MethodSetting>('auto');
+  const selectedCity = location.city;
+  const selectedDistrict = location.district;
   const [prayerTimes, setPrayerTimes] = useState<PrayerTimes | null>(null);
   const [showCitySelector, setShowCitySelector] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -70,14 +83,51 @@ export default function HomeScreen() {
     hasNotificationPermission().then(setNotificationsEnabled);
   }, []);
 
+  const applyLocation = useCallback((next: SavedLocation) => {
+    setLocation(next);
+    saveLocation(next);
+  }, []);
+
+  const handleLocationPress = useCallback(async () => {
+    try {
+      const located = await locateWithGps();
+      if (located) applyLocation(located);
+    } catch (error) {
+      console.log('Location error:', error);
+    }
+  }, [applyLocation]);
+
+  // Restore the saved location/method; on first launch outside Turkey, locate
+  // by GPS instead of silently showing Istanbul times.
+  useEffect(() => {
+    (async () => {
+      setMethodSetting(await loadMethodSetting());
+      const saved = await loadSavedLocation();
+      if (saved) {
+        setLocation(saved);
+      } else if (Platform.OS !== 'web' && getDeviceRegion() !== 'TR') {
+        handleLocationPress();
+      }
+    })();
+  }, [handleLocationPress]);
+
+  const handleMethodChange = useCallback((setting: MethodSetting) => {
+    setMethodSetting(setting);
+    saveMethodSetting(setting);
+  }, []);
+
+  const resolvedMethod = resolveMethod(methodSetting, location.countryCode);
+
   const loadPrayerTimes = useCallback(() => {
-    const times = calculatePrayerTimes(
-      selectedCity.latitude,
-      selectedCity.longitude,
-      currentDate
-    );
+    const { method, asrFactor } = resolveMethod(methodSetting, location.countryCode);
+    const times = calculatePrayerTimes(location.city.latitude, location.city.longitude, currentDate, {
+      method,
+      asrFactor,
+      timezone: location.timezone,
+      ramadan: getHijriDate(currentDate).month === 9,
+    });
     setPrayerTimes(times);
-  }, [selectedCity, currentDate]);
+  }, [location, methodSetting, currentDate]);
 
   useEffect(() => {
     loadPrayerTimes();
@@ -102,33 +152,6 @@ export default function HomeScreen() {
     loadPrayerTimes();
     setRefreshing(false);
   }, [loadPrayerTimes]);
-
-  const handleLocationPress = async () => {
-    try {
-      const { status } = await Location.requestForegroundPermissionsAsync();
-      if (status !== 'granted') return;
-      
-      const location = await Location.getCurrentPositionAsync({});
-      let nearestCity = turkishCities[0];
-      let minDistance = Infinity;
-      
-      turkishCities.forEach((city) => {
-        const distance = Math.sqrt(
-          Math.pow(city.latitude - location.coords.latitude, 2) +
-          Math.pow(city.longitude - location.coords.longitude, 2)
-        );
-        if (distance < minDistance) {
-          minDistance = distance;
-          nearestCity = city;
-        }
-      });
-      
-      setSelectedCity(nearestCity);
-      setSelectedDistrict(nearestCity.districts[0] || 'Merkez');
-    } catch (error) {
-      console.log('Location error:', error);
-    }
-  };
 
   const isFriday = currentDate.getDay() === 5;
 
@@ -194,7 +217,7 @@ export default function HomeScreen() {
               "name": selectedCity.name,
               "address": {
                 "@type": "PostalAddress",
-                "addressCountry": "TR"
+                "addressCountry": location.countryCode || "TR"
               }
             }
           }
@@ -405,9 +428,12 @@ export default function HomeScreen() {
         visible={showCitySelector}
         onClose={() => setShowCitySelector(false)}
         onSelect={(city, district) => {
-          setSelectedCity(city);
-          if (district) setSelectedDistrict(district);
+          applyLocation(turkishCityLocation(city, district));
           setShowCitySelector(false);
+        }}
+        onUseGps={() => {
+          setShowCitySelector(false);
+          handleLocationPress();
         }}
         selectedCity={selectedCity}
         selectedDistrict={selectedDistrict}
@@ -418,6 +444,9 @@ export default function HomeScreen() {
         onClose={() => setShowSettings(false)}
         notificationsEnabled={notificationsEnabled}
         onToggleNotifications={handleNotificationToggle}
+        methodSetting={methodSetting}
+        resolvedMethod={resolvedMethod.method}
+        onChangeMethod={handleMethodChange}
       />
     </ScrollView>
     </>

@@ -86,7 +86,9 @@
     "about": "About",
     "widgetPreview": "WIDGET PREVIEW",
     "widgetNext": "Next",
-    "widgetHint": "Press and hold on your home screen to add the widget."
+    "widgetHint": "Press and hold on your home screen to add the widget.",
+    "calcMethod": "Calculation method",
+    "calcMethodAuto": "Automatic"
   },
   "qibla": {
     "title": "QIBLA COMPASS",
@@ -179,5 +181,14 @@
     "mosques": "Nearby Mosques",
     "zekat": "Zakat Calculator",
     "abdest": "Wudu Guide"
+  },
+  "location": {
+    "selectCity": "Select City",
+    "selectDistrict": "{{city}} - Select District",
+    "searchCity": "Search city...",
+    "searchDistrict": "Search district...",
+    "useGps": "Use my location",
+    "useGpsHint": "Accurate times anywhere in the world via GPS",
+    "turkeyCities": "Cities in Turkey"
   }
 }

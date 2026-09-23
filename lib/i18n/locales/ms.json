@@ -71,7 +71,9 @@
     "about": "Tentang",
     "widgetPreview": "PRATONTON WIDGET",
     "widgetNext": "Seterusnya",
-    "widgetHint": "Tekan lama pada skrin utama untuk menambah widget."
+    "widgetHint": "Tekan lama pada skrin utama untuk menambah widget.",
+    "calcMethod": "Kaedah pengiraan",
+    "calcMethodAuto": "Automatik"
   },
   "qibla": {
     "title": "KOMPAS KIBLAT",
@@ -171,5 +173,14 @@
     "mosques": "Masjid Berdekatan",
     "zekat": "Kalkulator Zakat",
     "abdest": "Panduan Wuduk"
+  },
+  "location": {
+    "selectCity": "Pilih Bandar",
+    "selectDistrict": "{{city}} - Pilih Daerah",
+    "searchCity": "Cari bandar...",
+    "searchDistrict": "Cari daerah...",
+    "useGps": "Guna lokasi saya",
+    "useGpsHint": "Waktu solat tepat di mana-mana melalui GPS",
+    "turkeyCities": "Bandar di Turki"
   }
 }

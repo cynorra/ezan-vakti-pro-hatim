@@ -71,7 +71,9 @@
     "about": "हमारे बारे में",
     "widgetPreview": "विजेट पूर्वावलोकन",
     "widgetNext": "अगला",
-    "widgetHint": "विजेट जोड़ने के लिए अपनी होम स्क्रीन पर दबाकर रखें।"
+    "widgetHint": "विजेट जोड़ने के लिए अपनी होम स्क्रीन पर दबाकर रखें।",
+    "calcMethod": "गणना विधि",
+    "calcMethodAuto": "स्वचालित"
   },
   "common": {
     "cancel": "रद्द करें",
@@ -171,5 +173,14 @@
     "mosques": "क़रीबी मस्जिदें",
     "zekat": "ज़कात कैलकुलेटर",
     "abdest": "वुज़ू गाइड"
+  },
+  "location": {
+    "selectCity": "शहर चुनें",
+    "selectDistrict": "{{city}} - ज़िला चुनें",
+    "searchCity": "शहर खोजें...",
+    "searchDistrict": "ज़िला खोजें...",
+    "useGps": "मेरा स्थान उपयोग करें",
+    "useGpsHint": "GPS से दुनिया में कहीं भी सटीक समय",
+    "turkeyCities": "तुर्की के शहर"
   }
 }

@@ -93,7 +93,9 @@
     "about": "Hakkında",
     "widgetPreview": "WIDGET ÖNİZLEME",
     "widgetNext": "Sıradaki",
-    "widgetHint": "Widget'ı eklemek için ana ekranınıza basılı tutun."
+    "widgetHint": "Widget'ı eklemek için ana ekranınıza basılı tutun.",
+    "calcMethod": "Hesaplama yöntemi",
+    "calcMethodAuto": "Otomatik"
   },
   "qibla": {
     "title": "KIBLE PUSULASI",
@@ -191,5 +193,14 @@
     "mosques": "Yakın Camiler",
     "zekat": "Zekat Hesapla",
     "abdest": "Abdest Rehberi"
+  },
+  "location": {
+    "selectCity": "Şehir Seç",
+    "selectDistrict": "{{city}} - İlçe Seç",
+    "searchCity": "Şehir ara...",
+    "searchDistrict": "İlçe ara...",
+    "useGps": "Konumumu kullan",
+    "useGpsHint": "Dünyanın her yerinde GPS ile doğru vakitler",
+    "turkeyCities": "Türkiye şehirleri"
   }
 }

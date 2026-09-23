@@ -71,7 +71,9 @@
     "about": "Haqqında",
     "widgetPreview": "VİDCET ÖNİZLƏMƏSİ",
     "widgetNext": "Növbəti",
-    "widgetHint": "Vidcet əlavə etmək üçün ana ekranda uzun basın."
+    "widgetHint": "Vidcet əlavə etmək üçün ana ekranda uzun basın.",
+    "calcMethod": "Hesablama üsulu",
+    "calcMethodAuto": "Avtomatik"
   },
   "qibla": {
     "title": "QİBLƏ KOMPASı",
@@ -171,5 +173,14 @@
     "mosques": "Yaxın məscidlər",
     "zekat": "Zəkat kalkulyatoru",
     "abdest": "Dəstəmaz bələdçisi"
+  },
+  "location": {
+    "selectCity": "Şəhər seçin",
+    "selectDistrict": "{{city}} - Rayon seçin",
+    "searchCity": "Şəhər axtar...",
+    "searchDistrict": "Rayon axtar...",
+    "useGps": "Məkanımı istifadə et",
+    "useGpsHint": "GPS ilə dünyanın hər yerində dəqiq vaxtlar",
+    "turkeyCities": "Türkiyə şəhərləri"
   }
 }

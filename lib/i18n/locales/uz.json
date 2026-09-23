@@ -71,7 +71,9 @@
     "about": "Haqida",
     "widgetPreview": "VIDJET KO'RINISHI",
     "widgetNext": "Keyingi",
-    "widgetHint": "Vidjet qo'shish uchun asosiy ekranda ushlab turing."
+    "widgetHint": "Vidjet qo'shish uchun asosiy ekranda ushlab turing.",
+    "calcMethod": "Hisoblash usuli",
+    "calcMethodAuto": "Avtomatik"
   },
   "qibla": {
     "title": "QIBLA KOMPASI",
@@ -171,5 +173,14 @@
     "mosques": "Yaqin masjidlar",
     "zekat": "Zakot kalkulyatori",
     "abdest": "Tahorat qo'llanmasi"
+  },
+  "location": {
+    "selectCity": "Shaharni tanlang",
+    "selectDistrict": "{{city}} - Tumanni tanlang",
+    "searchCity": "Shahar qidirish...",
+    "searchDistrict": "Tuman qidirish...",
+    "useGps": "Joylashuvimdan foydalanish",
+    "useGpsHint": "GPS orqali dunyoning istalgan joyida aniq vaqtlar",
+    "turkeyCities": "Turkiya shaharlari"
   }
 }
