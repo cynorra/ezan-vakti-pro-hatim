@@ -1,0 +1,783 @@
+<en-US>
+• Accurate prayer times with official methods by country (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Correct times anywhere in the world, based on your location and time zone
+• Prayer notifications fixed and scheduled with each day's own times
+• Duas, verses, hadith and the 99 Names now in your language
+• A verified verse, dua and hadith every day
+• Shared Hatim fixed: correct progress, no duplicate juz
+• Improved nearby mosques and bug fixes
+</en-US>
+<af>
+• Akkurate gebedstye met amptelike metodes per land (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Korrekte tye oral in die wêreld, gebaseer op jou ligging en tydsone
+• Gebedskennisgewings reggemaak en geskeduleer met elke dag se eie tye
+• Duas, verse, hadith en die 99 Name nou in jou taal
+• 'n Geverifieerde vers, dua en hadith elke dag
+• Gedeelde Hatim reggemaak: korrekte vordering, geen duplikaat juz nie
+• Verbeterde nabygeleë moskees en foutoplossings
+</af>
+<am>
+• በትክክለኛ ሀገራዊ ኦፊሴላዊ ዘዴዎች የተሰሉ የሶላት ሰዓቶች (ዲያኔት፣ ኬሜናግ፣ JAKIM፣ ኡም አል-ቁራ፣ ISNA...)
+• ባሉበት ቦታ እና የሰዓት ሰቅ ላይ በመመስረት በዓለም ዙሪያ ትክክለኛ ሰዓቶች
+• የሶላት ማሳወቂያዎች ተስተካክለው በእያንዳንዱ ቀን የራሳቸው ሰዓት ተይዘዋል
+• ዱዓዎች፣ አንቀጾች፣ ሀዲሶች እና 99ቱ ስሞች አሁን በእርስዎ ቋንቋ
+• በየቀኑ የተረጋገጠ አንቀጽ፣ ዱዓ እና ሀዲስ
+• የተጋራ ሃቲም ተስተካክሏል፡ ትክክለኛሂደት፣ የተባዙጁዝ የሉም
+• የተሻሻሉ በአቅራቢያ ያሉ መስጂዶች እና የሳንካስተካከያዎች
+</am>
+<ar>
+• أوقات صلاة دقيقة بالطرق الرسمية حسب الدولة (ديانيت، كيمينج، جاكيم، أم القرى، إيسنا...)
+• أوقات صحيحة في أي مكان بالعالم بناءً على موقعك ونطاقك الزمني
+• إصلاح إشعارات الصلاة وجدولة أوقات كل يوم بدقة
+• الأدعية، الآيات، الأحاديث والأسماء الحسنى أصبحت بلغتك الآن
+• آية ودعاء وحديث موثوقة كل يوم
+• إصلاح الختمة المشتركة: تقدم صحيح وبدون أجزاء مكررة
+• تحسين المساجد القريبة وإصلاح الأخطاء
+</ar>
+<az-AZ>
+• Ölkələrə görə rəsmi üsullarla dəqiq namaz vaxtları (Diyanət, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Məkanınıza və saat qurşağına əsasən dünyanın istənilən yerində düzgün vaxtlar
+• Namaz bildirişləri düzəldildi və hər günün öz vaxtı ilə planlaşdırıldı
+• Dualar, ayələr, hədislər və 99 Ad artıq sizin dilinizdə
+• Hər gün təsdiqlənmiş ayə, dua və hədis
+• Paylaşılan Xətim düzəldildi: düzgün irəliləyiş, təkrar cüz yoxdur
+• Yaxınlıqdakı məscidlər təkmilləşdirildi və səhvlər aradan qaldırıldı
+</az-AZ>
+<be>
+• Дкладныя час малітваў па афіцыйных метадах краін (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Правільны час у любой кропцы свету на аснове вашага месцазнаходжання і гадзіннага пояса
+• Апавяшчэнні аб малітве выпраўлены і запланаваны з уласным часам кожнага дня
+• Дуа, аяты, хадысы і 99 імёнаў цяпер на вашай мове
+• Правераны аят, дуа і хадыс кожны дзень
+• Агульны Хатым выпраўлены: правільны прагрэс, без дублікатаў джузоў
+• Палепшаны бліжэйшыя мячэці і выпраўлены памылкі
+</be>
+<bg>
+• Точни времена за молитва с официални методи по държави (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Правилни времена навсякъде по света, въз основа на вашето местоположение и часова зона
+• Известията за молитва са оправени и насрочени с времето за всеки ден
+• Дуа, айети, хадиси и 99-те имена вече на вашия език
+• Поверено време, дуа и хадиси всеки ден
+• Споделеният Хатим е оправим: правилен напредък, без дублиращи се джузове
+• Подобрени близки джамии и отстранени грешки
+</bg>
+<bn-BD>
+• দেশের অফিসিয়াল পদ্ধতি অনুযায়ী সঠিক নামাজের সময় (দিয়ানাত, কেমেনাগ, জাকিম, উম্মুল কুরা, ইসনা...)
+• আপনার অবস্থান এবং টাইম জোন অনুযায়ী বিশ্বের যেকোনো স্থানে সঠিক সময়
+• নামাজের নোটিফিকেশন ঠিক করা হয়েছে এবং প্রতিদিনের নিজস্ব সময়ে নির্ধারিত
+• দোয়া, আয়াত, হাদিস এবং ৯৯টি নাম এখন আপনার ভাষায়
+• প্রতিদিন একটি যাচাইকৃত আয়াত, দোয়া এবং হাদিস
+• শেয়ারকৃত খাতিম ঠিক করা হয়েছে: সঠিক অগ্রগতি, কোনো দ্বিগুণ পারা নেই
+• আশেপাশের মসজিদ উন্নত করা হয়েছে এবং বাগ ঠিক করা হয়েছে
+</bn-BD>
+<ca>
+• Horaris de rés precisos amb mètodes oficials per país (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Horaris correctes a qualsevol lloc del món, segons la vostra ubicació i zona horària
+• Notificacions de rés arreglades i programades amb els horaris de cada dia
+• Dues, versos, hadits i els 99 Noms ara al vostre idioma
+• Un vers, dua i hadit verificats cada dia
+• Hatim compartit arreglat: progrés correcte, sense juz duplicats
+• Millora de mesquites properes i correcció d'errors
+</ca>
+<cs-CZ>
+• Přesné časy modliteb s oficiálními metodami podle zemí (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Správné časy kdekoli na světě na základě vaší polohy a časového pásma
+• Oznámení o modlitbách opravena a naplánována s časy pro každý den
+• Duá, verše, hadísy a 99 jmen nyní ve vašem jazyce
+• Ověřený verš, duá a hadís každý den
+• Sdílený Hatim opraven: správný postup, žádné duplicitní džúzy
+• Vylepšené okolní mešity a opravy chyb
+</cs-CZ>
+<da-DK>
+• Nøjagtige bønnetider med officielle metoder pr. land (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Korrekte tider over hele verden baseret på din placering og tidszone
+• Bønnenotifikationer er rettet og planlagt med hver dags egne tider
+• Duaer, vers, hadith og de 99 Navne nu på dit sprog
+• Et verificeret vers, dua og hadith hver dag
+• Delt Hatim rettet: korrekt fremskridt, ingen dublerede juz
+• Forbedrede nærliggende moskeer og fejlrettelser
+</da-DK>
+<de-DE>
+• Genaue Gebetszeiten nach der offiziellen Methode jedes Landes (Diyanet, Kemenag, JAKIM, ISNA...)
+• Richtige Zeiten weltweit nach Standort und Zeitzone
+• Gebetsbenachrichtigungen repariert, täglich mit den Zeiten des Tages
+• Bittgebete, Verse, Hadithe und die 99 Namen in Ihrer Sprache
+• Täglich ein geprüfter Vers, ein Bittgebet und ein Hadith
+• Gemeinsamer Hatim repariert: richtiger Fortschritt, kein doppelter Juz
+• Moscheen in der Nähe verbessert, Fehlerbehebungen
+</de-DE>
+<el-GR>
+• Ακριβείς ώρες προσευχής με επίσημες μεθόδους ανά χώρα (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Σωστές ώρες οπουδήποτε στον κόσμο, βάσει της τοποθεσίας και της ζώνης ώρας σας
+• Οι ειδοποιήσεις προσευχής διορθώθηκαν και προγραμματίστηκαν με τις ώρες κάθε ημέρας
+• Ντουά, στίχοι, χαντίθ και τα 99 Ονόματα τώρα στη γλώσσα σας
+• Ένας επαληθευμένος στίχος, ντουά και χαντίθ κάθε μέρα
+• Διόρθωση κοινού Hatim: σωστή πρόοδος, χωρίς διπλό juz
+• Βελτιωμένα κοντινά τζαμιά και διορθώσεις σφαλμάτων
+</el-GR>
+<en-AU>
+• Accurate prayer times with official methods by country (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Correct times anywhere in the world, based on your location and time zone
+• Prayer notifications fixed and scheduled with each day's own times
+• Duas, verses, hadith and the 99 Names now in your language
+• A verified verse, dua and hadith every day
+• Shared Hatim fixed: correct progress, no duplicate juz
+• Improved nearby mosques and bug fixes
+</en-AU>
+<en-CA>
+• Accurate prayer times with official methods by country (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Correct times anywhere in the world, based on your location and time zone
+• Prayer notifications fixed and scheduled with each day's own times
+• Duas, verses, hadith and the 99 Names now in your language
+• A verified verse, dua and hadith every day
+• Shared Hatim fixed: correct progress, no duplicate juz
+• Improved nearby mosques and bug fixes
+</en-CA>
+<en-GB>
+• Accurate prayer times with official methods by country (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Correct times anywhere in the world, based on your location and time zone
+• Prayer notifications fixed and scheduled with each day's own times
+• Duas, verses, hadith and the 99 Names now in your language
+• A verified verse, dua and hadith every day
+• Shared Hatim fixed: correct progress, no duplicate juz
+• Improved nearby mosques and bug fixes
+</en-GB>
+<en-IN>
+• Accurate prayer times with official methods by country (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Correct times anywhere in the world, based on your location and time zone
+• Prayer notifications fixed and scheduled with each day's own times
+• Duas, verses, hadith and the 99 Names now in your language
+• A verified verse, dua and hadith every day
+• Shared Hatim fixed: correct progress, no duplicate juz
+• Improved nearby mosques and bug fixes
+</en-IN>
+<en-SG>
+• Accurate prayer times with official methods by country (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Correct times anywhere in the world, based on your location and time zone
+• Prayer notifications fixed and scheduled with each day's own times
+• Duas, verses, hadith and the 99 Names now in your language
+• A verified verse, dua and hadith every day
+• Shared Hatim fixed: correct progress, no duplicate juz
+• Improved nearby mosques and bug fixes
+</en-SG>
+<en-ZA>
+• Accurate prayer times with official methods by country (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Correct times anywhere in the world, based on your location and time zone
+• Prayer notifications fixed and scheduled with each day's own times
+• Duas, verses, hadith and the 99 Names now in your language
+• A verified verse, dua and hadith every day
+• Shared Hatim fixed: correct progress, no duplicate juz
+• Improved nearby mosques and bug fixes
+</en-ZA>
+<es-419>
+• Horarios de oración precisos con métodos oficiales (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Horarios correctos en todo el mundo según tu ubicación y zona horaria
+• Notificaciones de oración corregidas y programadas con los horarios diarios
+• Súplicas, aleyas, hadices y los 99 nombres ahora en tu idioma
+• Una aleya, súplica y hadiz verificados cada día
+• Jatim compartido corregido: progreso exacto y sin juz duplicados
+• Mezquitas cercanas mejoradas y corrección de errores
+</es-419>
+<es-ES>
+• Horarios de oración precisos con métodos oficiales (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Horarios correctos en todo el mundo según tu ubicación y zona horaria
+• Notificaciones de oración corregidas y programadas con los horarios diarios
+• Súplicas, aleyas, hadices y los 99 nombres ahora en tu idioma
+• Una aleya, súplica y hadiz verificados cada día
+• Jatim compartido corregido: progreso exacto y sin juz duplicados
+• Mezquitas cercanas mejoradas y corrección de errores
+</es-ES>
+<es-US>
+• Horarios de oración precisos con métodos oficiales (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Horarios correctos en todo el mundo según tu ubicación y zona horaria
+• Notificaciones de oración corregidas y programadas con los horarios diarios
+• Súplicas, aleyas, hadices y los 99 nombres ahora en tu idioma
+• Una aleya, súplica y hadiz verificados cada día
+• Jatim compartido corregido: progreso exacto y sin juz duplicados
+• Mezquitas cercanas mejoradas y corrección de errores
+</es-US>
+<et>
+• Täpsed palveajad riigipõhiste ametlike meetoditega (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Õiged ajad kõikjal maailmas teie asukoha ja ajavööndi alusel
+• Palvete teatised on parandatud ja ajastatud iga päeva õigete aegadega
+• Duad, salmid, hadithid ja 99 nime nüüd teie keeles
+• Kontrollitud salm, dua ja hadith iga päev
+• Jagatud Hatim parandatud: õige edenemine, ei mingeid duplikaatjuseid
+• Parandatud lähedal asuvad mošeed ja veaparandused
+</et>
+<eu-ES>
+• Otoitz ordu zehatzak herrialdeko metodo ofizialekin (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Ordu zuzenak mundu osoan, zure kokapenaren eta ordu-zonaren arabera
+• Otoitz jakinarazpenak konpondu dira eta egun bakoitzeko orduekin programatu
+• Duak, bertsoak, hadithak eta 99 Izenak orain zure hizkuntzan
+• Egiaztatutako bertso, dua eta hadith bat egunero
+• Hatim partekatua konponduta: aurrerapen zuzena, juz bikoizturik gabe
+• Inguruko meskita hobetuak eta akatsen konponketak
+</eu-ES>
+<fa>
+• اوقات شرعی دقیق با روش‌های رسمی کشورها (دیانت، کمنگ، جاکیم، ام‌القری، ایسنا...)
+• اوقات صحیح در سراسر جهان بر اساس موقعیت مکانی و منطقه زمانی شما
+• اصلاح اعان‌های نماز و تنظیم با اوقات دقیق هر روز
+• دعاها، آیات، احادیث و ۹۹ اسم شریف اکنون به زبان شما
+• یک آیه، دعا و حدیث تأییدشده در هر روز
+• اصلاح ختم مشترک: پیشرفت صحیح، بدون جزء تکراری
+• بهبود مساجد نزدیک و رفع اشکالات
+</fa>
+<fa-AE>
+• اوقات شرعی دقیق با روش‌های رسمی کشورها (دیانت، کمنگ، جاکیم، ام‌القری، ایسنا...)
+• اوقات صحیح در سراسر جهان بر اساس موقعیت مکانی و منطقه زمانی شما
+• اصلاح اعان‌های نماز و تنظیم با اوقات دقیق هر روز
+• دعاها، آیات، احادیث و ۹۹ اسم شریف اکنون به زبان شما
+• یک آیه، دعا و حدیث تأییدشده در هر روز
+• اصلاح ختم مشترک: پیشرفت صحیح، بدون جزء تکراری
+• بهبود مساجد نزدیک و رفع اشکالات
+</fa-AE>
+<fa-AF>
+• اوقات شرعی دقیق با روش‌های رسمی کشورها (دیانت، کمنگ، جاکیم، ام‌القری، ایسنا...)
+• اوقات صحیح در سراسر جهان بر اساس موقعیت مکانی و منطقه زمانی شما
+• اصلاح اعان‌های نماز و تنظیم با اوقات دقیق هر روز
+• دعاها، آیات، احادیث و ۹۹ اسم شریف اکنون به زبان شما
+• یک آیه، دعا و حدیث تأییدشده در هر روز
+• اصلاح ختم مشترک: پیشرفت صحیح، بدون جزء تکراری
+• بهبود مساجد نزدیک و رفع اشکالات
+</fa-AF>
+<fa-IR>
+• اوقات شرعی دقیق با روش‌های رسمی کشورها (دیانت، کمنگ، جاکیم، ام‌القری، ایسنا...)
+• اوقات صحیح در سراسر جهان بر اساس موقعیت مکانی و منطقه زمانی شما
+• اصلاح اعان‌های نماز و تنظیم با اوقات دقیق هر روز
+• دعاها، آیات، احادیث و ۹۹ اسم شریف اکنون به زبان شما
+• یک آیه، دعا و حدیث تأییدشده در هر روز
+• اصلاح ختم مشترک: پیشرفت صحیح، بدون جزء تکراری
+• بهبود مساجد نزدیک و رفع اشکالات
+</fa-IR>
+<fi-FI>
+• Tarkat rukousajat maiden virallisilla menetelmillä (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Oikeat ajat kaikkialla maailmassa sijaintisi ja aikavyöhykkeesi mukaan
+• Rukoilmoitukset korjattu ja ajastettu kunkin päivän omilla ajoilla
+• Duaet, säkeet, hadithit ja 99 nimeä nyt kielelläsi
+• Tarkistettu säe, dua ja hadith joka päivä
+• Jaettu Hatim korjattu: oikea edistyminen, ei kaksois-juzia
+• Parannetut lähellä olevat moskeijat ja virheenkorjaukset
+</fi-FI>
+<fil>
+• Tumpak na oras ng pagdarasal gamit ang opisyal na paraan ng bawat bansa (Diyanet, Kemenag, JAKIM, ISNA...)
+• Tamang oras saan man sa mundo ayon sa iyong lokasyon
+• Naayos ang mga abiso ng adhan, nakatakda sa oras ng bawat araw
+• Mga dua, ayat, hadith at 99 na Pangalan sa iyong wika
+• Beripikadong ayat, dua at hadith araw-araw
+• Naayos ang Shared Hatim: tamang progreso, walang dobleng juz
+• Pinahusay ang malalapit na masjid at mga pag-aayos
+</fil>
+<fr-CA>
+• Horaires de prière précis selon la méthode officielle de chaque pays (Diyanet, Kemenag, JAKIM, ISNA...)
+• Horaires exacts partout dans le monde selon votre position
+• Notifications de prière corrigées, programmées chaque jour
+• Douas, versets, hadiths et 99 Noms dans votre langue
+• Un verset, une doua et un hadith vérifiés chaque jour
+• Hatim partagé corrigé : progression juste, pas de juz en double
+• Mosquées proches améliorées, corrections de bugs
+</fr-CA>
+<fr-FR>
+• Horaires de prière précis selon la méthode officielle de chaque pays (Diyanet, Kemenag, JAKIM, ISNA...)
+• Horaires exacts partout dans le monde selon votre position
+• Notifications de prière corrigées, programmées chaque jour
+• Douas, versets, hadiths et 99 Noms dans votre langue
+• Un verset, une doua et un hadith vérifiés chaque jour
+• Hatim partagé corrigé : progression juste, pas de juz en double
+• Mosquées proches améliorées, corrections de bugs
+</fr-FR>
+<gl-ES>
+• Horarios de oración precisos con métodos oficiais por país (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Horarios correctos en calquera parte do mundo segundo a túa localización e zona horaria
+• Notificacións de oración arranxadas e programadas cos horarios de cada día
+• Duas, versos, hadices e os 99 Nomes agora no teu idioma
+• Un verso, dua e hadiz verificados cada día
+• Hatim compartido arranxado: progreso correcto, sen juz duplicados
+• Mesquitas próximas melloradas e corrección de erros
+</gl-ES>
+<gu>
+• દેશ મુજબ સત્તાવાર પદ્ધતિઓ સાથે સચોટ નમાઝના સમય (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• તમારા સ્થાન અને સમય ઝોનના આધારે દુનિયામાં ગમે ત્યાં સાચા સમય
+• નમાઝની સૂચનાઓ સુધારવામાં આવી અને દરેક દિવસના પોતાના સમય સાથે સુનિશ્ચિત
+• દુઆઓ, આયાતો, હદીસો અને 99 નામ હવે તમારી ભાષામાં
+• દરરોજ એક ચકાસાયેલ આયાત, દુઆ અને હદીસ
+• શેર કરેલ હાતિમ સુધારાયેલ: સાચી પ્રગતિ, કોઈ ડુપ્લિકેટ જુઝ નહીં
+• નજીકની મસ્જિદો સુધારાઈ અને બગ્સ ફિક્સ થયા
+</gu>
+<hi-IN>
+• देश की आधिकारिक विधियों के अनुसार सटीक नमाज़ का समय (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• आपके स्थान और समय क्षेत्र के आधार पर दुनिया में कहीं भी सही समय
+• नमाज़ की सूचनाएं ठीक की गईं और प्रत्येक दिन के अपने समय पर निर्धारित
+• दुआएं, आयतें, हदीस और 99 नाम अब आपकी भाषा में
+• हर दिन एक सत्यापित आयत, दुआ और हदीस
+• साझा खातिम ठीक किया गया: सही प्रगति, कोई डुप्लिकेट जुज़ नहीं
+• आस-पास की मस्जिदें सुधारी गईं और बग्स ठीक किए गए
+</hi-IN>
+<hr>
+• Točna vremena molitve uz službene metode po zemljama (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Točna vremena bilo gdje u svijetu, na temelju vaše lokacije i vremenske zone
+• Obavijesti o molitvi ispravljene i zakazane s vremenima svakog dana
+• Dove, ajeti, hadisi i 99 imena sada na vašem jeziku
+• Provjereni ajet, dova i hadis svaki dan
+• Dijeljeni Hatim ispravljen: točan napredak, bez duplih džuzova
+• Poboljšane obližnje džamije i ispravci grešaka
+</hr>
+<hu-HU>
+• Pontos imádkozási idők országonkénti hivatalos módszerekkel (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Helyes idők a világ bármely pontján, a helyzet és az időzóna alapján
+• Imádkozási értesítések javítva és az egyes napok saját idejére időzítve
+• Duák, versek, hadíszok és a 99 név mostantól az Ön nyelvén
+• Ellenőrzött vers, dua és hadísz minden nap
+• Megosztott Hatim javítva: helyes előrehaladás, nincsenek duplikált Dzsúzok
+• Javított közeli mecsetek és hibajavítások
+</hu-HU>
+<hy-AM>
+• Աղոթքի ճշգրիտ ժամեր ըստ երկրների պաշտոնական մեթոդների (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Ճիշտ ժամեր աշխարհի ցանկացած կետում՝ հիմնված ձեր գտնվելու վայրի և ժամային գոտու վրա
+• Աղոթքի ծանուցումները շտկված են և պլանավորված յուրաքանչյուր օրվա սեփական ժամերով
+• Դուաներ, այաթներ, հադիսներ և 99 Անուններն այժմ ձեր լեզվով
+• Ստուգված այաթ, դուա և հադիս ամեն օր
+• Ընդհանուր Հաթիմը շտկված է. ճիշտ առաջընթաց, առանց կրկնօրինակ ջուզերի
+• Բարելավված մոտակա մզկիթներ և սխալների շտկում
+</hy-AM>
+<id>
+• Jadwal salat akurat dengan metode resmi sesuai negara (Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Waktu salat tepat di mana pun sesuai lokasi dan zona waktu Anda
+• Notifikasi azan diperbaiki dan dijadwalkan dengan waktu setiap hari
+• Doa, ayat, hadis dan Asmaul Husna kini dalam bahasa Anda
+• Ayat, doa dan hadis terverifikasi setiap hari
+• Khataman bersama diperbaiki: progres benar, juz tidak bisa diambil dua kali
+• Masjid terdekat lebih baik dan perbaikan bug
+</id>
+<is-IS>
+• Nákvæmir bænartímar með opinberum aðferðum eftir löndum (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Réttir tímar hvar sem er í heiminum, miðað við staðsetningu þína og tímabelti
+• Bænatilkyndingar lagaðar og tímasettar með tíma hvers dags fyrir sig
+• Dúar, vísur, hadith og 99 nöfnin nú á þínu tungumáli
+• Staðfest vísa, dúa og hadith á hverjum degi
+• Sameiginlegur Hatim lagaður: rétt framvinda, engin tvítekinn júz
+• Bættar nálægar moskur og villuleiðréttingar
+</is-IS>
+<it-IT>
+• Orari di preghiera accurati con metodi ufficiali per paese (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Orari corretti ovunque nel mondo, in base alla tua posizione e fuso orario
+• Notifiche di preghiera corrette e programmate con gli orari di ciascun giorno
+• Dua, versi, hadith e i 99 Nomi ora nella tua lingua
+• Un versetto, dua e hadith verificati ogni giorno
+• Hatim condiviso corretto: progresso corretto, nessun juz duplicato
+• Moschee vicine migliorate e correzione di bug
+</it-IT>
+<iw-IL>
+• זמני תפילה מדויקים בשיטות רשמיות לפי מדינה (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• זמנים נכונים בכל מקום בעולם, על בסיס מיקום ואזור הזמן שלך
+• התראות תפילה תוקנו ותוזמנו לפי השעות של כל יום ויום
+• דואות, פסוקים, חדית'ים ו-99 השמות כעת בשפה שלך
+• פסוק, דואה וחדית' מאומתים בכל יום
+• חאתם משותף תוקן: התקדמות נכונה, ללא ג'וז כפול
+• מסגדים קרובים משופרים ותיקוני באגים
+</iw-IL>
+<ja-JP>
+• 国別の公式計算方法による正確な礼拝時刻（Diyanet、Kemenag、JAKIM、Umm al-Qura、ISNA...）
+• 現在地とタイムゾーンに基づき、世界中どこでも正確な時刻
+• 礼拝通知が修正され、日ごとの時刻に合わせてスケジュール設定
+• ドゥア、聖句、ハディース、99の美名があなたの言語に対応
+• 毎日厳選された聖句、ドゥア、ハディースをお届け
+• 共有ハティムの修正：正しい進捗、重複したジュズなし
+• 近隣モスクの改善とバグ修正
+</ja-JP>
+<ka-GE>
+• ლოცვის ზუსტი დრო ქვეყნების ოფიციალური მეთოდებით (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• სწორი დრო მსოფლიოსების ნებისმიერ წერტილში, თქვენი მდებარეობისა და სარტყლის მიხედვით
+• ლოცვის შეტყობინებები გასწორებულია და განრიგებულია თითოეული დღის დროით
+• დუები, აიათები, ჰადისები და 99 სახელი ახლა თქვენს ენაზეა
+• ყოველდღე გადამოწმებული აიათი, დუა და ჰადისი
+• გაზიარებული ხათიმი გასწორებულია: სწორი პროგრესი, ჯუზების გაორების გარეშე
+• გაუმჯობესებული ახლომდებარე მეჩეთები და შეცდომების გასწორება
+</ka-GE>
+<kk>
+• Елдердің ресми әдістерімен дұрыс намаз уақыттары (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Орналасқан жеріңіз бен уақыт белдеуіңізге сәйкес әлемнің кез келген нүктесінде дұрыс уақыттар
+• Намаз хабарламалары түзетіліп, әр күннің өз уақытымен жоспарланды
+• Дұғалар, аяттар, хадистер және 99 есім енді сіздің тіліңізде
+• Күн сайын тексерілген аят, дұға және хадис
+• Ортақ хатым түзетілді: дұрыс ілгерілеу, қайталанған жүздер жоқ
+• Жақын маңдағы мешіттер жақсартылып, қателер түзетілді
+</kk>
+<km-KH>
+• ពេលម៉ោងថ្វាយបង្គំត្រឹមត្រូវតាមវិធីផ្លូវការតាមប្រទេសនីមួយៗ (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• ពេលម៉ោងត្រឹមត្រូវគ្រប់ទីកន្លែងលើពិភពលោក ដោយផ្អែកលើទីតាំង និងតំបន់ម៉ោងរបស់អ្នក
+• ការជូនដំណឹងម៉ោងថ្វាយបង្គំត្រូវបានកែសម្រួល និងកំណត់ពេលតាមម៉ោងរបស់ថ្ងៃនីមួយៗ
+• ឌូអា ខគម្ពីរ ហាឌីស និងឈ្មោះទាំង៩៩ ឥឡូវមានជាភាសារបស់អ្នកហើយ
+• ខគម្ពីរ ឌូអា និងហាឌីសដែលបានផ្ទៀងផ្ទាត់ជារៀងរាល់ថ្ងៃ
+• កែសម្រួលហាទីមរួមគ្នា៖ ដំណើរការត្រឹមត្រូវ គ្មានជូសស្복គ្នា
+• បានកែលម្អម៉ាស្អីដនៅជិត និងជួសជុលកំហុសឆ្គង
+</km-KH>
+<kn-IN>
+• ದೇಶವಾರು ಅಧಿಕೃತ ಪದ್ಧತಿಗಳೊಂದಿಗೆ ನಿಖರವಾದ ನಮಾಜ್ ಸಮಯ (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• ನಿಮ್ಮ ಸ್ಥಳ ಮತ್ತು ಸಮಯ ವಲಯದ ಆಧಾರದ ಮೇಲೆ ಜಗತ್ತಿನಲ್ಲಿ ಎಲ್ಲಿಯಾದರೂ ಸರಿಯಾದ ಸಮಯ
+• ನಮಾಜ್ ಅಧಿಸೂಚನೆಗಳನ್ನು ಸರಿಪಡಿಸಲಾಗಿದೆ ಮತ್ತು ಪ್ರತಿ ದಿನದ ಸ್ವಂತ ಸಮಯದೊಂದಿಗೆ ನಿಗದಿಪಡಿಸಲಾಗಿದೆ
+• ದುವಾಗಳು, ವಚನಗಳು, ಹದೀಸ್‌ಗಳು ಮತ್ತು 99 ಹೆಸರುಗಳು ಈಗ ನಿಮ್ಮ ಭಾಷೆಯಲ್ಲಿ
+• ಪ್ರತಿದಿನ ಪರಿಶೀಲಿಸಿದ ಆಯತ್, ದುವಾ ಮತ್ತು ಹದೀಸ್
+• ಹಂಚಿದ ಖತೀಮ್ ಸರಿಪಡಿಸಲಾಗಿದೆ: ಸರಿಯಾದ ಪ್ರಗತಿ, ಯಾವುದೇ ನಕಲಿ ಜುಝ್ ಇಲ್ಲ
+• ಸುಧಾರಿತ ಹತ್ತಿರದ ಮಸೀದಿಗಳು ಮತ್ತು ದೋಷ ನಿವಾರಣೆಗಳು
+</kn-IN>
+<ko-KR>
+• 국가별 공식 계산법에 따른 정확한 기도 시간(Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• 위치와 시간대를 바탕으로 전 세계 어디서나 정확한 시간
+• 기도 알림이 수정되었으며 매일의 시간에 맞춰 예약됨
+• 두아, 구절, 하디스 및 99가지 아름다운 이름들이 이제 한국어로 제공
+• 매일 검증된 구절, 두아, 하디스 제공
+• 공유 하팀 수정됨: 올바른 진척도, 중복된 주즈 없음
+• 주변 모스크 기능 개선 및 버그 수정
+</ko-KR>
+<ky-KG>
+• Өлкөлөрдүн расмий ыкмалары менен так намаз убакыттары (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Жайгашкан жериңизге жана убакыт алкагыңызга жараша дүйнөнүн каалаган жеринде туура убакыттар
+• Намаз эскертүүлөрү оңдолуп, ар бир күндүн өз убактысына пландаштырылды
+• Дубалар, аяттар, хадистер жана 99 ысым эми сиздин тилиңизде
+• Күн сайын текшерилген аят, дуба жана хадис
+• Бөлүшүлгөн хатым оңдолду: туура прогресс, кайталанган жүз жок
+• Жакынкы мечиттер жакшыртылып, каталар оңдолду
+</ky-KG>
+<lo-LA>
+• ເວລາລະໝາດທີ່ຖືກຕ້ອງດ້ວຍວິທີການທາງການຕາມແຕ່ລະປະເທດ (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• ເວລາທີ່ຖືກຕ້ອງທຸກບ່ອນໃນໂລກ ໂດຍອີງຕາມສະຖານທີ່ ແລະ ເຂດເວລາຂອງທ່ານ
+• ການແຈ້ງເຕືອນລະໝາດຖືກແກ້ໄຂ ແລະ ຕັ້ງເວລາຕາມເວລາຂອງແຕ່ລະມື້ແລ້ວ
+• ດຸອາ, ໂອງການ, ຫະດີສ ແລະ 99 ພຣະນາມຢູ່ໃນພາສາຂອງທ່ານແລ້ວ
+• ໂອງການ, ດຸອາ ແລະ ຫະດີສທີ່ກວດສອບແລ້ວທຸກໆມື້
+• ແກ້ໄຂຮາຕິມຮ່ວມກັນ: ຄວາມຄືບໜ້າຖືກຕ້ອງ, ບໍ່ມີຈຸສຊ້ຳກັນ
+• ປັບປຸງມัสຍິດໃກ້ຄຽງ ແລະ ແກ້ໄຂຂໍ້ຜິດພາດ
+</lo-LA>
+<lt>
+• Tikslus maldos laikas pagal oficialius šalių metodus (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Teisingas laikas bet kurioje pasaulio vietoje pagal jūsų vietą ir laiko juostą
+• Pataisyti maldos pranešimai, suplanuoti pagal kiekvienos dienos laiką
+• Maldos, eilutės, hadisai ir 99 vardai dabar jūsų kalba
+• Patvirtinta eilutė, malda ir hadisas kasdien
+• Pataisytas bendras Hatim: teisinga eiga, jokių pasikartojančių juz
+• Patobulintos netoliese esančios mečetės ir ištaisytos klaidos
+</lt>
+<lv>
+• Precīzs lūgšanu laiks ar oficiālajām valstu metodēm (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Pareizs laiks jebkurā pasaules malā, pamatojoties uz jūsu atrašanās vietu un laika joslu
+• Lūgšanu paziņojumi salaboti un ieplānoti ar katras dienas savu laiku
+• Duas, panti, hadisi un 99 vārdi tagad jūsu valodā
+• Katru dienu pārbaudīts pants, dua un hadiss
+• Koplietotais Hatim salabots: pareizs progress, nav dubultu juz
+• Uzlabotas tuvumā esošās mošejas un kļūdu labojumi
+</lv>
+<mk-MK>
+• Точни времиња за молитва со официјални методи по земја (Дијанет, Кеменаг, ЈАКИМ, Ум ал-Кура, ИСНА...)
+• Точни времиња ширум светот, врз основа на вашата локација и временска зона
+• Известувањата за молитва се поправени и закажани со сопствените времиња за секој ден
+• Дуи, ајети, хадиси и 99-те имиња сега на вашиот јазик
+• Проет ајет, дуа и хадис секој ден
+• Поправен споделен Хатим: точен напредок, без дупликати јуз
+• Подобрени блиски џамии и поправки на грешки
+</mk-MK>
+<ml-IN>
+• ഔദ്യോഗിക രീതികൾ പ്രകാരമുള്ള കൃത്യമായ നമസ്കാര സമയങ്ങൾ (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• നിങ്ങളുടെ സ്ഥാനവും സമയമേഖലയും അനുസരിച്ച് ലോകത്തെവിടെയും കൃത്യമായ സമയം
+• ഓരോ ദിവസത്തെയും സമയം അനുസരിച്ച് നമസ്കാര അറിയിപ്പുകൾ ശരിയാക്കി
+• ദുആകളും ആയത്തുകളും ഹദീസുകളും 99 നാമങ്ങളും നിങ്ങളുടെ ഭാഷയിൽ
+• ദിവസവും പരിശോധിച്ച ഒരു ആയത്തും ദുആയും ഹദീസും
+• പങ്കിട്ട ഖത്മ് ശരിയാക്കി: കൃത്യമായ പുരോഗതി, ആവർത്തനമില്ല
+• അടുത്തുള്ള പള്ളികൾ മെച്ചപ്പെടുത്തി, ബഗുകൾ പരിഹരിച്ചു
+</ml-IN>
+<mn-MN>
+• Улс орны албан ёсны аргуудаар тогтоосон залбирлын цаг (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Байршил, цагийн бүсэд үндэслэн дэлхийн аль ч өнцөгт зөв цаг
+• Залбирлын мэдэгдлийг өдөр бүрийн цагт тохируулан засаж, төлөвлөсөн
+• Дуа, шүлэг, хадис болон Аллахын 99 нэр одоо таны хэл дээр
+• Өдөр бүр баталгаажсан шүлэг, дуа болон хадис
+• Хатимын хуваалт засагдсан: явц зөв, давхардсан жуз байхгүй
+• Ойролцоох сүмүүдийг сайжруулж, алдааг зассан
+</mn-MN>
+<mr-IN>
+• देशानुसार अधिकृत पद्धतींसह अचूक नमाज वेळा (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• तुमचे स्थान आणि वेळ क्षेत्रावर आधारित जगात कुठेही अचूक वेळा
+• नमाज सूचना सुधारित केल्या आणि प्रत्येक दिवसाच्या वेळेनुसार नियोजित
+• दुआ, कुराण वचने, हदीस आणि ९९ नावे आता तुमच्या भाषेत
+• दररोज एक सत्य वचने, दुआ आणि हदीस
+• सामायिक हातिम सुधारित: योग्य प्रगती, कोणतेही डुप्लिकेट जुझ नाही
+• जवळील मशिदी सुधारित आणि बग फिक्स
+</mr-IN>
+<ms>
+• Waktu solat tepat dengan kaedah rasmi mengikut negara (JAKIM, Kemenag, Umm al-Qura, ISNA...)
+• Waktu solat betul di mana-mana mengikut lokasi dan zon waktu anda
+• Notifikasi azan dibaiki dan dijadualkan mengikut waktu setiap hari
+• Doa, ayat, hadis dan Asmaul Husna kini dalam bahasa anda
+• Ayat, doa dan hadis yang disahkan setiap hari
+• Khatam bersama dibaiki: kemajuan tepat, juzuk tidak boleh diambil dua kali
+• Masjid berdekatan lebih baik dan pembaikan pepijat
+</ms>
+<ms-MY>
+• Waktu solat tepat dengan kaedah rasmi mengikut negara (JAKIM, Kemenag, Umm al-Qura, ISNA...)
+• Waktu solat betul di mana-mana mengikut lokasi dan zon waktu anda
+• Notifikasi azan dibaiki dan dijadualkan mengikut waktu setiap hari
+• Doa, ayat, hadis dan Asmaul Husna kini dalam bahasa anda
+• Ayat, doa dan hadis yang disahkan setiap hari
+• Khatam bersama dibaiki: kemajuan tepat, juzuk tidak boleh diambil dua kali
+• Masjid berdekatan lebih baik dan pembaikan pepijat
+</ms-MY>
+<my-MM>
+• Accurate prayer times with official methods by country (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Correct times anywhere in the world, based on your location and time zone
+• Prayer notifications fixed and scheduled with each day's own times
+• Duas, verses, hadith and the 99 Names now in your language
+• A verified verse, dua and hadith every day
+• Shared Hatim fixed: correct progress, no duplicate juz
+• Improved nearby mosques and bug fixes
+</my-MM>
+<ne-NP>
+• देशअनुसार आधिकारिक विधिहरूसँग सटीक नमाजको समय (दियनत, केमेनाग, जाकिम, उम्म अल-कुरा, इसना...)
+• तपाईंको स्थान र समय क्षेत्रको आधारमा संसारभरि सही समय
+• नमाजको सूचनाहरू ठीक गरियो र प्रत्येक दिनको समयसँग तालिकाबद्ध
+• दुआ, आयत, हदीस र ९९ नामहरू अब तपाईंको भाषामा
+• हरेक दिन एक प्रमाणित आयत, दुआ र हदीस
+• साझा हातिम ठीक गरियो: सही प्रगति, दोहोरो जुज छैन
+• सुधारिएको नजिकैका मस्जिदहरू र बगहरू समाधान गरियो
+</ne-NP>
+<nl-NL>
+• Accurate gebedstijden met officiële landmethoden (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Correcte tijden overal ter wereld, op basis van uw locatie en tijdzone
+• Gebedsmeldingen opgelost en ingepland met de tijden van elke dag
+• Dua's, verzen, hadith en de 99 Schone Namen nu in uw taal
+• Elke dag een geverifieerd vers, dua en hadith
+• Gedeelde Hatim opgelost: juiste voortgang, geen dubbele juz
+• Verbeterde nabijgelegen moskeeën en bugfixes
+</nl-NL>
+<no-NO>
+• Nøyaktige bønnetider med offisielle metoder per land (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Korrekte tider over hele verden, basert på din plassering og tidssone
+• Bønnevarsler er fiksert og planlagt med hver dags egne tider
+• Duaer, vers, hadith og de 99 navnene er nå på ditt språk
+• Et verifisert vers, dua og hadith hver dag
+• Delt Hatim fiksert: korrekt fremgang, ingen dupliserte juz
+• Forbedrede nærliggende moskeer og feilrettinger
+</no-NO>
+<pa>
+• ਦੇਸ਼ ਦੇ ਅਧਿਕਾਰਤ ਤਰੀਕਿਆਂ ਨਾਲ ਸਹੀ ਨਮਾਜ਼ ਦਾ ਸਮਾਂ (ਦਿਆਨੇਤ, ਕੇਮੇਨਾਗ, ਜਾਕਿਮ, ਉੰਮ ਅਲ-ਕੁਰਾ, ਇਸਨਾ...)
+• ਤੁਹਾਡੇ ਟਿਕਾਣੇ ਅਤੇ ਸਮਾਂ ਖੇਤਰ ਦੇ ਆਧਾਰ 'ਤੇ ਦੁਨੀਆ ਭਰ ਵਿੱਚ ਸਹੀ ਸਮਾਂ
+• ਨਮਾਜ਼ ਦੀਆਂ ਸੂਚਨਾਵਾਂ ਠੀਕ ਕੀਤੀਆਂ ਗਈਆਂ ਅਤੇ ਹਰ ਦਿਨ ਦੇ ਸਮੇਂ ਨਾਲ ਤੈਅ ਕੀਤੀਆਂ ਗਈਆਂ
+• ਦੁਆਵਾਂ, ਆਇਤਾਂ, ਹਦੀਸ ਅਤੇ 99 ਨਾਮ ਹੁਣ ਤੁਹਾਡੀ ਭਾਸ਼ਾ ਵਿੱਚ
+• ਹਰ ਦਿਨ ਇੱਕ ਤਸਦੀਕਸ਼ੁਦਾ ਆਇਤ, ਦੁਆ ਅਤੇ ਹਦੀਸ
+• ਸਾਂਝਾ ਹਾਤਮ ਠੀਕ ਕੀਤਾ ਗਿਆ: ਸਹੀ ਤਰक्की, ਕੋਈ ਡੁਪਲੀਕੇਟ ਜੁਜ਼ ਨਹੀਂ
+• ਸੁਧਾਰੀਆਂ ਗਈਆਂ ਨੇੜلىਆਂ ਮਸਜਿਦਾਂ ਅਤੇ ਬੱਗ ਫਿਕਸ
+</pa>
+<pl-PL>
+• Dokładne czasy modlitw z oficjalnymi metodami wg krajów (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Prawidłowe godziny na całym świecie, na podstawie Twojej lokalizacji i strefy czasowej
+• Powiadomienia o modlitwie naprawione i zaplanowane zgodnie z czasem każdego dnia
+• Dua, wersety, hadisy i 99 Imion teraz w Twoim języku
+• Codziennie zweryfikowany werset, dua i hadis
+• Naprawiono wspólny Hatim: poprawny postęp, brak duplikatów dżuzów
+• Ulepszone pobliskie meczety i poprawki błędów
+</pl-PL>
+<pt-BR>
+• Horários de oração precisos com métodos oficiais (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Horários corretos em qualquer lugar do mundo, com base na sua localização e fuso horário
+• Notificações de oração corrigidas e agendadas com os horários de cada dia
+• Duas, versos, hadiths e os 99 Nomes agora no seu idioma
+• Um verso, dua e hadith verificados todos os dias
+• Hatim compartilhado corrigido: progresso correto, sem juz duplicado
+• Mesquitas próximas melhoradas e correções de bugs
+</pt-BR>
+<pt-PT>
+• Horários de oração precisos com métodos oficiais por país (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Horários corretos em todo o mundo, com base na sua localização e fuso horário
+• Notificações de oração corrigidas e agendadas com os horários de cada dia
+• Duas, versículos, hadiths e os 99 Nomes agora no seu idioma
+• Um versículo, dua e hadith verificados todos os dias
+• Hatim partilhado corrigido: progresso correto, sem juz duplicado
+• Mesquitas próximas melhoradas e correções de erros
+</pt-PT>
+<rm>
+• L'oras da preghiera exactas cun metods uffizials per pajais (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Oras correctas en tut il mund, basadas sin tia posiziun e zona oraria
+• Notificaziuns da preghiera fixadas e programadas cun las oras da mintga di
+• Duas, versets, hadiths ed ils 99 nums ussa en tia lingua
+• Mintga di in verset, ina dua ed in hadith verifitgads
+• Hatim communabel correct: progress dretg, nagins juz dublads
+• Moscheas vischininas meglieradas e correcturas da errurs
+</rm>
+<ro>
+• Ore exacte de rugăciune cu metode oficiale pe țară (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Ore corecte oriunde în lume, bazate pe locația și fusul tău orar
+• Notificări de rugăciune remediate și programate cu orele fiecărei zile
+• Duas, versete, hadisuri și cele 99 de Nume acum în limba ta
+• Un verset, dua și hadis verificate în fiecare zi
+• Hatim partajat remediat: progres corect, fără juz duplicat
+• Moschei din apropiere îmbunătățite și corecturi de erori
+</ro>
+<ru-RU>
+• Точное время намаза по официальным методам (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Точное время в любой точке мира на основе вашего местоположения и часового пояса
+• Уведомления о намазе исправлены и настроены на время каждого дня
+• Дуа, аяты, хадисы и 99 имен Аллаха теперь на вашем языке
+• Проверенный аят, дуа и хадис каждый день
+• Общий хатим исправлен: верный прогресс, без дублирования джузов
+• Улучшен поиск близлежащих мечетей и исправлены ошибки
+</ru-RU>
+<si-LK>
+• රට අනුව නිфициаල් ක්‍රම මගින් නිවැරදි ප්‍රාර්ථනා වේලාවන් (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• ඔබේ ස්ථානය සහ කාල කලාපය මත ලෝකයේ ඕනෑම තැනක නිවැරදි වේලාවන්
+• සෑම දිනකම තමන්ගේම වේලාවන් සමඟ යාච්ඤා දැනුම්දීම් නිවැරදි කර ඇත
+• දැන් ඔබේ භාෂාවෙන් දුආ, වාක්‍y, හදීස් සහ අල්ලාහ්ගේ නම් 99
+• සෑම දිනකම සත්‍යාපිත වාක්‍yයක්, දුආවක් සහ හදීසයක්
+• බෙදාගත් Hatim නිවැරදි කර ඇත: නිවැරදි ප්‍රගතිය, අනුපිටපත් ජුස් නැත
+• ආසන්න මුස්ලිම් පල්ලි වැඩිදියුණු කර දෝෂ නිවැරදි කර ඇත
+</si-LK>
+<sk>
+• Presné časy modlitieb s oficiálnymi metódami podľa krajín (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Správne časy kdekoľvek na svete na základe vašej polohy a časového pásma
+• Upozornenia na modlitby opravené a naplánované s dennými časmi
+• Dua, verše, hadísy a 99 mien vo vašom jazyku
+• Overený verš, dua a hadis každý deň
+• Zdieľaný Hatim opravený: správny postup, žiadne duplicitné džuzy
+• Vylepšené blízke mešity a oprava chýb
+</sk>
+<sl>
+• Točni čas molitev z uradnimi metodami po državah (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Pravilni casi kjer koli na svetu glede na vašo lokacijo in časovni pas
+• Obvestila o molitvi popravljena in načrtovana z dnevnimi časi
+• Duye, verzi, hadisi in 99 Allahovih imen sedaj v vašem jeziku
+• Preverjen verz, duja in hadis vsak dan
+• Skupni Hatim popravljen: pravilen napredek, brez podvojenih džuzov
+• Izboljšane bližnje džamije in popravki napak
+</sl>
+<sq>
+• Kohët e sakta të namazit me metoda zyrtare sipas vendeve (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Kohë të sakta kudo në botë, bazuar në vendndodhjen dhe zonën tuaj kohore
+• Njoftimet e namazit u rregulluan dhe u planifikuan me kohët e çdo dite
+• Dua, vargje, hadithe dhe 99 Emrat tani në gjuhën tuaj
+• Një varg, dua dhe hadith i verifikuar çdo ditë
+• Hatimi i përbashkët u rregullua: progres i saktë, pa xhuza të dyfishtë
+• Xhamitë pranë u përmirësuan dhe u korrigjuan gabimet
+</sq>
+<sr>
+• Тачна времена намаза уз званичне методе по земљама (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Тачна времена било где у свету на основу ваше локације и временске зоне
+• Обавештења о намазу су исправљена и заказана према времену за сваки дан
+• Дуве, ајети, хадиси и 99 имена сада на вашем језику
+• Проверен ајет, дува и хадис сваки дан
+• Заједнички Хатим је исправљен: тачан напредак, без дуплих джузева
+• Побољшане оближње џамије и исправљене грешке
+</sr>
+<sv-SE>
+• Exakta bönetider med officiella metoder per land (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Korrekta tider var som helst i världen baserat på din plats och tidszon
+• Böneaviseringar har fixats och schemalagts med varje dags egna tider
+• Dua, verser, hadither och de 99 namnen nu på ditt språk
+• En verifierad vers, dua och hadith varje del
+• Delad Hatim fixad: korrekt framsteg, inga dubbla juz
+• Förbättrade närliggande moskéer och buggfixar
+</sv-SE>
+<sw>
+• Nyakati sahihi za swala kwa mbinu rasmi za nchi (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Nyakati sahihi popote duniani, kulingana na eneo lako na ukanda wa saa
+• Arifa za swala zimerekebishwa na kupangwa kulingana na nyakati za kila siku
+• Dua, aya, hadithi na Majina 99 sasa katika lugha yako
+• Aya, dua na hadithi iliyothibitishwa kila siku
+• Hatim ya pamoja imerekebishwa: maendeleo sahihi, hakuna juz zinazorudiwa
+• Misikiti ya karibu imeboreshwa na makosa yamerekebishwa
+</sw>
+<ta-IN>
+• Accurate prayer times with official methods by country (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Correct times anywhere in the world, based on your location and time zone
+• Prayer notifications fixed and scheduled with each day's own times
+• Duas, verses, hadith and the 99 Names now in your language
+• A verified verse, dua and hadith every day
+• Shared Hatim fixed: correct progress, no duplicate juz
+• Improved nearby mosques and bug fixes
+</ta-IN>
+<te-IN>
+• దేశాల వారీగా అధికారిక పద్ధతులతో ఖచ్చితమైన ప్రార్థన సమయాలు (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• మీ స్థానం మరియు సమయ区域 ఆధారంగా ప్రపంచంలో ఎక్కడైనా సరైన సమయాలు
+• ప్రార్థన నోటిఫికేషన్‌లు సరి చేయబడ్డాయి మరియు ప్రతి రోజు సమయాలతో షెడ్యూల్ చేయబడ్డాయి
+• దువాలు, వచనాలు, హదీసులు మరియు 99 నామాలు ఇప్పుడు మీ భాషలో
+• ప్రతిరోజూ ధృవీకరించబడిన వచనం, దువా మరియు హదీస్
+• షేర్డ్ హాతిమ్ సరి చేయబడింది: సరైన పురోగతి, నకిలీ జుజ్ లేదు
+• సమీప మసీదులు మెరుగుపరచబడ్డాయి మరియు బగ్‌లు పరిష్కరించబడ్డాయి
+</te-IN>
+<th>
+• เวลาละหมาดที่แม่นยำด้วยวิธีที่เป็นทางการตามแต่ละประเทศ (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• เวลาที่ถูกต้องทุกที่ในโลก ตามตำแหน่งและเขตเวลาของคุณ
+• แก้ไขการแจ้งเตือนละหมาดและกำหนดเวลาตามเวลาของแต่ละวันแล้ว
+• ดุอาอ์ อายะห์ หะดีษ และ 99 พระนามในภาษาของคุณแล้ว
+• อายะห์ ดุอาอ์ และหะดีษที่ได้รับการตรวจสอบทุกวัน
+• แก้ไขฮาติมที่ใช้ร่วมกันแล้ว: ความคืบหน้าถูกต้อง ไม่มีญุซอ์ซ้ำ
+• ปรับปรุงมัสยิดใกล้เคียงและแก้ไขข้อผิดพลาดแล้ว
+</th>
+<tr-TR>
+• Namaz vakitleri Diyanet takvimiyle uyumlu, ülkeye göre resmi hesaplama (Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Dünyanın her yerinde konum ve saat dilimine göre doğru vakitler
+• Ezan bildirimleri düzeltildi, her günün kendi vakitleriyle kuruluyor
+• Dualar, ayetler, hadisler ve Esmaül Hüsna artık kendi dilinizde
+• Her gün doğrulanmış kaynaklardan ayet, dua ve hadis
+• Ortak Hatim düzeltildi: doğru ilerleme, aynı cüz iki kez alınamaz
+• Yakın camiler iyileştirildi, hata düzeltmeleri
+</tr-TR>
+<uk>
+• Точний час намазу за офіційними методами країн (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Правильний час у будь-якій точці світу на основі вашого місця розташування та часового поясу
+• Сповіщення про молитву виправлено та заплановано за часом кожного дня
+• Дуа, аяти, хадиси та 99 імен тепер вашою мовою
+• Перевірений аят, дуа та хадис щодня
+• Спільний Хатім виправлено: правильний прогрес, без дублювання джузів
+• Покращено пошук найближчих мечетей та виправлено помилки
+</uk>
+<ur>
+• ممالک کے آفیشل طریقوں کے ساتھ نماز کے درست اوقات (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• آپ کے مقام اور ٹائم زون کی بنیاد پر دنیا میں کہیں بھی درست اوقات
+• نماز کی اطلاعات کو درست کر دیا گیا ہے اور ہر دن کے اپنے اوقات کے مطابق شیڈول کیا گیا ہے
+• دعائیں، آیات، احادیث اور 99 نام اب آپ کی زبان میں
+• روزانہ ایک تصدیق شدہ آیت، دعا اور حدیث
+• مشترکہ ختم درست کر دیا گیا: درست پیشرفت، کوئی ڈپلیکیٹ juz نہیں
+• قریبی مساجد کو بہتر بنایا گیا اور بگز کو درست کیا گیا
+</ur>
+<vi>
+• Giờ cầu nguyện chính xác với các phương pháp chính thức (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Giờ chính xác ở mọi nơi trên thế giới, dựa trên vị trí và múi giờ của bạn
+• Thông báo cầu nguyện đã được sửa và lên lịch theo giờ mỗi ngày
+• Dua, câu kinh, hadith và 99 Danh Tính nay đã có trong ngôn ngữ của bạn
+• Một câu kinh, dua và hadith được xác thực mỗi ngày
+• Hatim chia sẻ đã sửa: tiến độ chính xác, không trùng lặp juz
+• Cải thiện tính năng tìm nhà thờ hồi giáo gần đây và sửa lỗi
+</vi>
+<zh-CN>
+• 采用各國官方方法的準確禮拜時間（Diyanet、Kemenag、JAKIM、Umm al-Qura、ISNA...）
+• 根據您的位置和時區，確保全球各地的時間準確無誤
+• 修復並排定了每天專屬時間的禮拜提醒
+• 祈願文、經文、聖訓和真主 99 個尊名現已支援您的語言
+• 每天提供經過核實的經文、祈願文和聖訓
+• 修復共享哈梯姆：進度正確，無重複烏茲
+• 改進附近清真寺功能並修復錯誤
+</zh-CN>
+<zh-HK>
+• 採用各國官方方法的準確禮拜時間（Diyanet、Kemenag、JAKIM、Umm al-Qura、ISNA...）
+• 根據您的位置和時區，確保全球各地的時間準確無誤
+• 修復並排定了每天專屬時間的禮拜提醒
+• 祈願文、經文、聖訓和真主 99 個尊名現已支援您的語言
+• 每天提供經過核實的經文、祈願文和聖訓
+• 修復共享哈梯姆：進度正確，無重複烏茲
+• 改進附近清真寺功能並修復錯誤
+</zh-HK>
+<zh-TW>
+• 採用各國官方方法的準確禮拜時間（Diyanet、Kemenag、JAKIM、Umm al-Qura、ISNA...）
+• 根據您的位置和時區，確保全球各地的時間準確無誤
+• 修復並排定了每天專屬時間的禮拜提醒
+• 祈願文、經文、聖訓和真主 99 個尊名現已支援您的語言
+• 每天提供經過核實的經文、祈願文和聖訓
+• 修復共享哈梯姆：進度正確，無重複烏茲
+• 改進附近清真寺功能並修復錯誤
+</zh-TW>
+<zu>
+• Accurate prayer times with official methods by country (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Correct times anywhere in the world, based on your location and time zone
+• Prayer notifications fixed and scheduled with each day's own times
+• Duas, verses, hadith and the 99 Names now in your language
+• A verified verse, dua and hadith every day
+• Shared Hatim fixed: correct progress, no duplicate juz
+• Improved nearby mosques and bug fixes
+</zu>

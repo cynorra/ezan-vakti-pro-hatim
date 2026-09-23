@@ -1,34 +1,90 @@
 <tr-TR>
-• Namaz vakitleri Diyanet takvimiyle birebir uyumlu hale getirildi (güneş, akşam ve ikindi temkinleri eklendi)
-• Dünyanın her yerinde doğru vakitler: "Konumumu kullan" ile GPS'e göre hesaplama
-• Ülkeye göre otomatik hesaplama yöntemi (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA ve daha fazlası)
-• Ayarlardan hesaplama yöntemini elle seçebilme
-• Seçtiğin şehir artık kaydediliyor
-• Dualar, günün ayeti ve hadisi artık İngilizce, Endonezce ve Malayca
-• Hata düzeltmeleri ve performans iyileştirmeleri
+• Namaz vakitleri Diyanet takvimiyle uyumlu, ülkeye göre resmi hesaplama (Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Dünyanın her yerinde konum ve saat dilimine göre doğru vakitler
+• Ezan bildirimleri düzeltildi, her günün kendi vakitleriyle kuruluyor
+• Dualar, ayetler, hadisler ve Esmaül Hüsna artık kendi dilinizde
+• Her gün doğrulanmış kaynaklardan ayet, dua ve hadis
+• Ortak Hatim düzeltildi: doğru ilerleme, aynı cüz iki kez alınamaz
+• Yakın camiler iyileştirildi, hata düzeltmeleri
 </tr-TR>
 <en-US>
-• Prayer times now match the official Diyanet calendar exactly
-• Accurate times anywhere in the world: "Use my location" calculates by GPS
-• Automatic calculation method by country (Kemenag, JAKIM, Umm al-Qura, ISNA, Diyanet and more)
-• Choose the calculation method manually in Settings
-• Your selected city is now remembered
-• Duas, verse and hadith of the day now in English, Indonesian and Malay
-• Bug fixes and performance improvements
+• Accurate prayer times with official methods by country (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Correct times anywhere in the world, based on your location and time zone
+• Prayer notifications fixed and scheduled with each day's own times
+• Duas, verses, hadith and the 99 Names now in your language
+• A verified verse, dua and hadith every day
+• Shared Hatim fixed: correct progress, no duplicate juz
+• Improved nearby mosques and bug fixes
 </en-US>
 <id>
-• Waktu salat kini akurat di seluruh dunia dengan GPS ("Gunakan lokasi saya")
-• Metode perhitungan otomatis sesuai negara, termasuk Kemenag untuk Indonesia
-• Pilih metode perhitungan secara manual di Pengaturan
-• Kota pilihan Anda kini tersimpan
-• Doa, ayat dan hadis harian kini dalam Bahasa Indonesia
-• Perbaikan bug dan peningkatan performa
+• Jadwal salat akurat dengan metode resmi sesuai negara (Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Waktu salat tepat di mana pun sesuai lokasi dan zona waktu Anda
+• Notifikasi azan diperbaiki dan dijadwalkan dengan waktu setiap hari
+• Doa, ayat, hadis dan Asmaul Husna kini dalam bahasa Anda
+• Ayat, doa dan hadis terverifikasi setiap hari
+• Khataman bersama diperbaiki: progres benar, juz tidak bisa diambil dua kali
+• Masjid terdekat lebih baik dan perbaikan bug
 </id>
 <ms>
-• Waktu solat kini tepat di seluruh dunia dengan GPS ("Guna lokasi saya")
-• Kaedah pengiraan automatik mengikut negara, termasuk JAKIM untuk Malaysia
-• Pilih kaedah pengiraan secara manual dalam Tetapan
-• Bandar pilihan anda kini disimpan
-• Doa, ayat dan hadis harian kini dalam Bahasa Melayu
-• Pembaikan pepijat dan peningkatan prestasi
+• Waktu solat tepat dengan kaedah rasmi mengikut negara (JAKIM, Kemenag, Umm al-Qura, ISNA...)
+• Waktu solat betul di mana-mana mengikut lokasi dan zon waktu anda
+• Notifikasi azan dibaiki dan dijadualkan mengikut waktu setiap hari
+• Doa, ayat, hadis dan Asmaul Husna kini dalam bahasa anda
+• Ayat, doa dan hadis yang disahkan setiap hari
+• Khatam bersama dibaiki: kemajuan tepat, juzuk tidak boleh diambil dua kali
+• Masjid berdekatan lebih baik dan pembaikan pepijat
 </ms>
+<fr>
+• Horaires de prière précis selon la méthode officielle de chaque pays (Diyanet, Kemenag, JAKIM, ISNA...)
+• Horaires exacts partout dans le monde selon votre position
+• Notifications de prière corrigées, programmées chaque jour
+• Douas, versets, hadiths et 99 Noms dans votre langue
+• Un verset, une doua et un hadith vérifiés chaque jour
+• Hatim partagé corrigé : progression juste, pas de juz en double
+• Mosquées proches améliorées, corrections de bugs
+</fr>
+<de>
+• Genaue Gebetszeiten nach der offiziellen Methode jedes Landes (Diyanet, Kemenag, JAKIM, ISNA...)
+• Richtige Zeiten weltweit nach Standort und Zeitzone
+• Gebetsbenachrichtigungen repariert, täglich mit den Zeiten des Tages
+• Bittgebete, Verse, Hadithe und die 99 Namen in Ihrer Sprache
+• Täglich ein geprüfter Vers, ein Bittgebet und ein Hadith
+• Gemeinsamer Hatim repariert: richtiger Fortschritt, kein doppelter Juz
+• Moscheen in der Nähe verbessert, Fehlerbehebungen
+</de>
+<fil>
+• Tumpak na oras ng pagdarasal gamit ang opisyal na paraan ng bawat bansa (Diyanet, Kemenag, JAKIM, ISNA...)
+• Tamang oras saan man sa mundo ayon sa iyong lokasyon
+• Naayos ang mga abiso ng adhan, nakatakda sa oras ng bawat araw
+• Mga dua, ayat, hadith at 99 na Pangalan sa iyong wika
+• Beripikadong ayat, dua at hadith araw-araw
+• Naayos ang Shared Hatim: tamang progreso, walang dobleng juz
+• Pinahusay ang malalapit na masjid at mga pag-aayos
+</fil>
+<my>
+• Accurate prayer times with official methods by country (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Correct times anywhere in the world, based on your location and time zone
+• Prayer notifications fixed and scheduled with each day's own times
+• Duas, verses, hadith and the 99 Names now in your language
+• A verified verse, dua and hadith every day
+• Shared Hatim fixed: correct progress, no duplicate juz
+• Improved nearby mosques and bug fixes
+</my>
+<ta>
+• Accurate prayer times with official methods by country (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Correct times anywhere in the world, based on your location and time zone
+• Prayer notifications fixed and scheduled with each day's own times
+• Duas, verses, hadith and the 99 Names now in your language
+• A verified verse, dua and hadith every day
+• Shared Hatim fixed: correct progress, no duplicate juz
+• Improved nearby mosques and bug fixes
+</ta>
+<zu>
+• Accurate prayer times with official methods by country (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA...)
+• Correct times anywhere in the world, based on your location and time zone
+• Prayer notifications fixed and scheduled with each day's own times
+• Duas, verses, hadith and the 99 Names now in your language
+• A verified verse, dua and hadith every day
+• Shared Hatim fixed: correct progress, no duplicate juz
+• Improved nearby mosques and bug fixes
+</zu>
