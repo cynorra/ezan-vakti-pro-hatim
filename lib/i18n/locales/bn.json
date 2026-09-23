@@ -12,7 +12,8 @@
     "verseOfTheDay": "আজকের আয়াত",
     "hadithOfTheDay": "আজকের হাদিস",
     "esmaOfTheDay": "আজকের নাম",
-    "duaOfTheDay": "আজকের দু'আ"
+    "duaOfTheDay": "আজকের দু'আ",
+    "fridayGreeting": "জুমা মোবারক 🕌"
   },
   "prayerTimes": {
     "imsak": "ফজর",
@@ -113,7 +114,18 @@
     "headerSubtitle": "দু'আ মুমিনের হাতিয়ার",
     "featuredBadge": "আজকের দু'আ",
     "meaningLabel": "অর্থ",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nঅর্থ: {{meaning}}\n\nউৎস: {{source}}\n\nEzan Vakti + Hatim থেকে শেয়ার করা হয়েছে।"
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nঅর্থ: {{meaning}}\n\nউৎস: {{source}}\n\nEzan Vakti + Hatim থেকে শেয়ার করা হয়েছে।",
+    "categories": {
+      "all": "সব",
+      "daily": "দৈনিক",
+      "worship": "ইবাদত",
+      "protection": "সুরক্ষা",
+      "family": "পরিবার",
+      "other": "অন্যান্য"
+    },
+    "sourceLabel": "সূত্র",
+    "cardSlogan": "নামাজের সময় ও খতম ট্র্যাকার",
+    "cardFooter": "Google Play-তে বিনামূল্যে"
   },
   "splash": {
     "subtitle": "নামাজের সময়সূচি, খতম এবং দু'আ এক সাথে"
@@ -188,5 +200,19 @@
     "permissionTitle": "অবস্থানের অনুমতি বন্ধ",
     "permissionBody": "আপনার অবস্থান অনুযায়ী সঠিক সময় দেখাতে ফোনের সেটিংসে অবস্থানের অনুমতি চালু করুন।",
     "openSettings": "সেটিংস খুলুন"
+  },
+  "hijriMonths": {
+    "1": "মহররম",
+    "2": "সফর",
+    "3": "রবিউল আউয়াল",
+    "4": "রবিউস সানি",
+    "5": "জমাদিউল আউয়াল",
+    "6": "জমাদিউস সানি",
+    "7": "রজব",
+    "8": "শাবান",
+    "9": "রমজান",
+    "10": "শাওয়াল",
+    "11": "জিলকদ",
+    "12": "জিলহজ"
   }
 }

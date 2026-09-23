@@ -12,7 +12,8 @@
     "verseOfTheDay": "Versetul zilei",
     "hadithOfTheDay": "Hadithul zilei",
     "esmaOfTheDay": "Numele zilei",
-    "duaOfTheDay": "Dua zilei"
+    "duaOfTheDay": "Dua zilei",
+    "fridayGreeting": "Vineri binecuvântată 🕌"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -113,7 +114,18 @@
     "headerSubtitle": "Rugăciunea este arma credinciosului",
     "featuredBadge": "DUA ZILEI",
     "meaningLabel": "SEMNIFICAȚIE",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nSemnificație: {{meaning}}\n\nSursă: {{source}}\n\nDistribuit din Ezan Vakti + Hatim."
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nSemnificație: {{meaning}}\n\nSursă: {{source}}\n\nDistribuit din Ezan Vakti + Hatim.",
+    "categories": {
+      "all": "Toate",
+      "daily": "Zilnice",
+      "worship": "Adorare",
+      "protection": "Protecție",
+      "family": "Familie",
+      "other": "Altele"
+    },
+    "sourceLabel": "Sursa",
+    "cardSlogan": "Orele de rugăciune și Coranul",
+    "cardFooter": "Gratuit pe Google Play"
   },
   "splash": {
     "subtitle": "Orele de rugăciune, khatm și dua într-un singur loc"
@@ -188,5 +200,19 @@
     "permissionTitle": "Accesul la locație este dezactivat",
     "permissionBody": "Pentru a afișa ore exacte pentru locul în care te afli, activează accesul la locație din setările telefonului.",
     "openSettings": "Deschide setările"
+  },
+  "hijriMonths": {
+    "1": "Muharram",
+    "2": "Safar",
+    "3": "Rabi' al-Awwal",
+    "4": "Rabi' al-Thani",
+    "5": "Jumada al-Ula",
+    "6": "Jumada al-Thani",
+    "7": "Rajab",
+    "8": "Sha'ban",
+    "9": "Ramadan",
+    "10": "Shawwal",
+    "11": "Dhu al-Qa'dah",
+    "12": "Dhu al-Hijjah"
   }
 }

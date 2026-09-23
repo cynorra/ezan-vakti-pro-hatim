@@ -4,6 +4,7 @@
 • Ülkeye göre otomatik hesaplama yöntemi (Diyanet, Kemenag, JAKIM, Umm al-Qura, ISNA ve daha fazlası)
 • Ayarlardan hesaplama yöntemini elle seçebilme
 • Seçtiğin şehir artık kaydediliyor
+• Dualar, günün ayeti ve hadisi artık İngilizce, Endonezce ve Malayca
 • Hata düzeltmeleri ve performans iyileştirmeleri
 </tr-TR>
 <en-US>
@@ -12,6 +13,7 @@
 • Automatic calculation method by country (Kemenag, JAKIM, Umm al-Qura, ISNA, Diyanet and more)
 • Choose the calculation method manually in Settings
 • Your selected city is now remembered
+• Duas, verse and hadith of the day now in English, Indonesian and Malay
 • Bug fixes and performance improvements
 </en-US>
 <id>
@@ -19,6 +21,7 @@
 • Metode perhitungan otomatis sesuai negara, termasuk Kemenag untuk Indonesia
 • Pilih metode perhitungan secara manual di Pengaturan
 • Kota pilihan Anda kini tersimpan
+• Doa, ayat dan hadis harian kini dalam Bahasa Indonesia
 • Perbaikan bug dan peningkatan performa
 </id>
 <ms>
@@ -26,5 +29,6 @@
 • Kaedah pengiraan automatik mengikut negara, termasuk JAKIM untuk Malaysia
 • Pilih kaedah pengiraan secara manual dalam Tetapan
 • Bandar pilihan anda kini disimpan
+• Doa, ayat dan hadis harian kini dalam Bahasa Melayu
 • Pembaikan pepijat dan peningkatan prestasi
 </ms>

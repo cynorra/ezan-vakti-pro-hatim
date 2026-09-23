@@ -12,7 +12,8 @@
     "verseOfTheDay": "आज की आयत",
     "hadithOfTheDay": "आज की हदीस",
     "esmaOfTheDay": "आज का नाम",
-    "duaOfTheDay": "आज की दुआ"
+    "duaOfTheDay": "आज की दुआ",
+    "fridayGreeting": "जुमा मुबारक 🕌"
   },
   "prayerTimes": {
     "imsak": "फ़ज्र",
@@ -113,7 +114,18 @@
     "headerSubtitle": "दुआ मोमिन का हथियार है",
     "featuredBadge": "आज की दुआ",
     "meaningLabel": "अर्थ",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nअर्थ: {{meaning}}\n\nस्रोतः {{source}}\n\nEzan Vakti + Hatim से शेयर किया गया।"
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nअर्थ: {{meaning}}\n\nस्रोतः {{source}}\n\nEzan Vakti + Hatim से शेयर किया गया।",
+    "categories": {
+      "all": "सभी",
+      "daily": "दैनिक",
+      "worship": "इबादत",
+      "protection": "सुरक्षा",
+      "family": "परिवार",
+      "other": "अन्य"
+    },
+    "sourceLabel": "स्रोत",
+    "cardSlogan": "नमाज़ का समय और ख़त्म ट्रैकर",
+    "cardFooter": "Google Play पर मुफ़्त"
   },
   "splash": {
     "subtitle": "नमाज़ के औक़ात, ख़त्म और दुआ एक साथ"
@@ -188,5 +200,19 @@
     "permissionTitle": "स्थान अनुमति बंद है",
     "permissionBody": "आपके स्थान के अनुसार सटीक समय दिखाने के लिए फ़ोन की सेटिंग में स्थान अनुमति चालू करें।",
     "openSettings": "सेटिंग खोलें"
+  },
+  "hijriMonths": {
+    "1": "मुहर्रम",
+    "2": "सफ़र",
+    "3": "रबी-उल-अव्वल",
+    "4": "रबी-उल-आख़िर",
+    "5": "जमादी-उल-अव्वल",
+    "6": "जमादी-उल-आख़िर",
+    "7": "रजब",
+    "8": "शाबान",
+    "9": "रमज़ान",
+    "10": "शव्वाल",
+    "11": "ज़िलक़ादा",
+    "12": "ज़िलहिज्जा"
   }
 }

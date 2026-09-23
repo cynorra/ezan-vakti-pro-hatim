@@ -12,7 +12,8 @@
     "verseOfTheDay": "Kunlik oyat",
     "hadithOfTheDay": "Kunlik hadis",
     "esmaOfTheDay": "Kunlik ism",
-    "duaOfTheDay": "Kunning duosi"
+    "duaOfTheDay": "Kunning duosi",
+    "fridayGreeting": "Juma muborak 🕌"
   },
   "prayerTimes": {
     "imsak": "Bomdod",
@@ -113,7 +114,18 @@
     "headerSubtitle": "Duo — mo'minning qurolidir",
     "featuredBadge": "KUNNING DUOSI",
     "meaningLabel": "MA'NOSI",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nMa'nosi: {{meaning}}\n\nManba: {{source}}\n\nEzan Vakti + Hatim ilovasidan ulashildi."
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nMa'nosi: {{meaning}}\n\nManba: {{source}}\n\nEzan Vakti + Hatim ilovasidan ulashildi.",
+    "categories": {
+      "all": "Hammasi",
+      "daily": "Kundalik",
+      "worship": "Ibodat",
+      "protection": "Himoya",
+      "family": "Oila",
+      "other": "Boshqa"
+    },
+    "sourceLabel": "Manba",
+    "cardSlogan": "Namoz vaqtlari va xatm kuzatuvi",
+    "cardFooter": "Google Play'da bepul"
   },
   "splash": {
     "subtitle": "Namoz vaqtlari, xatm va duolar bitta ilovada"
@@ -188,5 +200,19 @@
     "permissionTitle": "Joylashuvga ruxsat o'chirilgan",
     "permissionBody": "Joylashuvingiz bo'yicha aniq vaqtlarni ko'rsatish uchun telefon sozlamalarida joylashuvga ruxsatni yoqing.",
     "openSettings": "Sozlamalarni ochish"
+  },
+  "hijriMonths": {
+    "1": "Muharram",
+    "2": "Safar",
+    "3": "Rabiul-avval",
+    "4": "Rabiul-oxir",
+    "5": "Jumodul-avval",
+    "6": "Jumodul-oxir",
+    "7": "Rajab",
+    "8": "Sha'bon",
+    "9": "Ramazon",
+    "10": "Shavvol",
+    "11": "Zulqa'da",
+    "12": "Zulhijja"
   }
 }

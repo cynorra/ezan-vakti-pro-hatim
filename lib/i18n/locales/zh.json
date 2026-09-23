@@ -12,7 +12,8 @@
     "verseOfTheDay": "今日经文",
     "hadithOfTheDay": "今日圣训",
     "esmaOfTheDay": "今日尊名",
-    "duaOfTheDay": "每日祈祷"
+    "duaOfTheDay": "每日祈祷",
+    "fridayGreeting": "主麻吉庆 🕌"
   },
   "prayerTimes": {
     "imsak": "晨礼",
@@ -113,7 +114,18 @@
     "headerSubtitle": "祈祷是信士的武器",
     "featuredBadge": "每日祈祷",
     "meaningLabel": "译意",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\n译意：{{meaning}}\n\n出处：{{source}}\n\n分享自 Ezan Vakti + Hatim。"
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\n译意：{{meaning}}\n\n出处：{{source}}\n\n分享自 Ezan Vakti + Hatim。",
+    "categories": {
+      "all": "全部",
+      "daily": "日常",
+      "worship": "功修",
+      "protection": "护佑",
+      "family": "家庭",
+      "other": "其他"
+    },
+    "sourceLabel": "出处",
+    "cardSlogan": "礼拜时间与古兰经诵读",
+    "cardFooter": "Google Play 免费下载"
   },
   "splash": {
     "subtitle": "礼拜时间、通读经文与祈祷助手"
@@ -188,5 +200,19 @@
     "permissionTitle": "位置权限已关闭",
     "permissionBody": "要根据您所在的位置显示准确时间，请在手机设置中开启位置权限。",
     "openSettings": "打开设置"
+  },
+  "hijriMonths": {
+    "1": "穆哈兰姆月",
+    "2": "色法尔月",
+    "3": "赖比尔·敖外鲁月",
+    "4": "赖比尔·阿赫尔月",
+    "5": "主马达·敖外鲁月",
+    "6": "主马达·阿赫尔月",
+    "7": "赖哲卜月",
+    "8": "舍尔邦月",
+    "9": "莱麦丹月",
+    "10": "闪瓦鲁月",
+    "11": "都尔喀尔德月",
+    "12": "都尔黑哲月"
   }
 }

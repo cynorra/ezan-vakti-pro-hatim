@@ -20,7 +20,7 @@ import { safeHaptics } from '@/lib/haptics';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { SEOHead } from '@/components/SEOHead';
 import { ShareableDuaCard } from '@/components/ShareableDuaCard';
-import { dailyDuas, duaCategories, getDailyDua, Dua } from '@/lib/data/duas';
+import { dailyDuas, duaCategories, getDailyDua, localizeDua, Dua } from '@/lib/data/duas';
 import { formatDuaShareMessage } from '@/lib/share';
 
 const CATEGORY_ICONS: Record<string, string> = {
@@ -33,27 +33,26 @@ const CATEGORY_ICONS: Record<string, string> = {
 };
 
 export default function DuaScreen() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [isSharingImage, setIsSharingImage] = useState(false);
 
-  // Rewards tracking
-
-  const duaOfTheDay = getDailyDua();
+  const duaOfTheDay = localizeDua(getDailyDua(), i18n.language);
   const [targetDuaForCard, setTargetDuaForCard] = useState<Dua>(duaOfTheDay);
   const shareCardRef = useRef<View>(null);
 
-  const filteredDualar = selectedCategory === 'all'
+  const filteredDualar = (selectedCategory === 'all'
     ? dailyDuas
-    : dailyDuas.filter((d) => d.category === selectedCategory);
+    : dailyDuas.filter((d) => d.category === selectedCategory)
+  ).map((d) => localizeDua(d, i18n.language));
 
   const handleShareText = async (dua: Dua) => {
     safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     try {
-      const message = formatDuaShareMessage(dua);
+      const message = formatDuaShareMessage(dua, t);
       await Share.share({
         message,
         title: dua.title,
@@ -177,7 +176,7 @@ export default function DuaScreen() {
                     { color: selectedCategory === cat.id ? '#fff' : colors.textSecondary },
                   ]}
                 >
-                  {cat.name}
+                  {t(`dua.categories.${cat.id}`, { defaultValue: cat.name })}
                 </Text>
               </TouchableOpacity>
             ))}

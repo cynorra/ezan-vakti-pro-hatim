@@ -1,3 +1,5 @@
+import { contentLanguage, wisdomTranslations } from './content-translations';
+
 export interface DailyWisdom {
   id: string;
   type: 'verse' | 'hadith';
@@ -113,6 +115,13 @@ export const dailyWisdomData: DailyWisdom[] = [
     arabic: "اِنَّ اَكْرَمَكُمْ عِنْدَ اللّٰهِ اَتْقٰيكُمْ"
   }
 ];
+
+export function localizeWisdom(wisdom: DailyWisdom, language: string): DailyWisdom {
+  const lang = contentLanguage(language);
+  const translation = wisdomTranslations[wisdom.id];
+  if (lang === 'tr' || !translation) return wisdom;
+  return { ...wisdom, ...translation[lang] };
+}
 
 export function getDailyWisdom(): DailyWisdom {
   const today = new Date();

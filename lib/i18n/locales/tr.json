@@ -27,7 +27,8 @@
     "verseOfTheDay": "Günün Ayeti",
     "hadithOfTheDay": "Günün Hadisi",
     "esmaOfTheDay": "Günün Esması",
-    "duaOfTheDay": "Günün Duası"
+    "duaOfTheDay": "Günün Duası",
+    "fridayGreeting": "Cumanız Mübarek Olsun 🕌"
   },
   "prayerTimes": {
     "imsak": "İmsak",
@@ -122,7 +123,18 @@
     "meaningLabel": "ANLAMI",
     "shareMessage": "🤲 {{title}}\n\n{{transliteration}}\n\nAnlamı: {{meaning}}\n\nKaynak: {{source}}\n\n📲 Ezan Vakti + Hatim uygulamasını ücretsiz indirin:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
     "shareImage": "Görsel Paylaş",
-    "shareText": "Metin Paylaş"
+    "shareText": "Metin Paylaş",
+    "categories": {
+      "all": "Tümü",
+      "daily": "Günlük",
+      "worship": "İbadet",
+      "protection": "Korunma",
+      "family": "Aile",
+      "other": "Diğer"
+    },
+    "sourceLabel": "Kaynak",
+    "cardSlogan": "Namaz Vakitleri & Hatim Takibi",
+    "cardFooter": "Google Play'den Ücretsiz İndir"
   },
   "splash": {
     "subtitle": "Namaz vakti, hatim ve dua bir arada"
@@ -204,5 +216,19 @@
     "permissionTitle": "Konum izni kapalı",
     "permissionBody": "Bulunduğun yere göre doğru vakitleri gösterebilmek için telefon ayarlarından konum iznini açman gerekiyor.",
     "openSettings": "Ayarları aç"
+  },
+  "hijriMonths": {
+    "1": "Muharrem",
+    "2": "Safer",
+    "3": "Rebiülevvel",
+    "4": "Rebiülahir",
+    "5": "Cemaziyelevvel",
+    "6": "Cemaziyelahir",
+    "7": "Recep",
+    "8": "Şaban",
+    "9": "Ramazan",
+    "10": "Şevval",
+    "11": "Zilkade",
+    "12": "Zilhicce"
   }
 }

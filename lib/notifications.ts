@@ -1,8 +1,8 @@
 import * as Notifications from 'expo-notifications';
 import { Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { getDailyDua } from './data/duas';
-import { getDailyHealingVerse } from './data/quran-verses';
+import { getDailyDua, localizeDua } from './data/duas';
+import { getDailyHealingVerse, localizeVerse } from './data/quran-verses';
 import { getCurrentStreak } from './streak';
 import i18n from './i18n';
 
@@ -219,7 +219,7 @@ export async function scheduleDailyDuaReminders() {
     targetDate.setHours(DAILY_DUA_HOUR, DAILY_DUA_MINUTE, 0, 0);
     if (targetDate.getTime() <= now.getTime()) continue;
 
-    const dua = getDailyDua(targetDate);
+    const dua = localizeDua(getDailyDua(targetDate), i18n.language);
     await Notifications.scheduleNotificationAsync({
       identifier: `${DAILY_DUA_PREFIX}${targetDate.toISOString().slice(0, 10)}`,
       content: {
@@ -259,7 +259,7 @@ export async function scheduleDailyVerseReminders() {
       identifier: `${DAILY_VERSE_PREFIX}${targetDate.toISOString().slice(0, 10)}`,
       content: {
         title: i18n.t('notifications.verseTitle') || '📖 Şifa & Huzur Ayeti',
-        body: `"${verse.turkish}" — ${verse.surah}, ${verse.verseNumber} ✨`,
+        body: (({ text, surah }) => `"${text}" — ${surah}, ${verse.verseNumber} ✨`)(localizeVerse(verse, i18n.language)),
         sound: true,
         data: { screen: 'home', verseId: verse.id },
       },

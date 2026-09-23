@@ -12,7 +12,8 @@
     "verseOfTheDay": "今日の節",
     "hadithOfTheDay": "今日のハディース",
     "esmaOfTheDay": "今日の御名",
-    "duaOfTheDay": "今日のドゥアー"
+    "duaOfTheDay": "今日のドゥアー",
+    "fridayGreeting": "祝福された金曜日 🕌"
   },
   "prayerTimes": {
     "imsak": "ファジュル",
@@ -113,7 +114,18 @@
     "headerSubtitle": "祈りは信者の武器",
     "featuredBadge": "今日のドゥアー",
     "meaningLabel": "意味",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\n意味：{{meaning}}\n\n出典：{{source}}\n\nEzan Vakti + Hatim より共有"
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\n意味：{{meaning}}\n\n出典：{{source}}\n\nEzan Vakti + Hatim より共有",
+    "categories": {
+      "all": "すべて",
+      "daily": "日常",
+      "worship": "礼拝",
+      "protection": "守護",
+      "family": "家族",
+      "other": "その他"
+    },
+    "sourceLabel": "出典",
+    "cardSlogan": "礼拝時刻とクルアーン読誦",
+    "cardFooter": "Google Playで無料"
   },
   "splash": {
     "subtitle": "礼拝時間、ハトム、ドゥアーをこれひとつで"
@@ -188,5 +200,19 @@
     "permissionTitle": "位置情報へのアクセスがオフです",
     "permissionBody": "現在地に合わせた正確な時刻を表示するには、端末の設定で位置情報へのアクセスをオンにしてください。",
     "openSettings": "設定を開く"
+  },
+  "hijriMonths": {
+    "1": "ムハッラム",
+    "2": "サファル",
+    "3": "ラビー・アル＝アウワル",
+    "4": "ラビー・アッ＝サーニー",
+    "5": "ジュマーダー・アル＝ウーラー",
+    "6": "ジュマーダー・アッ＝サーニー",
+    "7": "ラジャブ",
+    "8": "シャアバーン",
+    "9": "ラマダーン",
+    "10": "シャウワール",
+    "11": "ズー・アル＝カアダ",
+    "12": "ズー・アル＝ヒッジャ"
   }
 }

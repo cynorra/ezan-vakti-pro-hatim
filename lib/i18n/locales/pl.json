@@ -12,7 +12,8 @@
     "verseOfTheDay": "Werset dnia",
     "hadithOfTheDay": "Hadis dnia",
     "esmaOfTheDay": "Imię dnia",
-    "duaOfTheDay": "Dua dnia"
+    "duaOfTheDay": "Dua dnia",
+    "fridayGreeting": "Błogosławionego piątku 🕌"
   },
   "prayerTimes": {
     "imsak": "Fadżr",
@@ -113,7 +114,18 @@
     "headerSubtitle": "Modlitwa jest bronią wierzącego",
     "featuredBadge": "DUA DNIA",
     "meaningLabel": "ZNACZENIE",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nZnaczenie: {{meaning}}\n\nŹródło: {{source}}\n\nUdostępniono z Ezan Vakti + Hatim."
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nZnaczenie: {{meaning}}\n\nŹródło: {{source}}\n\nUdostępniono z Ezan Vakti + Hatim.",
+    "categories": {
+      "all": "Wszystkie",
+      "daily": "Codzienne",
+      "worship": "Ibadat",
+      "protection": "Ochrona",
+      "family": "Rodzina",
+      "other": "Inne"
+    },
+    "sourceLabel": "Źródło",
+    "cardSlogan": "Godziny modlitw i Koran",
+    "cardFooter": "Za darmo w Google Play"
   },
   "splash": {
     "subtitle": "Godziny modlitw, chatm i dua w jednym miejscu"
@@ -188,5 +200,19 @@
     "permissionTitle": "Dostęp do lokalizacji wyłączony",
     "permissionBody": "Aby pokazywać dokładne godziny dla Twojego miejsca, włącz dostęp do lokalizacji w ustawieniach telefonu.",
     "openSettings": "Otwórz ustawienia"
+  },
+  "hijriMonths": {
+    "1": "Muharram",
+    "2": "Safar",
+    "3": "Rabi' al-Awwal",
+    "4": "Rabi' al-Thani",
+    "5": "Jumada al-Ula",
+    "6": "Jumada al-Thani",
+    "7": "Rajab",
+    "8": "Sha'ban",
+    "9": "Ramadan",
+    "10": "Shawwal",
+    "11": "Dhu al-Qa'dah",
+    "12": "Dhu al-Hijjah"
   }
 }

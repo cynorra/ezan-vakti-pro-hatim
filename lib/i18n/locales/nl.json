@@ -12,7 +12,8 @@
     "verseOfTheDay": "Vers van de dag",
     "hadithOfTheDay": "Hadith van de dag",
     "esmaOfTheDay": "Naam van de dag",
-    "duaOfTheDay": "Dua van de Dag"
+    "duaOfTheDay": "Dua van de Dag",
+    "fridayGreeting": "Gezegende vrijdag 🕌"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -113,7 +114,18 @@
     "headerSubtitle": "Het Gebed Is het Wapen van de Gelovige",
     "featuredBadge": "DUA VAN DE DAG",
     "meaningLabel": "BETEKENIS",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nBetekenis: {{meaning}}\n\nBron: {{source}}\n\nGedeeld via Ezan Vakti + Hatim."
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nBetekenis: {{meaning}}\n\nBron: {{source}}\n\nGedeeld via Ezan Vakti + Hatim.",
+    "categories": {
+      "all": "Alles",
+      "daily": "Dagelijks",
+      "worship": "Aanbidding",
+      "protection": "Bescherming",
+      "family": "Familie",
+      "other": "Overig"
+    },
+    "sourceLabel": "Bron",
+    "cardSlogan": "Gebedstijden & Koranlezing",
+    "cardFooter": "Gratis op Google Play"
   },
   "splash": {
     "subtitle": "Gebedstijden, khatm en dua samen"
@@ -188,5 +200,19 @@
     "permissionTitle": "Locatietoegang staat uit",
     "permissionBody": "Zet locatietoegang aan in de telefooninstellingen om nauwkeurige tijden voor jouw plek te tonen.",
     "openSettings": "Instellingen openen"
+  },
+  "hijriMonths": {
+    "1": "Muharram",
+    "2": "Safar",
+    "3": "Rabi' al-Awwal",
+    "4": "Rabi' al-Thani",
+    "5": "Jumada al-Ula",
+    "6": "Jumada al-Thani",
+    "7": "Rajab",
+    "8": "Sha'ban",
+    "9": "Ramadan",
+    "10": "Shawwal",
+    "11": "Dhu al-Qa'dah",
+    "12": "Dhu al-Hijjah"
   }
 }

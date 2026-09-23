@@ -1,4 +1,6 @@
-﻿export interface QuranVerse {
+import { contentLanguage, verseTranslations } from './content-translations';
+
+export interface QuranVerse {
   id: string;
   arabic: string;
   turkish: string;
@@ -137,6 +139,14 @@ export const quranHealingVerses: QuranVerse[] = [
     theme: 'tevekkul',
   }
 ];
+
+/** Verse text and surah name in the UI language (Turkish original, else en/id/ms). */
+export function localizeVerse(verse: QuranVerse, language: string): { text: string; surah: string } {
+  const lang = contentLanguage(language);
+  const translation = verseTranslations[verse.id];
+  if (lang === 'tr' || !translation) return { text: verse.turkish, surah: verse.surah };
+  return { text: translation[lang].content, surah: translation[lang].source };
+}
 
 export function getDailyHealingVerse(date: Date = new Date()): QuranVerse {
   const dayOfYear = Math.floor(

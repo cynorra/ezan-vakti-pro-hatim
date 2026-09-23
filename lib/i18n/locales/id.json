@@ -12,7 +12,8 @@
     "verseOfTheDay": "Ayat Hari Ini",
     "hadithOfTheDay": "Hadits Hari Ini",
     "esmaOfTheDay": "Nama Hari Ini",
-    "duaOfTheDay": "Doa Hari Ini"
+    "duaOfTheDay": "Doa Hari Ini",
+    "fridayGreeting": "Jum'at Berkah 🕌"
   },
   "prayerTimes": {
     "imsak": "Subuh",
@@ -113,7 +114,18 @@
     "headerSubtitle": "Doa Adalah Senjata Orang Beriman",
     "featuredBadge": "DOA HARI INI",
     "meaningLabel": "ARTI",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nArti: {{meaning}}\n\nSumber: {{source}}\n\nDibagikan dari Ezan Vakti + Hatim."
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nArti: {{meaning}}\n\nSumber: {{source}}\n\nDibagikan dari Ezan Vakti + Hatim.",
+    "categories": {
+      "all": "Semua",
+      "daily": "Harian",
+      "worship": "Ibadah",
+      "protection": "Perlindungan",
+      "family": "Keluarga",
+      "other": "Lainnya"
+    },
+    "sourceLabel": "Sumber",
+    "cardSlogan": "Jadwal Sholat & Khatam Quran",
+    "cardFooter": "Gratis di Google Play"
   },
   "splash": {
     "subtitle": "Jadwal shalat, khataman, dan doa dalam satu aplikasi"
@@ -188,5 +200,19 @@
     "permissionTitle": "Akses lokasi nonaktif",
     "permissionBody": "Untuk menampilkan waktu salat yang akurat sesuai lokasi Anda, aktifkan akses lokasi di pengaturan ponsel.",
     "openSettings": "Buka pengaturan"
+  },
+  "hijriMonths": {
+    "1": "Muharram",
+    "2": "Safar",
+    "3": "Rabiul Awal",
+    "4": "Rabiul Akhir",
+    "5": "Jumadil Awal",
+    "6": "Jumadil Akhir",
+    "7": "Rajab",
+    "8": "Sya'ban",
+    "9": "Ramadhan",
+    "10": "Syawal",
+    "11": "Dzulqa'dah",
+    "12": "Dzulhijjah"
   }
 }

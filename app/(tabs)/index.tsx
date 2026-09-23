@@ -20,6 +20,7 @@ import { safeHaptics } from '@/lib/haptics';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { calculatePrayerTimes, PrayerTimes } from '@/lib/prayer-times';
 import { logEvent } from '@/lib/analytics';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
   DEFAULT_LOCATION,
   SavedLocation,
@@ -34,8 +35,8 @@ import {
   saveMethodSetting,
   turkishCityLocation,
 } from '@/lib/location-settings';
-import { getDailyWisdom } from '@/lib/data/daily-content';
-import { getDailyDua } from '@/lib/data/duas';
+import { getDailyWisdom, localizeWisdom } from '@/lib/data/daily-content';
+import { getDailyDua, localizeDua } from '@/lib/data/duas';
 import { recordAppOpenAndGetStreak } from '@/lib/streak';
 import {
   requestNotificationPermissions,
@@ -56,9 +57,13 @@ import { SEOHead } from '@/components/SEOHead';
 import { getRandomEsma, Esma } from '@/lib/data/esma';
 import { syncRemoteContent } from '@/lib/services/content-sync';
 
+const NOTIFICATION_PROMPTED_KEY = 'notification_permission_prompted';
+
 export default function HomeScreen() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const router = useRouter();
+  const dailyWisdom = localizeWisdom(getDailyWisdom(), i18n.language);
+  const dailyDua = localizeDua(getDailyDua(), i18n.language);
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const [location, setLocation] = useState<SavedLocation>(DEFAULT_LOCATION);
@@ -125,12 +130,30 @@ export default function HomeScreen() {
       if (saved) setLocation(saved);
       if (Platform.OS === 'web') return;
       if (!saved) {
-        handleLocationPress(true, false);
+        await handleLocationPress(true, false);
       } else if (saved.source !== 'manual') {
         handleLocationPress(false, false);
       }
+      await askNotificationsOnce();
     })();
   }, [handleLocationPress]);
+
+  // Prayer alerts are the core feature, but Android 13+ keeps them off until the
+  // user grants permission. Ask once, right after location, instead of relying on
+  // the user finding the toggle in Settings.
+  const askNotificationsOnce = async () => {
+    try {
+      if (await AsyncStorage.getItem(NOTIFICATION_PROMPTED_KEY)) return;
+      await AsyncStorage.setItem(NOTIFICATION_PROMPTED_KEY, '1');
+      if (await hasNotificationPermission()) return;
+      if (await requestNotificationPermissions()) {
+        setNotificationsEnabled(true);
+        logEvent('prayer_notifications_enabled', { source: 'first_launch' });
+      }
+    } catch (error) {
+      console.log('Notification prompt error:', error);
+    }
+  };
 
   const handleMethodChange = useCallback((setting: MethodSetting) => {
     setMethodSetting(setting);
@@ -193,7 +216,7 @@ export default function HomeScreen() {
       if (granted) {
         setNotificationsEnabled(true);
         // Strong engagement signal; used as the Google Ads in-app conversion.
-        logEvent('prayer_notifications_enabled', { country: location.countryCode });
+        logEvent('prayer_notifications_enabled', { source: 'settings', country: location.countryCode });
         if (prayerTimes) {
           await scheduleAllPrayers(prayerTimes, `${selectedCity.name} / ${selectedDistrict}`);
         }
@@ -206,13 +229,20 @@ export default function HomeScreen() {
 
   const formatHijriDate = () => {
     const hDate = getHijriDate(currentDate);
-    return `${hDate.day} ${hDate.monthName} ${hDate.year}`;
+    return `${hDate.day} ${t(`hijriMonths.${hDate.month}`, { defaultValue: hDate.monthName })} ${hDate.year}`;
   };
 
   const formatGregorianDate = () => {
+    const today = new Date();
+    if (!i18n.language.startsWith('tr')) {
+      try {
+        return today.toLocaleDateString(i18n.language, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+      } catch {
+        // Fall through to the Turkish format if the runtime lacks Intl data.
+      }
+    }
     const days = ['Pazar', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi'];
     const months = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
-    const today = new Date();
     return `${today.getDate()} ${months[today.getMonth()]} ${today.getFullYear()}, ${days[today.getDay()]}`;
   };
 
@@ -346,7 +376,7 @@ export default function HomeScreen() {
               </View>
               <Ionicons name="moon" size={18} color="#D4AF37" />
             </View>
-            <Text style={styles.fridayTitle}>Cumanız Mübarek Olsun 🕌</Text>
+            <Text style={styles.fridayTitle}>{t('home.fridayGreeting')}</Text>
             <Text style={styles.fridayDesc}>{t('hatim.fridayCardDesc')}</Text>
             <TouchableOpacity
               activeOpacity={0.85}
@@ -364,27 +394,27 @@ export default function HomeScreen() {
           <View style={styles.cardHeader}>
             <View style={[styles.cardIconWrapper, { backgroundColor: colors.primary + '15' }]}>
               <Ionicons 
-                name={getDailyWisdom().type === 'verse' ? 'book' : 'chatbubble-ellipses'} 
+                name={dailyWisdom.type === 'verse' ? 'book' : 'chatbubble-ellipses'} 
                 size={20} 
                 color={colors.primary} 
               />
             </View>
             <Text style={[styles.cardTitle, { color: colors.primary }]}>
-              {getDailyWisdom().type === 'verse' ? t('home.verseOfTheDay') : t('home.hadithOfTheDay')}
+              {dailyWisdom.type === 'verse' ? t('home.verseOfTheDay') : t('home.hadithOfTheDay')}
             </Text>
           </View>
           
           <View style={styles.wisdomBody}>
-            {getDailyWisdom().arabic && (
+            {dailyWisdom.arabic && (
               <Text style={[styles.arabicText, { color: colors.primary }]}>
-                {getDailyWisdom().arabic}
+                {dailyWisdom.arabic}
               </Text>
             )}
             <Text style={[styles.wisdomContent, { color: colors.text }]}>
-              "{getDailyWisdom().content}"
+              "{dailyWisdom.content}"
             </Text>
             <Text style={[styles.wisdomSource, { color: colors.textSecondary }]}>
-              — {getDailyWisdom().source}
+              — {dailyWisdom.source}
             </Text>
           </View>
         </View>
@@ -406,13 +436,13 @@ export default function HomeScreen() {
 
           <View style={styles.wisdomBody}>
             <Text style={[styles.arabicText, { color: colors.primary }]}>
-              {getDailyDua().arabic}
+              {dailyDua.arabic}
             </Text>
             <Text style={[styles.wisdomContent, { color: colors.text }]}>
-              "{getDailyDua().turkish}"
+              "{dailyDua.turkish}"
             </Text>
             <Text style={[styles.wisdomSource, { color: colors.textSecondary }]}>
-              — {getDailyDua().source}
+              — {dailyDua.source}
             </Text>
           </View>
         </TouchableOpacity>

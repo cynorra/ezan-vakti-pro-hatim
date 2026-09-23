@@ -1,3 +1,6 @@
+import { duaTranslations } from './dua-translations';
+import { contentLanguage } from './content-translations';
+
 export interface Dua {
   id: string;
   title: string;
@@ -251,6 +254,19 @@ export function getDailyDua(date: Date = new Date()): Dua {
   );
   const index = dayOfYear % dailyDuas.length;
   return dailyDuas[index];
+}
+
+/**
+ * Returns the dua with title, meaning (kept in the `turkish` field for
+ * compatibility), source and transliteration in the given UI language.
+ * Turkish returns the original; languages without a translation get English.
+ */
+export function localizeDua(dua: Dua, language: string): Dua {
+  const lang = contentLanguage(language);
+  const translation = duaTranslations[dua.id];
+  if (lang === 'tr' || !translation) return dua;
+  const text = translation[lang];
+  return { ...dua, title: text.title, turkish: text.meaning, source: text.source, transliteration: translation.latin };
 }
 
 export function getDuaById(id: string): Dua | undefined {

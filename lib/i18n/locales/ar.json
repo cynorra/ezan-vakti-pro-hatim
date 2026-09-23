@@ -27,7 +27,8 @@
     "verseOfTheDay": "آية اليوم",
     "hadithOfTheDay": "حديث اليوم",
     "esmaOfTheDay": "اسم اليوم",
-    "duaOfTheDay": "دعاء اليوم"
+    "duaOfTheDay": "دعاء اليوم",
+    "fridayGreeting": "جمعة مباركة 🕌"
   },
   "prayerTimes": {
     "imsak": "الفجر",
@@ -113,7 +114,18 @@
     "headerSubtitle": "الدعاء سلاح المؤمن",
     "featuredBadge": "دعاء اليوم",
     "meaningLabel": "المعنى",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nالمعنى: {{meaning}}\n\nالمصدر: {{source}}\n\nتمت المشاركة من Ezan Vakti + Hatim."
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nالمعنى: {{meaning}}\n\nالمصدر: {{source}}\n\nتمت المشاركة من Ezan Vakti + Hatim.",
+    "categories": {
+      "all": "الكل",
+      "daily": "يومية",
+      "worship": "عبادة",
+      "protection": "حماية",
+      "family": "الأسرة",
+      "other": "أخرى"
+    },
+    "sourceLabel": "المصدر",
+    "cardSlogan": "مواقيت الصلاة ومتابعة الختمة",
+    "cardFooter": "حمّله مجاناً من Google Play"
   },
   "splash": {
     "subtitle": "أوقات الصلاة والختمات والأدعية في مكان واحد"
@@ -188,5 +200,19 @@
     "permissionTitle": "إذن الموقع متوقف",
     "permissionBody": "لعرض أوقات دقيقة حسب مكانك، فعّل إذن الموقع من إعدادات الهاتف.",
     "openSettings": "فتح الإعدادات"
+  },
+  "hijriMonths": {
+    "1": "محرم",
+    "2": "صفر",
+    "3": "ربيع الأول",
+    "4": "ربيع الآخر",
+    "5": "جمادى الأولى",
+    "6": "جمادى الآخرة",
+    "7": "رجب",
+    "8": "شعبان",
+    "9": "رمضان",
+    "10": "شوال",
+    "11": "ذو القعدة",
+    "12": "ذو الحجة"
   }
 }

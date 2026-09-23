@@ -12,7 +12,8 @@
     "verseOfTheDay": "Vers des Tages",
     "hadithOfTheDay": "Hadith des Tages",
     "esmaOfTheDay": "Name des Tages",
-    "duaOfTheDay": "Dua des Tages"
+    "duaOfTheDay": "Dua des Tages",
+    "fridayGreeting": "Gesegneten Freitag 🕌"
   },
   "prayerTimes": {
     "imsak": "Fadschr",
@@ -113,7 +114,18 @@
     "headerSubtitle": "Das Bittgebet ist die Waffe des Gläubigen",
     "featuredBadge": "DUA DES TAGES",
     "meaningLabel": "BEDEUTUNG",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nBedeutung: {{meaning}}\n\nQuelle: {{source}}\n\nGeteilt über Ezan Vakti + Hatim."
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nBedeutung: {{meaning}}\n\nQuelle: {{source}}\n\nGeteilt über Ezan Vakti + Hatim.",
+    "categories": {
+      "all": "Alle",
+      "daily": "Täglich",
+      "worship": "Gottesdienst",
+      "protection": "Schutz",
+      "family": "Familie",
+      "other": "Sonstiges"
+    },
+    "sourceLabel": "Quelle",
+    "cardSlogan": "Gebetszeiten & Koran-Tracker",
+    "cardFooter": "Kostenlos bei Google Play"
   },
   "splash": {
     "subtitle": "Gebetszeiten, Khatm und Dua an einem Ort"
@@ -188,5 +200,19 @@
     "permissionTitle": "Standortzugriff ist aus",
     "permissionBody": "Um genaue Zeiten für deinen Standort anzuzeigen, aktiviere den Standortzugriff in den Telefoneinstellungen.",
     "openSettings": "Einstellungen öffnen"
+  },
+  "hijriMonths": {
+    "1": "Muharram",
+    "2": "Safar",
+    "3": "Rabi' al-Awwal",
+    "4": "Rabi' al-Thani",
+    "5": "Jumada al-Ula",
+    "6": "Jumada al-Thani",
+    "7": "Rajab",
+    "8": "Sha'ban",
+    "9": "Ramadan",
+    "10": "Shawwal",
+    "11": "Dhu al-Qa'dah",
+    "12": "Dhu al-Hijjah"
   }
 }

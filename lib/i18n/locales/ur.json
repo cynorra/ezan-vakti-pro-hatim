@@ -12,7 +12,8 @@
     "verseOfTheDay": "آج کی آیت",
     "hadithOfTheDay": "آج کی حدیث",
     "esmaOfTheDay": "آج کا نام",
-    "duaOfTheDay": "آج کی دعا"
+    "duaOfTheDay": "آج کی دعا",
+    "fridayGreeting": "جمعہ مبارک 🕌"
   },
   "prayerTimes": {
     "imsak": "فجر",
@@ -113,7 +114,18 @@
     "headerSubtitle": "دعا مومن کا ہتھیار ہے",
     "featuredBadge": "آج کی دعا",
     "meaningLabel": "ترجمہ",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nترجمہ: {{meaning}}\n\nحوالہ: {{source}}\n\nEzan Vakti + Hatim سے شیئر کی گئی۔"
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nترجمہ: {{meaning}}\n\nحوالہ: {{source}}\n\nEzan Vakti + Hatim سے شیئر کی گئی۔",
+    "categories": {
+      "all": "تمام",
+      "daily": "روزانہ",
+      "worship": "عبادت",
+      "protection": "حفاظت",
+      "family": "خاندان",
+      "other": "دیگر"
+    },
+    "sourceLabel": "ماخذ",
+    "cardSlogan": "نماز کے اوقات اور ختمِ قرآن",
+    "cardFooter": "Google Play سے مفت ڈاؤن لوڈ کریں"
   },
   "splash": {
     "subtitle": "اوقاتِ نماز، ختم اور دعائیں ایک ساتھ"
@@ -188,5 +200,19 @@
     "permissionTitle": "مقام کی اجازت بند ہے",
     "permissionBody": "آپ کے مقام کے مطابق درست اوقات دکھانے کے لیے فون کی ترتیبات میں مقام کی اجازت آن کریں۔",
     "openSettings": "ترتیبات کھولیں"
+  },
+  "hijriMonths": {
+    "1": "محرم",
+    "2": "صفر",
+    "3": "ربیع الاول",
+    "4": "ربیع الثانی",
+    "5": "جمادی الاول",
+    "6": "جمادی الثانی",
+    "7": "رجب",
+    "8": "شعبان",
+    "9": "رمضان",
+    "10": "شوال",
+    "11": "ذوالقعدہ",
+    "12": "ذوالحجہ"
   }
 }

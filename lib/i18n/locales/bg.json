@@ -12,7 +12,8 @@
     "verseOfTheDay": "Аят на деня",
     "hadithOfTheDay": "Хадис на деня",
     "esmaOfTheDay": "Исм на деня",
-    "duaOfTheDay": "Дуа на деня"
+    "duaOfTheDay": "Дуа на деня",
+    "fridayGreeting": "Благословен петък 🕌"
   },
   "prayerTimes": {
     "imsak": "Фаджр",
@@ -113,7 +114,18 @@
     "headerSubtitle": "Дуата е оръжието на вярващия",
     "featuredBadge": "ДУА НА ДЕНЯ",
     "meaningLabel": "ЗНАЧЕНИЕ",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nЗначение: {{meaning}}\n\nИзточник: {{source}}\n\nСподелено от Ezan Vakti + Hatim."
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nЗначение: {{meaning}}\n\nИзточник: {{source}}\n\nСподелено от Ezan Vakti + Hatim.",
+    "categories": {
+      "all": "Всички",
+      "daily": "Ежедневни",
+      "worship": "Поклонение",
+      "protection": "Защита",
+      "family": "Семейство",
+      "other": "Други"
+    },
+    "sourceLabel": "Източник",
+    "cardSlogan": "Времена за молитва и Коран",
+    "cardFooter": "Безплатно в Google Play"
   },
   "splash": {
     "subtitle": "Времена за намаз, хатим и дуа на едно място"
@@ -188,5 +200,19 @@
     "permissionTitle": "Достъпът до местоположението е изключен",
     "permissionBody": "За да показваме точни времена за мястото ви, включете достъпа до местоположението в настройките на телефона.",
     "openSettings": "Отвори настройките"
+  },
+  "hijriMonths": {
+    "1": "Мухаррам",
+    "2": "Сафар",
+    "3": "Раби ал-аввал",
+    "4": "Раби ас-сани",
+    "5": "Джумада ал-ула",
+    "6": "Джумада ас-сани",
+    "7": "Раджаб",
+    "8": "Шабан",
+    "9": "Рамадан",
+    "10": "Шаввал",
+    "11": "Зу л-када",
+    "12": "Зу л-хиджа"
   }
 }

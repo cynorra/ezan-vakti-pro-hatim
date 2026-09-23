@@ -12,7 +12,8 @@
     "verseOfTheDay": "오늘의 구절",
     "hadithOfTheDay": "오늘의 하디스",
     "esmaOfTheDay": "오늘의 이름",
-    "duaOfTheDay": "오늘의 두아"
+    "duaOfTheDay": "오늘의 두아",
+    "fridayGreeting": "축복받은 금요일 🕌"
   },
   "prayerTimes": {
     "imsak": "파즈르",
@@ -113,7 +114,18 @@
     "headerSubtitle": "기도는 신앙인의 무기입니다",
     "featuredBadge": "오늘의 두아",
     "meaningLabel": "의미",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\n의미: {{meaning}}\n\n출처: {{source}}\n\nEzan Vakti + Hatim에서 공유됨."
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\n의미: {{meaning}}\n\n출처: {{source}}\n\nEzan Vakti + Hatim에서 공유됨.",
+    "categories": {
+      "all": "전체",
+      "daily": "일상",
+      "worship": "예배",
+      "protection": "보호",
+      "family": "가족",
+      "other": "기타"
+    },
+    "sourceLabel": "출처",
+    "cardSlogan": "기도 시간 및 꾸란 완독",
+    "cardFooter": "Google Play에서 무료"
   },
   "splash": {
     "subtitle": "기도 시간, 쿠란 완독, 두아를 한곳에서"
@@ -188,5 +200,19 @@
     "permissionTitle": "위치 권한이 꺼져 있습니다",
     "permissionBody": "현재 위치에 맞는 정확한 시간을 표시하려면 휴대폰 설정에서 위치 권한을 켜 주세요.",
     "openSettings": "설정 열기"
+  },
+  "hijriMonths": {
+    "1": "무하람",
+    "2": "사파르",
+    "3": "라비 알아왈",
+    "4": "라비 알사니",
+    "5": "주마다 알울라",
+    "6": "주마다 알사니",
+    "7": "라잡",
+    "8": "샤반",
+    "9": "라마단",
+    "10": "샤왈",
+    "11": "둘카다",
+    "12": "둘히자"
   }
 }

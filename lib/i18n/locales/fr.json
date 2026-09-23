@@ -12,7 +12,8 @@
     "verseOfTheDay": "Verset du jour",
     "hadithOfTheDay": "Hadith du jour",
     "esmaOfTheDay": "Nom du jour",
-    "duaOfTheDay": "Invocation du jour"
+    "duaOfTheDay": "Invocation du jour",
+    "fridayGreeting": "Joumou‘a moubarak 🕌"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -113,7 +114,18 @@
     "headerSubtitle": "L'invocation est l'arme du croyant",
     "featuredBadge": "INVOCATION DU JOUR",
     "meaningLabel": "SIGNIFICATION",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nSignification : {{meaning}}\n\nSource : {{source}}\n\nPartagé depuis Ezan Vakti + Hatim."
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nSignification : {{meaning}}\n\nSource : {{source}}\n\nPartagé depuis Ezan Vakti + Hatim.",
+    "categories": {
+      "all": "Tout",
+      "daily": "Quotidien",
+      "worship": "Adoration",
+      "protection": "Protection",
+      "family": "Famille",
+      "other": "Autre"
+    },
+    "sourceLabel": "Source",
+    "cardSlogan": "Horaires de prière & suivi du Coran",
+    "cardFooter": "Gratuit sur Google Play"
   },
   "splash": {
     "subtitle": "Heures de prière, khatm et invocations réunis"
@@ -188,5 +200,19 @@
     "permissionTitle": "Accès à la position désactivé",
     "permissionBody": "Pour afficher des horaires précis selon votre position, activez l'accès à la position dans les réglages du téléphone.",
     "openSettings": "Ouvrir les réglages"
+  },
+  "hijriMonths": {
+    "1": "Muharram",
+    "2": "Safar",
+    "3": "Rabi' al-Awwal",
+    "4": "Rabi' al-Thani",
+    "5": "Jumada al-Ula",
+    "6": "Jumada al-Thani",
+    "7": "Rajab",
+    "8": "Sha'ban",
+    "9": "Ramadan",
+    "10": "Shawwal",
+    "11": "Dhu al-Qa'dah",
+    "12": "Dhu al-Hijjah"
   }
 }

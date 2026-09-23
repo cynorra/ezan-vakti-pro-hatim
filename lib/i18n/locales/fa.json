@@ -12,7 +12,8 @@
     "verseOfTheDay": "آیه روز",
     "hadithOfTheDay": "حدیث روز",
     "esmaOfTheDay": "اسم روز",
-    "duaOfTheDay": "دعای روز"
+    "duaOfTheDay": "دعای روز",
+    "fridayGreeting": "جمعه مبارک 🕌"
   },
   "prayerTimes": {
     "imsak": "اذان صبح",
@@ -113,7 +114,18 @@
     "headerSubtitle": "دعا سلاح مؤمن است",
     "featuredBadge": "دعای روز",
     "meaningLabel": "ترجمه",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nترجمه: {{meaning}}\n\nمنبع: {{source}}\n\nبه اشتراک گذاشته شده از Ezan Vakti + Hatim."
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nترجمه: {{meaning}}\n\nمنبع: {{source}}\n\nبه اشتراک گذاشته شده از Ezan Vakti + Hatim.",
+    "categories": {
+      "all": "همه",
+      "daily": "روزانه",
+      "worship": "عبادت",
+      "protection": "محافظت",
+      "family": "خانواده",
+      "other": "سایر"
+    },
+    "sourceLabel": "منبع",
+    "cardSlogan": "اوقات نماز و پیگیری ختم قرآن",
+    "cardFooter": "دانلود رایگان از Google Play"
   },
   "splash": {
     "subtitle": "اوقات شرعی، ختم قرآن و ادعیه در یک برنامه"
@@ -188,5 +200,19 @@
     "permissionTitle": "دسترسی به موقعیت خاموش است",
     "permissionBody": "برای نمایش اوقات دقیق بر اساس محل شما، دسترسی به موقعیت را در تنظیمات گوشی روشن کنید.",
     "openSettings": "باز کردن تنظیمات"
+  },
+  "hijriMonths": {
+    "1": "محرم",
+    "2": "صفر",
+    "3": "ربیع‌الاول",
+    "4": "ربیع‌الثانی",
+    "5": "جمادی‌الاول",
+    "6": "جمادی‌الثانی",
+    "7": "رجب",
+    "8": "شعبان",
+    "9": "رمضان",
+    "10": "شوال",
+    "11": "ذی‌القعده",
+    "12": "ذی‌الحجه"
   }
 }

@@ -12,7 +12,8 @@
     "verseOfTheDay": "Ajet dana",
     "hadithOfTheDay": "Hadis dana",
     "esmaOfTheDay": "Ime dana",
-    "duaOfTheDay": "Dova dana"
+    "duaOfTheDay": "Dova dana",
+    "fridayGreeting": "Hajirli džuma 🕌"
   },
   "prayerTimes": {
     "imsak": "Sabah",
@@ -113,7 +114,18 @@
     "headerSubtitle": "Dova je oružje vjernika",
     "featuredBadge": "DOVA DANA",
     "meaningLabel": "ZNAČENJE",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nZnačenje: {{meaning}}\n\nIzvor: {{source}}\n\nPodijeljeno iz aplikacije Ezan Vakti + Hatim."
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nZnačenje: {{meaning}}\n\nIzvor: {{source}}\n\nPodijeljeno iz aplikacije Ezan Vakti + Hatim.",
+    "categories": {
+      "all": "Sve",
+      "daily": "Dnevne",
+      "worship": "Ibadet",
+      "protection": "Zaštita",
+      "family": "Porodica",
+      "other": "Ostalo"
+    },
+    "sourceLabel": "Izvor",
+    "cardSlogan": "Vaktija i praćenje hatme",
+    "cardFooter": "Besplatno na Google Playu"
   },
   "splash": {
     "subtitle": "Vaktija, hatma i dove na jednom mjestu"
@@ -188,5 +200,19 @@
     "permissionTitle": "Pristup lokaciji je isključen",
     "permissionBody": "Da bi se prikazala tačna vremena za vaše mjesto, uključite pristup lokaciji u postavkama telefona.",
     "openSettings": "Otvori postavke"
+  },
+  "hijriMonths": {
+    "1": "Muharrem",
+    "2": "Safer",
+    "3": "Rebiu-l-evvel",
+    "4": "Rebiu-l-ahir",
+    "5": "Džumade-l-ula",
+    "6": "Džumade-l-uhra",
+    "7": "Redžeb",
+    "8": "Ša'ban",
+    "9": "Ramazan",
+    "10": "Ševval",
+    "11": "Zu-l-ka'de",
+    "12": "Zu-l-hidždže"
   }
 }

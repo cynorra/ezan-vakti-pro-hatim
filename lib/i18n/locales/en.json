@@ -27,7 +27,8 @@
     "verseOfTheDay": "Verse of the Day",
     "hadithOfTheDay": "Hadith of the Day",
     "esmaOfTheDay": "Name of the Day",
-    "duaOfTheDay": "Dua of the Day"
+    "duaOfTheDay": "Dua of the Day",
+    "fridayGreeting": "Blessed Friday 🕌"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -115,7 +116,18 @@
     "meaningLabel": "MEANING",
     "shareMessage": "🤲 {{title}}\n\n{{transliteration}}\n\nMeaning: {{meaning}}\n\nSource: {{source}}\n\n📲 Download Ezan Vakti + Hatim for free:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
     "shareImage": "Share Card",
-    "shareText": "Share Text"
+    "shareText": "Share Text",
+    "categories": {
+      "all": "All",
+      "daily": "Daily",
+      "worship": "Worship",
+      "protection": "Protection",
+      "family": "Family",
+      "other": "Other"
+    },
+    "sourceLabel": "Source",
+    "cardSlogan": "Prayer Times & Quran Tracker",
+    "cardFooter": "Free on Google Play"
   },
   "splash": {
     "subtitle": "Prayer times, khatm and dua together"
@@ -192,5 +204,19 @@
     "permissionTitle": "Location access is off",
     "permissionBody": "To show accurate times for where you are, turn on location access in your phone settings.",
     "openSettings": "Open settings"
+  },
+  "hijriMonths": {
+    "1": "Muharram",
+    "2": "Safar",
+    "3": "Rabi' al-Awwal",
+    "4": "Rabi' al-Thani",
+    "5": "Jumada al-Ula",
+    "6": "Jumada al-Thani",
+    "7": "Rajab",
+    "8": "Sha'ban",
+    "9": "Ramadan",
+    "10": "Shawwal",
+    "11": "Dhu al-Qa'dah",
+    "12": "Dhu al-Hijjah"
   }
 }

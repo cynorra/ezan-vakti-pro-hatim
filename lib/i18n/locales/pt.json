@@ -12,7 +12,8 @@
     "verseOfTheDay": "Versículo do dia",
     "hadithOfTheDay": "Hadith do dia",
     "esmaOfTheDay": "Nome do dia",
-    "duaOfTheDay": "Dua do Dia"
+    "duaOfTheDay": "Dua do Dia",
+    "fridayGreeting": "Sexta-feira abençoada 🕌"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -113,7 +114,18 @@
     "headerSubtitle": "A Oração é a Arma do Crente",
     "featuredBadge": "DUA DO DIA",
     "meaningLabel": "SIGNIFICADO",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nSignificado: {{meaning}}\n\nFonte: {{source}}\n\nCompartilhado de Ezan Vakti + Hatim."
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nSignificado: {{meaning}}\n\nFonte: {{source}}\n\nCompartilhado de Ezan Vakti + Hatim.",
+    "categories": {
+      "all": "Todos",
+      "daily": "Diário",
+      "worship": "Adoração",
+      "protection": "Proteção",
+      "family": "Família",
+      "other": "Outros"
+    },
+    "sourceLabel": "Fonte",
+    "cardSlogan": "Horários de oração e Alcorão",
+    "cardFooter": "Grátis no Google Play"
   },
   "splash": {
     "subtitle": "Horários de oração, khatm e duas juntos"
@@ -188,5 +200,19 @@
     "permissionTitle": "Acesso à localização desativado",
     "permissionBody": "Para mostrar horários precisos para onde você está, ative o acesso à localização nas configurações do telefone.",
     "openSettings": "Abrir configurações"
+  },
+  "hijriMonths": {
+    "1": "Muharram",
+    "2": "Safar",
+    "3": "Rabi' al-Awwal",
+    "4": "Rabi' al-Thani",
+    "5": "Jumada al-Ula",
+    "6": "Jumada al-Thani",
+    "7": "Rajab",
+    "8": "Sha'ban",
+    "9": "Ramadan",
+    "10": "Shawwal",
+    "11": "Dhu al-Qa'dah",
+    "12": "Dhu al-Hijjah"
   }
 }

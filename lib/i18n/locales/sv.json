@@ -12,7 +12,8 @@
     "verseOfTheDay": "Dagens vers",
     "hadithOfTheDay": "Dagens hadith",
     "esmaOfTheDay": "Dagens namn",
-    "duaOfTheDay": "Dagens dua"
+    "duaOfTheDay": "Dagens dua",
+    "fridayGreeting": "Välsignad fredag 🕌"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -113,7 +114,18 @@
     "headerSubtitle": "Bönen är den troendes vapen",
     "featuredBadge": "DAGENS DUA",
     "meaningLabel": "BETYDELSE",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nBetydelse: {{meaning}}\n\nKälla: {{source}}\n\nDelat från Ezan Vakti + Hatim."
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nBetydelse: {{meaning}}\n\nKälla: {{source}}\n\nDelat från Ezan Vakti + Hatim.",
+    "categories": {
+      "all": "Alla",
+      "daily": "Dagliga",
+      "worship": "Tillbedjan",
+      "protection": "Skydd",
+      "family": "Familj",
+      "other": "Övrigt"
+    },
+    "sourceLabel": "Källa",
+    "cardSlogan": "Bönetider & koranläsning",
+    "cardFooter": "Gratis på Google Play"
   },
   "splash": {
     "subtitle": "Bönestunder, khatm och dua på ett ställe"
@@ -188,5 +200,19 @@
     "permissionTitle": "Platsåtkomst är av",
     "permissionBody": "Aktivera platsåtkomst i telefonens inställningar för att visa exakta tider där du är.",
     "openSettings": "Öppna inställningar"
+  },
+  "hijriMonths": {
+    "1": "Muharram",
+    "2": "Safar",
+    "3": "Rabi' al-Awwal",
+    "4": "Rabi' al-Thani",
+    "5": "Jumada al-Ula",
+    "6": "Jumada al-Thani",
+    "7": "Rajab",
+    "8": "Sha'ban",
+    "9": "Ramadan",
+    "10": "Shawwal",
+    "11": "Dhu al-Qa'dah",
+    "12": "Dhu al-Hijjah"
   }
 }

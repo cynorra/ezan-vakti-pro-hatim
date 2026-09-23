@@ -12,7 +12,8 @@
     "verseOfTheDay": "Күннің аяты",
     "hadithOfTheDay": "Күннің хадисі",
     "esmaOfTheDay": "Күннің есімі",
-    "duaOfTheDay": "Күн дұғасы"
+    "duaOfTheDay": "Күн дұғасы",
+    "fridayGreeting": "Жұмаңыз мүбәрак болсын 🕌"
   },
   "prayerTimes": {
     "imsak": "Бамдат",
@@ -113,7 +114,18 @@
     "headerSubtitle": "Дұға — мүміннің қаруы",
     "featuredBadge": "КҮН ДҰҒАСЫ",
     "meaningLabel": "МАҒЫНАСЫ",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nМағынасы: {{meaning}}\n\nДереккөз: {{source}}\n\nEzan Vakti + Hatim қосымшасынан бөлісілді."
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nМағынасы: {{meaning}}\n\nДереккөз: {{source}}\n\nEzan Vakti + Hatim қосымшасынан бөлісілді.",
+    "categories": {
+      "all": "Барлығы",
+      "daily": "Күнделікті",
+      "worship": "Ғибадат",
+      "protection": "Қорғаныс",
+      "family": "Отбасы",
+      "other": "Басқа"
+    },
+    "sourceLabel": "Дереккөз",
+    "cardSlogan": "Намаз уақыттары және хатым",
+    "cardFooter": "Google Play-де тегін"
   },
   "splash": {
     "subtitle": "Намаз уақыттары, хатым және дұғалар бір жерде"
@@ -188,5 +200,19 @@
     "permissionTitle": "Орналасқан жерге рұқсат өшірулі",
     "permissionBody": "Тұрған жеріңізге сай дәл уақытты көрсету үшін телефон баптауларында орналасқан жерге рұқсатты қосыңыз.",
     "openSettings": "Баптауларды ашу"
+  },
+  "hijriMonths": {
+    "1": "Мұхаррам",
+    "2": "Сафар",
+    "3": "Рабиғул-әууәл",
+    "4": "Рабиғул-ахир",
+    "5": "Жұмәдәл-әууәл",
+    "6": "Жұмәдәл-ахир",
+    "7": "Ражап",
+    "8": "Шағбан",
+    "9": "Рамазан",
+    "10": "Шәууәл",
+    "11": "Зұлқағда",
+    "12": "Зұлхиджа"
   }
 }

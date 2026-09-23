@@ -1,4 +1,5 @@
 import { forwardRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { View, Text, StyleSheet, Image, Platform } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
@@ -13,9 +14,10 @@ interface ShareableDuaCardProps {
 // boyutlu, ekran dışında render edilip react-native-view-shot ile görsele
 // dönüştürülen marka kartı.
 export const ShareableDuaCard = forwardRef<View, ShareableDuaCardProps>(({ dua, customBadge }, ref) => {
+  const { t } = useTranslation();
   if (!dua) return null;
 
-  const badgeText = customBadge || (dua.category ? dua.category.toUpperCase() : 'DUA PAYLAŞIMI');
+  const badgeText = (customBadge || t(`dua.categories.${dua.category}`, { defaultValue: dua.category })).toUpperCase();
 
   return (
     <View style={styles.wrapper} ref={ref} collapsable={false}>
@@ -26,7 +28,7 @@ export const ShareableDuaCard = forwardRef<View, ShareableDuaCardProps>(({ dua, 
         <Image source={require('../assets/icon.png')} style={styles.logo} />
         <View>
           <Text style={styles.brandText}>Ezan Vakti + Hatim</Text>
-          <Text style={styles.brandSlogan}>Namaz Vakitleri & Hatim Takibi</Text>
+          <Text style={styles.brandSlogan}>{t('dua.cardSlogan')}</Text>
         </View>
       </View>
 
@@ -51,20 +53,20 @@ export const ShareableDuaCard = forwardRef<View, ShareableDuaCardProps>(({ dua, 
 
       {dua.turkish ? (
         <View style={styles.meaningBox}>
-          <Text style={styles.meaningLabel}>TÜRKÇE ANLAMI</Text>
+          <Text style={styles.meaningLabel}>{t('dua.meaningLabel')}</Text>
           <Text style={styles.meaning}>{dua.turkish}</Text>
         </View>
       ) : null}
 
       {dua.source ? (
-        <Text style={styles.source}>Kaynak: {dua.source}</Text>
+        <Text style={styles.source}>{t('dua.sourceLabel')}: {dua.source}</Text>
       ) : null}
 
       {/* Footer Play Store Call To Action */}
       <View style={styles.footerContainer}>
         <View style={styles.storeBadge}>
           <Ionicons name="logo-google-playstore" size={16} color="#D4AF37" />
-          <Text style={styles.footerText}>Google Play'den Ücretsiz İndir</Text>
+          <Text style={styles.footerText}>{t('dua.cardFooter')}</Text>
         </View>
         <Text style={styles.footerAppId}>Ezan Vakti + Hatim</Text>
       </View>

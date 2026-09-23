@@ -12,7 +12,8 @@
     "verseOfTheDay": "Günün ayəsi",
     "hadithOfTheDay": "Günün hədisi",
     "esmaOfTheDay": "Günün ismi",
-    "duaOfTheDay": "Günün Duası"
+    "duaOfTheDay": "Günün Duası",
+    "fridayGreeting": "Cüməniz mübarək 🕌"
   },
   "prayerTimes": {
     "imsak": "Sübh",
@@ -113,7 +114,18 @@
     "headerSubtitle": "Dua Möminin Silahıdır",
     "featuredBadge": "GÜNÜN DUASI",
     "meaningLabel": "MƏNASI",
-    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nMənası: {{meaning}}\n\nMənbə: {{source}}\n\nEzan Vakti + Hatim tətbiqindən paylaşıldı."
+    "shareMessage": "{{title}}\n\n{{transliteration}}\n\nMənası: {{meaning}}\n\nMənbə: {{source}}\n\nEzan Vakti + Hatim tətbiqindən paylaşıldı.",
+    "categories": {
+      "all": "Hamısı",
+      "daily": "Gündəlik",
+      "worship": "İbadət",
+      "protection": "Qorunma",
+      "family": "Ailə",
+      "other": "Digər"
+    },
+    "sourceLabel": "Mənbə",
+    "cardSlogan": "Namaz vaxtları və xətm izləmə",
+    "cardFooter": "Google Play-də pulsuz"
   },
   "splash": {
     "subtitle": "Namaz vaxtları, xətm və dualar bir arada"
@@ -188,5 +200,19 @@
     "permissionTitle": "Məkan icazəsi bağlıdır",
     "permissionBody": "Olduğun yerə görə dəqiq vaxtları göstərmək üçün telefon ayarlarında məkan icazəsini aç.",
     "openSettings": "Ayarları aç"
+  },
+  "hijriMonths": {
+    "1": "Məhərrəm",
+    "2": "Səfər",
+    "3": "Rəbiüləvvəl",
+    "4": "Rəbiülaxır",
+    "5": "Cəmadiyələvvəl",
+    "6": "Cəmadiyəlaxır",
+    "7": "Rəcəb",
+    "8": "Şaban",
+    "9": "Ramazan",
+    "10": "Şəvval",
+    "11": "Zilqədə",
+    "12": "Zilhiccə"
   }
 }
