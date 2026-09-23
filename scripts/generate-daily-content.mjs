@@ -339,6 +339,16 @@ const QURAN_EDITIONS = {
   ms: 'ms.basmeih',
 };
 
+// Further app languages that have a published translation on alquran.cloud.
+// Optional: a missing one only makes the app fall back to English for that language.
+const OPTIONAL_QURAN_EDITIONS = {
+  fa: 'fa.fooladvand', ur: 'ur.jalandhry', de: 'de.bubenheim', fr: 'fr.hamidullah',
+  es: 'es.cortes', it: 'it.piccardo', ru: 'ru.kuliev', pl: 'pl.bielawskiego',
+  nl: 'nl.siregar', pt: 'pt.elhayek', sv: 'sv.bernstrom', bg: 'bg.theophanov',
+  ro: 'ro.grigore', bs: 'bs.korkut', az: 'az.mammadaliyev', uz: 'uz.sodik',
+  bn: 'bn.bengali', hi: 'hi.hindi', zh: 'zh.jian', ja: 'ja.japanese', ko: 'ko.korean',
+};
+
 // Used when the model fails or picks a reference that does not resolve.
 const FALLBACK_VERSE_REFS = [
   [17, 82], [13, 28], [94, 5], [2, 186], [2, 286], [39, 53], [65, 3], [93, 3],
@@ -348,7 +358,7 @@ const FALLBACK_VERSE_REFS = [
 async function fetchVerifiedVerse(surahNumber, verseNumber) {
   if (!Number.isInteger(surahNumber) || surahNumber < 1 || surahNumber > 114) return null;
   if (!Number.isInteger(verseNumber) || verseNumber < 1) return null;
-  const editions = Object.values(QURAN_EDITIONS).join(',');
+  const editions = [...Object.values(QURAN_EDITIONS), ...Object.values(OPTIONAL_QURAN_EDITIONS)].join(',');
   try {
     const res = await fetch(`https://api.alquran.cloud/v1/ayah/${surahNumber}:${verseNumber}/editions/${editions}`);
     if (!res.ok) return null;
@@ -362,7 +372,17 @@ async function fetchVerifiedVerse(surahNumber, verseNumber) {
       verseNumber,
       surahName: byEdition[QURAN_EDITIONS.arabic].surah.englishName,
       arabic: text('arabic'),
-      translations: { tr: text('tr'), en: text('en'), id: text('id'), ms: text('ms') },
+      translations: {
+        tr: text('tr'),
+        en: text('en'),
+        id: text('id'),
+        ms: text('ms'),
+        ...Object.fromEntries(
+          Object.entries(OPTIONAL_QURAN_EDITIONS)
+            .map(([lang, edition]) => [lang, byEdition[edition]?.text?.trim()])
+            .filter(([, value]) => value)
+        ),
+      },
       textSource: 'api.alquran.cloud',
     };
   } catch (e) {

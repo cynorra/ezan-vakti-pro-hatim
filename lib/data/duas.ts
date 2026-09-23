@@ -1,5 +1,5 @@
 import { duaTranslations } from './dua-translations';
-import { contentLanguage } from './content-translations';
+import { ARABIC_SCRIPT_LANGUAGES, baseLanguage, contentLanguage, contentPack } from './content-translations';
 
 export interface Dua {
   id: string;
@@ -265,8 +265,17 @@ export function localizeDua(dua: Dua, language: string): Dua {
   const lang = contentLanguage(language);
   const translation = duaTranslations[dua.id];
   if (lang === 'tr' || !translation) return dua;
-  const text = translation[lang];
-  return { ...dua, title: text.title, turkish: text.meaning, source: text.source, transliteration: translation.latin };
+  const base = baseLanguage(language);
+  const packed = contentPack(language)?.duas[dua.id];
+  const text = packed ?? translation[lang];
+  return {
+    ...dua,
+    title: text.title,
+    // Arabic readers already see the dua itself; a restatement would only repeat it.
+    turkish: base === 'ar' ? '' : text.meaning,
+    source: text.source,
+    transliteration: ARABIC_SCRIPT_LANGUAGES.has(base) ? '' : translation.latin,
+  };
 }
 
 export function getDuaById(id: string): Dua | undefined {

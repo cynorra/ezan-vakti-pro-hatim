@@ -9,7 +9,8 @@ export interface VerifiedVerse {
   /** English transliterated surah name from the API, e.g. "Al-Baqara". */
   surahName: string;
   arabic: string;
-  translations: { tr: string; en: string; id: string; ms: string };
+  /** tr/en/id/ms always; other app languages when alquran.cloud has a translation. */
+  translations: { tr: string; en: string; id: string; ms: string } & Record<string, string | undefined>;
 }
 
 // Only `verifiedVerse` is displayed: its text comes from api.alquran.cloud, not from
@@ -79,7 +80,11 @@ export function localizeVerifiedVerse(verse: VerifiedVerse, language: string): {
       return { text: verse.translations.id, source: `QS. ${verse.surahName}: ${verse.verseNumber}` };
     case 'ms':
       return { text: verse.translations.ms, source: `Surah ${verse.surahName}: ${verse.verseNumber}` };
+    case 'ar':
+      return { text: verse.arabic, source: `${verse.surahName} ${ref}` };
     default:
-      return { text: verse.translations.en, source: `Quran ${ref} (${verse.surahName})` };
+      return verse.translations[lang]
+        ? { text: verse.translations[lang]!, source: `${verse.surahName} ${ref}` }
+        : { text: verse.translations.en, source: `Quran ${ref} (${verse.surahName})` };
   }
 }

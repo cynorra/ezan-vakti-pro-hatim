@@ -1,5 +1,5 @@
 import { esmaTranslations } from './esma-translations';
-import { contentLanguage } from './content-translations';
+import { contentLanguage, contentPack } from './content-translations';
 
 export interface Esma {
   id: number;
@@ -116,7 +116,8 @@ export function localizeEsma(esma: Esma, language: string): Esma {
   const row = esmaTranslations[esma.id - 1];
   if (lang === 'tr' || !row) return esma;
   const [latin, en, id, ms] = row;
-  return { ...esma, turkish: latin, meaning: lang === 'id' ? id : lang === 'ms' ? ms : en };
+  const packed = contentPack(language)?.esma[esma.id - 1];
+  return { ...esma, turkish: latin, meaning: packed ?? (lang === 'id' ? id : lang === 'ms' ? ms : en) };
 }
 
 export const getRandomEsma = (): Esma => {

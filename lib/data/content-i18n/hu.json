@@ -1,0 +1,358 @@
+{
+  "duas": {
+    "morning-1": {
+      "title": "Reggeli dua",
+      "meaning": "Allahom, a Te neveddel érjük meg a reggelt, és a Te neveddel érjük meg az estét, a Te neveddel élünk és a Te neveddel halunk meg, és Hozzád lesz a feltámadás.",
+      "source": "Tirmidhi"
+    },
+    "protection-1": {
+      "title": "Dua a védelmért",
+      "meaning": "Allah nevében, akinek nevével semmi sem árthat sem a földön, sem az égben, és Ő a Halló, a Tudó.",
+      "source": "Abu Dawud"
+    },
+    "forgiveness-1": {
+      "title": "Bűnbocsánat kérése",
+      "meaning": "Megbocsátást kérek a Hatalmas Allah-tól, akin kívül nincs más isten, az Örökké Élő, Mindennek Fenntartója, és hozzá térjek meg bűnbánattal.",
+      "source": "Tirmidhi"
+    },
+    "gratitude-1": {
+      "title": "A hála duája",
+      "meaning": "Dicsőség Allahnak, aki enni adott nekünk, inni adott nekünk, elegendőt adott és hajlékot biztosított nekünk.",
+      "source": "Muslim"
+    },
+    "evening-1": {
+      "title": "Esti dua",
+      "meaning": "Allahom, kérem Tőled ezen éjszaka jóságát és annak jóságát, ami benne rejtőzik, és menedéket kérek Tőled annak gonoszságától és annak gonoszságától, ami benne van.",
+      "source": "Abu Dawud"
+    },
+    "sleep-1": {
+      "title": "Alvás előtt",
+      "meaning": "A Te nevedben, Allahom, halok meg és élek.",
+      "source": "Bukhari"
+    },
+    "wakeup-1": {
+      "title": "Felébredéskor",
+      "meaning": "Dicsőség Allahnak, aki életet adott nekünk miután halottá tett minket, és Hozzád lesz a feltámadás.",
+      "source": "Bukhari"
+    },
+    "stress-1": {
+      "title": "Dua nehézség idején",
+      "meaning": "Nincs isten rajtad kívül. Dicsőség Neked! Bizony, a bűnösök közé tartozom.",
+      "source": "Tirmidhi"
+    },
+    "travel-1": {
+      "title": "Dua utazáshoz",
+      "meaning": "Dicsőség Nefeki, aki alávetette nekünk ezt, és mi erre magunktól nem lennénk képesek. És bizony, Urunkhoz térünk vissza.",
+      "source": "Tirmidhi"
+    },
+    "health-1": {
+      "title": "Dua az egészségért",
+      "meaning": "Allahom, ajándékozz nekem egészséget a testemben. Allahom, ajándékozz nekem egészséget a hallásomban. Allahom, ajándékozz nekem egészséget a látásomban.",
+      "source": "Abu Dawud"
+    },
+    "knowledge-1": {
+      "title": "Dua a tudásért",
+      "meaning": "Uram, gyarapíts engem a tudásban.",
+      "source": "Taha szúra, 20:114"
+    },
+    "guidance-1": {
+      "title": "Dua az útmutatásért",
+      "meaning": "Allahom, vezesd az utamat, és tartsd meg engem az egyenes úton.",
+      "source": "Muslim"
+    },
+    "patience-1": {
+      "title": "Dua a türelemért",
+      "meaning": "Urunk! Árassz ránk türelmet, és erősítsd meg a lépteinket!",
+      "source": "A tehén szúra, 2:250"
+    },
+    "food-1": {
+      "title": "Evés előtt",
+      "meaning": "Allahom, áldd meg azt, amivel ellátál minket, és óvj meg minket a Tűz büntetésétől. Allah nevében.",
+      "source": "Ibn Majah"
+    },
+    "parents-1": {
+      "title": "Dua a szülőkért",
+      "meaning": "Uram! Könyörülj rajtuk, úgy, mint ahogy ők neveltek engem kisgyermekkoromban.",
+      "source": "Az éjjeli utazás szúra, 17:24"
+    },
+    "success-1": {
+      "title": "Dua a sikerért",
+      "meaning": "Uram! Tágítsd ki a lelkemet, és könnyítsd meg a dolgomat!",
+      "source": "Taha szúra, 20:25-26"
+    },
+    "anger-1": {
+      "title": "Harag idején",
+      "meaning": "Menedéket kérek Allahnál a megkövezett Sátántól.",
+      "source": "Bukhari"
+    },
+    "mosque-1": {
+      "title": "Belépés a mecsetbe",
+      "meaning": "Allahom, nyisd meg nekem irgalmasságod kapuit.",
+      "source": "Muslim"
+    },
+    "mosque-2": {
+      "title": "Kilépés a mecsetből",
+      "meaning": "Allahom, kérem Tőled a Te jóságodat.",
+      "source": "Muslim"
+    },
+    "rain-1": {
+      "title": "Amikor esik az eső",
+      "meaning": "Allahom, tedd ezt hasznos esővé.",
+      "source": "Bukhari"
+    },
+    "fear-1": {
+      "title": "Dua félelem idején",
+      "meaning": "Allah elegendő nekem. Nincs isten rajtad kívül. Benne bízom, és Ő a Hatalmas Trón Ura.",
+      "source": "Abu Dawud"
+    },
+    "exam-1": {
+      "title": "Dua vizsga előtt",
+      "meaning": "Uram, gyarapíts engem tudásban és megértésben, és csatolj engem a jámborokhoz.",
+      "source": "A Taha szúra, 20:114 alapján"
+    },
+    "illness-1": {
+      "title": "Dua a gyógyulásért",
+      "meaning": "Távolítsd el a bajt, ó, az emberek Ura, és gyógyíts meg, mert Te vagy a Gyógyító! Nincs gyógyulás, csak a Te gyógyulásod, olyan gyógyulás, amely nem hagy maga után betegséget.",
+      "source": "Bukhari"
+    },
+    "debt-1": {
+      "title": "Megszabadulás az adósságtól",
+      "meaning": "Allahom, menedéket kérek Tőled a bútól és a gyásztól, a tehetetlenségtől és a restségtől, a fösvénységtől és a gyávaégtől, az adósság súlyától és attól, hogy mások hatalmuk alá kerítsenek.",
+      "source": "Bukhari"
+    },
+    "repentance-1": {
+      "title": "A bűnbocsánat mestere",
+      "meaning": "Allahom, Te vagy az én Uram. Nincs isten rajtad kívül. Te teremtettél engem, én a Te szolgád vagyok, és betartom szövetségedet és ígéretet, amennyire csak tőlem telik.",
+      "source": "Bukhari"
+    }
+  },
+  "wisdom": {
+    "1": {
+      "content": "És a ti Uratok így szólt: „Hívjatok Engem, és Én válaszolok nektek!”",
+      "source": "A Hívő szúra, 40:60"
+    },
+    "2": {
+      "content": "A tettek a szándékokon múlnak, és mindenkinek az jut, amit szándékolt.",
+      "source": "Bukhari, 1"
+    },
+    "3": {
+      "content": "Bizony, a nehézség mellett könnyebbség van.",
+      "source": "Az alacsonyodás szúra, 94:5"
+    },
+    "4": {
+      "content": "A legjobbak tiközületek azok, akik tanulják a Koránt, és tanítják azt.",
+      "source": "Bukhari, 5027"
+    },
+    "5": {
+      "content": "Allah senkire sem ró terhet csak a képességei szerint.",
+      "source": "A tehén szúra, 2:286"
+    },
+    "6": {
+      "content": "Könnyítsétek meg, és ne nehezítsétek meg; adjatok örömhírt, és ne kergessétek el az embereket.",
+      "source": "Bukhari, 69"
+    },
+    "7": {
+      "content": "Bizony, Allah a türelmesekkel van.",
+      "source": "A tehén szúra, 2:153"
+    },
+    "8": {
+      "content": "A e világi élet szeretete minden bűn gyökere.",
+      "source": "Bayhaqi, Shu'ab al-Iman"
+    },
+    "9": {
+      "content": "Íme, Allah emlékezetében találnak nyugalmat a szívek.",
+      "source": "A mennydörgés szúra, 13:28"
+    },
+    "10": {
+      "content": "Aki valakit jóra vezet, annak olyan jutalma lesz, mint annak, aki azt cselekszi.",
+      "source": "Muslim, 1893"
+    },
+    "11": {
+      "content": "És az embernek csak az jár, amiért fáradozott.",
+      "source": "A csillag szúra, 53:39"
+    },
+    "12": {
+      "content": "Az emberek közül a legjobbak azok, akik a leghasznosabbak mások számára.",
+      "source": "Tabarani, al-Mu'jam al-Awsat"
+    },
+    "13": {
+      "content": "Aki teremtette a halált és az életet, hogy próbára tegyen titeket, ki a legjámborabb tetteiben.",
+      "source": "Az uralkodás szúra, 67:2"
+    },
+    "14": {
+      "content": "A tisztaság a hit fele.",
+      "source": "Muslim, 223"
+    },
+    "15": {
+      "content": "Bizony, a legnemesebb a ti soraitokban Allahnál az, aki a legistenfélőbb.",
+      "source": "A szobák szúra, 49:13"
+    }
+  },
+  "verses": {
+    "isra-82": {
+      "content": "És Mi leküldjük a Koránból azt, ami gyógyulás és irgalom a hívők számára.",
+      "source": "Az éjjeli utazás szúra"
+    },
+    "rad-28": {
+      "content": "Íme, Allah emlékezetében találnak nyugalmat a szívek.",
+      "source": "A mennydörgés szúra"
+    },
+    "insirah-5-6": {
+      "content": "Bizony, a nehézség mellett könnyebbség van. Bizony, a nehézség mellett könnyebbség van.",
+      "source": "Az alacsonyodás szúra"
+    },
+    "mumin-60": {
+      "content": "És a ti Uratok így szólt: „Hívjatok Engem, és Én válaszolok nektek!”",
+      "source": "A Hívő szúra"
+    },
+    "duha-3": {
+      "content": "A te Urad nem hagyott el téged, és nem neheztel rád.",
+      "source": "A délelőtti órák szúra"
+    },
+    "bakara-286": {
+      "content": "Allah senkire sem ró terhet csak a képességei szerint.",
+      "source": "A tehén szúra"
+    },
+    "taha-114": {
+      "content": "És mondd: „Uram, gyarapíts engem a tudásban!”",
+      "source": "Taha szúra"
+    },
+    "zumer-53": {
+      "content": "Mondd: „Ó, szolgáim, akik vétkeztetek magatok ellen, ne csüggedjetek el Allah irgalmában!”",
+      "source": "A seregek szúra"
+    },
+    "yunus-57": {
+      "content": "Ó, emberek! Intés érkezett hozzátok Uratoktól, és gyógyulás abban, ami a szívekben van, valamint útmutatás és irgalom a hívőknek.",
+      "source": "Jónás szúra"
+    },
+    "suara-80": {
+      "content": "És amikor beteg vagyok, Ő az, aki meggyógyít engem.",
+      "source": "A költők szúra"
+    },
+    "talak-3": {
+      "content": "És aki Allahra bízza magát, annak Ő elegendő.",
+      "source": "A válás szúra"
+    },
+    "fussilet-44": {
+      "content": "Mondd: „Ez a hívők számára útmutatás és gyógyulás.”",
+      "source": "Magyarázott szúra"
+    },
+    "bakara-186": {
+      "content": "És ha a szolgáim kérdeznek Engem rólad: Én közel vagyok. Meghallom a könyörgő szavát, ha hozzám imádkozik.",
+      "source": "A tehén szúra"
+    },
+    "tebve-128": {
+      "content": "Bizony, Küldött jött el hozzátok magastok közül. Nehéz neki az, ami nektek fáj, sóvárogva óvja ti jóságotokat, és a hívőkhöz irgalmas és könyörületes.",
+      "source": "A bűnbánat szúra"
+    },
+    "furkan-74": {
+      "content": "Urunk, ajándékozz nekünk feleségeinktől és utódainktól szemet gyönyörködtető örömet, és tedd, hogy a jámborok vezetői legyünk!",
+      "source": "A megkülönböztetés szúra"
+    },
+    "aliimran-173": {
+      "content": "Elegendő nekünk Allah, és Ő a Legjobb Intézője az ügyeknek.",
+      "source": "Imrán családja szúra"
+    }
+  },
+  "esma": [
+    "Az Egy Isten, aki egyesíti a tökéletesség minden nevét és tulajdonságát.",
+    "A Legkegyesebb, aki könyörületes minden teremtéshez ebben a világban.",
+    "A Irgalmas, aki különösen a hívőkhöz irgalmas a Túlvilágon.",
+    "A Király, a mindenség birodalmának tulajdonosa.",
+    "A legszentebb, aki minden tökéletlenségtől mentes.",
+    "A Békesség Forrása, aki biztonságot nyújt szolgáinak.",
+    "A Biztonság és a Hit Adója.",
+    "A Védelmező, aki mindenre felügyel és védelmez.",
+    "A Hatalmas, akin senki sem kerekedhet felül.",
+    "A Kényszerítő, akinek akarata mindig beteljesül.",
+    "A Fenséges a nagyságban.",
+    "A Teremtő, aki a semmiből hoz létre.",
+    "A Létrehozó, aki tökéletes harmóniában teremt.",
+    "A Formatervező, aki mindennek formát ad.",
+    "Az Örökké Megbocsátó, aki elrejti a bűnöket.",
+    "A Hatalmával Uralkodó, aki minden felett diadalmaskodik.",
+    "Az Adakozó, aki szabadon és bőségesen ad.",
+    "A Fenntartó, aki mindenkinek biztosítja a táplálékot.",
+    "A Nyitó, aki elhárítja a nehézséget és megnyitja a jóság kapuit.",
+    "A Mindentudó.",
+    "A Visszatartó, aki tetszése szerint szűkíti a gondoskodást.",
+    "A Bővítő, aki tetszése szerint kiterjeszti a gondoskodást.",
+    "Az Alacsonyra Tévő, aki megalázza, akit akar.",
+    "A Magasra Emelő, aki felmagasztalja, akit akar.",
+    "A Tisztesség Adója.",
+    "A Megalázás Adója.",
+    "A Mindent Halló.",
+    "A Mindent Látó.",
+    "A Bíró, akinek ítélete végleges.",
+    "A Tökéletesen Igazságos.",
+    "A Finom és Kedves, aki ismeri a legapróbb részleteket.",
+    "A Mindenről Tájékozott.",
+    "A Türelmes, gyengéd a teremtésével.",
+    "A Fenséges, akit nem lehet felfogni ésszel.",
+    "A Mindent Megbocsátó.",
+    "A Hálás, aki a kis tetteket is nagylelkűen jutalmazza.",
+    "A Legmagasztosabb.",
+    "A Legnagyobb.",
+    "A Megőrző, aki minden dolgot védelmez.",
+    "A Gondviselő, aki mindennek táplálékot ad.",
+    "Az Elszámoltató, aki számot vet szolgáival.",
+    "A Fenséges.",
+    "A Legnagylelkűbb.",
+    "A Figyelő, aki minden pillanatban szemlél mindent.",
+    "A Meghallgató, aki válaszol a imákra.",
+    "A Mindent Átfogó a tudásban, irgalomban és hatalomban.",
+    "A Bölcs.",
+    "A Szerető.",
+    "A Legdicsőbb.",
+    "A Holtak Feltámasztója.",
+    "A Tanú, aki mindenhol jelen van.",
+    "Az Igazság, a Valóság.",
+    "A Megbízott, aki a legjobban intézi szolgái ügyeit.",
+    "A Mindenható.",
+    "A Szilárd, akinek hatalma megingathatatlan.",
+    "A hívők Védelmező Barátja.",
+    "A Dicséretre Méltó.",
+    "A Számláló, aki ismeri minden dolog számát.",
+    "A Kezdeményező, aki elkezdi a teremtést.",
+    "Az Újraalkotó, aki visszahozza az életbe.",
+    "Az Élet Adója.",
+    "A Halál Hozója.",
+    "Az Örökké Élő.",
+    "A Önmagáért Létező és Minden Fenntartója.",
+    "A Megtaláló, akinek semmi sem hiányzik.",
+    "A Nemes, bővelkedő a nagylelkűségben.",
+    "Az Egyetlen, egyedi a lényegében és tulajdonságaiban.",
+    "Az Örök Menedék, akitől mindenki függ.",
+    "A Mindenre Képes.",
+    "A Mindenható, aki rendelkezik minden hatalommal bíró felett.",
+    "Az Előrehozó, aki előrehozza, akit akar.",
+    "A Késleltető, aki visszatartja, akit akar.",
+    "Az Első, kezdet nélküli.",
+    "Az Utolsó, aki megmarad minden elmúlása után.",
+    "A Nyilvánvaló, aki jelein keresztül mutatkozik meg.",
+    "A Rejtett, akinek lénye láthatatlan.",
+    "Az Irányító, aki egyedül igazgatja a mindenséget.",
+    "A Legfölségesebb.",
+    "A Jóság Forrása.",
+    "A Bűnbánat Elfogadója.",
+    "A Bosszúálló, aki igazságosan bünteti a bűnösöket.",
+    "A Megkegyelmező.",
+    "A Legkedvesebb és Legkönyörületesebb.",
+    "Minden birodalom Örök Tulajdonosa.",
+    "A Fenség és Nagylelkűség Ura.",
+    "A Igazságos, aki mindent igazságosan tesz.",
+    "Az Összegyűjtő, aki azt gyűjti össze, akit akar, amikor akar.",
+    "A Önmagának Elégséges, a Végtelenül Gazdag.",
+    "A Gazdagító.",
+    "Az Akadályozó, aki visszatartja azt, amit nem akar.",
+    "A kár teremtője (próbaként).",
+    "A hasznosság teremtője.",
+    "A Fény, aki megvilágítja a világokat.",
+    "Az Útmutató az egyenes útra.",
+    "A Szépség Páratlan Megteremtője.",
+    "Az Örökkévaló.",
+    "Az Örökös, a mindenség végső Tulajdonosa.",
+    "Az Igazságra Vezető, akinek ügyei tökéletesen irányítottak.",
+    "A Legtürelmesebb, aki nem sietteti a büntetést."
+  ]
+}

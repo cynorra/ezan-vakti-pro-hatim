@@ -1,0 +1,358 @@
+{
+  "duas": {
+    "morning-1": {
+      "title": "Invocation du matin",
+      "meaning": "Ô Allah, c'est par Toi que nous entrons dans le matin et par Toi que nous entrons dans le soir, c'est par Toi que nous vivons et par Toi que nous mourons, et c'est vers Toi que sera la résurrection.",
+      "source": "Tirmidhi"
+    },
+    "protection-1": {
+      "title": "Invocation de protection",
+      "meaning": "Au nom d'Allah, avec dont le nom rien sur terre ni dans les cieux ne peut causer de tort, et Il est l'Audient, l'Omniscient.",
+      "source": "Abu Dawud"
+    },
+    "forgiveness-1": {
+      "title": "Demande de pardon",
+      "meaning": "Je demande pardon à Allah l'Immense, en dehors de qui il n'y a point de divinité, le Vivant, Celui qui subsiste par Lui-même, et je me repens auprès de Lui.",
+      "source": "Tirmidhi"
+    },
+    "gratitude-1": {
+      "title": "Invocation de gratitude",
+      "meaning": "Louange à Allah qui nous a nourris, nous a abreuvés, nous a suffits et nous a donnés un refuge.",
+      "source": "Muslim"
+    },
+    "evening-1": {
+      "title": "Invocation du soir",
+      "meaning": "Ô Allah, je Te demande le bien de cette nuit et le bien de ce qu'elle contient, et je cherche refuge auprès de Toi contre son mal et le mal de ce qu'elle contient.",
+      "source": "Abu Dawud"
+    },
+    "sleep-1": {
+      "title": "Avant de dormir",
+      "meaning": "C'est en Ton nom, ô Allah, que je meurs et je vis.",
+      "source": "Bukhari"
+    },
+    "wakeup-1": {
+      "title": "Au réveil",
+      "meaning": "Louange à Allah qui nous a redonné la vie après nous avoir fait mourir, et c'est vers Lui que sera la résurrection.",
+      "source": "Bukhari"
+    },
+    "stress-1": {
+      "title": "Invocation dans la détresse",
+      "meaning": "Nulle divinité à part Toi, gloire à Toi ! J'ai été du nombre des injustes.",
+      "source": "Tirmidhi"
+    },
+    "travel-1": {
+      "title": "Invocation pour le voyage",
+      "meaning": "Gloire à Celui qui a mis ceci à notre service alors que nous n'étions pas capables de les dominer. Et nous retournons certes vers notre Seigneur.",
+      "source": "Tirmidhi"
+    },
+    "health-1": {
+      "title": "Invocation pour la santé",
+      "meaning": "Ô Allah, préserve ma santé dans mon corps. Ô Allah, préserve ma santé dans mon ouïe. Ô Allah, préserve ma santé dans ma vue.",
+      "source": "Abu Dawud"
+    },
+    "knowledge-1": {
+      "title": "Invocation pour la science",
+      "meaning": "Ô mon Seigneur, accrois-moi en science.",
+      "source": "Sourate Taha, 20:114"
+    },
+    "guidance-1": {
+      "title": "Invocation pour la guidance",
+      "meaning": "Ô Allah, guide-moi et maintiens-moi sur le droit chemin.",
+      "source": "Muslim"
+    },
+    "patience-1": {
+      "title": "Invocation pour la patience",
+      "meaning": "Seigneur, déverse sur nous la patience et affermis nos pas.",
+      "source": "Sourate Al-Baqarah, 2:250"
+    },
+    "food-1": {
+      "title": "Avant de manger",
+      "meaning": "Ô Allah, bénis ce que Tu nous as attribué et protège-nous du châtiment du Feu. Au nom d'Allah.",
+      "source": "Ibn Majah"
+    },
+    "parents-1": {
+      "title": "Invocation pour les parents",
+      "meaning": "Ô mon Seigneur, fais-leur miséricorde comme ils m'ont élevé tout petit.",
+      "source": "Sourate Al-Isra, 17:24"
+    },
+    "success-1": {
+      "title": "Invocation pour le succès",
+      "meaning": "Seigneur, ouvre-moi ma poitrine et facilite-moi ma tâche.",
+      "source": "Sourate Taha, 20:25-26"
+    },
+    "anger-1": {
+      "title": "En cas de colère",
+      "meaning": "Je cherche refuge auprès d'Allah contre Satan le banni.",
+      "source": "Bukhari"
+    },
+    "mosque-1": {
+      "title": "En entrant à la mosquée",
+      "meaning": "Ô Allah, ouvre-moi les portes de Ta miséricorde.",
+      "source": "Muslim"
+    },
+    "mosque-2": {
+      "title": "En sortant de la mosquée",
+      "meaning": "Ô Allah, je Te demande de Ta grâce.",
+      "source": "Muslim"
+    },
+    "rain-1": {
+      "title": "Quand il pleut",
+      "meaning": "Ô Allah, fais qu'elle soit une pluie bénéfique.",
+      "source": "Bukhari"
+    },
+    "fear-1": {
+      "title": "Invocation dans la peur",
+      "meaning": "Allah me suffit; il n'y a de divinité que Lui. En Lui je place ma confiance et Il est le Seigneur du Trône immense.",
+      "source": "Abu Dawud"
+    },
+    "exam-1": {
+      "title": "Invocation avant un examen",
+      "meaning": "Seigneur, accrois-moi en science et en compréhension, et joins-moi aux vertueux.",
+      "source": "Basé sur la sourate Taha, 20:114"
+    },
+    "illness-1": {
+      "title": "Invocation pour la guérison",
+      "meaning": "Éloigne le mal, ô Seigneur des hommes, et guéris, car Tu es le Guérisseur. Il n'y a de guérison que Ta guérison, une guérison qui ne laisse aucun mal.",
+      "source": "Bukhari"
+    },
+    "debt-1": {
+      "title": "Soulagement des dettes",
+      "meaning": "Ô Allah, je cherche refuge auprès de Toi contre le souci et la tristesse, contre l'incapacité et la paresse, contre laavarice et la lâcheté, contre le poids de la dette et la domination des hommes.",
+      "source": "Bukhari"
+    },
+    "repentance-1": {
+      "title": "Maître de la demande de pardon",
+      "meaning": "Ô Allah, Tu es mon Seigneur, il n'y a de divinité que Toi. Tu m'as créé et je suis Ton serviteur. Je suis soumis à Tes pactes et à Tes promesses autant que je le puis.",
+      "source": "Bukhari"
+    }
+  },
+  "wisdom": {
+    "1": {
+      "content": "Et votre Seigneur dit : « Invoquez-Moi, Je vous exaucerai. »",
+      "source": "Sourate Ghafir, 40:60"
+    },
+    "2": {
+      "content": "Les actions ne valent que par leurs intentions et chaque homme n'aura que ce qu'il a intentionné.",
+      "source": "Bukhari, 1"
+    },
+    "3": {
+      "content": "À côté de la difficulté est, certes, une facilitation !",
+      "source": "Sourate Ash-Sharh, 94:5"
+    },
+    "4": {
+      "content": "Le meilleur d'entre vous est celui qui apprend le Coran et l'enseigne.",
+      "source": "Bukhari, 5027"
+    },
+    "5": {
+      "content": "Allah n'impose à aucune âme une charge supérieure à sa capacité.",
+      "source": "Sourate Al-Baqarah, 2:286"
+    },
+    "6": {
+      "content": "Facilitez les choses et ne les rendez pas difficiles, annoncez la bonne nouvelle et ne repoussez pas les gens.",
+      "source": "Bukhari, 69"
+    },
+    "7": {
+      "content": "Certes, Allah est avec les endurants.",
+      "source": "Sourate Al-Baqarah, 2:153"
+    },
+    "8": {
+      "content": "L'amour de ce bas-monde est la racine de tout péché.",
+      "source": "Bayhaqi, Shu'ab al-Iman"
+    },
+    "9": {
+      "content": "N'est-ce point par l'évocation d'Allah que se tranquillisent les cœurs ?",
+      "source": "Sourate Ar-Ra'd, 13:28"
+    },
+    "10": {
+      "content": "Quiconque guide vers un bien aura une récompense semblable à celle de son auteur.",
+      "source": "Muslim, 1893"
+    },
+    "11": {
+      "content": "Et qu'en vérité, l'homme n'obtient que ce qu'il a fait comme effort.",
+      "source": "Sourate An-Najm, 53:39"
+    },
+    "12": {
+      "content": "Les meilleurs des gens sont ceux qui sont les plus utiles aux autres.",
+      "source": "Tabarani, al-Mu'jam al-Awsat"
+    },
+    "13": {
+      "content": "Celui qui a créé la mort et la vie afin de vous éprouver (et de savoir) qui de vous est le meilleur en œuvres.",
+      "source": "Sourate Al-Mulk, 67:2"
+    },
+    "14": {
+      "content": "La purification est la moitié de la foi.",
+      "source": "Muslim, 223"
+    },
+    "15": {
+      "content": "Le plus noble d'entre vous auprès d'Allah est le plus pieux.",
+      "source": "Sourate Al-Hujurat, 49:13"
+    }
+  },
+  "verses": {
+    "isra-82": {
+      "content": "Nous faisons descendre du Coran, ce qui est une guérison et une miséricorde pour les croyants.",
+      "source": "Sourate Al-Isra"
+    },
+    "rad-28": {
+      "content": "Certes, par l'évocation d'Allah se tranquillisent les cœurs.",
+      "source": "Sourate Ar-Ra'd"
+    },
+    "insirah-5-6": {
+      "content": "À côté de la difficulté est, certes, une facilitation ! En vérité, avec la difficulté il y a une facilitation !",
+      "source": "Sourate Ash-Sharh"
+    },
+    "mumin-60": {
+      "content": "Et votre Seigneur dit : « Invoquez-Moi, Je vous exaucerai. »",
+      "source": "Sourate Ghafir"
+    },
+    "duha-3": {
+      "content": "Ton Seigneur ne t'a ni abandonné, ni detesté.",
+      "source": "Sourate Ad-Duha"
+    },
+    "bakara-286": {
+      "content": "Allah n'impose à aucune âme une charge supérieure à sa capacité.",
+      "source": "Sourate Al-Baqarah"
+    },
+    "taha-114": {
+      "content": "Et dis : « Ô mon Seigneur, accrois-moi en science. »",
+      "source": "Sourate Taha"
+    },
+    "zumer-53": {
+      "content": "Dis : « Ô Mes serviteurs qui avez commis des excès à votre propre détriment, ne désespérez pas de la miséricorde d'Allah. »",
+      "source": "Sourate Az-Zumar"
+    },
+    "yunus-57": {
+      "content": "Ô hommes ! Une exhortation vous est venue de votre Seigneur, une guérison de ce qui est dans les poitrines, un guide et une miséricorde pour les croyants.",
+      "source": "Sourate Yunus"
+    },
+    "suara-80": {
+      "content": "Et c'est Lui qui me guérit quand je suis malade.",
+      "source": "Sourate Ash-Shu'ara"
+    },
+    "talak-3": {
+      "content": "Et quiconque place sa confiance en Allah, Il lui suffit.",
+      "source": "Sourate At-Talaq"
+    },
+    "fussilet-44": {
+      "content": "Dis : « Pour ceux qui croient, il est une guide et une guérison. »",
+      "source": "Sourate Fussilat"
+    },
+    "bakara-186": {
+      "content": "Et quand Mes serviteurs t'interrogent sur Moi.. alors je suis proche : Je réponds à l'appel de celui qui Me prie quand il Me prie.",
+      "source": "Sourate Al-Baqarah"
+    },
+    "tebve-128": {
+      "content": "Certes, un Messager pris parmi vous, est venu à vous, auquel pèsent lourd les maux que vous avez subis, qui est plein de solicitude pour vous, qui est compatissant et miséricordieux envers les croyants.",
+      "source": "Sourate At-Tawbah"
+    },
+    "furkan-74": {
+      "content": "Seigneur, donne-nous, en nos épouses et nos descendants, la joie des yeux, et fais de nous un guide pour les pieux.",
+      "source": "Sourate Al-Furqan"
+    },
+    "aliimran-173": {
+      "content": "Allah nous suffit; Il est notre meilleur gérant.",
+      "source": "Sourate Ali Imran"
+    }
+  },
+  "esma": [
+    "Dieu unique, qui rassemble tous les noms et attributs de perfection.",
+    "Le Tout-Miséricordieux, miséricordieux envers toute la création en ce bas monde.",
+    "Le Très-Miséricordieux, en particulier envers les croyants dans l'au-delà.",
+    "Le Souverain, le Maître de la domination de l'univers.",
+    "Le Très-Saint, exempt de toute imperfection.",
+    "La Source de paix, qui accorde la sécurité à Ses serviteurs.",
+    "Le Donateur de sécurité et de foi.",
+    "Le Protecteur, qui veille sur toutes choses et les protège.",
+    "Le Tout-Puissant, que rien ne peut vaincre.",
+    "Le Compulsif, dont la volonté s'accomplit toujours.",
+    "Le Sublime en grandeur.",
+    "Le Créateur, qui fait exister à partir de rien.",
+    "L'Innovateur, qui crée dans une harmonie parfaite.",
+    "Le Formateur, qui donne à toute chose sa forme.",
+    "Le Grand Pardonneur, qui couvre les péchés.",
+    "Le Dominateur, qui l'emporte sur toute chose.",
+    "Le Donateur, qui donne librement et abondamment.",
+    "Le Pourvoyeur de subsistance pour tous.",
+    "L'Ouvreur, qui élimine la difficulté et ouvre les portes du bien.",
+    "L'Omniscient.",
+    "Le Retenant, qui restreint la subsistance comme Il veut.",
+    "L'Amplificateur, qui étend la subsistance comme Il veut.",
+    "Celui qui abaisse qui Il veut.",
+    "Celui qui élève qui Il veut.",
+    "Celui qui donne l'honneur.",
+    "Celui qui avilit.",
+    "L'Audient.",
+    "Le Voyant.",
+    "Le Juge, dont le décret est sans appel.",
+    "Le Parfaitement Juste.",
+    "Le Subtil et Bienveillant, qui connaît les moindres détails.",
+    "Le Bien-Informé.",
+    "Le Patient, doux envers Sa création.",
+    "Le Magnificent, au-delà de toute compréhension.",
+    "Le Très-Pardonnant.",
+    "Le Reconnaissant, qui récompense grandement les petites actions.",
+    "Le Très-Haut.",
+    "L'Immense.",
+    "Le Gardien, qui protège toutes choses.",
+    "Le Soutien, qui nourrit tout.",
+    "Le Compu, qui tient compte des actes de Ses serviteurs.",
+    "Le Majestueux.",
+    "Le Très-Généreux.",
+    "Le Vigilant, qui observe tout à chaque instant.",
+    "Celui qui exauce les prières.",
+    "L'Embrassant en science, miséricorde et puissance.",
+    "Le Plein de sagesse.",
+    "Le Tout-Aimant.",
+    "Le Glorieux.",
+    "Le Ressusciteur des morts.",
+    "Le Témoin, présent partout.",
+    "La Vérité, le Réel.",
+    "Le Tuteur, qui arrange au mieux les affaires de Ses serviteurs.",
+    "Le Fort.",
+    "Le Ferme, dont la puissance est inébranlable.",
+    "L'Allié protecteur des croyants.",
+    "Le Digne de louange.",
+    "Celui qui dénombre, qui connaît le nombre de toutes choses.",
+    "L'Initiateur, qui commence la création.",
+    "Le Restorateur, qui ramène à la vie.",
+    "Celui qui donne la vie.",
+    "Celui qui donne la mort.",
+    "Le Vivant.",
+    "Celui qui subsiste par Lui-même et fait subsister tout autre.",
+    "Le Trouveur, à qui rien ne manque.",
+    "Le Noble, abondant en générosité.",
+    "L'Unique, sans pareil dans Son essence et Ses attributs.",
+    "Le Refuge éternel, de qui tout dépend.",
+    "Le Tout-Capable.",
+    "Le Tout-Puissant, qui dispose de tous ceux qui ont du pouvoir.",
+    "Celui qui avance qui Il veut.",
+    "Celui qui retarde qui Il veut.",
+    "Le Premier, sans commencement.",
+    "Le Dernier, qui demeure après la disparition de tout.",
+    "L'Apparent, évident par Ses signes.",
+    "Le Caché, dont l'essence est invisible.",
+    "Le Gouverneur, qui gère seul l'univers.",
+    "Le Très-Exalté.",
+    "La Source de bonté.",
+    "L'Accueillant au repentir.",
+    "Le Vengeur, qui punit justement les injustes.",
+    "L'Indulgent.",
+    "Le Tout-Bienveillant et Miséricordieux.",
+    "Le Maître éternel de toute domination.",
+    "Le Seigneur de majesté et de générosité.",
+    "L'Équitable, qui fait toute chose avec justice.",
+    "Le Rassembleur, qui réunit ce qu'Il veut quand Il veut.",
+    "Le Se Suffisant à Lui-même, l'Infiniment R不论.",
+    "L'Enrichisseur.",
+    "Le Preventeur, qui retient ce qu'Il ne veut pas.",
+    "Le Créateur du mal (comme épreuve).",
+    "Le Créateur du bien.",
+    "La Lumière, qui illumine les mondes.",
+    "Le Guide vers le droit chemin.",
+    "L'Incomparable Créateur de beauté.",
+    "L'Éternel.",
+    "L'Héritier, le Propriétaire ultime de tout.",
+    "Le Guide vers la droiture, dont les affaires sont parfaitement dirigées.",
+    "Le Très-Patient, qui ne hâte pas le châtiment."
+  ]
+}

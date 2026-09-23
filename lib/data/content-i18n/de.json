@@ -1,0 +1,358 @@
+{
+  "duas": {
+    "morning-1": {
+      "title": "Morgendliche Dua",
+      "meaning": "O Allah, durch Dich gelangen wir in den Morgen und durch Dich gelangen wir in den Abend, durch Dich leben wir und durch Dich sterben wir, und zu Dir ist die Auferstehung.",
+      "source": "Tirmidhi"
+    },
+    "protection-1": {
+      "title": "Dua zum Schutz",
+      "meaning": "Im Namen Allahs, mit Dessen Namen weder auf der Erde noch im Himmel etwas Schaden zufügen kann, und Er ist der Allhörende, der Allwissende.",
+      "source": "Abu Dawud"
+    },
+    "forgiveness-1": {
+      "title": "Suche nach Vergebung",
+      "meaning": "Ich suche Vergebung bei Allah, dem Allmächtigen, außer dem es keinen Gott gibt, dem Ewiglebenden, dem Erhalter aller, und ich bereue zu Ihm.",
+      "source": "Tirmidhi"
+    },
+    "gratitude-1": {
+      "title": "Dua der Dankbarkeit",
+      "meaning": "Lob gebührt Allah, Der uns gespeist, uns zu trinken gegeben, uns genügt und uns eine Zuflucht gegeben hat.",
+      "source": "Muslim"
+    },
+    "evening-1": {
+      "title": "Abendliche Dua",
+      "meaning": "O Allah, ich bitte Dich um das Gute dieser Nacht und das Gute von dem, was in ihr ist, und ich nehme Zuflucht bei Dir vor ihrem Übel und dem Übel von dem, was in ihr ist.",
+      "source": "Abu Dawud"
+    },
+    "sleep-1": {
+      "title": "Vor dem Schlafen",
+      "meaning": "In Deinem Namen, o Allah, sterbe ich und lebe ich.",
+      "source": "Bukhari"
+    },
+    "wakeup-1": {
+      "title": "Beim Aufwachen",
+      "meaning": "Lob gebührt Allah, Der uns Leben gab, nachdem Er uns sterben ließ, und zu Ihm ist die Auferstehung.",
+      "source": "Bukhari"
+    },
+    "stress-1": {
+      "title": "Dua in Bedrängnis",
+      "meaning": "Es gibt keinen Gott außer Dir. Preis sei Dir! Gewiss, ich gehörte zu den Ungerechten.",
+      "source": "Tirmidhi"
+    },
+    "travel-1": {
+      "title": "Dua für die Reise",
+      "meaning": "Preis sei Dem, Der uns dies dienstbar gemacht hat, wo wir dazu doch (allein) nicht in der Lage gewesen wären! Und gewiss, zu unserem Herrn werden wir gewiss zurückkehren.",
+      "source": "Tirmidhi"
+    },
+    "health-1": {
+      "title": "Dua für Gesundheit",
+      "meaning": "O Allah, schenke mir Gesundheit in meinem Körper. O Allah, schenke mir Gesundheit in meinem Gehör. O Allah, schenke mir Gesundheit in meinem Sehvermögen.",
+      "source": "Abu Dawud"
+    },
+    "knowledge-1": {
+      "title": "Dua für Wissen",
+      "meaning": "Mein Herr, mehre mich an Wissen.",
+      "source": "Sure Taha, 20:114"
+    },
+    "guidance-1": {
+      "title": "Dua für Rechtleitung",
+      "meaning": "O Allah, leite mich recht und halte mich auf dem geraden Weg.",
+      "source": "Muslim"
+    },
+    "patience-1": {
+      "title": "Dua für Geduld",
+      "meaning": "Unser Herr, schütte Geduld über uns aus und festige unsere Schritte.",
+      "source": "Sure Al-Baqarah, 2:250"
+    },
+    "food-1": {
+      "title": "Vor dem Essen",
+      "meaning": "O Allah, segne das, womit Du uns versorgt hast, und bewahre uns vor der Strafe des Höllenfeuers. Im Namen Allahs.",
+      "source": "Ibn Majah"
+    },
+    "parents-1": {
+      "title": "Dua für die Eltern",
+      "meaning": "Mein Herr, erbarme Dich ihrer beiden, wie sie mich (als Kind) aufgezogen haben.",
+      "source": "Sure Al-Isra, 17:24"
+    },
+    "success-1": {
+      "title": "Dua für Erfolg",
+      "meaning": "Mein Herr, schließe mir meine Brust auf und erleichtere mir meine Angelegenheit.",
+      "source": "Sure Taha, 20:25-26"
+    },
+    "anger-1": {
+      "title": "Beim Zorn",
+      "meaning": "Ich nehme Zuflucht bei Allah vor dem verfluchten Satan.",
+      "source": "Bukhari"
+    },
+    "mosque-1": {
+      "title": "Beim Betreten der Moschee",
+      "meaning": "O Allah, öffne mir die Tore Deiner Barmherzigkeit.",
+      "source": "Muslim"
+    },
+    "mosque-2": {
+      "title": "Beim Verlassen der Moschee",
+      "meaning": "O Allah, ich bitte Dich um Deine Gunst.",
+      "source": "Muslim"
+    },
+    "rain-1": {
+      "title": "Wenn es regnet",
+      "meaning": "O Allah, mache es zu einem nutzbringenden Regen.",
+      "source": "Bukhari"
+    },
+    "fear-1": {
+      "title": "Dua bei Furcht",
+      "meaning": "Allah genügt mir. Es gibt keinen Gott außer Ihm. Auf Ihn verlasse ich mich, und Er ist der Herr des gewaltigen Throns.",
+      "source": "Abu Dawud"
+    },
+    "exam-1": {
+      "title": "Dua vor einer Prüfung",
+      "meaning": "Mein Herr, mehre mich an Wissen und Verständnis, und verbinde mich mit den Rechtschaffenen.",
+      "source": "Basierend auf Sure Taha, 20:114"
+    },
+    "illness-1": {
+      "title": "Dua für Heilung",
+      "meaning": "Nimm den Schaden fort, o Herr der Menschen, und heile, denn Du bist der Heiler. Es gibt keine Heilung außer Deiner Heilung, eine Heilung, die keine Krankheit zurücklässt.",
+      "source": "Bukhari"
+    },
+    "debt-1": {
+      "title": "Erleichterung von Schulden",
+      "meaning": "O Allah, ich nehme Zuflucht bei Dir vor Kummer und Traurigkeit, vor Schwäche und Faulheit, vor Geiz und Feigheit, vor der Last der Schulden und davor, von Männern überwältigt zu werden.",
+      "source": "Bukhari"
+    },
+    "repentance-1": {
+      "title": "Meisterhafte Bitte um Vergebung",
+      "meaning": "O Allah, Du bist mein Herr. Es gibt keinen Gott außer Dir. Du hast mich erschaffen und ich bin Dein Diener, und ich halte mich an Deinen Bund und Deine Verheißung, so gut ich kann.",
+      "source": "Bukhari"
+    }
+  },
+  "wisdom": {
+    "1": {
+      "content": "Und euer Herr sprach: Ruft Mich an, so erhoffe Ich euch (Erhörung).",
+      "source": "Sure Ghafir, 40:60"
+    },
+    "2": {
+      "content": "Die Taten werden nur nach den Absichten bemessen, und jedem Menschen gebührt nur das, was er beabsichtigt hat.",
+      "source": "Bukhari, 1"
+    },
+    "3": {
+      "content": "Gewiss, mit der Erschwernis ist Erleichterung.",
+      "source": "Sure Ash-Sharh, 94:5"
+    },
+    "4": {
+      "content": "Die Besten unter euch sind diejenigen, die den Quran lernen und lehren.",
+      "source": "Bukhari, 5027"
+    },
+    "5": {
+      "content": "Allah fordert von keiner Seele mehr, als sie zu leisten vermag.",
+      "source": "Sure Al-Baqarah, 2:286"
+    },
+    "6": {
+      "content": "Erleichtert und erschwert nicht, verkündet frohe Botschaften und schreckt die Menschen nicht ab.",
+      "source": "Bukhari, 69"
+    },
+    "7": {
+      "content": "Gewiss, Allah ist mit den Geduldigen.",
+      "source": "Sure Al-Baqarah, 2:153"
+    },
+    "8": {
+      "content": "Die Liebe zum Diesseits ist die Wurzel aller Übeltaten.",
+      "source": "Bayhaqi, Shu'ab al-Iman"
+    },
+    "9": {
+      "content": "Wahrlich, durch das Gedenken Allahs finden die Herzen Ruhe.",
+      "source": "Sure Ar-Ra'd, 13:28"
+    },
+    "10": {
+      "content": "Wer zu etwas Gutem anleitet, der hat denselben Lohn wie derjenige, der es tut.",
+      "source": "Muslim, 1893"
+    },
+    "11": {
+      "content": "Und dass dem Menschen nichts zuteil wird als das, worum er sich bemüht.",
+      "source": "Sure An-Najm, 53:39"
+    },
+    "12": {
+      "content": "Die besten Menschen sind diejenigen, die den anderen am nützlichsten sind.",
+      "source": "Tabarani, al-Mu'jam al-Awsat"
+    },
+    "13": {
+      "content": "Der den Tod und das Leben erschaffen hat, um euch zu prüfen, wer von euch am besten in den Taten ist.",
+      "source": "Sure Al-Mulk, 67:2"
+    },
+    "14": {
+      "content": "Die Reinheit ist die Hälfte des Glaubens.",
+      "source": "Muslim, 223"
+    },
+    "15": {
+      "content": "Gewiss, der Ehrenwerteste von euch bei Allah ist der Gottesfürchtigste von euch.",
+      "source": "Sure Al-Hujurat, 49:13"
+    }
+  },
+  "verses": {
+    "isra-82": {
+      "content": "Und Wir offenbaren von dem Quran das, was eine Heilung und eine Barmherzigkeit für die Gläubigen ist.",
+      "source": "Sure Al-Isra"
+    },
+    "rad-28": {
+      "content": "Diejenigen, die glauben, und deren Herzen sich durch das Gedenken Allahs Ruhe finden. Wahrlich, durch das Gedenken Allahs finden die Herzen Ruhe.",
+      "source": "Sure Ar-Ra'd"
+    },
+    "insirah-5-6": {
+      "content": "Gewiss, mit der Erschwernis ist Erleichterung. Gewiss, mit der Erschwernis ist Erleichterung.",
+      "source": "Sure Ash-Sharh"
+    },
+    "mumin-60": {
+      "content": "Und euer Herr sprach: Ruft Mich an, so erhoffe Ich euch.",
+      "source": "Sure Ghafir"
+    },
+    "duha-3": {
+      "content": "Dein Herr hat dich weder verlassen, noch ist Er unwillig.",
+      "source": "Sure Ad-Duha"
+    },
+    "bakara-286": {
+      "content": "Allah fordert von keiner Seele mehr, als sie zu leisten vermag.",
+      "source": "Sure Al-Baqarah"
+    },
+    "taha-114": {
+      "content": "Und sprich: Mein Herr, mehre mich an Wissen.",
+      "source": "Sure Taha"
+    },
+    "zumer-53": {
+      "content": "Sag: O Meine Diener, die ihr gegen euch selbst maßlos gewesen seid, verliert nicht die Hoffnung in Allahs Barmherzigkeit.",
+      "source": "Sure Az-Zumar"
+    },
+    "yunus-57": {
+      "content": "O ihr Menschen, nunmehr ist zu euch eine Ermahnung von eurem Herrn gekommen und eine Heilung für das, was in den Brüsten ist, und eine Rechtleitung und Barmherzigkeit für die Gläubigen.",
+      "source": "Sure Yunus"
+    },
+    "suara-80": {
+      "content": "Und wenn ich krank bin, so ist Er es, Der mich heilt.",
+      "source": "Sure Ash-Shu'ara"
+    },
+    "talak-3": {
+      "content": "Und wer sich auf Allah verlässt, für den ist Er sein Genüge.",
+      "source": "Sure At-Talaq"
+    },
+    "fussilet-44": {
+      "content": "Sag: Er ist für diejenigen, die glauben, eine Rechtleitung und eine Heilung.",
+      "source": "Sure Fussilat"
+    },
+    "bakara-186": {
+      "content": "Und wenn Meine Diener dich nach Mir fragen, so bin Ich nahe. Ich erbitte den Ruf des Bittenden, wenn er Mich anruft.",
+      "source": "Sure Al-Baqarah"
+    },
+    "tebve-128": {
+      "content": "Wahrlich, zu euch ist nunmehr ein Gesandter aus eurer Mitte gekommen. Es graut ihm vor dem, in Bedrängnis ihr geratet; er ist besorgt um euch, zu den Gläubigen gütig und barmherzig.",
+      "source": "Sure At-Tawbah"
+    },
+    "furkan-74": {
+      "content": "Unser Herr, schenke uns an unseren Gattinnen und unseren Nachkommenschaften Augentrost und mache uns zu Vorbildern für die Gottesfürchtigen.",
+      "source": "Sure Al-Furqan"
+    },
+    "aliimran-173": {
+      "content": "Genügt ist uns Allah, und wie trefflich ist Der Anwalt.",
+      "source": "Sure Ali Imran"
+    }
+  },
+  "esma": [
+    "Der Einzige Gott, Der alle Namen und Eigenschaften der Vollkommenheit vereint.",
+    "Der Allerbarmende, Der allen Geschöpfen in dieser Welt barmherzig ist.",
+    "Der Barmherzige, insbesondere zu den Gläubigen im Jenseits.",
+    "Der König, der Herrscher über die Herrschaft des Universums.",
+    "Der Allerheiligste, frei von jeglicher Unvollkommenheit.",
+    "Der Quell des Friedens, Der Seinen Dienern Sicherheit gewährt.",
+    "Der Spender von Sicherheit und Glauben.",
+    "Der Beschützer, Der über alle Dinge wacht und sie beschützt.",
+    "Der Allmächtige, den niemand besiegen kann.",
+    "Der Unterwerfer, Dessen Wille stets geschieht.",
+    "Der Erhabene an Größe.",
+    "Der Schöpfer, Der aus dem Nichts ins Dasein ruft.",
+    "Der Urheber, Der in vollkommener Harmonie erschöpft.",
+    "Der Formgeber, Der allem seine Gestalt verleiht.",
+    "Der Allvergebende, Der die Sünden bedeckt.",
+    "Der Bezwinger, Der über alles triumphiert.",
+    "Der Schenkende, Der frei und im Überfluss gibt.",
+    "Der Versorger, Der allen den Lebensunterhalt gewährt.",
+    "Der Eröffner, Der Bedrängnis beseitigt und die Tore des Guten öffnet.",
+    "Der Allwissende.",
+    "Der Zurückhaltende, Der die Versorgung einschränkt, wie Er will.",
+    "Der Ausbreitende, Der die Versorgung ausweitet, wie Er will.",
+    "Der Erniedrigende, Der erniedrigt, wen Er will.",
+    "Der Erhöhende, Der erhöht, wen Er will.",
+    "Der Ehrende.",
+    "Der Erniedrigende (der Ungläubigen).",
+    "Der Allhörende.",
+    "Der Allsehende.",
+    "Der Richter, Dessen Urteil endgültig ist.",
+    "Der Überaus Gerechte.",
+    "Der Gütige und Feinwissende, Der die feinsten Details kennt.",
+    "Der Allkundige.",
+    "Der Nachsichtige, Sanftmütige mit Seinen Geschöpfen.",
+    "Der Großartige, jenseits jeglichen Begreifens.",
+    "Der Allverzeihende.",
+    "Der Dankbare, Der kleine Taten reichlich belohnt.",
+    "Der Allerhöchste.",
+    "Der All-Große.",
+    "Der Bewahrer, Der alle Dinge beschützt.",
+    "Der Ernährer, Der allen Nahrung spendet.",
+    "Der Berechnende, Der Seine Diener zur Rechenschaft zieht.",
+    "Der Majestätische.",
+    "Der Edelste und Großzügigste.",
+    "Der Wachsame, Der in jedem Moment alles beobachtet.",
+    "Der Erhörende, Der Gebete erhört.",
+    "Der Allumfassende in Wissen, Barmherzigkeit und Macht.",
+    "Der Allweise.",
+    "Der Allliebende.",
+    "Der Ruhmreiche.",
+    "Der Auferwecker der Toten.",
+    "Der Zeuge, überall gegenwärtig.",
+    "Die Wahrheit, das Wirkliche.",
+    "Der Sachwalter, Der die Angelegenheiten Seiner Diener am besten regelt.",
+    "Der Allstarke.",
+    "Der Standhafte, Dessen Macht unerschütterlich ist.",
+    "Der schützende Freund der Gläubigen.",
+    "Der Lobenswerte.",
+    "Der Zählende, Der die Anzahl aller Dinge kennt.",
+    "Der Urheber, Der die Schöpfung beginnt.",
+    "Der Wiederbringer, Der zum Leben zurückruft.",
+    "Der Lebensspender.",
+    "Der Todesbringer.",
+    "Der Ewiglebende.",
+    "Der aus sich selbst heraus existierende Erhalter aller.",
+    "Der Findende, dem nichts mangelt.",
+    "Der Edle, reich an Großzügigkeit.",
+    "Der Eine, einzig in Wesen und Eigenschaften.",
+    "Die Ewige Zuflucht, auf die alle angewiesen sind.",
+    "Der Allfähige.",
+    "Der Allmächtige, Der über alle verfügt, die Macht besitzen.",
+    "Der Vorbringende, Der nach vorne bringt, wen Er will.",
+    "Der Zurückstellende, Der zurückhält, wen Er will.",
+    "Der Erste, ohne Anfang.",
+    "Der Letzte, Der bleibt, wenn alles vergeht.",
+    "Der Offenbare, erkennbar durch Seine Zeichen.",
+    "Der Verborgene, dessen Wesen unsichtbar ist.",
+    "Der Herrscher, Der allein das Universum lenkt.",
+    "Der Höchsterhabene.",
+    "Der Quell des Guten.",
+    "Der Annhmende der Reue.",
+    "Der Rächer, Der Übeltäter gerecht bestraft.",
+    "Der Verzeihende.",
+    "Der Allgütige und Barmherzige.",
+    "Der ewige Besitzer aller Herrschaft.",
+    "Der Herr von Majestät und Großzügigkeit.",
+    "Der Billige, Der alles mit Gerechtigkeit tut.",
+    "Der Versammler, Der versammelt, was Er will, wann Er will.",
+    "Der Unbedürftige, der unendlich Reiche.",
+    "Der Bereichernde.",
+    "Der Verwehrende, Der zurückhält, was Er nicht will.",
+    "Der Schöpfer des Schadens (als Prüfung).",
+    "Der Schöpfer des Nutzens.",
+    "Das Licht, das die Welten erhellt.",
+    "Der Wegweiser zum geraden Weg.",
+    "Der unvergleichliche Schöpfer von Schönheit.",
+    "Der Ewigbeständige.",
+    "Der Erbe, der ultimative Eigentümer von allem.",
+    "Der Wegweiser zur Rechtschaffenheit, Dessen Angelegenheiten perfekt gelenkt sind.",
+    "Der Geduldigste, Der die Strafe nicht eilig verhängt."
+  ]
+}

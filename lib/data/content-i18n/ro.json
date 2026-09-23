@@ -1,0 +1,358 @@
+{
+  "duas": {
+    "morning-1": {
+      "title": "Dua de dimineață",
+      "meaning": "O, Allah, prin Tine ne întimpinăm dimineața și prin Tine ne întimpinăm seara, prin Tine trăim și prin Tine murim, și la Tine este învierea.",
+      "source": "Tirmidhi"
+    },
+    "protection-1": {
+      "title": "Dua pentru ocrotire",
+      "meaning": "În numele lui Allah, a cărui numire nu poate face rău nimic pe pământ și nici în ceruri, și El este Cel care Aude totul, Cel care Știe totul.",
+      "source": "Abu Dawud"
+    },
+    "forgiveness-1": {
+      "title": "Cererea iertării",
+      "meaning": "Cerin iertare de la Allah Cel Atotputernic, în afară de care nu există alt zeu, Cel veșnic Viu, Întreținătorul a toate, și la El mă pocăiesc.",
+      "source": "Tirmidhi"
+    },
+    "gratitude-1": {
+      "title": "Dua recunoștinței",
+      "meaning": "Laudă lui Allah care ne-a hrănit, ne-a adăpat, ne-a fost de ajuns și ne-a dat adăpost.",
+      "source": "Muslim"
+    },
+    "evening-1": {
+      "title": "Dua de seară",
+      "meaning": "O, Allah, Îți cer binele acestei nopți și binele a ceea ce conține ea, și caut refugiu la Tine de răul ei și de răul a ceea ce conține ea.",
+      "source": "Abu Dawud"
+    },
+    "sleep-1": {
+      "title": "Înainte de culcare",
+      "meaning": "În numele Tău, o, Allah, mor și trăiesc.",
+      "source": "Bukhari"
+    },
+    "wakeup-1": {
+      "title": "La trezire",
+      "meaning": "Laudă lui Allah care ne-a dat viață după ce ne-a dat moartea, și la El este învierea.",
+      "source": "Bukhari"
+    },
+    "stress-1": {
+      "title": "Dua la suferință",
+      "meaning": "Nu există alt zeu în afară de Tine. Mărire Ție! Eu am fost printre cei nedrepți.",
+      "source": "Tirmidhi"
+    },
+    "travel-1": {
+      "title": "Dua pentru călătorie",
+      "meaning": "Mărire Celui care ne-a supus aceasta, căci noi n-am fi putut-o face singuri. Și noi către Domnul nostru ne vom întoarce.",
+      "source": "Tirmidhi"
+    },
+    "health-1": {
+      "title": "Dua pentru sănătate",
+      "meaning": "O, Allah, dă-mi sănătate în trupul meu. O, Allah, dă-mi sănătate în auzul meu. O, Allah, dă-mi sănătate în vederea mea.",
+      "source": "Abu Dawud"
+    },
+    "knowledge-1": {
+      "title": "Dua pentru cunoaștere",
+      "meaning": "Doamne, sporește-mi știința!",
+      "source": "Surah Taha, 20:114"
+    },
+    "guidance-1": {
+      "title": "Dua pentru îndrumare",
+      "meaning": "O, Allah, îndrumă-mă și ține-mă pe calea dreaptă.",
+      "source": "Muslim"
+    },
+    "patience-1": {
+      "title": "Dua pentru răbdare",
+      "meaning": "Doamne al nostru, revarsă asupra noastră răbdare și întărește pașii noștri!",
+      "source": "Surah Al-Baqarah, 2:250"
+    },
+    "food-1": {
+      "title": "Înainte de masă",
+      "meaning": "O, Allah, binecuvântează ceea ce ne-ai dăruit și ferește-ne de pedeapsa Focului. În numele lui Allah.",
+      "source": "Ibn Majah"
+    },
+    "parents-1": {
+      "title": "Dua pentru părinți",
+      "meaning": "Doamne, ai milă de ei așa cum m-au crescut când am fost mic!",
+      "source": "Surah Al-Isra, 17:24"
+    },
+    "success-1": {
+      "title": "Dua pentru succes",
+      "meaning": "Doamne, deschide-mi pieptul și ușurează-mi treaba mea!",
+      "source": "Surah Taha, 20:25-26"
+    },
+    "anger-1": {
+      "title": "La mânie",
+      "meaning": "Caut refugiu la Allah de Satana cel blestemat.",
+      "source": "Bukhari"
+    },
+    "mosque-1": {
+      "title": "La intrarea în moschee",
+      "meaning": "O, Allah, deschide-mi porțile îndurării Tale.",
+      "source": "Muslim"
+    },
+    "mosque-2": {
+      "title": "La ieșirea din moschee",
+      "meaning": "O, Allah, Îți cer din harul Tău.",
+      "source": "Muslim"
+    },
+    "rain-1": {
+      "title": "Când plouă",
+      "meaning": "O, Allah, fă-o o ploaie binefăcătoare.",
+      "source": "Bukhari"
+    },
+    "fear-1": {
+      "title": "Dua la frică",
+      "meaning": "Allah îmi este de ajuns. Nu există alt zeu în afară de El. În El mă încred, și El este Domnul Tronului Măreț.",
+      "source": "Abu Dawud"
+    },
+    "exam-1": {
+      "title": "Dua înainte de un examen",
+      "meaning": "Doamne, sporește-mi știința și înțelegerea, și alătură-mă celor drepți.",
+      "source": "Based on Surah Taha, 20:114"
+    },
+    "illness-1": {
+      "title": "Dua pentru vindecare",
+      "meaning": "Îndepărtează răul, o, Doamne al oamenilor, și vindecă, căci Tu ești Vindecătorul. Nu există vindecare decât vindecarea Ta, o vindecare care nu lasă nicio boală în urmă.",
+      "source": "Bukhari"
+    },
+    "debt-1": {
+      "title": "Scăparea de datorii",
+      "meaning": "O, Allah, caut refugiu la Tine de îngrijorare și întristare, de neputință și lenevie, de zgârcenie și lașitate, de povara datoriei și de a fi biruit de oameni.",
+      "source": "Bukhari"
+    },
+    "repentance-1": {
+      "title": "Maestrul cererii iertării",
+      "meaning": "O, Allah, Tu ești Domnul meu. Nu există alt zeu în afară de Tine. Tu m-ai creat și eu sunt robul Tău, și mă țin de legământul Tău și de promisiunea Ta pe cât pot.",
+      "source": "Bukhari"
+    }
+  },
+  "wisdom": {
+    "1": {
+      "content": "Domnul vostru a spus: „Chemați-Mă, că vă voi răspunde!”",
+      "source": "Surah Ghafir, 40:60"
+    },
+    "2": {
+      "content": "Faptele sunt judecate după intenții și fiecare va avea ceea ce a intenționat.",
+      "source": "Bukhari, 1"
+    },
+    "3": {
+      "content": "Așa este, cu greutatea vine și ușurarea.",
+      "source": "Surah Ash-Sharh, 94:5"
+    },
+    "4": {
+      "content": "Cei mai buni dintre voi sunt cei care învață Coranul și îl predau.",
+      "source": "Bukhari, 5027"
+    },
+    "5": {
+      "content": "Allah nu a încărcat pe nimeni decât peste puterința lui.",
+      "source": "Surah Al-Baqarah, 2:286"
+    },
+    "6": {
+      "content": "Faceți lucrurile ușoare și nu le faceți grele; dați vești bune și nu îndepărtați oamenii.",
+      "source": "Bukhari, 69"
+    },
+    "7": {
+      "content": "Allah este cu cei răbdători.",
+      "source": "Surah Al-Baqarah, 2:153"
+    },
+    "8": {
+      "content": "Iubirea pentru această lume este rădăcina oricărei fapte rele.",
+      "source": "Bayhaqi, Shu'ab al-Iman"
+    },
+    "9": {
+      "content": "Iată! Întru pomenirea lui Allah inimile își găsesc liniștea.",
+      "source": "Surah Ar-Ra'd, 13:28"
+    },
+    "10": {
+      "content": "Oricine călăuzește pe cineva spre bine va avea o răsplată la fel ca cel care îl face.",
+      "source": "Muslim, 1893"
+    },
+    "11": {
+      "content": "Omul nu va avea decât ceea ce a urmărit prin strădania sa.",
+      "source": "Surah An-Najm, 53:39"
+    },
+    "12": {
+      "content": "Cei mai buni oameni sunt cei mai folositori altora.",
+      "source": "Tabarani, al-Mu'jam al-Awsat"
+    },
+    "13": {
+      "content": "Cel care a creat moartea și viața ca să vă încerce care dintre voi este mai bun la faptă.",
+      "source": "Surah Al-Mulk, 67:2"
+    },
+    "14": {
+      "content": "Curățenia este jumătate din credință.",
+      "source": "Muslim, 223"
+    },
+    "15": {
+      "content": "Cel mai cinstit dintre voi înaintea lui Allah este cel mai evlavios dintre voi.",
+      "source": "Surah Al-Hujurat, 49:13"
+    }
+  },
+  "verses": {
+    "isra-82": {
+      "content": "Noi coborâm din Coran ceea ce este tămăduire și milostivenie pentru dreptcredincioși.",
+      "source": "Surah Al-Isra"
+    },
+    "rad-28": {
+      "content": "Iată! Întru pomenirea lui Allah inimile își găsesc liniștea.",
+      "source": "Surah Ar-Ra'd"
+    },
+    "insirah-5-6": {
+      "content": "Așa este, cu greutatea vine și ușurarea. Așa este, cu greutatea vine și ușurarea.",
+      "source": "Surah Ash-Sharh"
+    },
+    "mumin-60": {
+      "content": "Domnul vostru a spus: „Chemați-Mă, că vă voi răspunde!”",
+      "source": "Surah Ghafir"
+    },
+    "duha-3": {
+      "content": "Domnul tău nu te-a părăsit și nu te-a urât.",
+      "source": "Surah Ad-Duha"
+    },
+    "bakara-286": {
+      "content": "Allah nu a încărcat pe nimeni decât peste puterința lui.",
+      "source": "Surah Al-Baqarah"
+    },
+    "taha-114": {
+      "content": "Și zi: „Doamne, sporește-mi știința!”",
+      "source": "Surah Taha"
+    },
+    "zumer-53": {
+      "content": "Spune: „O, slujitorii Mei care ați întrecut măsură în sufletele voastre, nu disperați de mila lui Allah!",
+      "source": "Surah Az-Zumar"
+    },
+    "yunus-57": {
+      "content": "O, voi oameni! V-a parvenit vouă o îndrumare de la Domnul vostru și o tămăduire pentru ceea ce este în piepturi, o călăuzire și o îndurare pentru dreptcredincioși.",
+      "source": "Surah Yunus"
+    },
+    "suara-80": {
+      "content": "Și când sunt bolnav, El este cel care mă tămuiește.",
+      "source": "Surah Ash-Shu'ara"
+    },
+    "talak-3": {
+      "content": "Și cel care se încrede în Allah, El îi este de ajuns.",
+      "source": "Surah At-Talaq"
+    },
+    "fussilet-44": {
+      "content": "Spune: „Pentru cei care cred, el este călăuzire și tămăduire!”",
+      "source": "Surah Fussilat"
+    },
+    "bakara-186": {
+      "content": "Iar când robii Mei te întreabă despre Mine, Eu sunt aproape și răspund rugăciunii celui care Mă cheamă, dacă Mă cheamă.",
+      "source": "Surah Al-Baqarah"
+    },
+    "tebve-128": {
+      "content": "V-a venit vouă un Trimis din voi înşivă, căruia îi este greu de ceea ce voi ați suferit, dornic de binele vostru, milostiv și îndurător cu dreptcredincioșii.",
+      "source": "Surah At-Tawbah"
+    },
+    "furkan-74": {
+      "content": "Doamne al nostru, dă-ne nouă în soțiile noastre și în urmașii noștri o bucurie pentru ochi și fă-ne nouă pe cei evlavioși drept călăuză!",
+      "source": "Surah Al-Furqan"
+    },
+    "aliimran-173": {
+      "content": "Allah ne este de ajuns și El este cel mai bun ocrotitor.",
+      "source": "Surah Ali Imran"
+    }
+  },
+  "esma": [
+    "Unicul Dumnezeu, care unește toate numele și atributele perfecțiunii.",
+    "Cel Mult Milostiv, îndurător față de toată creația în această lume.",
+    "Cel Prea Milostiv, în special față de dreptcredincioși în Apoi.",
+    "Regele, Stăpânul împărăției universului.",
+    "Cel Prea Sfânt, lipsit de orice imperfecțiune.",
+    "Izvorul Păcii, care dă siguranță robilor Săi.",
+    "Dătătorul de Securitate și Credință.",
+    "Ocrotitorul, care veghează asupra tuturor lucrurilor și le protejează.",
+    "Cel Atotputernic, pe care nimeni nu-L poate birui.",
+    "Cel Silnic, a cărui voie se împlinește întotdeauna.",
+    "Cel Mai Înalt în Măreție.",
+    "Creatorul, care aduce la ființă din nimic.",
+    "Făuritorul, care creează în armonie desăvârșită.",
+    "Modelatorul, care dă fiecăruia forma sa.",
+    "Cel Iertător, care acoperă păcatele.",
+    "Cel Biruitor, care domină totul.",
+    "Cel Dătător, care oferă liber și din belșug.",
+    "Furnizorul de susținere pentru toți.",
+    "Cel care Deschide, care înlătură greutățile și deschide porțile binelui.",
+    "Cel Atotștiutor.",
+    "Cel care Reține, care restrânge cele de trai după cum voiește.",
+    "Cel care Lărgește, care extinde cele de trai după cum voiește.",
+    "Cel care Coboară, care umilește pe cine voiește.",
+    "Cel care Înalță, care ridică pe cine voiește.",
+    "Dătătorul de Cinste.",
+    "Dătătorul de Nefericire.",
+    "Cel care Aude Totul.",
+    "Cel care Vede Totul.",
+    "Judecătorul, a cărui hotărâre este definitivă.",
+    "Cel cu Totul Drept.",
+    "Cel Subtil și Bun, care cunoaște cele mai mici amănunte.",
+    "Cel Atotștiutor.",
+    "Cel Răbdător, blând cu creația Sa.",
+    "Cel Magnific, mai presus de înțelegere.",
+    "Cel Iertător.",
+    "Cel Mulțumitor, care răsplătește din plin faptele mici.",
+    "Cel Prea Înalt.",
+    "Cel Mai Mare.",
+    "Paznicul, care protejează toate lucrurile.",
+    "Întreținătorul, care dă hrană tuturor.",
+    "Cel care Face Socoteala, care cere socoteală robilor Săi.",
+    "Cel Majestic.",
+    "Cel Mai Generos.",
+    "Cel Veghetor, care observă totul în fiecare moment.",
+    "Cel care Răspunde, care ascultă rugăciunile.",
+    "Cel Atotcuprinzător în știință, îndurare și putere.",
+    "Cel Prea Înțelept.",
+    "Cel Prea Iubitor.",
+    "Cel Prea Slăvit.",
+    "Învierea morților.",
+    "Martorul, prezent pretutindeni.",
+    "Adevărul, Cel Real.",
+    "Chestorul, care rânduiește cel mai bine treburile robilor Săi.",
+    "Cel Foarte Puternic.",
+    "Cel Ferm, a cărui putere este neclintită.",
+    "Prietenul ocrotitor al dreptcredincioșilor.",
+    "Cel Lăudat.",
+    "Numărătorul, care știe numărul tuturor lucrurilor.",
+    "Cel care Începe crearea.",
+    "Cel care Readuce la Viață.",
+    "Dătătorul de Viață.",
+    "Cel care Aduce Moartea.",
+    "Cel Veșnic Viu.",
+    "Întreținătorul Sine-Stătător a toate.",
+    "Găsitorul, căruia nu-i lipsește nimic.",
+    "Cel Nobil, plin de generozitate.",
+    "Unul, unic în esență și atribute.",
+    "Adăpostul veșnic, de care depind toți.",
+    "Cel în Stare de Toate.",
+    "Cel Atotputernic, care dispune de toți cei ce au putere.",
+    "Cel care Grăbește, care aduce înainte pe cine voiește.",
+    "Cel care Amână, care reține pe cine voiește.",
+    "Cel Întâi, fără început.",
+    "Cel de Urmă, care rămâne după ce totul piere.",
+    "Cel Vădit, arătat prin semnele Sale.",
+    "Cel Ascuns, a cărui esență nu se vede.",
+    "Guvernatorul, care singur administrează universul.",
+    "Cel Prea Înaltat.",
+    "Izvorul Binelui.",
+    "Cel care Primește Pocăința.",
+    "Răzbunătorul, care pedepsește pe drept pe cei nelegiuiți.",
+    "Cel care Iartă.",
+    "Cel Mai Bun și Milostiv.",
+    "Stăpânul veșnic al întregii domnii.",
+    "Domnul Măreției și Generozității.",
+    "Cel Echitabil, care face totul cu dreptate.",
+    "Cel care Adună, când voiește și ce voiește.",
+    "Cel Self-Sufficient, Cel Nespus de Bogat.",
+    "Cel care Îmbogățește.",
+    "Cel care Oprește, care reține ceea ce nu voiește.",
+    "Creatorul răului (ca încercare).",
+    "Creatorul binelui.",
+    "Lumina, care luminează lumile.",
+    "Îndrumătorul către calea dreaptă.",
+    "Creatorul inegalabil al frumuseții.",
+    "Cel Veșnic.",
+    "Moștenitorul, Stăpânul suprem al tuturor.",
+    "Călăuzitorul spre Dreptate, ale cărui treburi sunt conduse desăvârșit.",
+    "Cel Mai Răbdător, care nu grăbește pedeapsa."
+  ]
+}

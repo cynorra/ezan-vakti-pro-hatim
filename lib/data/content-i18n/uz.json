@@ -1,0 +1,358 @@
+{
+  "duas": {
+    "morning-1": {
+      "title": "Tonggi duo",
+      "meaning": "Allohim, Sening izning bilan tong otirdik, Sening izning bilan kech kiritdik, Sen bilan yashaymiz, Sen bilan o'lamiz va tirilish Sening huzuringgadir.",
+      "source": "Termiziy"
+    },
+    "protection-1": {
+      "title": "Himoya duosi",
+      "meaning": "Allohning ismi bilan boshlaymanki, Uning ismi tufayli zaminu osmondagi biror narsa zarar yetkaza olmaydi. U O'zi Eshituvchi va Biluvchidir.",
+      "source": "Abu Dovud"
+    },
+    "forgiveness-1": {
+      "title": "Istig'for aytish",
+      "meaning": "Buyuk Allohdan mag'firat so'rayman, Undan o'zga iloh yo'q, U Tirikdir, botin va zohirni boshqarib turguvchidir. Unga tavba qilaman.",
+      "source": "Termiziy"
+    },
+    "gratitude-1": {
+      "title": "Shukrona duosi",
+      "meaning": "Bizni taomlantirgan, sug'organ, kifoya qilgan va boshpana bergan Allohga hamd bo'lsin.",
+      "source": "Muslim"
+    },
+    "evening-1": {
+      "title": "Kechki duo",
+      "meaning": "Allohim, Sendan bu kechaning yaxshiligini va undagi narsalarning yaxshiligini so'rayman. Sendan uning yomonligidan va undagi narsalarning yomonligidan panoh tilayman.",
+      "source": "Abu Dovud"
+    },
+    "sleep-1": {
+      "title": "Uxlashdan oldin",
+      "meaning": "Ey Alloh, Sening isming bilan o'laman va tirilaman.",
+      "source": "Buxoriy"
+    },
+    "wakeup-1": {
+      "title": "Uyqudan uyg'onganda",
+      "meaning": "Bizni o'ldirgandan keyin tiriltirgan Allohga hamd bo'lsin, qaytish Ungadir.",
+      "source": "Buxoriy"
+    },
+    "stress-1": {
+      "title": "G'am-g'ussa vaqtidagi duo",
+      "meaning": "Sendan o'zga iloh yo'q. Sen poksan. Darhaqiqat, men zolimlardan bo'ldim.",
+      "source": "Termiziy"
+    },
+    "travel-1": {
+      "title": "Safar duosi",
+      "meaning": "Buni bizga bo'ysundirib qo'ygan Zot pokdir, biz bunga qodir emas edik. Va shubhasiz, biz Rabbimizga qaytuvchimiz.",
+      "source": "Termiziy"
+    },
+    "health-1": {
+      "title": "Salomatlik so'rash duosi",
+      "meaning": "Allohim, tanimga salomatlik ber. Allohim, qulog'imga salomatlik ber. Allohim, ko'zimga salomatlik ber.",
+      "source": "Abu Dovud"
+    },
+    "knowledge-1": {
+      "title": "Ilm so'rash duosi",
+      "meaning": "Rabbim, ilmimi ziyoda qil.",
+      "source": "Toha surasi, 20:114"
+    },
+    "guidance-1": {
+      "title": "Hidoyat so'rash duosi",
+      "meaning": "Allohim, meni hidoyat qil va to'g'ri yo'lda sodit qil.",
+      "source": "Muslim"
+    },
+    "patience-1": {
+      "title": "Sabr so'rash duosi",
+      "meaning": "Rabbimiz, ustimizga sabr to'k va qadamlarimizni собит qil.",
+      "source": "Baqara surasi, 2:250"
+    },
+    "food-1": {
+      "title": "Ovqatdan oldin",
+      "meaning": "Allohim, bizga rizq qilib bergan narsangni barakali qil va bizni do'zax azobidan saqla. Allohning ismi bilan.",
+      "source": " Ibn Maja"
+    },
+    "parents-1": {
+      "title": "Ota-ona haqqidagi duo",
+      "meaning": "Rabbim, ular meni go'dakligimda tarbiya qilganlaridek, Sen ham ularga rahm qil.",
+      "source": "Isro surasi, 17:24"
+    },
+    "success-1": {
+      "title": "Muvaffaqiyat so'rash duosi",
+      "meaning": "Rabbim, ko'ksimni keng qil va ishimni oson qil.",
+      "source": "Toha surasi, 20:25-26"
+    },
+    "anger-1": {
+      "title": "G'azablanganda",
+      "meaning": "Rojim shaytondan Allohning panohiga sig'inaman.",
+      "source": "Buxoriy"
+    },
+    "mosque-1": {
+      "title": "Masjidga kirish",
+      "meaning": "Allohim, menga rahmat eshiklarini ochgin.",
+      "source": "Muslim"
+    },
+    "mosque-2": {
+      "title": "Masjiddan chiqish",
+      "meaning": "Allohim, Sendan fazlingni so'rayman.",
+      "source": "Muslim"
+    },
+    "rain-1": {
+      "title": "Yomg'ir yog'ganda",
+      "meaning": "Allohim, buni foydali yomg'ir qil.",
+      "source": "Buxoriy"
+    },
+    "fear-1": {
+      "title": "Qo'rquv vaqtidagi duo",
+      "meaning": "Menga Allohning o'zi yetarli. Undan o'zga iloh yo'q. Unga tavakkul qildim va U ulug' Arshning Rabbidir.",
+      "source": "Abu Dovud"
+    },
+    "exam-1": {
+      "title": "Imtihondan oldingi duo",
+      "meaning": "Rabbim, ilm va fahm-idrokni ziyoda qil, meni solihlar qatoriga qo'sh.",
+      "source": "Toha surasi, 20:114 asosida"
+    },
+    "illness-1": {
+      "title": "Shifo so'rash duosi",
+      "meaning": "Ey odamlarning Rabbi, dardni ketkaz va shifo ber, Sen Shifokorsan. Sening shifongdan o'zga shifo yo'q, hech qanday kasallikni qoldirmaydigan shifo ber.",
+      "source": "Buxoriy"
+    },
+    "debt-1": {
+      "title": "Qarzdan qutilish duosi",
+      "meaning": "Allohim, g'am va g'ussadan, ojizlik va dangasalikdan, baxillik va qo'rqoqlikdan, qarz botqog'iga botishdan hamda odamlar g'olib kelishidan Sendan panoh tilayman.",
+      "source": "Buxoriy"
+    },
+    "repentance-1": {
+      "title": "Sayyidul istig'for",
+      "meaning": "Allohim, Sen Rabbimsan. Sendan o'zga iloh yo'q. Meni yaratding, men Sening qulingman va o'zimning ahdimda hamda va'damda qurbim yetguncha sodiqman.",
+      "source": "Buxoriy"
+    }
+  },
+  "wisdom": {
+    "1": {
+      "content": "Robbingiz: «Menga duo qiling, sizga istajob qilaman», dedi.",
+      "source": "G'ofir surasi, 40:60"
+    },
+    "2": {
+      "content": "Amallar niyatlarga ko'radir va har bir kishiga faqat niyat qilgan narsagina tegishlidir.",
+      "source": "Buxoriy, 1"
+    },
+    "3": {
+      "content": "Albatta, har bir qiyinchilik bilan birga yengillik bordir.",
+      "source": "Sharh surasi, 94:5"
+    },
+    "4": {
+      "content": "Sizlarning eng yaxshingiz Qur'onni o'rgangan va uni boshqalarga o'rgatganingizdir.",
+      "source": "Buxoriy, 5027"
+    },
+    "5": {
+      "content": "Alloh hech bir jonga toqati yetmaydigan narsani yuklamaydi.",
+      "source": "Baqara surasi, 2:286"
+    },
+    "6": {
+      "content": "Osonlashtiringlar, qiyinlashtirmanglar; xushxabar beringlar, (odamlarni) qochirmanglar.",
+      "source": "Buxoriy, 69"
+    },
+    "7": {
+      "content": "Albatta, Alloh sabr qiluvchilar bilan birgadir.",
+      "source": "Baqara surasi, 2:153"
+    },
+    "8": {
+      "content": "Dunyoga muhabbat qo'yish har bir xatolikning boshidir.",
+      "source": "Bayhaqiy, Shu'abul iymon"
+    },
+    "9": {
+      "content": "Ogoh bo'lingkim, Allohning zikri bilan qalblar orom olur.",
+      "source": "Ra'd surasi, 13:28"
+    },
+    "10": {
+      "content": "Kim yaxshilikka dalolat qilsa, unga o'sha ishni qilgan kishining ajri kabi ajr bor.",
+      "source": "Muslim, 1893"
+    },
+    "11": {
+      "content": "Inson uchun faqat o'zi qilsa, o'shangina bordir.",
+      "source": "Najm surasi, 53:39"
+    },
+    "12": {
+      "content": "Odamlarning eng yaxshisi — boshqalarga eng ko'p manfaat yetkazadigani.",
+      "source": "Tabarooniy, al-Mu'jam al-avsat"
+    },
+    "13": {
+      "content": "U o'lim va hayotni qaysi biringiz eng go'zal amal qiluvchi ekaningizni sinash uchun yaratdi.",
+      "source": "Mulk surasi, 67:2"
+    },
+    "14": {
+      "content": "Poklik iymonning yarmidir.",
+      "source": "Muslim, 223"
+    },
+    "15": {
+      "content": "Albatta, Allohning huzurida eng hurmatlirog'ingiz taqvodorrog'ingizdir.",
+      "source": "Hujurot surasi, 49:13"
+    }
+  },
+  "verses": {
+    "isra-82": {
+      "content": "Biz Qur'ondan mo'minlar uchun shifo va rahmat bo'lgan narsalarni nozil qilamiz.",
+      "source": "Isro surasi"
+    },
+    "rad-28": {
+      "content": "Ogoh bo'lingkim, Allohning zikri bilan qalblar orom olur.",
+      "source": "Ra'd surasi"
+    },
+    "insirah-5-6": {
+      "content": "Albatta, har bir qiyinchilik bilan birga yengillik bordir. Albatta, har bir qiyinchilik bilan birga yengillik bordir.",
+      "source": "Sharh surasi"
+    },
+    "mumin-60": {
+      "content": "Robbingiz dedi: «Menga duo qiling, sizga istajob qilaman».",
+      "source": "G'ofir surasi"
+    },
+    "duha-3": {
+      "content": "Robbing seni tark etgani yo'q va yomon ko'rib qolgani ham yo'q.",
+      "source": "Zuho surasi"
+    },
+    "bakara-286": {
+      "content": "Alloh hech bir jonga toqati yetmaydigan narsani yuklamaydi.",
+      "source": "Baqara surasi"
+    },
+    "taha-114": {
+      "content": "Va ayt: «Rabbim, ilmimi ziyoda qil».",
+      "source": "Toha surasi"
+    },
+    "zumer-53": {
+      "content": "Ayt: «Ey o'z jonlariga isrof qilgan bandalarim, Allohning rahmatidan noumidsiz bo'lmang».",
+      "source": "Zumar surasi"
+    },
+    "yunus-57": {
+      "content": "Ey odamlar, sizlarga Robbingizdan va'z, dillardagi narsalarga shifo, mo'minlarga hidoyat va rahmat keldi.",
+      "source": "Yunus surasi"
+    },
+    "suara-80": {
+      "content": "Qachon bemor bo'lsam, U menga shifo beradi.",
+      "source": "Shuaro surasi"
+    },
+    "talak-3": {
+      "content": "Kim Allohga tavakkul qilsa, Unga O'zi yetarlidir.",
+      "source": "Taloq surasi"
+    },
+    "fussilet-44": {
+      "content": "Ayt: «U iymon keltirganlar uchun hidoyat va shifodir».",
+      "source": "Fussilat surasi"
+    },
+    "bakara-186": {
+      "content": "Qachon bandalarim mendan senga so'rasalar, men yaqinman. Duo qiluvchi duo qilganda uning duosiga ijobat qilaman.",
+      "source": "Baqara surasi"
+    },
+    "tebve-128": {
+      "content": "Batahqiq, sizlarga o'zingizdan bo'lgan, mashaqqatingiz unga og'ir keladigan,sizlarga o'ta istakli, mo'minlarga mehribon va rahimli bo'lgan Payg'ambar keldi.",
+      "source": "Tavba surasi"
+    },
+    "furkan-74": {
+      "content": "Rabbimiz, o'zimizga juftlarimizdan va zurriyotlarimizdan ko'z quvonchini ber va bizni taqvodorlarga imom qil.",
+      "source": "Furqon surasi"
+    },
+    "aliimran-173": {
+      "content": "Bizga Allohning o'zi yetarli va U eng go'zal vakildir.",
+      "source": "Oli Imron surasi"
+    }
+  },
+  "esma": [
+    "Barcha go'zal ismlar va oliy sifatlarni o'zida jamlagan yagona Zot.",
+    "Bu dunyodagi barcha maxluqotlarga mehribon bo'lgan Rahmon.",
+    "Oxiratda faqat mo'minlarga rahm qiluvchi Rahim.",
+    "Koinot mulkining egasi bo'lgan Podshoh.",
+    "Har qanday nuqson va ayblardan pok bo'lgan Muqaddas Zot.",
+    "Bandalariga omonlik va tinchlik ato etuvchi Tinchlik beruvchi.",
+    "Iymon va omonlik ato etuvchi.",
+    "Barcha narsalarni kuzatib turuvchi va asrovchi Muhofazachi.",
+    "Hech kim ustun kela olmaydigan qudratli.",
+    "Irodasi har doim o'tkaziluvchi, majburlоvchi.",
+    "Buyuklik va ulug'lik egasi.",
+    "Hech narsadan yo'qdan bor qiluvchi.",
+    "Mukofot va tartib bilan yaratuvchi.",
+    "Har bir narsaga o'ziga xos surat va shakl beruvchi.",
+    "Gunohlarni yopuvchi va kechiruvchi.",
+    "Hamma narsaga g'olib keluvchi.",
+    "Cheksiz ne'matlarni tekin beruvchi.",
+    "Barcha maxluqotlarga rizq beruvchi.",
+    "Qiyinchiliklarni ochuvchi va yaxshilik eshiklarini ochuvchi.",
+    "Hamma narsani biluvchi.",
+    "Xohlagan kishining rizqini qisib qo'yuvchi.",
+    "Xohlagan kishining rizqini kengaytiruvchi.",
+    "Xohlagan kishining qadrini tushiruvchi.",
+    "Xohlagan kishining qadrini ko'taruvchi.",
+    "Izzat va sharaf beruvchi.",
+    "Xor qiluvchi.",
+    "Barcha ovozlarni eshituvchi.",
+    "Barcha narsalarni ko'ruvchi.",
+    "Hukmi adolatli bo'lgan Hokim.",
+    "Mutlaq adolatli.",
+    "Eng mayda narsalarni ham biluvchi, lutf qiluvchi.",
+    "Har bir narsadan xabardor.",
+    "Bandalariga yumshoq muomalada bo'luvchi, halim.",
+    "Aql tasavvur qila olmaydigan darajada ulug'.",
+    "Ko'plab mag'firat qiluvchi.",
+    "Oz amalga ko'p savob beruvchi.",
+    "Oliy, hamma narsadan ustun.",
+    "Buyuklikda tengi yo'q.",
+    "Barcha narsalarni mukammal asrovchi.",
+    "Barcha maxluqotlarning rizqi va ehtiyojini ta'minlovchi.",
+    "Bandalarining hisob-kitobini qiluvchi.",
+    "Ulug'vorlik egasi.",
+    "Saxovatli va karamli.",
+    "Har bir lahzada kuzatib turuvchi.",
+    "Duo va iltimoslarga ijobat qiluvchi.",
+    "Ilmi va rahmati bilan hamma narsani qamrab oluvchi.",
+    "Har bir ishni hikmat bilan qiluvchi.",
+    "Bandalarini qattiq sevuvchi.",
+    "Shon-sharaf va ulug'lik egasi.",
+    "O'liklarni tiriltiruvchi.",
+    "Har joyda hoziru nozir bo'lgan Guvoh.",
+    "Haqiqiy Zot, mavjudligi shubhasiz.",
+    "Bandalarining ishlarini o'z zimmasiga oluvchi Vakiil.",
+    "Cheksiz kuch-qudrat egasi.",
+    "Qudrati mustahkam va o'zgarmas.",
+    "Mo'minlarning do'sti va yordamchisi.",
+    "Hamdu sanoga loyiq bo'lgan Maqtovli.",
+    "Barcha narsalarning sonini biluvchi.",
+    "Maxluqotlarni ilk bor yaratuvchi.",
+    "O'lganlarni qayta tiriltiruvchi.",
+    "Hayot ato etuvchi.",
+    "O'lim beruvchi.",
+    "Doim tirik bo'lgan, o'lmaydigan.",
+    "O'z-o'zidan turguvchi va barchani turg'azib qo'yuvchi.",
+    "Xohlagan narsasini topuvchi, hech narsaga muhtoj bo'lmagan.",
+    "Sharafli va ulug'.",
+    "Zotida va sifatlarida yagona bo'lgan Bir.",
+    "Hamma unga muhtoj, o'zi hech kimga muhtoj bo'lmagan Somad.",
+    "Har bir ishga qodir.",
+    "Cheksiz qudrat egasi.",
+    "Xohlagan kishini oldinga o'tkazuvchi.",
+    "Xohlagan kishini orqaga suruvchi.",
+    "Boshlanishi yo'q bo'lgan Birinchi.",
+    "Hamma narsa yo'q bo'lib ketganda ham qoluvchi Oxir.",
+    "Alomatlari bilan ochiq-oydin ko'rinib turuvchi.",
+    "Zoti ko'zlardan pinhon bo'lgan Botin.",
+    "Koinotni yolg'iz boshqarib turuvchi.",
+    "Eng oliy mavqe egasi.",
+    "Yaxshiliklar manbai.",
+    "Tavbalarni qabul qiluvchi.",
+    "Zolimlarni adolat bilan jazolovchi.",
+    "Kechirib yuboruvchi.",
+    "O'ta rahmli va shafqatli.",
+    "Mulkning abadiy egasi.",
+    "Ulug'lik va karam egasi.",
+    "Adolatni o'rnatuvchi.",
+    "Xohlagan narsasini xohlagan joyda jamlovchi.",
+    "Hech kimga muhtoj bo'lmagan, boy.",
+    "Boyituvchi.",
+    "Xohlamagan narsasini to'suvchi.",
+    "Sinov uchun zarar yaratuvchi.",
+    "Foyda yaratuvchi.",
+    "Olamlarni yorituvchi Nur.",
+    "To'g'ri yo'lga boshlovchi.",
+    "O'xshashi yo'q go'zallik yaratuvchi.",
+    "Abadiy, yo'q bo'lmaydigan.",
+    "Oxir-oqibat barcha narsa meros qoladigan Zot.",
+    "To'g'ri yo'lga boshlovchi, ishlari mukammal.",
+    "Jazolashga shoshilmaydigan eng sabrli Zot."
+  ]
+}

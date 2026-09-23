@@ -1,0 +1,358 @@
+{
+  "duas": {
+    "morning-1": {
+      "title": "Jutarnja dova",
+      "meaning": "Allahu, S Tvojim imenom osvićemo i s Tvojim imenom omrćemo, s Tvojim imenom živimo i s Tvojim imenom umiremo i Tebi je konačni povratak.",
+      "source": "Tirmizi"
+    },
+    "protection-1": {
+      "title": "Dova za zaštitu",
+      "meaning": "U ime Allaha, čijim imenom ništa na Zemlji niti na nebesima ne može nauditi, a On je Onaj koji sve čuje i sve zna.",
+      "source": "Ebu Davud"
+    },
+    "forgiveness-1": {
+      "title": "Traženje oprosta",
+      "meaning": "Tražim oprost od Allaha Uzvišenog, osim kojeg nema drugog boga, Živog, Vječnog Održavatelja, i Njemu se kajem.",
+      "source": "Tirmizi"
+    },
+    "gratitude-1": {
+      "title": "Dova zahvalnosti",
+      "meaning": "Hvala Allahu koji nas je nahranio, napojio, opskrbio i dao nam sklonište.",
+      "source": "Muslim"
+    },
+    "evening-1": {
+      "title": "Večernja dova",
+      "meaning": "Allahu, od Tebe tražim dobro ove noći i dobro ono što je u njoj, a utječem Ti se od njenog zla i zla ono što je u njoj.",
+      "source": "Ebu Davud"
+    },
+    "sleep-1": {
+      "title": "Pri spavanju",
+      "meaning": "S Tvojim imenom, Allahu, umirem i živim.",
+      "source": "Buhari"
+    },
+    "wakeup-1": {
+      "title": "Pri buđenju",
+      "meaning": "Hvala Allahu koji nam je dao život nakon što nas je usmrtio, i Njemu je konačni povratak.",
+      "source": "Buhari"
+    },
+    "stress-1": {
+      "title": "Dova u tuzi i nevolji",
+      "meaning": "Nema boga osim Tebe, hvala neka je Tebi, ja sam zaista bio od nasilnika.",
+      "source": "Tirmizi"
+    },
+    "travel-1": {
+      "title": "Dova za putovanje",
+      "meaning": "Hvala neka je Onome koji nam je ovo potčinio, a mi to sami ne bismo mogli učiniti. I mi ćemo se sigurno vratiti našem Gospodaru.",
+      "source": "Tirmizi"
+    },
+    "health-1": {
+      "title": "Dova za zdravlje",
+      "meaning": "Allahu, podari mi zdravlje u mom tijelu. Allahu, podari mi zdravlje u mom sluhu. Allahu, podari mi zdravlje u mom vidu.",
+      "source": "Ebu Davud"
+    },
+    "knowledge-1": {
+      "title": "Dova za znanje",
+      "meaning": "Gospodaru moj, povećaj mi znanje.",
+      "source": "Kur'an, Surah Taha, 20:114"
+    },
+    "guidance-1": {
+      "title": "Dova za uputu",
+      "meaning": "Allahu, uputi me i učvrsti me na Pravom putu.",
+      "source": "Muslim"
+    },
+    "patience-1": {
+      "title": "Dova za strpljenje",
+      "meaning": "Gospodaru naš, izlij na nas strpljenje i učvrsti korake naše!",
+      "source": "Kur'an, Surah Al-Baqarah, 2:250"
+    },
+    "food-1": {
+      "title": "Pri jelu",
+      "meaning": "Allahu, blagoslovi nam ono čime si nas opskrbio i sačuvaj nas od patnje u Vatri. U ime Allaha.",
+      "source": "Ibn Madže"
+    },
+    "parents-1": {
+      "title": "Dova za roditelje",
+      "meaning": "Gospodaru moj, smiluj im se kao što su oni mene, kad sam bio dijete, njegovali.",
+      "source": "Kur'an, Surah Al-Isra, 17:24"
+    },
+    "success-1": {
+      "title": "Dova za uspjeh",
+      "meaning": "Gospodaru moj, olakšaj mi moje grudi i olakšaj mi moj zadatak.",
+      "source": "Kur'an, Surah Taha, 20:25-26"
+    },
+    "anger-1": {
+      "title": "Kada se rasrdiš",
+      "meaning": "Utječem se Allahu od prokletog šejtana.",
+      "source": "Buhari"
+    },
+    "mosque-1": {
+      "title": "Pri ulasku u džamiju",
+      "meaning": "Allahu, otvori mi vrata Svoje milosti.",
+      "source": "Muslim"
+    },
+    "mosque-2": {
+      "title": "Pri izlasku iz džamije",
+      "meaning": "Allahu, molim Te iz Tvoje blagodati.",
+      "source": "Muslim"
+    },
+    "rain-1": {
+      "title": "Kada pada kiša",
+      "meaning": "Allahu, učini je korisnom kišom.",
+      "source": "Buhari"
+    },
+    "fear-1": {
+      "title": "Dova u strahu",
+      "meaning": "Dovoljan mi je Allah, nema boga osim Njega, u Njega se pouzdajem i On je Gospodar Arša velikog.",
+      "source": "Ebu Davud"
+    },
+    "exam-1": {
+      "title": "Dova prije ispita",
+      "meaning": "Gospodaru moj, povećaj mi znanje i razumijevanje, i pridruži me dobrima.",
+      "source": "Na osnovu Kur'ana, Surah Taha, 20:114"
+    },
+    "illness-1": {
+      "title": "Dova za izlječenje",
+      "meaning": "Ukloni bolest, Gospodaru ljudi, i izliječi, Ti si Liječnik. Nema lijeka osim Tvoga lijeka, lijeka koji ne ostavlja nikakvu bolest.",
+      "source": "Buhari"
+    },
+    "debt-1": {
+      "title": "Oslobađanje od duga",
+      "meaning": "Allahu, utječem Ti se od brige i tuge, od nemoći i lijenosti, od škrtosti i kukavičluka, od tereta duga i od nadvladavanja od strane ljudi.",
+      "source": "Buhari"
+    },
+    "repentance-1": {
+      "title": "Najbolji način traženja oprosta (Sejjidul-istigfar)",
+      "meaning": "Allahu, Ti si moj Gospodar, nema boga osim Tebe, Ti si me stvorio i ja sam Tvoj rob, i ja se pridržavam Tvoga zavjeta i obećanja koliko god mogu.",
+      "source": "Buhari"
+    }
+  },
+  "wisdom": {
+    "1": {
+      "content": "Gospodar vaš je rekao: 'Pozovite Me, Ja ću vam se odazvati!'",
+      "source": "Kur'an, Surah Ghafir, 40:60"
+    },
+    "2": {
+      "content": "Djela se cijene prema namjerama i svakom čovjeku pripada ono što je naumio.",
+      "source": "Buhari, 1"
+    },
+    "3": {
+      "content": "Ta, zaista, s mukom je i olakšanje.",
+      "source": "Kur'an, Surah Ash-Sharh, 94:5"
+    },
+    "4": {
+      "content": "Najbolji među vama su oni koji uče Kur'an i druge njemu poučavaju.",
+      "source": "Buhari, 5027"
+    },
+    "5": {
+      "content": "Allah nikoga ne opterećuje preko mogućnosti njegovih.",
+      "source": "Kur'an, Surah Al-Baqarah, 2:286"
+    },
+    "6": {
+      "content": "Olakšavajte, a ne otežavajte; radujte, a ne rasterujte.",
+      "source": "Buhari, 69"
+    },
+    "7": {
+      "content": "I doista, Allah je sa strpljivima.",
+      "source": "Kur'an, Surah Al-Baqarah, 2:153"
+    },
+    "8": {
+      "content": "Ljubav prema ovom svijetu je temelj svakog grijeha.",
+      "source": "Bejheki, Shu'ab al-Iman"
+    },
+    "9": {
+      "content": "A sjećanjem na Allaha, doista, srca nalaze smirenje!",
+      "source": "Kur'an, Surah Ar-Ra'd, 13:28"
+    },
+    "10": {
+      "content": "Ko uputi na dobro djelo, ima nagradu kao i onaj ko ga učini.",
+      "source": "Muslim, 1893"
+    },
+    "11": {
+      "content": "I da čovjek, doista, može imati samo ono što sam trudom stekne.",
+      "source": "Kur'an, Surah An-Najm, 53:39"
+    },
+    "12": {
+      "content": "Najbolji ljudi su oni koji su najkorisniji drugima.",
+      "source": "Tabarani, al-Mu'jam al-Awsat"
+    },
+    "13": {
+      "content": "Onaj koji je dao smrt i život da bi vas iskušao ko će od vas bolje postupati.",
+      "source": "Kur'an, Surah Al-Mulk, 67:2"
+    },
+    "14": {
+      "content": "Čistoća je pola vjere.",
+      "source": "Muslim, 223"
+    },
+    "15": {
+      "content": "Najugledniji kod Allaha je onaj koji ga se najviše boji.",
+      "source": "Kur'an, Surah Al-Hujurat, 49:13"
+    }
+  },
+  "verses": {
+    "isra-82": {
+      "content": "Mi objavljujemo u Kur'anu ono što je lijek i milost vjernicima.",
+      "source": "Surah Al-Isra"
+    },
+    "rad-28": {
+      "content": "A sjećanjem na Allaha srca se doista smiruju.",
+      "source": "Surah Ar-Ra'd"
+    },
+    "insirah-5-6": {
+      "content": "Ta, zaista, s mukom je i olakšanje, zaista, s mukom je i olakšanje!",
+      "source": "Surah Ash-Sharh"
+    },
+    "mumin-60": {
+      "content": "Gospodar vaš je rekao: 'Pozovite Me i zamolite, Ja ću vam se odazvati!'",
+      "source": "Surah Ghafir"
+    },
+    "duha-3": {
+      "content": "Gospodar tvoj nije te ni napustio ni omrznuo!",
+      "source": "Surah Ad-Duha"
+    },
+    "bakara-286": {
+      "content": "Allah nikoga ne opterećuje preko mogućnosti njegovih.",
+      "source": "Surah Al-Baqarah"
+    },
+    "taha-114": {
+      "content": "I reci: 'Gospodaru moj, ti mi znanje povećaj!'",
+      "source": "Surah Taha"
+    },
+    "zumer-53": {
+      "content": "Reci: 'O robovi moji koji ste se prema sebi ogriješili, ne gubite nadu u Allahovu milost!'",
+      "source": "Surah Az-Zumar"
+    },
+    "yunus-57": {
+      "content": "O ljudi, već vam je stigla opomena od Gospodara vašeg i lijek za ono što je u grudima, i uputa i milost vjernicima.",
+      "source": "Surah Yunus"
+    },
+    "suara-80": {
+      "content": "I kada se razbolim, On me liječi.",
+      "source": "Surah Ash-Shu'ara"
+    },
+    "talak-3": {
+      "content": "A onaj ko se u Allaha uzda, On mu je dosta.",
+      "source": "Surah At-Talaq"
+    },
+    "fussilet-44": {
+      "content": "Reci: 'On je vjernicima uputa i lijek.'",
+      "source": "Surah Fussilat"
+    },
+    "bakara-186": {
+      "content": "A kada te robovi Moji za Mene upitaju, Ja sam, doista, blizu: odazivam se molbi molitelja kad Me zamoli.",
+      "source": "Surah Al-Baqarah"
+    },
+    "tebve-128": {
+      "content": "Došao vam je Poslanik, jedan od vas, teškomu je propast vaša, pohlepan je da vam se vjera ukaže i prema vjernicima je blag i milostiv.",
+      "source": "Surah At-Tawbah"
+    },
+    "furkan-74": {
+      "content": "Gospodaru naš, podari nam u našim ženama i našoj djeci radost očiju i učini nas vođama bogobojaznih.",
+      "source": "Surah Al-Furqan"
+    },
+    "aliimran-173": {
+      "content": "Dovoljan je nama Allah i divan je On oslonac!",
+      "source": "Surah Ali Imran"
+    }
+  },
+  "esma": [
+    "Jedini Bog, koji ujedinjuje sva imena i atribute savršenstva.",
+    "Svemilosni, milostiv svim stvorenjima na ovom svijetu.",
+    "Milostivi, posebno milostiv vjernicima na Ahiretu.",
+    "Vladar, Vlasnik vlasti nad svemirom.",
+    "Najsvetliji, čisti od svake mane.",
+    "Izvor mira, koji daje sigurnost Svojim slugama.",
+    "Davalac sigurnosti i vjere.",
+    "Čuvar, koji nadgleda i štiti sve stvari.",
+    "Svemoćni, kojeg niko ne može nadvladati.",
+    "Sresni, čija se volja uvijek provodi.",
+    "Veličanstveni.",
+    "Stvoritelj, koji stvara iz ničega.",
+    "Graditelj, koji stvara u savršenoj harmoniji.",
+    "Oblikovatelj, koji svemu daje oblik.",
+    "Onaj koji mnogo prašta, koji pokriva grijehe.",
+    "Pokoravatelj, koji nadjačava sve.",
+    "Darovatelj, koji daje slobodno i u izobilju.",
+    "Opskrbitelj svega.",
+    "Otvarač, koji uklanja nedaće i otvara vrata dobra.",
+    "Sveznajući.",
+    "Zadržavatelj, koji uskraćuje opskrbu po Svojoj volji.",
+    "Širitelj, koji širi opskrbu po Svojoj volji.",
+    "Onaj koji ponižava koga hoće.",
+    "Onaj koji uzdiže koga hoće.",
+    "Počastitelj.",
+    "Onaj koji sramoti.",
+    "Onaj koji sve čuje.",
+    "Onaj koji sve vidi.",
+    "Sudac, čija je presuda konačna.",
+    "Potpuno Pravedni.",
+    "Suptilni i Dobri, koji zna najsitnije detalje.",
+    "Sveupućeni.",
+    "Blagi, nježan prema Svojim stvorenjima.",
+    "Veličanstveni, izvan shvaćanja.",
+    "Onaj koji prašta.",
+    "Zahvalni, koji obilno nagrađuje i najmanja djela.",
+    "Najviši.",
+    "Najveći.",
+    "Zaštitnik, koji štiti sve.",
+    "Održavatelj, koji daje hranu svemu.",
+    "Računovođa, koji polaže račune svojim slugama.",
+    "Veličanstveni.",
+    "Plemeniti.",
+    "Budni, koji motri na sve u svakom trenutku.",
+    "Onaj koji se odaziva, koji uslišava molitve.",
+    "Sveobuhvatni u znanju, milosti i moći.",
+    "Mudri.",
+    "Onaj koji najviše voli.",
+    "Veličanstveni.",
+    "Proživitelj mrtvih.",
+    "Svjedok, prisutan svugdje.",
+    "Istina, Stvarni.",
+    "Pouzdanik, koji najbolje uređuje poslove Svojih slugu.",
+    "Snažni.",
+    "Čvrsti, čija je moć nepokolebljiva.",
+    "Zaštitnik i Prijatelj vjernika.",
+    "Hvaljeni.",
+    "Brojitelj, koji zna broj svega.",
+    "Početnik, koji započinje stvaranje.",
+    "Obnavljač, koji vraća u život.",
+    "Davalac života.",
+    "Onaj koji usmrćuje.",
+    "Vječni.",
+    "Samodostatni Održavatelj svega.",
+    "Nalazač, kojem ništa ne nedostaje.",
+    "Plemeniti, izdašne darežljivosti.",
+    "Jedini, jedinstven u suštini i svojstvima.",
+    "Vječno Utočište, od kojeg svi ovise.",
+    "Sposobni.",
+    "Svemoćni, koji upravlja svima koji imaju moć.",
+    "Onaj koji požuruje koga hoće.",
+    "Onaj koji odgađa koga hoće.",
+    "Prvi, bez početka.",
+    "Posljednji, koji ostaje nakon što sve propadne.",
+    "Vidljivi, očigledan kroz Svoje znakove.",
+    "Skriveni, čija je suština nevidljiva.",
+    "Upravitelj, koji sam upravlja svemirom.",
+    "Najuzvišeniji.",
+    "Izvor dobrote.",
+    "Onaj koji prima pokajanje.",
+    "Osvetnik, koji pravedno kažnjava prijestupnike.",
+    "Pomilovatelj.",
+    "Najnježniji i Svemilosni.",
+    "Vječni Vlasnik svake vlasti.",
+    "Gospodar veličanstvenosti i plemenitosti.",
+    "Pravični, koji sve čini s pravdom.",
+    "Sakupljač, koji sabire šta hoće i kada hoće.",
+    "Neovisni, beskrajno Bogati.",
+    "Obogatitelj.",
+    "Sprečavatelj, koji uskraćuje ono što ne želi.",
+    "Stvoritelj zla (kao iskušenja).",
+    "Stvoritelj dobra.",
+    "Svjetlo, koje obasjava svjetove.",
+    "Vodič na Pravi put.",
+    "Neponovljivi Stvoritelj ljepote.",
+    "Vječni.",
+    "Nasljednik, krajnji Vlasnik svega.",
+    "Vodič ka Ispravnosti, čiji su poslovi savršeno usmjereni.",
+    "Najstrpljiviji, koji ne žuri s kaznom."
+  ]
+}

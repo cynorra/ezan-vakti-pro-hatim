@@ -13,5 +13,10 @@ export function formatDuaShareMessage(
     meaning: dua.turkish ?? '',
     source: dua.source ?? '',
   });
-  return message.includes(PLAY_STORE_URL) ? message : `${message}\n${PLAY_STORE_URL}`;
+  // Drop sections left empty (e.g. no transliteration/meaning for Arabic readers).
+  const cleaned = message
+    .split('\n\n')
+    .filter((part) => part.trim() && !/[:：]\s*$/.test(part.trim()))
+    .join('\n\n');
+  return cleaned.includes(PLAY_STORE_URL) ? cleaned : `${cleaned}\n${PLAY_STORE_URL}`;
 }

@@ -1,0 +1,358 @@
+{
+  "duas": {
+    "morning-1": {
+      "title": "Dua poranna",
+      "meaning": "O Allah, przez Ciebie wchodzimy w poranek i przez Ciebie wchodzimy w wieczór, przez Ciebie żyjemy i przez Ciebie umieramy, i do Ciebie jest zmartwychwstanie.",
+      "source": "Tirmidhi"
+    },
+    "protection-1": {
+      "title": "Dua o ochronę",
+      "meaning": "W imię Boga, z którego imieniem nic na ziemi ani na niebie nie może wyrządzić szkody, a On jest Wszystkosłyszący, Wszystkowiedzący.",
+      "source": "Abu Dawud"
+    },
+    "forgiveness-1": {
+      "title": "Prośba o wybaczenie",
+      "meaning": "Proszę o przebaczenie Boga Wszechmogącego, poza którym nie ma boga, Wiecznie Żywego, Podtrzymującego wszystko, i do Niego powracam z skruchą.",
+      "source": "Tirmidhi"
+    },
+    "gratitude-1": {
+      "title": "Dua wdzięczności",
+      "meaning": "Chwała Bogu, który nas nakarmił, napoił, dał nam wystarczająco i udzielił schronienia.",
+      "source": "Muslim"
+    },
+    "evening-1": {
+      "title": "Dua wieczorna",
+      "meaning": "O Allah, proszę Cię o dobro tej nocy i dobro tego, co ona zawiera, i szukam u Ciebie schronienia przed jej złem i złem tego, co ona zawiera.",
+      "source": "Abu Dawud"
+    },
+    "sleep-1": {
+      "title": "Przed snem",
+      "meaning": "W Twoje imię, o Allah, umieram i żyję.",
+      "source": "Bukhari"
+    },
+    "wakeup-1": {
+      "title": "Po przebudzeniu",
+      "meaning": "Chwała Bogu, który dał nam życie po tym, jak nas uśmiercił, i do Niego jest zmartwychwstanie.",
+      "source": "Bukhari"
+    },
+    "stress-1": {
+      "title": "Dua w udręce",
+      "meaning": "Nie ma boga prócz Ciebie. Chwała Tobie. Zaprawdę, byłam jednym z niesprawiedliwych.",
+      "source": "Tirmidhi"
+    },
+    "travel-1": {
+      "title": "Dua w podróży",
+      "meaning": "Chwała Temu, który nam to poddał, a sami byśmy tego nie potrafili uczynić. I zaprawdę, do naszego Pana powrócimy.",
+      "source": "Tirmidhi"
+    },
+    "health-1": {
+      "title": "Dua o zdrowie",
+      "meaning": "O Allah, obdarz mnie zdrowiem w moim ciele. O Allah, obdarz mnie zdrowiem w moim słuchu. O Allah, obdarz mnie zdrowiem w moim wzroku.",
+      "source": "Abu Dawud"
+    },
+    "knowledge-1": {
+      "title": "Dua o wiedzę",
+      "meaning": "Panie mój, pomnoż moją wiedzę.",
+      "source": "Sura Taha, 20:114"
+    },
+    "guidance-1": {
+      "title": "Dua o prowadzenie",
+      "meaning": "O Allah, poprowadź mnie i zachowaj na prostej drodze.",
+      "source": "Muslim"
+    },
+    "patience-1": {
+      "title": "Dua o cierpliwość",
+      "meaning": "Panie nasz, wylej na nas cierpliwość i utwierdź nasze kroki.",
+      "source": "Sura Al-Baqarah, 2:250"
+    },
+    "food-1": {
+      "title": "Przed jedzeniem",
+      "meaning": "O Allah, pobłogosław to, czym nas obdarzyłeś, i chroń nas przed karą Ognia. W imię Boga.",
+      "source": "Ibn Majah"
+    },
+    "parents-1": {
+      "title": "Dua za rodziców",
+      "meaning": "Panie mój, zmiłuj się nad nimi tak, jak oni wychowali mnie, gdy byłam mała.",
+      "source": "Sura Al-Isra, 17:24"
+    },
+    "success-1": {
+      "title": "Dua o sukces",
+      "meaning": "Panie mój, otwórz mi moją piersi i ułatw mi moją sprawę.",
+      "source": "Sura Taha, 20:25-26"
+    },
+    "anger-1": {
+      "title": "Podczas złości",
+      "meaning": "Szukam schronienia u Boga przed szatanem przeklętym.",
+      "source": "Bukhari"
+    },
+    "mosque-1": {
+      "title": "Wchodząc do meczetu",
+      "meaning": "O Allah, otwórz dla mnie drzwi Twojego miłosierdzia.",
+      "source": "Muslim"
+    },
+    "mosque-2": {
+      "title": "Wychodząc z meczetu",
+      "meaning": "O Allah, proszę Cię o Twoją łaskę.",
+      "source": "Muslim"
+    },
+    "rain-1": {
+      "title": "Gdy pada deszcz",
+      "meaning": "O Allah, spraw, by to był deszcz przynoszący pożytek.",
+      "source": "Bukhari"
+    },
+    "fear-1": {
+      "title": "Dua w strachu",
+      "meaning": "Bóg mi wystarczy. Nie ma boga prócz Niego. W Nim pokładam ufność i On jest Panem Wspaniałego Tronu.",
+      "source": "Abu Dawud"
+    },
+    "exam-1": {
+      "title": "Dua przed egzaminem",
+      "meaning": "Panie mój, pomnoż moją wiedzę i zrozumienie, i połącz mnie ze sprawiedliwymi.",
+      "source": "Na podstawie Sury Taha, 20:114"
+    },
+    "illness-1": {
+      "title": "Dua o uzdrowienie",
+      "meaning": "Usuń cierpienie, o Panu ludzi, i uzdrów, albowiem Ty jesteś Uzdrowicielem. Nie ma uzdrowienia prócz Twojego uzdrowienia, uzdrowienia, które nie pozostawia żadnej choroby.",
+      "source": "Bukhari"
+    },
+    "debt-1": {
+      "title": "Uwolnienie od długu",
+      "meaning": "O Allah, szukam u Ciebie schronienia przed troską i smutkiem, przed nieudolnością i lenistwem, przed skąpstwem i tchórzostwem, przed ciężarem długu i zdominowaniem przez ludzi.",
+      "source": "Bukhari"
+    },
+    "repentance-1": {
+      "title": "Najlepsza prośba o przebaczenie",
+      "meaning": "O Allah, Ty jesteś moim Panem. Nie ma boga prócz Ciebie. Ty mnie stworzyłeś i ja jestem Twoim sługą, i trzymam się Twojego przymierza i obietnicy tak dobrze, jak potrafię.",
+      "source": "Bukhari"
+    }
+  },
+  "wisdom": {
+    "1": {
+      "content": "Wasz Pan powiedział: Wzywajcie Mnie, a Ja wam odpowiem!",
+      "source": "Sura Ghafir, 40:60"
+    },
+    "2": {
+      "content": "Czyny są sądzone według intencji i każdy otrzyma to, co zamierzył.",
+      "source": "Bukhari, 1"
+    },
+    "3": {
+      "content": "Zaprawdę, z trudnością jest łatwość!",
+      "source": "Sura Ash-Sharh, 94:5"
+    },
+    "4": {
+      "content": "Najlepsi spośród was to ci, którzy uczą się Koranu i go nauczają.",
+      "source": "Bukhari, 5027"
+    },
+    "5": {
+      "content": "Bóg nie obciąża żadnej duszy ponad jej możność.",
+      "source": "Sura Al-Baqarah, 2:286"
+    },
+    "6": {
+      "content": "Ułatwiajcie, a nie utrudniajcie; głoście radosną nowinę i nie zniechęcajcie ludzi.",
+      "source": "Bukhari, 69"
+    },
+    "7": {
+      "content": "Zaprawdę, Bóg jest z cierpliwymi!",
+      "source": "Sura Al-Baqarah, 2:153"
+    },
+    "8": {
+      "content": "Miłość do tego świata jest korzeniem wszelkiego zła.",
+      "source": "Bayhaqi, Shu'ab al-Iman"
+    },
+    "9": {
+      "content": "O tak! W wspomnieniu Boga serca znajdują spokój.",
+      "source": "Sura Ar-Ra'd, 13:28"
+    },
+    "10": {
+      "content": "Ktokolwiek wskazuje komuś dobro, otrzyma nagrodę taką samą jak ten, kto je czyni.",
+      "source": "Muslim, 1893"
+    },
+    "11": {
+      "content": "I że człowiek ma tylko to, o co się starał.",
+      "source": "Sura An-Najm, 53:39"
+    },
+    "12": {
+      "content": "Najlepsi ludzie to ci, którzy przynoszą największy pożytek innym.",
+      "source": "Tabarani, al-Mu'jam al-Awsat"
+    },
+    "13": {
+      "content": "Ten, który stworzył śmierć i życie, aby was doświadczyć, który z was jest lepszy w uczynkach.",
+      "source": "Sura Al-Mulk, 67:2"
+    },
+    "14": {
+      "content": "Czystość jest połową wiary.",
+      "source": "Muslim, 223"
+    },
+    "15": {
+      "content": "Zaprawdę, najbardziej czcigodny spośród was w obliczu Boga to ten, który jest najbardziej bogobojny.",
+      "source": "Sura Al-Hujurat, 49:13"
+    }
+  },
+  "verses": {
+    "isra-82": {
+      "content": "My posyłamy w Koranie to, co jest uzdrowieniem i miłosierdziem dla wiernych.",
+      "source": "Sura Al-Isra"
+    },
+    "rad-28": {
+      "content": "O tak! W wspomnieniu Boga serca znajdują spokój.",
+      "source": "Sura Ar-Ra'd"
+    },
+    "insirah-5-6": {
+      "content": "Zaprawdę, z trudnością jest łatwość! Zaprawdę, z trudnością jest łatwość!",
+      "source": "Sura Ash-Sharh"
+    },
+    "mumin-60": {
+      "content": "Wasz Pan powiedział: Wzywajcie Mnie, a Ja wam odpowiem!",
+      "source": "Sura Ghafir"
+    },
+    "duha-3": {
+      "content": "Twój Pan nie opuścił cię ani nie znienawidził.",
+      "source": "Sura Ad-Duha"
+    },
+    "bakara-286": {
+      "content": "Bóg nie obciąża żadnej duszy ponad jej możność.",
+      "source": "Sura Al-Baqarah"
+    },
+    "taha-114": {
+      "content": "I mów: \"Panie mój! Pomnoż moją wiedzę!\"",
+      "source": "Sura Taha"
+    },
+    "zumer-53": {
+      "content": "Mów: \"O moi słudzy, którzy przesadziliście na swoją niekorzyść, nie traćcie nadziei na miłosierdzie Boga!\"",
+      "source": "Sura Az-Zumar"
+    },
+    "yunus-57": {
+      "content": "O ludzie! Przeszło do was napomnienie od waszego Pana i uzdrowienie tego, co w piersiach, i prosta droga, i miłosierdzie dla wiernych.",
+      "source": "Sura Yunus"
+    },
+    "suara-80": {
+      "content": "I kiedy jestem chory, On mnie uzdrawia.",
+      "source": "Sura Ash-Shu'ara"
+    },
+    "talak-3": {
+      "content": "A kto ufa Bogu - to On mu wystarczy.",
+      "source": "Sura At-Talaq"
+    },
+    "fussilet-44": {
+      "content": "Mów: \"On jest dla tych, którzy uwierzyli, drogą prostą i uzdrowieniem\".",
+      "source": "Sura Fussilat"
+    },
+    "bakara-186": {
+      "content": "A kiedy moi słudzy zapytają cię o Mnie - to Ja jestem bliski! Odpowiadam na wezwanie wołającego, kiedy Mnie woła.",
+      "source": "Sura Al-Baqarah"
+    },
+    "tebve-128": {
+      "content": "Przyszedł do was Posłannik spośród was samych. Ciężki jest dla niego wasz trud; on troszczy się o was, a dla wiernych jest pełen dobroci i miłosierdzia.",
+      "source": "Sura At-Tawbah"
+    },
+    "furkan-74": {
+      "content": "Panie nasz! Daj nam w naszych żonach i potomkach ochłodę dla oczu i uczyń nas wodzami dla bogobojnych!",
+      "source": "Sura Al-Furqan"
+    },
+    "aliimran-173": {
+      "content": "Wystarcza nam Bóg! Jakże wspaniały to Powiernik!",
+      "source": "Sura Ali Imran"
+    }
+  },
+  "esma": [
+    "Jedyny Bóg, który jednoczy wszystkie imiona i atrybuty doskonałości.",
+    "Najmiłosierniejszy, miłosierny dla całego stworzenia na tym świecie.",
+    "Wszechmiłosierny, szczególnie dla wierzących w życiu ostatecznym.",
+    "Król, Właściciel panowania wszechświata.",
+    "Najświętszy, wolny od wszelkiej niedoskonałości.",
+    "Źródło Pokoju, który obdarza bezpieczeństwem Swoje sługi.",
+    "Dawca Bezpieczeństwa i Wiary.",
+    "Opiekun, który czuwa nad wszystkimi rzeczami i je chroni.",
+    "Wszechmogący, którego nikt nie może pokonać.",
+    "Wszechwładny, którego wola zawsze się spełnia.",
+    "Najwyższy w Wielkości.",
+    "Stwórca, który powołuje do istnienia z niczego.",
+    "Twórca, który stwarza w doskonałej harmonii.",
+    "Kształtujący, który nadaje każdemu rzeczowi jego formę.",
+    "Wielce Przebaczający, który ukrywa grzechy.",
+    "Zdobywca, który panuje nad wszystkim.",
+    "Hojny Dawca, który daje swobodnie i obficie.",
+    "Żywiciel udzielający utrzymania wszystkim.",
+    "Otwierający, który usuwa trudności i otwiera drzwi dobra.",
+    "Wszechwiedzący.",
+    "Powstrzymujący, który ogranicza zaopatrzenie, jak chce.",
+    "Rozszerzający, który rozszerza zaopatrzenie, jak chce.",
+    "Poniżający, który poniża, kogo chce.",
+    "Wywyższający, który wywyższa, kogo chce.",
+    "Dawca Honoru.",
+    "Dawca Hańby.",
+    "Wszystkosłyszący.",
+    "Wszystkowiedzący.",
+    "Sędzia, którego dekret jest ostateczny.",
+    "Całkowicie Sprawiedliwy.",
+    "Subtelny i Łaskawy, który zna najdrobniejsze szczegóły.",
+    "Wszystkowiedzący.",
+    "Cierpliwy, łagodny wobec Swojego stworzenia.",
+    "Wspaniały, poza wszelkimi pojęciami.",
+    "Wielce Przebaczający.",
+    "Wdzięczny, który obficie nagradza małe uczynki.",
+    "Najwyższy.",
+    "Największy.",
+    "Zachowujący, który chroni wszystkie rzeczy.",
+    "Podtrzymujący, który daje pożywienie wszystkim.",
+    "Rozliczający, który rozlicza Swoje sługi.",
+    "Majestatyczny.",
+    "Najhojniejszy.",
+    "Czujny, który obserwuje wszystko w każdej chwili.",
+    "Odpowiadający, który wysłuchuje modlitw.",
+    "Wszystkoogarniający w wiedzy, miłosierdziu i potędze.",
+    "Najmądrzejszy.",
+    "Najbardziej Kochający.",
+    "Najchwalebniejszy.",
+    "Wskrzesiciel umarłych.",
+    "Świadek obecny wszędzie.",
+    "Prawda, Rzeczywistość.",
+    "Powiernik, który najlepiej układa sprawy Swoich sług.",
+    "Wszechsilny.",
+    "Niezachwiany, którego moc jest niewzruszona.",
+    "Opiekuńczy Przyjaciel wierzących.",
+    "Godny Chwały.",
+    "Liczący, który zna liczbę wszystkich rzeczy.",
+    "Początkujący, który zapoczątkowuje stworzenie.",
+    "Przywracający, który przywraca do życia.",
+    "Dawca Życia.",
+    "Przynoszący Śmierć.",
+    "Wiecznie Żywy.",
+    "Samowystarczalny Podtrzymujący wszystko.",
+    "Znajdujący, któremu niczego nie brakuje.",
+    "Szlachetny, obfity w hojność.",
+    "Jedyny, unikalny w istocie i atrybutach.",
+    "Wieczna Ucieczka, od której wszyscy zależą.",
+    "Wszechzdolny.",
+    "Wszechmocny, który włada wszystkimi mającymi moc.",
+    "Przyspieszający, który przybliża, kogo chce.",
+    "Opóźniający, który powstrzymuje, kogo chce.",
+    "Pierwszy, bez początku.",
+    "Ostatni, który pozostaje po zniszczeniu wszystkiego.",
+    "Jawny, widoczny przez Swoje znaki.",
+    "Ukryty, którego istota jest niewidzialna.",
+    "Władca, który sam zarządza wszechświatem.",
+    "Najwyższy.",
+    "Źródło Dobroci.",
+    "Przyjmujący Skruchę.",
+    "Zemstę sprawujący, który sprawiedliwie karze złoczyńców.",
+    "Wybaczający.",
+    "Najbardziej Łaskawy i Współczujący.",
+    "Wieczny Właściciel całego panowania.",
+    "Pan Majestatu i Hojności.",
+    "Bezstronny, który czyni wszystko sprawiedliwie.",
+    "Gromadzący, który zbiera, co chce, kiedy chce.",
+    "Samowystarczalny, Nieskończenie Bogaty.",
+    "Wzbogacający.",
+    "Powstrzymujący, który wstrzymuje to, czego nie chce.",
+    "Stwórca szkody (jako test).",
+    "Stwórca pożytku.",
+    "Światło, które oświetla światy.",
+    "Przewodnik do prostej drogi.",
+    "Niezrównany Twórca piękna.",
+    "Wieczny.",
+    "Dziedzic, ostateczny Właściciel wszystkiego.",
+    "Przewodnik do Prawdy, którego sprawy są doskonale kierowane.",
+    "Najbardziej Cierpliwy, który nie spieszy się z karą."
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "duas": {
+    "morning-1": {
+      "title": "Súplica da Manhã",
+      "meaning": "Ó Allah, por Ti entramos na manhã e por Ti entramos na tarde, por Ti vivemos e por Ti morremos, e a Ti é a ressurreição.",
+      "source": "Tirmidhi"
+    },
+    "protection-1": {
+      "title": "Súplica de Proteção",
+      "meaning": "Em nome de Allah, com Cujo nome nada na terra ou nos céus pode causar dano, e Ele é o Ouvi-te, o Onisciente.",
+      "source": "Abu Dawud"
+    },
+    "forgiveness-1": {
+      "title": "Busca por Perdão",
+      "meaning": "Busco o perdão de Allah, o Todo-Poderoso, além de quem não há divindade, o Vivente, o Sustentador de tudo, e a Ele me arrependo.",
+      "source": "Tirmidhi"
+    },
+    "gratitude-1": {
+      "title": "Súplica de Gratidão",
+      "meaning": "Louvor a Allah que nos alimentou, nos deu de beber, nos bastou e nos deu abrigo.",
+      "source": "Muslim"
+    },
+    "evening-1": {
+      "title": "Súplica da Tarde",
+      "meaning": "Ó Allah, peço-Te o bem desta noite e o bem do que ela contém, e busco refúgio em Ti contra o seu mal e o mal do que ela contém.",
+      "source": "Abu Dawud"
+    },
+    "sleep-1": {
+      "title": "Antes de Dormir",
+      "meaning": "Em Teu nome, ó Allah, morro e vivo.",
+      "source": "Bukhari"
+    },
+    "wakeup-1": {
+      "title": "Ao Acordar",
+      "meaning": "Louvor a Allah que nos deu a vida após nos ter feito morrer, e a Ele é a ressurreição.",
+      "source": "Bukhari"
+    },
+    "stress-1": {
+      "title": "Súplica na Angústia",
+      "meaning": "Não há divindade além de Ti. Glorificado sejas Tu. Na verdade, tenho sido dos malfeitores.",
+      "source": "Tirmidhi"
+    },
+    "travel-1": {
+      "title": "Súplica para Viagem",
+      "meaning": "Glorificado seja Aquele que nos sujeitou isto, e nós jamais poderíamos fazê-lo por nós mesmos. E, em verdade, ao nosso Senhor certamente retornaremos.",
+      "source": "Tirmidhi"
+    },
+    "health-1": {
+      "title": "Súplica pela Saúde",
+      "meaning": "Ó Allah, concede-me saúde em meu corpo. Ó Allah, concede-me saúde em minha audição. Ó Allah, concede-me saúde em minha visão.",
+      "source": "Abu Dawud"
+    },
+    "knowledge-1": {
+      "title": "Súplica por Conhecimento",
+      "meaning": "Senhor meu, aumenta-me em conhecimento.",
+      "source": "Surah Taha, 20:114"
+    },
+    "guidance-1": {
+      "title": "Súplica por Orientação",
+      "meaning": "Ó Allah, guia-me e mantém-me no caminho reto.",
+      "source": "Muslim"
+    },
+    "patience-1": {
+      "title": "Súplica por Paciência",
+      "meaning": "Nosso Senhor, despeja sobre nós paciência e firma os nossos passos.",
+      "source": "Surah Al-Baqarah, 2:250"
+    },
+    "food-1": {
+      "title": "Antes de Comer",
+      "meaning": "Ó Allah, abençoa o que nos provueste e protege-nos do castigo do Fogo. Em nome de Allah.",
+      "source": "Ibn Majah"
+    },
+    "parents-1": {
+      "title": "Súplica pelos Pais",
+      "meaning": "Senhor meu, tem piedade de ambos, assim como eles me criaram quando eu era pequeno.",
+      "source": "Surah Al-Isra, 17:24"
+    },
+    "success-1": {
+      "title": "Súplica por Sucesso",
+      "meaning": "Senhor meu, expande para mim o meu peito e facilita para mim a minha tarefa.",
+      "source": "Surah Taha, 20:25-26"
+    },
+    "anger-1": {
+      "title": "Quando com Raiva",
+      "meaning": "Busco refúgio em Allah contra Satanás, o maldito.",
+      "source": "Bukhari"
+    },
+    "mosque-1": {
+      "title": "Ao Entrar na Mesquita",
+      "meaning": "Ó Allah, abre para mim as portas da Tua misericórdia.",
+      "source": "Muslim"
+    },
+    "mosque-2": {
+      "title": "Ao Sair da Mesquita",
+      "meaning": "Ó Allah, peço-Te da Tua generosidade.",
+      "source": "Muslim"
+    },
+    "rain-1": {
+      "title": "Quando Chove",
+      "meaning": "Ó Allah, faze dela uma chuva benéfica.",
+      "source": "Bukhari"
+    },
+    "fear-1": {
+      "title": "Súplica no Medo",
+      "meaning": "Allah me é suficiente. Não há divindade senão Ele. Nele ponho a minha confiança, e Ele é o Senhor do Trono Supremo.",
+      "source": "Abu Dawud"
+    },
+    "exam-1": {
+      "title": "Súplica Antes de uma Prova",
+      "meaning": "Senhor meu, aumenta-me em conhecimento e compreensão, e junta-me aos virtuosos.",
+      "source": "Based on Surah Taha, 20:114"
+    },
+    "illness-1": {
+      "title": "Súplica por Cura",
+      "meaning": "Remove o mal, ó Senhor da humanidade, e cura, pois Tu és o Curador. Não há cura senão a Tua cura, uma cura que não deixa após si nenhuma enfermidade.",
+      "source": "Bukhari"
+    },
+    "debt-1": {
+      "title": "Alívio das Dívidas",
+      "meaning": "Ó Allah, busco refúgio em Ti contra a ansiedade e a tristeza, contra a incapacidade e a preguiça, contra a sovinice e a covardia, contra o peso das dívidas e contra ser dominado pelos homens.",
+      "source": "Bukhari"
+    },
+    "repentance-1": {
+      "title": "Mestre da Busca por Perdão",
+      "meaning": "Ó Allah, Tu és o meu Senhor. Não há divindade senão Tu. Tu me criaste e eu sou o Tua servo, e cumprimento o Teu pacto e a Tua promessa tanto quanto posso.",
+      "source": "Bukhari"
+    }
+  },
+  "wisdom": {
+    "1": {
+      "content": "E o vosso Senhor disse: Chamai-Me; responder-vos-ei.",
+      "source": "Surah Ghafir, 40:60"
+    },
+    "2": {
+      "content": "As ações julgam-se pelas intenções, e cada homem terá o que pretendeu.",
+      "source": "Bukhari, 1"
+    },
+    "3": {
+      "content": "Em verdade, com a dificuldade vem a facilidade.",
+      "source": "Surah Ash-Sharh, 94:5"
+    },
+    "4": {
+      "content": "Os melhores de vós sois aqueles que aprendem o Alcorão e o ensinam.",
+      "source": "Bukhari, 5027"
+    },
+    "5": {
+      "content": "Allah não impõe a nenhuma alma carga superior à sua capacidade.",
+      "source": "Surah Al-Baqarah, 2:286"
+    },
+    "6": {
+      "content": "Facilitai e não torneis difícil; dai boas-novas e não afasteis as pessoas.",
+      "source": "Bukhari, 69"
+    },
+    "7": {
+      "content": "Em verdade, Allah está com os pacientes.",
+      "source": "Surah Al-Baqarah, 2:153"
+    },
+    "8": {
+      "content": "O amor a este mundo é a raiz de todo mal.",
+      "source": "Bayhaqi, Shu'ab al-Iman"
+    },
+    "9": {
+      "content": "Em verdade, é com a lembrança de Allah que os corações se tranquilizam.",
+      "source": "Surah Ar-Ra'd, 13:28"
+    },
+    "10": {
+      "content": "Quem quer que guie alguém para o bem terá uma recompensa semelhante à daquele que o praticar.",
+      "source": "Muslim, 1893"
+    },
+    "11": {
+      "content": "E que o homem não terá senão o que houver ambicionado.",
+      "source": "Surah An-Najm, 53:39"
+    },
+    "12": {
+      "content": "O melhor dos homens é o mais útil aos demais.",
+      "source": "Tabarani, al-Mu'jam al-Awsat"
+    },
+    "13": {
+      "content": "Aquele que criou a morte e a vida para vos provar qual de vós é melhor em obras.",
+      "source": "Surah Al-Mulk, 67:2"
+    },
+    "14": {
+      "content": "A ablução é a metade da fé.",
+      "source": "Muslim, 223"
+    },
+    "15": {
+      "content": "Em verdade, o mais honrado de vós perante Allah é o mais piedoso.",
+      "source": "Surah Al-Hujurat, 49:13"
+    }
+  },
+  "verses": {
+    "isra-82": {
+      "content": "E despachamos, no Alcorão, tudo o que é cura e misericórdia para os crentes.",
+      "source": "Surah Al-Isra"
+    },
+    "rad-28": {
+      "content": "Em verdade, é com a lembrança de Allah que os corações se tranquilizam.",
+      "source": "Surah Ar-Ra'd"
+    },
+    "insirah-5-6": {
+      "content": "Em verdade, com a dificuldade vem a facilidade. Em verdade, com a dificuldade vem a facilidade.",
+      "source": "Surah Ash-Sharh"
+    },
+    "mumin-60": {
+      "content": "E o vosso Senhor disse: Chamai-Me; responder-vos-ei.",
+      "source": "Surah Ghafir"
+    },
+    "duha-3": {
+      "content": "O teu Senhor não te desamparou, nem te aborreceu.",
+      "source": "Surah Ad-Duha"
+    },
+    "bakara-286": {
+      "content": "Allah não impõe a nenhuma alma carga superior à sua capacidade.",
+      "source": "Surah Al-Baqarah"
+    },
+    "taha-114": {
+      "content": "E dize: Senhor meu, aumenta-me em conhecimento.",
+      "source": "Surah Taha"
+    },
+    "zumer-53": {
+      "content": "Dize: Ó meus servos, que haveis transgredido contra vós mesmos, não desespereis da misericórdia de Allah.",
+      "source": "Surah Az-Zumar"
+    },
+    "yunus-57": {
+      "content": "Ó humanos, já vos chegou uma exortação de vosso Senhor, e cura para o que há nos peitos, e orientação e misericórdia para os crentes.",
+      "source": "Surah Yunus"
+    },
+    "suara-80": {
+      "content": "E quando estou enfermo, é Ele quem me cura.",
+      "source": "Surah Ash-Shu'ara"
+    },
+    "talak-3": {
+      "content": "E quem se confia a Allah, Ele lhe será suficiente.",
+      "source": "Surah At-Talaq"
+    },
+    "fussilet-44": {
+      "content": "Dize: Ele é, para os que creem, orientação e cura.",
+      "source": "Surah Fussilat"
+    },
+    "bakara-186": {
+      "content": "E quando os Meus servos te perguntarem a Meu respeito, decerto que estou próximo e atendo à súplica do suplicante, quando Me suplica.",
+      "source": "Surah Al-Baqarah"
+    },
+    "tebve-128": {
+      "content": "Bem vos tem chegado um Mensageiro de entre vós mesmos, a quem penam as vossas dificuldades, solícito por vós, e compassivo e misericordioso para com os crentes.",
+      "source": "Surah At-Tawbah"
+    },
+    "furkan-74": {
+      "content": "Nosso Senhor, concede-nos, em nossas esposas e em nossa descendência, o conforto dos olhos, e faze-nos líderes para os piedosos.",
+      "source": "Surah Al-Furqan"
+    },
+    "aliimran-173": {
+      "content": "Allah nos é suficiente, e que excelente Guardião é Ele!",
+      "source": "Surah Ali Imran"
+    }
+  },
+  "esma": [
+    "O Único Deus, que une todos os nomes e atributos de perfeição.",
+    "O Clemente, misericordioso com toda a criação neste mundo.",
+    "O Misericordioso, especialmente com os crentes na outra vida.",
+    "O Rei, o Proprietário do domínio do universo.",
+    "O Santíssimo, livre de toda imperfeição.",
+    "A Fonte de Paz, que concede segurança aos Seus servos.",
+    "O Doador de Segurança e Fé.",
+    "O Guardião, que vigia e protege todas as coisas.",
+    "O Todo-Poderoso, a quem nada pode vencer.",
+    "O Compelidor, cuja vontade é sempre feita.",
+    "O Supremo em Grandeza.",
+    "O Criador, que traz à existência do nada.",
+    "O Idealizador, que cria em perfeita harmonia.",
+    "O Modelador, que dá a tudo a sua forma.",
+    "O Perdoador, que encobre os pecados.",
+    "O Dominador, que prevalece sobre todas as coisas.",
+    "O Benevolente, que dá livre e abundantemente.",
+    "O Provedor de sustento para todos.",
+    "O Abridor, que remove a dificuldade e abre as portas do bem.",
+    "O Onisciente.",
+    "O Retentor, que restringe o sustento como Ele quer.",
+    "O Expansor, que estende o sustento como Ele quer.",
+    "O Rebaixador, que humilha a quem Ele quer.",
+    "O Exaltador, que eleva a quem Ele quer.",
+    "O Doador de Honra.",
+    "O Doador de Desonra.",
+    "O Oniouvinte.",
+    "O Onividente.",
+    "O Juiz, cujo decreto é definitivo.",
+    "O Inteiramente Justo.",
+    "O Sutil e Benevolente, que conhece os mínimos detalhes.",
+    "O Bem-Informado.",
+    "O Tolerante, suave com a Sua criação.",
+    "O Magnífico, além da compreensão.",
+    "O Perdoador.",
+    "O Agradecido, que recompensa grandemente as pequenas ações.",
+    "O Altíssimo.",
+    "O Grandioso.",
+    "O Preservador, que protege todas as coisas.",
+    "O Sustentador, que dá nutrição a todos.",
+    "O Acertador de Contas, que toma conta dos Seus servos.",
+    "O Majestoso.",
+    "O Generoso.",
+    "O Vigilante, que observa a tudo a cada momento.",
+    "O Respondeiro, que atende às preces.",
+    "O Abrangente em conhecimento, misericórdia e poder.",
+    "O Sábio.",
+    "O Loving, o Amoroso.",
+    "O Gloriosíssimo.",
+    "O Ressuscitador dos mortos.",
+    "A Testemunha, presente em toda parte.",
+    "A Verdade, o Real.",
+    "O fiduciário, que melhor arranja os assuntos de Seus servos.",
+    "O Fortíssimo.",
+    "O Firme, cujo poder é inabalável.",
+    "O Amigo Protetor dos crentes.",
+    "O Louvado.",
+    "O Contador, que conhece o número de todas as coisas.",
+    "O Iniciador, que começa a criação.",
+    "O Restaurador, que traz de volta à vida.",
+    "O Doador da Vida.",
+    "O Trazedor da Morte.",
+    "O Vivente.",
+    "O Autossustentador e Sustentador de tudo.",
+    "O Descobridor, a quem nada falta.",
+    "O Nobre, abundante em generosidade.",
+    "O Único, único na essência e nos atributos.",
+    "O Refúgio Eterno, de quem todos dependem.",
+    "O Capaz de tudo.",
+    "O Onipotente, que dispõe de todos os que têm poder.",
+    "O Acelerador, que adianta a quem Ele quer.",
+    "O Retardador, que detém a quem Ele quer.",
+    "O Primeiro, sem começo.",
+    "O Último, que permanece após tudo perecer.",
+    "O Manifesto, evidente através de Seus sinais.",
+    "O Oculto, cuja essência é invisível.",
+    "O Governador, que sozinho administra o universo.",
+    "O Mais Exaltado.",
+    "A Fonte de Bondade.",
+    "O Aceitador do Arrependimento.",
+    "O Vingador, que pune justamente os malfeitores.",
+    "O Indulgente.",
+    "O Bondoso e Compasivo.",
+    "O Proprietário Eterno de todo o domínio.",
+    "O Senhor de Majestade e Generosidade.",
+    "O Equitativo, que faz todas as coisas com justiça.",
+    "O Reunião, que reúne o que Ele quer quando Ele quer.",
+    "O Autossuficiente, o Infinitely Rico.",
+    "O Enriquecedor.",
+    "O Preventor, que retém o que Ele não quer.",
+    "O Criador do mal (como teste).",
+    "O Criador do benefício.",
+    "A Luz, que ilumina os mundos.",
+    "O Guia para o caminho reto.",
+    "O Incomparável Criador de beleza.",
+    "O Eterno.",
+    "O Herdeiro, o Proprietário último de tudo.",
+    "O Guia para a Retidão, cujos assuntos são perfeitamente dirigidos.",
+    "O Patientíssimo, que não apressa o castigo."
+  ]
+}

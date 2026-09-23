@@ -1,0 +1,358 @@
+{
+  "duas": {
+    "morning-1": {
+      "title": "Ochtenddua",
+      "meaning": "O Allah, door U beleven wij de ochtend en door U beleven wij de avond, door U leven wij en door U sterven wij, en tot U is de opstanding.",
+      "source": "Tirmidhi"
+    },
+    "protection-1": {
+      "title": "Dua voor bescherming",
+      "meaning": "In de naam van Allah, met wiens naam niets op aarde of in de hemelen schade kan berokkenen, en Hij is de Alhorende, de Alwetende.",
+      "source": "Abu Dawud"
+    },
+    "forgiveness-1": {
+      "title": "Vergeving vragen",
+      "meaning": "Ik vraag om vergeving aan Allah de Almachtige, naast wie geen god is, de Levende, de Onderhouder van al het bestaande, en ik toon berouw aan Hem.",
+      "source": "Tirmidhi"
+    },
+    "gratitude-1": {
+      "title": "Dua van dankbaarheid",
+      "meaning": "Lof zij Allah die ons heeft gevoed, ons te drinken heeft gegeven, ons heeft voorzien en ons een onderkomen heeft gegeven.",
+      "source": "Muslim"
+    },
+    "evening-1": {
+      "title": "Avonddua",
+      "meaning": "O Allah, ik vraag U om het goede van deze nacht en het goede van wat daarin is, en ik zoek toevlucht bij U tegen het kwade ervan en het kwade van wat daarin is.",
+      "source": "Abu Dawud"
+    },
+    "sleep-1": {
+      "title": "Voor het slapengaan",
+      "meaning": "In Uw naam, o Allah, sterf ik en leef ik.",
+      "source": "Bukhari"
+    },
+    "wakeup-1": {
+      "title": "Bij het ontwaken",
+      "meaning": "Lof zij Allah die ons tot leven heeft gebracht nadat Hij ons had doen sterven, en tot Hem is de opstanding.",
+      "source": "Bukhari"
+    },
+    "stress-1": {
+      "title": "Dua bij tegenspoed",
+      "meaning": "Er is geen god dan U. Heilig bent U. Waarlijk, ik behoor tot de onrechtplegers.",
+      "source": "Tirmidhi"
+    },
+    "travel-1": {
+      "title": "Dua voor reizen",
+      "meaning": "Heilig is Hij die dit voor ons heeft onderworpen, en wij zouden dit uit ons eigen niet hebben gekund. En voorwaar, tot onze Heer zullen wij zeker terugkeren.",
+      "source": "Tirmidhi"
+    },
+    "health-1": {
+      "title": "Dua voor gezondheid",
+      "meaning": "O Allah, schenk mij gezondheid in mijn lichaam. O Allah, schenk mij gezondheid in mijn gehoor. O Allah, schenk mij gezondheid in mijn zicht.",
+      "source": "Abu Dawud"
+    },
+    "knowledge-1": {
+      "title": "Dua voor kennis",
+      "meaning": "Mijn Heer, vermeerder mij in kennis.",
+      "source": "Surah Taha, 20:114"
+    },
+    "guidance-1": {
+      "title": "Dua voor leiding",
+      "meaning": "O Allah, leid mij en houd mij op het rechte pad.",
+      "source": "Muslim"
+    },
+    "patience-1": {
+      "title": "Dua voor geduld",
+      "meaning": "Onze Heer, stort geduld over ons uit en maak onze voeten standvastig.",
+      "source": "Surah Al-Baqarah, 2:250"
+    },
+    "food-1": {
+      "title": "Voor het eten",
+      "meaning": "O Allah, zegen hetgeen waarmee U ons heeft voorzien en bescherm ons tegen de bestraffing van het Vuur. In de naam van Allah.",
+      "source": "Ibn Majah"
+    },
+    "parents-1": {
+      "title": "Dua voor ouders",
+      "meaning": "Mijn Heer, heb medelijden met hen zoals zij mij opvoedden toen ik klein was.",
+      "source": "Surah Al-Isra, 17:24"
+    },
+    "success-1": {
+      "title": "Dua voor succes",
+      "meaning": "Mijn Heer, verruim voor mij mijn borst en maak mijn taak gemakkelijk voor mij.",
+      "source": "Surah Taha, 20:25-26"
+    },
+    "anger-1": {
+      "title": "Bij boosheid",
+      "meaning": "Ik zoek toevlucht tot Allah tegen de vervloekte Shaytan.",
+      "source": "Bukhari"
+    },
+    "mosque-1": {
+      "title": "Bij het betreden van de moskee",
+      "meaning": "O Allah, open voor mij de deuren van Uw barmhartigheid.",
+      "source": "Muslim"
+    },
+    "mosque-2": {
+      "title": "Bij het verlaten van de moskee",
+      "meaning": "O Allah, ik vraag U om Uw gunst.",
+      "source": "Muslim"
+    },
+    "rain-1": {
+      "title": "Wanneer het regent",
+      "meaning": "O Allah, laat het een nuttige regen zijn.",
+      "source": "Bukhari"
+    },
+    "fear-1": {
+      "title": "Dua bij angst",
+      "meaning": "Allah is voldoende voor mij. Er is geen god dan Hij. In Hem stel ik mijn vertrouwen, en Hij is de Heer van de Geweldige Troon.",
+      "source": "Abu Dawud"
+    },
+    "exam-1": {
+      "title": "Dua voor een examen",
+      "meaning": "Mijn Heer, vermeerder mij in kennis en begrip, en voeg mij bij de vrome mensen.",
+      "source": "Based on Surah Taha, 20:114"
+    },
+    "illness-1": {
+      "title": "Dua voor genezing",
+      "meaning": "Verwijder de pijn, o Heer der mensen, en genees, want U bent de Genezer. Er is geen genezing dan Uw genezing, een genezing die geen ziekte achterlaat.",
+      "source": "Bukhari"
+    },
+    "debt-1": {
+      "title": "Verlichting van schulden",
+      "meaning": "O Allah, ik zoek toevlucht bij U tegen zorg en verdriet, tegen onvermogen en luiheid, tegen gierigheid en lafheid, tegen de zwaart van de schulden en tegen onderworpen te worden door mensen.",
+      "source": "Bukhari"
+    },
+    "repentance-1": {
+      "title": "Demeester der vergevingzoeken",
+      "meaning": "O Allah, U bent mijn Heer. Er is geen god dan U. U heeft mij geschapen en ik ben Uw dienaar, en ik houd mij aan Uw verbond en belofte voor zover ik kan.",
+      "source": "Bukhari"
+    }
+  },
+  "wisdom": {
+    "1": {
+      "content": "En uw Heer heeft gezegd: Roept Mij aan, Ik zal jullie verhoren.",
+      "source": "Surah Ghafir, 40:60"
+    },
+    "2": {
+      "content": "De daden worden beoordeeld op de intenties, en eenieder zal krijgen wat hij intenteerde.",
+      "source": "Bukhari, 1"
+    },
+    "3": {
+      "content": "Voorwaar, met de tegenspoed is er verlichting.",
+      "source": "Surah Ash-Sharh, 94:5"
+    },
+    "4": {
+      "content": "De besten van jullie zijn degenen die de Quran leren en onderwijzen.",
+      "source": "Bukhari, 5027"
+    },
+    "5": {
+      "content": "Allah belast geen ziel boven haar vermogen.",
+      "source": "Surah Al-Baqarah, 2:286"
+    },
+    "6": {
+      "content": "Maakt het gemakkelijk en maakt het niet moeilijk, brengt goede tijdingen en verjaagt de mensen niet.",
+      "source": "Bukhari, 69"
+    },
+    "7": {
+      "content": "Voorwaar, Allah is met de geduldigen.",
+      "source": "Surah Al-Baqarah, 2:153"
+    },
+    "8": {
+      "content": "Liefde voor deze wereld is de bron van elke misdraging.",
+      "source": "Bayhaqi, Shu'ab al-Iman"
+    },
+    "9": {
+      "content": "Weet: door het gedenken van Allah komen de harten tot rust.",
+      "source": "Surah Ar-Ra'd, 13:28"
+    },
+    "10": {
+      "content": "Wie iemand naar het goede leidt, zal een beloning hebben zoals degene die het verricht.",
+      "source": "Muslim, 1893"
+    },
+    "11": {
+      "content": "En dat de mens niets ten deel valt dan waarvoor hij zich heeft ingespannen.",
+      "source": "Surah An-Najm, 53:39"
+    },
+    "12": {
+      "content": "De beste mensen zijn degenen die het meest nuttig zijn voor anderen.",
+      "source": "Tabarani, al-Mu'jam al-Awsat"
+    },
+    "13": {
+      "content": "Degene die de dood en het leven heeft geschapen om jullie te beproeven wie van jullie de beste daad verricht.",
+      "source": "Surah Al-Mulk, 67:2"
+    },
+    "14": {
+      "content": "Reiniging is de helft van het geloof.",
+      "source": "Muslim, 223"
+    },
+    "15": {
+      "content": "Voorwaar, de meest eerbiedwaardige van jullie bij Allah is de meest vrome van jullie.",
+      "source": "Surah Al-Hujurat, 49:13"
+    }
+  },
+  "verses": {
+    "isra-82": {
+      "content": "En Wij zenden van de Quran neer wat een genezing en barmhartigheid is voor de gelovigen.",
+      "source": "Surah Al-Isra"
+    },
+    "rad-28": {
+      "content": "Degenen die geloven en wier harten tot rust komen door het gedenken van Allah. Weet: door het gedenken van Allah komen de harten tot rust.",
+      "source": "Surah Ar-Ra'd"
+    },
+    "insirah-5-6": {
+      "content": "Voorwaar, met de tegenspoed is er verlichting. Voorwaar, met de tegenspoed is er verlichting.",
+      "source": "Surah Ash-Sharh"
+    },
+    "mumin-60": {
+      "content": "En uw Heer heeft gezegd: Roept Mij aan, Ik zal jullie verhoren.",
+      "source": "Surah Ghafir"
+    },
+    "duha-3": {
+      "content": "Uw Heer heeft u niet verlaten, en Hij is niet misnoegd.",
+      "source": "Surah Ad-Duha"
+    },
+    "bakara-286": {
+      "content": "Allah belast geen ziel boven haar vermogen.",
+      "source": "Surah Al-Baqarah"
+    },
+    "taha-114": {
+      "content": "En zeg: Mijn Heer, vermeerder mij in kennis.",
+      "source": "Surah Taha"
+    },
+    "zumer-53": {
+      "content": "Zeg: O mijn dienaren die buitensporig zijn geweest tegenover zichzelf, wanhoopt niet aan de barmhartigheid van Allah.",
+      "source": "Surah Az-Zumar"
+    },
+    "yunus-57": {
+      "content": "O mensen, er is zeker een vermaning tot jullie gekomen van jullie Heer, en een genezing voor wat in de harten is, en een leiding en barmhartigheid voor de gelovigen.",
+      "source": "Surah Yunus"
+    },
+    "suara-80": {
+      "content": "En wanneer ik ziek ben, is Hij degene die mij geneest.",
+      "source": "Surah Ash-Shu'ara"
+    },
+    "talak-3": {
+      "content": "En wie zijn vertrouwen stelt op Allah, dan is Hij voldoende voor hem.",
+      "source": "Surah At-Talaq"
+    },
+    "fussilet-44": {
+      "content": "Zeg: Het is voor degenen die geloven een leiding en een genezing.",
+      "source": "Surah Fussilat"
+    },
+    "bakara-186": {
+      "content": "En wanneer Mijn dienaren u vragen over Mij, voorwaar, Ik ben nabij. Ik verhoor de oproep van de smekende wanneer hij Mij aanroept.",
+      "source": "Surah Al-Baqarah"
+    },
+    "tebve-128": {
+      "content": "Voorwaar, er is tot jullie een Boodschapper gekomen uit jullie midden. Zwaar valt hem wat jullie te beurt valt, bezorgd is hij over jullie, en voor de gelovigen is hij vol mededogen en barmhartig.",
+      "source": "Surah At-Tawbah"
+    },
+    "furkan-74": {
+      "content": "Onze Heer, schenk ons van onze echtgenoten en onze nakomelingen een verlichting van de ogen en maak ons een leider voor de vromen.",
+      "source": "Surah Al-Furqan"
+    },
+    "aliimran-173": {
+      "content": "Allah is voldoende voor ons, en Hij is de beste toeverlaat.",
+      "source": "Surah Ali Imran"
+    }
+  },
+  "esma": [
+    "De Enige God, die alle namen en eigenschappen van volmaaktheid verenigt.",
+    "De Meest Barmhartige, barmhartig voor al Zijn schepselen in deze wereld.",
+    "De Meest Genadevolle, in het bijzonder voor de gelovigen in het Hiernamaals.",
+    "De Koning, de Eigenaar van de heerschappij van het universum.",
+    "De Allerheiligste, vrij van elke onvolmaaktheid.",
+    "De Bron van Vrede, die veiligheid schenkt aan Zijn dienaren.",
+    "De Gever van Veiligheid en Geloof.",
+    "De Beschermer, die over alle dingen waakt en ze beschermt.",
+    "De Almachtige, door wie niemand kan worden overwonnen.",
+    "De Dwingeland, wiens wil altijd geschiedt.",
+    "De Verhevene in Grootheid.",
+    "De Schepper, die uit het niets tevoorschijn brengt.",
+    "De Ontwerper, die in volmaakte harmonie schept.",
+    "De Vormgever, die alles zijn vorm geeft.",
+    "De Altijd Vergevende, die zonden bedekt.",
+    "De Overwinnende, die over alles zegeviert.",
+    "De Schenker, die vrij en overvloedig geeft.",
+    "De Voorziener van levensonderhoud voor iedereen.",
+    "De Opener, die tegenspoed wegneemt en de deuren van het goede opent.",
+    "De Alwetende.",
+    "De Tegenhouder, die de voorziening beperkt zoals Hij wil.",
+    "De Verruimer, die de voorziening uitbreidt zoals Hij wil.",
+    "De Verneder, die verlaagt wie hij wil.",
+    "De Verheffer, die verheft wie Hij wil.",
+    "De Gever van Eer.",
+    "De Gever van Ontering.",
+    "De Alhorende.",
+    "De Alziende.",
+    "De Rechter, wiens vonnis definitief is.",
+    "De Volkomen Rechtvaardige.",
+    "De Subtiele en Vriendelijke, die de fijnste details kent.",
+    "De Alwetende van het verborgene.",
+    "De Verdraagzame, zachtmoedig met Zijn schepping.",
+    "De Prachtige, boven alle begrip.",
+    "De Meest Vergevende.",
+    "De Waarderende, die kleine daden rijkelijk beloont.",
+    "De Allerhoogste.",
+    "De Allergröte.",
+    "De behoeder, die alle dingen beschermt.",
+    "De Onderhouder, die voeding geeft aan allen.",
+    "De Rekenschapgever, die rekening houdt met Zijn dienaren.",
+    "De Majesteitelijke.",
+    "De Meest Vrijgevige.",
+    "De Waakzame, die op elk moment alles overziet.",
+    "De Beantwoorder, die gebeden verhoort.",
+    "De Alomvattende in kennis, barmhartigheid en macht.",
+    "De Alwijze.",
+    "De Meest Liefhebbende.",
+    "De Meest Glorieuze.",
+    "De Opwekker van de doden.",
+    "De Getuige, overal aanwezig.",
+    "De Waarheid, de Werkelijkheid.",
+    "De Vertrouweling, die de zaken van Zijn dienaren het best regelt.",
+    "De Allesterke.",
+    "De Standvastige, wiens macht onwankelbaar is.",
+    "De Beschermende Vriend van de gelovigen.",
+    "De Geprezene.",
+    "De Teller, die het aantal van alle dingen kent.",
+    "De Oorsprong, die de schepping begint.",
+    "De Hersteller, die weer tot leven brengt.",
+    "De Gever van Leven.",
+    "De Doodsbrenge.",
+    "De Altijd Levende.",
+    "De Zelfstandige Onderhouder van alles.",
+    "De Vinder, die niets ontbreekt.",
+    "De Edele, overvloedig in vrijgevigheid.",
+    "De Enige, uniek in wezen en eigenschappen.",
+    "De Eeuwige Toevlucht, van wie allen afhankelijk zijn.",
+    "De Alvermogenhebbende.",
+    "De Almachtige, die beschikt overreid wie macht heeft.",
+    "De Verhaastende, die naar voren brengt wie Hij wil.",
+    "De Vertragende, die tegenhoudt wie Hij wil.",
+    "De Eerste, zonder begin.",
+    "De Laatste, die overblijft nadat alles vergaat.",
+    "De Duidelijke, kenbaar door Zijn tekenen.",
+    "De Verborgene, wiens wezen onzichtbaar is.",
+    "De Beheerder, die alleen het universum bestuurt.",
+    "De Allerhoogste.",
+    "De Bron van Goedheid.",
+    "De Aanvaarder van Berouw.",
+    "De Wreker, die onrechtplegers rechtvaardig straft.",
+    "De Vergevensgezinde.",
+    "De Meest Vriendelijke en Medelevende.",
+    "De Eeuwige Eigenaar van alle heerschappij.",
+    "De Heer van Majesteit en Vrijgevigheid.",
+    "De Rechtvaardige, die alle dingen met gerechtigheid doet.",
+    "De Verzamelaar, die verzamelt wat Hij wil wanneer Hij wil.",
+    "De Bevoorrechte, de Oneindig Rijke.",
+    "De Verrijker.",
+    "De Verhinderaar, die inhoudt wat Hij niet wil.",
+    "De Schepper van schadelijkheid (als beproeving).",
+    "De Schepper van nut.",
+    "De Licht, dat de werelden verlicht.",
+    "De Gids naar het rechte pad.",
+    "De Onvergelijkbare Oorsprong van schoonheid.",
+    "De Eeuwige.",
+    "De Erfgenaam, de uiteindelijke Eigenaar van alles.",
+    "De Leidsman naar de Juistheid, wiens zaken volmaakt geleid zijn.",
+    "De Meest Geduldige, die de bestraffing niet overhaast."
+  ]
+}

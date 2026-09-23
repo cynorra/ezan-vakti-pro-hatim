@@ -413,7 +413,7 @@ export default function HomeScreen() {
           </View>
           
           <View style={styles.wisdomBody}>
-            {dailyWisdom.arabic && (
+            {dailyWisdom.arabic && dailyWisdom.arabic !== dailyWisdom.content && (
               <Text style={[styles.arabicText, { color: colors.primary }]}>
                 {dailyWisdom.arabic}
               </Text>
@@ -446,9 +446,11 @@ export default function HomeScreen() {
             <Text style={[styles.arabicText, { color: colors.primary }]}>
               {dailyDua.arabic}
             </Text>
-            <Text style={[styles.wisdomContent, { color: colors.text }]}>
-              "{dailyDua.turkish}"
-            </Text>
+            {dailyDua.turkish ? (
+              <Text style={[styles.wisdomContent, { color: colors.text }]}>
+                "{dailyDua.turkish}"
+              </Text>
+            ) : null}
             <Text style={[styles.wisdomSource, { color: colors.textSecondary }]}>
               — {dailyDua.source}
             </Text>

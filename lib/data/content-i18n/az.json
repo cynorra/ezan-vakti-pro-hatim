@@ -1,0 +1,358 @@
+{
+  "duas": {
+    "morning-1": {
+      "title": "Səhər duası",
+      "meaning": "Allahım, Səninlə səhərə çıxdıq, Səninlə axşama çatdıq, Səninlə yaşayırıq, Səninlə ölürük və dönüş Sünədir.",
+      "source": "Tirmizi"
+    },
+    "protection-1": {
+      "title": "Qorunmaq üçün dua",
+      "meaning": "Elə bir Allahın adı ilə ki, Onun adı ilə yerdə və göydə heç bir şey zərər verə bilməz. O, Eşidəndir, Biləndir.",
+      "source": "Əbu Davud"
+    },
+    "forgiveness-1": {
+      "title": "Bağışlanma diləmək",
+      "meaning": "Həmyaşayan, hər şeyi qoruyub idarə edən Böyük Allahdan bağışlanma diləyirəm, Ondan başqa məbud yoxdur və mən Ona tövbə edirəm.",
+      "source": "Tirmizi"
+    },
+    "gratitude-1": {
+      "title": "Şükür duası",
+      "meaning": "Bizi yedirən, içirən, ehtiyacımızı ödəyən və bizə sığınacaq verən Allaha həmd olsun.",
+      "source": "Muslim"
+    },
+    "evening-1": {
+      "title": "Axşam duası",
+      "meaning": "Allahım, Səndən bu gecənin xeyrini və onda olan xeyirləri diləyirəm, onun şərrindən və onda olan şərrlərdən Sənə sığınıram.",
+      "source": "Əbu Davud"
+    },
+    "sleep-1": {
+      "title": "Yuxudan əvvəl",
+      "meaning": "Allahım, Sənin adınla ölürəm və dirilirəm.",
+      "source": "Buxari"
+    },
+    "wakeup-1": {
+      "title": "Yuxudan oyanarkən",
+      "meaning": "Bizi öldүkdən sonra dirildən Allaha həmd olsun, dönüş Ona aiddir.",
+      "source": "Buxari"
+    },
+    "stress-1": {
+      "title": "Sıxıntıda edilən dua",
+      "meaning": "Səndən başqa məbud yoxdur. Sən pak və müqəddəssən. Həqiqətən, mən zalımlardan olmuşam.",
+      "source": "Tirmizi"
+    },
+    "travel-1": {
+      "title": "Səfər duası",
+      "meaning": "Bunu bizə ram edən Allah pak və müqəddəsdir, yoxsa biz bunu öz gücümüzlə edə bilməzdik. Həqiqətən, biz Rəbbimizə qayıdacağıq.",
+      "source": "Tirmizi"
+    },
+    "health-1": {
+      "title": "Sağlamlıq üçün dua",
+      "meaning": "Allahım, bədənimə sağlamlıq ver. Allahım, qulağımıza sağlamlıq ver. Allahım, gözümə sağlamlıq ver.",
+      "source": "Əbu Davud"
+    },
+    "knowledge-1": {
+      "title": "Elm üçün dua",
+      "meaning": "Ey Rəbbim, elmimi artır.",
+      "source": "Taha surəsi, 20:114"
+    },
+    "guidance-1": {
+      "title": "Hidayət duası",
+      "meaning": "Allahım, məni hidayət et və düz yolda sabit qərar qıl.",
+      "source": "Muslim"
+    },
+    "patience-1": {
+      "title": "Səbir üçün dua",
+      "meaning": "Ey Rəbbimiz, bizə səbir tök və qədəmlərimizi möhkəmlət.",
+      "source": "Bəqərə surəsi, 2:250"
+    },
+    "food-1": {
+      "title": "Yeməkdən əvvəl",
+      "meaning": "Allahım, bizə ruzi olaraq verdiklərini bərəkətli et və bizi Cəhənnəm əzabından qoru. Allahın adı ilə.",
+      "source": "İbn Majə"
+    },
+    "parents-1": {
+      "title": "Valideynlər üçün dua",
+      "meaning": "Ey Rəbbim, onlar məni körpəliyimdə tərbiyə edib böyütdükləri kimi, Sən də onlara rəhm et.",
+      "source": "İsra surəsi, 17:24"
+    },
+    "success-1": {
+      "title": "Uğur üçün dua",
+      "meaning": "Ey Rəbbim, ürəyimi genləşdər və işimi mənə asanlaşdır.",
+      "source": "Taha surəsi, 20:25-26"
+    },
+    "anger-1": {
+      "title": "Qəzəblənərkən",
+      "meaning": "Lənətlənmiş şeytandan Allaha sığınıram.",
+      "source": "Buxari"
+    },
+    "mosque-1": {
+      "title": "Məscidə daxil olarkən",
+      "meaning": "Allahım, mənə mərhəmət qapılarını aç.",
+      "source": "Muslim"
+    },
+    "mosque-2": {
+      "title": "Məsciddən çıxarkən",
+      "meaning": "Allahım, Səndən lütfünü diləyirəm.",
+      "source": "Muslim"
+    },
+    "rain-1": {
+      "title": "Yağış yağarkən",
+      "meaning": "Allahım, bunu faydalı yağış et.",
+      "source": "Buxari"
+    },
+    "fear-1": {
+      "title": "Qorxu zamanı dua",
+      "meaning": "Allah mənə yetər. Ondan başqa məbud yoxdur. Ona təvəkkül etdim, O, Əzəmətli Ərşin Rəbbidir.",
+      "source": "Əbu Davud"
+    },
+    "exam-1": {
+      "title": "İmtahandan əvvəl dua",
+      "meaning": "Ey Rəbbim, elmimi və anlayışımı artır, məni salehlərə qovuşdur.",
+      "source": "Taha surəsi, 20:114 əsasən"
+    },
+    "illness-1": {
+      "title": "Şəfa duası",
+      "meaning": "Ey insanların Rəbbi, zərəri uzaqlaşdır və şəfa ver, şəfa verən Sənsən. Sənin şəfandan başqa şəfa yoxdur, elə bir şəfa ver ki, heç bir xəstəlik izi qoymasın.",
+      "source": "Buxari"
+    },
+    "debt-1": {
+      "title": "Borcdan qurtulmaq üçün",
+      "meaning": "Allahım, qəm-qüssədən, acizlikdən və tənbəllikdən, xəsislikdən və qorxaqlıqdan, borc yükündən və insanların məni üstələməsindən Sənə sığınıram.",
+      "source": "Buxari"
+    },
+    "repentance-1": {
+      "title": "İstiğfarın şahı",
+      "meaning": "Allahım, Sən mənim Rəbbimsən. Səndən başqa məbud yoxdur. Məni Sən yaratdın və mən Sənin qulunam. Gücüm çatan qədər Sənin əhdinə və vədinə sadiqəm.",
+      "source": "Buxari"
+    }
+  },
+  "wisdom": {
+    "1": {
+      "content": "Rəbbin dedi: Mənə dua edin, Mən də sizə cavab verim.",
+      "source": "Mömin surəsi, 40:60"
+    },
+    "2": {
+      "content": "Əməllər niyyətlərə görədir və hər kəsə niyyət etdiyi veriləcəkdir.",
+      "source": "Buxari, 1"
+    },
+    "3": {
+      "content": "Həqiqətən, hər çətinliklə birlikdə bir asanlıq vardır.",
+      "source": "İnshirah surəsi, 94:5"
+    },
+    "4": {
+      "content": "Sizin ən xeyriniz Quranı öyrənən və öyrədənlərdir.",
+      "source": "Buxari, 5027"
+    },
+    "5": {
+      "content": "Allah hər kəsə yalnız gücü çatan qədər yük yüklər.",
+      "source": "Bəqərə surəsi, 2:286"
+    },
+    "6": {
+      "content": "Asanlaşdırın, çətinləşdirməyin, müjdələyin, nifrət etdirməyin.",
+      "source": "Buxari, 69"
+    },
+    "7": {
+      "content": "Həqiqətən, Allah səbir edənlərlədir.",
+      "source": "Bəqərə surəsi, 2:153"
+    },
+    "8": {
+      "content": "Dünya sevgisi hər bir xətanın köküdür.",
+      "source": "Bəyəhəqi, Şüəb ül-İman"
+    },
+    "9": {
+      "content": "Bilin ki, qəlblər yalnız Allahı zikr etməklə aram tapır.",
+      "source": "Rəd surəsi, 13:28"
+    },
+    "10": {
+      "content": "Kim bir xeyirə vəhdət edərsə, ona o xeyri edənin qədər savab vardır.",
+      "source": "Muslim, 1893"
+    },
+    "11": {
+      "content": "İnsana yalnız öz çalışdığı qismət olar.",
+      "source": "Nəcm surəsi, 53:39"
+    },
+    "12": {
+      "content": "İnsanların ən xeyirlisi başqalarına faydalı olandır.",
+      "source": "Təbərani, əl-Mücəm əl-Övsət"
+    },
+    "13": {
+      "content": "Hansınızın əməlcə daha gözəl olduğunu sınamaq üçün ölümü və həyatı yaradan Odur.",
+      "source": "Mülk surəsi, 67:2"
+    },
+    "14": {
+      "content": "Təmizlik imanın yarısıdır.",
+      "source": "Muslim, 223"
+    },
+    "15": {
+      "content": "Həqiqətən, Allah yanında ən hörmətli olanınız ən təqvalı olanınızdır.",
+      "source": "Hücurat surəsi, 49:13"
+    }
+  },
+  "verses": {
+    "isra-82": {
+      "content": "Biz Qurandan möminlər üçün şəfa və mərhəmət olan şeylər nazil edirik.",
+      "source": "İsra surəsi"
+    },
+    "rad-28": {
+      "content": "Bilin ki, qəlblər yalnız Allahı zikr etməklə aram tapır.",
+      "source": "Rəd surəsi"
+    },
+    "insirah-5-6": {
+      "content": "Həqiqətən, hər çətinliklə birlikdə bir asanlıq vardır. Həqiqətən, hər çətinliklə birlikdə bir asanlıq vardır.",
+      "source": "İnshirah surəsi"
+    },
+    "mumin-60": {
+      "content": "Rəbbiniz dedi: Mənə dua edin, Mən də sizə cavab verim.",
+      "source": "Mömin surəsi"
+    },
+    "duha-3": {
+      "content": "Rəbbin səni tərk etmədi və sənə darılmadı da.",
+      "source": "Zöha surəsi"
+    },
+    "bakara-286": {
+      "content": "Allah hər kəsə yalnız gücü çatan qədər yük yüklər.",
+      "source": "Bəqərə surəsi"
+    },
+    "taha-114": {
+      "content": "De: \"Ey Rəbbim, elmimi artır!\"",
+      "source": "Taha surəsi"
+    },
+    "zumer-53": {
+      "content": "De: \"Ey mənim özlərinə qarşı həddi aşmış qullarım! Allahın rəhmətindən ümidinizi üzməyin.\"",
+      "source": "Zümər surəsi"
+    },
+    "yunus-57": {
+      "content": "Ey insanlar! Sizə Rəbbinizdən bir öyüd-nəsihət, qəlblərdə olanlara bir şəfa, möminlərə hidayət və mərhəmət gəlmişdir.",
+      "source": "Yunus surəsi"
+    },
+    "suara-80": {
+      "content": "Xəstələndiyim zaman mənə şəfa verən Odur.",
+      "source": "Şüəra surəsi"
+    },
+    "talak-3": {
+      "content": "Kim Allaha təvəkkül edərsə, Ona Allah yetər.",
+      "source": "Təlaq surəsi"
+    },
+    "fussilet-44": {
+      "content": "De: \"O, iman gətirənlərə hidayət və şəfadır.\"",
+      "source": "Fussilət surəsi"
+    },
+    "bakara-186": {
+      "content": "Qullarım səndən mənim barəmdə soruşsalar, Mən həqiqətən yaxınam. Dua edən Məni çağıranda onun duasına cavab verərəm.",
+      "source": "Bəqərə surəsi"
+    },
+    "tebve-128": {
+      "content": "Sizə özünüzdən elə bir Elçi gəlmişdir ki, sizin əziyyət çəkməniz ona ağır gəlir, o sizə çox bağlandır, möminlərə qarşı şəfqətlidir, rəhmlidir.",
+      "source": "Tövbə surəsi"
+    },
+    "furkan-74": {
+      "content": "Ey Rəbbimiz! Bizə gözümüzün aydınlığı olan zövcələr və övladlar bəxş et və bizi müttəqilərə imam et.",
+      "source": "Fürqan surəsi"
+    },
+    "aliimran-173": {
+      "content": "Allah bizə yetər, O nə gözəl vəkildir.",
+      "source": "Ali İmran surəsi"
+    }
+  },
+  "esma": [
+    "Bütün kamal sifətlərini və gözəl adları özündə birləşdirən tək Allah.",
+    "Bu dünyada bütün məxluqata rəhm edən Mərhəmətli.",
+    "Axirətdə yalnız möminlərə rəhm edən Rəhmli.",
+    "Kainatın mülkünün yeganə sahib olan Padşah.",
+    "Hər cür nöqsan və əskiklikdən uzaq olan Müqəddəs.",
+    "Qullarına əmin-amanlıq bəxş edən Sülh və Əmin-amanlıq Mənbəyi.",
+    "İnam və əmin-amanlıq verən.",
+    "Hər şeyi qoruyan və izləyən Hami.",
+    "Heç bir şeyin məğlub edə bilmədiyi Qüdrətli.",
+    "Hökmünü hər zaman yeridən, istədiyini məcbur edən.",
+    "Əzəmət və böyüklük sahibi.",
+    "Hər şeyi yoxdan var edən Yaradıcı.",
+    "Hər şeyi ən gözəl uyğunluqla yaradan.",
+    "Hər şeyə surət və forma verən.",
+    "Günahları örtən və bağışlayan.",
+    "Hər şeyə qalib gələn və tabe edən.",
+    "Səxavətlə bol-bol bəxş edən.",
+    "Bütün məxluqata ruzi verən.",
+    "Çətinlikləri aradan qaldıran, xeyir qapılarını açan.",
+    "Hər şeyi bilən.",
+    "İstədiyi ruzini daraldan.",
+    "İstədiyi ruzini bolluca verən.",
+    "İstədiyini alçaldan.",
+    "İstədiyini ucaldan.",
+    "İstədiyinə izzət və şərəf verən.",
+    "İstədiyini zəlil edən.",
+    "Hər şeyi eşidən.",
+    "Hər şeyi görən.",
+    "Hökmü qəti olan Hakim.",
+    "Ədalətli.",
+    "Ən incə işləri, gizli məqamları bilən Lütfkar.",
+    "Hər şeydən xəbərdar olan.",
+    "Məxluqata qarşı təmkinli və səbirli.",
+    "Əzəmətli, idrak edilməyəcək dərəcədə uca.",
+    "Çox bağışlayan.",
+    "Az əmələ çox mükafat verən.",
+    "Hər şeydən uca olan.",
+    "Pərvərdigar, Pek Böyük.",
+    "Hər şeyi qoruyub saxlayan.",
+    "Hər kəsin ruzisini verən.",
+    "Qulları hesaba çəkən.",
+    "Möhtəşəm, əzəmət sahibi.",
+    "Çox səxavətli və kərim.",
+    "Hər an hər şeyi nəzarət altında saxlayan.",
+    "Dualara cavab verən.",
+    "Elmi, mərhəməti və qüdrəti ilə hər şeyi əhatə edən.",
+    "Hər işi hikmətli olan.",
+    "Çox sevən.",
+    "Şanlı və uca.",
+    "Ölüləri dirildən.",
+    "Hər yerdə hazır və nazir olan Şahid.",
+    "Haqq, Gerçək olan.",
+    "Qulların işlərini ən gözəl şəkildə yoluna qoyan Vəkil.",
+    "Hər şeyə gücü çatan Qüvvətli.",
+    "Qüdrəti sarsılmaz olan Möhkəm.",
+    "Möminlərin dostu və hami.",
+    "Həmdə layiq olan.",
+    "Hər şeyin sayını bilən.",
+    "Kainatı nümunəsiz yaradan.",
+    "Ölənləri yenidən həyata qaytaran.",
+    "Həyat və can bəxş edən.",
+    "Ölüm verən.",
+    "Həmişə diri olan.",
+    "Hər şeyi qaim edən və idarə edən.",
+    "Heç bir şeyi əskik olmayan, istədiyini tapan.",
+    "Kərim, şərəfli və comərd.",
+    "Zatında, sifətlərində və feli işlərində tək olan.",
+    "Hər şeyin möhtac olduğu, özünün heç kəsə ehtiyacı olmayan Pənahgah.",
+    "Hər şeyə qadir.",
+    "İstədiyi hər şeyi edən Qüdrət sahiblərinə hakim.",
+    "İstədiyini irəli çəkən.",
+    "İstədiyini geridə saxlayan.",
+    "Əvvəli olmayan.",
+    "Hər şey məhv olduqdan sonra qalan Son.",
+    "Əlamətləri ilə aşkar olan.",
+    "Zatı gözlərdən gizli olan.",
+    "Kainatı təkbaşına idarə edən Rəhbər.",
+    "Hər şeydən uca olan.",
+    "Bütün xeyirlərin mənbəyi.",
+    "Tövbələri qəbul edən.",
+    "Zalımlardan ədalətlə intiqam alan.",
+    "Günahları bağışlayan, əfv edən.",
+    "Çox şəfqətli və mərhəmətli.",
+    "Bütün mülkün əbədi sahibi.",
+    "Əzəmət və kəramət sahibi.",
+    "Hər şeyi ədalətlə edən.",
+    "İstədiyini istədiyi yerdə və vaxtda bir araya toplayan.",
+    "Hər şeydən müstəğni, sonsuz sərvət sahibi.",
+    "İstədiyini zənginləşdirən.",
+    "İstəmədiyi şeyin baş verməsinə mane olan.",
+    "Zərər (imtahan üçün) yaradan.",
+    "Xeyir və mənfəət yaradan.",
+    "Aləmləri nurlandıran İşıq.",
+    "Düz yola yönəldən Hidayət verici.",
+    "Bənzərsiz gözəlliklər yaradan.",
+    "Əbədi olan.",
+    "Hər şeyin əsl və yeganə varisi.",
+    "Hər işi doğru yola yönəldən Rəhbər.",
+    "Cəza verməkdə tələsməyən, çox səbirli."
+  ]
+}

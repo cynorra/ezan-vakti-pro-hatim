@@ -1,4 +1,4 @@
-import { contentLanguage, verseTranslations } from './content-translations';
+import { baseLanguage, contentLanguage, contentPack, verseTranslations } from './content-translations';
 
 export interface QuranVerse {
   id: string;
@@ -145,7 +145,9 @@ export function localizeVerse(verse: QuranVerse, language: string): { text: stri
   const lang = contentLanguage(language);
   const translation = verseTranslations[verse.id];
   if (lang === 'tr' || !translation) return { text: verse.turkish, surah: verse.surah };
-  return { text: translation[lang].content, surah: translation[lang].source };
+  const localized = contentPack(language)?.verses[verse.id] ?? translation[lang];
+  if (baseLanguage(language) === 'ar' && verse.arabic) return { text: verse.arabic, surah: localized.source };
+  return { text: localized.content, surah: localized.source };
 }
 
 export function getDailyHealingVerse(date: Date = new Date()): QuranVerse {

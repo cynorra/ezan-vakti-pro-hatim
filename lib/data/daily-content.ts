@@ -1,4 +1,4 @@
-import { contentLanguage, wisdomTranslations } from './content-translations';
+import { baseLanguage, contentLanguage, contentPack, wisdomTranslations } from './content-translations';
 
 export interface DailyWisdom {
   id: string;
@@ -120,7 +120,10 @@ export function localizeWisdom(wisdom: DailyWisdom, language: string): DailyWisd
   const lang = contentLanguage(language);
   const translation = wisdomTranslations[wisdom.id];
   if (lang === 'tr' || !translation) return wisdom;
-  return { ...wisdom, ...translation[lang] };
+  const localized = contentPack(language)?.wisdom[wisdom.id] ?? translation[lang];
+  // For Arabic, the original text is the content itself.
+  if (baseLanguage(language) === 'ar' && wisdom.arabic) return { ...wisdom, content: wisdom.arabic, source: localized.source };
+  return { ...wisdom, ...localized };
 }
 
 export function getDailyWisdom(): DailyWisdom {

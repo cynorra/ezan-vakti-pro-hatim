@@ -119,11 +119,15 @@ export default function DuaScreen() {
               {duaOfTheDay.title}
             </Text>
             <Text style={[styles.arabicText, { color: colors.primary }]}>{duaOfTheDay.arabic}</Text>
-            <Text style={[styles.contentText, { color: colors.text }]}>{duaOfTheDay.transliteration}</Text>
-            <View style={[styles.translationBox, { backgroundColor: colors.background }]}>
-              <Text style={[styles.translationLabel, { color: colors.primary }]}>{t('dua.meaningLabel')}</Text>
-              <Text style={[styles.translationText, { color: colors.textSecondary }]}>{duaOfTheDay.turkish}</Text>
-            </View>
+            {duaOfTheDay.transliteration ? (
+              <Text style={[styles.contentText, { color: colors.text }]}>{duaOfTheDay.transliteration}</Text>
+            ) : null}
+            {duaOfTheDay.turkish ? (
+              <View style={[styles.translationBox, { backgroundColor: colors.background }]}>
+                <Text style={[styles.translationLabel, { color: colors.primary }]}>{t('dua.meaningLabel')}</Text>
+                <Text style={[styles.translationText, { color: colors.textSecondary }]}>{duaOfTheDay.turkish}</Text>
+              </View>
+            ) : null}
             <View style={styles.duaFooter}>
               <Text style={[styles.sourceText, { color: colors.textMuted }]}>{duaOfTheDay.source}</Text>
               <View style={{ flexDirection: 'row', gap: 8 }}>

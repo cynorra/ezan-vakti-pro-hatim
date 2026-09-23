@@ -1,12 +1,27 @@
 // Non-Turkish texts for the daily verse/hadith card (daily-content.ts) and the
 // healing-verse notifications (quran-verses.ts). Other languages fall back to English.
 
+import { contentPacks, ContentPack } from './content-i18n';
+
 export type ContentLanguage = 'en' | 'id' | 'ms';
 
+/** Languages written in Arabic script: the Latin transliteration is not shown there. */
+export const ARABIC_SCRIPT_LANGUAGES = new Set(['ar', 'fa', 'ur']);
+
+export function baseLanguage(language: string): string {
+  return language.split('-')[0];
+}
+
+/** 'tr' (original data), a hand-written language (en/id/ms), or 'en' as fallback. */
 export function contentLanguage(language: string): ContentLanguage | 'tr' {
-  const lang = language.split('-')[0];
+  const lang = baseLanguage(language);
   if (lang === 'tr') return 'tr';
   return lang === 'id' || lang === 'ms' ? lang : 'en';
+}
+
+/** Machine-translated pack (scripts/content-translate.mjs) for other app languages. */
+export function contentPack(language: string): ContentPack | undefined {
+  return contentPacks[baseLanguage(language)];
 }
 
 type Localized = Record<ContentLanguage, { content: string; source: string }>;

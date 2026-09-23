@@ -1,0 +1,358 @@
+{
+  "duas": {
+    "morning-1": {
+      "title": "Morgonbön",
+      "meaning": "O Allah, genom Dig går vi in i morgonen och genom Dig går vi in i kvällen, genom Dig lever vi och genom Dig dör vi, och till Dig är uppståndelsen.",
+      "source": "Tirmidhi"
+    },
+    "protection-1": {
+      "title": "Bön om beskydd",
+      "meaning": "I Allahs namn, med vars namn inget på jorden eller i himlarna kan skada, och Han är Den som hör allt, Den som vet allt.",
+      "source": "Abu Dawud"
+    },
+    "forgiveness-1": {
+      "title": "Bön om förlåtelse",
+      "meaning": "Jag söker förlåtelse hos Allah den Allsmäktige, utom vilken det inte finns någon gud, Den Evigt Levande, Uppehållaren av allt, och jag ångrar mig inför Honom.",
+      "source": "Tirmidhi"
+    },
+    "gratitude-1": {
+      "title": "Tacksägelsebön",
+      "meaning": "Lov prisad vare Allah som har gett oss mat, gett oss att dricka, gett oss det vi behöver och gett oss skydd.",
+      "source": "Muslim"
+    },
+    "evening-1": {
+      "title": "Kvällsbön",
+      "meaning": "O Allah, jag ber Dig om det goda denna natt och det goda i det den innehåller, och jag söker skydd hos Dig mot dess onda och det onda i det den innehåller.",
+      "source": "Abu Dawud"
+    },
+    "sleep-1": {
+      "title": "Före sömnen",
+      "meaning": "I Ditt namn, O Allah, dör jag och lever jag.",
+      "source": "Bukhari"
+    },
+    "wakeup-1": {
+      "title": "Vid uppvaknandet",
+      "meaning": "Lov prisad vare Allah som gav oss liv efter att Han låtit oss dö, och till Dig är uppståndelsen.",
+      "source": "Bukhari"
+    },
+    "stress-1": {
+      "title": "Bön vid svårighet och nöd",
+      "meaning": "Det finns ingen gud utom Du. Ära vare Dig. Sannerligen har jag hört till dem som har begått orätt.",
+      "source": "Tirmidhi"
+    },
+    "travel-1": {
+      "title": "Resebön",
+      "meaning": "Ära vare Honom som har underställt oss detta, då vi inte själva kunde ha förmått det. Och sannerligen, till vår Herre skall vi sannerligen vända tillbaka.",
+      "source": "Tirmidhi"
+    },
+    "health-1": {
+      "title": "Bön om hälsa",
+      "meaning": "O Allah, skänk mig hälsa i min kropp. O Allah, skänk mig hälsa i min hörsel. O Allah, skänk mig hälsa i min syn.",
+      "source": "Abu Dawud"
+    },
+    "knowledge-1": {
+      "title": "Bön om kunskap",
+      "meaning": "Min Herre, öka min kunskap.",
+      "source": "Surah Taha, 20:114"
+    },
+    "guidance-1": {
+      "title": "Bön om vägledning",
+      "meaning": "O Allah, vägled mig och håll mig på den raka stigen.",
+      "source": "Muslim"
+    },
+    "patience-1": {
+      "title": "Bön om tålamod",
+      "meaning": "Vår Herre, utgjut tålamod över oss och gör våra steg fasta.",
+      "source": "Surah Al-Baqarah, 2:250"
+    },
+    "food-1": {
+      "title": "Före måltiden",
+      "meaning": "O Allah, välsigna det Du har försett oss med och skydda oss från Eldens straff. I Allahs namn.",
+      "source": "Ibn Majah"
+    },
+    "parents-1": {
+      "title": "Bön för föräldrarna",
+      "meaning": "Min Herre, visa dem barmhärtighet så som de uppfostrade mig när jag var liten.",
+      "source": "Surah Al-Isra, 17:24"
+    },
+    "success-1": {
+      "title": "Bön om framgång",
+      "meaning": "Min Herre, vidga mitt bröst och gör min uppgift lätt för mig.",
+      "source": "Surah Taha, 20:25-26"
+    },
+    "anger-1": {
+      "title": "Vid ilska",
+      "meaning": "Jag söker skydd hos Allah från Satan, den steningarna tillhörige / den utstötte.",
+      "source": "Bukhari"
+    },
+    "mosque-1": {
+      "title": "Vid inträde i moskén",
+      "meaning": "O Allah, öppna dörrarna till Din barmhärtighet för mig.",
+      "source": "Muslim"
+    },
+    "mosque-2": {
+      "title": "När man lämnar moskén",
+      "meaning": "O Allah, jag ber Dig om Din ynnest.",
+      "source": "Muslim"
+    },
+    "rain-1": {
+      "title": "När det regnar",
+      "meaning": "O Allah, gör det till ett välgörande regn.",
+      "source": "Bukhari"
+    },
+    "fear-1": {
+      "title": "Bön vid rädsla",
+      "meaning": "Allah räcker för mig. Det finns ingen gud utom Han. Till Honom sätter jag min lit, och Han är den Mäktiga Tronens Herre.",
+      "source": "Abu Dawud"
+    },
+    "exam-1": {
+      "title": "Bön före en tentamen",
+      "meaning": "Min Herre, öka mig i kunskap och förståelse, och förena mig med de rättfärdiga.",
+      "source": "Baserat på Surah Taha, 20:114"
+    },
+    "illness-1": {
+      "title": "Bön om bot",
+      "meaning": "Tag bort det onda, Människornas Herre, och helga, för Du är Botaren. Det finns ingen bot förutom Din bot, en bot som inte lämnar någon sjukdom efter sig.",
+      "source": "Bukhari"
+    },
+    "debt-1": {
+      "title": "Befrielse från skuld",
+      "meaning": "O Allah, jag söker skydd hos Dig mot oro och sorg, mot kraftlöshet och lathet, mot snålhet och feghet, mot skuldbördan och att bli övermannad av människor.",
+      "source": "Bukhari"
+    },
+    "repentance-1": {
+      "title": "Bön om förlåtelsens mästare",
+      "meaning": "O Allah, Du är min Herre. Det finns ingen gud utom Du. Du skapade mig och jag är Din tjänare, och jag håller fast vid Ditt förbund och Dina löften så gott jag förmår.",
+      "source": "Bukhari"
+    }
+  },
+  "wisdom": {
+    "1": {
+      "content": "Er Herre har sagt: Anropa Mig, Jag skall besvara er.",
+      "source": "Surah Ghafir, 40:60"
+    },
+    "2": {
+      "content": "Handlingar värderas efter avsikter, och var och en skall få det som han avsett.",
+      "source": "Bukhari, 1"
+    },
+    "3": {
+      "content": "Sannerligen, med svårigheten kommer lättnad.",
+      "source": "Surah Ash-Sharh, 94:5"
+    },
+    "4": {
+      "content": "De bästa bland er är de som lärts sig Koranen och lär ut den.",
+      "source": "Bukhari, 5027"
+    },
+    "5": {
+      "content": "Allah belastar inte någon människa mer än hon förmår.",
+      "source": "Surah Al-Baqarah, 2:286"
+    },
+    "6": {
+      "content": "Gör det lätt och gör det inte svårt; bringa glada budskap och skräm inte bort människor.",
+      "source": "Bukhari, 69"
+    },
+    "7": {
+      "content": "Sannerligen, Allah är med dem som har tålamod.",
+      "source": "Surah Al-Baqarah, 2:153"
+    },
+    "8": {
+      "content": "Kärleken till denna värld är roten till allt ont.",
+      "source": "Bayhaqi, Shu'ab al-Iman"
+    },
+    "9": {
+      "content": "Sannerligen, i Allahs hågkomst finner hjärtan ro.",
+      "source": "Surah Ar-Ra'd, 13:28"
+    },
+    "10": {
+      "content": "Den som vägleder någon till något gott får en belöning lik den som utför det.",
+      "source": "Muslim, 1893"
+    },
+    "11": {
+      "content": "Människan skall inte få annat än det hon strävat efter.",
+      "source": "Surah An-Najm, 53:39"
+    },
+    "12": {
+      "content": "De bästa människorna är de som är till störst nytta för andra.",
+      "source": "Tabarani, al-Mu'jam al-Awsat"
+    },
+    "13": {
+      "content": "Han som har skapat döden och livet för att pröva vem av er som är bäst i handling.",
+      "source": "Surah Al-Mulk, 67:2"
+    },
+    "14": {
+      "content": "Renlighet är hälften av tron.",
+      "source": "Muslim, 223"
+    },
+    "15": {
+      "content": "Sannerligen, den som är den the bäste av er inför Allah är den som är mest gudfruktig.",
+      "source": "Surah Al-Hujurat, 49:13"
+    }
+  },
+  "verses": {
+    "isra-82": {
+      "content": "Och Vi uppenbarar i Koranen det som är ett botemedel och en barmhärtighet för de troende.",
+      "source": "Surah Al-Isra"
+    },
+    "rad-28": {
+      "content": "Sannerligen, i Allahs hågkomst finner hjärtan ro och frid.",
+      "source": "Surah Ar-Ra'd"
+    },
+    "insirah-5-6": {
+      "content": "Sannerligen, med svårigheten kommer lättnad. Sannerligen, med svårigheten kommer lättnad.",
+      "source": "Surah Ash-Sharh"
+    },
+    "mumin-60": {
+      "content": "Er Herre har sagt: Anropa Mig, Jag skall besvara er.",
+      "source": "Surah Ghafir"
+    },
+    "duha-3": {
+      "content": "Din Herre har inte övergett dig och inte heller misshagats med dig.",
+      "source": "Surah Ad-Duha"
+    },
+    "bakara-286": {
+      "content": "Allah belastar inte någon människa mer än hon förmår.",
+      "source": "Surah Al-Baqarah"
+    },
+    "taha-114": {
+      "content": "Och säg: Min Herre, öka min kunskap.",
+      "source": "Surah Taha"
+    },
+    "zumer-53": {
+      "content": "Säg: Mina tjänare som har överträtt mot er själva, misströsta inte om Allahs barmhärtighet.",
+      "source": "Surah Az-Zumar"
+    },
+    "yunus-57": {
+      "content": "Människor! Nu har en maning nått er från er Herre och ett botemedel mot det som svider i bröstet, och vägledning och barmhärtighet för de troende.",
+      "source": "Surah Yunus"
+    },
+    "suara-80": {
+      "content": "Och när jag är sjuk, är det Han som botar mig.",
+      "source": "Surah Ash-Shu'ara"
+    },
+    "talak-3": {
+      "content": "Och den som sätter sin lit till Allah, för honom räcker Han.",
+      "source": "Surah At-Talaq"
+    },
+    "fussilet-44": {
+      "content": "Säg: För dem som tror är den vägledning och ett botemedel.",
+      "source": "Surah Fussilat"
+    },
+    "bakara-186": {
+      "content": "Och när Mina tjänare frågar dig om Mig, är Jag nära. Jag besvarar den bönfallandes bön när han anropar Mig.",
+      "source": "Surah Al-Baqarah"
+    },
+    "tebve-128": {
+      "content": "En Sändebud har sannerligen kommit till er ur er egen mitt. Tungt väger för honom det som plågar er; han ömmar för er och är öm och barmhärtig mot de troende.",
+      "source": "Surah At-Tawbah"
+    },
+    "furkan-74": {
+      "content": "Vår Herre, låt våra hustrur/männ och våra barn skänka oss glädje och gör oss till föredöme för de gudfruktiga.",
+      "source": "Surah Al-Furqan"
+    },
+    "aliimran-173": {
+      "content": "Allah räcker för oss och Belackaren är Han, den bäste beskyddare.",
+      "source": "Surah Ali Imran"
+    }
+  },
+  "esma": [
+    "Den Ende Guden, som förenar alla fullkomlighetens namn och egenskaper.",
+    "Den Barmhärtige, barmhärtig mot hela skapelsen i denna värld.",
+    "Den Ständigt Barmhärtige, i synnerhet mot de troende i Livet efter detta.",
+    "Konungen, herre över universums välde.",
+    "Den Allra Heligaste, fri från varje brist.",
+    "Fredens Källa, som skänker sina tjänare trygghet.",
+    "Givaren av trygghet och tro.",
+    "Väktaren, som vakar över och skyddar allt.",
+    "Den Allsmäktige, som inte kan besegras av någon.",
+    "Den Tvangsmässige / Den som tvingar sin vilja igenom, vars vilja alltid sker.",
+    "Den Höge i Storhet.",
+    "Skaparen, som frambringar ur intet.",
+    "Upphovsmannen, som skapar i fullkomlig harmoni.",
+    "Formaren, som ger allt dess gestalt.",
+    "Den Ständigt Förlåtande, som döljer synder.",
+    "Förgöraren / Den som betvingar, som råder över allt.",
+    "Givaren, som ger fritt och rikligt.",
+    "Försörjaren av allt som existerar.",
+    "Öppnaren, som avlägsnar svårigheter och öppnar det godas dörrar.",
+    "Den Allvetande.",
+    "Tillhållaren / Den som håller tillbaka, som begränsar sin försörjning som Han vill.",
+    "Utsträckaren, som utsträcker sin försörjning som Han vill.",
+    "Nedsänkaren, som förnedrar den Han vill.",
+    "Upphöjaren, som upphöjer den Han vill.",
+    "Givaren av ära.",
+    "Givaren av vanära.",
+    "Den som hör allt.",
+    "Den som ser allt.",
+    "Domaren, vars beslut är slutgiltigt.",
+    "Den Fullkomligt Rättvis.",
+    "Den Subtile och Gode, som känner till de finaste detaljerna.",
+    "Den Allseende / Den Allkunnige.",
+    "Den Överseende, mild mot sin skapelse.",
+    "Den Storslagne, som övergår allt förstånd.",
+    "Den Allförlåtande.",
+    "Den Uppskattande, som rikligt belönar små handlingar.",
+    "Den Högste.",
+    "Den Store.",
+    "Beskyddaren, som bevarar allting.",
+    "Underhållaren, som ger näring åt allt.",
+    "Räknaren, som ställer sina tjänare till svars.",
+    "Den Majestätiske.",
+    "Den Mest Generöse.",
+    "Vakthavaren, som observerar allt i varje ögonblick.",
+    "Den som besvarar böner.",
+    "Den Allomfattande i kunskap, barmhärtighet och makt.",
+    "Den Allvise.",
+    "Den Mest Kärleksfulle.",
+    "Den Högtlovade.",
+    "Uppväckaren av de döda.",
+    "Vittnet, närvarande överallt.",
+    "Sanningen, den Verklige.",
+    "Förvaltaren, som ordnar sina tjänares affärer på bästa sätt.",
+    "Den Allra Starkaste.",
+    "Den Fastleende / Den Oaggregerade, vars makt är orubblig.",
+    "De troendes Beskyddande Vän.",
+    "Den Prisvärde.",
+    "Räknaren, som känner till antalet av allt.",
+    "Ursprunget, som inleder skapelsen.",
+    "Återställaren, som återför till livet.",
+    "Livgivaren.",
+    "Dödsbringaren.",
+    "Den Evigt Levande.",
+    "Den Självexisterande Upphållaren av allt.",
+    "Hittaren, som inte saknar någonting.",
+    "Den Ädle, rik på generositet.",
+    "Den Ende, unik till väsen och egenskaper.",
+    "Den Eviga Tillflykten, som allt är beroende av.",
+    "Den Allsmäktige.",
+    "Den Allra Mäktigaste, som råder över alla mäktiga.",
+    "Framskyndaren, som för fram den Han vill.",
+    "Fördröjaren, som håller tillbaka den Han vill.",
+    "Den Förste, utan början.",
+    "Den Siste, som blir kvar sedan allt annat förgåtts.",
+    "Den Uppenbare, uppenbar genom sina tecken.",
+    "Den Dolde, vars väsen är osynligt.",
+    "Styraren, som ensam leder universum.",
+    "Den Upphöjaste.",
+    "Godhetens Källa.",
+    "Ångerns Mottagare.",
+    "Hämnaren, som med rättvisa straffar de orättfärdiga.",
+    "Förlåtaren.",
+    "Den Mest Vänlige och Barmhärtige.",
+    "Det eviga Ägandet av allt välde.",
+    "Herren över Majestät och Generositet.",
+    "Den Rättvisemätande, som gör allt med rättvisa.",
+    "Samlaren, som samlar vad Han vill när Han vill.",
+    "Den Självtillräcklige, den Oändligt Rike.",
+    "Givaren av rikedom.",
+    "Förhindraren, som håller tillbaka det Han inte vill.",
+    "Skaparen av skada (som en prövning).",
+    "Skaparen av nytta.",
+    "Ljuset, som upplyser världarna.",
+    "Vägledaren till den raka stigen.",
+    "Ursprunget till skönhet utan like.",
+    "Den Evige.",
+    "Arvingen, den slutgiltige Ägaren till allt.",
+    "Vägledaren till Rättfärdighet, vars rådslut är fullkomligt.",
+    "Den Tåligaste, som inte hastar med straffet."
+  ]
+}
