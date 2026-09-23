@@ -52,8 +52,6 @@
     "inviteShareMessage": "مشترکہ ختم قران \"{{title}}\" میں شامل ہوں، ایک پارہ لیں اور ساتھ مل کر قرآن پڑھیں 🕌📖\n\nاگر ایپ پہلے سے موجود ہے: {{deepLink}}\n\nاگر نہیں ہے تو ڈاؤنلوڈ کریں: {{playStore}}",
     "completionShareMessage": "🎉 الحمد للہ، میں نے پورے 30 پارے مکمل کر کے اپنا ختم مکمل کر لیا! 📖🕌\n\nیہ میرا ختم نمبر {{count}} ہے۔ آپ بھی آغاز کریں: {{playStore}}",
     "progressShareMessage": "📖 میں نے اس ہفتے {{completed}}/30 پارے مکمل کیے ہیں ({{percentage}}%)۔\n\nEzan Vakti + Hatim کے ساتھ اپنی پیش رفت درج کریں: {{playStore}}",
-    "rewardUnlocked": "🎁 زبردست! شیئر کرنے پر آپ کو {{days}} دن بغیر اشتہارات کے مل گئے ہیں۔",
-    "rewardBannerText": "{{days}} دن اشتہارات سے پاک ایپ کے لیے مزید {{count}} بار شیئر کریں 🎁",
     "juzCountShort": "پارہ"
   },
   "settings": {

@@ -52,8 +52,6 @@
     "inviteShareMessage": "\"{{title}}\" 공동 완독에 참여하여 주즈를 선택하고 함께 쿠란을 읽어보세요 🕌📖\n\n앱이 이미 있으신 경우: {{deepLink}}\n\n없으신 경우: {{playStore}}",
     "completionShareMessage": "🎉 30주즈를 모두 읽고 쿠란 완독을 마쳤습니다! 알함둘릴라 📖🕌\n\n나의 {{count}}번째 완독입니다. 여러분도 함께 시작해보세요: {{playStore}}",
     "progressShareMessage": "📖 이번 주에 {{completed}}/30 주즈를 완료했습니다 ({{percentage}}%).\n\nEzan Vakti + Hatim으로 완독을 기록해보세요: {{playStore}}",
-    "rewardUnlocked": "🎁 멋져요! 공유해 주신 덕분에 {{days}}일간 광고 없이 이용할 수 있습니다.",
-    "rewardBannerText": "{{count}}번 더 공유하고 {{days}}일간 광고 제거 혜택을 받으세요 🎁",
     "juzCountShort": "주즈"
   },
   "settings": {

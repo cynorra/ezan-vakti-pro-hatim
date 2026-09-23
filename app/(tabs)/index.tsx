@@ -17,7 +17,6 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
 import { safeHaptics } from '@/lib/haptics';
-import { recordGrowthShare } from '@/lib/rewards';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { calculatePrayerTimes, PrayerTimes } from '@/lib/prayer-times';
 import {
@@ -180,7 +179,6 @@ export default function HomeScreen() {
       await Share.share({
         message: t('hatim.fridayShareMessage'),
       });
-      await recordGrowthShare();
     } catch (error) {
       console.log('Friday share error:', error);
     }

@@ -52,8 +52,6 @@
     "inviteShareMessage": "Dołącz do wspólnego chatmu „{{title}}”, weź dżuz i czytajmy Koran razem 🕌📖\n\nJeśli masz już aplikację: {{deepLink}}\n\nJeśli nie: {{playStore}}",
     "completionShareMessage": "🎉 Ukończono wszystkie 30 dżuzów, chatm skończony! Alhamdulillah 📖🕌\n\nTo mój chatm nr {{count}}. Zacznij śledzić swój: {{playStore}}",
     "progressShareMessage": "📖 Przeczytano {{completed}}/30 dżuzów w tym tygodniu ({{percentage}}%).\n\nŚledź swoje postępy z Ezan Vakti + Hatim: {{playStore}}",
-    "rewardUnlocked": "🎁 Świetnie! Dzięki Twoim udostępnieniom odblokowano {{days}} dni bez reklam.",
-    "rewardBannerText": "Udostępnij jeszcze {{count}} raz(y), aby odblokować {{days}} dni bez reklam 🎁",
     "juzCountShort": "dżuz"
   },
   "settings": {

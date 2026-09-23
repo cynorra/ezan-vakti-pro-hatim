@@ -52,8 +52,6 @@
     "inviteShareMessage": "«{{title}}» ортақ хатымына қосылыңыз, бір пара алыңыз, Құранды бірге оқиық 🕌📖\n\nЕгер қосымша бар болса: {{deepLink}}\n\nЖоқ болса: {{playStore}}",
     "completionShareMessage": "🎉 30 параны толық оқып, хатымды аяқтадым! Әлхамдулиллаһ 📖🕌\n\nБұл менің #{{count}}-хатымым. Сіз де есебін жүргізуді бастаңыз: {{playStore}}",
     "progressShareMessage": "📖 Осы аптада {{completed}}/30 параны аяқтадым ({{percentage}}%).\n\nӨз нәтижеңізді Ezan Vakti + Hatim-мен бақылаңыз: {{playStore}}",
-    "rewardUnlocked": "🎁 Керемет! Бөліскеніңіз үшін {{days}} күндік жарнамасыз нұсқаға ие болдыңыз.",
-    "rewardBannerText": "{{days}} күн жарнамасыз пайдалану үшін тағы {{count}} рет бөлісіңіз 🎁",
     "juzCountShort": "пара"
   },
   "settings": {

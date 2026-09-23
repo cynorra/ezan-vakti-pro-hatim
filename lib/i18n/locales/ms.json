@@ -52,8 +52,6 @@
     "inviteShareMessage": "Sertai khatam berkumpulan \"{{title}}\", ambil satu juzuk dan mari membaca Al-Quran bersama-sama 🕌📖\n\nJika anda sudah mempunyai aplikasi: {{deepLink}}\n\nJika belum: {{playStore}}",
     "completionShareMessage": "🎉 Saya telah menyelesaikan kesemua 30 juzuk dan mengkhatamkan Al-Quran! Alhamdulillah 📖🕌\n\nIni adalah khatam ke-{{count}} saya. Mulakan penjejakan anda juga: {{playStore}}",
     "progressShareMessage": "📖 Minggu ini saya selesai {{completed}}/30 juzuk ({{percentage}}%).\n\nJejak kemajuan anda bersama Ezan Vakti + Hatim: {{playStore}}",
-    "rewardUnlocked": "🎁 Hebat! Hasil perkongsian anda, anda telah membuka {{days}} hari tanpa iklan.",
-    "rewardBannerText": "Kongsi {{count}} kali lagi untuk membuka {{days}} hari tanpa iklan 🎁",
     "juzCountShort": "juzuk"
   },
   "settings": {

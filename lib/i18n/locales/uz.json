@@ -52,8 +52,6 @@
     "inviteShareMessage": "«{{title}}» jamoaviy xatmiga qo'shiling, bir pora oling va Qur'onni birga o'qiylik 🕌📖\n\nIlova o'rnatilgan bo'lsa: {{deepLink}}\n\nBo'lmasa: {{playStore}}",
     "completionShareMessage": "🎉 30 porani to'liq o'qib, xatmni yakunladim! Alhamdulillah 📖🕌\n\nBu mening #{{count}}-xatmim. Siz ham kuzatishni boshlang: {{playStore}}",
     "progressShareMessage": "📖 Bu hafta {{completed}}/30 porani o'qib tugatdim ({{percentage}}%).\n\nO'z natijalaringizni Ezan Vakti + Hatim bilan kuzating: {{playStore}}",
-    "rewardUnlocked": "🎁 Ajoyib! Ulashganingiz uchun {{days}} kunlik reklamasiz rejimga ega bo'ldingiz.",
-    "rewardBannerText": "{{days}} kun reklamasiz rejimga ega bo'lish uchun yana {{count}} marta ulashing 🎁",
     "juzCountShort": "pora"
   },
   "settings": {

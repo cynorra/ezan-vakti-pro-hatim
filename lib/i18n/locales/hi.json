@@ -52,8 +52,6 @@
     "inviteShareMessage": "सामूहिक ख़त्म \"{{title}}\" में शामिल हों, एक पारा लें और साथ मिलकर क़ुरआन पढ़ें 🕌📖\n\nयदि आपके पास पहले से ऐप है: {{deepLink}}\n\nयदि नहीं: {{playStore}}",
     "completionShareMessage": "🎉 मैंने सभी 30 पारे पूरे कर लिए, अपना ख़त्म पूरा किया! अल्हम्दुलिल्लाह 📖🕌\n\nयह मेरा ख़त्म #{{count}} है। आप भी अपना हिसाब रखना शुरू करें: {{playStore}}",
     "progressShareMessage": "📖 मैंने इस सप्ताह {{completed}}/30 पारे पूरे कर लिए ({{percentage}}%)।\n\nEzan Vakti + Hatim के साथ अपना ट्रैक करें: {{playStore}}",
-    "rewardUnlocked": "🎁 शानदार! आपके शेयर के लिए धन्यवाद, आपने {{days}} विज्ञापन-मुक्त दिन अनलॉक कर लिए हैं।",
-    "rewardBannerText": "{{days}} विज्ञापन-मुक्त दिन अनलॉक करने के लिए {{count}} बार और शेयर करें 🎁",
     "juzCountShort": "पारा"
   },
   "settings": {

@@ -52,8 +52,6 @@
     "inviteShareMessage": "Pridružite se zajedničkoj hatmi „{{title}}“, odaberite džuz i učimo Kur'an zajedno 🕌📖\n\nAko već imate aplikaciju: {{deepLink}}\n\nAko nemate: {{playStore}}",
     "completionShareMessage": "🎉 Proučio/la sam svih 30 džuzeva i završio/la svoju hatmu! Elhamdulillah 📖🕌\n\nOvo je moja hatma br. {{count}}. Započnite i vi praćenje: {{playStore}}",
     "progressShareMessage": "📖 Ove sedmice sam završio/la {{completed}}/30 džuzeva ({{percentage}}%).\n\nPratite svoj napredak uz Ezan Vakti + Hatim: {{playStore}}",
-    "rewardUnlocked": "🎁 Sjajno! Zahvaljujući vašim dijeljenjima, otključali ste {{days}} dana bez reklama.",
-    "rewardBannerText": "Podijelite još {{count}} put(a) za {{days}} dana bez reklama 🎁",
     "juzCountShort": "džuz"
   },
   "settings": {

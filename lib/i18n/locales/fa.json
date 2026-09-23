@@ -52,8 +52,6 @@
     "inviteShareMessage": "به ختم جمعی «{{title}}» بپیوندید، یک جزء بردارید تا با هم قرآن بخوانیم 🕌📖\n\nاگر برنامه را دارید: {{deepLink}}\n\nاگر ندارید: {{playStore}}",
     "completionShareMessage": "🎉 با خواندن هر ۳۰ جزء، ختم قرآن را به پایان رساندم! الحمدلله 📖🕌\n\nاین ختم شماره {{count}} من است. شما هم شروع کنید: {{playStore}}",
     "progressShareMessage": "📖 این هفته {{completed}} جزء از ۳۰ جزء را تکمیل کردم ({{percentage}}٪).\n\nپیشرفت خود را با Ezan Vakti + Hatim دنبال کنید: {{playStore}}",
-    "rewardUnlocked": "🎁 فوق‌العاده است! با اشتراک‌گذاری‌های خود، {{days}} روز استفاده بدون تبلیغات دریافت کردید.",
-    "rewardBannerText": "برای دریافت {{days}} روز بدون تبلیغات، {{count}} بار دیگر به اشتراک بگذارید 🎁",
     "juzCountShort": "جزء"
   },
   "settings": {

@@ -67,8 +67,6 @@
     "inviteShareMessage": "شارِك في ختمة \"{{title}}\" الجماعية، اختر جزءًا ولنقرأ القرآن معًا 🕌📖\n\nإذا كان التطبيق لديك بالفعل: {{deepLink}}\n\nإذا لم يكن لديك: {{playStore}}",
     "completionShareMessage": "🎉 أتممت الـ 30 جزءًا وأنهيت ختمتي! الحمد لله 📖🕌\n\nهذه هي الختمة رقم {{count}} لي. ابدأ بتتبع ختمتك أيضًا: {{playStore}}",
     "progressShareMessage": "📖 أتممت {{completed}}/30 جزءًا هذا الأسبوع ({{percentage}}%).\n\nتتبع ختمتك مع Ezan Vakti + Hatim: {{playStore}}",
-    "rewardUnlocked": "🎁 رائع! بفضل مشاركاتك، حصلت على {{days}} أيام بدون إعلانات.",
-    "rewardBannerText": "شارك {{count}} مرة إضافية للحصول على {{days}} أيام بدون إعلانات 🎁",
     "juzCountShort": "جزء"
   },
   "settings": {

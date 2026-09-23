@@ -27,7 +27,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { quranJuzData, Juz } from '@/lib/data/quran-juz';
 import { hatimService, SharedHatim, SharedHatimJuz } from '@/lib/services/hatim-service';
-import { PLAY_STORE_URL, recordGrowthShare, getSharesUntilNextReward, REWARD_DAYS } from '@/lib/rewards';
+import { PLAY_STORE_URL } from '@/lib/share';
 
 interface JuzProgress {
   [key: number]: boolean;
@@ -59,18 +59,12 @@ export default function HatimScreen() {
   const [sharedHatimDetails, setSharedHatimDetails] = useState<SharedHatimJuz[]>([]);
   const [isJoinModalVisible, setIsJoinModalVisible] = useState(false);
   const [userName, setUserName] = useState('');
-  const [sharesUntilReward, setSharesUntilReward] = useState<number | null>(null);
 
   useEffect(() => {
     initializeWeek();
     loadHistory();
     loadSharedHatims();
-    refreshShareRewardProgress();
   }, []);
-
-  const refreshShareRewardProgress = async () => {
-    setSharesUntilReward(await getSharesUntilNextReward());
-  };
 
   // Davet linkiyle gelen kullanıcı: ortak hatim sekmesini açıp doğrudan ilgili hatmi göster
   useEffect(() => {
@@ -89,27 +83,15 @@ export default function HatimScreen() {
   const handleInviteToHatim = async (hatim: SharedHatim) => {
     try {
       const deepLink = `ezanvaktihatim://hatim?hatimId=${hatim.id}`;
-      const result = await Share.share({
+      await Share.share({
         message: t('hatim.inviteShareMessage', { title: hatim.title, deepLink, playStore: PLAY_STORE_URL }),
       });
       logEvent('hatim_invite_shared', { hatim_id: hatim.id });
-      if (result.action !== Share.dismissedAction) {
-        await notifyGrowthShareReward();
-      }
     } catch (error) {
       console.log('Invite share error:', error);
     }
   };
 
-  // Paylaşım eylemini ödül sayacına ekler; her 3 paylaşımda bir reklamsız gün kazandırır
-  const notifyGrowthShareReward = async () => {
-    const { justUnlocked } = await recordGrowthShare();
-    if (justUnlocked) {
-      safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-      alert(t('hatim.rewardUnlocked', { days: REWARD_DAYS }));
-    }
-    await refreshShareRewardProgress();
-  };
 
   useEffect(() => {
     if (weekStart) {
@@ -277,12 +259,9 @@ export default function HatimScreen() {
     safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
 
     try {
-      const result = await Share.share({
+      await Share.share({
         message: t('hatim.completionShareMessage', { count: newHistory.length, playStore: PLAY_STORE_URL }),
       });
-      if (result.action !== Share.dismissedAction) {
-        await notifyGrowthShareReward();
-      }
     } catch (error) {
       console.log('Completion share error:', error);
     }
@@ -290,7 +269,7 @@ export default function HatimScreen() {
 
   const handleShareProgress = async () => {
     try {
-      const result = await Share.share({
+      await Share.share({
         message: t('hatim.progressShareMessage', {
           completed: completedCount,
           percentage: progressPercentage,
@@ -298,9 +277,6 @@ export default function HatimScreen() {
         }),
       });
       logEvent('individual_progress_shared', { completed_count: completedCount });
-      if (result.action !== Share.dismissedAction) {
-        await notifyGrowthShareReward();
-      }
     } catch (error) {
       console.log('Progress share error:', error);
     }
@@ -472,14 +448,6 @@ export default function HatimScreen() {
           </>
         ) : (
           <View style={styles.collaborativeSection}>
-            {sharesUntilReward !== null && (
-              <View style={[styles.rewardBanner, { backgroundColor: colors.accent + '15' }]}>
-                <Ionicons name="gift" size={16} color={colors.accent} />
-                <Text style={[styles.rewardBannerText, { color: colors.text }]}>
-                  {t('hatim.rewardBannerText', { count: sharesUntilReward, days: REWARD_DAYS })}
-                </Text>
-              </View>
-            )}
             <View style={styles.collabHeader}>
               <Text style={[styles.sectionLabel, { color: colors.textSecondary }]}>{t('hatim.activeHatims')}</Text>
               <TouchableOpacity 
@@ -933,19 +901,6 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     flex: 1,
     marginRight: Spacing.md,
-  },
-  rewardBanner: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    padding: Spacing.md,
-    borderRadius: BorderRadius.lg,
-    gap: 8,
-    marginBottom: Spacing.md,
-  },
-  rewardBannerText: {
-    fontSize: 12,
-    fontWeight: '700',
-    flex: 1,
   },
   topBadge: {
     flexDirection: 'row',

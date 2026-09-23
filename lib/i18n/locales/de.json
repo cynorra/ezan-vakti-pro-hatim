@@ -52,8 +52,6 @@
     "inviteShareMessage": "Mache mit beim gemeinsamen Khatm „{{title}}“, nimm dir einen Juz und lass uns gemeinsam den Koran lesen 🕌📖\n\nFalls du die App schon hast: {{deepLink}}\n\nFalls nicht: {{playStore}}",
     "completionShareMessage": "🎉 Ich habe alle 30 Juz gelesen und meinen Khatm beendet! Alhamdulillah 📖🕌\n\nDas ist mein Khatm Nr. {{count}}. Fange auch an, deine zu verfolgen: {{playStore}}",
     "progressShareMessage": "📖 Ich habe diese Woche {{completed}}/30 Juz gelesen ({{percentage}}%).\n\nVerfolge deine mit Ezan Vakti + Hatim: {{playStore}}",
-    "rewardUnlocked": "🎁 Super! Dank deines Teilens hast du {{days}} werbefreie Tage freigeschaltet.",
-    "rewardBannerText": "Teile noch {{count}}-mal, um {{days}} werbefreie Tage freizuschalten 🎁",
     "juzCountShort": "Juz"
   },
   "settings": {

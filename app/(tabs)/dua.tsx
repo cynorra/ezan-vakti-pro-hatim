@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, useCallback } from 'react';
+import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   View,
@@ -21,13 +21,7 @@ import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/c
 import { SEOHead } from '@/components/SEOHead';
 import { ShareableDuaCard } from '@/components/ShareableDuaCard';
 import { dailyDuas, duaCategories, getDailyDua, Dua } from '@/lib/data/duas';
-import {
-  recordGrowthShare,
-  getShareCount,
-  getAdFreeRemainingDays,
-  formatDuaShareMessage,
-  SHARES_PER_REWARD,
-} from '@/lib/rewards';
+import { formatDuaShareMessage } from '@/lib/share';
 
 const CATEGORY_ICONS: Record<string, string> = {
   all: 'apps-outline',
@@ -47,23 +41,10 @@ export default function DuaScreen() {
   const [isSharingImage, setIsSharingImage] = useState(false);
 
   // Rewards tracking
-  const [shareCount, setShareCount] = useState(0);
-  const [adFreeDays, setAdFreeDays] = useState(0);
 
   const duaOfTheDay = getDailyDua();
   const [targetDuaForCard, setTargetDuaForCard] = useState<Dua>(duaOfTheDay);
   const shareCardRef = useRef<View>(null);
-
-  const loadRewardStatus = useCallback(async () => {
-    const count = await getShareCount();
-    const remainingDays = await getAdFreeRemainingDays();
-    setShareCount(count);
-    setAdFreeDays(remainingDays);
-  }, []);
-
-  useEffect(() => {
-    loadRewardStatus();
-  }, [loadRewardStatus]);
 
   const filteredDualar = selectedCategory === 'all'
     ? dailyDuas
@@ -77,11 +58,6 @@ export default function DuaScreen() {
         message,
         title: dua.title,
       });
-      const result = await recordGrowthShare();
-      await loadRewardStatus();
-      if (result.justUnlocked) {
-        safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-      }
     } catch (error) {
       console.log('Share text error:', error);
     }
@@ -107,11 +83,6 @@ export default function DuaScreen() {
             dialogTitle: dua.title,
             UTI: 'public.png',
           });
-          const result = await recordGrowthShare();
-          await loadRewardStatus();
-          if (result.justUnlocked) {
-            safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-          }
         } else {
           await handleShareText(dua);
         }
@@ -124,7 +95,6 @@ export default function DuaScreen() {
     }, 120);
   };
 
-  const progressInCycle = shareCount % SHARES_PER_REWARD;
 
   return (
     <>
@@ -140,38 +110,6 @@ export default function DuaScreen() {
         </LinearGradient>
 
         <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
-          {/* Growth & Reward Banner */}
-          <View style={[styles.rewardBanner, { backgroundColor: colors.surface }, Shadows.light]}>
-            <View style={styles.rewardIconBadge}>
-              <Ionicons name="gift" size={20} color="#052F1C" />
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text style={[styles.rewardTitle, { color: colors.text }]}>
-                {adFreeDays > 0
-                  ? t('dua.adFreeActive', { days: adFreeDays })
-                  : t('dua.rewardBannerTitle')}
-              </Text>
-              <Text style={[styles.rewardSub, { color: colors.textSecondary }]}>
-                {t('dua.rewardBannerSub')}
-              </Text>
-              {/* Progress bar */}
-              <View style={styles.progressBarBg}>
-                <View
-                  style={[
-                    styles.progressBarFill,
-                    {
-                      width: `${(progressInCycle / SHARES_PER_REWARD) * 100}%`,
-                      backgroundColor: '#D4AF37',
-                    },
-                  ]}
-                />
-              </View>
-              <Text style={[styles.progressText, { color: colors.textMuted }]}>
-                {t('dua.rewardProgress', { count: progressInCycle })}
-              </Text>
-            </View>
-          </View>
-
           {/* Günün Duası */}
           <View style={[styles.featuredCard, { backgroundColor: colors.surface }, Shadows.medium]}>
             <View style={styles.featuredBadge}>
@@ -371,50 +309,6 @@ const styles = StyleSheet.create({
   content: {
     paddingHorizontal: Spacing.md,
     marginTop: -25,
-  },
-  rewardBanner: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    padding: Spacing.md,
-    borderRadius: BorderRadius.lg,
-    marginBottom: Spacing.md,
-    gap: 12,
-    borderWidth: 1,
-    borderColor: 'rgba(212,175,55,0.3)',
-  },
-  rewardIconBadge: {
-    width: 38,
-    height: 38,
-    borderRadius: 19,
-    backgroundColor: '#D4AF37',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  rewardTitle: {
-    fontSize: 13,
-    fontWeight: '800',
-    marginBottom: 2,
-  },
-  rewardSub: {
-    fontSize: 11,
-    lineHeight: 15,
-    marginBottom: 6,
-  },
-  progressBarBg: {
-    height: 5,
-    backgroundColor: 'rgba(0,0,0,0.06)',
-    borderRadius: 3,
-    overflow: 'hidden',
-  },
-  progressBarFill: {
-    height: '100%',
-    borderRadius: 3,
-  },
-  progressText: {
-    fontSize: 10,
-    fontWeight: '700',
-    marginTop: 3,
-    alignSelf: 'flex-end',
   },
   featuredCard: {
     borderRadius: BorderRadius.xl,

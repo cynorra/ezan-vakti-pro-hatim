@@ -52,8 +52,6 @@
     "inviteShareMessage": "Присоединяйтесь к совместному хатму «{{title}}», возьмите джуз и давайте читать Коран вместе 🕌📖\n\nЕсли приложение уже установлено: {{deepLink}}\n\nЕсли нет: {{playStore}}",
     "completionShareMessage": "🎉 Я прочитал(а) все 30 джузов и завершил(а) хатм! Альхамдулиллях 📖🕌\n\nЭто мой хатм №{{count}}. Начните отслеживать свой: {{playStore}}",
     "progressShareMessage": "📖 На этой неделе я прочитал(а) {{completed}}/30 джузов ({{percentage}}%).\n\nОтслеживайте свой прогресс с Ezan Vakti + Hatim: {{playStore}}",
-    "rewardUnlocked": "🎁 Отлично! Благодаря вашим репостам вы получили {{days}} дн. без рекламы.",
-    "rewardBannerText": "Поделитесь еще {{count}} раз(а), чтобы получить {{days}} дн. без рекламы 🎁",
     "juzCountShort": "джуз"
   },
   "settings": {

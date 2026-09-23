@@ -18,7 +18,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SEOHead } from '@/components/SEOHead';
 import { useTranslation } from 'react-i18next';
 import { logEvent } from '@/lib/analytics';
-import { PLAY_STORE_URL, recordGrowthShare, REWARD_DAYS } from '@/lib/rewards';
+import { PLAY_STORE_URL } from '@/lib/share';
 
 interface KazaData {
   sabah: number;
@@ -74,15 +74,9 @@ export default function KazaScreen() {
     safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
     logEvent('kaza_debt_cleared');
     try {
-      const result = await Share.share({
+      await Share.share({
         message: t('kaza.completionShareMessage', { playStore: PLAY_STORE_URL }),
       });
-      if (result.action !== Share.dismissedAction) {
-        const { justUnlocked } = await recordGrowthShare();
-        if (justUnlocked) {
-          alert(t('hatim.rewardUnlocked', { days: REWARD_DAYS }));
-        }
-      }
     } catch (error) {
       console.log('Kaza completion share error:', error);
     }

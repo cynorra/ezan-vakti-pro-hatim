@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows } from '@/constants/theme';
 import Constants from 'expo-constants';
-import { PLAY_STORE_URL, recordGrowthShare } from '@/lib/rewards';
+import { PLAY_STORE_URL } from '@/lib/share';
 import { CALCULATION_METHODS, CALCULATION_METHOD_IDS, CalculationMethodId } from '@/lib/prayer-times';
 import {
   getLocationPermissionState,
@@ -142,7 +142,6 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   const handleShareApp = async () => {
     try {
       await Share.share({ message: t('settings.shareAppMessage', { playStore: PLAY_STORE_URL }) });
-      await recordGrowthShare();
     } catch (e) {
       console.error(e);
     }

@@ -67,8 +67,6 @@
     "inviteShareMessage": "Join the \"{{title}}\" collaborative khatm, take a juz, let's read the Quran together 🕌📖\n\nIf you already have the app: {{deepLink}}\n\nIf not: {{playStore}}",
     "completionShareMessage": "🎉 I completed all 30 juz, finished my khatm! Alhamdulillah 📖🕌\n\nThis is my khatm #{{count}}. Start tracking yours too: {{playStore}}",
     "progressShareMessage": "📖 I completed {{completed}}/30 juz this week ({{percentage}}%).\n\nTrack yours with Ezan Vakti + Hatim: {{playStore}}",
-    "rewardUnlocked": "🎁 Awesome! Thanks to your shares, you unlocked {{days}} ad-free days.",
-    "rewardBannerText": "Share {{count}} more time(s) to unlock {{days}} ad-free days 🎁",
     "juzCountShort": "juz"
   },
   "settings": {
@@ -117,11 +115,7 @@
     "meaningLabel": "MEANING",
     "shareMessage": "🤲 {{title}}\n\n{{transliteration}}\n\nMeaning: {{meaning}}\n\nSource: {{source}}\n\n📲 Download Ezan Vakti + Hatim for free:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
     "shareImage": "Share Card",
-    "shareText": "Share Text",
-    "rewardBannerTitle": "Share 3 Duas, Get 3 Days Ad-Free!",
-    "rewardBannerSub": "Share with friends to spread good deeds and enjoy an ad-free experience.",
-    "rewardProgress": "{{count}} / 3 Shared",
-    "adFreeActive": "Ad-Free Active ({{days}} days left)"
+    "shareText": "Share Text"
   },
   "splash": {
     "subtitle": "Prayer times, khatm and dua together"

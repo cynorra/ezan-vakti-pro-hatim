@@ -52,8 +52,6 @@
     "inviteShareMessage": "「{{title}}」の共同ハトム（完読）に参加して、ジュズを担当して一緒にクルアーンを読みましょう 🕌📖\n\nアプリをお持ちの方：{{deepLink}}\n\nまだお持ちでない方：{{playStore}}",
     "completionShareMessage": "🎉 全30ジュズを読み終え、ハトムを達成しました！アルハムドゥリッラー 📖🕌\n\n今回で{{count}}回目のハトムです。あなたも記録を始めましょう：{{playStore}}",
     "progressShareMessage": "📖 今週は {{completed}}/30 ジュズ（{{percentage}}%）を完了しました。\n\n「Ezan Vakti + Hatim」で記録しよう：{{playStore}}",
-    "rewardUnlocked": "🎁 素晴らしい！共有のおかげで{{days}}日間の広告非表示特典を獲得しました。",
-    "rewardBannerText": "あと{{count}}回共有して{{days}}日間の広告非表示特典を獲得しよう 🎁",
     "juzCountShort": "ジュズ"
   },
   "settings": {

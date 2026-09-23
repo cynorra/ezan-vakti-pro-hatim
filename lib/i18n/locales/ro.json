@@ -52,8 +52,6 @@
     "inviteShareMessage": "Alătură-te la khatmul colectiv „{{title}}”, alege un juz și hai să citim Coranul împreună 🕌📖\n\nDacă ai deja aplicația: {{deepLink}}\n\nDacă nu: {{playStore}}",
     "completionShareMessage": "🎉 Am citit toate cele 30 de juz-uri și am terminat khatmul! Alhamdulillah 📖🕌\n\nAcesta este khatmul meu #{{count}}. Începe să-ți monitorizezi lectura: {{playStore}}",
     "progressShareMessage": "📖 Am completat {{completed}}/30 de juz-uri în această săptămână ({{percentage}}%).\n\nUrmărește progresul cu Ezan Vakti + Hatim: {{playStore}}",
-    "rewardUnlocked": "🎁 Minunat! Datorită distribuirilor tale, ai deblocat {{days}} zile fără reclame.",
-    "rewardBannerText": "Distribuie încă de {{count}} ori pentru a debloca {{days}} zile fără reclame 🎁",
     "juzCountShort": "juz"
   },
   "settings": {

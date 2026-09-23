@@ -52,8 +52,6 @@
     "inviteShareMessage": "Gå med i den gemensamma khatmen \"{{title}}\", ta en juz och låt oss läsa Koranen tillsammans 🕌📖\n\nOm du redan har appen: {{deepLink}}\n\nOm inte: {{playStore}}",
     "completionShareMessage": "🎉 Jag har slutfört alla 30 juz och gjort klart min khatm! Alhamdulillah 📖🕌\n\nDet här är min khatm nr {{count}}. Börja följa din med: {{playStore}}",
     "progressShareMessage": "📖 Jag har slutfört {{completed}}/30 juz denna vecka ({{percentage}}%).\n\nFölj din resa med Ezan Vakti + Hatim: {{playStore}}",
-    "rewardUnlocked": "🎁 Fantastiskt! Tack vare att du delade har du låst upp {{days}} reklamfria dagar.",
-    "rewardBannerText": "Dela {{count}} gång(er) till för att låsa upp {{days}} reklamfria dagar 🎁",
     "juzCountShort": "juz"
   },
   "settings": {

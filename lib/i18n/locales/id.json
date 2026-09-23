@@ -52,8 +52,6 @@
     "inviteShareMessage": "Mari bergabung dalam khataman bersama \"{{title}}\", ambil satu juz dan membaca Al-Qur'an bersama 🕌📖\n\nJika sudah punya aplikasi: {{deepLink}}\n\nJika belum: {{playStore}}",
     "completionShareMessage": "🎉 Alhamdulillah, saya telah menyelesaikan 30 juz dan mengkhatamkan Al-Qur'an! 📖🕌\n\nIni adalah khatam ke-{{count}} saya. Mulai pantau khatam Anda: {{playStore}}",
     "progressShareMessage": "📖 Minggu ini saya telah menyelesaikan {{completed}}/30 juz ({{percentage}}%).\n\nPantau kemajuan Anda dengan Ezan Vakti + Hatim: {{playStore}}",
-    "rewardUnlocked": "🎁 Luar biasa! Terima kasih telah berbagi, Anda membuka {{days}} hari bebas iklan.",
-    "rewardBannerText": "Bagikan {{count}} kali lagi untuk membuka {{days}} hari bebas iklan 🎁",
     "juzCountShort": "juz"
   },
   "settings": {

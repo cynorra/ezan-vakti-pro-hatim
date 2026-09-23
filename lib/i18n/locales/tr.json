@@ -67,8 +67,6 @@
     "inviteShareMessage": "\"{{title}}\" ortak hatmine katıl, bir cüz al, birlikte Kur'an okuyalım 🕌📖\n\nUygulama zaten yüklüyse: {{deepLink}}\n\nYüklü değilse: {{playStore}}",
     "completionShareMessage": "🎉 30 cüzü tamamladım, hatmimi bitirdim! Elhamdülillah 📖🕌\n\nBu benim {{count}}. hatmim. Sen de takip etmeye başla: {{playStore}}",
     "progressShareMessage": "📖 Bu hafta {{completed}}/30 cüz tamamladım (%{{percentage}}).\n\nSen de Ezan Vakti + Hatim ile takip et: {{playStore}}",
-    "rewardUnlocked": "🎁 Harika! Paylaşımların sayesinde {{days}} gün reklamsız kullanım kazandın.",
-    "rewardBannerText": "{{count}} paylaşım daha yap, {{days}} gün reklamsız kazan 🎁",
     "juzCountShort": "cüz",
     "shareProgressBtn": "İlerlemeyi Paylaş",
     "inviteFriendsBtn": "Arkadaşlarını Davet Et",
@@ -124,11 +122,7 @@
     "meaningLabel": "ANLAMI",
     "shareMessage": "🤲 {{title}}\n\n{{transliteration}}\n\nAnlamı: {{meaning}}\n\nKaynak: {{source}}\n\n📲 Ezan Vakti + Hatim uygulamasını ücretsiz indirin:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
     "shareImage": "Görsel Paylaş",
-    "shareText": "Metin Paylaş",
-    "rewardBannerTitle": "3 Dua Paylaş, 3 Gün Reklamsız Kazan!",
-    "rewardBannerSub": "Yakınlarınla paylaşarak hem hayra vesile ol hem reklamsız kullanım kazan.",
-    "rewardProgress": "{{count}} / 3 Paylaşım",
-    "adFreeActive": "Reklamsız Kullanım Aktif ({{days}} gün kaldı)"
+    "shareText": "Metin Paylaş"
   },
   "splash": {
     "subtitle": "Namaz vakti, hatim ve dua bir arada"

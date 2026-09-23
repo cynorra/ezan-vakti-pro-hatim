@@ -52,8 +52,6 @@
     "inviteShareMessage": "«{{title}}» সম্মিলিত খতমে যোগ দিন, একটি পারা বেছে নিন এবং একসাথে কুরআন তিলাওয়াত করি 🕌📖\n\nযদি আপনার অ্যাপটি ইনস্টল করা থাকে: {{deepLink}}\n\nনা থাকলে: {{playStore}}",
     "completionShareMessage": "🎉 আলহামদুলিল্লাহ, আমি ৩০ পারা সম্পন্ন করে খতম শেষ করেছি! 📖🕌\n\nএটি আমার #{{count}} তম খতম। আপনিও শুরু করুন: {{playStore}}",
     "progressShareMessage": "📖 এই সপ্তাহে আমি {{completed}}/30 পারা সম্পন্ন করেছি ({{percentage}}%)।\n\nEzan Vakti + Hatim দিয়ে আপনার অগ্রগতি ট্র্যাক করুন: {{playStore}}",
-    "rewardUnlocked": "🎁 অসাধারণ! শেয়ার করার জন্য আপনি {{days}} দিন বিজ্ঞাপন-মুক্ত সুবিধা আনলক করেছেন।",
-    "rewardBannerText": "আরও {{count}} বার শেয়ার করে {{days}} দিনের বিজ্ঞাপন-মুক্ত সুবিধা আনলক করুন 🎁",
     "juzCountShort": "পারা"
   },
   "settings": {
