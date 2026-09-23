@@ -10,6 +10,7 @@ import {
   RefreshControl,
   Platform,
   Share,
+  Alert,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -26,6 +27,8 @@ import {
   loadMethodSetting,
   loadSavedLocation,
   locateWithGps,
+  getLocationPermissionState,
+  openAppSettings,
   resolveMethod,
   saveLocation,
   saveMethodSetting,
@@ -88,15 +91,26 @@ export default function HomeScreen() {
   }, []);
 
   const handleLocationPress = useCallback(
-    async (prompt = true) => {
+    async (prompt = true, userInitiated = true) => {
       try {
         const located = await locateWithGps({ prompt });
-        if (located) applyLocation(located);
+        if (located) {
+          applyLocation(located);
+          return;
+        }
+        // "Don't ask again" makes the system dialog silent; send the user to
+        // the app's system settings instead of doing nothing.
+        if (userInitiated && (await getLocationPermissionState()) === 'blocked') {
+          Alert.alert(t('location.permissionTitle'), t('location.permissionBody'), [
+            { text: t('common.cancel'), style: 'cancel' },
+            { text: t('location.openSettings'), onPress: openAppSettings },
+          ]);
+        }
       } catch (error) {
         console.log('Location error:', error);
       }
     },
-    [applyLocation]
+    [applyLocation, t]
   );
 
   // Start from the user's real position: first launch asks for permission,
@@ -109,9 +123,9 @@ export default function HomeScreen() {
       if (saved) setLocation(saved);
       if (Platform.OS === 'web') return;
       if (!saved) {
-        handleLocationPress(true);
+        handleLocationPress(true, false);
       } else if (saved.source !== 'manual') {
-        handleLocationPress(false);
+        handleLocationPress(false, false);
       }
     })();
   }, [handleLocationPress]);

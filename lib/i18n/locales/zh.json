@@ -73,7 +73,12 @@
     "widgetNext": "下一个",
     "widgetHint": "长按主屏幕即可添加小工具。",
     "calcMethod": "计算方法",
-    "calcMethodAuto": "自动"
+    "calcMethodAuto": "自动",
+    "locationPermission": "位置权限",
+    "permissionOn": "已开启",
+    "permissionOff": "已关闭",
+    "shareApp": "分享应用",
+    "shareAppMessage": "🕌 礼拜时间、朝向、集体诵读古兰经和每日祈祷，尽在一个应用。免费下载：\n{{playStore}}"
   },
   "common": {
     "cancel": "取消",
@@ -181,6 +186,9 @@
     "searchDistrict": "搜索区县...",
     "useGps": "使用我的位置",
     "useGpsHint": "通过 GPS 在全球任何地方获取准确时间",
-    "turkeyCities": "土耳其城市"
+    "turkeyCities": "土耳其城市",
+    "permissionTitle": "位置权限已关闭",
+    "permissionBody": "要根据您所在的位置显示准确时间，请在手机设置中开启位置权限。",
+    "openSettings": "打开设置"
   }
 }

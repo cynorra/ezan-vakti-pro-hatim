@@ -73,7 +73,12 @@
     "widgetNext": "Volgende",
     "widgetHint": "Houd het startscherm ingedrukt om de widget toe te voegen.",
     "calcMethod": "Berekeningsmethode",
-    "calcMethodAuto": "Automatisch"
+    "calcMethodAuto": "Automatisch",
+    "locationPermission": "Locatietoegang",
+    "permissionOn": "Aan",
+    "permissionOff": "Uit",
+    "shareApp": "App delen",
+    "shareAppMessage": "🕌 Gebedstijden, qibla, gezamenlijke Koranlezing en dagelijkse smeekbeden in één app. Gratis downloaden:\n{{playStore}}"
   },
   "common": {
     "cancel": "Annuleren",
@@ -181,6 +186,9 @@
     "searchDistrict": "Zoek district...",
     "useGps": "Mijn locatie gebruiken",
     "useGpsHint": "Nauwkeurige tijden wereldwijd via gps",
-    "turkeyCities": "Steden in Turkije"
+    "turkeyCities": "Steden in Turkije",
+    "permissionTitle": "Locatietoegang staat uit",
+    "permissionBody": "Zet locatietoegang aan in de telefooninstellingen om nauwkeurige tijden voor jouw plek te tonen.",
+    "openSettings": "Instellingen openen"
   }
 }

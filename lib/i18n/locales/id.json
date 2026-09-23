@@ -73,7 +73,12 @@
     "widgetNext": "Lanjut",
     "widgetHint": "Tekan dan tahan pada layar utama untuk menambahkan widget.",
     "calcMethod": "Metode perhitungan",
-    "calcMethodAuto": "Otomatis"
+    "calcMethodAuto": "Otomatis",
+    "locationPermission": "Akses lokasi",
+    "permissionOn": "Aktif",
+    "permissionOff": "Nonaktif",
+    "shareApp": "Bagikan Aplikasi",
+    "shareAppMessage": "🕌 Jadwal salat, kiblat, khataman Al-Qur'an bersama, dan doa harian dalam satu aplikasi. Unduh gratis:\n{{playStore}}"
   },
   "common": {
     "cancel": "Batal",
@@ -181,6 +186,9 @@
     "searchDistrict": "Cari kecamatan...",
     "useGps": "Gunakan lokasi saya",
     "useGpsHint": "Waktu salat akurat di mana pun lewat GPS",
-    "turkeyCities": "Kota di Turki"
+    "turkeyCities": "Kota di Turki",
+    "permissionTitle": "Akses lokasi nonaktif",
+    "permissionBody": "Untuk menampilkan waktu salat yang akurat sesuai lokasi Anda, aktifkan akses lokasi di pengaturan ponsel.",
+    "openSettings": "Buka pengaturan"
   }
 }

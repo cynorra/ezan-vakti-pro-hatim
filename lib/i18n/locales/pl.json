@@ -73,7 +73,12 @@
     "widgetNext": "Następna",
     "widgetHint": "Naciśnij i przytrzymaj ekran główny, aby dodać widżet.",
     "calcMethod": "Metoda obliczeń",
-    "calcMethodAuto": "Automatycznie"
+    "calcMethodAuto": "Automatycznie",
+    "locationPermission": "Dostęp do lokalizacji",
+    "permissionOn": "Wł.",
+    "permissionOff": "Wył.",
+    "shareApp": "Udostępnij aplikację",
+    "shareAppMessage": "🕌 Godziny modlitw, kibla, wspólne czytanie Koranu i codzienne dua w jednej aplikacji. Pobierz za darmo:\n{{playStore}}"
   },
   "common": {
     "cancel": "Anuluj",
@@ -181,6 +186,9 @@
     "searchDistrict": "Szukaj dzielnicy...",
     "useGps": "Użyj mojej lokalizacji",
     "useGpsHint": "Dokładne godziny na całym świecie dzięki GPS",
-    "turkeyCities": "Miasta w Turcji"
+    "turkeyCities": "Miasta w Turcji",
+    "permissionTitle": "Dostęp do lokalizacji wyłączony",
+    "permissionBody": "Aby pokazywać dokładne godziny dla Twojego miejsca, włącz dostęp do lokalizacji w ustawieniach telefonu.",
+    "openSettings": "Otwórz ustawienia"
   }
 }

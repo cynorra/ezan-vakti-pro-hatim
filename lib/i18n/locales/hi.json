@@ -73,7 +73,12 @@
     "widgetNext": "अगला",
     "widgetHint": "विजेट जोड़ने के लिए अपनी होम स्क्रीन पर दबाकर रखें।",
     "calcMethod": "गणना विधि",
-    "calcMethodAuto": "स्वचालित"
+    "calcMethodAuto": "स्वचालित",
+    "locationPermission": "स्थान अनुमति",
+    "permissionOn": "चालू",
+    "permissionOff": "बंद",
+    "shareApp": "ऐप शेयर करें",
+    "shareAppMessage": "🕌 नमाज़ का समय, क़िबला, सामूहिक ख़त्म-ए-क़ुरआन और रोज़ की दुआएँ एक ही ऐप में। मुफ़्त डाउनलोड करें:\n{{playStore}}"
   },
   "common": {
     "cancel": "रद्द करें",
@@ -181,6 +186,9 @@
     "searchDistrict": "ज़िला खोजें...",
     "useGps": "मेरा स्थान उपयोग करें",
     "useGpsHint": "GPS से दुनिया में कहीं भी सटीक समय",
-    "turkeyCities": "तुर्की के शहर"
+    "turkeyCities": "तुर्की के शहर",
+    "permissionTitle": "स्थान अनुमति बंद है",
+    "permissionBody": "आपके स्थान के अनुसार सटीक समय दिखाने के लिए फ़ोन की सेटिंग में स्थान अनुमति चालू करें।",
+    "openSettings": "सेटिंग खोलें"
   }
 }

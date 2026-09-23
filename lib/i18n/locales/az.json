@@ -73,7 +73,12 @@
     "widgetNext": "Növbəti",
     "widgetHint": "Vidcet əlavə etmək üçün ana ekranda uzun basın.",
     "calcMethod": "Hesablama üsulu",
-    "calcMethodAuto": "Avtomatik"
+    "calcMethodAuto": "Avtomatik",
+    "locationPermission": "Məkan icazəsi",
+    "permissionOn": "Açıq",
+    "permissionOff": "Bağlı",
+    "shareApp": "Tətbiqi paylaş",
+    "shareAppMessage": "🕌 Namaz vaxtları, qiblə, birgə xətm və gündəlik dualar bir tətbiqdə. Pulsuz yüklə:\n{{playStore}}"
   },
   "qibla": {
     "title": "QİBLƏ KOMPASı",
@@ -181,6 +186,9 @@
     "searchDistrict": "Rayon axtar...",
     "useGps": "Məkanımı istifadə et",
     "useGpsHint": "GPS ilə dünyanın hər yerində dəqiq vaxtlar",
-    "turkeyCities": "Türkiyə şəhərləri"
+    "turkeyCities": "Türkiyə şəhərləri",
+    "permissionTitle": "Məkan icazəsi bağlıdır",
+    "permissionBody": "Olduğun yerə görə dəqiq vaxtları göstərmək üçün telefon ayarlarında məkan icazəsini aç.",
+    "openSettings": "Ayarları aç"
   }
 }

@@ -73,7 +73,12 @@
     "widgetNext": "次へ",
     "widgetHint": "ホーム画面を長押ししてウィジェットを追加できます。",
     "calcMethod": "計算方法",
-    "calcMethodAuto": "自動"
+    "calcMethodAuto": "自動",
+    "locationPermission": "位置情報へのアクセス",
+    "permissionOn": "オン",
+    "permissionOff": "オフ",
+    "shareApp": "アプリを共有",
+    "shareAppMessage": "🕌 礼拝時刻、キブラ、みんなでのクルアーン読誦、毎日のドゥアをひとつのアプリで。無料ダウンロード：\n{{playStore}}"
   },
   "common": {
     "cancel": "キャンセル",
@@ -181,6 +186,9 @@
     "searchDistrict": "地区を検索...",
     "useGps": "現在地を使用",
     "useGpsHint": "GPSで世界中どこでも正確な時刻",
-    "turkeyCities": "トルコの都市"
+    "turkeyCities": "トルコの都市",
+    "permissionTitle": "位置情報へのアクセスがオフです",
+    "permissionBody": "現在地に合わせた正確な時刻を表示するには、端末の設定で位置情報へのアクセスをオンにしてください。",
+    "openSettings": "設定を開く"
   }
 }

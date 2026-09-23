@@ -73,7 +73,12 @@
     "widgetNext": "بعدی",
     "widgetHint": "برای افزودن ویجت روی صفحه اصلی نگه دارید.",
     "calcMethod": "روش محاسبه",
-    "calcMethodAuto": "خودکار"
+    "calcMethodAuto": "خودکار",
+    "locationPermission": "دسترسی به موقعیت",
+    "permissionOn": "روشن",
+    "permissionOff": "خاموش",
+    "shareApp": "اشتراک‌گذاری برنامه",
+    "shareAppMessage": "🕌 اوقات نماز، قبله، ختم گروهی قرآن و دعاهای روزانه در یک برنامه. رایگان دانلود کنید:\n{{playStore}}"
   },
   "qibla": {
     "title": "قبله‌نما",
@@ -181,6 +186,9 @@
     "searchDistrict": "جستجوی منطقه...",
     "useGps": "استفاده از موقعیت من",
     "useGpsHint": "اوقات دقیق در هر نقطه از جهان با GPS",
-    "turkeyCities": "شهرهای ترکیه"
+    "turkeyCities": "شهرهای ترکیه",
+    "permissionTitle": "دسترسی به موقعیت خاموش است",
+    "permissionBody": "برای نمایش اوقات دقیق بر اساس محل شما، دسترسی به موقعیت را در تنظیمات گوشی روشن کنید.",
+    "openSettings": "باز کردن تنظیمات"
   }
 }

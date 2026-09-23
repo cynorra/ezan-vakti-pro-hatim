@@ -88,7 +88,12 @@
     "widgetNext": "التالي",
     "widgetHint": "اضغط مع الاستمرار على الشاشة الرئيسية لإضافة الويدجت.",
     "calcMethod": "طريقة الحساب",
-    "calcMethodAuto": "تلقائي"
+    "calcMethodAuto": "تلقائي",
+    "locationPermission": "إذن الموقع",
+    "permissionOn": "مفعّل",
+    "permissionOff": "متوقف",
+    "shareApp": "شارك التطبيق",
+    "shareAppMessage": "🕌 مواقيت الصلاة والقبلة والختمة الجماعية والأدعية اليومية في تطبيق واحد. حمّله مجاناً:\n{{playStore}}"
   },
   "qibla": {
     "title": "بوصلة القبلة",
@@ -181,6 +186,9 @@
     "searchDistrict": "ابحث عن منطقة...",
     "useGps": "استخدم موقعي",
     "useGpsHint": "أوقات دقيقة في أي مكان في العالم عبر GPS",
-    "turkeyCities": "مدن تركيا"
+    "turkeyCities": "مدن تركيا",
+    "permissionTitle": "إذن الموقع متوقف",
+    "permissionBody": "لعرض أوقات دقيقة حسب مكانك، فعّل إذن الموقع من إعدادات الهاتف.",
+    "openSettings": "فتح الإعدادات"
   }
 }

@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Linking } from 'react-native';
 import * as Location from 'expo-location';
 import { getLocales } from 'expo-localization';
 import { turkishCities, City } from './data/cities';
@@ -90,6 +91,24 @@ export function getDeviceRegion(): string | null {
   } catch {
     return null;
   }
+}
+
+export type LocationPermissionState = 'granted' | 'undetermined' | 'denied' | 'blocked';
+
+/** 'blocked' means the OS will no longer show the dialog ("don't ask again"). */
+export async function getLocationPermissionState(): Promise<LocationPermissionState> {
+  try {
+    const { status, canAskAgain } = await Location.getForegroundPermissionsAsync();
+    if (status === 'granted') return 'granted';
+    if (!canAskAgain) return 'blocked';
+    return status === 'undetermined' ? 'undetermined' : 'denied';
+  } catch {
+    return 'undetermined';
+  }
+}
+
+export function openAppSettings(): void {
+  Linking.openSettings().catch(() => {});
 }
 
 function nearestTurkishCity(latitude: number, longitude: number): City {

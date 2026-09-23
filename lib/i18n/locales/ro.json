@@ -73,7 +73,12 @@
     "widgetNext": "Următor",
     "widgetHint": "Apăsați lung pe ecranul principal pentru a adăuga widget-ul.",
     "calcMethod": "Metodă de calcul",
-    "calcMethodAuto": "Automat"
+    "calcMethodAuto": "Automat",
+    "locationPermission": "Acces la locație",
+    "permissionOn": "Activat",
+    "permissionOff": "Dezactivat",
+    "shareApp": "Distribuie aplicația",
+    "shareAppMessage": "🕌 Orele de rugăciune, qibla, citirea colectivă a Coranului și dua zilnice într-o singură aplicație. Descarcă gratuit:\n{{playStore}}"
   },
   "qibla": {
     "title": "BUSOLA QIBLA",
@@ -181,6 +186,9 @@
     "searchDistrict": "Caută district...",
     "useGps": "Folosește locația mea",
     "useGpsHint": "Ore exacte oriunde în lume prin GPS",
-    "turkeyCities": "Orașe din Turcia"
+    "turkeyCities": "Orașe din Turcia",
+    "permissionTitle": "Accesul la locație este dezactivat",
+    "permissionBody": "Pentru a afișa ore exacte pentru locul în care te afli, activează accesul la locație din setările telefonului.",
+    "openSettings": "Deschide setările"
   }
 }

@@ -73,7 +73,12 @@
     "widgetNext": "Weiter",
     "widgetHint": "Tippe und halte auf deinen Startbildschirm, um das Widget hinzuzufügen.",
     "calcMethod": "Berechnungsmethode",
-    "calcMethodAuto": "Automatisch"
+    "calcMethodAuto": "Automatisch",
+    "locationPermission": "Standortzugriff",
+    "permissionOn": "An",
+    "permissionOff": "Aus",
+    "shareApp": "App teilen",
+    "shareAppMessage": "🕌 Gebetszeiten, Qibla, gemeinsame Koran-Lesung und tägliche Bittgebete in einer App. Kostenlos herunterladen:\n{{playStore}}"
   },
   "common": {
     "cancel": "Abbrechen",
@@ -181,6 +186,9 @@
     "searchDistrict": "Bezirk suchen...",
     "useGps": "Meinen Standort verwenden",
     "useGpsHint": "Genaue Zeiten weltweit per GPS",
-    "turkeyCities": "Städte in der Türkei"
+    "turkeyCities": "Städte in der Türkei",
+    "permissionTitle": "Standortzugriff ist aus",
+    "permissionBody": "Um genaue Zeiten für deinen Standort anzuzeigen, aktiviere den Standortzugriff in den Telefoneinstellungen.",
+    "openSettings": "Einstellungen öffnen"
   }
 }

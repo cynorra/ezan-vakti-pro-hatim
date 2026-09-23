@@ -88,7 +88,12 @@
     "widgetNext": "Next",
     "widgetHint": "Press and hold on your home screen to add the widget.",
     "calcMethod": "Calculation method",
-    "calcMethodAuto": "Automatic"
+    "calcMethodAuto": "Automatic",
+    "locationPermission": "Location access",
+    "permissionOn": "On",
+    "permissionOff": "Off",
+    "shareApp": "Share the App",
+    "shareAppMessage": "🕌 Prayer times, qibla, group Quran completion and daily duas in one app. Download free:\n{{playStore}}"
   },
   "qibla": {
     "title": "QIBLA COMPASS",
@@ -189,6 +194,9 @@
     "searchDistrict": "Search district...",
     "useGps": "Use my location",
     "useGpsHint": "Accurate times anywhere in the world via GPS",
-    "turkeyCities": "Cities in Turkey"
+    "turkeyCities": "Cities in Turkey",
+    "permissionTitle": "Location access is off",
+    "permissionBody": "To show accurate times for where you are, turn on location access in your phone settings.",
+    "openSettings": "Open settings"
   }
 }

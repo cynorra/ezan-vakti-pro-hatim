@@ -73,7 +73,12 @@
     "widgetNext": "Sljedeći",
     "widgetHint": "Pritisnite dugo na početnom ekranu za dodavanje widgeta.",
     "calcMethod": "Metoda izračuna",
-    "calcMethodAuto": "Automatski"
+    "calcMethodAuto": "Automatski",
+    "locationPermission": "Pristup lokaciji",
+    "permissionOn": "Uključeno",
+    "permissionOff": "Isključeno",
+    "shareApp": "Podijeli aplikaciju",
+    "shareAppMessage": "🕌 Vaktija, kibla, zajednička hatma i dnevne dove u jednoj aplikaciji. Preuzmi besplatno:\n{{playStore}}"
   },
   "qibla": {
     "title": "KIBLA KOMPAS",
@@ -181,6 +186,9 @@
     "searchDistrict": "Traži općinu...",
     "useGps": "Koristi moju lokaciju",
     "useGpsHint": "Tačna vremena bilo gdje u svijetu putem GPS-a",
-    "turkeyCities": "Gradovi u Turskoj"
+    "turkeyCities": "Gradovi u Turskoj",
+    "permissionTitle": "Pristup lokaciji je isključen",
+    "permissionBody": "Da bi se prikazala tačna vremena za vaše mjesto, uključite pristup lokaciji u postavkama telefona.",
+    "openSettings": "Otvori postavke"
   }
 }

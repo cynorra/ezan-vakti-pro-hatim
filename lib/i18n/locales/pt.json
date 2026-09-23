@@ -73,7 +73,12 @@
     "widgetNext": "Próximo",
     "widgetHint": "Toque e segure na tela inicial para adicionar o widget.",
     "calcMethod": "Método de cálculo",
-    "calcMethodAuto": "Automático"
+    "calcMethodAuto": "Automático",
+    "locationPermission": "Acesso à localização",
+    "permissionOn": "Ativado",
+    "permissionOff": "Desativado",
+    "shareApp": "Compartilhar o app",
+    "shareAppMessage": "🕌 Horários de oração, qibla, leitura coletiva do Alcorão e duas diárias em um só app. Baixe grátis:\n{{playStore}}"
   },
   "common": {
     "cancel": "Cancelar",
@@ -181,6 +186,9 @@
     "searchDistrict": "Buscar distrito...",
     "useGps": "Usar minha localização",
     "useGpsHint": "Horários precisos em qualquer lugar do mundo via GPS",
-    "turkeyCities": "Cidades da Turquia"
+    "turkeyCities": "Cidades da Turquia",
+    "permissionTitle": "Acesso à localização desativado",
+    "permissionBody": "Para mostrar horários precisos para onde você está, ative o acesso à localização nas configurações do telefone.",
+    "openSettings": "Abrir configurações"
   }
 }

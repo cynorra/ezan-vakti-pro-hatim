@@ -95,7 +95,12 @@
     "widgetNext": "Sıradaki",
     "widgetHint": "Widget'ı eklemek için ana ekranınıza basılı tutun.",
     "calcMethod": "Hesaplama yöntemi",
-    "calcMethodAuto": "Otomatik"
+    "calcMethodAuto": "Otomatik",
+    "locationPermission": "Konum izni",
+    "permissionOn": "Açık",
+    "permissionOff": "Kapalı",
+    "shareApp": "Uygulamayı Paylaş",
+    "shareAppMessage": "🕌 Namaz vakitleri, kıble, ortak hatim ve günlük dualar tek uygulamada. Ücretsiz indir:\n{{playStore}}"
   },
   "qibla": {
     "title": "KIBLE PUSULASI",
@@ -201,6 +206,9 @@
     "searchDistrict": "İlçe ara...",
     "useGps": "Konumumu kullan",
     "useGpsHint": "Dünyanın her yerinde GPS ile doğru vakitler",
-    "turkeyCities": "Türkiye şehirleri"
+    "turkeyCities": "Türkiye şehirleri",
+    "permissionTitle": "Konum izni kapalı",
+    "permissionBody": "Bulunduğun yere göre doğru vakitleri gösterebilmek için telefon ayarlarından konum iznini açman gerekiyor.",
+    "openSettings": "Ayarları aç"
   }
 }

@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { Modal, View, Text, StyleSheet, TouchableOpacity, ScrollView, Pressable, useColorScheme, Switch, FlatList } from 'react-native';
+import { Modal, View, Text, StyleSheet, TouchableOpacity, ScrollView, Pressable, useColorScheme, Switch, FlatList, AppState, Linking, Share } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows } from '@/constants/theme';
+import Constants from 'expo-constants';
+import { PLAY_STORE_URL, recordGrowthShare } from '@/lib/rewards';
 import { CALCULATION_METHODS, CALCULATION_METHOD_IDS, CalculationMethodId } from '@/lib/prayer-times';
-import type { MethodSetting } from '@/lib/location-settings';
+import {
+  getLocationPermissionState,
+  openAppSettings,
+  type LocationPermissionState,
+  type MethodSetting,
+} from '@/lib/location-settings';
 
 const LANGUAGES = [
   { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
@@ -68,6 +75,17 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   const [reminderTime, setReminderTime] = useState('15 dk önce');
   const [showLangPicker, setShowLangPicker] = useState(false);
   const [showMethodPicker, setShowMethodPicker] = useState(false);
+  const [locationPermission, setLocationPermission] = useState<LocationPermissionState>('undetermined');
+
+  // Re-check when the modal opens and when returning from the system settings.
+  useEffect(() => {
+    if (!visible) return;
+    getLocationPermissionState().then(setLocationPermission);
+    const sub = AppState.addEventListener('change', (state) => {
+      if (state === 'active') getLocationPermissionState().then(setLocationPermission);
+    });
+    return () => sub.remove();
+  }, [visible]);
   const [prayerNotifications, setPrayerNotifications] = useState({
     fajr: true,
     sunrise: false,
@@ -103,6 +121,20 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   const saveSetting = async (key: string, value: string) => {
     try {
       await AsyncStorage.setItem(key, value);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  const handleRateApp = () => {
+    // Opens the Play Store app directly; falls back to the web listing.
+    Linking.openURL('market://details?id=com.cynnora.ezanvakti').catch(() => Linking.openURL(PLAY_STORE_URL));
+  };
+
+  const handleShareApp = async () => {
+    try {
+      await Share.share({ message: t('settings.shareAppMessage', { playStore: PLAY_STORE_URL }) });
+      await recordGrowthShare();
     } catch (e) {
       console.error(e);
     }
@@ -192,6 +224,12 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   onPress={() => setShowMethodPicker(true)}
                 />
                 <SettingRow
+                  icon="location-outline"
+                  label={t('settings.locationPermission')}
+                  value={locationPermission === 'granted' ? t('settings.permissionOn') : t('settings.permissionOff')}
+                  onPress={openAppSettings}
+                />
+                <SettingRow
                   icon="volume-high-outline"
                   label={t('settings.sound')}
                   value={ezanSound}
@@ -228,9 +266,10 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
 
               <View style={styles.section}>
                 <Text style={[styles.sectionTitle, { color: colors.primary }]}>{t('settings.support')}</Text>
-                <SettingRow icon="star-outline" label={t('settings.rateApp')} />
+                <SettingRow icon="share-social-outline" label={t('settings.shareApp')} onPress={handleShareApp} />
+                <SettingRow icon="star-outline" label={t('settings.rateApp')} onPress={handleRateApp} />
                 <SettingRow icon="mail-outline" label={t('settings.feedback')} />
-                <SettingRow icon="information-circle-outline" label={t('settings.about')} value="v1.0.2" />
+                <SettingRow icon="information-circle-outline" label={t('settings.about')} value={`v${Constants.expoConfig?.version ?? ''}`} />
               </View>
 
               <Text style={[styles.sectionTitle, { color: colors.textSecondary }]}>{t('settings.widgetPreview')}</Text>

@@ -73,7 +73,12 @@
     "widgetNext": "اگلا",
     "widgetHint": "وجٹ شامل کرنے کے لیے ہوم اسکرین پر دبا کر رکھیں۔",
     "calcMethod": "حساب کا طریقہ",
-    "calcMethodAuto": "خودکار"
+    "calcMethodAuto": "خودکار",
+    "locationPermission": "مقام کی اجازت",
+    "permissionOn": "آن",
+    "permissionOff": "بند",
+    "shareApp": "ایپ شیئر کریں",
+    "shareAppMessage": "🕌 نماز کے اوقات، قبلہ، اجتماعی ختمِ قرآن اور روزانہ دعائیں ایک ہی ایپ میں۔ مفت ڈاؤن لوڈ کریں:\n{{playStore}}"
   },
   "common": {
     "cancel": "منسوخ کریں",
@@ -181,6 +186,9 @@
     "searchDistrict": "ضلع تلاش کریں...",
     "useGps": "میرا مقام استعمال کریں",
     "useGpsHint": "GPS کے ذریعے دنیا بھر میں درست اوقات",
-    "turkeyCities": "ترکی کے شہر"
+    "turkeyCities": "ترکی کے شہر",
+    "permissionTitle": "مقام کی اجازت بند ہے",
+    "permissionBody": "آپ کے مقام کے مطابق درست اوقات دکھانے کے لیے فون کی ترتیبات میں مقام کی اجازت آن کریں۔",
+    "openSettings": "ترتیبات کھولیں"
   }
 }

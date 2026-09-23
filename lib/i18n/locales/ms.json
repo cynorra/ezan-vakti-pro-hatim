@@ -73,7 +73,12 @@
     "widgetNext": "Seterusnya",
     "widgetHint": "Tekan lama pada skrin utama untuk menambah widget.",
     "calcMethod": "Kaedah pengiraan",
-    "calcMethodAuto": "Automatik"
+    "calcMethodAuto": "Automatik",
+    "locationPermission": "Akses lokasi",
+    "permissionOn": "Hidup",
+    "permissionOff": "Mati",
+    "shareApp": "Kongsi Aplikasi",
+    "shareAppMessage": "🕌 Waktu solat, kiblat, khatam al-Quran bersama dan doa harian dalam satu aplikasi. Muat turun percuma:\n{{playStore}}"
   },
   "qibla": {
     "title": "KOMPAS KIBLAT",
@@ -181,6 +186,9 @@
     "searchDistrict": "Cari daerah...",
     "useGps": "Guna lokasi saya",
     "useGpsHint": "Waktu solat tepat di mana-mana melalui GPS",
-    "turkeyCities": "Bandar di Turki"
+    "turkeyCities": "Bandar di Turki",
+    "permissionTitle": "Akses lokasi dimatikan",
+    "permissionBody": "Untuk memaparkan waktu solat yang tepat mengikut lokasi anda, hidupkan akses lokasi dalam tetapan telefon.",
+    "openSettings": "Buka tetapan"
   }
 }

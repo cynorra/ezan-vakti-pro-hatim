@@ -73,7 +73,12 @@
     "widgetNext": "Nästa",
     "widgetHint": "Tryck och håll på hemskärmen för att lägga till widgeten.",
     "calcMethod": "Beräkningsmetod",
-    "calcMethodAuto": "Automatisk"
+    "calcMethodAuto": "Automatisk",
+    "locationPermission": "Platsåtkomst",
+    "permissionOn": "På",
+    "permissionOff": "Av",
+    "shareApp": "Dela appen",
+    "shareAppMessage": "🕌 Bönetider, qibla, gemensam koranläsning och dagliga duas i en app. Ladda ner gratis:\n{{playStore}}"
   },
   "common": {
     "cancel": "Avbryt",
@@ -181,6 +186,9 @@
     "searchDistrict": "Sök distrikt...",
     "useGps": "Använd min plats",
     "useGpsHint": "Exakta tider var som helst i världen via GPS",
-    "turkeyCities": "Städer i Turkiet"
+    "turkeyCities": "Städer i Turkiet",
+    "permissionTitle": "Platsåtkomst är av",
+    "permissionBody": "Aktivera platsåtkomst i telefonens inställningar för att visa exakta tider där du är.",
+    "openSettings": "Öppna inställningar"
   }
 }

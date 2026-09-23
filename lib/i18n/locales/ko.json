@@ -73,7 +73,12 @@
     "widgetNext": "다음",
     "widgetHint": "홈 화면을 길게 눌러 위젯을 추가하세요.",
     "calcMethod": "계산 방법",
-    "calcMethodAuto": "자동"
+    "calcMethodAuto": "자동",
+    "locationPermission": "위치 권한",
+    "permissionOn": "켜짐",
+    "permissionOff": "꺼짐",
+    "shareApp": "앱 공유하기",
+    "shareAppMessage": "🕌 기도 시간, 키블라, 함께하는 꾸란 완독, 매일의 두아를 하나의 앱에서. 무료 다운로드:\n{{playStore}}"
   },
   "common": {
     "cancel": "취소",
@@ -181,6 +186,9 @@
     "searchDistrict": "지역 검색...",
     "useGps": "내 위치 사용",
     "useGpsHint": "GPS로 전 세계 어디서나 정확한 시간",
-    "turkeyCities": "터키 도시"
+    "turkeyCities": "터키 도시",
+    "permissionTitle": "위치 권한이 꺼져 있습니다",
+    "permissionBody": "현재 위치에 맞는 정확한 시간을 표시하려면 휴대폰 설정에서 위치 권한을 켜 주세요.",
+    "openSettings": "설정 열기"
   }
 }

@@ -73,7 +73,12 @@
     "widgetNext": "Keyingi",
     "widgetHint": "Vidjet qo'shish uchun asosiy ekranda ushlab turing.",
     "calcMethod": "Hisoblash usuli",
-    "calcMethodAuto": "Avtomatik"
+    "calcMethodAuto": "Avtomatik",
+    "locationPermission": "Joylashuvga ruxsat",
+    "permissionOn": "Yoqilgan",
+    "permissionOff": "O'chirilgan",
+    "shareApp": "Ilovani ulashish",
+    "shareAppMessage": "🕌 Namoz vaqtlari, qibla, birgalikda xatm va kundalik duolar bitta ilovada. Bepul yuklab oling:\n{{playStore}}"
   },
   "qibla": {
     "title": "QIBLA KOMPASI",
@@ -181,6 +186,9 @@
     "searchDistrict": "Tuman qidirish...",
     "useGps": "Joylashuvimdan foydalanish",
     "useGpsHint": "GPS orqali dunyoning istalgan joyida aniq vaqtlar",
-    "turkeyCities": "Turkiya shaharlari"
+    "turkeyCities": "Turkiya shaharlari",
+    "permissionTitle": "Joylashuvga ruxsat o'chirilgan",
+    "permissionBody": "Joylashuvingiz bo'yicha aniq vaqtlarni ko'rsatish uchun telefon sozlamalarida joylashuvga ruxsatni yoqing.",
+    "openSettings": "Sozlamalarni ochish"
   }
 }

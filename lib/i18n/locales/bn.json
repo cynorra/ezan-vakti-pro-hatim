@@ -73,7 +73,12 @@
     "widgetNext": "পরবর্তী",
     "widgetHint": "উইজেট যোগ করতে হোম স্ক্রিনে চেপে ধরে রাখুন।",
     "calcMethod": "গণনা পদ্ধতি",
-    "calcMethodAuto": "স্বয়ংক্রিয়"
+    "calcMethodAuto": "স্বয়ংক্রিয়",
+    "locationPermission": "অবস্থানের অনুমতি",
+    "permissionOn": "চালু",
+    "permissionOff": "বন্ধ",
+    "shareApp": "অ্যাপ শেয়ার করুন",
+    "shareAppMessage": "🕌 নামাজের সময়, কিবলা, সম্মিলিত খতম ও দৈনিক দোয়া এক অ্যাপে। বিনামূল্যে ডাউনলোড করুন:\n{{playStore}}"
   },
   "common": {
     "cancel": "বাতিল",
@@ -181,6 +186,9 @@
     "searchDistrict": "এলাকা খুঁজুন...",
     "useGps": "আমার অবস্থান ব্যবহার করুন",
     "useGpsHint": "GPS-এর মাধ্যমে বিশ্বের যেকোনো স্থানে সঠিক সময়",
-    "turkeyCities": "তুরস্কের শহর"
+    "turkeyCities": "তুরস্কের শহর",
+    "permissionTitle": "অবস্থানের অনুমতি বন্ধ",
+    "permissionBody": "আপনার অবস্থান অনুযায়ী সঠিক সময় দেখাতে ফোনের সেটিংসে অবস্থানের অনুমতি চালু করুন।",
+    "openSettings": "সেটিংস খুলুন"
   }
 }

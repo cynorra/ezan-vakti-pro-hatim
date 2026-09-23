@@ -73,7 +73,12 @@
     "widgetNext": "Következő",
     "widgetHint": "Nyomja hosszan a főképernyőt a widget hozzáadásához.",
     "calcMethod": "Számítási módszer",
-    "calcMethodAuto": "Automatikus"
+    "calcMethodAuto": "Automatikus",
+    "locationPermission": "Helyhozzáférés",
+    "permissionOn": "Be",
+    "permissionOff": "Ki",
+    "shareApp": "Alkalmazás megosztása",
+    "shareAppMessage": "🕌 Imaidők, kibla, közös Korán-olvasás és napi duák egy alkalmazásban. Töltsd le ingyen:\n{{playStore}}"
   },
   "qibla": {
     "title": "KIBLA IRÁNYTŰ",
@@ -181,6 +186,9 @@
     "searchDistrict": "Kerület keresése...",
     "useGps": "Saját helyzetem használata",
     "useGpsHint": "Pontos idők a világ bármely pontján GPS-szel",
-    "turkeyCities": "Törökországi városok"
+    "turkeyCities": "Törökországi városok",
+    "permissionTitle": "A helymeghatározás ki van kapcsolva",
+    "permissionBody": "A tartózkodási helyednek megfelelő pontos időkhöz kapcsold be a helyhozzáférést a telefon beállításaiban.",
+    "openSettings": "Beállítások megnyitása"
   }
 }
