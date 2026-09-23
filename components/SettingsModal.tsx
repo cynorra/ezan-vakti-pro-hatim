@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Modal, View, Text, StyleSheet, TouchableOpacity, ScrollView, Pressable, useColorScheme, Switch, FlatList, AppState, Linking, Share } from 'react-native';
+import { Modal, View, Text, StyleSheet, TouchableOpacity, ScrollView, Pressable, useColorScheme, Switch, FlatList, AppState, Linking, Share, Platform } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Ionicons } from '@expo/vector-icons';
@@ -14,6 +14,8 @@ import {
   type LocationPermissionState,
   type MethodSetting,
 } from '@/lib/location-settings';
+
+const FEEDBACK_EMAIL = 'eren.gp54@gmail.com';
 
 const LANGUAGES = [
   { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
@@ -129,6 +131,12 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   const handleRateApp = () => {
     // Opens the Play Store app directly; falls back to the web listing.
     Linking.openURL('market://details?id=com.cynnora.ezanvakti').catch(() => Linking.openURL(PLAY_STORE_URL));
+  };
+
+  const handleFeedback = () => {
+    // App version + OS in the subject make bug reports actionable.
+    const subject = `Ezan Vakti Pro+ v${Constants.expoConfig?.version ?? ''} (${Platform.OS} ${Platform.Version}, ${i18n.language})`;
+    Linking.openURL(`mailto:${FEEDBACK_EMAIL}?subject=${encodeURIComponent(subject)}`).catch(() => {});
   };
 
   const handleShareApp = async () => {
@@ -268,7 +276,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 <Text style={[styles.sectionTitle, { color: colors.primary }]}>{t('settings.support')}</Text>
                 <SettingRow icon="share-social-outline" label={t('settings.shareApp')} onPress={handleShareApp} />
                 <SettingRow icon="star-outline" label={t('settings.rateApp')} onPress={handleRateApp} />
-                <SettingRow icon="mail-outline" label={t('settings.feedback')} />
+                <SettingRow icon="mail-outline" label={t('settings.feedback')} onPress={handleFeedback} />
                 <SettingRow icon="information-circle-outline" label={t('settings.about')} value={`v${Constants.expoConfig?.version ?? ''}`} />
               </View>
 
