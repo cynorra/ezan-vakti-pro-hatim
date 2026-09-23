@@ -19,6 +19,7 @@ import * as Haptics from 'expo-haptics';
 import { safeHaptics } from '@/lib/haptics';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { calculatePrayerTimes, PrayerTimes } from '@/lib/prayer-times';
+import { logEvent } from '@/lib/analytics';
 import {
   DEFAULT_LOCATION,
   SavedLocation,
@@ -95,6 +96,8 @@ export default function HomeScreen() {
         const located = await locateWithGps({ prompt });
         if (located) {
           applyLocation(located);
+          // Silent launch refreshes are not a user action; don't count them.
+          if (prompt) logEvent('location_set', { source: 'gps', country: located.countryCode });
           return;
         }
         // "Don't ask again" makes the system dialog silent; send the user to
@@ -189,6 +192,8 @@ export default function HomeScreen() {
       const granted = await requestNotificationPermissions();
       if (granted) {
         setNotificationsEnabled(true);
+        // Strong engagement signal; used as the Google Ads in-app conversion.
+        logEvent('prayer_notifications_enabled', { country: location.countryCode });
         if (prayerTimes) {
           await scheduleAllPrayers(prayerTimes, `${selectedCity.name} / ${selectedDistrict}`);
         }
@@ -446,6 +451,7 @@ export default function HomeScreen() {
         onClose={() => setShowCitySelector(false)}
         onSelect={(city, district) => {
           applyLocation(turkishCityLocation(city, district));
+          logEvent('location_set', { source: 'manual', country: 'TR' });
           setShowCitySelector(false);
         }}
         onUseGps={() => {
