@@ -23,7 +23,6 @@ import {
   DEFAULT_LOCATION,
   SavedLocation,
   MethodSetting,
-  getDeviceRegion,
   loadMethodSetting,
   loadSavedLocation,
   locateWithGps,
@@ -88,25 +87,31 @@ export default function HomeScreen() {
     saveLocation(next);
   }, []);
 
-  const handleLocationPress = useCallback(async () => {
-    try {
-      const located = await locateWithGps();
-      if (located) applyLocation(located);
-    } catch (error) {
-      console.log('Location error:', error);
-    }
-  }, [applyLocation]);
+  const handleLocationPress = useCallback(
+    async (prompt = true) => {
+      try {
+        const located = await locateWithGps({ prompt });
+        if (located) applyLocation(located);
+      } catch (error) {
+        console.log('Location error:', error);
+      }
+    },
+    [applyLocation]
+  );
 
-  // Restore the saved location/method; on first launch outside Turkey, locate
-  // by GPS instead of silently showing Istanbul times.
+  // Start from the user's real position: first launch asks for permission,
+  // later launches silently refresh GPS-based locations (travel). A city the
+  // user picked by hand is kept as-is.
   useEffect(() => {
     (async () => {
       setMethodSetting(await loadMethodSetting());
       const saved = await loadSavedLocation();
-      if (saved) {
-        setLocation(saved);
-      } else if (Platform.OS !== 'web' && getDeviceRegion() !== 'TR') {
-        handleLocationPress();
+      if (saved) setLocation(saved);
+      if (Platform.OS === 'web') return;
+      if (!saved) {
+        handleLocationPress(true);
+      } else if (saved.source !== 'manual') {
+        handleLocationPress(false);
       }
     })();
   }, [handleLocationPress]);
@@ -248,7 +253,7 @@ export default function HomeScreen() {
           </TouchableOpacity>
 
           <View style={styles.headerActions}>
-            <TouchableOpacity onPress={handleLocationPress} style={styles.actionIcon}>
+            <TouchableOpacity onPress={() => handleLocationPress()} style={styles.actionIcon}>
               <Ionicons name="navigate-circle" size={28} color="#fff" />
             </TouchableOpacity>
             <TouchableOpacity onPress={() => setShowSettings(true)} style={styles.actionIcon}>

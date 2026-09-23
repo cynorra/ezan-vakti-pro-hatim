@@ -20,6 +20,8 @@ export interface SavedLocation {
   countryCode: string;
   /** Fixed UTC offset for the place; unset means "use the device timezone". */
   timezone?: number;
+  /** 'gps' locations are refreshed on every launch; 'manual' picks are kept as-is. */
+  source?: 'gps' | 'manual';
 }
 
 // Turkey has been on permanent UTC+3 since 2016, so Turkish cities keep correct
@@ -33,12 +35,17 @@ export const DEFAULT_LOCATION: SavedLocation = {
   timezone: TURKEY_UTC_OFFSET,
 };
 
-export function turkishCityLocation(city: City, district?: string): SavedLocation {
+export function turkishCityLocation(
+  city: City,
+  district?: string,
+  source: SavedLocation['source'] = 'manual'
+): SavedLocation {
   return {
     city,
     district: district || city.districts[0] || 'Merkez',
     countryCode: 'TR',
     timezone: TURKEY_UTC_OFFSET,
+    source,
   };
 }
 
@@ -101,13 +108,19 @@ function nearestTurkishCity(latitude: number, longitude: number): City {
 /**
  * Resolves the device's GPS position. Inside Turkey it snaps to the Diyanet
  * city/district list; anywhere else it keeps the exact coordinates.
+ * With prompt=false it never shows the permission dialog (silent refresh).
  * Returns null when permission is denied or the position is unavailable.
  */
-export async function locateWithGps(): Promise<SavedLocation | null> {
-  const { status } = await Location.requestForegroundPermissionsAsync();
-  if (status !== 'granted') return null;
+export async function locateWithGps({ prompt = true }: { prompt?: boolean } = {}): Promise<SavedLocation | null> {
+  const permission = prompt
+    ? await Location.requestForegroundPermissionsAsync()
+    : await Location.getForegroundPermissionsAsync();
+  if (permission.status !== 'granted') return null;
 
-  const position = await Location.getCurrentPositionAsync({ accuracy: Location.Accuracy.Balanced });
+  // A recent cached fix makes launch fast; fall back to a fresh reading.
+  const position =
+    (await Location.getLastKnownPositionAsync({ maxAge: 30 * 60 * 1000 }).catch(() => null)) ??
+    (await Location.getCurrentPositionAsync({ accuracy: Location.Accuracy.Balanced }));
   const { latitude, longitude } = position.coords;
 
   let place: Location.LocationGeocodedAddress | undefined;
@@ -124,7 +137,7 @@ export async function locateWithGps(): Promise<SavedLocation | null> {
       city.districts.find((d) => d.toLocaleLowerCase('tr') === districtCandidate.toLocaleLowerCase('tr')) ??
       city.districts[0] ??
       'Merkez';
-    return turkishCityLocation(city, district);
+    return turkishCityLocation(city, district, 'gps');
   }
 
   const cityName = place?.city ?? place?.subregion ?? place?.region ?? `${latitude.toFixed(2)}, ${longitude.toFixed(2)}`;
@@ -132,5 +145,6 @@ export async function locateWithGps(): Promise<SavedLocation | null> {
     city: { id: 'gps', name: cityName, latitude, longitude, districts: [] },
     district: [place?.region, place?.country].filter((part) => part && part !== cityName).join(', '),
     countryCode,
+    source: 'gps',
   };
 }
