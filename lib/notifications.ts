@@ -5,6 +5,8 @@ import { getDailyDua, localizeDua } from './data/duas';
 import { getDailyHealingVerse, localizeVerse } from './data/quran-verses';
 import { getCurrentStreak } from './streak';
 import i18n from './i18n';
+import type { PrayerTimes } from './prayer-times';
+import { localDateKey, localWeekStartKey } from './date-keys';
 
 // SettingsModal, her namaz için ayrı aç/kapa tercihini bu anahtar altında saklıyor
 // (fajr/sunrise/dhuhr/asr/maghrib/isha). Türkçe vakit adları burada dahili anahtar
@@ -116,70 +118,77 @@ export async function hasNotificationPermission() {
   return status === 'granted';
 }
 
+// Settings stores labels like "Kapalı", "5 dk önce", "10 dk önce", "15 dk önce", "30 dk önce".
 async function getReminderMinutes(): Promise<number> {
   try {
     const raw = await AsyncStorage.getItem('reminder_time');
     if (!raw) return 15;
-    if (raw.includes('30')) return 30;
-    if (raw.includes('45')) return 45;
-    if (raw.includes('Tam')) return 0;
-    return 15;
+    const minutes = parseInt(raw.match(/\d+/)?.[0] ?? '', 10);
+    return Number.isFinite(minutes) ? minutes : 0; // "Kapalı" (off) has no number
   } catch {
     return 15;
   }
 }
 
-export async function schedulePrayerNotification(
-  prayerName: string,
-  timeStr: string,
-  city: string
-) {
-  if (Platform.OS === 'web') return;
+/** Schedules one notification; a failure is logged instead of aborting the others. */
+async function safeSchedule(request: Notifications.NotificationRequestInput) {
+  try {
+    await Notifications.scheduleNotificationAsync(request);
+  } catch (error) {
+    console.warn(`[notifications] could not schedule ${request.identifier}:`, error);
+  }
+}
 
-  const [hours, minutes] = timeStr.split(':').map(Number);
+/**
+ * "HH:MM" on `day` at the prayer location, as an absolute Date. `timezone` is the
+ * location's UTC offset in hours (Turkish cities are fixed at +3); undefined means
+ * the device timezone.
+ */
+function prayerDate(day: Date, time: string, timezone?: number): Date | null {
+  if (!/^\d{2}:\d{2}$/.test(time)) return null; // "--:--" at extreme latitudes
+  const [hours, minutes] = time.split(':').map(Number);
+  if (timezone === undefined) {
+    return new Date(day.getFullYear(), day.getMonth(), day.getDate(), hours, minutes, 0, 0);
+  }
+  return new Date(Date.UTC(day.getFullYear(), day.getMonth(), day.getDate(), hours, minutes) - timezone * 3600_000);
+}
+
+async function schedulePrayerNotification(
+  prayerName: string,
+  at: Date,
+  city: string,
+  reminderMins: number,
+  sound: string | true
+) {
   const i18nKey = PRAYER_NAME_TO_I18N_KEY[prayerName];
   const displayName = i18nKey ? i18n.t(`prayerTimes.${i18nKey}`) : prayerName;
-  const sound = await getPrayerNotificationSound();
+  const dayKey = `${at.getFullYear()}-${at.getMonth() + 1}-${at.getDate()}`;
+  const now = Date.now();
 
-  // Vakit anı bildirimi
-  await Notifications.scheduleNotificationAsync({
-    identifier: `${PRAYER_PREFIX}${prayerName}`,
-    content: {
-      title: i18n.t('notifications.prayerTitle', { prayer: displayName }),
-      body: i18n.t('notifications.prayerBody', { prayer: displayName, city }),
-      sound,
-      data: { screen: 'home', prayerName, city },
-    },
-    trigger: {
-      hour: hours,
-      minute: minutes,
-      repeats: true,
-    } as any,
-  });
+  if (at.getTime() > now) {
+    await safeSchedule({
+      identifier: `${PRAYER_PREFIX}${dayKey}-${prayerName}`,
+      content: {
+        title: i18n.t('notifications.prayerTitle', { prayer: displayName }),
+        body: i18n.t('notifications.prayerBody', { prayer: displayName, city }),
+        sound,
+        data: { screen: 'home', prayerName, city },
+      },
+      trigger: { type: Notifications.SchedulableTriggerInputTypes.DATE, date: at },
+    });
+  }
 
-  // Vakit öncesi hatırlatıcı
-  const reminderMins = await getReminderMinutes();
-  if (reminderMins > 0) {
-    let preMinute = minutes - reminderMins;
-    let preHour = hours;
-    if (preMinute < 0) {
-      preMinute += 60;
-      preHour = (preHour - 1 + 24) % 24;
-    }
-
-    await Notifications.scheduleNotificationAsync({
-      identifier: `${PRAYER_PREFIX}pre-${prayerName}`,
+  const reminderAt = new Date(at.getTime() - reminderMins * 60_000);
+  if (reminderMins > 0 && reminderAt.getTime() > now) {
+    await safeSchedule({
+      identifier: `${PRAYER_PREFIX}pre-${dayKey}-${prayerName}`,
       content: {
         title: i18n.t('notifications.prayerPreReminderTitle', { prayer: displayName, minutes: reminderMins }),
         body: i18n.t('notifications.prayerPreReminderBody', { prayer: displayName, city, minutes: reminderMins }),
         sound: true,
         data: { screen: 'home', prayerName, city },
       },
-      trigger: {
-        hour: preHour,
-        minute: preMinute,
-        repeats: true,
-      } as any,
+      trigger: { type: Notifications.SchedulableTriggerInputTypes.DATE, date: reminderAt },
     });
   }
 }
@@ -221,7 +230,7 @@ export async function scheduleDailyDuaReminders() {
 
     const dua = localizeDua(getDailyDua(targetDate), i18n.language);
     await Notifications.scheduleNotificationAsync({
-      identifier: `${DAILY_DUA_PREFIX}${targetDate.toISOString().slice(0, 10)}`,
+      identifier: `${DAILY_DUA_PREFIX}${localDateKey(targetDate)}`,
       content: {
         title: i18n.t('notifications.dailyDuaTitle'),
         body: i18n.t('notifications.dailyDuaBody', { title: dua.title }),
@@ -256,7 +265,7 @@ export async function scheduleDailyVerseReminders() {
 
     const verse = getDailyHealingVerse(targetDate);
     await Notifications.scheduleNotificationAsync({
-      identifier: `${DAILY_VERSE_PREFIX}${targetDate.toISOString().slice(0, 10)}`,
+      identifier: `${DAILY_VERSE_PREFIX}${localDateKey(targetDate)}`,
       content: {
         title: i18n.t('notifications.verseTitle') || '📖 Şifa & Huzur Ayeti',
         body: (({ text, surah }) => `"${text}" — ${surah}, ${verse.verseNumber} ✨`)(localizeVerse(verse, i18n.language)),
@@ -269,11 +278,7 @@ export async function scheduleDailyVerseReminders() {
 }
 
 function getWeekStartISO(date = new Date()) {
-  const d = new Date(date);
-  const dayOfWeek = d.getDay();
-  const diff = d.getDate() - dayOfWeek + (dayOfWeek === 0 ? -6 : 1);
-  const monday = new Date(d.setDate(diff));
-  return monday.toISOString().split('T')[0];
+  return localWeekStartKey(date);
 }
 
 // Sabit dönen mesajlar yerine gerçek ilerlemeye bakar: bu hafta hiç cüz işlenmemişse,
@@ -328,7 +333,7 @@ export async function scheduleEveningEngagementReminder() {
       body: message,
       sound: true,
     },
-    trigger: { hour: 20, minute: 30, repeats: true } as any,
+    trigger: { type: Notifications.SchedulableTriggerInputTypes.DAILY, hour: 20, minute: 30 },
   });
 }
 
@@ -348,11 +353,11 @@ export async function scheduleFridayReminder() {
       data: { screen: 'dua' },
     },
     trigger: {
+      type: Notifications.SchedulableTriggerInputTypes.WEEKLY,
       weekday: 6, // Cuma (1 = Pazar, 6 = Cuma)
       hour: 10,
       minute: 0,
-      repeats: true,
-    } as any,
+    },
   });
 }
 
@@ -372,41 +377,63 @@ export async function scheduleMiddayInspirationReminder() {
       data: { screen: 'tesbih' },
     },
     trigger: {
+      type: Notifications.SchedulableTriggerInputTypes.DAILY,
       hour: 14,
       minute: 15,
-      repeats: true,
-    } as any,
+    },
   });
 }
 
-export async function scheduleAllPrayers(prayerTimes: any, city: string) {
+// Prayer times shift every day, so one repeating "daily at HH:MM" notification drifts
+// (by ~30 min over a month). Each of the next days gets its own dated notification;
+// opening the app reschedules the window. iOS allows only 64 pending notifications.
+const PRAYER_DAYS_AHEAD = Platform.OS === 'ios' ? 3 : 7;
+
+export async function scheduleAllPrayers(
+  getTimes: (date: Date) => PrayerTimes,
+  city: string,
+  timezone?: number
+) {
   if (Platform.OS === 'web') return;
 
   await cancelPrayerNotifications();
 
-  const prayers = [
-    { name: 'İmsak', time: prayerTimes.fajr },
-    { name: 'Güneş', time: prayerTimes.sunrise },
-    { name: 'Öğle', time: prayerTimes.dhuhr },
-    { name: 'İkindi', time: prayerTimes.asr },
-    { name: 'Akşam', time: prayerTimes.maghrib },
-    { name: 'Yatsı', time: prayerTimes.isha },
-  ];
-
   const enabledPrayers = await getEnabledPrayerNames();
+  const reminderMins = await getReminderMinutes();
+  const sound = await getPrayerNotificationSound();
+  const today = new Date();
 
-  for (const prayer of prayers) {
-    const settingsKey = PRAYER_NAME_TO_SETTINGS_KEY[prayer.name];
-    const isEnabled = !enabledPrayers || enabledPrayers[settingsKey] !== false;
-    if (prayer.time && /^\d{2}:\d{2}$/.test(prayer.time) && isEnabled) {
-      await schedulePrayerNotification(prayer.name, prayer.time, city);
+  for (let offset = 0; offset < PRAYER_DAYS_AHEAD; offset++) {
+    const day = new Date(today.getFullYear(), today.getMonth(), today.getDate() + offset);
+    const times = getTimes(day);
+    const prayers = [
+      { name: 'İmsak', time: times.fajr },
+      { name: 'Güneş', time: times.sunrise },
+      { name: 'Öğle', time: times.dhuhr },
+      { name: 'İkindi', time: times.asr },
+      { name: 'Akşam', time: times.maghrib },
+      { name: 'Yatsı', time: times.isha },
+    ];
+    for (const prayer of prayers) {
+      const settingsKey = PRAYER_NAME_TO_SETTINGS_KEY[prayer.name];
+      const isEnabled = !enabledPrayers || enabledPrayers[settingsKey] !== false;
+      const at = prayerDate(day, prayer.time, timezone);
+      if (isEnabled && at) await schedulePrayerNotification(prayer.name, at, city, reminderMins, sound);
     }
   }
 
-  await scheduleDailyDuaReminders();
-  await scheduleDailyVerseReminders();
-  await scheduleMiddayInspirationReminder();
-  await scheduleEveningEngagementReminder();
-  await scheduleFridayReminder();
+  for (const schedule of [
+    scheduleDailyDuaReminders,
+    scheduleDailyVerseReminders,
+    scheduleMiddayInspirationReminder,
+    scheduleEveningEngagementReminder,
+    scheduleFridayReminder,
+  ]) {
+    try {
+      await schedule();
+    } catch (error) {
+      console.warn('[notifications] reminder scheduling failed:', error);
+    }
+  }
 }
 

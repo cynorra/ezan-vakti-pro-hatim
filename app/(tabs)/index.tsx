@@ -65,6 +65,8 @@ import {
 } from '@/lib/services/content-sync';
 
 const NOTIFICATION_PROMPTED_KEY = 'notification_permission_prompted';
+// '0' when the user switched prayer notifications off in Settings.
+const NOTIFICATIONS_ENABLED_KEY = 'notifications_enabled';
 
 export default function HomeScreen() {
   const { t, i18n } = useTranslation();
@@ -116,7 +118,9 @@ export default function HomeScreen() {
 
   useEffect(() => {
     configureNotificationChannel();
-    hasNotificationPermission().then(setNotificationsEnabled);
+    Promise.all([hasNotificationPermission(), AsyncStorage.getItem(NOTIFICATIONS_ENABLED_KEY)])
+      .then(([granted, stored]) => setNotificationsEnabled(granted && stored !== '0'))
+      .catch(() => {});
   }, []);
 
   const applyLocation = useCallback((next: SavedLocation) => {
@@ -191,26 +195,37 @@ export default function HomeScreen() {
 
   const resolvedMethod = resolveMethod(methodSetting, location.countryCode);
 
+  const getTimesForDate = useCallback(
+    (date: Date) => {
+      const { method, asrFactor } = resolveMethod(methodSetting, location.countryCode);
+      return calculatePrayerTimes(location.city.latitude, location.city.longitude, date, {
+        method,
+        asrFactor,
+        timezone: location.timezone,
+        ramadan: getHijriDate(date).month === 9,
+      });
+    },
+    [location, methodSetting]
+  );
+
   const loadPrayerTimes = useCallback(() => {
-    const { method, asrFactor } = resolveMethod(methodSetting, location.countryCode);
-    const times = calculatePrayerTimes(location.city.latitude, location.city.longitude, currentDate, {
-      method,
-      asrFactor,
-      timezone: location.timezone,
-      ramadan: getHijriDate(currentDate).month === 9,
-    });
-    setPrayerTimes(times);
-  }, [location, methodSetting, currentDate]);
+    setPrayerTimes(getTimesForDate(currentDate));
+  }, [getTimesForDate, currentDate]);
 
   useEffect(() => {
     loadPrayerTimes();
   }, [loadPrayerTimes]);
 
+  // Bumped when Settings closes, since per-prayer toggles / reminder time may have changed.
+  const [notificationSettingsVersion, setNotificationSettingsVersion] = useState(0);
+  const cityLabel = `${selectedCity.name} / ${selectedDistrict}`;
+
   useEffect(() => {
-    if (notificationsEnabled && prayerTimes) {
-      scheduleAllPrayers(prayerTimes, `${selectedCity.name} / ${selectedDistrict}`);
-    }
-  }, [notificationsEnabled, prayerTimes, selectedCity.name, selectedDistrict]);
+    if (!notificationsEnabled) return;
+    scheduleAllPrayers(getTimesForDate, cityLabel, location.timezone).catch((error) =>
+      console.log('Notification scheduling error:', error)
+    );
+  }, [notificationsEnabled, getTimesForDate, cityLabel, location.timezone, notificationSettingsVersion]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -243,14 +258,14 @@ export default function HomeScreen() {
     if (!notificationsEnabled) {
       const granted = await requestNotificationPermissions();
       if (granted) {
+        await AsyncStorage.setItem(NOTIFICATIONS_ENABLED_KEY, '1');
+        // Scheduling happens in the effect above once the state flips.
         setNotificationsEnabled(true);
         // Strong engagement signal; used as the Google Ads in-app conversion.
         logEvent('prayer_notifications_enabled', { source: 'settings', country: location.countryCode });
-        if (prayerTimes) {
-          await scheduleAllPrayers(prayerTimes, `${selectedCity.name} / ${selectedDistrict}`);
-        }
       }
     } else {
+      await AsyncStorage.setItem(NOTIFICATIONS_ENABLED_KEY, '0');
       setNotificationsEnabled(false);
       await cancelAllNotifications();
     }
@@ -546,7 +561,10 @@ export default function HomeScreen() {
 
       <SettingsModal
         visible={showSettings}
-        onClose={() => setShowSettings(false)}
+        onClose={() => {
+          setShowSettings(false);
+          setNotificationSettingsVersion((v) => v + 1);
+        }}
         notificationsEnabled={notificationsEnabled}
         onToggleNotifications={handleNotificationToggle}
         methodSetting={methodSetting}

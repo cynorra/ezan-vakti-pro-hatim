@@ -28,6 +28,7 @@ import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/c
 import { quranJuzData, Juz } from '@/lib/data/quran-juz';
 import { hatimService, SharedHatim, SharedHatimJuz } from '@/lib/services/hatim-service';
 import { PLAY_STORE_URL } from '@/lib/share';
+import { localWeekStartKey } from '@/lib/date-keys';
 
 interface JuzProgress {
   [key: number]: boolean;
@@ -166,12 +167,7 @@ export default function HatimScreen() {
   };
 
   const initializeWeek = () => {
-    const today = new Date();
-    const dayOfWeek = today.getDay();
-    const diff = today.getDate() - dayOfWeek + (dayOfWeek === 0 ? -6 : 1);
-    const monday = new Date(today.setDate(diff));
-    const weekStartStr = monday.toISOString().split('T')[0];
-    setWeekStart(weekStartStr);
+    setWeekStart(localWeekStartKey());
   };
 
   const loadProgress = async () => {

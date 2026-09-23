@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { localDateKey } from './date-keys';
 
 const STREAK_KEY = 'daily_streak';
 
@@ -8,7 +9,7 @@ interface StreakData {
 }
 
 function toDateStr(d: Date) {
-  return d.toISOString().slice(0, 10);
+  return localDateKey(d);
 }
 
 function daysBetween(fromStr: string, toStr: string) {

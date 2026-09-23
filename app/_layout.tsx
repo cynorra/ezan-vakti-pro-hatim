@@ -19,7 +19,8 @@ export default function RootLayout() {
   const router = useRouter();
 
   useEffect(() => {
-    const subscription = Notifications.addNotificationResponseReceivedListener((response) => {
+    const openFromNotification = (response: Notifications.NotificationResponse | null) => {
+      if (!response) return;
       try {
         const data = response.notification.request.content.data;
         if (data?.screen) {
@@ -38,7 +39,17 @@ export default function RootLayout() {
       } catch (err) {
         console.log('Notification navigation error:', err);
       }
-    });
+    };
+
+    // Tapped while the app was running or in the background.
+    const subscription = Notifications.addNotificationResponseReceivedListener(openFromNotification);
+    // Tapped while the app was closed: the listener above is registered too late for it.
+    Notifications.getLastNotificationResponseAsync()
+      .then((response) => {
+        openFromNotification(response);
+        return Notifications.clearLastNotificationResponseAsync?.();
+      })
+      .catch(() => {});
 
     return () => subscription.remove();
   }, [router]);

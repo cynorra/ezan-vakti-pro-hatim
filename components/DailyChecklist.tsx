@@ -4,6 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Haptics from 'expo-haptics';
 import { Colors, Spacing, FontSize, BorderRadius } from '@/constants/theme';
+import { localDateKey } from '@/lib/date-keys';
 
 interface ChecklistItem {
   id: string;
@@ -29,7 +30,7 @@ export const DailyChecklist = () => {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const [completedItems, setCompletedItems] = useState<string[]>([]);
-  const todayKey = new Date().toISOString().split('T')[0];
+  const todayKey = localDateKey();
 
   useEffect(() => {
     loadProgress();
