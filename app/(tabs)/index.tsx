@@ -55,14 +55,14 @@ import { PrayerTimesCard } from '@/components/PrayerTimesCard';
 import { ReligiousDaysCard } from '@/components/ReligiousDaysCard';
 import { SEOHead } from '@/components/SEOHead';
 import { getRandomEsma, localizeEsma, Esma } from '@/lib/data/esma';
-import { syncRemoteContent } from '@/lib/services/content-sync';
+import { syncRemoteContent, getVerifiedDailyVerse, localizeVerifiedVerse, VerifiedVerse } from '@/lib/services/content-sync';
 
 const NOTIFICATION_PROMPTED_KEY = 'notification_permission_prompted';
 
 export default function HomeScreen() {
   const { t, i18n } = useTranslation();
   const router = useRouter();
-  const dailyWisdom = localizeWisdom(getDailyWisdom(), i18n.language);
+  const staticWisdom = localizeWisdom(getDailyWisdom(), i18n.language);
   const dailyDua = localizeDua(getDailyDua(), i18n.language);
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
@@ -77,10 +77,18 @@ export default function HomeScreen() {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [notificationsEnabled, setNotificationsEnabled] = useState(false);
   const [dailyEsma, setDailyEsma] = useState<Esma | null>(null);
+  const [feedVerse, setFeedVerse] = useState<VerifiedVerse | null>(null);
+  // Prefer today's verified verse from the daily feed; otherwise the bundled rotation.
+  const dailyWisdom = feedVerse
+    ? { id: 'feed', type: 'verse' as const, arabic: feedVerse.arabic, ...(({ text, source }) => ({ content: text, source }))(localizeVerifiedVerse(feedVerse, i18n.language)) }
+    : staticWisdom;
   const [streak, setStreak] = useState(0);
 
   useEffect(() => {
-    syncRemoteContent().catch(() => {});
+    syncRemoteContent()
+      .catch(() => null)
+      .then(() => getVerifiedDailyVerse())
+      .then(setFeedVerse);
     setDailyEsma(getRandomEsma());
     recordAppOpenAndGetStreak().then(setStreak);
   }, []);

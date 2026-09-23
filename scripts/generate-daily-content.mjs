@@ -43,7 +43,8 @@ Lütfen SADECE geçerli bir JSON nesnesi döndür:
     "arabic": "Tam harekeli Kur'an ayeti",
     "turkish": "Diyanet meali Türkçe anlamı",
     "surah": "Sure Adı",
-    "verseNumber": 1,
+    "surahNumber": 17,
+    "verseNumber": 82,
     "theme": "sifa"
   },
   "featuredHadith": {
@@ -326,6 +327,50 @@ const fallbackPool = [
   }
 ];
 
+// The app only displays the verse, and only from this verified block: the model
+// picks surah/ayah, the text and translations come from api.alquran.cloud
+// (Uthmani script + Diyanet, Saheeh International, Indonesian MoRA, Basmeih).
+// AI-written dua/hadith text cannot be verified this way and is not shown.
+const QURAN_EDITIONS = {
+  arabic: 'quran-uthmani',
+  tr: 'tr.diyanet',
+  en: 'en.sahih',
+  id: 'id.indonesian',
+  ms: 'ms.basmeih',
+};
+
+// Used when the model fails or picks a reference that does not resolve.
+const FALLBACK_VERSE_REFS = [
+  [17, 82], [13, 28], [94, 5], [2, 186], [2, 286], [39, 53], [65, 3], [93, 3],
+  [10, 57], [3, 173], [2, 153], [20, 114], [40, 60], [26, 80], [41, 44], [2, 152],
+];
+
+async function fetchVerifiedVerse(surahNumber, verseNumber) {
+  if (!Number.isInteger(surahNumber) || surahNumber < 1 || surahNumber > 114) return null;
+  if (!Number.isInteger(verseNumber) || verseNumber < 1) return null;
+  const editions = Object.values(QURAN_EDITIONS).join(',');
+  try {
+    const res = await fetch(`https://api.alquran.cloud/v1/ayah/${surahNumber}:${verseNumber}/editions/${editions}`);
+    if (!res.ok) return null;
+    const json = await res.json();
+    if (json.code !== 200 || !Array.isArray(json.data)) return null;
+    const byEdition = Object.fromEntries(json.data.map((e) => [e.edition.identifier, e]));
+    const text = (key) => byEdition[QURAN_EDITIONS[key]]?.text?.trim();
+    if (Object.keys(QURAN_EDITIONS).some((key) => !text(key))) return null;
+    return {
+      surahNumber,
+      verseNumber,
+      surahName: byEdition[QURAN_EDITIONS.arabic].surah.englishName,
+      arabic: text('arabic'),
+      translations: { tr: text('tr'), en: text('en'), id: text('id'), ms: text('ms') },
+      textSource: 'api.alquran.cloud',
+    };
+  } catch (e) {
+    console.warn(`⚠️ Ayet doğrulanamadı (${surahNumber}:${verseNumber}):`, e.message);
+    return null;
+  }
+}
+
 async function main() {
   console.log(`[${new Date().toISOString()}] Günlük AI Dua & Ayet Üretimi Başlatılıyor...`);
 
@@ -333,6 +378,7 @@ async function main() {
 
   try {
     contentData = await fetchFromGemini();
+    if (!contentData) throw new Error('Gemini içeriği yok (API anahtarı tanımlı değil).');
     console.log('✅ Google Gemini AI ile taze ve güncel içerik başarıyla üretildi.');
   } catch (error) {
     console.log('⚠️ Gemini API çağrısı sırasında hata oluştu, zengin yedek havuzdan seçiliyor:', error.message);
@@ -345,6 +391,21 @@ async function main() {
       isFriday: isFriday,
       ...selected
     };
+  }
+
+  const aiVerse = contentData.featuredVerse || {};
+  let verifiedVerse = await fetchVerifiedVerse(Number(aiVerse.surahNumber), Number(aiVerse.verseNumber));
+  if (!verifiedVerse) {
+    const dayOfYear = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 86400000);
+    const [surahNumber, verseNumber] = FALLBACK_VERSE_REFS[dayOfYear % FALLBACK_VERSE_REFS.length];
+    console.log(`ℹ️ Model ayeti doğrulanamadı, yedek referans kullanılıyor: ${surahNumber}:${verseNumber}`);
+    verifiedVerse = await fetchVerifiedVerse(surahNumber, verseNumber);
+  }
+  if (verifiedVerse) {
+    contentData.verifiedVerse = verifiedVerse;
+    console.log(`✅ Doğrulanmış ayet: ${verifiedVerse.surahName} ${verifiedVerse.surahNumber}:${verifiedVerse.verseNumber}`);
+  } else {
+    console.warn('⚠️ Doğrulanmış ayet alınamadı; uygulama yerel içeriği gösterecek.');
   }
 
   // public dizini kontrol et
