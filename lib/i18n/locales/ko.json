@@ -214,5 +214,28 @@
     "10": "샤왈",
     "11": "둘카다",
     "12": "둘히자"
+  },
+  "religiousDays": {
+    "title": "중요한 날",
+    "estimated": "예상",
+    "types": {
+      "kandil": "축복의 밤",
+      "eid": "이드",
+      "other": "축복의 날"
+    },
+    "names": {
+      "regaib": "라가이브의 밤",
+      "threeMonths": "세 성월의 시작",
+      "mirac": "미으라즈의 밤",
+      "berat": "바라아의 밤",
+      "ramadanStart": "라마단 시작",
+      "kadir": "권능의 밤",
+      "arafah": "아라파의 날",
+      "ramadanEid": "이드 알피트르 ({{day}}일째)",
+      "kurbanEid": "이드 알아드하 ({{day}}일째)",
+      "hijriNewYear": "이슬람 새해",
+      "ashura": "아슈라",
+      "mevlid": "마울리드"
+    }
   }
 }

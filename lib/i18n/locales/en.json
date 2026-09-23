@@ -218,5 +218,28 @@
     "10": "Shawwal",
     "11": "Dhu al-Qa'dah",
     "12": "Dhu al-Hijjah"
+  },
+  "religiousDays": {
+    "title": "IMPORTANT DAYS",
+    "estimated": "estimated",
+    "types": {
+      "kandil": "Blessed Night",
+      "eid": "Eid",
+      "other": "Blessed Day"
+    },
+    "names": {
+      "regaib": "Laylat al-Raghaib",
+      "threeMonths": "Start of the Three Holy Months",
+      "mirac": "Laylat al-Mi'raj",
+      "berat": "Laylat al-Bara'ah",
+      "ramadanStart": "Start of Ramadan",
+      "kadir": "Laylat al-Qadr",
+      "arafah": "Day of Arafah",
+      "ramadanEid": "Eid al-Fitr (Day {{day}})",
+      "kurbanEid": "Eid al-Adha (Day {{day}})",
+      "hijriNewYear": "Islamic New Year",
+      "ashura": "Day of Ashura",
+      "mevlid": "Mawlid an-Nabi"
+    }
   }
 }

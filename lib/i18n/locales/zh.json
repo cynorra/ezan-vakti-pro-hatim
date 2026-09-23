@@ -214,5 +214,28 @@
     "10": "闪瓦鲁月",
     "11": "都尔喀尔德月",
     "12": "都尔黑哲月"
+  },
+  "religiousDays": {
+    "title": "重要日子",
+    "estimated": "预估",
+    "types": {
+      "kandil": "吉庆之夜",
+      "eid": "会礼节日",
+      "other": "吉庆之日"
+    },
+    "names": {
+      "regaib": "赖加伊布之夜",
+      "threeMonths": "三个圣月开始",
+      "mirac": "登霄夜",
+      "berat": "白拉特夜",
+      "ramadanStart": "斋月开始",
+      "kadir": "盖德尔夜",
+      "arafah": "阿拉法特日",
+      "ramadanEid": "开斋节（第{{day}}天）",
+      "kurbanEid": "古尔邦节（第{{day}}天）",
+      "hijriNewYear": "伊斯兰新年",
+      "ashura": "阿舒拉日",
+      "mevlid": "圣纪节"
+    }
   }
 }

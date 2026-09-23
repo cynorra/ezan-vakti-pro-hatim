@@ -214,5 +214,28 @@
     "10": "Shawwal",
     "11": "Dhu al-Qa'dah",
     "12": "Dhu al-Hijjah"
+  },
+  "religiousDays": {
+    "title": "DÍAS IMPORTANTES",
+    "estimated": "estimado",
+    "types": {
+      "kandil": "Noche bendita",
+      "eid": "Eid",
+      "other": "Día bendito"
+    },
+    "names": {
+      "regaib": "Noche de Raghaib",
+      "threeMonths": "Inicio de los tres meses sagrados",
+      "mirac": "Noche del Mi'raj",
+      "berat": "Noche de Bara'a",
+      "ramadanStart": "Inicio del Ramadán",
+      "kadir": "Noche del Destino",
+      "arafah": "Día de Arafat",
+      "ramadanEid": "Eid al-Fitr (día {{day}})",
+      "kurbanEid": "Eid al-Adha (día {{day}})",
+      "hijriNewYear": "Año Nuevo islámico",
+      "ashura": "Día de Ashura",
+      "mevlid": "Mawlid"
+    }
   }
 }

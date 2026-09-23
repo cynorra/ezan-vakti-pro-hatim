@@ -214,5 +214,28 @@
     "10": "Shawwal",
     "11": "Dhu al-Qa'dah",
     "12": "Dhu al-Hijjah"
+  },
+  "religiousDays": {
+    "title": "ZILE IMPORTANTE",
+    "estimated": "estimat",
+    "types": {
+      "kandil": "Noapte binecuvântată",
+      "eid": "Sărbătoare",
+      "other": "Zi binecuvântată"
+    },
+    "names": {
+      "regaib": "Noaptea Raghaib",
+      "threeMonths": "Începutul celor trei luni sfinte",
+      "mirac": "Noaptea Mi'raj",
+      "berat": "Noaptea Bara'a",
+      "ramadanStart": "Începutul Ramadanului",
+      "kadir": "Noaptea Destinului",
+      "arafah": "Ziua Arafat",
+      "ramadanEid": "Eid al-Fitr (ziua {{day}})",
+      "kurbanEid": "Eid al-Adha (ziua {{day}})",
+      "hijriNewYear": "Anul Nou islamic",
+      "ashura": "Ziua Așura",
+      "mevlid": "Mawlid"
+    }
   }
 }

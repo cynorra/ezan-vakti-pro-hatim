@@ -214,5 +214,28 @@
     "10": "Shavvol",
     "11": "Zulqa'da",
     "12": "Zulhijja"
+  },
+  "religiousDays": {
+    "title": "MUHIM KUNLAR",
+    "estimated": "taxminiy",
+    "types": {
+      "kandil": "Muborak kecha",
+      "eid": "Hayit",
+      "other": "Muborak kun"
+    },
+    "names": {
+      "regaib": "Rag‘oib kechasi",
+      "threeMonths": "Uch muborak oy boshlanishi",
+      "mirac": "Me'roj kechasi",
+      "berat": "Barot kechasi",
+      "ramadanStart": "Ramazon boshlanishi",
+      "kadir": "Qadr kechasi",
+      "arafah": "Arafa kuni",
+      "ramadanEid": "Ramazon hayiti ({{day}}-kun)",
+      "kurbanEid": "Qurbon hayiti ({{day}}-kun)",
+      "hijriNewYear": "Hijriy yangi yil",
+      "ashura": "Ashuro kuni",
+      "mevlid": "Mavlud"
+    }
   }
 }

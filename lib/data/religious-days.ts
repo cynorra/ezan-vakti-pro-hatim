@@ -1,47 +1,84 @@
+// Upcoming religious days. Names are i18n keys under `religiousDays.names.*`.
+//
+// 2026: official Diyanet list (vakithesaplama.diyanet.gov.tr/dinigunler.php?yil=2026).
+// 2027: not published by Diyanet yet; computed with Aladhan's DIYANET Hijri calendar and
+// marked `estimated`. In 2026 that calendar matched the official list except Ramadan
+// start/Kadir/Arefe (one day early), so replace these rows once Diyanet publishes 2027.
+
+export type ReligiousDayKey =
+  | 'regaib'
+  | 'threeMonths'
+  | 'mirac'
+  | 'berat'
+  | 'ramadanStart'
+  | 'kadir'
+  | 'arafah'
+  | 'ramadanEid'
+  | 'kurbanEid'
+  | 'hijriNewYear'
+  | 'ashura'
+  | 'mevlid';
+
 export interface ReligiousDay {
   date: string;
-  name: string;
+  key: ReligiousDayKey;
   type: 'kandil' | 'eid' | 'other';
+  /** Day number for multi-day holidays (Bayram 1st/2nd/... day). */
+  day?: number;
+  estimated?: boolean;
 }
 
-export const religiousDays: ReligiousDay[] = [
-  // 2024
-  { date: '2024-01-11', name: 'Regaib Kandili', type: 'kandil' },
-  { date: '2024-01-12', name: 'Üç Ayların Başlangıcı', type: 'other' },
-  { date: '2024-02-06', name: 'Mirac Kandili', type: 'kandil' },
-  { date: '2024-02-24', name: 'Berat Kandili', type: 'kandil' },
-  { date: '2024-03-11', name: 'Ramazan Başlangıcı', type: 'other' },
-  { date: '2024-04-05', name: 'Kadir Gecesi', type: 'kandil' },
-  { date: '2024-04-09', name: 'Arife (Ramazan)', type: 'other' },
-  { date: '2024-04-10', name: 'Ramazan Bayramı (1. Gün)', type: 'eid' },
-  { date: '2024-04-11', name: 'Ramazan Bayramı (2. Gün)', type: 'eid' },
-  { date: '2024-04-12', name: 'Ramazan Bayramı (3. Gün)', type: 'eid' },
-  { date: '2024-06-15', name: 'Arife (Kurban)', type: 'other' },
-  { date: '2024-06-16', name: 'Kurban Bayramı (1. Gün)', type: 'eid' },
-  { date: '2024-06-17', name: 'Kurban Bayramı (2. Gün)', type: 'eid' },
-  { date: '2024-06-18', name: 'Kurban Bayramı (3. Gün)', type: 'eid' },
-  { date: '2024-06-19', name: 'Kurban Bayramı (4. Gün)', type: 'eid' },
-  { date: '2024-07-07', name: 'Hicri Yılbaşı', type: 'other' },
-  { date: '2024-07-16', name: 'Aşure Günü', type: 'other' },
-  { date: '2024-09-14', name: 'Mevlid Kandili', type: 'kandil' },
+// Turkish-tradition observances that are not marked in most other countries.
+export const TURKEY_ONLY_DAYS: ReadonlySet<ReligiousDayKey> = new Set(['regaib', 'threeMonths']);
 
-  // 2025
-  { date: '2025-01-01', name: 'Üç Ayların Başlangıcı', type: 'other' },
-  { date: '2025-01-02', name: 'Regaib Kandili', type: 'kandil' },
-  { date: '2025-01-27', name: 'Mirac Kandili', type: 'kandil' },
-  { date: '2025-02-13', name: 'Berat Kandili', type: 'kandil' },
-  { date: '2025-03-01', name: 'Ramazan Başlangıcı', type: 'other' },
-  { date: '2025-03-26', name: 'Kadir Gecesi', type: 'kandil' },
-  { date: '2025-03-29', name: 'Arife (Ramazan)', type: 'other' },
-  { date: '2025-03-30', name: 'Ramazan Bayramı (1. Gün)', type: 'eid' },
-  { date: '2025-03-31', name: 'Ramazan Bayramı (2. Gün)', type: 'eid' },
-  { date: '2025-04-01', name: 'Ramazan Bayramı (3. Gün)', type: 'eid' },
-  { date: '2025-06-05', name: 'Arife (Kurban)', type: 'other' },
-  { date: '2025-06-06', name: 'Kurban Bayramı (1. Gün)', type: 'eid' },
-  { date: '2025-06-07', name: 'Kurban Bayramı (2. Gün)', type: 'eid' },
-  { date: '2025-06-08', name: 'Kurban Bayramı (3. Gün)', type: 'eid' },
-  { date: '2025-06-09', name: 'Kurban Bayramı (4. Gün)', type: 'eid' },
-  { date: '2025-06-26', name: 'Hicri Yılbaşı', type: 'other' },
-  { date: '2025-07-05', name: 'Aşure Günü', type: 'other' },
-  { date: '2025-09-03', name: 'Mevlid Kandili', type: 'kandil' },
+export const religiousDays: ReligiousDay[] = [
+  // 2026 — official Diyanet
+  { date: '2026-01-15', key: 'mirac', type: 'kandil' },
+  { date: '2026-02-02', key: 'berat', type: 'kandil' },
+  { date: '2026-02-19', key: 'ramadanStart', type: 'other' },
+  { date: '2026-03-16', key: 'kadir', type: 'kandil' },
+  { date: '2026-03-19', key: 'arafah', type: 'other' },
+  { date: '2026-03-20', key: 'ramadanEid', type: 'eid', day: 1 },
+  { date: '2026-03-21', key: 'ramadanEid', type: 'eid', day: 2 },
+  { date: '2026-03-22', key: 'ramadanEid', type: 'eid', day: 3 },
+  { date: '2026-05-26', key: 'arafah', type: 'other' },
+  { date: '2026-05-27', key: 'kurbanEid', type: 'eid', day: 1 },
+  { date: '2026-05-28', key: 'kurbanEid', type: 'eid', day: 2 },
+  { date: '2026-05-29', key: 'kurbanEid', type: 'eid', day: 3 },
+  { date: '2026-05-30', key: 'kurbanEid', type: 'eid', day: 4 },
+  { date: '2026-06-16', key: 'hijriNewYear', type: 'other' },
+  { date: '2026-06-25', key: 'ashura', type: 'other' },
+  { date: '2026-08-24', key: 'mevlid', type: 'kandil' },
+  { date: '2026-12-10', key: 'threeMonths', type: 'other' },
+  { date: '2026-12-10', key: 'regaib', type: 'kandil' },
+
+  // 2027 — estimated
+  { date: '2027-01-04', key: 'mirac', type: 'kandil', estimated: true },
+  { date: '2027-01-22', key: 'berat', type: 'kandil', estimated: true },
+  { date: '2027-02-08', key: 'ramadanStart', type: 'other', estimated: true },
+  { date: '2027-03-05', key: 'kadir', type: 'kandil', estimated: true },
+  { date: '2027-03-08', key: 'arafah', type: 'other', estimated: true },
+  { date: '2027-03-09', key: 'ramadanEid', type: 'eid', day: 1, estimated: true },
+  { date: '2027-03-10', key: 'ramadanEid', type: 'eid', day: 2, estimated: true },
+  { date: '2027-03-11', key: 'ramadanEid', type: 'eid', day: 3, estimated: true },
+  { date: '2027-05-15', key: 'arafah', type: 'other', estimated: true },
+  { date: '2027-05-16', key: 'kurbanEid', type: 'eid', day: 1, estimated: true },
+  { date: '2027-05-17', key: 'kurbanEid', type: 'eid', day: 2, estimated: true },
+  { date: '2027-05-18', key: 'kurbanEid', type: 'eid', day: 3, estimated: true },
+  { date: '2027-05-19', key: 'kurbanEid', type: 'eid', day: 4, estimated: true },
+  { date: '2027-06-06', key: 'hijriNewYear', type: 'other', estimated: true },
+  { date: '2027-06-15', key: 'ashura', type: 'other', estimated: true },
+  { date: '2027-08-13', key: 'mevlid', type: 'kandil', estimated: true },
+  { date: '2027-11-29', key: 'threeMonths', type: 'other', estimated: true },
+  { date: '2027-12-02', key: 'regaib', type: 'kandil', estimated: true },
+  { date: '2027-12-24', key: 'mirac', type: 'kandil', estimated: true },
 ];
+
+/** Next `count` days from today (inclusive), skipping Turkey-only observances outside Turkish. */
+export function getUpcomingReligiousDays(language: string, count = 3, today = new Date()): ReligiousDay[] {
+  const todayIso = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+  const turkish = language.startsWith('tr');
+  return religiousDays
+    .filter((d) => d.date >= todayIso && (turkish || !TURKEY_ONLY_DAYS.has(d.key)))
+    .slice(0, count);
+}

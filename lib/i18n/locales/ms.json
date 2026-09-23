@@ -214,5 +214,28 @@
     "10": "Syawal",
     "11": "Zulkaedah",
     "12": "Zulhijah"
+  },
+  "religiousDays": {
+    "title": "HARI PENTING",
+    "estimated": "anggaran",
+    "types": {
+      "kandil": "Malam Mulia",
+      "eid": "Hari Raya",
+      "other": "Hari Mulia"
+    },
+    "names": {
+      "regaib": "Malam Raghaib",
+      "threeMonths": "Permulaan Tiga Bulan Suci",
+      "mirac": "Israk Mikraj",
+      "berat": "Malam Nisfu Syaaban",
+      "ramadanStart": "Awal Ramadan",
+      "kadir": "Lailatulqadar",
+      "arafah": "Hari Arafah",
+      "ramadanEid": "Aidilfitri (hari ke-{{day}})",
+      "kurbanEid": "Aidiladha (hari ke-{{day}})",
+      "hijriNewYear": "Maal Hijrah",
+      "ashura": "Hari Asyura",
+      "mevlid": "Maulidur Rasul"
+    }
   }
 }

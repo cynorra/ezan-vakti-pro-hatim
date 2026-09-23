@@ -214,5 +214,28 @@
     "10": "Ševval",
     "11": "Zu-l-ka'de",
     "12": "Zu-l-hidždže"
+  },
+  "religiousDays": {
+    "title": "VAŽNI DANI",
+    "estimated": "procjena",
+    "types": {
+      "kandil": "Mubarek noć",
+      "eid": "Bajram",
+      "other": "Mubarek dan"
+    },
+    "names": {
+      "regaib": "Lejletu-r-regaib",
+      "threeMonths": "Početak tri sveta mjeseca",
+      "mirac": "Lejletu-l-mi'radž",
+      "berat": "Lejletu-l-berat",
+      "ramadanStart": "Početak ramazana",
+      "kadir": "Lejletu-l-kadr",
+      "arafah": "Dan Arefata",
+      "ramadanEid": "Ramazanski bajram ({{day}}. dan)",
+      "kurbanEid": "Kurban-bajram ({{day}}. dan)",
+      "hijriNewYear": "Hidžretska Nova godina",
+      "ashura": "Dan Ašure",
+      "mevlid": "Mevlud"
+    }
   }
 }

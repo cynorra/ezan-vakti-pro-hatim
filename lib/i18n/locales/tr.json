@@ -230,5 +230,28 @@
     "10": "Şevval",
     "11": "Zilkade",
     "12": "Zilhicce"
+  },
+  "religiousDays": {
+    "title": "ÖNEMLİ GÜNLER",
+    "estimated": "tahmini",
+    "types": {
+      "kandil": "Kandil Gecesi",
+      "eid": "Dini Bayram",
+      "other": "Mübarek Gün"
+    },
+    "names": {
+      "regaib": "Regaib Kandili",
+      "threeMonths": "Üç Ayların Başlangıcı",
+      "mirac": "Miraç Kandili",
+      "berat": "Berat Kandili",
+      "ramadanStart": "Ramazan Başlangıcı",
+      "kadir": "Kadir Gecesi",
+      "arafah": "Arefe",
+      "ramadanEid": "Ramazan Bayramı ({{day}}. Gün)",
+      "kurbanEid": "Kurban Bayramı ({{day}}. Gün)",
+      "hijriNewYear": "Hicri Yılbaşı",
+      "ashura": "Aşure Günü",
+      "mevlid": "Mevlid Kandili"
+    }
   }
 }

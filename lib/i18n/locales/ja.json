@@ -214,5 +214,28 @@
     "10": "シャウワール",
     "11": "ズー・アル＝カアダ",
     "12": "ズー・アル＝ヒッジャ"
+  },
+  "religiousDays": {
+    "title": "大切な日",
+    "estimated": "推定",
+    "types": {
+      "kandil": "祝福の夜",
+      "eid": "イード",
+      "other": "祝福の日"
+    },
+    "names": {
+      "regaib": "ラガーイブの夜",
+      "threeMonths": "三聖月の始まり",
+      "mirac": "ミウラージュの夜",
+      "berat": "バラーアの夜",
+      "ramadanStart": "ラマダーン開始",
+      "kadir": "ライラトゥル・カドル",
+      "arafah": "アラファの日",
+      "ramadanEid": "イード・アル＝フィトル（{{day}}日目）",
+      "kurbanEid": "イード・アル＝アドハー（{{day}}日目）",
+      "hijriNewYear": "イスラーム暦新年",
+      "ashura": "アーシューラー",
+      "mevlid": "マウリド"
+    }
   }
 }

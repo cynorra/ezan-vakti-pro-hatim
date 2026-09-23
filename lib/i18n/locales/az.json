@@ -214,5 +214,28 @@
     "10": "Şəvval",
     "11": "Zilqədə",
     "12": "Zilhiccə"
+  },
+  "religiousDays": {
+    "title": "MÜHÜM GÜNLƏR",
+    "estimated": "təxmini",
+    "types": {
+      "kandil": "Mübarək gecə",
+      "eid": "Bayram",
+      "other": "Mübarək gün"
+    },
+    "names": {
+      "regaib": "Rəğaib gecəsi",
+      "threeMonths": "Üç ayların başlanğıcı",
+      "mirac": "Merac gecəsi",
+      "berat": "Bərat gecəsi",
+      "ramadanStart": "Ramazanın başlanğıcı",
+      "kadir": "Qədr gecəsi",
+      "arafah": "Ərəfə",
+      "ramadanEid": "Ramazan bayramı ({{day}}. gün)",
+      "kurbanEid": "Qurban bayramı ({{day}}. gün)",
+      "hijriNewYear": "Hicri yeni il",
+      "ashura": "Aşura günü",
+      "mevlid": "Mövlud"
+    }
   }
 }

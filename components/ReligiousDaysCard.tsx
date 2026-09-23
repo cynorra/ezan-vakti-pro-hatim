@@ -1,15 +1,15 @@
 import { View, Text, StyleSheet, useColorScheme } from 'react-native';
+import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows } from '@/constants/theme';
-import { religiousDays } from '@/lib/data/religious-days';
+import { getUpcomingReligiousDays } from '@/lib/data/religious-days';
 
 export function ReligiousDaysCard() {
+  const { t, i18n } = useTranslation();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
 
-  const upcomingDays = religiousDays
-    .filter((day) => new Date(day.date) >= new Date())
-    .slice(0, 3);
+  const upcomingDays = getUpcomingReligiousDays(i18n.language);
 
   if (upcomingDays.length === 0) return null;
 
@@ -18,20 +18,27 @@ export function ReligiousDaysCard() {
       <View style={styles.header}>
         <View style={styles.headerTitleRow}>
           <View style={[styles.titleDot, { backgroundColor: colors.accent }]} />
-          <Text style={[styles.title, { color: colors.text }]}>ÖNEMLİ GÜNLER</Text>
+          <Text style={[styles.title, { color: colors.text }]}>{t('religiousDays.title')}</Text>
         </View>
         <Ionicons name="calendar-sharp" size={18} color={colors.primary} />
       </View>
 
       <View style={styles.list}>
         {upcomingDays.map((day, index) => {
-          const date = new Date(day.date);
-          const dayStr = date.getDate().toString().padStart(2, '0');
-          const monthStr = date.toLocaleString('tr-TR', { month: 'short' }).toUpperCase();
+          const [year, month, dayOfMonth] = day.date.split('-').map(Number);
+          const date = new Date(year, month - 1, dayOfMonth);
+          const dayStr = String(dayOfMonth).padStart(2, '0');
+          let monthStr: string;
+          try {
+            monthStr = date.toLocaleString(i18n.language, { month: 'short' }).toUpperCase();
+          } catch {
+            monthStr = String(month).padStart(2, '0');
+          }
+          const name = t(`religiousDays.names.${day.key}`, { day: day.day });
           
           return (
             <View 
-              key={day.name + day.date} 
+              key={day.key + day.date} 
               style={[
                 styles.dayRow, 
                 index !== upcomingDays.length - 1 && { borderBottomWidth: 1, borderBottomColor: colors.border }
@@ -43,7 +50,7 @@ export function ReligiousDaysCard() {
               </View>
               
               <View style={styles.content}>
-                <Text style={[styles.dayName, { color: colors.text }]}>{day.name}</Text>
+                <Text style={[styles.dayName, { color: colors.text }]}>{name}</Text>
                 <View style={styles.typeRow}>
                   <Ionicons 
                     name={day.type === 'eid' ? "star" : "bookmark"} 
@@ -51,7 +58,8 @@ export function ReligiousDaysCard() {
                     color={day.type === 'eid' ? colors.accent : colors.textMuted} 
                   />
                   <Text style={[styles.dayType, { color: colors.textSecondary }]}>
-                    {day.type === 'kandil' ? 'Kandil Gecesi' : day.type === 'eid' ? 'Dini Bayram' : 'Mübarek Gün'}
+                    {t(`religiousDays.types.${day.type}`)}
+                    {day.estimated ? ` · ${t('religiousDays.estimated')}` : ''}
                   </Text>
                 </View>
               </View>

@@ -214,5 +214,28 @@
     "10": "Shawwal",
     "11": "Dhu al-Qa'dah",
     "12": "Dhu al-Hijjah"
+  },
+  "religiousDays": {
+    "title": "VIKTIGA DAGAR",
+    "estimated": "uppskattat",
+    "types": {
+      "kandil": "Välsignad natt",
+      "eid": "Högtid",
+      "other": "Välsignad dag"
+    },
+    "names": {
+      "regaib": "Raghaib-natten",
+      "threeMonths": "De tre heliga månadernas början",
+      "mirac": "Mi'raj-natten",
+      "berat": "Bara'a-natten",
+      "ramadanStart": "Ramadan börjar",
+      "kadir": "Laylat al-Qadr",
+      "arafah": "Arafadagen",
+      "ramadanEid": "Eid al-Fitr (dag {{day}})",
+      "kurbanEid": "Eid al-Adha (dag {{day}})",
+      "hijriNewYear": "Islamiskt nyår",
+      "ashura": "Ashura",
+      "mevlid": "Mawlid"
+    }
   }
 }

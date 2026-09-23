@@ -214,5 +214,28 @@
     "10": "Shawwal",
     "11": "Dhu al-Qa'dah",
     "12": "Dhu al-Hijjah"
+  },
+  "religiousDays": {
+    "title": "BELANGRIJKE DAGEN",
+    "estimated": "geschat",
+    "types": {
+      "kandil": "Gezegende nacht",
+      "eid": "Feest",
+      "other": "Gezegende dag"
+    },
+    "names": {
+      "regaib": "Nacht van Raghaib",
+      "threeMonths": "Begin van de drie heilige maanden",
+      "mirac": "Nacht van de Mi'raj",
+      "berat": "Nacht van Bara'a",
+      "ramadanStart": "Begin van de ramadan",
+      "kadir": "Nacht van de Beschikking",
+      "arafah": "Dag van Arafat",
+      "ramadanEid": "Suikerfeest (dag {{day}})",
+      "kurbanEid": "Offerfeest (dag {{day}})",
+      "hijriNewYear": "Islamitisch nieuwjaar",
+      "ashura": "Asjoera",
+      "mevlid": "Mawlid"
+    }
   }
 }

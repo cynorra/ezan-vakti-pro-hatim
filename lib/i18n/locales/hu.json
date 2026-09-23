@@ -214,5 +214,28 @@
     "10": "Shawwal",
     "11": "Dhu al-Qa'dah",
     "12": "Dhu al-Hijjah"
+  },
+  "religiousDays": {
+    "title": "FONTOS NAPOK",
+    "estimated": "becsült",
+    "types": {
+      "kandil": "Áldott éjszaka",
+      "eid": "Ünnep",
+      "other": "Áldott nap"
+    },
+    "names": {
+      "regaib": "Raghaib éjszakája",
+      "threeMonths": "A három szent hónap kezdete",
+      "mirac": "Mi'rádzs éjszakája",
+      "berat": "Bará'a éjszakája",
+      "ramadanStart": "A ramadán kezdete",
+      "kadir": "A Hatalom éjszakája",
+      "arafah": "Arafát napja",
+      "ramadanEid": "Íd al-Fitr ({{day}}. nap)",
+      "kurbanEid": "Íd al-Adha ({{day}}. nap)",
+      "hijriNewYear": "Iszlám újév",
+      "ashura": "Asúra napja",
+      "mevlid": "Mavlid"
+    }
   }
 }
