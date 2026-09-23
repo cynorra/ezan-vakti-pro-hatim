@@ -1,3 +1,6 @@
+import { esmaTranslations } from './esma-translations';
+import { contentLanguage } from './content-translations';
+
 export interface Esma {
   id: number;
   arabic: string;
@@ -106,6 +109,15 @@ export const esmaulHusna: Esma[] = [
   { id: 98, arabic: 'الرَّشِيدُ', turkish: 'Er-Reşîd', meaning: 'Bütün işleri isabetli ve hedefine ulaşan, irşad eden.' },
   { id: 99, arabic: 'الصَّبُورُ', turkish: 'Es-Sabûr', meaning: 'Çok sabırlı olan, cezalandırmada acele etmeyen.' }
 ];
+
+/** Name transliteration (`turkish` field) and meaning in the UI language; Turkish is unchanged. */
+export function localizeEsma(esma: Esma, language: string): Esma {
+  const lang = contentLanguage(language);
+  const row = esmaTranslations[esma.id - 1];
+  if (lang === 'tr' || !row) return esma;
+  const [latin, en, id, ms] = row;
+  return { ...esma, turkish: latin, meaning: lang === 'id' ? id : lang === 'ms' ? ms : en };
+}
 
 export const getRandomEsma = (): Esma => {
   const randomIndex = Math.floor(Math.random() * esmaulHusna.length);

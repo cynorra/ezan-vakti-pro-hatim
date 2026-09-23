@@ -54,7 +54,7 @@ import { RamadanCountdown } from '@/components/RamadanCountdown';
 import { PrayerTimesCard } from '@/components/PrayerTimesCard';
 import { ReligiousDaysCard } from '@/components/ReligiousDaysCard';
 import { SEOHead } from '@/components/SEOHead';
-import { getRandomEsma, Esma } from '@/lib/data/esma';
+import { getRandomEsma, localizeEsma, Esma } from '@/lib/data/esma';
 import { syncRemoteContent } from '@/lib/services/content-sync';
 
 const NOTIFICATION_PROMPTED_KEY = 'notification_permission_prompted';
@@ -462,9 +462,9 @@ export default function HomeScreen() {
                 <Text style={[styles.esmaBadgeText, { color: colors.accent }]}>{t('home.esmaOfTheDay') ? t('home.esmaOfTheDay').toUpperCase() : 'GÜNÜN ESMASI'}</Text>
               </View>
               <Text style={[styles.esmaArabic, { color: colors.primary }]}>{dailyEsma.arabic}</Text>
-              <Text style={[styles.esmaTurkish, { color: colors.text }]}>{dailyEsma.turkish}</Text>
+              <Text style={[styles.esmaTurkish, { color: colors.text }]}>{localizeEsma(dailyEsma, i18n.language).turkish}</Text>
               <Text style={[styles.esmaMeaning, { color: colors.textSecondary }]}>
-                {dailyEsma.meaning}
+                {localizeEsma(dailyEsma, i18n.language).meaning}
               </Text>
             </LinearGradient>
           </TouchableOpacity>

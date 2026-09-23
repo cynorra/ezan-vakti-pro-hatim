@@ -3,17 +3,17 @@ import { View, Text, StyleSheet, FlatList, TextInput, useColorScheme, Platform, 
 import { Stack, useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows } from '@/constants/theme';
-import { esmaulHusna } from '@/lib/data/esma';
+import { esmaulHusna, localizeEsma } from '@/lib/data/esma';
 import { useTranslation } from 'react-i18next';
 
 export default function EsmaulHusnaScreen() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const router = useRouter();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const [searchQuery, setSearchQuery] = useState('');
 
-  const filteredEsma = esmaulHusna.filter(item => 
+  const filteredEsma = esmaulHusna.map(item => localizeEsma(item, i18n.language)).filter(item => 
     item.turkish.toLowerCase().includes(searchQuery.toLowerCase()) ||
     item.meaning.toLowerCase().includes(searchQuery.toLowerCase())
   );
