@@ -67,7 +67,9 @@ jobs:
             echo "::warning::EXPO_PUBLIC_SUPABASE_URL / EXPO_PUBLIC_SUPABASE_ANON_KEY secret tanimli degil; ortak hatim bu build'de calismaz."
           fi
           cd android
-          ./gradlew bundleRelease assembleRelease --no-daemon
+          # gradle.properties keeps -Xmx1g for low-RAM local machines; R8 needs more.
+          # GitHub runners have 16 GB.
+          ./gradlew bundleRelease assembleRelease --no-daemon -Dorg.gradle.jvmargs="-Xmx6g -XX:MaxMetaspaceSize=1g -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8"
 
       - name: Upload Android App Bundle (AAB)
         uses: actions/upload-artifact@v4
