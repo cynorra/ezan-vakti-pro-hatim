@@ -58,7 +58,8 @@
     "inviteShareMessage": "Csatlakozzon a(z) „{{title}}” közös hatimhoz, válasszon egy dzsuzt, és olvassuk együtt a Koránt 🕌📖\n\nHa már telepítette az alkalmazást: {{deepLink}}\n\nHa még nem: {{playStore}}",
     "completionShareMessage": "🎉 Befejeztem mind a 30 dzsuzt, sikeresen elvégeztem a hatimot! Alhamdülilláh 📖🕌\n\nEz a(z) #{{count}}. hatimom. Kezdje el Ön is: {{playStore}}",
     "progressShareMessage": "📖 Ezen a héten {{completed}}/30 dzsuzt fejeztem be ({{percentage}}%).\n\nKövesse haladását az Ezan Vakti + Hatim segítségével: {{playStore}}",
-    "juzCountShort": "dzsuz"
+    "juzCountShort": "dzsuz",
+    "juzTaken": "Valaki már elvette ezt a Dzsuszt. Kérlek, válassz másikat."
   },
   "settings": {
     "title": "Beállítások",
@@ -199,7 +200,8 @@
     "loadError": "Hiba történt a mecsetek betöltésekor. Kérjük, próbáld újra.",
     "loading": "Közeli mecsetek keresése...",
     "retry": "ÚJRA",
-    "empty": "Nem található regisztrált mecset a közelben."
+    "empty": "Nem található regisztrált mecset a közelben.",
+    "unnamed": "Mecset"
   },
   "quickAccess": {
     "mosques": "Közeli mecsetek",

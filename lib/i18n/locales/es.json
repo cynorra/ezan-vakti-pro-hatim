@@ -58,7 +58,8 @@
     "inviteShareMessage": "Únete al khatm colaborativo \"{{title}}\", elige un juz y leamos el Corán juntos 🕌📖\n\nSi ya tienes la aplicación: {{deepLink}}\n\nSi no: {{playStore}}",
     "completionShareMessage": "🎉 ¡Completé los 30 juz, he terminado mi khatm! Alhamdulillah 📖🕌\n\nEste es mi khatm #{{count}}. Empieza a registrar el tuyo también: {{playStore}}",
     "progressShareMessage": "📖 Completé {{completed}}/30 juz esta semana ({{percentage}}%).\n\nSigue el tuyo con Ezan Vakti + Hatim: {{playStore}}",
-    "juzCountShort": "juz"
+    "juzCountShort": "juz",
+    "juzTaken": "Alguien acaba de tomar este juz. Por favor, elige otro."
   },
   "settings": {
     "title": "Ajustes",
@@ -199,7 +200,8 @@
     "loadError": "Ocurrió un error al cargar las mezquitas. Inténtalo de nuevo.",
     "loading": "Buscando mezquitas cercanas...",
     "retry": "REINTENTAR",
-    "empty": "No se encontraron mezquitas registradas cerca."
+    "empty": "No se encontraron mezquitas registradas cerca.",
+    "unnamed": "Mezquita"
   },
   "quickAccess": {
     "mosques": "Mezquitas cercanas",

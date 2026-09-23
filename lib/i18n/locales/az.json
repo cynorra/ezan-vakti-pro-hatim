@@ -58,7 +58,8 @@
     "inviteShareMessage": "«{{title}}» ortaq xətminə qoşulun, bir cüz götürün və Quranı birlikdə oxuyaq 🕌📖\n\nTətbiqiniz varsa: {{deepLink}}\n\nYoxdursa: {{playStore}}",
     "completionShareMessage": "🎉 30 cüzün hamısını oxuyub xətmimi bitirdim! Əlhəmdulillah 📖🕌\n\nBu mənim #{{count}} saylı xətmimdir. Siz də izləməyə başlayın: {{playStore}}",
     "progressShareMessage": "📖 Bu həftə {{completed}}/30 cüz tamamladım ({{percentage}}%).\n\nİrəliləyişinizi Ezan Vakti + Hatim ilə izləyin: {{playStore}}",
-    "juzCountShort": "cüz"
+    "juzCountShort": "cüz",
+    "juzTaken": "Bu cüzü başqası götürdü. Zəhmət olmasa başqasını seçin."
   },
   "settings": {
     "title": "Parametrlər",
@@ -199,7 +200,8 @@
     "loadError": "Məscidlər yüklənərkən xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.",
     "loading": "Yaxınlıqdakı məscidlər axtarılır...",
     "retry": "YENİDƏN CƏHD EDİN",
-    "empty": "Yaxınlıqda qeydiyyatda olan məscid tapılmadı."
+    "empty": "Yaxınlıqda qeydiyyatda olan məscid tapılmadı.",
+    "unnamed": "Məscid"
   },
   "quickAccess": {
     "mosques": "Yaxın məscidlər",

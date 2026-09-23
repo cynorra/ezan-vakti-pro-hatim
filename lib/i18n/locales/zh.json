@@ -58,7 +58,8 @@
     "inviteShareMessage": "加入“{{title}}”集体通读，认领一卷，让我们一起诵读《古兰经》🕌📖\n\n如果您已安装应用：{{deepLink}}\n\n如果尚未安装：{{playStore}}",
     "completionShareMessage": "🎉 感赞安拉，我已完成全部30卷诵读，顺利完经！📖🕌\n\n这是我的第 {{count}} 次通读。快来记录您的诵读吧：{{playStore}}",
     "progressShareMessage": "📖 本周我已完成 {{completed}}/30 卷（{{percentage}}%）。\n\n使用 Ezan Vakti + Hatim 记录您的进度：{{playStore}}",
-    "juzCountShort": "卷"
+    "juzCountShort": "卷",
+    "juzTaken": "其他人刚刚选择了这个乌兹（Juz）。请选择另一个。"
   },
   "settings": {
     "title": "设置",
@@ -199,7 +200,8 @@
     "loadError": "加载清真寺信息时出错，请重试。",
     "loading": "正在搜索附近的清真寺...",
     "retry": "重试",
-    "empty": "附近未找到已登记的清真寺。"
+    "empty": "附近未找到已登记的清真寺。",
+    "unnamed": "清真寺"
   },
   "quickAccess": {
     "mosques": "附近清真寺",

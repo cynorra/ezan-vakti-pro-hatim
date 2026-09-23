@@ -58,7 +58,8 @@
     "inviteShareMessage": "Mache mit beim gemeinsamen Khatm „{{title}}“, nimm dir einen Juz und lass uns gemeinsam den Koran lesen 🕌📖\n\nFalls du die App schon hast: {{deepLink}}\n\nFalls nicht: {{playStore}}",
     "completionShareMessage": "🎉 Ich habe alle 30 Juz gelesen und meinen Khatm beendet! Alhamdulillah 📖🕌\n\nDas ist mein Khatm Nr. {{count}}. Fange auch an, deine zu verfolgen: {{playStore}}",
     "progressShareMessage": "📖 Ich habe diese Woche {{completed}}/30 Juz gelesen ({{percentage}}%).\n\nVerfolge deine mit Ezan Vakti + Hatim: {{playStore}}",
-    "juzCountShort": "Juz"
+    "juzCountShort": "Juz",
+    "juzTaken": "Jemand anderes hat diesen Dschuz bereits ausgewählt. Bitte wähle einen anderen."
   },
   "settings": {
     "title": "Einstellungen",
@@ -199,7 +200,8 @@
     "loadError": "Fehler beim Laden der Moscheen. Bitte versuche es erneut.",
     "loading": "Suche nach Moscheen in der Nähe...",
     "retry": "ERNEUT VERSUCHEN",
-    "empty": "Keine registrierten Moscheen in der Nähe gefunden."
+    "empty": "Keine registrierten Moscheen in der Nähe gefunden.",
+    "unnamed": "Moschee"
   },
   "quickAccess": {
     "mosques": "Moscheen in der Nähe",

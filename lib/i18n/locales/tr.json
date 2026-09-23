@@ -82,7 +82,8 @@
     "fridayCardTitle": "Hayırlı Cumalar",
     "fridayCardDesc": "Cumanız mübarek olsun. Sevdiklerinizle Cuma tebriğini paylaşın.",
     "fridayShareBtn": "Cuma Mesajı Paylaş",
-    "fridayShareMessage": "🕌 Hayırlı Cumalar! Cumanız mübarek, dualarınız ve ibadetleriniz kabul olsun ✨\n\n📲 Ezan Vakti + Hatim uygulamasını ücretsiz indirin:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti"
+    "fridayShareMessage": "🕌 Hayırlı Cumalar! Cumanız mübarek, dualarınız ve ibadetleriniz kabul olsun ✨\n\n📲 Ezan Vakti + Hatim uygulamasını ücretsiz indirin:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
+    "juzTaken": "Bu cüz az önce başka biri tarafından alındı. Lütfen başka bir cüz seçin."
   },
   "settings": {
     "title": "Ayarlar",
@@ -215,7 +216,8 @@
     "loadError": "Camiler yüklenirken bir hata oluştu. Lütfen tekrar deneyin.",
     "loading": "Yakındaki camiler aranıyor...",
     "retry": "TEKRAR DENE",
-    "empty": "Yakınında kayıtlı cami bulunamadı."
+    "empty": "Yakınında kayıtlı cami bulunamadı.",
+    "unnamed": "Cami"
   },
   "quickAccess": {
     "mosques": "Yakın Camiler",

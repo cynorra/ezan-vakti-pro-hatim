@@ -58,7 +58,8 @@
     "inviteShareMessage": "Dołącz do wspólnego chatmu „{{title}}”, weź dżuz i czytajmy Koran razem 🕌📖\n\nJeśli masz już aplikację: {{deepLink}}\n\nJeśli nie: {{playStore}}",
     "completionShareMessage": "🎉 Ukończono wszystkie 30 dżuzów, chatm skończony! Alhamdulillah 📖🕌\n\nTo mój chatm nr {{count}}. Zacznij śledzić swój: {{playStore}}",
     "progressShareMessage": "📖 Przeczytano {{completed}}/30 dżuzów w tym tygodniu ({{percentage}}%).\n\nŚledź swoje postępy z Ezan Vakti + Hatim: {{playStore}}",
-    "juzCountShort": "dżuz"
+    "juzCountShort": "dżuz",
+    "juzTaken": "Ktoś właśnie wziął ten dżuz. Wybierz inny."
   },
   "settings": {
     "title": "Ustawienia",
@@ -199,7 +200,8 @@
     "loadError": "Wystąpił błąd podczas ładowania meczetów. Spróbuj ponownie.",
     "loading": "Wyszukiwanie pobliskich meczetów...",
     "retry": "PONÓW",
-    "empty": "Nie znaleziono zarejestrowanych meczetów w pobliżu."
+    "empty": "Nie znaleziono zarejestrowanych meczetów w pobliżu.",
+    "unnamed": "Meczet"
   },
   "quickAccess": {
     "mosques": "Meczety w pobliżu",

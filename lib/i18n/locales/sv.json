@@ -58,7 +58,8 @@
     "inviteShareMessage": "Gå med i den gemensamma khatmen \"{{title}}\", ta en juz och låt oss läsa Koranen tillsammans 🕌📖\n\nOm du redan har appen: {{deepLink}}\n\nOm inte: {{playStore}}",
     "completionShareMessage": "🎉 Jag har slutfört alla 30 juz och gjort klart min khatm! Alhamdulillah 📖🕌\n\nDet här är min khatm nr {{count}}. Börja följa din med: {{playStore}}",
     "progressShareMessage": "📖 Jag har slutfört {{completed}}/30 juz denna vecka ({{percentage}}%).\n\nFölj din resa med Ezan Vakti + Hatim: {{playStore}}",
-    "juzCountShort": "juz"
+    "juzCountShort": "juz",
+    "juzTaken": "Någon annan har just tagit denna juz. Välj en annan."
   },
   "settings": {
     "title": "Inställningar",
@@ -199,7 +200,8 @@
     "loadError": "Något gick fel när moskéer skulle laddas. Försök igen.",
     "loading": "Söker efter närliggande moskéer...",
     "retry": "FÖRSÖK IGEN",
-    "empty": "Inga registrerade moskéer hittades i närheten."
+    "empty": "Inga registrerade moskéer hittades i närheten.",
+    "unnamed": "Moské"
   },
   "quickAccess": {
     "mosques": "Moskéer i närheten",

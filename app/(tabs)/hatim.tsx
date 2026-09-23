@@ -26,9 +26,11 @@ import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { quranJuzData, Juz } from '@/lib/data/quran-juz';
-import { hatimService, SharedHatim, SharedHatimJuz } from '@/lib/services/hatim-service';
+import { hatimService, JuzTakenError, SharedHatim, SharedHatimJuz } from '@/lib/services/hatim-service';
 import { PLAY_STORE_URL } from '@/lib/share';
 import { localWeekStartKey } from '@/lib/date-keys';
+
+const HATIM_USER_NAME_KEY = 'hatim_user_name';
 
 interface JuzProgress {
   [key: number]: boolean;
@@ -60,6 +62,13 @@ export default function HatimScreen() {
   const [sharedHatimDetails, setSharedHatimDetails] = useState<SharedHatimJuz[]>([]);
   const [isJoinModalVisible, setIsJoinModalVisible] = useState(false);
   const [userName, setUserName] = useState('');
+
+  // Remember the participant name so it isn't retyped for every juz.
+  useEffect(() => {
+    AsyncStorage.getItem(HATIM_USER_NAME_KEY)
+      .then((saved) => saved && setUserName((current) => current || saved))
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     initializeWeek();
@@ -134,13 +143,18 @@ export default function HatimScreen() {
 
     try {
       await hatimService.joinHatim(selectedSharedHatim.id, juzNumber, userName);
+      AsyncStorage.setItem(HATIM_USER_NAME_KEY, userName.trim()).catch(() => {});
       safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
       logJuzSelected(juzNumber, selectedSharedHatim.id);
-      const details = await hatimService.getHatimDetails(selectedSharedHatim.id);
-      setSharedHatimDetails(details);
     } catch (error) {
-      alert(t('common.errorGeneric'));
+      alert(error instanceof JuzTakenError ? t('hatim.juzTaken') : t('common.errorGeneric'));
     }
+    // Refresh either way so the grid shows who holds which juz right now.
+    hatimService
+      .getHatimDetails(selectedSharedHatim.id)
+      .then(setSharedHatimDetails)
+      .catch(() => {});
+    loadSharedHatims();
   };
 
   const [isCreateModalVisible, setIsCreateModalVisible] = useState(false);
@@ -275,6 +289,14 @@ export default function HatimScreen() {
       logEvent('individual_progress_shared', { completed_count: completedCount });
     } catch (error) {
       console.log('Progress share error:', error);
+    }
+  };
+
+  const formatPercent = (ratio: number) => {
+    try {
+      return ratio.toLocaleString(i18n.language, { style: 'percent', maximumFractionDigits: 0 });
+    } catch {
+      return `%${Math.round(ratio * 100)}`;
     }
   };
 
@@ -505,10 +527,10 @@ export default function HatimScreen() {
                     </View>
                     <View style={styles.collabStats}>
                       <Text style={[styles.collabStatText, { color: colors.textSecondary }]}>
-                        {hatim.completed_count} / {hatim.total_juz} Cüz
+                        {hatim.completed_count} / {hatim.total_juz} {t('hatim.juzCountShort')}
                       </Text>
                       <Text style={[styles.collabStatText, { color: colors.primary, fontWeight: '700' }]}>
-                        %{Math.round((hatim.completed_count / hatim.total_juz) * 100)}
+                        {formatPercent(hatim.completed_count / hatim.total_juz)}
                       </Text>
                     </View>
                   </View>

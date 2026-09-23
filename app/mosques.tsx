@@ -19,7 +19,7 @@ import { SEOHead } from '@/components/SEOHead';
 import { fetchNearbyMosques, NearbyMosque } from '@/lib/services/mosque-service';
 
 export default function MosquesScreen() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const router = useRouter();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
@@ -42,7 +42,7 @@ export default function MosquesScreen() {
         return;
       }
       const location = await Location.getCurrentPositionAsync({});
-      const results = await fetchNearbyMosques(location.coords.latitude, location.coords.longitude);
+      const results = await fetchNearbyMosques(location.coords.latitude, location.coords.longitude, i18n.language);
       setMosques(results);
     } catch (e) {
       console.log('Mosque fetch error:', e);
@@ -112,7 +112,7 @@ export default function MosquesScreen() {
               </View>
               <View style={{ flex: 1 }}>
                 <Text style={[styles.mosqueName, { color: colors.text }]} numberOfLines={1}>
-                  {item.name}
+                  {item.name || t('mosques.unnamed')}
                 </Text>
                 <Text style={[styles.mosqueDistance, { color: colors.textSecondary }]}>
                   {item.distanceKm.toFixed(1)} km

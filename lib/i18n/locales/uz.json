@@ -58,7 +58,8 @@
     "inviteShareMessage": "«{{title}}» jamoaviy xatmiga qo'shiling, bir pora oling va Qur'onni birga o'qiylik 🕌📖\n\nIlova o'rnatilgan bo'lsa: {{deepLink}}\n\nBo'lmasa: {{playStore}}",
     "completionShareMessage": "🎉 30 porani to'liq o'qib, xatmni yakunladim! Alhamdulillah 📖🕌\n\nBu mening #{{count}}-xatmim. Siz ham kuzatishni boshlang: {{playStore}}",
     "progressShareMessage": "📖 Bu hafta {{completed}}/30 porani o'qib tugatdim ({{percentage}}%).\n\nO'z natijalaringizni Ezan Vakti + Hatim bilan kuzating: {{playStore}}",
-    "juzCountShort": "pora"
+    "juzCountShort": "pora",
+    "juzTaken": "Bu juz'ni boshqa birov oldi. Iltimos, boshqasini tanlang."
   },
   "settings": {
     "title": "Sozlamalar",
@@ -199,7 +200,8 @@
     "loadError": "Masjidlarni yuklashda xatolik yuz berdi. Qaytadan urinib ko'ring.",
     "loading": "Yaqin atrofdagi masjidlar qidirilmoqda...",
     "retry": "QAYTA URINISH",
-    "empty": "Yaqin-atrofda ro'yxatga olingan masjidlar topilmadi."
+    "empty": "Yaqin-atrofda ro'yxatga olingan masjidlar topilmadi.",
+    "unnamed": "Masjid"
   },
   "quickAccess": {
     "mosques": "Yaqin masjidlar",

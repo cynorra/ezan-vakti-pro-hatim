@@ -58,7 +58,8 @@
     "inviteShareMessage": "Mari bergabung dalam khataman bersama \"{{title}}\", ambil satu juz dan membaca Al-Qur'an bersama 🕌📖\n\nJika sudah punya aplikasi: {{deepLink}}\n\nJika belum: {{playStore}}",
     "completionShareMessage": "🎉 Alhamdulillah, saya telah menyelesaikan 30 juz dan mengkhatamkan Al-Qur'an! 📖🕌\n\nIni adalah khatam ke-{{count}} saya. Mulai pantau khatam Anda: {{playStore}}",
     "progressShareMessage": "📖 Minggu ini saya telah menyelesaikan {{completed}}/30 juz ({{percentage}}%).\n\nPantau kemajuan Anda dengan Ezan Vakti + Hatim: {{playStore}}",
-    "juzCountShort": "juz"
+    "juzCountShort": "juz",
+    "juzTaken": "Seseorang baru saja mengambil juz ini. Silakan pilih yang lain."
   },
   "settings": {
     "title": "Pengaturan",
@@ -199,7 +200,8 @@
     "loadError": "Terjadi kesalahan saat memuat data masjid. Silakan coba lagi.",
     "loading": "Mencari masjid terdekat...",
     "retry": "COBA LAGI",
-    "empty": "Tidak ada masjid terdaftar di sekitar Anda."
+    "empty": "Tidak ada masjid terdaftar di sekitar Anda.",
+    "unnamed": "Masjid"
   },
   "quickAccess": {
     "mosques": "Masjid Terdekat",

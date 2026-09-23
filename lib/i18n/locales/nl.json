@@ -58,7 +58,8 @@
     "inviteShareMessage": "Doe mee met de gezamenlijke khatm \"{{title}}\", neem een juz en laten we samen de Koran lezen 🕌📖\n\nAls je de app al hebt: {{deepLink}}\n\nZo niet: {{playStore}}",
     "completionShareMessage": "🎉 Ik heb alle 30 juz voltooid, mijn khatm is af! Alhamdulillah 📖🕌\n\nDit is mijn khatm #{{count}}. Begin ook met het bijhouden van de jouwe: {{playStore}}",
     "progressShareMessage": "📖 Ik heb deze week {{completed}}/30 juz voltooid ({{percentage}}%).\n\nHoud de jouwe bij met Ezan Vakti + Hatim: {{playStore}}",
-    "juzCountShort": "juz"
+    "juzCountShort": "juz",
+    "juzTaken": "Iemand anders heeft deze juz zojuist genomen. Kies een andere."
   },
   "settings": {
     "title": "Instellingen",
@@ -199,7 +200,8 @@
     "loadError": "Er is iets misgegaan bij het laden van moskeeën. Probeer het opnieuw.",
     "loading": "Zoeken naar moskeeën in de buurt...",
     "retry": "OPNIEUW PROBEREN",
-    "empty": "Geen geregistreerde moskeeën in de buurt gevonden."
+    "empty": "Geen geregistreerde moskeeën in de buurt gevonden.",
+    "unnamed": "Moskee"
   },
   "quickAccess": {
     "mosques": "Moskeeën in de buurt",

@@ -58,7 +58,8 @@
     "inviteShareMessage": "Partecipa al khatm collaborativo \"{{title}}\", prendi un juz e leggiamo il Corano insieme 🕌📖\n\nSe hai già l'app: {{deepLink}}\n\nAltrimenti: {{playStore}}",
     "completionShareMessage": "🎉 Ho completato tutti i 30 juz, ho finito il mio khatm! Alhamdulillah 📖🕌\n\nQuesto è il mio khatm n. {{count}}. Inizia a tracciare anche il tuo: {{playStore}}",
     "progressShareMessage": "📖 Ho completato {{completed}}/30 juz questa settimana ({{percentage}}%).\n\nTraccia il tuo con Ezan Vakti + Hatim: {{playStore}}",
-    "juzCountShort": "juz"
+    "juzCountShort": "juz",
+    "juzTaken": "Qualcun altro ha appena preso questo juz. Scegline un altro."
   },
   "settings": {
     "title": "Impostazioni",
@@ -199,7 +200,8 @@
     "loadError": "Errore durante il caricamento delle moschee. Riprova.",
     "loading": "Ricerca delle moschee vicine...",
     "retry": "RIPROVA",
-    "empty": "Nessuna moschea registrata trovata nelle vicinanze."
+    "empty": "Nessuna moschea registrata trovata nelle vicinanze.",
+    "unnamed": "Moschea"
   },
   "quickAccess": {
     "mosques": "Moschee vicine",

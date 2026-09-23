@@ -58,7 +58,8 @@
     "inviteShareMessage": "Alătură-te la khatmul colectiv „{{title}}”, alege un juz și hai să citim Coranul împreună 🕌📖\n\nDacă ai deja aplicația: {{deepLink}}\n\nDacă nu: {{playStore}}",
     "completionShareMessage": "🎉 Am citit toate cele 30 de juz-uri și am terminat khatmul! Alhamdulillah 📖🕌\n\nAcesta este khatmul meu #{{count}}. Începe să-ți monitorizezi lectura: {{playStore}}",
     "progressShareMessage": "📖 Am completat {{completed}}/30 de juz-uri în această săptămână ({{percentage}}%).\n\nUrmărește progresul cu Ezan Vakti + Hatim: {{playStore}}",
-    "juzCountShort": "juz"
+    "juzCountShort": "juz",
+    "juzTaken": "Cineva tocmai a luat acest juz. Te rugăm să alegi altul."
   },
   "settings": {
     "title": "Setări",
@@ -199,7 +200,8 @@
     "loadError": "A apărut o problemă la încărcarea moscheilor. Vă rugăm să încercați din nou.",
     "loading": "Se caută moschei în apropiere...",
     "retry": "REÎNCEARCĂ",
-    "empty": "Nu s-au găsit moschei înregistrate în apropiere."
+    "empty": "Nu s-au găsit moschei înregistrate în apropiere.",
+    "unnamed": "Moschee"
   },
   "quickAccess": {
     "mosques": "Moschei apropiate",
