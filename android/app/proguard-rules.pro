@@ -12,3 +12,7 @@
 -keep class com.facebook.react.turbomodule.** { *; }
 
 # Add any project specific keep options here:
+
+# App's own native code: home-screen widget provider and the React Native widget
+# bridge (methods are looked up by name from JS).
+-keep class com.cynnora.ezanvakti.** { *; }
