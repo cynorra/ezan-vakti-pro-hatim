@@ -10,8 +10,6 @@ Tüm metinler Google'ın "hassas kategori: dini inanç" kurallarına göre yazı
 ("Müslüman mısın?" gibi), resmi kurum onayı iddiası yok ("Kemenag metodu" deniyor,
 "Kemenag onaylı" değil).
 
-> Dua kütüphanesi şu an sadece Türkçe olduğu için metinlerde "doa harian" vaat edilmiyor.
-
 ---
 
 ## 1. Play Store mağaza sayfası
@@ -55,6 +53,8 @@ Jadwal sholat yang akurat di mana pun Anda berada, lengkap dengan pengingat azan
 • Kompas kiblat yang mudah digunakan
 
 📿 IBADAH HARIAN
+• Doa harian lengkap dengan bacaan Arab, latin, dan artinya
+• Ayat dan hadis pilihan setiap hari
 • Tasbih digital dengan target hitungan
 • Pencatat sholat qadha
 • Panduan wudhu langkah demi langkah
@@ -104,6 +104,8 @@ Waktu solat yang tepat di mana sahaja anda berada, lengkap dengan peringatan aza
 • Kompas kiblat yang mudah digunakan
 
 📿 IBADAH HARIAN
+• Doa harian lengkap dengan teks Arab, rumi dan maksudnya
+• Ayat dan hadis pilihan setiap hari
 • Tasbih digital dengan sasaran kiraan
 • Penjejak solat qada
 • Panduan wuduk langkah demi langkah
