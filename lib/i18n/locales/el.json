@@ -13,7 +13,8 @@
     "hadithOfTheDay": "Χαντίθ της Ημέρας",
     "esmaOfTheDay": "Όνομα της Ημέρας",
     "duaOfTheDay": "Ντούα της Ημέρας",
-    "fridayGreeting": "Ευλογημένη Παρασκευή 🕌"
+    "fridayGreeting": "Ευλογημένη Παρασκευή 🕌",
+    "dailyMessage": "Μήνυμα της ημέρας"
   },
   "prayerTimes": {
     "imsak": "Φατζρ",

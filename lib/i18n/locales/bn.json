@@ -13,7 +13,8 @@
     "hadithOfTheDay": "আজকের হাদিস",
     "esmaOfTheDay": "আজকের নাম",
     "duaOfTheDay": "আজকের দু'আ",
-    "fridayGreeting": "জুমা মোবারক 🕌"
+    "fridayGreeting": "জুমা মোবারক 🕌",
+    "dailyMessage": "আজকের বার্তা"
   },
   "prayerTimes": {
     "imsak": "ফজর",

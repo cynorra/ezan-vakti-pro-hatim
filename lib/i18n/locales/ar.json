@@ -28,7 +28,8 @@
     "hadithOfTheDay": "حديث اليوم",
     "esmaOfTheDay": "اسم اليوم",
     "duaOfTheDay": "دعاء اليوم",
-    "fridayGreeting": "جمعة مباركة 🕌"
+    "fridayGreeting": "جمعة مباركة 🕌",
+    "dailyMessage": "رسالة اليوم"
   },
   "prayerTimes": {
     "imsak": "الفجر",

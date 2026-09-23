@@ -13,7 +13,8 @@
     "hadithOfTheDay": "Hadith van de dag",
     "esmaOfTheDay": "Naam van de dag",
     "duaOfTheDay": "Dua van de Dag",
-    "fridayGreeting": "Gezegende vrijdag 🕌"
+    "fridayGreeting": "Gezegende vrijdag 🕌",
+    "dailyMessage": "Boodschap van de dag"
   },
   "prayerTimes": {
     "imsak": "Fajr",

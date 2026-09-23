@@ -13,7 +13,8 @@
     "hadithOfTheDay": "Hadits Hari Ini",
     "esmaOfTheDay": "Nama Hari Ini",
     "duaOfTheDay": "Doa Hari Ini",
-    "fridayGreeting": "Jum'at Berkah 🕌"
+    "fridayGreeting": "Jum'at Berkah 🕌",
+    "dailyMessage": "Pesan Hari Ini"
   },
   "prayerTimes": {
     "imsak": "Subuh",

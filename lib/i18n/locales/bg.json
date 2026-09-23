@@ -13,7 +13,8 @@
     "hadithOfTheDay": "Хадис на деня",
     "esmaOfTheDay": "Исм на деня",
     "duaOfTheDay": "Дуа на деня",
-    "fridayGreeting": "Благословен петък 🕌"
+    "fridayGreeting": "Благословен петък 🕌",
+    "dailyMessage": "Послание на деня"
   },
   "prayerTimes": {
     "imsak": "Фаджр",

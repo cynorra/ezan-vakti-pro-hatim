@@ -13,7 +13,8 @@
     "hadithOfTheDay": "Hadith du jour",
     "esmaOfTheDay": "Nom du jour",
     "duaOfTheDay": "Invocation du jour",
-    "fridayGreeting": "Joumou‘a moubarak 🕌"
+    "fridayGreeting": "Joumou‘a moubarak 🕌",
+    "dailyMessage": "Message du jour"
   },
   "prayerTimes": {
     "imsak": "Fajr",

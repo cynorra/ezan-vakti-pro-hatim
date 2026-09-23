@@ -13,7 +13,8 @@
     "hadithOfTheDay": "आज की हदीस",
     "esmaOfTheDay": "आज का नाम",
     "duaOfTheDay": "आज की दुआ",
-    "fridayGreeting": "जुमा मुबारक 🕌"
+    "fridayGreeting": "जुमा मुबारक 🕌",
+    "dailyMessage": "आज का संदेश"
   },
   "prayerTimes": {
     "imsak": "फ़ज्र",

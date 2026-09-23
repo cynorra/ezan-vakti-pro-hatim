@@ -13,7 +13,8 @@
     "hadithOfTheDay": "Dagens hadith",
     "esmaOfTheDay": "Dagens namn",
     "duaOfTheDay": "Dagens dua",
-    "fridayGreeting": "Välsignad fredag 🕌"
+    "fridayGreeting": "Välsignad fredag 🕌",
+    "dailyMessage": "Dagens budskap"
   },
   "prayerTimes": {
     "imsak": "Fajr",

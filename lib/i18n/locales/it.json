@@ -13,7 +13,8 @@
     "hadithOfTheDay": "Hadith del giorno",
     "esmaOfTheDay": "Nome del giorno",
     "duaOfTheDay": "Dua del giorno",
-    "fridayGreeting": "Venerdì benedetto 🕌"
+    "fridayGreeting": "Venerdì benedetto 🕌",
+    "dailyMessage": "Messaggio del giorno"
   },
   "prayerTimes": {
     "imsak": "Fajr",

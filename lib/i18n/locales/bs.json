@@ -13,7 +13,8 @@
     "hadithOfTheDay": "Hadis dana",
     "esmaOfTheDay": "Ime dana",
     "duaOfTheDay": "Dova dana",
-    "fridayGreeting": "Hajirli džuma 🕌"
+    "fridayGreeting": "Hajirli džuma 🕌",
+    "dailyMessage": "Poruka dana"
   },
   "prayerTimes": {
     "imsak": "Sabah",

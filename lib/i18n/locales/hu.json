@@ -13,7 +13,8 @@
     "hadithOfTheDay": "Napi hadísz",
     "esmaOfTheDay": "Napi iszm",
     "duaOfTheDay": "A nap duája",
-    "fridayGreeting": "Áldott pénteket 🕌"
+    "fridayGreeting": "Áldott pénteket 🕌",
+    "dailyMessage": "A nap üzenete"
   },
   "prayerTimes": {
     "imsak": "Fajr",

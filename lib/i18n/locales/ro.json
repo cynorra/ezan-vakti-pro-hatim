@@ -13,7 +13,8 @@
     "hadithOfTheDay": "Hadithul zilei",
     "esmaOfTheDay": "Numele zilei",
     "duaOfTheDay": "Dua zilei",
-    "fridayGreeting": "Vineri binecuvântată 🕌"
+    "fridayGreeting": "Vineri binecuvântată 🕌",
+    "dailyMessage": "Mesajul zilei"
   },
   "prayerTimes": {
     "imsak": "Fajr",

@@ -28,7 +28,8 @@
     "hadithOfTheDay": "Hadith of the Day",
     "esmaOfTheDay": "Name of the Day",
     "duaOfTheDay": "Dua of the Day",
-    "fridayGreeting": "Blessed Friday 🕌"
+    "fridayGreeting": "Blessed Friday 🕌",
+    "dailyMessage": "Message of the day"
   },
   "prayerTimes": {
     "imsak": "Fajr",

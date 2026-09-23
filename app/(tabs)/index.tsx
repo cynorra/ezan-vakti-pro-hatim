@@ -55,7 +55,14 @@ import { PrayerTimesCard } from '@/components/PrayerTimesCard';
 import { ReligiousDaysCard } from '@/components/ReligiousDaysCard';
 import { SEOHead } from '@/components/SEOHead';
 import { getRandomEsma, localizeEsma, Esma } from '@/lib/data/esma';
-import { syncRemoteContent, getVerifiedDailyVerse, localizeVerifiedVerse, VerifiedVerse } from '@/lib/services/content-sync';
+import {
+  syncRemoteContent,
+  getDailyFeed,
+  localizeVerifiedVerse,
+  localizeVerifiedHadith,
+  localizeDailyMessage,
+  RemoteContentFeed,
+} from '@/lib/services/content-sync';
 
 const NOTIFICATION_PROMPTED_KEY = 'notification_permission_prompted';
 
@@ -63,7 +70,7 @@ export default function HomeScreen() {
   const { t, i18n } = useTranslation();
   const router = useRouter();
   const staticWisdom = localizeWisdom(getDailyWisdom(), i18n.language);
-  const dailyDua = localizeDua(getDailyDua(), i18n.language);
+  const staticDua = localizeDua(getDailyDua(), i18n.language);
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const [location, setLocation] = useState<SavedLocation>(DEFAULT_LOCATION);
@@ -77,18 +84,32 @@ export default function HomeScreen() {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [notificationsEnabled, setNotificationsEnabled] = useState(false);
   const [dailyEsma, setDailyEsma] = useState<Esma | null>(null);
-  const [feedVerse, setFeedVerse] = useState<VerifiedVerse | null>(null);
-  // Prefer today's verified verse from the daily feed; otherwise the bundled rotation.
-  const dailyWisdom = feedVerse
-    ? { id: 'feed', type: 'verse' as const, arabic: feedVerse.arabic, ...(({ text, source }) => ({ content: text, source }))(localizeVerifiedVerse(feedVerse, i18n.language)) }
+  const [feed, setFeed] = useState<RemoteContentFeed | null>(null);
+  // Prefer today's verified content from the daily feed; otherwise the bundled rotation.
+  const feedVerse = feed?.verifiedVerse ? localizeVerifiedVerse(feed.verifiedVerse, i18n.language) : null;
+  const dailyWisdom = feed?.verifiedVerse && feedVerse
+    ? { id: 'feed', type: 'verse' as const, arabic: feed.verifiedVerse.arabic, content: feedVerse.text, source: feedVerse.source }
     : staticWisdom;
+  const feedDua = feed?.verifiedDua ? localizeVerifiedVerse(feed.verifiedDua, i18n.language) : null;
+  const lang = i18n.language.split('-')[0];
+  const dailyDua = feed?.verifiedDua && feedDua
+    ? {
+        ...staticDua,
+        arabic: feed.verifiedDua.arabic,
+        // For Arabic the verse itself is the text; don't repeat it.
+        turkish: lang === 'ar' ? '' : feedDua.text,
+        source: feedDua.source,
+      }
+    : staticDua;
+  const dailyHadith = feed?.verifiedHadith ? localizeVerifiedHadith(feed.verifiedHadith, i18n.language) : null;
+  const dailyMessage = localizeDailyMessage(feed?.dailyMessage, i18n.language);
   const [streak, setStreak] = useState(0);
 
   useEffect(() => {
     syncRemoteContent()
       .catch(() => null)
-      .then(() => getVerifiedDailyVerse())
-      .then(setFeedVerse);
+      .then(() => getDailyFeed())
+      .then(setFeed);
     setDailyEsma(getRandomEsma());
     recordAppOpenAndGetStreak().then(setStreak);
   }, []);
@@ -426,6 +447,27 @@ export default function HomeScreen() {
             </Text>
           </View>
         </View>
+
+        {/* Günün Hadisi + Mesajı (daily feed) */}
+        {dailyHadith?.text ? (
+          <View style={[styles.card, { backgroundColor: colors.surface }, Shadows.medium]}>
+            <View style={styles.cardHeader}>
+              <View style={[styles.cardIconWrapper, { backgroundColor: colors.primary + '15' }]}>
+                <Ionicons name="chatbubble-ellipses" size={20} color={colors.primary} />
+              </View>
+              <Text style={[styles.cardTitle, { color: colors.primary }]}>{t('home.hadithOfTheDay')}</Text>
+            </View>
+            <View style={styles.wisdomBody}>
+              <Text style={[styles.wisdomContent, { color: colors.text }]}>{dailyHadith.text}</Text>
+              <Text style={[styles.wisdomSource, { color: colors.textSecondary }]}>— {dailyHadith.source}</Text>
+              {dailyMessage ? (
+                <Text style={[styles.wisdomSource, { color: colors.textSecondary, fontStyle: 'italic', marginTop: Spacing.md }]}>
+                  {t('home.dailyMessage')}: {dailyMessage}
+                </Text>
+              ) : null}
+            </View>
+          </View>
+        ) : null}
 
         {/* Günün Duası Card */}
         <TouchableOpacity

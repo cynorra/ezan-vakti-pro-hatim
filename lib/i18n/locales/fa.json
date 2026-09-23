@@ -13,7 +13,8 @@
     "hadithOfTheDay": "حدیث روز",
     "esmaOfTheDay": "اسم روز",
     "duaOfTheDay": "دعای روز",
-    "fridayGreeting": "جمعه مبارک 🕌"
+    "fridayGreeting": "جمعه مبارک 🕌",
+    "dailyMessage": "پیام روز"
   },
   "prayerTimes": {
     "imsak": "اذان صبح",

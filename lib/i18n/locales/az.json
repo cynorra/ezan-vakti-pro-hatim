@@ -13,7 +13,8 @@
     "hadithOfTheDay": "Günün hədisi",
     "esmaOfTheDay": "Günün ismi",
     "duaOfTheDay": "Günün Duası",
-    "fridayGreeting": "Cüməniz mübarək 🕌"
+    "fridayGreeting": "Cüməniz mübarək 🕌",
+    "dailyMessage": "Günün mesajı"
   },
   "prayerTimes": {
     "imsak": "Sübh",

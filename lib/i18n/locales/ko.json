@@ -13,7 +13,8 @@
     "hadithOfTheDay": "오늘의 하디스",
     "esmaOfTheDay": "오늘의 이름",
     "duaOfTheDay": "오늘의 두아",
-    "fridayGreeting": "축복받은 금요일 🕌"
+    "fridayGreeting": "축복받은 금요일 🕌",
+    "dailyMessage": "오늘의 메시지"
   },
   "prayerTimes": {
     "imsak": "파즈르",

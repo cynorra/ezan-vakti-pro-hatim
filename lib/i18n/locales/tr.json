@@ -28,7 +28,8 @@
     "hadithOfTheDay": "Günün Hadisi",
     "esmaOfTheDay": "Günün Esması",
     "duaOfTheDay": "Günün Duası",
-    "fridayGreeting": "Cumanız Mübarek Olsun 🕌"
+    "fridayGreeting": "Cumanız Mübarek Olsun 🕌",
+    "dailyMessage": "Günün Mesajı"
   },
   "prayerTimes": {
     "imsak": "İmsak",
