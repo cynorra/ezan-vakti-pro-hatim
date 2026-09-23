@@ -1,0 +1,18 @@
+<tr-TR>
+• Hatim: Arkadaşlarını ortak hatme davet et, kendi ilerlemeni paylaş
+• Her gün yenilenen dua ve şifa ayetleri
+• İkindi sonrası günün ayeti bildirimi
+• Vakit öncesi akıllı namaz hatırlatmaları, bildirime dokununca ilgili ekran açılır
+• Cuma tebrik kartı: tek dokunuşla paylaş
+• Yenilenen geri sayım ve uygulama geneli akıcı animasyonlar
+• Hata düzeltmeleri ve performans iyileştirmeleri
+</tr-TR>
+<en-US>
+• Hatim: Invite friends to a shared Quran completion and share your progress
+• Daily refreshed duas and healing verses
+• Verse of the day notification after Asr
+• Smart pre-prayer reminders; tapping a notification opens the right screen
+• Jumu'ah greeting cards you can share in one tap
+• Redesigned countdown and smoother animations across the app
+• Bug fixes and performance improvements
+</en-US>
