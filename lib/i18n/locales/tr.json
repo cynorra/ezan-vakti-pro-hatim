@@ -20,7 +20,9 @@
     "aksam": "Akşam",
     "yatsi": "Yatsı",
     "vitir": "Vitir",
-    "completionShareMessage": "🎉 Tüm kaza namazlarımı tamamladım, Elhamdülillah! 🕌\n\nSen de kaza namazlarını Ezan Vakti + Hatim ile takip et: {{playStore}}"
+    "completionShareMessage": "🎉 Tüm kaza namazlarımı tamamladım, Elhamdülillah! 🕌\n\nSen de kaza namazlarını Ezan Vakti + Hatim ile takip et: {{playStore}}",
+    "totalDebt": "TOPLAM KAZA BORCU",
+    "prayersCount": "{{count}} Vakit"
   },
   "home": {
     "nextPrayerCountdown": "Vaktin çıkmasına",
@@ -29,7 +31,11 @@
     "esmaOfTheDay": "Günün Esması",
     "duaOfTheDay": "Günün Duası",
     "fridayGreeting": "Cumanız Mübarek Olsun 🕌",
-    "dailyMessage": "Günün Mesajı"
+    "dailyMessage": "Günün Mesajı",
+    "dailyTimes": "GÜNLÜK VAKİTLER",
+    "nextBadge": "SIRADAKİ",
+    "nextPrayer": "SIRADAKİ VAKİT",
+    "prayerSoon": "⏳ VAKTE AZ KALDI"
   },
   "prayerTimes": {
     "imsak": "İmsak",
@@ -100,7 +106,15 @@
     "permissionOn": "Açık",
     "permissionOff": "Kapalı",
     "shareApp": "Uygulamayı Paylaş",
-    "shareAppMessage": "🕌 Namaz vakitleri, kıble, ortak hatim ve günlük dualar tek uygulamada. Ücretsiz indir:\n{{playStore}}"
+    "shareAppMessage": "🕌 Namaz vakitleri, kıble, ortak hatim ve günlük dualar tek uygulamada. Ücretsiz indir:\n{{playStore}}",
+    "reminderOff": "Kapalı",
+    "reminderMinutes": "{{minutes}} dk önce",
+    "sounds": {
+      "istanbul": "İstanbul Ezanı",
+      "mecca": "Mekke Ezanı",
+      "medina": "Medine Ezanı",
+      "egypt": "Mısır Ezanı"
+    }
   },
   "qibla": {
     "title": "KIBLE PUSULASI",
@@ -108,7 +122,9 @@
     "yourDirection": "SİZİN YÖNÜNÜZ",
     "qiblaAngle": "KIBLE AÇISI",
     "aligned": "KIBLEYE YÖNELDİNİZ",
-    "hint": "Cihazınızı yatay tutun ve ok işaretini takip edin."
+    "hint": "Cihazınızı yatay tutun ve ok işaretini takip edin.",
+    "permissionDenied": "Konum izni verilmedi.",
+    "sensorError": "Pusula veya konum yüklenemedi. Lütfen sensörlerinizin ve konum servisinizin açık olduğunu kontrol edin."
   },
   "common": {
     "cancel": "İptal",
@@ -253,6 +269,32 @@
       "hijriNewYear": "Hicri Yılbaşı",
       "ashura": "Aşure Günü",
       "mevlid": "Mevlid Kandili"
+    }
+  },
+  "tesbih": {
+    "title": "TESBİHMATİK",
+    "subtitle": "Zikir ve Tesbihat",
+    "tap": "ZİKRET",
+    "reset": "Sıfırla",
+    "choose": "ZİKİR SEÇİMİ",
+    "setTarget": "Hedef Belirle",
+    "defaultName": "Zikir"
+  },
+  "checklist": {
+    "title": "Günlük Amel Defteri",
+    "subtitle": "Bugünkü manevi hedeflerin",
+    "items": {
+      "fajr": "Sabah Namazı",
+      "dhuhr": "Öğle Namazı",
+      "asr": "İkindi Namazı",
+      "maghrib": "Akşam Namazı",
+      "isha": "Yatsı Namazı",
+      "tahajjud": "Teheccüd",
+      "duha": "Kuşluk (Duha)",
+      "evvabin": "Evvabin",
+      "quran": "Kur'an/Cüz",
+      "dhikr": "Zikirler",
+      "charity": "İyilik/Sadaka"
     }
   }
 }

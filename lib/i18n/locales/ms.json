@@ -14,7 +14,11 @@
     "esmaOfTheDay": "Asmaul Husna Hari Ini",
     "duaOfTheDay": "Doa Hari Ini",
     "fridayGreeting": "Jumaat Mubarak 🕌",
-    "dailyMessage": "Pesanan Hari Ini"
+    "dailyMessage": "Pesanan Hari Ini",
+    "dailyTimes": "WAKTU SOLAT HARIAN",
+    "nextBadge": "SETERUSNYA",
+    "nextPrayer": "SOLAT SETERUSNYA",
+    "prayerSoon": "⏳ WAKTU SOLAT HAMPIR TIBA"
   },
   "prayerTimes": {
     "imsak": "Subuh",
@@ -78,7 +82,15 @@
     "permissionOn": "Hidup",
     "permissionOff": "Mati",
     "shareApp": "Kongsi Aplikasi",
-    "shareAppMessage": "🕌 Waktu solat, kiblat, khatam al-Quran bersama dan doa harian dalam satu aplikasi. Muat turun percuma:\n{{playStore}}"
+    "shareAppMessage": "🕌 Waktu solat, kiblat, khatam al-Quran bersama dan doa harian dalam satu aplikasi. Muat turun percuma:\n{{playStore}}",
+    "reminderOff": "Tutup",
+    "reminderMinutes": "{{minutes}} minit sebelum",
+    "sounds": {
+      "istanbul": "Azan Istanbul",
+      "mecca": "Azan Makkah",
+      "medina": "Azan Madinah",
+      "egypt": "Azan Mesir"
+    }
   },
   "qibla": {
     "title": "KOMPAS KIBLAT",
@@ -86,7 +98,9 @@
     "yourDirection": "ARAH ANDA",
     "qiblaAngle": "SUDUT KIBLAT",
     "aligned": "MENGHADAP KIBLAT",
-    "hint": "Pegang peranti secara mendatar dan ikuti jarum."
+    "hint": "Pegang peranti secara mendatar dan ikuti jarum.",
+    "permissionDenied": "Kebenaran lokasi tidak diberikan.",
+    "sensorError": "Kompas atau lokasi tidak dapat dimuatkan. Sila pastikan deria dan perkhidmatan lokasi anda dihidupkan."
   },
   "common": {
     "cancel": "Batal",
@@ -108,7 +122,9 @@
     "aksam": "Maghrib",
     "yatsi": "Isyak",
     "vitir": "Witir",
-    "completionShareMessage": "🎉 Saya telah menggantikan semua solat qada saya, Alhamdulillah! 🕌\n\nJejak solat qada anda bersama Ezan Vakti + Hatim: {{playStore}}"
+    "completionShareMessage": "🎉 Saya telah menggantikan semua solat qada saya, Alhamdulillah! 🕌\n\nJejak solat qada anda bersama Ezan Vakti + Hatim: {{playStore}}",
+    "totalDebt": "JUMLAH SOLAT QADA",
+    "prayersCount": "{{count}} solat"
   },
   "dua": {
     "headerTitle": "KOLEKSI DOA",
@@ -237,6 +253,32 @@
       "hijriNewYear": "Maal Hijrah",
       "ashura": "Hari Asyura",
       "mevlid": "Maulidur Rasul"
+    }
+  },
+  "tesbih": {
+    "title": "PENGENDIR TASBIH",
+    "subtitle": "Zikir dan Tasbih",
+    "tap": "KIRA",
+    "reset": "Set Semula",
+    "choose": "PILIH ZIKIR",
+    "setTarget": "Tetapkan Sasaran",
+    "defaultName": "Zikir"
+  },
+  "checklist": {
+    "title": "Amalan Baik Harian",
+    "subtitle": "Matlamat rohani anda untuk hari ini",
+    "items": {
+      "fajr": "Solat Subuh",
+      "dhuhr": "Solat Zohor",
+      "asr": "Solat Asar",
+      "maghrib": "Solat Maghrib",
+      "isha": "Solat Isyak",
+      "tahajjud": "Tahajjud",
+      "duha": "Solat Dhuha",
+      "evvabin": "Solat Awwabin",
+      "quran": "Bacaan Al-Quran",
+      "dhikr": "Zikir",
+      "charity": "Amal Baik / Sedekah"
     }
   }
 }

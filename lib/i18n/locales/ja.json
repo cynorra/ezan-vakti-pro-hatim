@@ -14,7 +14,11 @@
     "esmaOfTheDay": "今日の御名",
     "duaOfTheDay": "今日のドゥアー",
     "fridayGreeting": "祝福された金曜日 🕌",
-    "dailyMessage": "今日のメッセージ"
+    "dailyMessage": "今日のメッセージ",
+    "dailyTimes": "今日の礼拝時間",
+    "nextBadge": "次",
+    "nextPrayer": "次の礼拝",
+    "prayerSoon": "⏳ 礼拝時間が近づいています"
   },
   "prayerTimes": {
     "imsak": "ファジュル",
@@ -78,7 +82,15 @@
     "permissionOn": "オン",
     "permissionOff": "オフ",
     "shareApp": "アプリを共有",
-    "shareAppMessage": "🕌 礼拝時刻、キブラ、みんなでのクルアーン読誦、毎日のドゥアをひとつのアプリで。無料ダウンロード：\n{{playStore}}"
+    "shareAppMessage": "🕌 礼拝時刻、キブラ、みんなでのクルアーン読誦、毎日のドゥアをひとつのアプリで。無料ダウンロード：\n{{playStore}}",
+    "reminderOff": "オフ",
+    "reminderMinutes": "{{minutes}}分前",
+    "sounds": {
+      "istanbul": "イスタンブールのアザーン",
+      "mecca": "メッカのアザーン",
+      "medina": "マディーナのアザーン",
+      "egypt": "エジプトのアザーン"
+    }
   },
   "common": {
     "cancel": "キャンセル",
@@ -100,7 +112,9 @@
     "aksam": "マグリブ",
     "yatsi": "イーシャー",
     "vitir": "ウィトル",
-    "completionShareMessage": "🎉 カザー（未実施の礼拝）をすべて完了しました。アルハムドゥリッラー！ 🕌\n\n「Ezan Vakti + Hatim」で未実施の礼拝を記録しよう：{{playStore}}"
+    "completionShareMessage": "🎉 カザー（未実施の礼拝）をすべて完了しました。アルハムドゥリッラー！ 🕌\n\n「Ezan Vakti + Hatim」で未実施の礼拝を記録しよう：{{playStore}}",
+    "totalDebt": "見合わせた礼拝の合計",
+    "prayersCount": "{{count}}回の礼拝"
   },
   "qibla": {
     "title": "キブラコンパス",
@@ -108,7 +122,9 @@
     "yourDirection": "現在の向き",
     "qiblaAngle": "キブラの角度",
     "aligned": "キブラに向いています",
-    "hint": "端末を水平に保ち、針に従ってください。"
+    "hint": "端末を水平に保ち、針に従ってください。",
+    "permissionDenied": "位置情報の権限が許可されていません。",
+    "sensorError": "コンパスまたは位置情報を読み込めませんでした。センサーと位置情報サービスがオンになっているか確認してください。"
   },
   "dua": {
     "headerTitle": "ドゥアーライブラリ",
@@ -237,6 +253,32 @@
       "hijriNewYear": "イスラーム暦新年",
       "ashura": "アーシューラー",
       "mevlid": "マウリド"
+    }
+  },
+  "tesbih": {
+    "title": "タスビーフカウンター",
+    "subtitle": "ズィクルとタスビーフ",
+    "tap": "カウント",
+    "reset": "リセット",
+    "choose": "ズィクルを選択",
+    "setTarget": "目標を設定",
+    "defaultName": "ズィクル"
+  },
+  "checklist": {
+    "title": "毎日の善行",
+    "subtitle": "今日のスピリチュアルな目標",
+    "items": {
+      "fajr": "ファジュル礼拝",
+      "dhuhr": "ズフル礼拝",
+      "asr": "アスル礼拝",
+      "maghrib": "マグリブ礼拝",
+      "isha": "イシャ礼拝",
+      "tahajjud": "タハジュド",
+      "duha": "ドゥハ礼拝",
+      "evvabin": "アッワービーン礼拝",
+      "quran": "クルアーン読誦",
+      "dhikr": "ズィクル",
+      "charity": "善行 / 施し"
     }
   }
 }

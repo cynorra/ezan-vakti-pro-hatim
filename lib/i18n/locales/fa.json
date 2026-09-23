@@ -14,7 +14,11 @@
     "esmaOfTheDay": "اسم روز",
     "duaOfTheDay": "دعای روز",
     "fridayGreeting": "جمعه مبارک 🕌",
-    "dailyMessage": "پیام روز"
+    "dailyMessage": "پیام روز",
+    "dailyTimes": "اوقات شرعی روزانه",
+    "nextBadge": "بعدی",
+    "nextPrayer": "نماز بعدی",
+    "prayerSoon": "⏳ وقت نماز نزدیک است"
   },
   "prayerTimes": {
     "imsak": "اذان صبح",
@@ -78,7 +82,15 @@
     "permissionOn": "روشن",
     "permissionOff": "خاموش",
     "shareApp": "اشتراک‌گذاری برنامه",
-    "shareAppMessage": "🕌 اوقات نماز، قبله، ختم گروهی قرآن و دعاهای روزانه در یک برنامه. رایگان دانلود کنید:\n{{playStore}}"
+    "shareAppMessage": "🕌 اوقات نماز، قبله، ختم گروهی قرآن و دعاهای روزانه در یک برنامه. رایگان دانلود کنید:\n{{playStore}}",
+    "reminderOff": "خاموش",
+    "reminderMinutes": "{{minutes}} دقیقه قبل",
+    "sounds": {
+      "istanbul": "اذان استانبول",
+      "mecca": "اذان مکه",
+      "medina": "اذان مدینه",
+      "egypt": "اذان مصری"
+    }
   },
   "qibla": {
     "title": "قبله‌نما",
@@ -86,7 +98,9 @@
     "yourDirection": "جهت شما",
     "qiblaAngle": "زاویه قبله",
     "aligned": "رو به قبله هستید",
-    "hint": "دستگاه را صاف نگه دارید و سوزن را دنبال کنید."
+    "hint": "دستگاه را صاف نگه دارید و سوزن را دنبال کنید.",
+    "permissionDenied": "اجازه دسترسی به موقعیت مکانی داده نشد.",
+    "sensorError": "قطب‌نما یا موقعیت مکانی بارگیری نشد. لطفاً بررسی کنید که سنسورها و خدمات موقعیت‌یاب شما روشن هستند."
   },
   "common": {
     "cancel": "لغو",
@@ -108,7 +122,9 @@
     "aksam": "مغرب",
     "yatsi": "عشاء",
     "vitir": "وتر",
-    "completionShareMessage": "🎉 الحمدلله، تمام نمازهای قضای خود را به جا آوردم! 🕌\n\nپیگیری نمازهای قضا با Ezan Vakti + Hatim:\n{{playStore}}"
+    "completionShareMessage": "🎉 الحمدلله، تمام نمازهای قضای خود را به جا آوردم! 🕌\n\nپیگیری نمازهای قضا با Ezan Vakti + Hatim:\n{{playStore}}",
+    "totalDebt": "مجموع نمازهای قضا شده",
+    "prayersCount": "{{count}} نماز"
   },
   "dua": {
     "headerTitle": "بانک ادعیه",
@@ -237,6 +253,32 @@
       "hijriNewYear": "آغاز سال هجری قمری",
       "ashura": "روز عاشورا",
       "mevlid": "میلاد پیامبر"
+    }
+  },
+  "tesbih": {
+    "title": "شمارنده تسبیح",
+    "subtitle": "ذکر و تسبیح",
+    "tap": "شمارش",
+    "reset": "بازنشانی",
+    "choose": "انتخاب ذکر",
+    "setTarget": "تعیین هدف",
+    "defaultName": "ذکر"
+  },
+  "checklist": {
+    "title": "اعمال نیک روزانه",
+    "subtitle": "اهداف معنوی شما برای امروز",
+    "items": {
+      "fajr": "نماز صبح",
+      "dhuhr": "نماز ظهر",
+      "asr": "نماز عصر",
+      "maghrib": "نماز مغرب",
+      "isha": "نماز عشا",
+      "tahajjud": "نماز شب (تهجد)",
+      "duha": "نماز ضحی",
+      "evvabin": "نماز اوابین",
+      "quran": "تلاوت قرآن",
+      "dhikr": "ذکر",
+      "charity": "کار نیک / صدقه"
     }
   }
 }

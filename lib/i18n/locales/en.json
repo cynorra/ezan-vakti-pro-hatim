@@ -20,7 +20,9 @@
     "aksam": "Maghrib",
     "yatsi": "Isha",
     "vitir": "Witr",
-    "completionShareMessage": "🎉 I completed all my missed prayers, Alhamdulillah! 🕌\n\nTrack your missed prayers with Ezan Vakti + Hatim: {{playStore}}"
+    "completionShareMessage": "🎉 I completed all my missed prayers, Alhamdulillah! 🕌\n\nTrack your missed prayers with Ezan Vakti + Hatim: {{playStore}}",
+    "totalDebt": "TOTAL MISSED PRAYERS",
+    "prayersCount": "{{count}} prayers"
   },
   "home": {
     "nextPrayerCountdown": "Time remaining",
@@ -29,7 +31,11 @@
     "esmaOfTheDay": "Name of the Day",
     "duaOfTheDay": "Dua of the Day",
     "fridayGreeting": "Blessed Friday 🕌",
-    "dailyMessage": "Message of the day"
+    "dailyMessage": "Message of the day",
+    "dailyTimes": "DAILY PRAYER TIMES",
+    "nextBadge": "NEXT",
+    "nextPrayer": "NEXT PRAYER",
+    "prayerSoon": "⏳ PRAYER TIME IS NEAR"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -93,7 +99,15 @@
     "permissionOn": "On",
     "permissionOff": "Off",
     "shareApp": "Share the App",
-    "shareAppMessage": "🕌 Prayer times, qibla, group Quran completion and daily duas in one app. Download free:\n{{playStore}}"
+    "shareAppMessage": "🕌 Prayer times, qibla, group Quran completion and daily duas in one app. Download free:\n{{playStore}}",
+    "reminderOff": "Off",
+    "reminderMinutes": "{{minutes}} min before",
+    "sounds": {
+      "istanbul": "Istanbul Adhan",
+      "mecca": "Makkah Adhan",
+      "medina": "Madinah Adhan",
+      "egypt": "Egyptian Adhan"
+    }
   },
   "qibla": {
     "title": "QIBLA COMPASS",
@@ -101,7 +115,9 @@
     "yourDirection": "YOUR DIRECTION",
     "qiblaAngle": "QIBLA ANGLE",
     "aligned": "ALIGNED TO QIBLA",
-    "hint": "Keep your device flat and follow the needle."
+    "hint": "Keep your device flat and follow the needle.",
+    "permissionDenied": "Location permission was not granted.",
+    "sensorError": "Compass or location could not be loaded. Please check that your sensors and location services are turned on."
   },
   "common": {
     "cancel": "Cancel",
@@ -241,6 +257,32 @@
       "hijriNewYear": "Islamic New Year",
       "ashura": "Day of Ashura",
       "mevlid": "Mawlid an-Nabi"
+    }
+  },
+  "tesbih": {
+    "title": "TASBIH COUNTER",
+    "subtitle": "Dhikr and Tasbih",
+    "tap": "COUNT",
+    "reset": "Reset",
+    "choose": "CHOOSE DHIKR",
+    "setTarget": "Set Target",
+    "defaultName": "Dhikr"
+  },
+  "checklist": {
+    "title": "Daily Good Deeds",
+    "subtitle": "Your spiritual goals for today",
+    "items": {
+      "fajr": "Fajr Prayer",
+      "dhuhr": "Dhuhr Prayer",
+      "asr": "Asr Prayer",
+      "maghrib": "Maghrib Prayer",
+      "isha": "Isha Prayer",
+      "tahajjud": "Tahajjud",
+      "duha": "Duha Prayer",
+      "evvabin": "Awwabin Prayer",
+      "quran": "Quran Reading",
+      "dhikr": "Dhikr",
+      "charity": "Good Deed / Charity"
     }
   }
 }

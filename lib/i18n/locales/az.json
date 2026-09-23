@@ -14,7 +14,11 @@
     "esmaOfTheDay": "Günün ismi",
     "duaOfTheDay": "Günün Duası",
     "fridayGreeting": "Cüməniz mübarək 🕌",
-    "dailyMessage": "Günün mesajı"
+    "dailyMessage": "Günün mesajı",
+    "dailyTimes": "GÜNDƏLİK NAMAZ VAQTLƏRİ",
+    "nextBadge": "NÖVB.",
+    "nextPrayer": "NÖVBƏTİ NAMAZ",
+    "prayerSoon": "⏳ NAMAZ VAXTI YAXINLAŞIR"
   },
   "prayerTimes": {
     "imsak": "Sübh",
@@ -78,7 +82,15 @@
     "permissionOn": "Açıq",
     "permissionOff": "Bağlı",
     "shareApp": "Tətbiqi paylaş",
-    "shareAppMessage": "🕌 Namaz vaxtları, qiblə, birgə xətm və gündəlik dualar bir tətbiqdə. Pulsuz yüklə:\n{{playStore}}"
+    "shareAppMessage": "🕌 Namaz vaxtları, qiblə, birgə xətm və gündəlik dualar bir tətbiqdə. Pulsuz yüklə:\n{{playStore}}",
+    "reminderOff": "Bağlı",
+    "reminderMinutes": "{{minutes}} dəq əvvəl",
+    "sounds": {
+      "istanbul": "İstanbul azanı",
+      "mecca": "Məkkə azanı",
+      "medina": "Mədinə azanı",
+      "egypt": "Misir azanı"
+    }
   },
   "qibla": {
     "title": "QİBLƏ KOMPASı",
@@ -86,7 +98,9 @@
     "yourDirection": "SİZİN İSTİQAMƏTİNİZ",
     "qiblaAngle": "QİBLƏ BUCAĞI",
     "aligned": "QİBLƏYƏ YÖNƏLDINIZ",
-    "hint": "Cihazı üfüqi saxlayın və oxu izləyin."
+    "hint": "Cihazı üfüqi saxlayın və oxu izləyin.",
+    "permissionDenied": "Məkan icazəsi verilmədi.",
+    "sensorError": "Kompas və ya məkan yüklənmədi. Zəhmət olmasa sensorlarınızın və məkan xidmətlərinizin açıq olduğunu yoxlayın."
   },
   "common": {
     "cancel": "Ləğv et",
@@ -108,7 +122,9 @@
     "aksam": "Məğrib",
     "yatsi": "İşa",
     "vitir": "Vitr",
-    "completionShareMessage": "🎉 Bütün qəza namazlarımı tamamladım, Əlhəmdulillah! 🕌\n\nQəza namazlarınızı Ezan Vakti + Hatim ilə izləyin: {{playStore}}"
+    "completionShareMessage": "🎉 Bütün qəza namazlarımı tamamladım, Əlhəmdulillah! 🕌\n\nQəza namazlarınızı Ezan Vakti + Hatim ilə izləyin: {{playStore}}",
+    "totalDebt": "ÜMUMİ QƏZA NAMAZLARI",
+    "prayersCount": "{{count}} namaz"
   },
   "dua": {
     "headerTitle": "DUA KİTABXANASI",
@@ -237,6 +253,32 @@
       "hijriNewYear": "Hicri yeni il",
       "ashura": "Aşura günü",
       "mevlid": "Mövlud"
+    }
+  },
+  "tesbih": {
+    "title": "TƏSBİH SAYĞACI",
+    "subtitle": "Zikr və təsbih",
+    "tap": "SAY",
+    "reset": "Sıfırla",
+    "choose": "ZİKRİ SEÇ",
+    "setTarget": "Hədəf təyin et",
+    "defaultName": "Zikr"
+  },
+  "checklist": {
+    "title": "Gündəlik yaxşı əməllər",
+    "subtitle": "Bugünkü mənəvi hədəfləriniz",
+    "items": {
+      "fajr": "Sübh namazı",
+      "dhuhr": "Zöhr namazı",
+      "asr": "Əsr namazı",
+      "maghrib": "Şəam namazı",
+      "isha": "İşə namazı",
+      "tahajjud": "Təhəccüd namazı",
+      "duha": "Qiblə / Nafilə (Düha)",
+      "evvabin": "Əvvabin namazı",
+      "quran": "Qurani-Kərim oxumaq",
+      "dhikr": "Zikr",
+      "charity": "Yaxşı əməl / Sədəqə"
     }
   }
 }

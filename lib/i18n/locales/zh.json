@@ -14,7 +14,11 @@
     "esmaOfTheDay": "今日尊名",
     "duaOfTheDay": "每日祈祷",
     "fridayGreeting": "主麻吉庆 🕌",
-    "dailyMessage": "今日寄语"
+    "dailyMessage": "今日寄语",
+    "dailyTimes": "每日礼拜时间",
+    "nextBadge": "下场",
+    "nextPrayer": "下一次礼拜",
+    "prayerSoon": "⏳ 礼拜时间即将到来"
   },
   "prayerTimes": {
     "imsak": "晨礼",
@@ -78,7 +82,15 @@
     "permissionOn": "已开启",
     "permissionOff": "已关闭",
     "shareApp": "分享应用",
-    "shareAppMessage": "🕌 礼拜时间、朝向、集体诵读古兰经和每日祈祷，尽在一个应用。免费下载：\n{{playStore}}"
+    "shareAppMessage": "🕌 礼拜时间、朝向、集体诵读古兰经和每日祈祷，尽在一个应用。免费下载：\n{{playStore}}",
+    "reminderOff": "关闭",
+    "reminderMinutes": "提前 {{minutes}} 分钟",
+    "sounds": {
+      "istanbul": "伊斯坦布尔宣礼",
+      "mecca": "麦加宣礼",
+      "medina": "麦地那宣礼",
+      "egypt": "埃及宣礼"
+    }
   },
   "common": {
     "cancel": "取消",
@@ -100,7 +112,9 @@
     "aksam": "昏礼",
     "yatsi": "宵礼",
     "vitir": "奇数拜",
-    "completionShareMessage": "🎉 感赞安拉，我已补完所有欠拜！🕌\n\n使用 Ezan Vakti + Hatim 记录您的欠拜：{{playStore}}"
+    "completionShareMessage": "🎉 感赞安拉，我已补完所有欠拜！🕌\n\n使用 Ezan Vakti + Hatim 记录您的欠拜：{{playStore}}",
+    "totalDebt": "需要还补的礼拜总数",
+    "prayersCount": "{{count}} 场礼拜"
   },
   "qibla": {
     "title": "朝向罗盘",
@@ -108,7 +122,9 @@
     "yourDirection": "您的方向",
     "qiblaAngle": "朝向角度",
     "aligned": "已对准朝向",
-    "hint": "请平放设备并跟随指针。"
+    "hint": "请平放设备并跟随指针。",
+    "permissionDenied": "未授予位置权限。",
+    "sensorError": "无法加载指南针或位置。请检查您的传感器和定位服务是否已开启。"
   },
   "dua": {
     "headerTitle": "祈祷词库",
@@ -237,6 +253,32 @@
       "hijriNewYear": "伊斯兰新年",
       "ashura": "阿舒拉日",
       "mevlid": "圣纪节"
+    }
+  },
+  "tesbih": {
+    "title": "赞念计数器",
+    "subtitle": "记念与赞念",
+    "tap": "计数",
+    "reset": "重置",
+    "choose": "选择赞念",
+    "setTarget": "设定目标",
+    "defaultName": "赞念"
+  },
+  "checklist": {
+    "title": "每日善行",
+    "subtitle": "你今天的灵性目标",
+    "items": {
+      "fajr": "晨礼 (Fajr)",
+      "dhuhr": "晌礼 (Dhuhr)",
+      "asr": "晡礼 (Asr)",
+      "maghrib": "昏礼 (Maghrib)",
+      "isha": "宵礼 (Isha)",
+      "tahajjud": "夜半拜 (Tahajjud)",
+      "duha": "上午拜 (Duha)",
+      "evvabin": "悔悟拜 (Awwabin)",
+      "quran": "诵读古兰经",
+      "dhikr": "赞念 (Dhikr)",
+      "charity": "善行 / 施舍"
     }
   }
 }

@@ -14,7 +14,11 @@
     "esmaOfTheDay": "Dagens namn",
     "duaOfTheDay": "Dagens dua",
     "fridayGreeting": "Välsignad fredag 🕌",
-    "dailyMessage": "Dagens budskap"
+    "dailyMessage": "Dagens budskap",
+    "dailyTimes": "DAGLIGA BÖNETIDER",
+    "nextBadge": "NÄSTA",
+    "nextPrayer": "NÄSTA BÖN",
+    "prayerSoon": "⏳ BÖNETIDEN ÄR NÄRA"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -78,7 +82,15 @@
     "permissionOn": "På",
     "permissionOff": "Av",
     "shareApp": "Dela appen",
-    "shareAppMessage": "🕌 Bönetider, qibla, gemensam koranläsning och dagliga duas i en app. Ladda ner gratis:\n{{playStore}}"
+    "shareAppMessage": "🕌 Bönetider, qibla, gemensam koranläsning och dagliga duas i en app. Ladda ner gratis:\n{{playStore}}",
+    "reminderOff": "Av",
+    "reminderMinutes": "{{minutes}} min innan",
+    "sounds": {
+      "istanbul": "Istanbul Adhan",
+      "mecca": "Mekka Adhan",
+      "medina": "Medina Adhan",
+      "egypt": "Egyptisk Adhan"
+    }
   },
   "common": {
     "cancel": "Avbryt",
@@ -100,7 +112,9 @@
     "aksam": "Maghrib",
     "yatsi": "Isha",
     "vitir": "Witr",
-    "completionShareMessage": "🎉 Jag har klarat av alla mina missade böner, Alhamdulillah! 🕌\n\nHåll koll på dina missade böner med Ezan Vakti + Hatim: {{playStore}}"
+    "completionShareMessage": "🎉 Jag har klarat av alla mina missade böner, Alhamdulillah! 🕌\n\nHåll koll på dina missade böner med Ezan Vakti + Hatim: {{playStore}}",
+    "totalDebt": "TOTALA MISSADE BÖNER",
+    "prayersCount": "{{count}} böner"
   },
   "qibla": {
     "title": "QIBLA-KOMPASS",
@@ -108,7 +122,9 @@
     "yourDirection": "DIN RIKTNING",
     "qiblaAngle": "QIBLA-VINKEL",
     "aligned": "RIKTAD MOT QIBLA",
-    "hint": "Håll enheten plant och följ nålen."
+    "hint": "Håll enheten plant och följ nålen.",
+    "permissionDenied": "Platsbehörighet beviljades inte.",
+    "sensorError": "Kompass eller plats kunde inte läsas in. Kontrollera att dina sensorer och platstjänster är aktiverade."
   },
   "dua": {
     "headerTitle": "DUA-BIBLIOTEK",
@@ -237,6 +253,32 @@
       "hijriNewYear": "Islamiskt nyår",
       "ashura": "Ashura",
       "mevlid": "Mawlid"
+    }
+  },
+  "tesbih": {
+    "title": "TASBIH-RÄKNARE",
+    "subtitle": "Dhikr och Tasbih",
+    "tap": "RÄKNA",
+    "reset": "Återställ",
+    "choose": "VÄLJ DHIKR",
+    "setTarget": "Ange mål",
+    "defaultName": "Dhikr"
+  },
+  "checklist": {
+    "title": "Dagliga goda gärningar",
+    "subtitle": "Dina spiritiuella mål för idag",
+    "items": {
+      "fajr": "Fajr-bön",
+      "dhuhr": "Dhuhr-bön",
+      "asr": "Asr-bön",
+      "maghrib": "Maghrib-bön",
+      "isha": "Isha-bön",
+      "tahajjud": "Tahajjud",
+      "duha": "Duha-bön",
+      "evvabin": "Awwabin-bön",
+      "quran": "Läsning av Koranen",
+      "dhikr": "Dhikr",
+      "charity": "God gärning / Sadaqa"
     }
   }
 }

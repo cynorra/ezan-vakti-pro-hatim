@@ -159,9 +159,9 @@ export default function KazaScreen() {
           {/* Total Summary Card */}
           <View style={[styles.summaryCard, { backgroundColor: colors.surface }, Shadows.medium]}>
             <View style={styles.summaryLeft}>
-              <Text style={[styles.summaryLabel, { color: colors.textSecondary }]}>TOPLAM KAZA BORCU</Text>
+              <Text style={[styles.summaryLabel, { color: colors.textSecondary }]}>{t('kaza.totalDebt')}</Text>
               <Text style={[styles.summaryCount, { color: total === 0 ? colors.success : colors.primary }]}>
-                {total} Vakit
+                {t('kaza.prayersCount', { count: total })}
               </Text>
             </View>
             <TouchableOpacity

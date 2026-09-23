@@ -14,7 +14,11 @@
     "esmaOfTheDay": "Nom du jour",
     "duaOfTheDay": "Invocation du jour",
     "fridayGreeting": "Joumou‘a moubarak 🕌",
-    "dailyMessage": "Message du jour"
+    "dailyMessage": "Message du jour",
+    "dailyTimes": "HORAIRES DES PRIÈRES QUOTIDIENNES",
+    "nextBadge": "SUIV.",
+    "nextPrayer": "PROCHAINE PRIÈRE",
+    "prayerSoon": "⏳ L'HEURE DE LA PRIÈRE PROCHE"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -78,7 +82,15 @@
     "permissionOn": "Activé",
     "permissionOff": "Désactivé",
     "shareApp": "Partager l'application",
-    "shareAppMessage": "🕌 Horaires de prière, qibla, khatm collectif du Coran et invocations quotidiennes dans une seule app. Téléchargement gratuit :\n{{playStore}}"
+    "shareAppMessage": "🕌 Horaires de prière, qibla, khatm collectif du Coran et invocations quotidiennes dans une seule app. Téléchargement gratuit :\n{{playStore}}",
+    "reminderOff": "Désactivé",
+    "reminderMinutes": "{{minutes}} min avant",
+    "sounds": {
+      "istanbul": "Adhan d'Istanbul",
+      "mecca": "Adhan de La Mecque",
+      "medina": "Adhan de Médine",
+      "egypt": "Adhan égyptien"
+    }
   },
   "common": {
     "cancel": "Annuler",
@@ -100,7 +112,9 @@
     "aksam": "Maghrib",
     "yatsi": "Isha",
     "vitir": "Witr",
-    "completionShareMessage": "🎉 J'ai rattrapé toutes mes prières manquées, Alhamdulillah ! 🕌\n\nSuivez vos prières manquées avec Ezan Vakti + Hatim : {{playStore}}"
+    "completionShareMessage": "🎉 J'ai rattrapé toutes mes prières manquées, Alhamdulillah ! 🕌\n\nSuivez vos prières manquées avec Ezan Vakti + Hatim : {{playStore}}",
+    "totalDebt": "TOTAL DES PRIÈRES MANQUÉES",
+    "prayersCount": "{{count}} prières"
   },
   "qibla": {
     "title": "BOUSSOLE QIBLA",
@@ -108,7 +122,9 @@
     "yourDirection": "VOTRE DIRECTION",
     "qiblaAngle": "ANGLE DE LA QIBLA",
     "aligned": "ALIGNÉ AVEC LA QIBLA",
-    "hint": "Posez votre appareil à plat et suivez l'aiguille."
+    "hint": "Posez votre appareil à plat et suivez l'aiguille.",
+    "permissionDenied": "L'autorisation de localisation n'a pas été accordée.",
+    "sensorError": "Impossible de charger la boussole ou la localisation. Veuillez vérifier que vos capteurs et services de localisation sont activés."
   },
   "dua": {
     "headerTitle": "BIBLIOTHÈQUE D'INVOCATIONS",
@@ -237,6 +253,32 @@
       "hijriNewYear": "Nouvel an de l'Hégire",
       "ashura": "Achoura",
       "mevlid": "Mawlid"
+    }
+  },
+  "tesbih": {
+    "title": "COMPTEUR DE TASBIH",
+    "subtitle": "Dhikr et Tasbih",
+    "tap": "COMPTER",
+    "reset": "Réinitialiser",
+    "choose": "CHOISIR UN DHIKR",
+    "setTarget": "Définir un objectif",
+    "defaultName": "Dhikr"
+  },
+  "checklist": {
+    "title": "Bonnes actions quotidiennes",
+    "subtitle": "Vos objectifs spirituels pour aujourd'hui",
+    "items": {
+      "fajr": "Prière du Fajr",
+      "dhuhr": "Prière du Dhuhr",
+      "asr": "Prière de l'Asr",
+      "maghrib": "Prière du Maghrib",
+      "isha": "Prière de l'Isha",
+      "tahajjud": "Tahajjud",
+      "duha": "Prière du Duha",
+      "evvabin": "Prière d'Awwabin",
+      "quran": "Lecture du Coran",
+      "dhikr": "Dhikr",
+      "charity": "Bonne action / Sadaqa"
     }
   }
 }

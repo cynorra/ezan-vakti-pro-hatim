@@ -20,7 +20,9 @@
     "aksam": "المغرب",
     "yatsi": "العشاء",
     "vitir": "الوتر",
-    "completionShareMessage": "🎉 أتممت قضاء جميع صلواتي الفائتة، الحمد لله! 🕌\n\nتتبع صلواتك الفائتة مع Ezan Vakti + Hatim: {{playStore}}"
+    "completionShareMessage": "🎉 أتممت قضاء جميع صلواتي الفائتة، الحمد لله! 🕌\n\nتتبع صلواتك الفائتة مع Ezan Vakti + Hatim: {{playStore}}",
+    "totalDebt": "إجمالي الصلوات الفائتة",
+    "prayersCount": "{{count}} صلوات"
   },
   "home": {
     "nextPrayerCountdown": "الوقت المتبقي",
@@ -29,7 +31,11 @@
     "esmaOfTheDay": "اسم اليوم",
     "duaOfTheDay": "دعاء اليوم",
     "fridayGreeting": "جمعة مباركة 🕌",
-    "dailyMessage": "رسالة اليوم"
+    "dailyMessage": "رسالة اليوم",
+    "dailyTimes": "مواقيت الصلاة اليومية",
+    "nextBadge": "القادم",
+    "nextPrayer": "الصلاة القادمة",
+    "prayerSoon": "⏳ وقت الصلاة قريب"
   },
   "prayerTimes": {
     "imsak": "الفجر",
@@ -93,7 +99,15 @@
     "permissionOn": "مفعّل",
     "permissionOff": "متوقف",
     "shareApp": "شارك التطبيق",
-    "shareAppMessage": "🕌 مواقيت الصلاة والقبلة والختمة الجماعية والأدعية اليومية في تطبيق واحد. حمّله مجاناً:\n{{playStore}}"
+    "shareAppMessage": "🕌 مواقيت الصلاة والقبلة والختمة الجماعية والأدعية اليومية في تطبيق واحد. حمّله مجاناً:\n{{playStore}}",
+    "reminderOff": "إيقاف",
+    "reminderMinutes": "قبل {{minutes}} دقيقة",
+    "sounds": {
+      "istanbul": "أذان إسطنبول",
+      "mecca": "أذان مكة",
+      "medina": "أذان المدينة",
+      "egypt": "الأذان المصري"
+    }
   },
   "qibla": {
     "title": "بوصلة القبلة",
@@ -101,7 +115,9 @@
     "yourDirection": "اتجاهك الحالي",
     "qiblaAngle": "زاوية القبلة",
     "aligned": "أنت متجه إلى القبلة",
-    "hint": "ضع جهازك بشكل مستوٍ واتبع السهم."
+    "hint": "ضع جهازك بشكل مستوٍ واتبع السهم.",
+    "permissionDenied": "لم يتم منح إذن الموقع.",
+    "sensorError": "تعذر تحميل البوصلة أو الموقع. يرجى التأكد من تشغيل المستشعرات وخدمات الموقع."
   },
   "common": {
     "cancel": "إلغاء",
@@ -237,6 +253,32 @@
       "hijriNewYear": "رأس السنة الهجرية",
       "ashura": "يوم عاشوراء",
       "mevlid": "المولد النبوي"
+    }
+  },
+  "tesbih": {
+    "title": "عداد التسبيح",
+    "subtitle": "الذكر والتسبيح",
+    "tap": "اضغط",
+    "reset": "إعادة تعيين",
+    "choose": "اختر الذكر",
+    "setTarget": "تحديد الهدف",
+    "defaultName": "ذكر"
+  },
+  "checklist": {
+    "title": "الأعمال الصالحة اليومية",
+    "subtitle": "أهدافك الروحية لليوم",
+    "items": {
+      "fajr": "صلاة الفجر",
+      "dhuhr": "صلاة الظهر",
+      "asr": "صلاة العصر",
+      "maghrib": "صلاة المغرب",
+      "isha": "صلاة العشاء",
+      "tahajjud": "صلاة التهجد",
+      "duha": "صلاة الضحى",
+      "evvabin": "صلاة الأوابين",
+      "quran": "قراءة القرآن",
+      "dhikr": "الذكر",
+      "charity": "عمل صالح / صدقة"
     }
   }
 }

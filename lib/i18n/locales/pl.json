@@ -14,7 +14,11 @@
     "esmaOfTheDay": "Imię dnia",
     "duaOfTheDay": "Dua dnia",
     "fridayGreeting": "Błogosławionego piątku 🕌",
-    "dailyMessage": "Przesłanie dnia"
+    "dailyMessage": "Przesłanie dnia",
+    "dailyTimes": "CODZIENNE PORY MODLITW",
+    "nextBadge": "NAST.",
+    "nextPrayer": "NASTĘPNA MODLITWA",
+    "prayerSoon": "⏳ CZAS MODLITWY SIĘ BLIŻY"
   },
   "prayerTimes": {
     "imsak": "Fadżr",
@@ -78,7 +82,15 @@
     "permissionOn": "Wł.",
     "permissionOff": "Wył.",
     "shareApp": "Udostępnij aplikację",
-    "shareAppMessage": "🕌 Godziny modlitw, kibla, wspólne czytanie Koranu i codzienne dua w jednej aplikacji. Pobierz za darmo:\n{{playStore}}"
+    "shareAppMessage": "🕌 Godziny modlitw, kibla, wspólne czytanie Koranu i codzienne dua w jednej aplikacji. Pobierz za darmo:\n{{playStore}}",
+    "reminderOff": "Wyłączone",
+    "reminderMinutes": "{{minutes}} min przed",
+    "sounds": {
+      "istanbul": "Adhan ze Stambułu",
+      "mecca": "Adhan z Mekki",
+      "medina": "Adhan z Medyny",
+      "egypt": "Egipski Adhan"
+    }
   },
   "common": {
     "cancel": "Anuluj",
@@ -100,7 +112,9 @@
     "aksam": "Maghrib",
     "yatsi": "Isha",
     "vitir": "Witr",
-    "completionShareMessage": "🎉 Ukończono wszystkie zaległe modlitwy, Alhamdulillah! 🕌\n\nŚledź swoje zaległe modlitwy z Ezan Vakti + Hatim: {{playStore}}"
+    "completionShareMessage": "🎉 Ukończono wszystkie zaległe modlitwy, Alhamdulillah! 🕌\n\nŚledź swoje zaległe modlitwy z Ezan Vakti + Hatim: {{playStore}}",
+    "totalDebt": "SUMA ZALEGŁYCH MODLITW",
+    "prayersCount": "{{count}} modlitw"
   },
   "qibla": {
     "title": "KOMPAS KIBLA",
@@ -108,7 +122,9 @@
     "yourDirection": "TWÓJ KIERUNEK",
     "qiblaAngle": "KĄT KIBLA",
     "aligned": "SKIEROWANO NA KIBLĘ",
-    "hint": "Trzymaj urządzenie poziomo i podążaj za wskazówką."
+    "hint": "Trzymaj urządzenie poziomo i podążaj za wskazówką.",
+    "permissionDenied": "Nie przyznano uprawnień do lokalizacji.",
+    "sensorError": "Nie udało się załadować kompasu lub lokalizacji. Sprawdź, czy czujniki i usługi lokalizacyjne są włączone."
   },
   "dua": {
     "headerTitle": "BIBLIOTEKA DUA",
@@ -237,6 +253,32 @@
       "hijriNewYear": "Nowy Rok islamski",
       "ashura": "Dzień Aszury",
       "mevlid": "Maulid"
+    }
+  },
+  "tesbih": {
+    "title": "LICZNIK TASBIH",
+    "subtitle": "Dhikr i Tasbih",
+    "tap": "LICZ",
+    "reset": "Resetuj",
+    "choose": "WYBIERZ DHIKR",
+    "setTarget": "Ustaw cel",
+    "defaultName": "Dhikr"
+  },
+  "checklist": {
+    "title": "Codzienne dobre uczynki",
+    "subtitle": "Twoje cele duchowe na dziś",
+    "items": {
+      "fajr": "Modlitwa Fajr",
+      "dhuhr": "Modlitwa Dhuhr",
+      "asr": "Modlitwa Asr",
+      "maghrib": "Modlitwa Maghrib",
+      "isha": "Modlitwa Isha",
+      "tahajjud": "Tahajjud",
+      "duha": "Modlitwa Duha",
+      "evvabin": "Modlitwa Awwabin",
+      "quran": "Czytanie Koranu",
+      "dhikr": "Dhikr",
+      "charity": "Dobry uczynki / Sadaqa"
     }
   }
 }

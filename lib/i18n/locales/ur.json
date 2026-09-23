@@ -14,7 +14,11 @@
     "esmaOfTheDay": "آج کا نام",
     "duaOfTheDay": "آج کی دعا",
     "fridayGreeting": "جمعہ مبارک 🕌",
-    "dailyMessage": "آج کا پیغام"
+    "dailyMessage": "آج کا پیغام",
+    "dailyTimes": "روزانہ نماز کے اوقات",
+    "nextBadge": "اگلا",
+    "nextPrayer": "اگلی نماز",
+    "prayerSoon": "⏳ نماز کا وقت قریب ہے"
   },
   "prayerTimes": {
     "imsak": "فجر",
@@ -78,7 +82,15 @@
     "permissionOn": "آن",
     "permissionOff": "بند",
     "shareApp": "ایپ شیئر کریں",
-    "shareAppMessage": "🕌 نماز کے اوقات، قبلہ، اجتماعی ختمِ قرآن اور روزانہ دعائیں ایک ہی ایپ میں۔ مفت ڈاؤن لوڈ کریں:\n{{playStore}}"
+    "shareAppMessage": "🕌 نماز کے اوقات، قبلہ، اجتماعی ختمِ قرآن اور روزانہ دعائیں ایک ہی ایپ میں۔ مفت ڈاؤن لوڈ کریں:\n{{playStore}}",
+    "reminderOff": "بند",
+    "reminderMinutes": "{{minutes}} منٹ پہلے",
+    "sounds": {
+      "istanbul": "استنبول اذان",
+      "mecca": "مکہ اذان",
+      "medina": "مدینہ اذان",
+      "egypt": "مصری اذان"
+    }
   },
   "common": {
     "cancel": "منسوخ کریں",
@@ -100,7 +112,9 @@
     "aksam": "مغرب",
     "yatsi": "عشاء",
     "vitir": "وتر",
-    "completionShareMessage": "🎉 الحمد للہ، میں نے اپنی تمام قضاء نمازیں مکمل کر لیں! 🕌\n\nEzan Vakti + Hatim کے ساتھ اپنی قضاء نمازوں کا حساب رکھیں: {{playStore}}"
+    "completionShareMessage": "🎉 الحمد للہ، میں نے اپنی تمام قضاء نمازیں مکمل کر لیں! 🕌\n\nEzan Vakti + Hatim کے ساتھ اپنی قضاء نمازوں کا حساب رکھیں: {{playStore}}",
+    "totalDebt": "کل قضا نمازیں",
+    "prayersCount": "{{count}} نمازیں"
   },
   "qibla": {
     "title": "قبلہ نما",
@@ -108,7 +122,9 @@
     "yourDirection": "آپ کا رخ",
     "qiblaAngle": "زاویہ قبلہ",
     "aligned": "قبلہ رخ ہو گیا",
-    "hint": "موبائل کو سیدھا رکھیں اور سوئی کی سمت دیکھیں۔"
+    "hint": "موبائل کو سیدھا رکھیں اور سوئی کی سمت دیکھیں۔",
+    "permissionDenied": "لوکیشن کی اجازت نہیں دی گئی۔",
+    "sensorError": "کمپاس یا لوکیشن لوڈ نہیں ہو سکی۔ براہ کرم چیک کریں کہ آپ کے سینسرز اور لوکیشن سروسز آن ہیں۔"
   },
   "dua": {
     "headerTitle": "مجموعہ دعائیں",
@@ -237,6 +253,32 @@
       "hijriNewYear": "اسلامی نیا سال",
       "ashura": "یومِ عاشور",
       "mevlid": "عید میلاد النبی"
+    }
+  },
+  "tesbih": {
+    "title": "تسبیح کاؤন্টার",
+    "subtitle": "ذکر اور تسبیح",
+    "tap": "گنیں",
+    "reset": "ری سیٹ",
+    "choose": "ذکر منتخب کریں",
+    "setTarget": "ہدف مقرر کریں",
+    "defaultName": "ذکر"
+  },
+  "checklist": {
+    "title": "روزانہ کے اچھے اعمال",
+    "subtitle": "آج کے لیے آپ کے روحانی اہداف",
+    "items": {
+      "fajr": "نماز فجر",
+      "dhuhr": "نماز ظہر",
+      "asr": "نماز عصر",
+      "maghrib": "نماز مغرب",
+      "isha": "نماز عشاء",
+      "tahajjud": "تہجد",
+      "duha": "نماز چاشت / ضحیٰ",
+      "evvabin": "نماز اوابین",
+      "quran": "قرآن پاک کی تلاوت",
+      "dhikr": "ذکر",
+      "charity": "نیک کام / صدقہ"
     }
   }
 }

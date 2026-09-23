@@ -14,7 +14,11 @@
     "esmaOfTheDay": "오늘의 이름",
     "duaOfTheDay": "오늘의 두아",
     "fridayGreeting": "축복받은 금요일 🕌",
-    "dailyMessage": "오늘의 메시지"
+    "dailyMessage": "오늘의 메시지",
+    "dailyTimes": "일일 기도 시간",
+    "nextBadge": "다음",
+    "nextPrayer": "다음 기도",
+    "prayerSoon": "⏳ 기도 시간이 다가왔습니다"
   },
   "prayerTimes": {
     "imsak": "파즈르",
@@ -78,7 +82,15 @@
     "permissionOn": "켜짐",
     "permissionOff": "꺼짐",
     "shareApp": "앱 공유하기",
-    "shareAppMessage": "🕌 기도 시간, 키블라, 함께하는 꾸란 완독, 매일의 두아를 하나의 앱에서. 무료 다운로드:\n{{playStore}}"
+    "shareAppMessage": "🕌 기도 시간, 키블라, 함께하는 꾸란 완독, 매일의 두아를 하나의 앱에서. 무료 다운로드:\n{{playStore}}",
+    "reminderOff": "꺼짐",
+    "reminderMinutes": "{{minutes}}분 전",
+    "sounds": {
+      "istanbul": "이스탄불 아잔",
+      "mecca": "메카 아잔",
+      "medina": "메디나 아잔",
+      "egypt": "이집트 아잔"
+    }
   },
   "common": {
     "cancel": "취소",
@@ -100,7 +112,9 @@
     "aksam": "마그리브",
     "yatsi": "이샤",
     "vitir": "비트르",
-    "completionShareMessage": "🎉 미뤄진 기도를 모두 완료했습니다, 알함둘릴라! 🕌\n\nEzan Vakti + Hatim으로 미뤄진 기도를 기록해보세요: {{playStore}}"
+    "completionShareMessage": "🎉 미뤄진 기도를 모두 완료했습니다, 알함둘릴라! 🕌\n\nEzan Vakti + Hatim으로 미뤄진 기도를 기록해보세요: {{playStore}}",
+    "totalDebt": "놓친 기도 총 횟수",
+    "prayersCount": "{{count}}개의 기도"
   },
   "qibla": {
     "title": "키블라 나침반",
@@ -108,7 +122,9 @@
     "yourDirection": "내 방향",
     "qiblaAngle": "키블라 각도",
     "aligned": "키블라 방향 일치",
-    "hint": "기기를 평평하게 들고 바늘을 따라가세요."
+    "hint": "기기를 평평하게 들고 바늘을 따라가세요.",
+    "permissionDenied": "위치 권한이 거부되었습니다.",
+    "sensorError": "나침반 또는 위치를 불러올 수 없습니다. 센서 및 위치 서비스가 켜져 있는지 확인하세요."
   },
   "dua": {
     "headerTitle": "두아 라이브러리",
@@ -237,6 +253,32 @@
       "hijriNewYear": "이슬람 새해",
       "ashura": "아슈라",
       "mevlid": "마울리드"
+    }
+  },
+  "tesbih": {
+    "title": "타스비흐 카운터",
+    "subtitle": "디크르 및 타스비흐",
+    "tap": "카운트",
+    "reset": "초기화",
+    "choose": "디크르 선택",
+    "setTarget": "목표 설정",
+    "defaultName": "디크르"
+  },
+  "checklist": {
+    "title": "매일의 선행",
+    "subtitle": "오늘의 영적 목표",
+    "items": {
+      "fajr": "파즈르 기도",
+      "dhuhr": "주흐르 기도",
+      "asr": "아스르 기도",
+      "maghrib": "마그립 기도",
+      "isha": "이샤 기도",
+      "tahajjud": "타하주드",
+      "duha": "두하 기도",
+      "evvabin": "아와빈 기도",
+      "quran": "쿠란 읽기",
+      "dhikr": "디크르",
+      "charity": "선행 / 자선"
     }
   }
 }

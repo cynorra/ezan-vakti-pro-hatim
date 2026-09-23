@@ -14,7 +14,11 @@
     "esmaOfTheDay": "Napi iszm",
     "duaOfTheDay": "A nap duája",
     "fridayGreeting": "Áldott pénteket 🕌",
-    "dailyMessage": "A nap üzenete"
+    "dailyMessage": "A nap üzenete",
+    "dailyTimes": "NAPI IMÁDSÁGOS IDŐK",
+    "nextBadge": "KÖV.",
+    "nextPrayer": "KÖVETKEZŐ IMÁDSÁG",
+    "prayerSoon": "⏳ KÖZELEDIK AZ IMÁDSÁG IDEJE"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -78,7 +82,15 @@
     "permissionOn": "Be",
     "permissionOff": "Ki",
     "shareApp": "Alkalmazás megosztása",
-    "shareAppMessage": "🕌 Imaidők, kibla, közös Korán-olvasás és napi duák egy alkalmazásban. Töltsd le ingyen:\n{{playStore}}"
+    "shareAppMessage": "🕌 Imaidők, kibla, közös Korán-olvasás és napi duák egy alkalmazásban. Töltsd le ingyen:\n{{playStore}}",
+    "reminderOff": "Ki",
+    "reminderMinutes": "{{minutes}} perccel ezelőtt",
+    "sounds": {
+      "istanbul": "Isztambuli Adhan",
+      "mecca": "Mekkai Adhan",
+      "medina": "Medinai Adhan",
+      "egypt": "Egyiptomi Adhan"
+    }
   },
   "qibla": {
     "title": "KIBLA IRÁNYTŰ",
@@ -86,7 +98,9 @@
     "yourDirection": "AZ ÖN IRÁNYA",
     "qiblaAngle": "KIBLA SZÖG",
     "aligned": "KIBLA IRÁNYÁBAN ÁLL",
-    "hint": "Tartsa az eszközt vízszintesen és kövesse a mutatót."
+    "hint": "Tartsa az eszközt vízszintesen és kövesse a mutatót.",
+    "permissionDenied": "A helymeghatározási engedélyt nem adták meg.",
+    "sensorError": "A iránytűt vagy a helyszínt nem sikerült betölteni. Kérjük, ellenőrizze, hogy az érzékelők és a helymeghatározási szolgáltatások be vannak-e kapcsolva."
   },
   "common": {
     "cancel": "Mégse",
@@ -108,7 +122,9 @@
     "aksam": "Maghrib",
     "yatsi": "Isa",
     "vitir": "Vitr",
-    "completionShareMessage": "🎉 Pótoltam az összes elmaradt imámat, Alhamdülilláh! 🕌\n\nKövesse nyomon imáit az Ezan Vakti + Hatim alkalmazással: {{playStore}}"
+    "completionShareMessage": "🎉 Pótoltam az összes elmaradt imámat, Alhamdülilláh! 🕌\n\nKövesse nyomon imáit az Ezan Vakti + Hatim alkalmazással: {{playStore}}",
+    "totalDebt": "ELMARADT IMÁK ÖSSZEGE",
+    "prayersCount": "{{count}} ima"
   },
   "dua": {
     "headerTitle": "DUA KÖNYVTÁR",
@@ -237,6 +253,32 @@
       "hijriNewYear": "Iszlám újév",
       "ashura": "Asúra napja",
       "mevlid": "Mavlid"
+    }
+  },
+  "tesbih": {
+    "title": "TASBIH SZÁMLÁLÓ",
+    "subtitle": "Dhikr és Tasbih",
+    "tap": "SZÁMLÁLÁS",
+    "reset": "Alaphelyzet",
+    "choose": "DHIKR VÁLASZTÁSA",
+    "setTarget": "Cél beállítása",
+    "defaultName": "Dhikr"
+  },
+  "checklist": {
+    "title": "Napi jó cselekedetek",
+    "subtitle": "A mai lelki céljaid",
+    "items": {
+      "fajr": "Fajr ima",
+      "dhuhr": "Dhuhr ima",
+      "asr": "Asr ima",
+      "maghrib": "Maghrib ima",
+      "isha": "Isha ima",
+      "tahajjud": "Tahajjud",
+      "duha": "Duha ima",
+      "evvabin": "Awwabin ima",
+      "quran": "Korán olvasás",
+      "dhikr": "Dhikr",
+      "charity": "Jó cselekedet / Sadaqa"
     }
   }
 }

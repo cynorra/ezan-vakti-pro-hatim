@@ -14,7 +14,11 @@
     "esmaOfTheDay": "Naam van de dag",
     "duaOfTheDay": "Dua van de Dag",
     "fridayGreeting": "Gezegende vrijdag 🕌",
-    "dailyMessage": "Boodschap van de dag"
+    "dailyMessage": "Boodschap van de dag",
+    "dailyTimes": "DAGELIJKSE GEBEDSTIJDEN",
+    "nextBadge": "VOLG.",
+    "nextPrayer": "VOLGENDE GEBED",
+    "prayerSoon": "⏳ GEBEDSTIJD IS NABIJ"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -78,7 +82,15 @@
     "permissionOn": "Aan",
     "permissionOff": "Uit",
     "shareApp": "App delen",
-    "shareAppMessage": "🕌 Gebedstijden, qibla, gezamenlijke Koranlezing en dagelijkse smeekbeden in één app. Gratis downloaden:\n{{playStore}}"
+    "shareAppMessage": "🕌 Gebedstijden, qibla, gezamenlijke Koranlezing en dagelijkse smeekbeden in één app. Gratis downloaden:\n{{playStore}}",
+    "reminderOff": "Uit",
+    "reminderMinutes": "{{minutes}} min van tevoren",
+    "sounds": {
+      "istanbul": "Istanbul Adhan",
+      "mecca": "Mekka Adhan",
+      "medina": "Medina Adhan",
+      "egypt": "Egyptische Adhan"
+    }
   },
   "common": {
     "cancel": "Annuleren",
@@ -100,7 +112,9 @@
     "aksam": "Maghrib",
     "yatsi": "Isha",
     "vitir": "Witr",
-    "completionShareMessage": "🎉 Ik heb al mijn inhaalgebeden afgerond, Alhamdulillah! 🕌\n\nHoud je inhaalgebeden bij met Ezan Vakti + Hatim: {{playStore}}"
+    "completionShareMessage": "🎉 Ik heb al mijn inhaalgebeden afgerond, Alhamdulillah! 🕌\n\nHoud je inhaalgebeden bij met Ezan Vakti + Hatim: {{playStore}}",
+    "totalDebt": "TOTAAL GEMISTE GEBEDEN",
+    "prayersCount": "{{count}} gebeden"
   },
   "qibla": {
     "title": "QIBLA-KOMPAS",
@@ -108,7 +122,9 @@
     "yourDirection": "JOUW RICHTING",
     "qiblaAngle": "QIBLA-HOEK",
     "aligned": "GERICHT OP DE QIBLA",
-    "hint": "Houd je toestel plat en volg de naald."
+    "hint": "Houd je toestel plat en volg de naald.",
+    "permissionDenied": "Locatietoestemming is niet verleend.",
+    "sensorError": "Kompas of locatie kan niet worden geladen. Controleer of je sensoren en locatiediensten zijn ingeschakeld."
   },
   "dua": {
     "headerTitle": "DUA-BIBLIOTHEEK",
@@ -237,6 +253,32 @@
       "hijriNewYear": "Islamitisch nieuwjaar",
       "ashura": "Asjoera",
       "mevlid": "Mawlid"
+    }
+  },
+  "tesbih": {
+    "title": "TASBIH TELLER",
+    "subtitle": "Dhikr en Tasbih",
+    "tap": "TEL",
+    "reset": "Reset",
+    "choose": "KIES DHIKR",
+    "setTarget": "Doel instellen",
+    "defaultName": "Dhikr"
+  },
+  "checklist": {
+    "title": "Dagelijkse goede daden",
+    "subtitle": "Jouw spirituele doelen voor vandaag",
+    "items": {
+      "fajr": "Fajr-gebed",
+      "dhuhr": "Dhuhr-gebed",
+      "asr": "Asr-gebed",
+      "maghrib": "Maghrib-gebed",
+      "isha": "Isha-gebed",
+      "tahajjud": "Tahajjud",
+      "duha": "Duha-gebed",
+      "evvabin": "Awwabin-gebed",
+      "quran": "Koran lezen",
+      "dhikr": "Dhikr",
+      "charity": "Goede daad / Sadaqah"
     }
   }
 }

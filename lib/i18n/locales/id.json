@@ -14,7 +14,11 @@
     "esmaOfTheDay": "Nama Hari Ini",
     "duaOfTheDay": "Doa Hari Ini",
     "fridayGreeting": "Jum'at Berkah 🕌",
-    "dailyMessage": "Pesan Hari Ini"
+    "dailyMessage": "Pesan Hari Ini",
+    "dailyTimes": "JADWAL SHALAT HARIAN",
+    "nextBadge": "BERIKUTNYA",
+    "nextPrayer": "SHALAT BERIKUTNYA",
+    "prayerSoon": "⏳ WAKTU SHALAT SUDAH DEKAT"
   },
   "prayerTimes": {
     "imsak": "Subuh",
@@ -78,7 +82,15 @@
     "permissionOn": "Aktif",
     "permissionOff": "Nonaktif",
     "shareApp": "Bagikan Aplikasi",
-    "shareAppMessage": "🕌 Jadwal salat, kiblat, khataman Al-Qur'an bersama, dan doa harian dalam satu aplikasi. Unduh gratis:\n{{playStore}}"
+    "shareAppMessage": "🕌 Jadwal salat, kiblat, khataman Al-Qur'an bersama, dan doa harian dalam satu aplikasi. Unduh gratis:\n{{playStore}}",
+    "reminderOff": "Mati",
+    "reminderMinutes": "{{minutes}} menit sebelumnya",
+    "sounds": {
+      "istanbul": "Adzan Istanbul",
+      "mecca": "Adzan Makkah",
+      "medina": "Adzan Madinah",
+      "egypt": "Adzan Mesir"
+    }
   },
   "common": {
     "cancel": "Batal",
@@ -100,7 +112,9 @@
     "aksam": "Maghrib",
     "yatsi": "Isya",
     "vitir": "Witir",
-    "completionShareMessage": "🎉 Alhamdulillah, saya telah menyelesaikan semua shalat qadha saya! 🕌\n\nPantau shalat qadha Anda dengan Ezan Vakti + Hatim: {{playStore}}"
+    "completionShareMessage": "🎉 Alhamdulillah, saya telah menyelesaikan semua shalat qadha saya! 🕌\n\nPantau shalat qadha Anda dengan Ezan Vakti + Hatim: {{playStore}}",
+    "totalDebt": "TOTAL SHALAT QADHA",
+    "prayersCount": "{{count}} salat"
   },
   "qibla": {
     "title": "KOMPAS KIBLAT",
@@ -108,7 +122,9 @@
     "yourDirection": "ARAH ANDA",
     "qiblaAngle": "SUDUT KIBLAT",
     "aligned": "TEPAT KE KIBLAT",
-    "hint": "Pegang perangkat secara mendatar dan ikuti jarum penunjuk."
+    "hint": "Pegang perangkat secara mendatar dan ikuti jarum penunjuk.",
+    "permissionDenied": "Izin lokasi tidak diberikan.",
+    "sensorError": "Kompas atau lokasi tidak dapat dimuat. Harap periksa apakah sensor dan layanan lokasi Anda aktif."
   },
   "dua": {
     "headerTitle": "KUMPULAN DOA",
@@ -237,6 +253,32 @@
       "hijriNewYear": "Tahun Baru Islam",
       "ashura": "Hari Asyura",
       "mevlid": "Maulid Nabi"
+    }
+  },
+  "tesbih": {
+    "title": "PENGHITUNG TASBIH",
+    "subtitle": "Dzikir dan Tasbih",
+    "tap": "HITUNG",
+    "reset": "Atur Ulang",
+    "choose": "PILIH DZIKIR",
+    "setTarget": "Atur Target",
+    "defaultName": "Dzikir"
+  },
+  "checklist": {
+    "title": "Amal Baik Harian",
+    "subtitle": "Target spiritual Anda untuk hari ini",
+    "items": {
+      "fajr": "Shalat Subuh",
+      "dhuhr": "Shalat Dzuhur",
+      "asr": "Shalat Ashar",
+      "maghrib": "Shalat Maghrib",
+      "isha": "Shalat Isya",
+      "tahajjud": "Tahajud",
+      "duha": "Shalat Dhuha",
+      "evvabin": "Shalat Awwabin",
+      "quran": "Membaca Al-Qur'an",
+      "dhikr": "Dzikir",
+      "charity": "Amal Baik / Sedekah"
     }
   }
 }

@@ -5,6 +5,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Haptics from 'expo-haptics';
 import { Colors, Spacing, FontSize, BorderRadius } from '@/constants/theme';
 import { localDateKey } from '@/lib/date-keys';
+import { useTranslation } from 'react-i18next';
 
 interface ChecklistItem {
   id: string;
@@ -27,6 +28,7 @@ const CHECKLIST_ITEMS: ChecklistItem[] = [
 ];
 
 export const DailyChecklist = () => {
+  const { t } = useTranslation();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const [completedItems, setCompletedItems] = useState<string[]>([]);
@@ -69,8 +71,8 @@ export const DailyChecklist = () => {
     <View style={[styles.container, { backgroundColor: colors.card }]}>
       <View style={styles.header}>
         <View>
-          <Text style={[styles.title, { color: colors.text }]}>Günlük Amel Defteri</Text>
-          <Text style={[styles.subtitle, { color: colors.textSecondary }]}>Bugünkü manevi hedeflerin</Text>
+          <Text style={[styles.title, { color: colors.text }]}>{t('checklist.title')}</Text>
+          <Text style={[styles.subtitle, { color: colors.textSecondary }]}>{t('checklist.subtitle')}</Text>
         </View>
         <View style={[styles.progressBadge, { backgroundColor: colors.primary + '20' }]}>
           <Text style={[styles.progressText, { color: colors.primary }]}>%{progress}</Text>
@@ -103,7 +105,7 @@ export const DailyChecklist = () => {
                   { color: isDone ? colors.text : colors.textSecondary, textDecorationLine: isDone ? 'line-through' : 'none' }
                 ]}
               >
-                {item.label}
+                {t(`checklist.items.${item.id}`, { defaultValue: item.label })}
               </Text>
             </TouchableOpacity>
           );

@@ -14,7 +14,11 @@
     "esmaOfTheDay": "Ime dana",
     "duaOfTheDay": "Dova dana",
     "fridayGreeting": "Hajirli džuma 🕌",
-    "dailyMessage": "Poruka dana"
+    "dailyMessage": "Poruka dana",
+    "dailyTimes": "DNEVNA VAKIZI NAMAZA",
+    "nextBadge": "SLIJ.",
+    "nextPrayer": "SLJEDEĆI NAMAZ",
+    "prayerSoon": "⏳ VRIJEME NAMAZA JE BLIZU"
   },
   "prayerTimes": {
     "imsak": "Sabah",
@@ -78,7 +82,15 @@
     "permissionOn": "Uključeno",
     "permissionOff": "Isključeno",
     "shareApp": "Podijeli aplikaciju",
-    "shareAppMessage": "🕌 Vaktija, kibla, zajednička hatma i dnevne dove u jednoj aplikaciji. Preuzmi besplatno:\n{{playStore}}"
+    "shareAppMessage": "🕌 Vaktija, kibla, zajednička hatma i dnevne dove u jednoj aplikaciji. Preuzmi besplatno:\n{{playStore}}",
+    "reminderOff": "Isključeno",
+    "reminderMinutes": "{{minutes}} min prije",
+    "sounds": {
+      "istanbul": "Istanbuli ezan",
+      "mecca": "Mekki ezan",
+      "medina": "Medini ezan",
+      "egypt": "Egipatski ezan"
+    }
   },
   "qibla": {
     "title": "KIBLA KOMPAS",
@@ -86,7 +98,9 @@
     "yourDirection": "VAŠ PRAVAC",
     "qiblaAngle": "KUT KIBLE",
     "aligned": "OKRENUTI STE PREMA KIBLI",
-    "hint": "Držite uređaj horizontalno i pratite iglu."
+    "hint": "Držite uređaj horizontalno i pratite iglu.",
+    "permissionDenied": "Dozvola za lokaciju nije odobrena.",
+    "sensorError": "Kompas ili lokacija se nisu mogli učitati. Molimo provjerite jesu li vaši senzori i usluge lokacije uključeni."
   },
   "common": {
     "cancel": "Otkaži",
@@ -108,7 +122,9 @@
     "aksam": "Akšam",
     "yatsi": "Jacija",
     "vitir": "Vitr",
-    "completionShareMessage": "🎉 Nadoknadio/la sam sve propuštene namaze, Elhamdulillah! 🕌\n\nPratite svoje propuštene namaze uz Ezan Vakti + Hatim: {{playStore}}"
+    "completionShareMessage": "🎉 Nadoknadio/la sam sve propuštene namaze, Elhamdulillah! 🕌\n\nPratite svoje propuštene namaze uz Ezan Vakti + Hatim: {{playStore}}",
+    "totalDebt": "UKUPNO PROPUŠTENIH NAMAZA",
+    "prayersCount": "{{count}} namaza"
   },
   "dua": {
     "headerTitle": "ZBIRKA DOVA",
@@ -237,6 +253,32 @@
       "hijriNewYear": "Hidžretska Nova godina",
       "ashura": "Dan Ašure",
       "mevlid": "Mevlud"
+    }
+  },
+  "tesbih": {
+    "title": "TESPIH BROJAČ",
+    "subtitle": "Zikr i tespih",
+    "tap": "BROJI",
+    "reset": "Resetuj",
+    "choose": "IZABERI ZIKR",
+    "setTarget": "Postavi cilj",
+    "defaultName": "Zikr"
+  },
+  "checklist": {
+    "title": "Dnevna dobra djela",
+    "subtitle": "Vaši duhovni ciljevi za danas",
+    "items": {
+      "fajr": "Sabah namaz",
+      "dhuhr": "Podne namaz",
+      "asr": "Ikindija namaz",
+      "maghrib": "Ašam namaz",
+      "isha": "Jacija namaz",
+      "tahajjud": "Tehaddžud",
+      "duha": "Duha namaz",
+      "evvabin": "Evvabin namaz",
+      "quran": "Učenje Kur'ana",
+      "dhikr": "Zikr",
+      "charity": "Dobro djelo / Sadaaka"
     }
   }
 }

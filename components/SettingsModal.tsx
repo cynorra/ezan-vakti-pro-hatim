@@ -147,6 +147,17 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
     }
   };
 
+  const SOUND_LABEL_KEYS: Record<string, string> = {
+    'İstanbul Ezanı': 'settings.sounds.istanbul',
+    'Mekke Ezanı': 'settings.sounds.mecca',
+    'Medine Ezanı': 'settings.sounds.medina',
+    'Mısır Ezanı': 'settings.sounds.egypt',
+  };
+  const reminderLabel = (value: string) => {
+    const minutes = value.match(/\d+/)?.[0];
+    return minutes ? t('settings.reminderMinutes', { minutes }) : t('settings.reminderOff');
+  };
+
   const currentLang = LANGUAGES.find(l => l.code === i18n.language) || LANGUAGES[0];
 
   const handleSelectLanguage = async (code: string) => {
@@ -239,7 +250,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 <SettingRow
                   icon="volume-high-outline"
                   label={t('settings.sound')}
-                  value={ezanSound}
+                  value={t(SOUND_LABEL_KEYS[ezanSound] ?? 'settings.sounds.istanbul')}
                   onPress={() => {
                     const sounds = ['İstanbul Ezanı', 'Mekke Ezanı', 'Medine Ezanı', 'Mısır Ezanı'];
                     const nextIndex = (sounds.indexOf(ezanSound) + 1) % sounds.length;
@@ -250,7 +261,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 <SettingRow
                   icon="alarm-outline"
                   label={t('settings.reminder')}
-                  value={reminderTime}
+                  value={reminderLabel(reminderTime)}
                   onPress={() => {
                     const times = ['Kapalı', '5 dk önce', '10 dk önce', '15 dk önce', '30 dk önce'];
                     const nextIndex = (times.indexOf(reminderTime) + 1) % times.length;
@@ -289,7 +300,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 >
                   <View style={styles.widgetTop}>
                     <Text style={styles.widgetCity}>İstanbul</Text>
-                    <Text style={styles.widgetDate}>21 Ramazan</Text>
+                    <Text style={styles.widgetDate}>21 {t('hijriMonths.9')}</Text>
                   </View>
                   <View style={styles.widgetBottom}>
                     <View>

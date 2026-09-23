@@ -68,7 +68,7 @@ export default function KibleScreen() {
       try {
         let { status } = await Location.requestForegroundPermissionsAsync();
         if (status !== 'granted') {
-          setErrorMsg('Konum izni verilmedi.');
+          setErrorMsg(t('qibla.permissionDenied'));
           return;
         }
 
@@ -115,7 +115,7 @@ export default function KibleScreen() {
         logQiblaSearched();
       } catch (err) {
         console.log('Qibla initialization error:', err);
-        setErrorMsg('Pusula veya konum yüklenemedi. Lütfen sensörlerinizin ve konum servisinizin açık olduğunu kontrol edin.');
+        setErrorMsg(t('qibla.sensorError'));
       }
     })();
 

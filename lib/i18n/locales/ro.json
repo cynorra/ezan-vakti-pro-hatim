@@ -14,7 +14,11 @@
     "esmaOfTheDay": "Numele zilei",
     "duaOfTheDay": "Dua zilei",
     "fridayGreeting": "Vineri binecuvântată 🕌",
-    "dailyMessage": "Mesajul zilei"
+    "dailyMessage": "Mesajul zilei",
+    "dailyTimes": "ORELE DE RUGĂCIUNE ZILNICE",
+    "nextBadge": "URM.",
+    "nextPrayer": "URMĂTOAREA RUGĂCIUNE",
+    "prayerSoon": "⏳ ORA DE RUGĂCIUNE SE APROPIE"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -78,7 +82,15 @@
     "permissionOn": "Activat",
     "permissionOff": "Dezactivat",
     "shareApp": "Distribuie aplicația",
-    "shareAppMessage": "🕌 Orele de rugăciune, qibla, citirea colectivă a Coranului și dua zilnice într-o singură aplicație. Descarcă gratuit:\n{{playStore}}"
+    "shareAppMessage": "🕌 Orele de rugăciune, qibla, citirea colectivă a Coranului și dua zilnice într-o singură aplicație. Descarcă gratuit:\n{{playStore}}",
+    "reminderOff": "Oprit",
+    "reminderMinutes": "Cu {{minutes}} min înainte",
+    "sounds": {
+      "istanbul": "Adhan din Istanbul",
+      "mecca": "Adhan din Meca",
+      "medina": "Adhan din Medina",
+      "egypt": "Adhan egiptean"
+    }
   },
   "qibla": {
     "title": "BUSOLA QIBLA",
@@ -86,7 +98,9 @@
     "yourDirection": "DIRECȚIA DVSTRĂ",
     "qiblaAngle": "UNGHIUL QIBLA",
     "aligned": "ORIENTAT SPRE QIBLA",
-    "hint": "Țineți dispozitivul orizontal și urmați acul."
+    "hint": "Țineți dispozitivul orizontal și urmați acul.",
+    "permissionDenied": "Permisiunea pentru locație nu a fost acordată.",
+    "sensorError": "Busola sau locația nu au putut fi încărcate. Vă rugăm să verificați dacă senzorii și serviciile de locație sunt activate."
   },
   "common": {
     "cancel": "Anulare",
@@ -108,7 +122,9 @@
     "aksam": "Maghrib",
     "yatsi": "Isha",
     "vitir": "Witr",
-    "completionShareMessage": "🎉 Am recuperat toate rugăciunile mele ratate, Alhamdulillah! 🕌\n\nUrmărește-ți rugăciunile recuperabile cu Ezan Vakti + Hatim: {{playStore}}"
+    "completionShareMessage": "🎉 Am recuperat toate rugăciunile mele ratate, Alhamdulillah! 🕌\n\nUrmărește-ți rugăciunile recuperabile cu Ezan Vakti + Hatim: {{playStore}}",
+    "totalDebt": "TOTAL RUGĂCIUNI PIERDUTE",
+    "prayersCount": "{{count}} rugăciuni"
   },
   "dua": {
     "headerTitle": "BIBLIOTECĂ DE DUA",
@@ -237,6 +253,32 @@
       "hijriNewYear": "Anul Nou islamic",
       "ashura": "Ziua Așura",
       "mevlid": "Mawlid"
+    }
+  },
+  "tesbih": {
+    "title": "CONTOR TASBIH",
+    "subtitle": "Dhikr și Tasbih",
+    "tap": "NUMĂRĂ",
+    "reset": "Resetează",
+    "choose": "ALEGE DHIKR",
+    "setTarget": "Setează ținta",
+    "defaultName": "Dhikr"
+  },
+  "checklist": {
+    "title": "Fapte bune zilnice",
+    "subtitle": "Obiectivele tale spirituale pentru astăzi",
+    "items": {
+      "fajr": "Rugăciunea Fajr",
+      "dhuhr": "Rugăciunea Dhuhr",
+      "asr": "Rugăciunea Asr",
+      "maghrib": "Rugăciunea Maghrib",
+      "isha": "Rugăciunea Isha",
+      "tahajjud": "Tahajjud",
+      "duha": "Rugăciunea Duha",
+      "evvabin": "Rugăciunea Awwabin",
+      "quran": "Citirea Coranului",
+      "dhikr": "Dhikr",
+      "charity": "Faptă bună / Sadaqa"
     }
   }
 }

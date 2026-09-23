@@ -14,7 +14,11 @@
     "esmaOfTheDay": "Nombre del día",
     "duaOfTheDay": "Dua del Día",
     "fridayGreeting": "Bendito viernes 🕌",
-    "dailyMessage": "Mensaje del día"
+    "dailyMessage": "Mensaje del día",
+    "dailyTimes": "HORARIOS DE REZO DIARIO",
+    "nextBadge": "SIG.",
+    "nextPrayer": "PRÓXIMO REZO",
+    "prayerSoon": "⏳ LA HORA DEL REZO ESTÁ CERCA"
   },
   "prayerTimes": {
     "imsak": "Fayr",
@@ -78,7 +82,15 @@
     "permissionOn": "Activado",
     "permissionOff": "Desactivado",
     "shareApp": "Compartir la app",
-    "shareAppMessage": "🕌 Horarios de oración, qibla, lectura colectiva del Corán y duas diarias en una sola app. Descárgala gratis:\n{{playStore}}"
+    "shareAppMessage": "🕌 Horarios de oración, qibla, lectura colectiva del Corán y duas diarias en una sola app. Descárgala gratis:\n{{playStore}}",
+    "reminderOff": "Desactivado",
+    "reminderMinutes": "{{minutes}} min antes",
+    "sounds": {
+      "istanbul": "Adhan de Estambul",
+      "mecca": "Adhan de La Meca",
+      "medina": "Adhan de Medina",
+      "egypt": "Adhan egipcio"
+    }
   },
   "common": {
     "cancel": "Cancelar",
@@ -100,7 +112,9 @@
     "aksam": "Maghrib",
     "yatsi": "Isha",
     "vitir": "Witr",
-    "completionShareMessage": "🎉 ¡Completé todas mis oraciones pendientes, Alhamdulillah! 🕌\n\nSigue tus oraciones pendientes con Ezan Vakti + Hatim: {{playStore}}"
+    "completionShareMessage": "🎉 ¡Completé todas mis oraciones pendientes, Alhamdulillah! 🕌\n\nSigue tus oraciones pendientes con Ezan Vakti + Hatim: {{playStore}}",
+    "totalDebt": "TOTAL DE REZOS ATRASADOS",
+    "prayersCount": "{{count}} oraciones"
   },
   "qibla": {
     "title": "BRÚJULA DE LA QIBLA",
@@ -108,7 +122,9 @@
     "yourDirection": "TU DIRECCIÓN",
     "qiblaAngle": "ÁNGULO DE LA QIBLA",
     "aligned": "ALINEADO CON LA QIBLA",
-    "hint": "Mantén el dispositivo en posición horizontal y sigue la aguja."
+    "hint": "Mantén el dispositivo en posición horizontal y sigue la aguja.",
+    "permissionDenied": "No se concedió el permiso de ubicación.",
+    "sensorError": "No se pudo cargar la brújula o la ubicación. Comprueba que los sensores y los servicios de ubicación estén activados."
   },
   "dua": {
     "headerTitle": "BIBLIOTECA DE DUAS",
@@ -237,6 +253,32 @@
       "hijriNewYear": "Año Nuevo islámico",
       "ashura": "Día de Ashura",
       "mevlid": "Mawlid"
+    }
+  },
+  "tesbih": {
+    "title": "CONTADOR DE TASBIH",
+    "subtitle": "Dhikr y Tasbih",
+    "tap": "CONTAR",
+    "reset": "Restablecer",
+    "choose": "ELEGIR DHIKR",
+    "setTarget": "Establecer objetivo",
+    "defaultName": "Dhikr"
+  },
+  "checklist": {
+    "title": "Buenas acciones diarias",
+    "subtitle": "Tus objetivos espirituales para hoy",
+    "items": {
+      "fajr": "Rezo de Fajr",
+      "dhuhr": "Rezo de Dhuhr",
+      "asr": "Rezo de Asr",
+      "maghrib": "Rezo de Maghrib",
+      "isha": "Rezo de Isha",
+      "tahajjud": "Tahajjud",
+      "duha": "Rezo de Duha",
+      "evvabin": "Rezo de Awwabin",
+      "quran": "Lectura del Corán",
+      "dhikr": "Dhikr",
+      "charity": "Buena acción / Sadaqa"
     }
   }
 }

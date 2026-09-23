@@ -14,7 +14,11 @@
     "esmaOfTheDay": "Name des Tages",
     "duaOfTheDay": "Dua des Tages",
     "fridayGreeting": "Gesegneten Freitag 🕌",
-    "dailyMessage": "Botschaft des Tages"
+    "dailyMessage": "Botschaft des Tages",
+    "dailyTimes": " TÄGLICHE GEETSZEITEN",
+    "nextBadge": "NÄCHSTE",
+    "nextPrayer": "NÄCHSTES GEBET",
+    "prayerSoon": "⏳ GEBETSUHRZEIT STEHT BEVOR"
   },
   "prayerTimes": {
     "imsak": "Fadschr",
@@ -78,7 +82,15 @@
     "permissionOn": "An",
     "permissionOff": "Aus",
     "shareApp": "App teilen",
-    "shareAppMessage": "🕌 Gebetszeiten, Qibla, gemeinsame Koran-Lesung und tägliche Bittgebete in einer App. Kostenlos herunterladen:\n{{playStore}}"
+    "shareAppMessage": "🕌 Gebetszeiten, Qibla, gemeinsame Koran-Lesung und tägliche Bittgebete in einer App. Kostenlos herunterladen:\n{{playStore}}",
+    "reminderOff": "Aus",
+    "reminderMinutes": "{{minutes}} Min. vorher",
+    "sounds": {
+      "istanbul": "Istanbul-Adhan",
+      "mecca": "Mekka-Adhan",
+      "medina": "Medina-Adhan",
+      "egypt": "Ägyptischer Adhan"
+    }
   },
   "common": {
     "cancel": "Abbrechen",
@@ -100,7 +112,9 @@
     "aksam": "Maghrib",
     "yatsi": "Isha",
     "vitir": "Witr",
-    "completionShareMessage": "🎉 Ich habe all meine verpassten Gebete nachgeholt, Alhamdulillah! 🕌\n\nVerfolge deine verpassten Gebete mit Ezan Vakti + Hatim: {{playStore}}"
+    "completionShareMessage": "🎉 Ich habe all meine verpassten Gebete nachgeholt, Alhamdulillah! 🕌\n\nVerfolge deine verpassten Gebete mit Ezan Vakti + Hatim: {{playStore}}",
+    "totalDebt": "GESAMTANZAHL NACHZUBOLENDER GEBETE",
+    "prayersCount": "{{count}} Gebete"
   },
   "qibla": {
     "title": "QIBLA-KOMPASS",
@@ -108,7 +122,9 @@
     "yourDirection": "DEINE RICHTUNG",
     "qiblaAngle": "QIBLA-WINKEL",
     "aligned": "AUF DIE QIBLA AUSGERICHTET",
-    "hint": "Halte dein Gerät flach und folge der Nadel."
+    "hint": "Halte dein Gerät flach und folge der Nadel.",
+    "permissionDenied": "Standortberechtigung wurde nicht erteilt.",
+    "sensorError": "Kompass oder Standort konnte nicht geladen werden. Bitte überprüfen Sie, ob Sensoren und Ortungsdienste aktiviert sind."
   },
   "dua": {
     "headerTitle": "DUA-BIBLIOTHEK",
@@ -237,6 +253,32 @@
       "hijriNewYear": "Islamisches Neujahr",
       "ashura": "Aschura-Tag",
       "mevlid": "Geburt des Propheten (Mawlid)"
+    }
+  },
+  "tesbih": {
+    "title": "TASBIH-ZÄHLER",
+    "subtitle": "Dhikr und Tasbih",
+    "tap": "ZÄHLEN",
+    "reset": "Zurücksetzen",
+    "choose": "DHIKR WÄHLEN",
+    "setTarget": "Ziel festlegen",
+    "defaultName": "Dhikr"
+  },
+  "checklist": {
+    "title": "Tägliche gute Taten",
+    "subtitle": "Deine spirituellen Ziele für heute",
+    "items": {
+      "fajr": "Fajr-Gebet",
+      "dhuhr": "Dhuhr-Gebet",
+      "asr": "Asr-Gebet",
+      "maghrib": "Maghrib-Gebet",
+      "isha": "Isha-Gebet",
+      "tahajjud": "Tahajjud",
+      "duha": "Duha-Gebet",
+      "evvabin": "Awwabin-Gebet",
+      "quran": "Koranlesung",
+      "dhikr": "Dhikr",
+      "charity": "Gute Tat / Sadaqah"
     }
   }
 }

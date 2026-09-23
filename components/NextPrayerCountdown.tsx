@@ -4,12 +4,24 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { PrayerTimes, getNextPrayer } from '@/lib/prayer-times';
 import { updateWidget } from '@/lib/widget';
+import { useTranslation } from 'react-i18next';
+
+// Internal Turkish prayer names (from getNextPrayer) -> prayerTimes.* i18n keys.
+const PRAYER_I18N_KEY: Record<string, string> = {
+  'İmsak': 'imsak',
+  'Güneş': 'gunes',
+  'Öğle': 'ogle',
+  'İkindi': 'ikindi',
+  'Akşam': 'aksam',
+  'Yatsı': 'yatsi',
+};
 
 interface NextPrayerCountdownProps {
   prayerTimes: PrayerTimes;
 }
 
 export function NextPrayerCountdown({ prayerTimes }: NextPrayerCountdownProps) {
+  const { t } = useTranslation();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const [countdown, setCountdown] = useState({ hours: 0, minutes: 0, seconds: 0 });
@@ -45,7 +57,7 @@ export function NextPrayerCountdown({ prayerTimes }: NextPrayerCountdownProps) {
   }, [isSoon, pulseAnim]);
 
   useEffect(() => {
-    updateWidget(nextPrayer.name, nextPrayer.time);
+    updateWidget(t(`prayerTimes.${PRAYER_I18N_KEY[nextPrayer.name] ?? 'imsak'}`), nextPrayer.time);
     
     const calculateCountdown = () => {
       const now = new Date();
@@ -83,27 +95,29 @@ export function NextPrayerCountdown({ prayerTimes }: NextPrayerCountdownProps) {
       >
         <View style={[styles.badge, isSoon && styles.badgeSoon]}>
           <Text style={styles.badgeText}>
-            {isSoon ? '⏳ VAKTE AZ KALDI' : 'SIRADAKİ VAKİT'}
+            {isSoon ? t('home.prayerSoon') : t('home.nextPrayer')}
           </Text>
         </View>
         
-        <Text style={styles.prayerName}>{nextPrayer.name.toUpperCase()}</Text>
+        <Text style={styles.prayerName}>
+          {t(`prayerTimes.${PRAYER_I18N_KEY[nextPrayer.name] ?? 'imsak'}`).toLocaleUpperCase()}
+        </Text>
         <Text style={styles.prayerTime}>{nextPrayer.time}</Text>
         
         <View style={styles.countdownWrapper}>
           <View style={[styles.countdownBox, isSoon && styles.countdownBoxSoon]}>
             <Text style={styles.countdownNumber}>{formatNumber(countdown.hours)}</Text>
-            <Text style={styles.countdownLabel}>Saat</Text>
+            <Text style={styles.countdownLabel}>{t('ramadan.hours')}</Text>
           </View>
           <Text style={styles.separator}>:</Text>
           <View style={[styles.countdownBox, isSoon && styles.countdownBoxSoon]}>
             <Text style={styles.countdownNumber}>{formatNumber(countdown.minutes)}</Text>
-            <Text style={styles.countdownLabel}>Dk.</Text>
+            <Text style={styles.countdownLabel}>{t('ramadan.minutes')}</Text>
           </View>
           <Text style={styles.separator}>:</Text>
           <View style={[styles.countdownBox, isSoon && styles.countdownBoxSoon]}>
             <Text style={styles.countdownNumber}>{formatNumber(countdown.seconds)}</Text>
-            <Text style={styles.countdownLabel}>Sn.</Text>
+            <Text style={styles.countdownLabel}>{t('ramadan.seconds')}</Text>
           </View>
         </View>
       </LinearGradient>

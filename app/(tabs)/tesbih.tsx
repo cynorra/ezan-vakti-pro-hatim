@@ -22,6 +22,7 @@ import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/c
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SEOHead } from '@/components/SEOHead';
 import { logTesbihStarted, logEvent } from '@/lib/analytics';
+import { useTranslation } from 'react-i18next';
 
 interface Dhikr {
   id: string;
@@ -29,6 +30,15 @@ interface Dhikr {
   target: number;
   count: number;
 }
+
+// Display names for the built-in dhikrs (saved names stay in Turkish for existing users).
+const DEFAULT_DHIKR_LATIN: Record<string, string> = {
+  '1': 'Subhanallah',
+  '2': 'Alhamdulillah',
+  '3': 'Allahu Akbar',
+  '4': 'La ilaha illallah',
+  '5': 'Astaghfirullah',
+};
 
 const DEFAULT_DHIKRS: Dhikr[] = [
   { id: '1', name: 'Sübhânallâh', target: 33, count: 0 },
@@ -39,6 +49,9 @@ const DEFAULT_DHIKRS: Dhikr[] = [
 ];
 
 export default function TesbihScreen() {
+  const { t, i18n } = useTranslation();
+  const dhikrName = (dhikr: Pick<Dhikr, 'id' | 'name'>) =>
+    !i18n.language.startsWith('tr') && DEFAULT_DHIKR_LATIN[dhikr.id] ? DEFAULT_DHIKR_LATIN[dhikr.id] : dhikr.name;
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const [dhikrs, setDhikrs] = useState<Dhikr[]>(DEFAULT_DHIKRS);
@@ -160,7 +173,7 @@ export default function TesbihScreen() {
     setEditTargetModalVisible(false);
   };
 
-  const currentDhikr = dhikrs[activeDhikrIndex] || DEFAULT_DHIKRS[0] || { name: 'Zikir', target: 33, count: 0 };
+  const currentDhikr = dhikrs[activeDhikrIndex] || DEFAULT_DHIKRS[0] || { id: '0', name: t('tesbih.defaultName'), target: 33, count: 0 };
   const progress = currentDhikr.target > 0 ? Math.min(currentDhikr.count / currentDhikr.target, 1) : 0;
 
   return (
@@ -172,8 +185,8 @@ export default function TesbihScreen() {
       />
       <View style={[styles.container, { backgroundColor: colors.background }]}>
       <LinearGradient colors={Gradients.premium} style={styles.header}>
-        <Text style={styles.headerTitle}>TESBİHMATİK</Text>
-        <Text style={styles.headerSubtitle}>Zikir ve Tesbihat</Text>
+        <Text style={styles.headerTitle}>{t('tesbih.title')}</Text>
+        <Text style={styles.headerSubtitle}>{t('tesbih.subtitle')}</Text>
       </LinearGradient>
 
       <ScrollView 
@@ -215,7 +228,7 @@ export default function TesbihScreen() {
               style={[styles.innerCircle, Shadows.premium]}
             >
               <Text style={[styles.currentDhikrName, { color: colors.primary }]}>
-                {currentDhikr.name}
+                {dhikrName(currentDhikr)}
               </Text>
               <Animated.Text
                 style={[
@@ -251,20 +264,20 @@ export default function TesbihScreen() {
                 style={[styles.mainButton, Shadows.premium]}
               >
                 <Ionicons name="finger-print" size={42} color="#fff" />
-                <Text style={styles.buttonText}>ZİKRET</Text>
+                <Text style={styles.buttonText}>{t('tesbih.tap')}</Text>
               </LinearGradient>
             </Animated.View>
           </TouchableOpacity>
 
           <TouchableOpacity onPress={resetCount} style={styles.resetBtn}>
             <Ionicons name="refresh" size={24} color={colors.textMuted} />
-            <Text style={[styles.resetText, { color: colors.textMuted }]}>Sıfırla</Text>
+            <Text style={[styles.resetText, { color: colors.textMuted }]}>{t('tesbih.reset')}</Text>
           </TouchableOpacity>
         </View>
 
         {/* Dhikr List */}
         <View style={styles.listSection}>
-          <Text style={[styles.listTitle, { color: colors.textSecondary }]}>ZİKİR SEÇİMİ</Text>
+          <Text style={[styles.listTitle, { color: colors.textSecondary }]}>{t('tesbih.choose')}</Text>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.scrollList}>
             {dhikrs.map((item, index) => (
               <TouchableOpacity
@@ -281,7 +294,7 @@ export default function TesbihScreen() {
                 ]}
               >
                 <Text style={[styles.dhikrCardName, { color: activeDhikrIndex === index ? '#fff' : colors.text }]}>
-                  {item.name}
+                  {dhikrName(item)}
                 </Text>
                 <View style={[styles.dhikrCardInfo, { borderTopColor: activeDhikrIndex === index ? 'rgba(255,255,255,0.2)' : colors.border }]}>
                   <Text style={[styles.dhikrCardCount, { color: activeDhikrIndex === index ? '#fff' : colors.primary }]}>
@@ -306,7 +319,7 @@ export default function TesbihScreen() {
       >
         <View style={styles.modalOverlay}>
           <View style={[styles.modalContent, { backgroundColor: colors.surface }]}>
-            <Text style={[styles.modalTitle, { color: colors.text }]}>Hedef Belirle</Text>
+            <Text style={[styles.modalTitle, { color: colors.text }]}>{t('tesbih.setTarget')}</Text>
             <TextInput
               style={[styles.modalInput, { color: colors.text, borderColor: colors.border }]}
               keyboardType="number-pad"
@@ -319,13 +332,13 @@ export default function TesbihScreen() {
                 style={styles.modalBtnCancel} 
                 onPress={() => setEditTargetModalVisible(false)}
               >
-                <Text style={styles.modalBtnCancelText}>İptal</Text>
+                <Text style={styles.modalBtnCancelText}>{t('common.cancel')}</Text>
               </TouchableOpacity>
               <TouchableOpacity 
                 style={[styles.modalBtnSave, { backgroundColor: colors.primary }]} 
                 onPress={saveTarget}
               >
-                <Text style={styles.modalBtnSaveText}>Kaydet</Text>
+                <Text style={styles.modalBtnSaveText}>{t('common.save')}</Text>
               </TouchableOpacity>
             </View>
           </View>

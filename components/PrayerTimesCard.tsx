@@ -3,21 +3,24 @@ import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows } from '@/constants/theme';
 import { PrayerTimes, getNextPrayer } from '@/lib/prayer-times';
+import { useTranslation } from 'react-i18next';
 
 interface PrayerTimesCardProps {
   prayerTimes: PrayerTimes;
 }
 
+// `name` is the prayerTimes.* i18n key.
 const prayerNames: { [key: string]: { name: string; icon: string; iconFocused: string } } = {
-  fajr: { name: 'İmsak', icon: 'moon-outline', iconFocused: 'moon' },
-  sunrise: { name: 'Güneş', icon: 'sunny-outline', iconFocused: 'sunny' },
-  dhuhr: { name: 'Öğle', icon: 'sunny-outline', iconFocused: 'sunny' },
-  asr: { name: 'İkindi', icon: 'partly-sunny-outline', iconFocused: 'partly-sunny' },
-  maghrib: { name: 'Akşam', icon: 'cloudy-night-outline', iconFocused: 'cloudy-night' },
-  isha: { name: 'Yatsı', icon: 'moon-outline', iconFocused: 'moon' },
+  fajr: { name: 'imsak', icon: 'moon-outline', iconFocused: 'moon' },
+  sunrise: { name: 'gunes', icon: 'sunny-outline', iconFocused: 'sunny' },
+  dhuhr: { name: 'ogle', icon: 'sunny-outline', iconFocused: 'sunny' },
+  asr: { name: 'ikindi', icon: 'partly-sunny-outline', iconFocused: 'partly-sunny' },
+  maghrib: { name: 'aksam', icon: 'cloudy-night-outline', iconFocused: 'cloudy-night' },
+  isha: { name: 'yatsi', icon: 'moon-outline', iconFocused: 'moon' },
 };
 
 export function PrayerTimesCard({ prayerTimes }: PrayerTimesCardProps) {
+  const { t } = useTranslation();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const nextPrayer = getNextPrayer(prayerTimes);
@@ -45,7 +48,7 @@ export function PrayerTimesCard({ prayerTimes }: PrayerTimesCardProps) {
       <View style={styles.header}>
         <View style={styles.headerTitleRow}>
           <View style={[styles.titleDot, { backgroundColor: colors.accent }]} />
-          <Text style={[styles.title, { color: colors.text }]}>GÜNLÜK VAKİTLER</Text>
+          <Text style={[styles.title, { color: colors.text }]}>{t('home.dailyTimes')}</Text>
         </View>
         <Ionicons name="calendar-outline" size={18} color={colors.textMuted} />
       </View>
@@ -95,7 +98,7 @@ export function PrayerTimesCard({ prayerTimes }: PrayerTimesCardProps) {
                     isNext && styles.prayerNameActive,
                   ]}
                 >
-                  {prayerInfo.name}
+                  {t(`prayerTimes.${prayerInfo.name}`)}
                 </Text>
               </View>
               
@@ -111,7 +114,7 @@ export function PrayerTimesCard({ prayerTimes }: PrayerTimesCardProps) {
                 </Text>
                 {isNext && (
                   <View style={[styles.nextBadge, { backgroundColor: colors.accent }]}>
-                    <Text style={styles.nextBadgeText}>SIRADAKİ</Text>
+                    <Text style={styles.nextBadgeText}>{t('home.nextBadge')}</Text>
                   </View>
                 )}
               </View>

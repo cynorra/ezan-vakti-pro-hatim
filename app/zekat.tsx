@@ -34,7 +34,7 @@ const FIELDS: FieldConfig[] = [
 ];
 
 export default function ZekatScreen() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const router = useRouter();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
@@ -47,8 +47,16 @@ export default function ZekatScreen() {
     return { wealth: Math.max(wealth, 0), zekat };
   }, [values]);
 
-  const formatCurrency = (n: number) =>
-    n.toLocaleString('tr-TR', { maximumFractionDigits: 2 }) + ' ₺';
+  // Amounts are entered in the user's own currency, so only Turkish shows a symbol.
+  const formatCurrency = (n: number) => {
+    let formatted: string;
+    try {
+      formatted = n.toLocaleString(i18n.language, { maximumFractionDigits: 2 });
+    } catch {
+      formatted = n.toFixed(2);
+    }
+    return i18n.language.startsWith('tr') ? `${formatted} ₺` : formatted;
+  };
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
@@ -101,7 +109,9 @@ export default function ZekatScreen() {
                 value={values[field.key] || ''}
                 onChangeText={(v) => setValues((prev) => ({ ...prev, [field.key]: v }))}
               />
-              <Text style={[styles.fieldCurrency, { color: colors.textMuted }]}>₺</Text>
+              {i18n.language.startsWith('tr') ? (
+                <Text style={[styles.fieldCurrency, { color: colors.textMuted }]}>₺</Text>
+              ) : null}
             </View>
           ))}
 

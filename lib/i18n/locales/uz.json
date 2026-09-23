@@ -14,7 +14,11 @@
     "esmaOfTheDay": "Kunlik ism",
     "duaOfTheDay": "Kunning duosi",
     "fridayGreeting": "Juma muborak 🕌",
-    "dailyMessage": "Kun xabari"
+    "dailyMessage": "Kun xabari",
+    "dailyTimes": "KUNLIK NAMOZ VAQTLARI",
+    "nextBadge": "KEYINGI",
+    "nextPrayer": "KEYINGI NAMOZ",
+    "prayerSoon": "⏳ NAMOZ VAQTI YAQINLASHDI"
   },
   "prayerTimes": {
     "imsak": "Bomdod",
@@ -78,7 +82,15 @@
     "permissionOn": "Yoqilgan",
     "permissionOff": "O'chirilgan",
     "shareApp": "Ilovani ulashish",
-    "shareAppMessage": "🕌 Namoz vaqtlari, qibla, birgalikda xatm va kundalik duolar bitta ilovada. Bepul yuklab oling:\n{{playStore}}"
+    "shareAppMessage": "🕌 Namoz vaqtlari, qibla, birgalikda xatm va kundalik duolar bitta ilovada. Bepul yuklab oling:\n{{playStore}}",
+    "reminderOff": "O'chiq",
+    "reminderMinutes": "{{minutes}} daqiqa oldin",
+    "sounds": {
+      "istanbul": "Istanbul azon",
+      "mecca": "Makka azon",
+      "medina": "Madina azon",
+      "egypt": "Misr azon"
+    }
   },
   "qibla": {
     "title": "QIBLA KOMPASI",
@@ -86,7 +98,9 @@
     "yourDirection": "SIZNING YO'NALISHINGIZ",
     "qiblaAngle": "QIBLA BURCHAGI",
     "aligned": "QIBLAGA YUZLANDINGIZ",
-    "hint": "Qurilmani gorizontal ushlab igna yo'nalishini kuzating."
+    "hint": "Qurilmani gorizontal ushlab igna yo'nalishini kuzating.",
+    "permissionDenied": "Joylashuv ruxsati berilmadi.",
+    "sensorError": "Kompas yoki joylashuvni yuklab bo'lmadi. Iltimos, datchiklar va joylashuv xizmatlari yoqilganligini tekshiring."
   },
   "common": {
     "cancel": "Bekor qilish",
@@ -108,7 +122,9 @@
     "aksam": "Shom",
     "yatsi": "Xufton",
     "vitir": "Vitr",
-    "completionShareMessage": "🎉 Barcha qazo namozlarimni o'qib tugatdim, Alhamdulillah! 🕌\n\nQazo namozlaringizni Ezan Vakti + Hatim bilan hisoblab boring: {{playStore}}"
+    "completionShareMessage": "🎉 Barcha qazo namozlarimni o'qib tugatdim, Alhamdulillah! 🕌\n\nQazo namozlaringizni Ezan Vakti + Hatim bilan hisoblab boring: {{playStore}}",
+    "totalDebt": "QAZO NAMOZLARNING UMUMIY SONI",
+    "prayersCount": "{{count}} ta namoz"
   },
   "dua": {
     "headerTitle": "DUOLAR TO'PLAMI",
@@ -237,6 +253,32 @@
       "hijriNewYear": "Hijriy yangi yil",
       "ashura": "Ashuro kuni",
       "mevlid": "Mavlud"
+    }
+  },
+  "tesbih": {
+    "title": "TESBEH HISOBLAGICHI",
+    "subtitle": "Zikr va tasbeh",
+    "tap": "HISoblash",
+    "reset": "Qayta o'rnatish",
+    "choose": "ZIKRNI TANLASH",
+    "setTarget": "Maqsadni belgilash",
+    "defaultName": "Zikr"
+  },
+  "checklist": {
+    "title": "Kunlik yaxshi amallar",
+    "subtitle": "Bugungi ruhiy maqsadlaringiz",
+    "items": {
+      "fajr": "Bomdod namozi",
+      "dhuhr": "Peshin namozi",
+      "asr": "Asr namozi",
+      "maghrib": "Shom namozi",
+      "isha": "Xufton namozi",
+      "tahajjud": " Tahajjud namozi",
+      "duha": "Zuxo namozi",
+      "evvabin": "Avvobin namozi",
+      "quran": "Qur'on o'qish",
+      "dhikr": "Zikr",
+      "charity": "Yaxshi amal / Sadaqa"
     }
   }
 }
