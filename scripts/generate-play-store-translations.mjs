@@ -11,40 +11,43 @@ if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
 }
 
-// İngilizce temel şablon (İngilizce varyantlar için)
+// İngilizce en yüksek hacimli ASO şablonu (Prayer Times, Azan, Athan, Quran, Qibla, Salah, Namaz, Khatam)
 const enData = {
-  title: 'Prayer Times: Athan & Qibla',
-  shortDescription: 'Accurate Muslim prayer times, Athan alarm, Quran Khatam, Qibla compass & Tasbih.',
-  fullDescription: `🕌 Muslim: Accurate Prayer Times, Athan Alarm, Group Quran Khatam, Qibla & Tasbih
+  title: 'Prayer Times: Azan Quran Qibla',
+  shortDescription: 'Accurate prayer times, Athan azan alarm, holy Quran, Qibla compass & Salah namaz',
+  fullDescription: `🕌 Accurate Prayer Times, Athan Azan Alarm, Holy Quran, Qibla & Salah Namaz App
 
-Muslim: Prayer Times & Quran is the all-in-one Islamic app trusted by Muslims worldwide for accurate daily prayer schedules, Azan alarms, and shared Quran Khatam circles.
+Looking for 100% accurate prayer times, reliable Athan alarms, holy Quran recitation, and precision Qibla compass? This all-in-one Islamic companion brings you everything you need for your daily Salah and religious life.
 
-📖 GROUP QURAN KHATAM & JUZ SHARING (Worldwide First)
-• Form a Khatam group and share 30 Juz with friends and family via WhatsApp in 1-click.
-• Real-time progress tracking of every Juz until the Khatam is completed together.
+⏰ 100% ACCURATE PRAYER TIMES & ATHAN AZAN ALARM
+• Accurate prayer times (Fajr, Sunrise, Dhuhr, Asr, Maghrib, Isha) tailored to your exact GPS coordinates.
+• Reliable Athan (Azan) voice alarms & pre-prayer reminders so you never miss a Salah / Namaz again.
+• Trusted calculation methods: Muslim World League (MWL), ISNA, Diyanet, Umm Al-Qura (Makkah), Egyptian General Authority of Survey, Karachi, and more.
+• 100% Offline prayer times mode: Check monthly prayer timetable without an active internet connection.
+• Built with a resilient background alarm engine designed to sound without interruption on any Android device.
 
-⏰ 100% ACCURATE PRAYER TIMES & ATHAN ALARM
-• Exact Fajr, Sunrise, Dhuhr, Asr, Maghrib, and Isha prayer times calculated by GPS.
-• Customizable Athan (Azan) voice notifications & pre-prayer reminders (15/30/45 min).
-• 100% Offline mode: access monthly prayer times without WiFi or cellular data.
+📖 GROUP QURAN KHATAM & JUZ SHARING
+• Read the Holy Quran together: Create Khatam circles and distribute 30 Juz to friends and family with 1-click sharing via WhatsApp.
+• Live Khatam progress tracker: Follow completed and reading Juz in real time until the Khatam is completed.
+• Perfect for Ramadan, blessed nights, and collective family Quran reading.
 
-🧭 SENSOR-DAMPED PRECISE QIBLA COMPASS
-• Ultra-precise Qibla direction finder pointing to Kaaba (Mecca).
-• Golden alignment pulse and vibration when facing the exact Qibla direction.
+🧭 ULTRA-PRECISE QIBLA COMPASS & DIRECTION FINDER
+• High-accuracy Qibla finder pointing directly to the Kaaba in Mecca (Makkah).
+• Smooth sensor-damped compass needle with haptic vibration indicator when aligned with the Qibla.
 
 📿 SMART DIGITAL TASBIH & DHIKR COUNTER
-• Real tactile vibration feeling like a physical tasbeeh.
-• Morning & evening Adhkar, Asmaul Husna, and daily Dhikr goal targets.
+• Authentic haptic vibration response replicating a real physical tasbeeh beads counter.
+• Daily Dhikr goals, morning and evening Adhkar, and 99 Names of Allah (Asmaul Husna).
 
-🤲 DAILY HEALING DUAS & QURAN VERSES
-• Curated authentic Duas from Sahih Bukhari, Muslim, and the Holy Quran.
-• Full Arabic text with vowel signs (Tashkeel), English translation, and transliteration.
-• Viral shareable high-res story cards for WhatsApp Status & Instagram Stories.
+🤲 DAILY ISLAMIC DUAS & QURAN VERSES
+• Authentic daily supplications (Duas) from Sahih Bukhari, Muslim, and the Holy Quran.
+• Arabic text with full vowels (Tashkeel), English translation, and phonetic transliteration.
+• Beautiful shareable ayah and dua cards for WhatsApp Status, Instagram, and Facebook.
 
-📊 QAZA (MISSED PRAYER & FASTING) TRACKER
-• Easily log and manage missed prayers and Ramadan fasts with a single tap.
+📊 QAZA TRACKER (MISSED PRAYERS & FASTING)
+• Keep track of missed daily prayers (Salah / Namaz) and Ramadan fasting days easily.
 
-Download now for free and join millions of Muslims keeping their prayers on time!`
+Download the ultimate Prayer Times, Azan, Holy Quran & Qibla app for free and elevate your daily worship today!`
 };
 
 // İspanyolca temel şablon
@@ -104,9 +107,35 @@ const exactMatchTranslations = {
     fullDescription: `🕌 የሶላት ሰዓት Pro: ትክክለኛ የሶላት ሰዓታት፣ አዛን፣ የቁርአን ኻትም እና ቂብላ\n\n📖 የቁርአን ኻትም በቡድን (30 ጁዝ በዋትስአፕ)\n⏰ ትክክለኛ የሶላት ሰዓታት እና አዛን (100% ከመስመር ውጭ)\n🧭 ትክክለኛ የቂብላ ኮምፓስ\n📿 ዲጂታል ተስቢህ\n\nአሁኑኑ በነፃ ያውርዱ!`
   },
   'ar': {
-    title: 'أوقات الصلاة: الأذان والختمة',
-    shortDescription: 'مواقيت صلاة دقيقة، تنبيه الأذان، ختمة القرآن الجماعية، قبلة وتسبيح.',
-    fullDescription: `🕌 أوقات الصلاة برو: مواقيت الصلاة الدقيقة، الأذان، ختمة القرآن الكريم الجماعية، القبلة والتسبيح\n\n📖 ختمة القرآن الكريم الجماعية ومشاركة الأجزاء عبر واتساب\n⏰ مواقيت صلاة دقيقة وتنبيهات الأذان (يعمل 100% دون إنترنت)\n🧭 بوصلة القبلة الدقيقة نحو الكعبة المشرفة\n📿 المسبحة الإلكترونية الذكية وأذكار المسلم\n🤲 أدعية يومية وآيات قرآنية مباركة مع بطاقات للمشاركة\n📊 سجل قضاء الصلوات والصيام\n\nحمل التطبيق مجاناً الآن!`
+    title: 'مواقيت الصلاة: أذان القرآن قبلة',
+    shortDescription: 'مواقيت صلاة دقيقة، تنبيه أذان، ختمة القرآن الكريم جماعية، اتجاه القبلة وتسبيح',
+    fullDescription: `🕌 مواقيت الصلاة برو: تنبيه الأذان، ختمة القرآن الكريم، اتجاه القبلة والمسبحة
+
+تطبيق إسلامي شامل وموثوق يجمع كل ما يحتاجه المسلم يومياً: مواقيت صلاة دقيقة، تنبيهات الأذان، قراءة وختمة القرآن الكريم، وبوصلة دقيقة للقبلة نحو الكعبة المشرفة.
+
+⏰ مواقيت الصلاة الدقيقة وتنبيهات الأذان
+• مواقيت صلاة دقيقة (الفجر، الشروق، الظهر، العصر، المغرب، العشاء) حسب موقعك الجغرافي.
+• أصوات أذان متعددة ومنبه للتذكير قبل الصلاة لعدم تفويت أي فرض.
+• يدعم طرق الحساب المعتمدة: أم القرى (مكة المكرمة)، رابطة العالم الإسلامي، الهيئة المصرية العامة للمساحة، وديانت.
+• يعمل 100% بدون إنترنت (أوفلاين).
+
+📖 ختمة القرآن الكريم الجماعية ومشاركة الأجزاء
+• أنشئ مجموعة ختمة ووزّع الـ 30 جزءاً على الأهل والأصدقاء بنقرة واحدة عبر واتساب.
+• متابعة حية لمراحل الختمة حتى اكتمالها، مناسبة لشهر رمضان والشهور المباركة.
+
+🧭 بوصلة اتجاه القبلة الدقيقة
+• تحديد دقيق وسريع لاتجاه القبلة نحو مكة المكرمة مع اهتزاز تفاعلي عند المحاذاة.
+
+📿 المسبحة الإلكترونية الذكية وأذكار المسلم
+• مسبحة رقمية مع اهتزاز واقعي، أذكار الصباح والمساء، وأسماء الله الحسنى.
+
+🤲 أدعية يومية مأثورة وآيات قرآنية
+• أدعية من صحيح البخاري ومسلم والقرآن الكريم مع إمكانية مشاركة بطاقات الأدعية عبر وسائل التواصل.
+
+📊 سجل قضاء الصلوات والصيام
+• متابعة وتدوين الصلوات الفائتة وأيام صيام القضاء بسهولة.
+
+حمّل التطبيق مجاناً الآن واجعل صلاتك وعباداتك في وقتها دائماً!`
   },
   'az-AZ': {
     title: 'Namaz Vaxtı: Azan & Xətm Pro',
@@ -223,9 +252,34 @@ const exactMatchTranslations = {
     fullDescription: `🕌 નમાઝ પ્રો: સચોટ નમાઝ સમય, અઝાન, કુરાન ખતમ અને કિબલા\n\n📖 ગ્રુપ કુરાન ખતમ (WhatsApp દ્વારા 30 જુઝ શેર કરો)\n⏰ સચોટ નમાઝ સમય અને અઝાન (100% ઑફલાઇન)\n🧭 કિબલા હોકાયંત્ર\n📿 ડિજિટલ તસ્બીહ\n\nહમણાં જ મફત ડાઉનલોડ કરો!`
   },
   'hi-IN': {
-    title: 'नमाज़ का समय: अज़ान और क़ुरआन',
-    shortDescription: 'सटीक नमाज़ का समय, अज़ान अलार्म, ग्रुप क़ुरआन ख़त्म, क़िबला और डिजिटल तस्बीह।',
-    fullDescription: `🕌 नमाज़ प्रो: सटीक नमाज़ के औक़ात, अज़ान अलार्म, ग्रुप क़ुरआन ख़त्म और क़िबला\n\n📖 ग्रुप क़ुरआन ख़त्म और 30 पारों का बँटवारा (व्हाट्सएप द्वारा)\n⏰ सटीक नमाज़ का समय और अज़ान (100% ऑफ़लाइन)\n🧭 सटीक क़िबला कंपास (काबा की दिशा)\n📿 डिजिटल तस्बीह और मसनून दुआएं\n\nअभी मुफ़्त डाउनलोड करें!`
+    title: 'नमाज़ का समय: अज़ान क़ुरआन',
+    shortDescription: 'सटीक नमाज़ का समय, अज़ान अलार्म, पवित्र क़ुरआन, क़िबला कंपास और डिजिटल तस्बीह',
+    fullDescription: `🕌 नमाज़ प्रो: सटीक नमाज़ का समय, अज़ान अलार्म, पवित्र क़ुरआन, क़िबला और डिजिटल तस्बीह
+
+मुसलमानों के लिए सबसे सटीक और विश्वसनीय इस्लामिक ऐप। अपनी रोज़ाना की नमाज़ (Salah / Namaz), अज़ान अलर्ट, क़ुरआन ख़त्म और क़िबला दिशा एक ही जगह पाएं।
+
+⏰ 100% सटीक नमाज़ का समय और अज़ान अलार्म
+• आपके सटीक GPS स्थान के अनुसार फ़ज्र, तुलू, ज़ुहर, अस्र, मग़रिब और इशा का सटीक समय।
+• अज़ान की आवाज़ में अलार्म और नमाज़ से पहले याद दिलाने वाला रिमाइंडर।
+• 100% ऑफ़लाइन: बिना इंटरनेट के पूरे महीने का नमाज़ टाइमटेबल देखें।
+
+📖 ग्रुप क़ुरआन ख़त्म और 30 पारों का बँटवारा
+• व्हाट्सएप पर एक क्लिक में परिवार और दोस्तों के साथ 30 पारे बाँटें और मिलकर क़ुरआन ख़त्म करें।
+• लाइव प्रोग्रेस ट्रैकर: ख़त्म पूरा होने तक हर पारे की प्रगति देखें।
+
+🧭 सटीक क़िबला कंपास (काबा की दिशा)
+• मक्का में काबा शरीफ़ की सटीक दिशा बताने वाला स्मूथ कंपास।
+
+📿 डिजिटल तस्बीह और ज़िक्र काउंटर
+• वास्तविक तस्बीह जैसा वाइब्रेशन, सुबह-शाम के अज़कार और अस्माउल हुस्ना।
+
+🤲 रोज़ाना की मसनून दुआएं और क़ुरआनी आयतें
+• बुख़ारी, मुस्लिम और पवित्र क़ुरआन की प्रामाणिक दुआएं और साझा करने योग्य कार्ड्स।
+
+📊 क़ज़ा नमाज़ और रोज़ा ट्रैकर
+• छूटी हुई नमाज़ों और रमज़ान के क़ज़ा रोज़ों का आसान हिसाब रखें।
+
+अभी मुफ़्त डाउनलोड करें और अपनी नमाज़ों को वक़्त पर अदा करें!`
   },
   'hr': {
     title: 'Vaktija: Ezan & Kuran Pro',
@@ -243,9 +297,38 @@ const exactMatchTranslations = {
     fullDescription: `🕌 Աղոթքի Ժամեր Pro: Ճշգրիտ Աղոթքի Ժամեր, Ազան, Ղուրան և Քիբլա\n\n📖 ՂՈՒՐԱՆԻ ԽԱԹՄ ԽՄԲՈՎ (30 ՋՈՒԶ WHATSAPP-ՈՎ)\n⏰ ՃՇԳՐԻՏ ԱՂՈԹՔԻ ԺԱՄԵՐ ԵՎ ԱԶԱՆ (100% Օֆլայն)\n🧭 ՔԻԲԼԱՅԻ ԿՈՂՄՆԱՑՈՒՅՑ\n📿 ԹՎԱՅԻՆ ԹԱՍԲԻՀ\n\nՆերբեռնեք անվճար հիմա!`
   },
   'id': {
-    title: 'Jadwal Sholat: Adzan & Khatam',
-    shortDescription: 'Jadwal sholat akurat, alarm adzan, khatam Quran bersama, kiblat & tasbih.',
-    fullDescription: `🕌 Jadwal Sholat Pro: Waktu Sholat Akurat, Alarm Adzan, Khatam Quran Bersama, Arah Kiblat & Tasbih Digital\n\n📖 KHATAMAN QURAN BERSAMA & BAGI JUZ LEWAT WHATSAPP\n⏰ WAKTU SHOLAT AKURAT & ALARM ADZAN (100% Offline)\n🧭 KOMPAS KIBLAT AKURAT KE ARAH KA'BAH\n📿 TASBIH DIGITAL PINTAR DENGAN GETARAN TAKTIL\n🤲 DOA HARIAN & AYAT SHAHIH BERGAMBAR\n📊 PENCATAT SHOLAT & PUASA QADHA\n\nUnduh sekarang gratis!`
+    title: 'Jadwal Sholat: Adzan Quran Kiblat',
+    shortDescription: 'Jadwal sholat akurat, alarm adzan otomatis, Al Quran, arah kiblat & tasbih',
+    fullDescription: `🕌 Jadwal Sholat Pro: Waktu Sholat Akurat, Alarm Adzan, Al Quran, Arah Kiblat & Tasbih Digital
+
+Aplikasi jadwal sholat dan ibadah muslim terlengkap dan terpercaya untuk seluruh kota di Indonesia dan dunia. Dilengkapi alarm adzan otomatis tepat waktu, khataman Quran bersama, dan kompas kiblat akurat.
+
+⏰ JADWAL SHOLAT AKURAT & ALARM ADZAN OTOMATIS
+• Waktu sholat akurat (Subuh, Terbit, Dzuhur, Ashar, Maghrib, Isya) berdasarkan lokasi GPS Anda.
+• Alarm adzan merdu otomatis dan pengingat waktu sholat agar ibadah selalu tepat waktu.
+• Mendukung metode hisab Kemenag RI (Kementerian Agama RI), MWL, dan standar internasional lainnya.
+• 100% Offline: Jadwal sholat bulanan tetap bisa diakses tanpa koneksi internet.
+
+📖 KHATAMAN AL QURAN BERSAMA & BAGI JUZ LEWAT WHATSAPP
+• Buat grup khatam Quran dan bagikan 30 Juz kepada keluarga & sahabat dengan 1-klik via WhatsApp.
+• Pantau progres tilawah dan juz yang selesai secara langsung (real-time). Sangat cocok untuk bulan Ramadhan.
+
+🧭 KOMPAS ARAH KIBLAT AKURAT
+• Penunjuk arah kiblat presisi mengarah langsung ke Ka'bah di Mekkah.
+• Dilengkapi sensor halus dan getaran saat ponsel tepat menghadap kiblat.
+
+📿 TASBIH DIGITAL PINTAR DENGAN GETARAN TAKTIL
+• Hitungan dzikir dengan getaran realistis seperti memegang tasbih asli.
+• Dilengkapi target dzikir harian, dzikir pagi petang, dan Asmaul Husna.
+
+🤲 KUMPULAN DOA HARIAN & AYAT SHAHIH
+• Kumpulan doa harian mustajab dari Al-Quran dan hadits shahih.
+• Dilengkapi tulisan Arab, terjemahan bahasa Indonesia, dan kartu doa siap bagikan ke status WhatsApp.
+
+📊 PENCATAT SHOLAT & PUASA QADHA
+• Catat dan pantau hutang sholat serta puasa qadha Ramadhan dengan mudah.
+
+Unduh sekarang secara gratis dan sempurnakan ibadah sholat harian Anda!`
   },
   'is-IS': {
     title: 'Bænastundir: Athan & Kóraninn',
@@ -450,9 +533,34 @@ const exactMatchTranslations = {
     fullDescription: `🕌 Час Намазу Про: Точний розклад, Азан, Спільний Хатм Корану та Кібла\n\n📖 СПІЛЬНИЙ ХАТМ КОРАНУ (30 ДЖУЗІВ ЧЕРЕЗ WHATSAPP)\n⏰ ТОЧНИЙ ЧАС НАМАЗУ ТА АЗАН (100% Офлайн)\n🧭 ТОЧНИЙ КОМПАС КІБЛИ\n📿 ЕЛЕКТРОННИЙ ТАСБІХ\n\nЗавантажте безкоштовно зараз!`
   },
   'ur': {
-    title: 'نماز کے اوقات: اذان اور ختم',
-    shortDescription: 'درست نماز کے اوقات، اذان کے الارم، گروپ قرآن ختم، قبلہ نما اور ڈیجیٹل تسبیح۔',
-    fullDescription: `🕌 نماز پرو: درست اوقات نماز، اذان الارم، گروپ قرآن ختم، قبلہ نما اور تسبیح\n\n📖 گروپ قرآن ختم اور 30 پارے کی تقسیم بذریعہ واٹس ایپ\n⏰ درست اوقات نماز اور اذان الرٹ (مکمل آف لائن)\n🧭 انتہائی درست قبلہ نما (رخ کعبہ)\n📿 سمارٹ ڈیجیٹل تسبیح اور مسنون دعائیں\n📊 قضا نمازوں اور روزوں کا ریکارڈ\n\nابھی مفت ڈاؤن لوڈ کریں!`
+    title: 'نماز کے اوقات: اذان قرآن قبلہ',
+    shortDescription: 'درست نماز کے اوقات، اذان الارم، قرآن پاک، ختم قرآن، قبلہ نما اور ڈیجیٹل تسبیح',
+    fullDescription: `🕌 نماز پرو: درست اوقات نماز، اذان الارم، قرآن پاک، قبلہ نما اور ڈیجیٹل تسبیح
+
+تمام مسلمانوں کے لیے سب سے جامع اور مستند اسلامی ایپ۔ نماز کے درست اوقات، اذان الرٹ، اجتماعی ختم قرآن اور قبلہ رخ ایک ہی ایپ میں۔
+
+⏰ 100% درست اوقات نماز اور اذان الارم
+• آپ کے جی پی ایس کے مطابق فجر، طلوع آفتاب، ظہر، عصر، مغرب اور عشاء کے درست اوقات۔
+• مختلف مؤذنوں کی آواز میں دلکش اذان اور نماز سے قبل یاد دہانی الرٹ۔
+• 100% آف لائن: بغیر انٹرنیٹ کے پورے مہینے کا نماز ٹائم ٹیبل دیکھیں۔
+
+📖 اجتماعی ختم قرآن اور 30 پارے کی تقسیم
+• واٹس ایپ کے ذریعے دوستوں اور فیملی کے ساتھ 30 پارے تقسیم کریں اور مل کر ختم قرآن مکمل کریں۔
+• لائیو پروگریس ٹریکر تاکہ معلوم ہو سکے کہ کون سا پارہ پڑھا جا چکا ہے۔ رمضان المبارک کے لیے بہترین۔
+
+🧭 انتہائی درست قبلہ نما (رخ کعبہ)
+• مکہ مکرمہ میں خانہ کعبہ کی درست سمت بتانے والا سمارٹ کمپاس۔
+
+📿 سمارٹ ڈیجیٹل تسبیح اور ذکر کاؤنٹر
+• اصلی تسبیح جیسے وائبریشن کے ساتھ، صبح و شام کے اذکار اور اسماء الحسنیٰ۔
+
+🤲 مسنون دعائیں اور قرآنی آیات
+• صحیح بخاری، مسلم اور قرآن کریم کی مستند دعائیں اور واٹس ایپ سٹیٹس کے لیے دعائیہ کارڈز۔
+
+📊 قضا نمازوں اور روزوں کا حساب
+• اپنی چھوٹی ہوئی نمازوں اور روزوں کا مکمل ریکارڈ رکھیں۔
+
+ابھی مفت ڈاؤن لوڈ کریں اور اپنی نمازوں کو وقت پر ادا کریں!`
   },
   'vi': {
     title: 'Giờ Cầu Nguyện: Athan & Quran',
