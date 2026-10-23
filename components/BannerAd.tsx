@@ -1,44 +1,59 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Platform } from 'react-native';
-import { BannerAd as AdMobBanner, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
+import { View, StyleSheet, Platform, useWindowDimensions } from 'react-native';
+import { BannerAd as AdMobBanner, BannerAdSize } from 'react-native-google-mobile-ads';
 
-// Official test banner unit IDs or safe wrapper TestIds.BANNER
-const adUnitId = __DEV__
-  ? TestIds.BANNER
-  : Platform.select({
-      android: 'ca-app-pub-4674211063760769/3925185177', // Real Android Banner ID
-      ios: 'ca-app-pub-3940256099942544/2934735716',     // Replace with real iOS Banner ID in production
-      default: TestIds.BANNER,
-    });
+// Official Live AdMob Banner IDs directly from .env with fallback to real registered unit ID
+const BANNER_AD_UNIT_ID = Platform.select({
+  android:
+    process.env.EXPO_PUBLIC_ADMOB_BANNER_ID_ANDROID ||
+    'ca-app-pub-4674211063760769/3925185177',
+  ios:
+    process.env.EXPO_PUBLIC_ADMOB_BANNER_ID_IOS ||
+    'ca-app-pub-4674211063760769/3925185177',
+  default:
+    process.env.EXPO_PUBLIC_ADMOB_BANNER_ID_ANDROID ||
+    'ca-app-pub-4674211063760769/3925185177',
+});
 
 interface BannerAdProps {
   size?: BannerAdSize;
 }
 
-export const BannerAd: React.FC<BannerAdProps> = ({ size = BannerAdSize.ANCHORED_ADAPTIVE_BANNER }) => {
+export const BannerAd: React.FC<BannerAdProps> = ({
+  size = BannerAdSize.ANCHORED_ADAPTIVE_BANNER,
+}) => {
+  const { width } = useWindowDimensions();
   const [hasError, setHasError] = useState(false);
-  if (hasError) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  // Silent fail: If ad encounters an error or no unit ID is present, render nothing
+  if (hasError || !BANNER_AD_UNIT_ID) {
     return null;
   }
 
   return (
-    <View style={styles.container}>
+    <View
+      style={[
+        styles.container,
+        {
+          maxWidth: width,
+          overflow: 'hidden',
+          display: isLoaded ? 'flex' : 'none',
+        },
+      ]}
+    >
       <AdMobBanner
-        unitId={adUnitId}
+        unitId={BANNER_AD_UNIT_ID}
         size={size}
         requestOptions={{
-          requestNonPersonalizedAdsOnly: false, // Will be respected based on GDPR/KVKK consent status
+          requestNonPersonalizedAdsOnly: false,
         }}
-        onAdFailedToLoad={(error) => {
-          if (__DEV__) {
-            console.log('[AdMob Banner Load Error]:', error);
-          }
+        onAdFailedToLoad={(_error) => {
+          // Silent Fail: suppress error and hide container completely
           setHasError(true);
         }}
         onAdLoaded={() => {
-          if (__DEV__) {
-            console.log('[AdMob Banner Loaded Successfully]');
-          }
+          setIsLoaded(true);
         }}
       />
     </View>
@@ -54,3 +69,4 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
 });
+
