@@ -69,12 +69,12 @@ export default function ZekatScreen() {
         options={{
           headerShown: true,
           title: t('zekat.title'),
-          headerStyle: { backgroundColor: colors.surface },
-          headerTintColor: colors.text,
+          headerStyle: { backgroundColor: colors.primary },
+          headerTintColor: '#ffffff',
           headerShadowVisible: false,
           headerLeft: () => (
             <TouchableOpacity onPress={() => router.back()} style={{ marginLeft: Platform.OS === 'ios' ? 0 : 16 }}>
-              <Ionicons name="arrow-back" size={24} color={colors.text} />
+              <Ionicons name="arrow-back" size={24} color="#ffffff" />
             </TouchableOpacity>
           ),
         }}

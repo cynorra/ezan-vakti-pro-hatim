@@ -1,0 +1,783 @@
+<en-US>
+• Hatim: Invite friends to a shared Quran completion and share your progress
+• Daily refreshed duas and healing verses
+• Verse of the day notification after Asr
+• Smart pre-prayer reminders; tapping a notification opens the right screen
+• Jumu'ah greeting cards you can share in one tap
+• Redesigned countdown and smoother animations across the app
+• Bug fixes and performance improvements
+</en-US>
+<af>
+• Hatim: Nooi vriende na 'n gedeelde Koran-voltooiing en deel jou vordering
+• Daaglikse nuwe duas en genesingsverse
+• Vers van die dag-kennisgewing ná Asr
+• Slim herinnerings voor gebedstye
+• Jumu'ah-groetekaartjies om te deel
+• Nuwe aftelling en gladder animasies
+• Foutoplossings en prestasieverbeterings
+</af>
+<am>
+• ኸትም፦ ጓደኞችዎን ለጋራ የቁርአን ኸትም ይጋብዙ፣ እድገትዎን ያጋሩ
+• በየቀኑ የሚታደሱ ዱዓዎች እና የፈውስ አያዎች
+• ከዐስር በኋላ የዕለቱ አያህ ማሳወቂያ
+• ከሶላት ሰዓት በፊት ብልህ አስታዋሾች
+• ሊጋሩ የሚችሉ የጁምዓ የሰላምታ ካርዶች
+• አዲስ ቆጠራ እና ለስላሳ እንቅስቃሴዎች
+• የስህተት ጥገናዎች እና የአፈጻጸም ማሻሻያዎች
+</am>
+<ar>
+• الختمة: ادعُ أصدقاءك إلى ختمة جماعية وشارك تقدّمك
+• أدعية وآيات شفاء تتجدد يوميًا
+• إشعار آية اليوم بعد العصر
+• تذكيرات ذكية قبل مواقيت الصلاة
+• بطاقات تهنئة الجمعة للمشاركة
+• عدّاد تنازلي جديد ورسوم متحركة أكثر سلاسة
+• إصلاح الأخطاء وتحسين الأداء
+</ar>
+<az-AZ>
+• Xətm: Dostlarını ortaq xətmə dəvət et, irəliləyişini paylaş
+• Hər gün yenilənən dualar və şəfa ayələri
+• İkindidən sonra günün ayəsi bildirişi
+• Namaz vaxtından əvvəl ağıllı xatırlatmalar
+• Paylaşıla bilən Cümə təbrik kartları
+• Yeni geri sayım və daha axıcı animasiyalar
+• Xəta düzəlişləri və performans təkmilləşdirmələri
+</az-AZ>
+<be>
+• Хатм: запрашайце сяброў на агульны хатм і дзяліцеся прагрэсам
+• Штодня новыя дуа і аяты аздараўлення
+• Апавяшчэнне з аятам дня пасля Асра
+• Разумныя напаміны перад намазам
+• Віншавальныя паштоўкі на Джуму
+• Новы зваротны адлік і плаўныя анімацыі
+• Выпраўленні памылак і паляпшэнне хуткасці
+</be>
+<bg>
+• Хатм: Поканете приятели на общ хатм и споделете напредъка си
+• Ежедневно обновявани дуи и лечебни аяти
+• Известие с аят на деня след Аср
+• Умни напомняния преди намаз
+• Поздравителни картички за Джума
+• Нов обратен отброй и по-плавни анимации
+• Поправки на грешки и подобрена производителност
+</bg>
+<bn-BD>
+• খতম: বন্ধুদের যৌথ খতমে আমন্ত্রণ জানান, আপনার অগ্রগতি শেয়ার করুন
+• প্রতিদিন নতুন দোয়া ও শিফার আয়াত
+• আসরের পর দিনের আয়াত নোটিফিকেশন
+• নামাজের আগে স্মার্ট রিমাইন্ডার
+• শেয়ারযোগ্য জুমার শুভেচ্ছা কার্ড
+• নতুন কাউন্টডাউন ও মসৃণ অ্যানিমেশন
+• বাগ সংশোধন ও পারফরম্যান্স উন্নতি
+</bn-BD>
+<ca>
+• Khatm: convida amics a una lectura conjunta de l'Alcorà i comparteix el teu progrés
+• Dues i versicles de guariment renovats cada dia
+• Notificació del versicle del dia després de l'Asr
+• Recordatoris intel·ligents abans de cada pregària
+• Targetes de felicitació del divendres (Jumu'ah)
+• Nou compte enrere i animacions més fluides
+• Correccions d'errors i millores de rendiment
+</ca>
+<cs-CZ>
+• Chatm: Pozvěte přátele ke společnému přečtení Koránu a sdílejte svůj pokrok
+• Denně obnovované duá a verše uzdravení
+• Oznámení verše dne po Asru
+• Chytrá připomenutí před modlitbou
+• Páteční (džuma) přání ke sdílení
+• Nový odpočet a plynulejší animace
+• Opravy chyb a zlepšení výkonu
+</cs-CZ>
+<da-DK>
+• Khatm: Inviter venner til en fælles gennemlæsning af Koranen og del dine fremskridt
+• Daglige nye duaer og helbredende vers
+• Dagens vers-notifikation efter Asr
+• Smarte påmindelser før bøn
+• Jumu'ah-hilsenkort, du kan dele
+• Ny nedtælling og glattere animationer
+• Fejlrettelser og ydeevneforbedringer
+</da-DK>
+<de-DE>
+• Khatm: Lade Freunde zu einer gemeinsamen Koran-Lesung ein und teile deinen Fortschritt
+• Täglich neue Duas und Heilungsverse
+• Vers-des-Tages-Benachrichtigung nach Asr
+• Smarte Erinnerungen vor dem Gebet
+• Jumu'ah-Grußkarten zum Teilen
+• Neuer Countdown und flüssigere Animationen
+• Fehlerbehebungen und Leistungsverbesserungen
+</de-DE>
+<el-GR>
+• Χατμ: Προσκαλέστε φίλους σε κοινή ανάγνωση του Κορανίου και μοιραστείτε την πρόοδό σας
+• Καθημερινά νέες ντουά και θεραπευτικοί στίχοι
+• Ειδοποίηση στίχου της ημέρας μετά το Ασρ
+• Έξυπνες υπενθυμίσεις πριν από την προσευχή
+• Κάρτες ευχών Παρασκευής (Τζουμά)
+• Νέα αντίστροφη μέτρηση και πιο ομαλά εφέ
+• Διορθώσεις σφαλμάτων και βελτιώσεις απόδοσης
+</el-GR>
+<en-AU>
+• Hatim: Invite friends to a shared Quran completion and share your progress
+• Daily refreshed duas and healing verses
+• Verse of the day notification after Asr
+• Smart pre-prayer reminders; tapping a notification opens the right screen
+• Jumu'ah greeting cards you can share in one tap
+• Redesigned countdown and smoother animations across the app
+• Bug fixes and performance improvements
+</en-AU>
+<en-CA>
+• Hatim: Invite friends to a shared Quran completion and share your progress
+• Daily refreshed duas and healing verses
+• Verse of the day notification after Asr
+• Smart pre-prayer reminders; tapping a notification opens the right screen
+• Jumu'ah greeting cards you can share in one tap
+• Redesigned countdown and smoother animations across the app
+• Bug fixes and performance improvements
+</en-CA>
+<en-GB>
+• Hatim: Invite friends to a shared Quran completion and share your progress
+• Daily refreshed duas and healing verses
+• Verse of the day notification after Asr
+• Smart pre-prayer reminders; tapping a notification opens the right screen
+• Jumu'ah greeting cards you can share in one tap
+• Redesigned countdown and smoother animations across the app
+• Bug fixes and performance improvements
+</en-GB>
+<en-IN>
+• Hatim: Invite friends to a shared Quran completion and share your progress
+• Daily refreshed duas and healing verses
+• Verse of the day notification after Asr
+• Smart pre-prayer reminders; tapping a notification opens the right screen
+• Jumu'ah greeting cards you can share in one tap
+• Redesigned countdown and smoother animations across the app
+• Bug fixes and performance improvements
+</en-IN>
+<en-SG>
+• Hatim: Invite friends to a shared Quran completion and share your progress
+• Daily refreshed duas and healing verses
+• Verse of the day notification after Asr
+• Smart pre-prayer reminders; tapping a notification opens the right screen
+• Jumu'ah greeting cards you can share in one tap
+• Redesigned countdown and smoother animations across the app
+• Bug fixes and performance improvements
+</en-SG>
+<en-ZA>
+• Hatim: Invite friends to a shared Quran completion and share your progress
+• Daily refreshed duas and healing verses
+• Verse of the day notification after Asr
+• Smart pre-prayer reminders; tapping a notification opens the right screen
+• Jumu'ah greeting cards you can share in one tap
+• Redesigned countdown and smoother animations across the app
+• Bug fixes and performance improvements
+</en-ZA>
+<es-419>
+• Jatm: invita a tus amigos a una lectura conjunta del Corán y comparte tu progreso
+• Duas y versículos de sanación renovados cada día
+• Notificación del versículo del día después del Asr
+• Recordatorios inteligentes antes de cada oración
+• Tarjetas de felicitación del viernes (Yumu'a)
+• Nueva cuenta regresiva y animaciones más fluidas
+• Corrección de errores y mejoras de rendimiento
+</es-419>
+<es-ES>
+• Jatm: invita a tus amigos a una lectura conjunta del Corán y comparte tu progreso
+• Duas y versículos de sanación renovados cada día
+• Notificación del versículo del día después del Asr
+• Recordatorios inteligentes antes de cada oración
+• Tarjetas de felicitación del viernes (Yumu'a)
+• Nueva cuenta regresiva y animaciones más fluidas
+• Corrección de errores y mejoras de rendimiento
+</es-ES>
+<es-US>
+• Jatm: invita a tus amigos a una lectura conjunta del Corán y comparte tu progreso
+• Duas y versículos de sanación renovados cada día
+• Notificación del versículo del día después del Asr
+• Recordatorios inteligentes antes de cada oración
+• Tarjetas de felicitación del viernes (Yumu'a)
+• Nueva cuenta regresiva y animaciones más fluidas
+• Corrección de errores y mejoras de rendimiento
+</es-US>
+<et>
+• Hatm: kutsu sõpru ühisele Koraani läbilugemisele ja jaga oma edusamme
+• Iga päev uued duaad ja tervendavad salmid
+• Päeva salmi teavitus pärast Asri
+• Nutikad meeldetuletused enne palvet
+• Jagatavad reedese (Džuma) tervituskaardid
+• Uus loendur ja sujuvamad animatsioonid
+• Veaparandused ja jõudluse täiustused
+</et>
+<eu-ES>
+• Khatm: gonbidatu lagunak Korana elkarrekin irakurtzera eta partekatu zure aurrerapena
+• Egunero berritzen diren duak eta sendatze-bertsoak
+• Eguneko bertsoaren jakinarazpena Asr ondoren
+• Otoitz aurreko oroigarri adimendunak
+• Ostiraleko (Jumu'ah) zorion-txartelak
+• Atzerako kontaketa berria eta animazio leunagoak
+• Akats-zuzenketak eta errendimendu-hobekuntzak
+</eu-ES>
+<fa>
+• ختم: دوستانت را به ختم گروهی قرآن دعوت کن و پیشرفتت را به اشتراک بگذار
+• دعاها و آیات شفا که هر روز تازه می‌شوند
+• اعلان آیهٔ روز پس از عصر
+• یادآوری‌های هوشمند پیش از وقت نماز
+• کارت‌های تبریک جمعه برای اشتراک‌گذاری
+• شمارش معکوس جدید و انیمیشن‌های روان‌تر
+• رفع اشکالات و بهبود عملکرد
+</fa>
+<fa-AE>
+• ختم: دوستانت را به ختم گروهی قرآن دعوت کن و پیشرفتت را به اشتراک بگذار
+• دعاها و آیات شفا که هر روز تازه می‌شوند
+• اعلان آیهٔ روز پس از عصر
+• یادآوری‌های هوشمند پیش از وقت نماز
+• کارت‌های تبریک جمعه برای اشتراک‌گذاری
+• شمارش معکوس جدید و انیمیشن‌های روان‌تر
+• رفع اشکالات و بهبود عملکرد
+</fa-AE>
+<fa-AF>
+• ختم: دوستانت را به ختم گروهی قرآن دعوت کن و پیشرفتت را به اشتراک بگذار
+• دعاها و آیات شفا که هر روز تازه می‌شوند
+• اعلان آیهٔ روز پس از عصر
+• یادآوری‌های هوشمند پیش از وقت نماز
+• کارت‌های تبریک جمعه برای اشتراک‌گذاری
+• شمارش معکوس جدید و انیمیشن‌های روان‌تر
+• رفع اشکالات و بهبود عملکرد
+</fa-AF>
+<fa-IR>
+• ختم: دوستانت را به ختم گروهی قرآن دعوت کن و پیشرفتت را به اشتراک بگذار
+• دعاها و آیات شفا که هر روز تازه می‌شوند
+• اعلان آیهٔ روز پس از عصر
+• یادآوری‌های هوشمند پیش از وقت نماز
+• کارت‌های تبریک جمعه برای اشتراک‌گذاری
+• شمارش معکوس جدید و انیمیشن‌های روان‌تر
+• رفع اشکالات و بهبود عملکرد
+</fa-IR>
+<fi-FI>
+• Khatm: Kutsu ystäväsi yhteiseen Koraanin lukemiseen ja jaa edistymisesi
+• Päivittäin uudistuvat duat ja parantavat jakeet
+• Päivän jae -ilmoitus Asrin jälkeen
+• Älykkäät muistutukset ennen rukousta
+• Jaettavat perjantain (Jumu'ah) tervehdyskortit
+• Uusi lähtölaskenta ja sulavammat animaatiot
+• Virhekorjauksia ja suorituskykyparannuksia
+</fi-FI>
+<fil>
+• Khatm: Imbitahan ang mga kaibigan sa sabayang pagtatapos ng Quran at ibahagi ang iyong progreso
+• Mga dua at talatang pampagaling na bago araw-araw
+• Abiso ng talata ng araw pagkatapos ng Asr
+• Matalinong paalala bago ang pagdarasal
+• Mga Jumu'ah greeting card na maibabahagi
+• Bagong countdown at mas maayos na animasyon
+• Pag-aayos ng bug at pagpapahusay ng performance
+</fil>
+<fr-CA>
+• Khatm : invitez vos amis à une lecture commune du Coran et partagez votre progression
+• Douas et versets de guérison renouvelés chaque jour
+• Notification du verset du jour après l'Asr
+• Rappels intelligents avant chaque prière
+• Cartes de vœux du vendredi (Joumou'a) à partager
+• Nouveau compte à rebours et animations plus fluides
+• Corrections de bugs et amélioration des performances
+</fr-CA>
+<fr-FR>
+• Khatm : invitez vos amis à une lecture commune du Coran et partagez votre progression
+• Douas et versets de guérison renouvelés chaque jour
+• Notification du verset du jour après l'Asr
+• Rappels intelligents avant chaque prière
+• Cartes de vœux du vendredi (Joumou'a) à partager
+• Nouveau compte à rebours et animations plus fluides
+• Corrections de bugs et amélioration des performances
+</fr-FR>
+<gl-ES>
+• Khatm: convida amigos a unha lectura conxunta do Corán e comparte o teu progreso
+• Duas e versículos de curación renovados cada día
+• Notificación do versículo do día despois do Asr
+• Recordatorios intelixentes antes de cada oración
+• Tarxetas de felicitación do venres (Jumu'ah)
+• Nova conta atrás e animacións máis fluídas
+• Corrección de erros e melloras de rendemento
+</gl-ES>
+<gu>
+• ખત્મ: મિત્રોને સંયુક્ત કુરઆન ખત્મ માટે આમંત્રિત કરો અને તમારી પ્રગતિ શેર કરો
+• દરરોજ નવી દુઆઓ અને શિફાની આયતો
+• અસર પછી આજની આયતની સૂચના
+• નમાઝ પહેલાં સ્માર્ટ રિમાઇન્ડર
+• શેર કરી શકાય તેવા જુમ્માના શુભેચ્છા કાર્ડ
+• નવું કાઉન્ટડાઉન અને સરળ એનિમેશન
+• બગ સુધારા અને પ્રદર્શન સુધારણા
+</gu>
+<hi-IN>
+• ख़त्म: दोस्तों को साझा क़ुरान ख़त्म के लिए आमंत्रित करें और अपनी प्रगति साझा करें
+• रोज़ नई दुआएँ और शिफ़ा की आयतें
+• अस्र के बाद आज की आयत की सूचना
+• नमाज़ से पहले स्मार्ट रिमाइंडर
+• साझा करने योग्य जुमा मुबारक कार्ड
+• नया काउंटडाउन और सहज एनिमेशन
+• बग सुधार और प्रदर्शन में सुधार
+</hi-IN>
+<hr>
+• Hatma: Pozovite prijatelje na zajedničko čitanje Kur'ana i podijelite svoj napredak
+• Svakodnevno nove dove i ajeti izlječenja
+• Obavijest s ajetom dana nakon ikindije
+• Pametni podsjetnici prije namaza
+• Džuma čestitke za dijeljenje
+• Novo odbrojavanje i glađe animacije
+• Ispravci pogrešaka i poboljšanja performansi
+</hr>
+<hu-HU>
+• Khatm: Hívd meg barátaidat egy közös Korán-olvasásra, és oszd meg a haladásodat
+• Naponta megújuló duák és gyógyító versek
+• A nap verse értesítés az Aszr után
+• Okos emlékeztetők ima előtt
+• Megosztható pénteki (Dzsuma) üdvözlőkártyák
+• Új visszaszámláló és gördülékenyebb animációk
+• Hibajavítások és teljesítményjavítások
+</hu-HU>
+<hy-AM>
+• Խաթմ. հրավիրեք ընկերներին Ղուրանի համատեղ ընթերցման և կիսվեք ձեր առաջընթացով
+• Ամեն օր թարմացվող դուաներ և բուժիչ այաթներ
+• Օրվա այաթի ծանուցում Ասրից հետո
+• Խելացի հիշեցումներ աղոթքից առաջ
+• Ուրբաթ օրվա (Ջումա) շնորհավորական բացիկներ
+• Նոր հետհաշվարկ և ավելի սահուն անիմացիաներ
+• Սխալների ուղղումներ և արագագործության բարելավումներ
+</hy-AM>
+<id>
+• Khatam: Ajak teman khatam Al-Qur'an bersama dan bagikan progresmu
+• Doa dan ayat syifa yang diperbarui setiap hari
+• Notifikasi ayat hari ini setelah Asar
+• Pengingat cerdas sebelum waktu salat
+• Kartu ucapan Jumat yang bisa dibagikan
+• Hitung mundur baru dan animasi lebih halus
+• Perbaikan bug dan peningkatan performa
+</id>
+<is-IS>
+• Khatm: Bjóddu vinum í sameiginlegan lestur Kóransins og deildu framvindu þinni
+• Nýjar dúur og lækningavers á hverjum degi
+• Tilkynning um vers dagsins eftir Asr
+• Snjallar áminningar fyrir bænir
+• Föstudagskveðjukort (Jumu'ah) til að deila
+• Ný niðurtalning og mýkri hreyfimyndir
+• Villuleiðréttingar og afkastabætur
+</is-IS>
+<it-IT>
+• Khatm: invita gli amici a una lettura comune del Corano e condividi i tuoi progressi
+• Du'a e versetti di guarigione rinnovati ogni giorno
+• Notifica del versetto del giorno dopo l'Asr
+• Promemoria intelligenti prima della preghiera
+• Biglietti di auguri del venerdì (Jumu'ah) da condividere
+• Nuovo conto alla rovescia e animazioni più fluide
+• Correzioni di bug e miglioramenti delle prestazioni
+</it-IT>
+<iw-IL>
+• ח'תם: הזמינו חברים לקריאה משותפת של הקוראן ושתפו את ההתקדמות שלכם
+• דואות ופסוקי ריפוי מתחדשים מדי יום
+• התראת פסוק היום אחרי תפילת העסר
+• תזכורות חכמות לפני התפילה
+• כרטיסי ברכה ליום שישי (ג'ומעה) לשיתוף
+• ספירה לאחור חדשה ואנימציות חלקות יותר
+• תיקוני באגים ושיפורי ביצועים
+</iw-IL>
+<ja-JP>
+• ハトム：友達を共同のクルアーン読了に招待し、進捗を共有
+• 毎日更新されるドゥアーと癒やしの節
+• アスルの後に今日の一節を通知
+• 礼拝前のスマートリマインダー
+• 共有できる金曜礼拝（ジュムア）のグリーティングカード
+• 新しいカウントダウンとよりなめらかなアニメーション
+• バグ修正とパフォーマンスの改善
+</ja-JP>
+<ka-GE>
+• ხათმი: მოიწვიეთ მეგობრები ყურანის ერთობლივ კითხვაზე და გააზიარეთ პროგრესი
+• ყოველდღე განახლებადი დუები და განკურნების აიათები
+• დღის აიათის შეტყობინება ასრის შემდეგ
+• ჭკვიანი შეხსენებები ლოცვის წინ
+• პარასკევის (ჯუმა) მისალოცი ბარათები
+• ახალი უკუთვლა და უფრო გლუვი ანიმაციები
+• შეცდომების გასწორება და წარმადობის გაუმჯობესება
+</ka-GE>
+<kk>
+• Хатым: достарыңызды ортақ хатымға шақырып, өз прогресіңізбен бөлісіңіз
+• Күн сайын жаңаратын дұғалар мен шипа аяттары
+• Екіндіден кейін күннің аяты туралы хабарлама
+• Намаз алдындағы ақылды еске салғыштар
+• Бөлісуге болатын Жұма құттықтау карталары
+• Жаңа кері санақ және жатық анимациялар
+• Қателерді түзету және өнімділікті жақсарту
+</kk>
+<km-KH>
+• ខតម៍៖ អញ្ជើញមិត្តភក្តិឱ្យចូលរួមអានគម្ពីរកូរ៉ានរួមគ្នា ហើយចែករំលែកវឌ្ឍនភាពរបស់អ្នក
+• ឌូអា និងអាយ៉ាត់ព្យាបាលថ្មីៗរៀងរាល់ថ្ងៃ
+• ការជូនដំណឹងអាយ៉ាត់ប្រចាំថ្ងៃក្រោយអាស្រ
+• ការរំលឹកឆ្លាតវៃមុនពេលសឡាត
+• កាតជូនពរថ្ងៃសុក្រ (ជុមអះ) សម្រាប់ចែករំលែក
+• ការរាប់ថយក្រោយថ្មី និងចលនារលូនជាងមុន
+• ការកែកំហុស និងការកែលម្អដំណើរការ
+</km-KH>
+<kn-IN>
+• ಖತ್ಮ್: ಸ್ನೇಹಿತರನ್ನು ಜಂಟಿ ಕುರಾನ್ ಖತ್ಮ್‌ಗೆ ಆಹ್ವಾನಿಸಿ ಮತ್ತು ನಿಮ್ಮ ಪ್ರಗತಿಯನ್ನು ಹಂಚಿಕೊಳ್ಳಿ
+• ಪ್ರತಿದಿನ ಹೊಸ ದುಆಗಳು ಮತ್ತು ಶಿಫಾ ಆಯತ್‌ಗಳು
+• ಅಸ್ರ್ ನಂತರ ದಿನದ ಆಯತ್ ಅಧಿಸೂಚನೆ
+• ನಮಾಜ್‌ಗೆ ಮೊದಲು ಸ್ಮಾರ್ಟ್ ಜ್ಞಾಪನೆಗಳು
+• ಹಂಚಿಕೊಳ್ಳಬಹುದಾದ ಜುಮಾ ಶುಭಾಶಯ ಕಾರ್ಡ್‌ಗಳು
+• ಹೊಸ ಕೌಂಟ್‌ಡೌನ್ ಮತ್ತು ಸುಗಮ ಅನಿಮೇಷನ್‌ಗಳು
+• ದೋಷ ಪರಿಹಾರಗಳು ಮತ್ತು ಕಾರ್ಯಕ್ಷಮತೆ ಸುಧಾರಣೆಗಳು
+</kn-IN>
+<ko-KR>
+• 하톰: 친구를 함께하는 꾸란 완독에 초대하고 진행 상황을 공유하세요
+• 매일 새로워지는 두아와 치유의 구절
+• 아스르 이후 오늘의 구절 알림
+• 예배 시간 전 스마트 알림
+• 공유 가능한 주마(금요일) 인사 카드
+• 새로운 카운트다운과 더 부드러운 애니메이션
+• 버그 수정 및 성능 개선
+</ko-KR>
+<ky-KG>
+• Хатм: досторуңузду жалпы хатмга чакырып, жетишкендигиңиз менен бөлүшүңүз
+• Күн сайын жаңыланган дубалар жана шыпаа аяттары
+• Асрдан кийин күндүн аяты боюнча билдирме
+• Намаз алдында акылдуу эскертмелер
+• Бөлүшүүгө боло турган Жума куттуктоо карталары
+• Жаңы кайра саноо жана жумшак анимациялар
+• Каталарды оңдоо жана иштөөнү жакшыртуу
+</ky-KG>
+<lo-LA>
+• ຄັດມ໌: ເຊີນໝູ່ເພື່ອນມາອ່ານກຸຣອານຮ່ວມກັນ ແລະ ແບ່ງປັນຄວາມຄືບໜ້າຂອງທ່ານ
+• ດຸອາ ແລະ ອາຍະຮ໌ປິ່ນປົວໃໝ່ທຸກມື້
+• ແຈ້ງເຕືອນອາຍະຮ໌ປະຈຳວັນຫຼັງອັສຣ໌
+• ການແຈ້ງເຕືອນອັດສະລິຍະກ່ອນເວລາລະໝາດ
+• ບັດອວຍພອນວັນສຸກ (ຈຸມອະຮ໌) ສຳລັບແບ່ງປັນ
+• ການນັບຖອຍຫຼັງໃໝ່ ແລະ ພາບເຄື່ອນໄຫວລື່ນໄຫຼກວ່າເກົ່າ
+• ແກ້ໄຂຂໍ້ຜິດພາດ ແລະ ປັບປຸງປະສິດທິພາບ
+</lo-LA>
+<lt>
+• Chatmas: pakvieskite draugus bendrai perskaityti Koraną ir dalinkitės savo pažanga
+• Kasdien atnaujinamos dua ir gydantys ajatai
+• Dienos ajato pranešimas po Asr
+• Išmanūs priminimai prieš maldą
+• Penktadienio (Džuma) sveikinimo kortelės
+• Nauja atgalinė atskaita ir sklandesnės animacijos
+• Klaidų taisymai ir našumo patobulinimai
+</lt>
+<lv>
+• Hatms: uzaiciniet draugus uz kopīgu Korāna izlasīšanu un dalieties ar savu progresu
+• Katru dienu jaunas duas un dziedinoši panti
+• Dienas panta paziņojums pēc Asr
+• Viedi atgādinājumi pirms lūgšanas
+• Piektdienas (Džuma) apsveikuma kartītes
+• Jauna atpakaļskaitīšana un plūdenākas animācijas
+• Kļūdu labojumi un veiktspējas uzlabojumi
+</lv>
+<mk-MK>
+• Хатма: поканете пријатели на заедничко читање на Куранот и споделете го напредокот
+• Секојдневно нови дуи и ајети за лекување
+• Известување за ајет на денот по икиндија
+• Паметни потсетници пред намаз
+• Честитки за петок (Џума) за споделување
+• Ново одбројување и помазни анимации
+• Поправки на грешки и подобрени перформанси
+</mk-MK>
+<ml-IN>
+• ഖത്മ്: സുഹൃത്തുക്കളെ സംയുക്ത ഖുർആൻ ഖത്മിലേക്ക് ക്ഷണിക്കുക, നിങ്ങളുടെ പുരോഗതി പങ്കിടുക
+• ദിവസവും പുതുക്കുന്ന ദുആകളും ശിഫാ ആയത്തുകളും
+• അസറിന് ശേഷം ഇന്നത്തെ ആയത്ത് അറിയിപ്പ്
+• നമസ്കാരത്തിന് മുമ്പ് സ്മാർട്ട് ഓർമ്മപ്പെടുത്തലുകൾ
+• പങ്കിടാവുന്ന ജുമുഅ ആശംസാ കാർഡുകൾ
+• പുതിയ കൗണ്ട്ഡൗണും സുഗമമായ ആനിമേഷനുകളും
+• ബഗ് പരിഹാരങ്ങളും പ്രകടന മെച്ചപ്പെടുത്തലുകളും
+</ml-IN>
+<mn-MN>
+• Хатм: найзуудаа Коран судрыг хамтдаа уншихад урьж, ахицаа хуваалцаарай
+• Өдөр бүр шинэчлэгддэг дуа ба эдгээх аятууд
+• Асрын дараа өдрийн аятын мэдэгдэл
+• Намазын өмнөх ухаалаг сануулга
+• Хуваалцах боломжтой Жумагийн мэндчилгээний карт
+• Шинэ тоолуур ба илүү жигд хөдөлгөөнт дүрс
+• Алдааны засвар ба гүйцэтгэлийн сайжруулалт
+</mn-MN>
+<mr-IN>
+• खत्म: मित्रांना सामूहिक कुराण खत्मसाठी आमंत्रित करा आणि तुमची प्रगती शेअर करा
+• दररोज नवीन दुआ आणि शिफाच्या आयती
+• अस्रनंतर आजच्या आयतीची सूचना
+• नमाजपूर्वी स्मार्ट रिमाइंडर
+• शेअर करता येणारी जुम्मा शुभेच्छा कार्डे
+• नवीन काउंटडाउन आणि सहज अ‍ॅनिमेशन
+• बग दुरुस्ती आणि कार्यक्षमता सुधारणा
+</mr-IN>
+<ms>
+• Khatam: Jemput rakan untuk khatam al-Quran bersama dan kongsi kemajuan anda
+• Doa dan ayat syifa yang dikemas kini setiap hari
+• Pemberitahuan ayat hari ini selepas Asar
+• Peringatan pintar sebelum waktu solat
+• Kad ucapan Jumaat yang boleh dikongsi
+• Kiraan detik baharu dan animasi lebih lancar
+• Pembaikan pepijat dan peningkatan prestasi
+</ms>
+<ms-MY>
+• Khatam: Jemput rakan untuk khatam al-Quran bersama dan kongsi kemajuan anda
+• Doa dan ayat syifa yang dikemas kini setiap hari
+• Pemberitahuan ayat hari ini selepas Asar
+• Peringatan pintar sebelum waktu solat
+• Kad ucapan Jumaat yang boleh dikongsi
+• Kiraan detik baharu dan animasi lebih lancar
+• Pembaikan pepijat dan peningkatan prestasi
+</ms-MY>
+<my-MM>
+• ခတ်မ်: သူငယ်ချင်းများကို ကုရ်အာန် အတူတကွ ဖတ်ရန် ဖိတ်ကြားပြီး သင့်တိုးတက်မှုကို မျှဝေပါ
+• နေ့စဉ် အသစ်ပြောင်းသော ဒုအာများနှင့် ကုသမှု အာယတ်များ
+• အဆ်ရ် ပြီးနောက် ယနေ့အာယတ် အသိပေးချက်
+• ဆွလာသ် မတိုင်မီ စမတ် သတိပေးချက်များ
+• မျှဝေနိုင်သော ဂျုမ္မာ နှုတ်ခွန်းဆက်ကတ်များ
+• ကောင်တ်ဒေါင်း အသစ်နှင့် ပိုချောမွေ့သော လှုပ်ရှားမှုများ
+• ချို့ယွင်းချက်ပြင်ဆင်မှုနှင့် စွမ်းဆောင်ရည် မြှင့်တင်မှုများ
+</my-MM>
+<ne-NP>
+• खत्म: साथीहरूलाई संयुक्त कुरान खत्मका लागि निम्तो दिनुहोस् र आफ्नो प्रगति साझा गर्नुहोस्
+• हरेक दिन नयाँ दुआ र शिफाका आयतहरू
+• अस्रपछि आजको आयतको सूचना
+• नमाजअघि स्मार्ट रिमाइन्डर
+• साझा गर्न मिल्ने जुम्मा शुभकामना कार्ड
+• नयाँ काउन्टडाउन र सहज एनिमेसन
+• बग सुधार र कार्यसम्पादनमा सुधार
+</ne-NP>
+<nl-NL>
+• Khatm: Nodig vrienden uit voor een gezamenlijke Koranlezing en deel je voortgang
+• Dagelijks nieuwe dua's en helende verzen
+• Melding met het vers van de dag na Asr
+• Slimme herinneringen vóór het gebed
+• Deelbare Jumu'ah-wenskaarten
+• Nieuwe aftelling en vloeiendere animaties
+• Bugfixes en prestatieverbeteringen
+</nl-NL>
+<no-NO>
+• Khatm: Inviter venner til en felles gjennomlesning av Koranen og del fremgangen din
+• Daglige nye duaer og helbredende vers
+• Varsel om dagens vers etter Asr
+• Smarte påminnelser før bønn
+• Jumu'ah-hilsenkort du kan dele
+• Ny nedtelling og jevnere animasjoner
+• Feilrettinger og ytelsesforbedringer
+</no-NO>
+<pa>
+• ਖ਼ਤਮ: ਦੋਸਤਾਂ ਨੂੰ ਸਾਂਝੇ ਕੁਰਆਨ ਖ਼ਤਮ ਲਈ ਸੱਦਾ ਦਿਓ ਅਤੇ ਆਪਣੀ ਤਰੱਕੀ ਸਾਂਝੀ ਕਰੋ
+• ਹਰ ਰੋਜ਼ ਨਵੀਆਂ ਦੁਆਵਾਂ ਅਤੇ ਸ਼ਿਫ਼ਾ ਦੀਆਂ ਆਇਤਾਂ
+• ਅਸਰ ਤੋਂ ਬਾਅਦ ਅੱਜ ਦੀ ਆਇਤ ਦੀ ਸੂਚਨਾ
+• ਨਮਾਜ਼ ਤੋਂ ਪਹਿਲਾਂ ਸਮਾਰਟ ਯਾਦ-ਦਹਾਨੀਆਂ
+• ਸਾਂਝੇ ਕੀਤੇ ਜਾ ਸਕਣ ਵਾਲੇ ਜੁੰਮਾ ਮੁਬਾਰਕ ਕਾਰਡ
+• ਨਵਾਂ ਕਾਊਂਟਡਾਊਨ ਅਤੇ ਸੁਚਾਰੂ ਐਨੀਮੇਸ਼ਨ
+• ਬੱਗ ਸੁਧਾਰ ਅਤੇ ਕਾਰਗੁਜ਼ਾਰੀ ਵਿੱਚ ਸੁਧਾਰ
+</pa>
+<pl-PL>
+• Chatm: Zaproś znajomych do wspólnego przeczytania Koranu i dziel się postępami
+• Codziennie nowe du'a i wersety uzdrowienia
+• Powiadomienie z wersetem dnia po Asr
+• Inteligentne przypomnienia przed modlitwą
+• Kartki z życzeniami na piątek (Dżuma) do udostępniania
+• Nowe odliczanie i płynniejsze animacje
+• Poprawki błędów i ulepszenia wydajności
+</pl-PL>
+<pt-BR>
+• Khatm: convide amigos para uma leitura conjunta do Alcorão e compartilhe seu progresso
+• Duas e versículos de cura renovados todos os dias
+• Notificação do versículo do dia após o Asr
+• Lembretes inteligentes antes de cada oração
+• Cartões de felicitação de sexta-feira (Jumu'ah) para compartilhar
+• Nova contagem regressiva e animações mais suaves
+• Correções de bugs e melhorias de desempenho
+</pt-BR>
+<pt-PT>
+• Khatm: convide amigos para uma leitura conjunta do Alcorão e partilhe o seu progresso
+• Duas e versículos de cura renovados todos os dias
+• Notificação do versículo do dia após o Asr
+• Lembretes inteligentes antes de cada oração
+• Postais de felicitações de sexta-feira (Jumu'ah) para partilhar
+• Nova contagem decrescente e animações mais fluidas
+• Correções de erros e melhorias de desempenho
+</pt-PT>
+<rm>
+• Khatm: Envida amis a leger il Coran communablamain e parta tes progress
+• Mintgadi novas duas e vers da guariziun
+• Avis cun il vers dal di suenter l'Asr
+• Promemorias intelligentas avant l'oraziun
+• Cartas da gratulaziun per la venderdi (Jumu'ah)
+• Nov count-down ed animaziuns pli fluidas
+• Correcturas d'errurs e meglieraziuns da la prestaziun
+</rm>
+<ro>
+• Khatm: invită-ți prietenii la o citire comună a Coranului și împărtășește-ți progresul
+• Dua și versete de vindecare reînnoite zilnic
+• Notificare cu versetul zilei după Asr
+• Mementouri inteligente înainte de rugăciune
+• Felicitări de vineri (Jumu'ah) de distribuit
+• Numărătoare inversă nouă și animații mai fluide
+• Remedieri de erori și îmbunătățiri de performanță
+</ro>
+<ru-RU>
+• Хатм: приглашайте друзей на совместный хатм Корана и делитесь своим прогрессом
+• Ежедневно обновляемые дуа и аяты исцеления
+• Уведомление с аятом дня после Асра
+• Умные напоминания перед намазом
+• Поздравительные открытки на Джуму
+• Новый обратный отсчёт и более плавные анимации
+• Исправления ошибок и повышение производительности
+</ru-RU>
+<si-LK>
+• ඛත්ම්: මිතුරන්ට එක්ව කුර්ආනය කියවීමට ආරාධනා කර ඔබේ ප්‍රගතිය බෙදාගන්න
+• දිනපතා අලුත් වන දුආ සහ සුවය දෙන ආයත්
+• අස්ර් වලින් පසු අද දවසේ ආයතය පිළිබඳ දැනුම්දීම
+• නමාසයට පෙර ස්මාර්ට් සිහිකැඳවීම්
+• බෙදාගත හැකි ජුම්මා සුබපැතුම් කාඩ්පත්
+• නව ගණන් කිරීම සහ සුමට සජීවිකරණ
+• දෝෂ නිවැරදි කිරීම් සහ කාර්ය සාධන වැඩිදියුණු කිරීම්
+</si-LK>
+<sk>
+• Chatm: Pozvite priateľov na spoločné prečítanie Koránu a zdieľajte svoj pokrok
+• Denne obnovované duá a verše uzdravenia
+• Oznámenie verša dňa po Asre
+• Inteligentné pripomienky pred modlitbou
+• Piatkové (džuma) pozdravy na zdieľanie
+• Nové odpočítavanie a plynulejšie animácie
+• Opravy chýb a zlepšenie výkonu
+</sk>
+<sl>
+• Hatma: Povabite prijatelje k skupnemu branju Korana in delite svoj napredek
+• Vsak dan nove dove in zdravilni verzi
+• Obvestilo z verzom dneva po Asru
+• Pametni opomniki pred molitvijo
+• Petkove (džuma) voščilnice za deljenje
+• Novo odštevanje in bolj tekoče animacije
+• Popravki napak in izboljšave delovanja
+</sl>
+<sq>
+• Hatme: Ftoni miqtë në një lexim të përbashkët të Kuranit dhe ndani përparimin tuaj
+• Lutje dhe ajete shërimi të rinovuara çdo ditë
+• Njoftim për ajetin e ditës pas ikindisë
+• Kujtesa të zgjuara para namazit
+• Kartolina urimi për të Premten (Xhuma)
+• Numërim mbrapsht i ri dhe animacione më të rrjedhshme
+• Rregullime gabimesh dhe përmirësime të performancës
+</sq>
+<sr>
+• Хатма: Позовите пријатеље на заједничко читање Курана и поделите свој напредак
+• Свакодневно нове дове и ајети излечења
+• Обавештење са ајетом дана после икиндије
+• Паметни подсетници пре намаза
+• Џума честитке за дељење
+• Ново одбројавање и глађе анимације
+• Исправке грешака и побољшања перформанси
+</sr>
+<sv-SE>
+• Khatm: Bjud in vänner till en gemensam genomläsning av Koranen och dela dina framsteg
+• Dagligen nya duaer och helande verser
+• Avisering om dagens vers efter Asr
+• Smarta påminnelser före bön
+• Jumu'ah-hälsningskort att dela
+• Ny nedräkning och mjukare animationer
+• Buggfixar och prestandaförbättringar
+</sv-SE>
+<sw>
+• Khitma: Waalike marafiki kwenye khitma ya pamoja ya Qur'ani na ushiriki maendeleo yako
+• Dua na aya za shifa zinazosasishwa kila siku
+• Arifa ya aya ya siku baada ya Alasiri
+• Vikumbusho mahiri kabla ya swala
+• Kadi za salamu za Ijumaa za kushiriki
+• Hesabu mpya ya kurudi nyuma na michoro laini zaidi
+• Marekebisho ya hitilafu na maboresho ya utendaji
+</sw>
+<ta-IN>
+• கத்ம்: நண்பர்களை கூட்டு குர்ஆன் கத்மிற்கு அழைத்து உங்கள் முன்னேற்றத்தைப் பகிருங்கள்
+• தினமும் புதுப்பிக்கப்படும் துஆக்கள் மற்றும் ஷிஃபா வசனங்கள்
+• அஸருக்குப் பிறகு இன்றைய வசன அறிவிப்பு
+• தொழுகைக்கு முன் ஸ்மார்ட் நினைவூட்டல்கள்
+• பகிரக்கூடிய ஜும்ஆ வாழ்த்து அட்டைகள்
+• புதிய கவுண்ட்டவுன் மற்றும் மென்மையான அனிமேஷன்கள்
+• பிழை திருத்தங்கள் மற்றும் செயல்திறன் மேம்பாடுகள்
+</ta-IN>
+<te-IN>
+• ఖత్మ్: స్నేహితులను ఉమ్మడి ఖురాన్ ఖత్మ్‌కు ఆహ్వానించండి, మీ పురోగతిని పంచుకోండి
+• ప్రతిరోజూ కొత్త దుఆలు మరియు షిఫా ఆయతులు
+• అసర్ తర్వాత నేటి ఆయత్ నోటిఫికేషన్
+• నమాజ్‌కు ముందు స్మార్ట్ రిమైండర్‌లు
+• పంచుకోగల జుమా శుభాకాంక్షల కార్డులు
+• కొత్త కౌంట్‌డౌన్ మరియు సున్నితమైన యానిమేషన్‌లు
+• బగ్ పరిష్కారాలు మరియు పనితీరు మెరుగుదలలు
+</te-IN>
+<th>
+• คอตัม: ชวนเพื่อนมาอ่านอัลกุรอานจบร่วมกันและแชร์ความคืบหน้าของคุณ
+• ดุอาอ์และอายะฮ์บำบัดที่อัปเดตทุกวัน
+• การแจ้งเตือนอายะฮ์ประจำวันหลังอัศริ
+• การแจ้งเตือนอัจฉริยะก่อนเวลาละหมาด
+• การ์ดอวยพรวันศุกร์ (ญุมอะฮ์) สำหรับแชร์
+• นับถอยหลังแบบใหม่และแอนิเมชันที่ลื่นไหลขึ้น
+• แก้ไขข้อบกพร่องและปรับปรุงประสิทธิภาพ
+</th>
+<tr-TR>
+• Hatim: Arkadaşlarını ortak hatme davet et, kendi ilerlemeni paylaş
+• Her gün yenilenen dua ve şifa ayetleri
+• İkindi sonrası günün ayeti bildirimi
+• Vakit öncesi akıllı namaz hatırlatmaları, bildirime dokununca ilgili ekran açılır
+• Cuma tebrik kartı: tek dokunuşla paylaş
+• Yenilenen geri sayım ve uygulama geneli akıcı animasyonlar
+• Hata düzeltmeleri ve performans iyileştirmeleri
+</tr-TR>
+<uk>
+• Хатм: запрошуйте друзів на спільне читання Корану та діліться своїм прогресом
+• Щодня оновлювані дуа та аяти зцілення
+• Сповіщення з аятом дня після Асру
+• Розумні нагадування перед намазом
+• Вітальні листівки на Джуму
+• Новий зворотний відлік і плавніші анімації
+• Виправлення помилок і покращення продуктивності
+</uk>
+<ur>
+• ختم: دوستوں کو مشترکہ ختمِ قرآن کی دعوت دیں اور اپنی پیش رفت شیئر کریں
+• روزانہ نئی دعائیں اور شفا کی آیات
+• عصر کے بعد آج کی آیت کی اطلاع
+• نماز سے پہلے اسمارٹ یاد دہانیاں
+• شیئر کرنے کے قابل جمعہ مبارک کارڈز
+• نیا کاؤنٹ ڈاؤن اور زیادہ ہموار اینیمیشنز
+• خرابیوں کی درستگی اور کارکردگی میں بہتری
+</ur>
+<vi>
+• Khatm: Mời bạn bè cùng đọc trọn Qur'an và chia sẻ tiến độ của bạn
+• Du'a và các câu kinh chữa lành được làm mới mỗi ngày
+• Thông báo câu kinh trong ngày sau giờ Asr
+• Nhắc nhở thông minh trước giờ cầu nguyện
+• Thiệp chúc mừng ngày thứ Sáu (Jumu'ah) để chia sẻ
+• Đồng hồ đếm ngược mới và hiệu ứng mượt mà hơn
+• Sửa lỗi và cải thiện hiệu suất
+</vi>
+<zh-CN>
+• 哈特姆：邀请好友共同诵读完整部《古兰经》，并分享你的进度
+• 每日更新的杜阿和治愈经文
+• 晡礼后推送每日经文通知
+• 礼拜时间前的智能提醒
+• 可分享的主麻日祝福卡片
+• 全新倒计时与更流畅的动画
+• 错误修复和性能改进
+</zh-CN>
+<zh-HK>
+• 哈特姆：邀請好友共同誦讀完整部《古蘭經》，並分享你的進度
+• 每日更新的杜阿和療癒經文
+• 晡禮後推送每日經文通知
+• 禮拜時間前的智慧提醒
+• 可分享的主麻日祝福卡片
+• 全新倒數計時與更流暢的動畫
+• 錯誤修正和效能改善
+</zh-HK>
+<zh-TW>
+• 哈特姆：邀請好友共同誦讀完整部《古蘭經》，並分享你的進度
+• 每日更新的杜阿和療癒經文
+• 晡禮後推送每日經文通知
+• 禮拜時間前的智慧提醒
+• 可分享的主麻日祝福卡片
+• 全新倒數計時與更流暢的動畫
+• 錯誤修正和效能改善
+</zh-TW>
+<zu>
+• I-Khatm: Mema abangane ukuthi nifunde iQur'an ndawonye futhi wabelane ngenqubekelaphambili yakho
+• Ama-dua namavesi okuphilisa avuselelwa nsuku zonke
+• Isaziso sevesi losuku ngemuva kwe-Asr
+• Izikhumbuzi ezihlakaniphile ngaphambi komthandazo
+• Amakhadi okubingelela ale-Jumu'ah ongabelana ngawo
+• Ukubala okusha kwesikhathi nopopayi abashelelayo
+• Ukulungiswa kwamaphutha nokuthuthukiswa kokusebenza
+</zu>

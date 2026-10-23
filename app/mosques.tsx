@@ -17,6 +17,7 @@ import { useTranslation } from 'react-i18next';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows } from '@/constants/theme';
 import { SEOHead } from '@/components/SEOHead';
 import { fetchNearbyMosques, NearbyMosque } from '@/lib/services/mosque-service';
+import { loadSavedLocation, DEFAULT_LOCATION } from '@/lib/location-settings';
 
 export default function MosquesScreen() {
   const { t, i18n } = useTranslation();
@@ -35,14 +36,45 @@ export default function MosquesScreen() {
     setLoading(true);
     setError(null);
     try {
-      const { status } = await Location.requestForegroundPermissionsAsync();
-      if (status !== 'granted') {
-        setError(t('mosques.locationDenied'));
-        setLoading(false);
-        return;
+      let lat = DEFAULT_LOCATION.city.latitude;
+      let lon = DEFAULT_LOCATION.city.longitude;
+      let hasCoords = false;
+
+      // Try GPS first
+      try {
+        const { status } = await Location.requestForegroundPermissionsAsync();
+        if (status === 'granted') {
+          try {
+            const location = await Location.getCurrentPositionAsync({
+              accuracy: Location.Accuracy.Balanced,
+            });
+            lat = location.coords.latitude;
+            lon = location.coords.longitude;
+            hasCoords = true;
+          } catch {
+            const lastLoc = await Location.getLastKnownPositionAsync();
+            if (lastLoc) {
+              lat = lastLoc.coords.latitude;
+              lon = lastLoc.coords.longitude;
+              hasCoords = true;
+            }
+          }
+        }
+      } catch (locErr) {
+        console.log('GPS request error in mosques:', locErr);
       }
-      const location = await Location.getCurrentPositionAsync({});
-      const results = await fetchNearbyMosques(location.coords.latitude, location.coords.longitude, i18n.language);
+
+      // If GPS unavailable or denied, fallback to saved city location
+      if (!hasCoords) {
+        const saved = await loadSavedLocation();
+        if (saved?.city) {
+          lat = saved.city.latitude;
+          lon = saved.city.longitude;
+          hasCoords = true;
+        }
+      }
+
+      const results = await fetchNearbyMosques(lat, lon, i18n.language);
       setMosques(results);
     } catch (e) {
       console.log('Mosque fetch error:', e);
@@ -68,12 +100,12 @@ export default function MosquesScreen() {
         options={{
           headerShown: true,
           title: t('mosques.title'),
-          headerStyle: { backgroundColor: colors.surface },
-          headerTintColor: colors.text,
+          headerStyle: { backgroundColor: colors.primary },
+          headerTintColor: '#ffffff',
           headerShadowVisible: false,
           headerLeft: () => (
             <TouchableOpacity onPress={() => router.back()} style={{ marginLeft: Platform.OS === 'ios' ? 0 : 16 }}>
-              <Ionicons name="arrow-back" size={24} color={colors.text} />
+              <Ionicons name="arrow-back" size={24} color="#ffffff" />
             </TouchableOpacity>
           ),
         }}

@@ -168,7 +168,11 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
 
   const SettingRow = ({ icon, label, value, onPress, type = 'chevron', isSubRow = false }: any) => (
     <TouchableOpacity
-      style={[styles.row, { borderBottomColor: colors.border }, isSubRow && { paddingLeft: Spacing.xl, height: 44 }]}
+      style={[
+        styles.row,
+        { borderBottomColor: colors.border },
+        isSubRow && { paddingLeft: Spacing.xl, minHeight: 44, paddingVertical: Spacing.sm },
+      ]}
       onPress={type === 'switch' ? undefined : onPress}
       disabled={type === 'switch'}
     >

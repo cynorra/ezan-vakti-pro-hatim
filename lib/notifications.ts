@@ -130,10 +130,40 @@ async function getReminderMinutes(): Promise<number> {
   }
 }
 
+/** Sanitizes notification content so Android's native bundle serializer won't throw NotSerializableException */
+function buildNotificationInput(request: Notifications.NotificationRequestInput): Notifications.NotificationRequestInput {
+  const content = { ...request.content };
+
+  if (Platform.OS === 'android') {
+    // Android controls sound via Notification Channels; boolean `sound: true` or custom sounds inside content
+    // crash with NotSerializableException: org.json.JSONObject on various Android versions.
+    delete (content as any).sound;
+    if (!(content as any).channelId) {
+      (content as any).channelId = 'default';
+    }
+  }
+
+  // Ensure data payload is purely flat string key-values to prevent JSON serialization crash
+  if (content.data && typeof content.data === 'object') {
+    const safeData: Record<string, string> = {};
+    for (const [k, v] of Object.entries(content.data)) {
+      if (v != null) {
+        safeData[k] = typeof v === 'string' ? v : String(v);
+      }
+    }
+    content.data = safeData;
+  }
+
+  return {
+    ...request,
+    content,
+  };
+}
+
 /** Schedules one notification; a failure is logged instead of aborting the others. */
 async function safeSchedule(request: Notifications.NotificationRequestInput) {
   try {
-    await Notifications.scheduleNotificationAsync(request);
+    await Notifications.scheduleNotificationAsync(buildNotificationInput(request));
   } catch (error) {
     console.warn(`[notifications] could not schedule ${request.identifier}:`, error);
   }
@@ -229,7 +259,7 @@ export async function scheduleDailyDuaReminders() {
     if (targetDate.getTime() <= now.getTime()) continue;
 
     const dua = localizeDua(getDailyDua(targetDate), i18n.language);
-    await Notifications.scheduleNotificationAsync({
+    await safeSchedule({
       identifier: `${DAILY_DUA_PREFIX}${localDateKey(targetDate)}`,
       content: {
         title: i18n.t('notifications.dailyDuaTitle'),
@@ -264,7 +294,7 @@ export async function scheduleDailyVerseReminders() {
     if (targetDate.getTime() <= now.getTime()) continue;
 
     const verse = getDailyHealingVerse(targetDate);
-    await Notifications.scheduleNotificationAsync({
+    await safeSchedule({
       identifier: `${DAILY_VERSE_PREFIX}${localDateKey(targetDate)}`,
       content: {
         title: i18n.t('notifications.verseTitle') || '📖 Şifa & Huzur Ayeti',
@@ -326,7 +356,7 @@ export async function scheduleEveningEngagementReminder() {
 
   const message = await getPersonalizedEveningMessage();
 
-  await Notifications.scheduleNotificationAsync({
+  await safeSchedule({
     identifier: ENGAGEMENT_ID,
     content: {
       title: i18n.t('notifications.eveningTitle'),
@@ -344,7 +374,7 @@ export async function scheduleFridayReminder() {
 
   await Notifications.cancelScheduledNotificationAsync(FRIDAY_REMINDER_ID).catch(() => {});
 
-  await Notifications.scheduleNotificationAsync({
+  await safeSchedule({
     identifier: FRIDAY_REMINDER_ID,
     content: {
       title: i18n.t('notifications.fridayTitle'),
@@ -368,7 +398,7 @@ export async function scheduleMiddayInspirationReminder() {
 
   await Notifications.cancelScheduledNotificationAsync(MIDDAY_REMINDER_ID).catch(() => {});
 
-  await Notifications.scheduleNotificationAsync({
+  await safeSchedule({
     identifier: MIDDAY_REMINDER_ID,
     content: {
       title: i18n.t('notifications.middayTitle'),

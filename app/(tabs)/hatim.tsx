@@ -109,13 +109,17 @@ export default function HatimScreen() {
     }
   }, [weekStart]);
 
+  const [sharedHatimsError, setSharedHatimsError] = useState<string | null>(null);
+
   const loadSharedHatims = async () => {
     setLoading(true);
+    setSharedHatimsError(null);
     try {
       const data = await hatimService.getSharedHatims();
       setSharedHatims(data);
     } catch (error) {
       console.log('Shared hatims failed to load:', error);
+      setSharedHatimsError(t('common.errorGeneric') || 'Bağlantı hatası oluştu');
     } finally {
       setLoading(false);
     }
@@ -479,6 +483,20 @@ export default function HatimScreen() {
 
             {loading ? (
               <ActivityIndicator size="large" color={colors.primary} style={{ marginTop: 40 }} />
+            ) : sharedHatimsError ? (
+              <View style={styles.emptyState}>
+                <Ionicons name="cloud-offline-outline" size={56} color={colors.textMuted} />
+                <Text style={[styles.emptyText, { color: colors.textSecondary, marginBottom: Spacing.md }]}>
+                  {sharedHatimsError}
+                </Text>
+                <TouchableOpacity
+                  onPress={loadSharedHatims}
+                  style={[styles.createBtn, { backgroundColor: colors.primary, marginTop: Spacing.sm }]}
+                >
+                  <Ionicons name="refresh" size={16} color="#fff" />
+                  <Text style={styles.createBtnText}>{t('common.retry') || 'Tekrar Dene'}</Text>
+                </TouchableOpacity>
+              </View>
             ) : sharedHatims.length === 0 ? (
               <View style={styles.emptyState}>
                 <Ionicons name="book-outline" size={64} color={colors.textMuted} />

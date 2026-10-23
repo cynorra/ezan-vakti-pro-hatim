@@ -17,12 +17,14 @@ import { SEOHead } from '@/components/SEOHead';
 import { logQiblaSearched } from '@/lib/analytics';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
+import { loadSavedLocation, DEFAULT_LOCATION } from '@/lib/location-settings';
 
 export default function KibleScreen() {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const [heading, setHeading] = useState(0);
-  const [qiblaDir, setQiblaDir] = useState(0);
+  const [hasHeading, setHasHeading] = useState(false);
+  const [qiblaDir, setQiblaDir] = useState<number | null>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const insets = useSafeAreaInsets();
   const { t } = useTranslation();
@@ -32,7 +34,10 @@ export default function KibleScreen() {
   const currentHeadingRef = useRef(0);
   const pulseAnim = useRef(new Animated.Value(1)).current;
 
-  const isAligned = Math.abs(heading - qiblaDir) < 5 || Math.abs(heading - qiblaDir) > 355;
+  const isAligned =
+    hasHeading &&
+    qiblaDir !== null &&
+    (Math.abs(heading - qiblaDir) < 5 || Math.abs(heading - qiblaDir) > 355);
 
   // Pulse animation when aligned with Qibla
   useEffect(() => {
@@ -65,31 +70,52 @@ export default function KibleScreen() {
     let headingSubscription: Location.LocationSubscription | null = null;
 
     (async () => {
+      let lat = DEFAULT_LOCATION.city.latitude;
+      let lon = DEFAULT_LOCATION.city.longitude;
+
       try {
-        let { status } = await Location.requestForegroundPermissionsAsync();
-        if (status !== 'granted') {
-          setErrorMsg(t('qibla.permissionDenied'));
-          return;
+        const saved = await loadSavedLocation();
+        if (saved?.city) {
+          lat = saved.city.latitude;
+          lon = saved.city.longitude;
         }
 
-        const location = await Location.getCurrentPositionAsync({
-          accuracy: Location.Accuracy.Balanced,
-        });
-        
-        // Kible acisi hesaplama (Kabe: 21.4225, 39.8262)
-        const lat1 = location.coords.latitude * Math.PI / 180;
-        const lon1 = location.coords.longitude * Math.PI / 180;
-        const lat2 = 21.4225 * Math.PI / 180;
-        const lon2 = 39.8262 * Math.PI / 180;
+        let { status } = await Location.requestForegroundPermissionsAsync();
+        if (status === 'granted') {
+          try {
+            const loc = await Location.getCurrentPositionAsync({
+              accuracy: Location.Accuracy.Balanced,
+            });
+            lat = loc.coords.latitude;
+            lon = loc.coords.longitude;
+          } catch {
+            const lastLoc = await Location.getLastKnownPositionAsync();
+            if (lastLoc) {
+              lat = lastLoc.coords.latitude;
+              lon = lastLoc.coords.longitude;
+            }
+          }
+        }
+      } catch (err) {
+        console.log('Location fetch fallback used for Qibla:', err);
+      }
 
-        const y = Math.sin(lon2 - lon1);
-        const x = Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(lon2 - lon1);
-        const qibla = (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
-        setQiblaDir(qibla);
+      // Kible acisi hesaplama (Kabe: 21.4225, 39.8262)
+      const lat1 = (lat * Math.PI) / 180;
+      const lon1 = (lon * Math.PI) / 180;
+      const lat2 = (21.4225 * Math.PI) / 180;
+      const lon2 = (39.8262 * Math.PI) / 180;
 
+      const y = Math.sin(lon2 - lon1);
+      const x = Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(lon2 - lon1);
+      const computedQibla = (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
+      setQiblaDir(computedQibla);
+
+      try {
         headingSubscription = await Location.watchHeadingAsync((data) => {
           const headingValue = data?.trueHeading >= 0 ? data.trueHeading : (data?.magHeading ?? 0);
           setHeading(headingValue);
+          setHasHeading(true);
 
           // Calculate shortest path to avoid 359 -> 0 full spin jitter
           let prev = currentHeadingRef.current;
@@ -106,7 +132,7 @@ export default function KibleScreen() {
           }).start();
           
           // Kibleye yaklasinca haptik geri bildirim
-          const angleDiff = Math.abs(headingValue - qibla);
+          const angleDiff = Math.abs(headingValue - computedQibla);
           if (angleDiff < 2 || angleDiff > 358) {
             safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
           }
@@ -114,7 +140,7 @@ export default function KibleScreen() {
         
         logQiblaSearched();
       } catch (err) {
-        console.log('Qibla initialization error:', err);
+        console.log('Qibla heading watch error:', err);
         setErrorMsg(t('qibla.sensorError'));
       }
     })();
@@ -131,9 +157,10 @@ export default function KibleScreen() {
     outputRange: ['0deg', '-360deg'],
   });
 
+  const safeQiblaAngle = qiblaDir ?? 0;
   const needleRotation = animatedHeading.interpolate({
     inputRange: [0, 360],
-    outputRange: [`${qiblaDir}deg`, `${qiblaDir - 360}deg`],
+    outputRange: [`${safeQiblaAngle}deg`, `${safeQiblaAngle - 360}deg`],
   });
 
   return (
@@ -210,7 +237,9 @@ export default function KibleScreen() {
           
           <View style={[styles.infoCard, { backgroundColor: colors.surface }, Shadows.premium, isAligned && { borderColor: colors.accent, borderWidth: 2 }]}>
             <Text style={[styles.infoLabel, { color: colors.textSecondary }]}>{t('qibla.qiblaAngle')}</Text>
-            <Text style={[styles.infoValue, { color: isAligned ? colors.primary : colors.text }]}>{Math.round(qiblaDir)}°</Text>
+            <Text style={[styles.infoValue, { color: isAligned ? colors.primary : colors.text }]}>
+              {qiblaDir !== null ? `${Math.round(qiblaDir)}°` : '--'}
+            </Text>
           </View>
         </View>
 

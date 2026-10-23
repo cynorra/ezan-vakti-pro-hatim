@@ -54,6 +54,7 @@ import { RamadanCountdown } from '@/components/RamadanCountdown';
 import { PrayerTimesCard } from '@/components/PrayerTimesCard';
 import { ReligiousDaysCard } from '@/components/ReligiousDaysCard';
 import { SEOHead } from '@/components/SEOHead';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { getRandomEsma, localizeEsma, Esma } from '@/lib/data/esma';
 import {
   syncRemoteContent,
@@ -69,6 +70,7 @@ const NOTIFICATION_PROMPTED_KEY = 'notification_permission_prompted';
 const NOTIFICATIONS_ENABLED_KEY = 'notifications_enabled';
 
 export default function HomeScreen() {
+  const insets = useSafeAreaInsets();
   const { t, i18n } = useTranslation();
   const router = useRouter();
   const staticWisdom = localizeWisdom(getDailyWisdom(), i18n.language);
@@ -327,7 +329,7 @@ export default function HomeScreen() {
         }
       >
       {/* Premium Header */}
-      <LinearGradient colors={Gradients.premium} style={styles.header}>
+      <LinearGradient colors={Gradients.premium} style={[styles.header, { paddingTop: Math.max(insets.top, Platform.OS === 'ios' ? 44 : 24) + Spacing.md }]}>
         <View style={styles.headerTop}>
           <TouchableOpacity
             style={styles.citySelectorTrigger}
@@ -584,7 +586,6 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
   header: {
-    paddingTop: Platform.OS === 'ios' ? 60 : 40,
     paddingBottom: 40,
     paddingHorizontal: Spacing.lg,
     borderBottomLeftRadius: BorderRadius.xl,
