@@ -12,6 +12,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Free Disk Space (Ubuntu)
+        run: |
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /usr/local/lib/android/sdk/ndk/*
+          sudo rm -rf /opt/ghc
+          sudo rm -rf /usr/local/share/boost
+          sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+          sudo docker image prune --all --force 2>/dev/null || true
+          df -h
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -71,16 +81,15 @@ jobs:
           # GitHub runners have 16 GB.
           ./gradlew bundleRelease assembleRelease --no-daemon -Dorg.gradle.jvmargs="-Xmx6g -XX:MaxMetaspaceSize=1g -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8"
 
-      - name: Upload Android App Bundle (AAB)
-        uses: actions/upload-artifact@v4
-        with:
-          name: app-release-aab
-          path: android/app/build/outputs/bundle/release/*.aab
-          retention-days: 30
+      - name: Collect artifacts
+        run: |
+          mkdir -p out
+          mv android/app/build/outputs/bundle/release/*.aab out/
+          mv android/app/build/outputs/apk/release/*.apk out/
 
-      - name: Upload Release APK
+      - name: Upload Android Artifacts (AAB & APK)
         uses: actions/upload-artifact@v4
         with:
-          name: app-release-apk
-          path: android/app/build/outputs/apk/release/*.apk
+          name: app-release
+          path: out/*
           retention-days: 30
