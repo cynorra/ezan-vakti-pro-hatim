@@ -82,6 +82,38 @@ export default function KazaScreen() {
     }
   };
 
+  const handleShareKaza = async () => {
+    safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    logEvent('kaza_shared', { totalDebt: total });
+    try {
+      const message = total === 0
+        ? t('kaza.completionShareMessage', { playStore: PLAY_STORE_URL })
+        : `🕌 Kaza namazlarımı Ezan Vakti + Hatim ile takip ediyorum (${total} vakit kaza borcum kaldı).\n\nSen de kaza namazlarını kolayca takip etmek için hemen indir:\n${PLAY_STORE_URL}`;
+      await Share.share({ message });
+    } catch (error) {
+      console.log('Kaza share error:', error);
+    }
+  };
+
+  const updateAllPrayers = (delta: number) => {
+    setKazaData((prev) => {
+      const keys: (keyof KazaData)[] = ['sabah', 'ogle', 'ikindi', 'aksam', 'yatsi', 'vitir'];
+      const newData = { ...prev };
+      for (const k of keys) {
+        newData[k] = Math.max(0, prev[k] + delta);
+      }
+      saveData(newData);
+      if (delta > 0) {
+        safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+      } else {
+        safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+      }
+      if (totalKaza(prev) > 0 && totalKaza(newData) === 0) {
+        celebrateKazaCompleted();
+      }
+      return newData;
+    });
+  };
   const updateCount = (key: keyof KazaData, delta: number) => {
     setKazaData((prev) => {
       const newCount = prev[key] + delta;
@@ -165,10 +197,31 @@ export default function KazaScreen() {
               </Text>
             </View>
             <TouchableOpacity
-              onPress={celebrateKazaCompleted}
+              onPress={handleShareKaza}
               style={[styles.shareKazaBtn, { backgroundColor: colors.accent + '20' }]}
             >
               <Ionicons name="share-social" size={18} color={colors.accent} />
+            </TouchableOpacity>
+          </View>
+
+          {/* Quick 1 Day +/- Actions */}
+          <View style={styles.quickDayRow}>
+            <TouchableOpacity
+              activeOpacity={0.8}
+              onPress={() => updateAllPrayers(-1)}
+              style={[styles.quickDayBtn, { backgroundColor: colors.surface }, Shadows.light]}
+            >
+              <Ionicons name="checkmark-done" size={16} color={colors.primary} />
+              <Text style={[styles.quickDayBtnText, { color: colors.primary }]}>-1 Gün (Tümü)</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              activeOpacity={0.8}
+              onPress={() => updateAllPrayers(1)}
+              style={[styles.quickDayBtn, { backgroundColor: colors.surface }, Shadows.light]}
+            >
+              <Ionicons name="add-circle-outline" size={16} color={colors.accent} />
+              <Text style={[styles.quickDayBtnText, { color: colors.accent }]}>+1 Gün (Tümü)</Text>
             </TouchableOpacity>
           </View>
 
@@ -290,5 +343,23 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  quickDayRow: {
+    flexDirection: 'row',
+    gap: Spacing.md,
+    marginTop: 4,
+  },
+  quickDayBtn: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    paddingVertical: 12,
+    borderRadius: BorderRadius.lg,
+  },
+  quickDayBtnText: {
+    fontSize: FontSize.xs,
+    fontWeight: '700',
   },
 });

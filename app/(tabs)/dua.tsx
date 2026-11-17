@@ -22,6 +22,7 @@ import { SEOHead } from '@/components/SEOHead';
 import { ShareableDuaCard } from '@/components/ShareableDuaCard';
 import { dailyDuas, duaCategories, getDailyDua, localizeDua, Dua } from '@/lib/data/duas';
 import { formatDuaShareMessage } from '@/lib/share';
+import { getHijriDate } from '@/lib/hijri';
 
 const CATEGORY_ICONS: Record<string, string> = {
   all: 'apps-outline',
@@ -43,6 +44,23 @@ export default function DuaScreen() {
   const duaOfTheDay = localizeDua(getDailyDua(), i18n.language);
   const [targetDuaForCard, setTargetDuaForCard] = useState<Dua>(duaOfTheDay);
   const shareCardRef = useRef<View>(null);
+
+  const today = new Date();
+  const formatHijriDate = () => {
+    const hDate = getHijriDate(today);
+    return `${hDate.day} ${t(`hijriMonths.${hDate.month}`, { defaultValue: hDate.monthName })} ${hDate.year}`;
+  };
+
+  const formatGregorianDate = () => {
+    if (!i18n.language.startsWith('tr')) {
+      try {
+        return today.toLocaleDateString(i18n.language, { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+      } catch {}
+    }
+    const days = ['Paz', 'Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt'];
+    const months = ['Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz', 'Tem', 'Ağu', 'Eyl', 'Eki', 'Kas', 'Ara'];
+    return `${today.getDate()} ${months[today.getMonth()]} ${today.getFullYear()}, ${days[today.getDay()]}`;
+  };
 
   const filteredDualar = (selectedCategory === 'all'
     ? dailyDuas
@@ -111,9 +129,17 @@ export default function DuaScreen() {
         <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
           {/* Günün Duası */}
           <View style={[styles.featuredCard, { backgroundColor: colors.surface }, Shadows.medium]}>
-            <View style={styles.featuredBadge}>
-              <Ionicons name="star" size={12} color="#052F1C" />
-              <Text style={styles.featuredBadgeText}>{t('dua.featuredBadge')}</Text>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+              <View style={styles.featuredBadge}>
+                <Ionicons name="star" size={12} color="#052F1C" />
+                <Text style={styles.featuredBadgeText}>{t('dua.featuredBadge')}</Text>
+              </View>
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+                <Ionicons name="calendar-outline" size={13} color={colors.textMuted} />
+                <Text style={{ fontSize: FontSize.xs, color: colors.textMuted, fontWeight: '500' }}>
+                  {formatGregorianDate()} · {formatHijriDate()}
+                </Text>
+              </View>
             </View>
             <Text style={[styles.duaTitle, { color: colors.text, marginTop: Spacing.sm }]}>
               {duaOfTheDay.title}

@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, useColorScheme } from 'react-native';
+import { View, Text, StyleSheet, useColorScheme, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows } from '@/constants/theme';
@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 interface PrayerTimesCardProps {
   prayerTimes: PrayerTimes;
+  onShare?: () => void;
 }
 
 // `name` is the prayerTimes.* i18n key.
@@ -19,7 +20,7 @@ const prayerNames: { [key: string]: { name: string; icon: string; iconFocused: s
   isha: { name: 'yatsi', icon: 'moon-outline', iconFocused: 'moon' },
 };
 
-export function PrayerTimesCard({ prayerTimes }: PrayerTimesCardProps) {
+export function PrayerTimesCard({ prayerTimes, onShare }: PrayerTimesCardProps) {
   const { t } = useTranslation();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
@@ -50,7 +51,14 @@ export function PrayerTimesCard({ prayerTimes }: PrayerTimesCardProps) {
           <View style={[styles.titleDot, { backgroundColor: colors.accent }]} />
           <Text style={[styles.title, { color: colors.text }]}>{t('home.dailyTimes')}</Text>
         </View>
-        <Ionicons name="calendar-outline" size={18} color={colors.textMuted} />
+        <View style={styles.headerRightActions}>
+          {onShare && (
+            <TouchableOpacity onPress={onShare} style={styles.shareBtn} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+              <Ionicons name="share-social-outline" size={18} color={colors.primary} />
+            </TouchableOpacity>
+          )}
+          <Ionicons name="calendar-outline" size={18} color={colors.textMuted} />
+        </View>
       </View>
       
       <View style={styles.rowsContainer}>
@@ -145,6 +153,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
+  },
+  headerRightActions: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  shareBtn: {
+    padding: 4,
   },
   titleDot: {
     width: 6,

@@ -18,7 +18,9 @@
     "dailyTimes": "일일 기도 시간",
     "nextBadge": "다음",
     "nextPrayer": "다음 기도",
-    "prayerSoon": "⏳ 기도 시간이 다가왔습니다"
+    "prayerSoon": "⏳ 기도 시간이 다가왔습니다",
+    "eidGreeting": "Eid Mubarak 🌙",
+    "kandilGreeting": "Blessed Holy Night ✨"
   },
   "prayerTimes": {
     "imsak": "파즈르",
@@ -59,7 +61,17 @@
     "completionShareMessage": "🎉 30주즈를 모두 읽고 쿠란 완독을 마쳤습니다! 알함둘릴라 📖🕌\n\n나의 {{count}}번째 완독입니다. 여러분도 함께 시작해보세요: {{playStore}}",
     "progressShareMessage": "📖 이번 주에 {{completed}}/30 주즈를 완료했습니다 ({{percentage}}%).\n\nEzan Vakti + Hatim으로 완독을 기록해보세요: {{playStore}}",
     "juzCountShort": "주즈",
-    "juzTaken": "다른 사용자가 이미 이 주즈를 선택했습니다. 다른 주즈를 선택해 주세요."
+    "juzTaken": "다른 사용자가 이미 이 주즈를 선택했습니다. 다른 주즈를 선택해 주세요.",
+    "fridayCardTitle": "Blessed Friday",
+    "fridayCardDesc": "Have a blessed Friday. Share blessings and warm greetings with your loved ones.",
+    "fridayShareBtn": "Share Friday Greetings",
+    "fridayShareMessage": "🕌 Blessed Friday! May your day be peaceful and your prayers accepted ✨\n\n📲 Download Ezan Vakti + Hatim for free:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
+    "eidCardTitle": "Eid Mubarak",
+    "eidCardDesc": "May this blessed Eid bring joy, peace, and prosperity to you and your family.",
+    "eidShareBtn": "Share Eid Greetings",
+    "kandilCardTitle": "Blessed Holy Night",
+    "kandilCardDesc": "May your prayers and worship be accepted on this sacred night.",
+    "kandilShareBtn": "Share Blessings"
   },
   "settings": {
     "title": "설정",

@@ -249,10 +249,10 @@ export const duaCategories = [
 ];
 
 export function getDailyDua(date: Date = new Date()): Dua {
-  const dayOfYear = Math.floor(
-    (date.getTime() - new Date(date.getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24)
-  );
-  const index = dayOfYear % dailyDuas.length;
+  const utcNow = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());
+  const utcStartOfYear = Date.UTC(date.getFullYear(), 0, 1);
+  const dayOfYear = Math.floor((utcNow - utcStartOfYear) / 86400000);
+  const index = Math.abs(dayOfYear) % dailyDuas.length;
   return dailyDuas[index];
 }
 
@@ -266,15 +266,15 @@ export function localizeDua(dua: Dua, language: string): Dua {
   const translation = duaTranslations[dua.id];
   if (lang === 'tr' || !translation) return dua;
   const base = baseLanguage(language);
-  const packed = contentPack(language)?.duas[dua.id];
-  const text = packed ?? translation[lang];
+  const packed = contentPack(language)?.duas?.[dua.id];
+  const text = packed ?? translation[lang] ?? translation['en'];
   return {
     ...dua,
-    title: text.title,
+    title: text?.title || dua.title,
     // Arabic readers already see the dua itself; a restatement would only repeat it.
-    turkish: base === 'ar' ? '' : text.meaning,
-    source: text.source,
-    transliteration: ARABIC_SCRIPT_LANGUAGES.has(base) ? '' : translation.latin,
+    turkish: base === 'ar' ? '' : (text?.meaning || dua.turkish),
+    source: text?.source || dua.source,
+    transliteration: ARABIC_SCRIPT_LANGUAGES.has(base) ? '' : (translation.latin || dua.transliteration),
   };
 }
 

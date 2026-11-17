@@ -18,7 +18,9 @@
     "dailyTimes": "GÜNDƏLİK NAMAZ VAQTLƏRİ",
     "nextBadge": "NÖVB.",
     "nextPrayer": "NÖVBƏTİ NAMAZ",
-    "prayerSoon": "⏳ NAMAZ VAXTI YAXINLAŞIR"
+    "prayerSoon": "⏳ NAMAZ VAXTI YAXINLAŞIR",
+    "eidGreeting": "Eid Mubarak 🌙",
+    "kandilGreeting": "Blessed Holy Night ✨"
   },
   "prayerTimes": {
     "imsak": "Sübh",
@@ -59,7 +61,17 @@
     "completionShareMessage": "🎉 30 cüzün hamısını oxuyub xətmimi bitirdim! Əlhəmdulillah 📖🕌\n\nBu mənim #{{count}} saylı xətmimdir. Siz də izləməyə başlayın: {{playStore}}",
     "progressShareMessage": "📖 Bu həftə {{completed}}/30 cüz tamamladım ({{percentage}}%).\n\nİrəliləyişinizi Ezan Vakti + Hatim ilə izləyin: {{playStore}}",
     "juzCountShort": "cüz",
-    "juzTaken": "Bu cüzü başqası götürdü. Zəhmət olmasa başqasını seçin."
+    "juzTaken": "Bu cüzü başqası götürdü. Zəhmət olmasa başqasını seçin.",
+    "fridayCardTitle": "Blessed Friday",
+    "fridayCardDesc": "Have a blessed Friday. Share blessings and warm greetings with your loved ones.",
+    "fridayShareBtn": "Share Friday Greetings",
+    "fridayShareMessage": "🕌 Blessed Friday! May your day be peaceful and your prayers accepted ✨\n\n📲 Download Ezan Vakti + Hatim for free:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
+    "eidCardTitle": "Eid Mubarak",
+    "eidCardDesc": "May this blessed Eid bring joy, peace, and prosperity to you and your family.",
+    "eidShareBtn": "Share Eid Greetings",
+    "kandilCardTitle": "Blessed Holy Night",
+    "kandilCardDesc": "May your prayers and worship be accepted on this sacred night.",
+    "kandilShareBtn": "Share Blessings"
   },
   "settings": {
     "title": "Parametrlər",

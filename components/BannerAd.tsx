@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Platform, useWindowDimensions } from 'react-native';
-import { BannerAd as AdMobBanner, BannerAdSize } from 'react-native-google-mobile-ads';
+import { BannerAd as AdMobBanner, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 
 // Official Live AdMob Banner IDs directly from .env with fallback to real registered unit ID
-const BANNER_AD_UNIT_ID = Platform.select({
+const LIVE_BANNER_AD_UNIT_ID = Platform.select({
   android:
     process.env.EXPO_PUBLIC_ADMOB_BANNER_ID_ANDROID ||
     'ca-app-pub-4674211063760769/3925185177',
@@ -15,6 +15,9 @@ const BANNER_AD_UNIT_ID = Platform.select({
     'ca-app-pub-4674211063760769/3925185177',
 });
 
+// Always use TestIds in development to comply with Google AdMob policy and ensure banner visibility during testing
+export const BANNER_AD_UNIT_ID = __DEV__ ? TestIds.BANNER : LIVE_BANNER_AD_UNIT_ID;
+
 interface BannerAdProps {
   size?: BannerAdSize;
 }
@@ -23,11 +26,22 @@ export const BannerAd: React.FC<BannerAdProps> = ({
   size = BannerAdSize.ANCHORED_ADAPTIVE_BANNER,
 }) => {
   const { width } = useWindowDimensions();
-  const [hasError, setHasError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [reloadKey, setReloadKey] = useState(0);
 
-  // Silent fail: If ad encounters an error or no unit ID is present, render nothing
-  if (hasError || !BANNER_AD_UNIT_ID) {
+  // If ad encounters a transient error or no-fill, retry gracefully after 30s instead of permanently hiding
+  const handleAdFailedToLoad = (error: any) => {
+    if (__DEV__) {
+      console.log('[AdMob Banner Load Error]:', error);
+    }
+    setIsLoaded(false);
+    const timer = setTimeout(() => {
+      setReloadKey((k) => k + 1);
+    }, 30000);
+    return () => clearTimeout(timer);
+  };
+
+  if (!BANNER_AD_UNIT_ID || width === 0) {
     return null;
   }
 
@@ -38,21 +52,23 @@ export const BannerAd: React.FC<BannerAdProps> = ({
         {
           maxWidth: width,
           overflow: 'hidden',
-          display: isLoaded ? 'flex' : 'none',
+          opacity: isLoaded ? 1 : 0,
+          height: isLoaded ? undefined : 0,
         },
       ]}
     >
       <AdMobBanner
+        key={reloadKey}
         unitId={BANNER_AD_UNIT_ID}
         size={size}
         requestOptions={{
           requestNonPersonalizedAdsOnly: false,
         }}
-        onAdFailedToLoad={(_error) => {
-          // Silent Fail: suppress error and hide container completely
-          setHasError(true);
-        }}
+        onAdFailedToLoad={handleAdFailedToLoad}
         onAdLoaded={() => {
+          if (__DEV__) {
+            console.log('[AdMob Banner Loaded Successfully]');
+          }
           setIsLoaded(true);
         }}
       />

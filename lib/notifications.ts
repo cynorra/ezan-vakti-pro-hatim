@@ -40,26 +40,37 @@ async function getEnabledPrayerNames(): Promise<Record<string, boolean> | null> 
   }
 }
 
-// SettingsModal, seçilen ezan sesini burada AsyncStorage'a yazıyor ama şimdiye kadar
-// hiçbir yerde okunmuyordu. Gerçek ses dosyaları henüz eklenmedi (bkz.
-// assets/sounds/README.md) — o yüzden bu eşleme bilerek KAPALI tutuluyor
-// (SOUND_FILES_READY = false) ve normal/varsayılan bildirim sesi korunuyor.
-// Dosyalar assets/sounds/'a eklenip app.json'daki expo-notifications sounds
-// dizisine girilip yeniden build alındığında SOUND_FILES_READY'yi true yapın.
-const SOUND_FILES_READY = false;
-const EZAN_SOUND_KEY = 'ezan_sound';
-const EZAN_SOUND_TO_FILE: Record<string, string> = {
-  'İstanbul Ezanı': 'ezan_istanbul.mp3',
-  'Mekke Ezanı': 'ezan_mekke.mp3',
-  'Medine Ezanı': 'ezan_medine.mp3',
-  'Mısır Ezanı': 'ezan_misir.mp3',
+// Ezan ses dosyaları assets/sounds/ ve android/app/src/main/res/raw/ içerisine eklenmiştir.
+export const SOUND_FILES_READY = true;
+export const EZAN_SOUND_KEY = 'ezan_sound';
+export const DEFAULT_EZAN_SOUND = 'İstanbul Ezanı';
+
+export interface EzanChannelConfig {
+  id: string;
+  name: string;
+  sound: string;
+}
+
+export const EZAN_CHANNELS: Record<string, EzanChannelConfig> = {
+  'İstanbul Ezanı': { id: 'ezan-istanbul', name: 'İstanbul Ezanı', sound: 'ezan_istanbul.mp3' },
+  'Mekke Ezanı': { id: 'ezan-mekke', name: 'Mekke Ezanı', sound: 'ezan_mekke.mp3' },
+  'Medine Ezanı': { id: 'ezan-medine', name: 'Medine Ezanı', sound: 'ezan_medine.mp3' },
+  'Mısır Ezanı': { id: 'ezan-misir', name: 'Mısır Ezanı', sound: 'ezan_misir.mp3' },
 };
 
-async function getPrayerNotificationSound(): Promise<string | true> {
-  if (!SOUND_FILES_READY || Platform.OS !== 'android') return true;
+export async function getSelectedEzanSound(): Promise<string> {
   try {
     const selected = await AsyncStorage.getItem(EZAN_SOUND_KEY);
-    return (selected && EZAN_SOUND_TO_FILE[selected]) || true;
+    return (selected && EZAN_CHANNELS[selected]) ? selected : DEFAULT_EZAN_SOUND;
+  } catch {
+    return DEFAULT_EZAN_SOUND;
+  }
+}
+
+export async function getPrayerNotificationSound(): Promise<string | true> {
+  try {
+    const selected = await getSelectedEzanSound();
+    return EZAN_CHANNELS[selected]?.sound || true;
   } catch {
     return true;
   }
@@ -91,12 +102,50 @@ Notifications.setNotificationHandler({
 
 export async function configureNotificationChannel() {
   if (Platform.OS !== 'android') return;
+
+  // Standart bildirim kanalı (hatırlatıcılar, dualar, ayetler için)
   await Notifications.setNotificationChannelAsync('default', {
-    name: 'Ezan Vakti + Hatim',
+    name: 'Ezan Vakti + Hatim (Genel)',
     importance: Notifications.AndroidImportance.HIGH,
     vibrationPattern: [0, 200, 100, 200],
     lightColor: '#D4AF37',
     sound: 'default',
+  });
+
+  // Ezan seslerine özel yüksek öncelikli bildirim kanalları
+  for (const config of Object.values(EZAN_CHANNELS)) {
+    try {
+      await Notifications.setNotificationChannelAsync(config.id, {
+        name: `Ezan Vakti (${config.name})`,
+        importance: Notifications.AndroidImportance.MAX,
+        vibrationPattern: [0, 500, 250, 500],
+        lightColor: '#0d7a3e',
+        sound: config.sound,
+        bypassDnd: false,
+        lockscreenVisibility: Notifications.AndroidNotificationVisibility.PUBLIC,
+      });
+    } catch (err) {
+      console.warn(`[notifications] failed to create channel ${config.id}:`, err);
+    }
+  }
+}
+
+/** Kullanıcının Ayarlar modalından ezan sesini anında test etmesi için bildirim çalar */
+export async function playTestEzanSound(soundName?: string) {
+  if (Platform.OS === 'web') return;
+  const soundKey = soundName || (await getSelectedEzanSound());
+  const channelConfig = EZAN_CHANNELS[soundKey] || EZAN_CHANNELS[DEFAULT_EZAN_SOUND];
+
+  await safeSchedule({
+    identifier: `test-ezan-${Date.now()}`,
+    content: {
+      title: `🕌 ${channelConfig.name} Test Ediliyor`,
+      body: 'Ezan vakti geldiğinde ezan bu sesle okunacaktır.',
+      channelId: channelConfig.id,
+      sound: channelConfig.sound,
+      data: { screen: 'home' },
+    } as any,
+    trigger: null,
   });
 }
 
@@ -188,12 +237,17 @@ async function schedulePrayerNotification(
   at: Date,
   city: string,
   reminderMins: number,
-  sound: string | true
+  sound: string | true,
+  selectedEzanName?: string
 ) {
   const i18nKey = PRAYER_NAME_TO_I18N_KEY[prayerName];
   const displayName = i18nKey ? i18n.t(`prayerTimes.${i18nKey}`) : prayerName;
   const dayKey = `${at.getFullYear()}-${at.getMonth() + 1}-${at.getDate()}`;
   const now = Date.now();
+
+  const isEzanPrayer = ['İmsak', 'Öğle', 'İkindi', 'Akşam', 'Yatsı'].includes(prayerName);
+  const activeEzan = selectedEzanName || (await getSelectedEzanSound());
+  const ezanConfig = isEzanPrayer ? EZAN_CHANNELS[activeEzan] : null;
 
   if (at.getTime() > now) {
     await safeSchedule({
@@ -201,9 +255,10 @@ async function schedulePrayerNotification(
       content: {
         title: i18n.t('notifications.prayerTitle', { prayer: displayName }),
         body: i18n.t('notifications.prayerBody', { prayer: displayName, city }),
-        sound,
+        sound: ezanConfig ? ezanConfig.sound : sound,
+        channelId: ezanConfig ? ezanConfig.id : 'default',
         data: { screen: 'home', prayerName, city },
-      },
+      } as any,
       trigger: { type: Notifications.SchedulableTriggerInputTypes.DATE, date: at },
     });
   }
@@ -215,9 +270,10 @@ async function schedulePrayerNotification(
       content: {
         title: i18n.t('notifications.prayerPreReminderTitle', { prayer: displayName, minutes: reminderMins }),
         body: i18n.t('notifications.prayerPreReminderBody', { prayer: displayName, city, minutes: reminderMins }),
-        sound: true,
+        sound: 'default',
+        channelId: 'default',
         data: { screen: 'home', prayerName, city },
-      },
+      } as any,
       trigger: { type: Notifications.SchedulableTriggerInputTypes.DATE, date: reminderAt },
     });
   }
@@ -430,6 +486,7 @@ export async function scheduleAllPrayers(
 
   const enabledPrayers = await getEnabledPrayerNames();
   const reminderMins = await getReminderMinutes();
+  const selectedEzan = await getSelectedEzanSound();
   const sound = await getPrayerNotificationSound();
   const today = new Date();
 
@@ -448,7 +505,7 @@ export async function scheduleAllPrayers(
       const settingsKey = PRAYER_NAME_TO_SETTINGS_KEY[prayer.name];
       const isEnabled = !enabledPrayers || enabledPrayers[settingsKey] !== false;
       const at = prayerDate(day, prayer.time, timezone);
-      if (isEnabled && at) await schedulePrayerNotification(prayer.name, at, city, reminderMins, sound);
+      if (isEnabled && at) await schedulePrayerNotification(prayer.name, at, city, reminderMins, sound, selectedEzan);
     }
   }
 

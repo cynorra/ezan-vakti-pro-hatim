@@ -1,8 +1,9 @@
-import { View, Text, StyleSheet, useColorScheme } from 'react-native';
+import { View, Text, StyleSheet, useColorScheme, TouchableOpacity, Share } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows } from '@/constants/theme';
-import { getUpcomingReligiousDays } from '@/lib/data/religious-days';
+import { getUpcomingReligiousDays, ReligiousDay } from '@/lib/data/religious-days';
+import { PLAY_STORE_URL } from '@/lib/share';
 
 export function ReligiousDaysCard() {
   const { t, i18n } = useTranslation();
@@ -12,6 +13,14 @@ export function ReligiousDaysCard() {
   const upcomingDays = getUpcomingReligiousDays(i18n.language);
 
   if (upcomingDays.length === 0) return null;
+
+  const handleShareDay = async (day: ReligiousDay, name: string, dateFormatted: string) => {
+    try {
+      await Share.share({
+        message: `📅 ${name} (${dateFormatted})\n\n🌙 Dini gün ve kandil takvimi, namaz vakitleri ve ortak hatim için Ezan Vakti Pro+ uygulamasını ücretsiz indirin:\n${PLAY_STORE_URL}`,
+      });
+    } catch {}
+  };
 
   return (
     <View style={[styles.container, { backgroundColor: colors.surface }, Shadows.medium]}>
@@ -64,7 +73,13 @@ export function ReligiousDaysCard() {
                 </View>
               </View>
 
-              <Ionicons name="chevron-forward" size={16} color={colors.border} />
+              <TouchableOpacity
+                onPress={() => handleShareDay(day, name, `${dayStr} ${monthStr} ${year}`)}
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+                style={{ padding: 4 }}
+              >
+                <Ionicons name="share-social-outline" size={18} color={colors.primary} />
+              </TouchableOpacity>
             </View>
           );
         })}

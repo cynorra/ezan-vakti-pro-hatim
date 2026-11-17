@@ -22,6 +22,15 @@ import { calculatePrayerTimes, PrayerTimes } from '@/lib/prayer-times';
 import { logEvent } from '@/lib/analytics';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
+  formatPrayerTimesShareMessage,
+  formatWisdomShareMessage,
+  formatEsmaShareMessage,
+  formatAppInviteMessage,
+  formatDailyDuaShareMessage,
+  formatEidShareMessage,
+  formatKandilShareMessage,
+} from '@/lib/share';
+import {
   DEFAULT_LOCATION,
   SavedLocation,
   MethodSetting,
@@ -53,6 +62,7 @@ import { NextPrayerCountdown } from '@/components/NextPrayerCountdown';
 import { RamadanCountdown } from '@/components/RamadanCountdown';
 import { PrayerTimesCard } from '@/components/PrayerTimesCard';
 import { ReligiousDaysCard } from '@/components/ReligiousDaysCard';
+import { getTodayReligiousDay } from '@/lib/data/religious-days';
 import { SEOHead } from '@/components/SEOHead';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { getRandomEsma, localizeEsma, Esma } from '@/lib/data/esma';
@@ -244,15 +254,127 @@ export default function HomeScreen() {
   }, [loadPrayerTimes]);
 
   const isFriday = currentDate.getDay() === 5;
+  const todayReligiousDay = getTodayReligiousDay(i18n.language, currentDate);
 
   const handleShareFridayGreeting = async () => {
     safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    logEvent('friday_greeting_shared');
     try {
       await Share.share({
         message: t('hatim.fridayShareMessage'),
       });
     } catch (error) {
       console.log('Friday share error:', error);
+    }
+  };
+
+  const handleShareReligiousDayGreeting = async () => {
+    if (!todayReligiousDay) return;
+    safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    logEvent('religious_day_shared', { key: todayReligiousDay.key, type: todayReligiousDay.type });
+    const dayName = t(`religiousDays.names.${todayReligiousDay.key}`, { day: todayReligiousDay.day });
+    try {
+      await Share.share({
+        message: todayReligiousDay.type === 'eid'
+          ? formatEidShareMessage(dayName, t)
+          : formatKandilShareMessage(dayName, t),
+      });
+    } catch (error) {
+      console.log('Religious day share error:', error);
+    }
+  };
+
+  const handleShareDailyDua = async () => {
+    safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    logEvent('daily_dua_shared');
+    try {
+      await Share.share({
+        message: formatDailyDuaShareMessage(
+          dailyDua,
+          formatGregorianDate(),
+          formatHijriDate(),
+          t
+        ),
+      });
+    } catch (error) {
+      console.log('Daily dua share error:', error);
+    }
+  };
+
+  const handleSharePrayerTimes = async () => {
+    if (!prayerTimes) return;
+    safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    logEvent('prayer_times_shared', { city: selectedCity.name });
+    try {
+      await Share.share({
+        message: formatPrayerTimesShareMessage(selectedCity.name, selectedDistrict, prayerTimes, formatGregorianDate(), t),
+      });
+    } catch (error) {
+      console.log('Prayer times share error:', error);
+    }
+  };
+
+  const handleShareWisdom = async () => {
+    safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    logEvent('wisdom_shared', { type: dailyWisdom.type });
+    try {
+      await Share.share({
+        message: formatWisdomShareMessage({
+          type: dailyWisdom.type,
+          content: dailyWisdom.content,
+          source: dailyWisdom.source,
+          arabic: dailyWisdom.arabic,
+        }, t),
+      });
+    } catch (error) {
+      console.log('Wisdom share error:', error);
+    }
+  };
+
+  const handleShareHadith = async () => {
+    if (!dailyHadith) return;
+    safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    logEvent('hadith_shared');
+    try {
+      await Share.share({
+        message: formatWisdomShareMessage({
+          type: 'hadith',
+          content: dailyHadith.text,
+          source: dailyHadith.source,
+        }, t),
+      });
+    } catch (error) {
+      console.log('Hadith share error:', error);
+    }
+  };
+
+  const handleShareEsma = async () => {
+    if (!dailyEsma) return;
+    safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    logEvent('esma_shared');
+    const localized = localizeEsma(dailyEsma, i18n.language);
+    try {
+      await Share.share({
+        message: formatEsmaShareMessage({
+          arabic: dailyEsma.arabic,
+          turkish: localized.turkish,
+          meaning: localized.meaning,
+        }, t),
+      });
+    } catch (error) {
+      console.log('Esma share error:', error);
+    }
+  };
+
+  const handleInviteApp = async () => {
+    safeHaptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    logEvent('app_invite_shared');
+    try {
+      await Share.share({
+        message: formatAppInviteMessage(t),
+      });
+    } catch (error) {
+      console.log('Invite share error:', error);
     }
   };
 
@@ -379,7 +501,7 @@ export default function HomeScreen() {
         {prayerTimes && <NextPrayerCountdown prayerTimes={prayerTimes} />}
 
         {/* Prayer Times Card */}
-        {prayerTimes && <PrayerTimesCard prayerTimes={prayerTimes} />}
+        {prayerTimes && <PrayerTimesCard prayerTimes={prayerTimes} onShare={handleSharePrayerTimes} />}
 
         {/* Hızlı Erişim */}
         <View style={styles.quickAccessRow}>
@@ -408,6 +530,40 @@ export default function HomeScreen() {
 
         {/* Religious Days Card */}
         <ReligiousDaysCard />
+
+        {/* Eid / Kandil Special Festive Banner */}
+        {todayReligiousDay && (todayReligiousDay.type === 'eid' || todayReligiousDay.type === 'kandil') && (
+          <LinearGradient
+            colors={todayReligiousDay.type === 'eid' ? ['#855A00', '#B8860B', '#3E2A00'] : ['#064e2b', '#0A5C36', '#032516']}
+            style={[styles.fridayCard, Shadows.premium]}
+          >
+            <View style={styles.fridayHeaderRow}>
+              <View style={[styles.fridayBadge, todayReligiousDay.type === 'eid' && { backgroundColor: '#FFF3CD' }]}>
+                <Ionicons name="sparkles" size={12} color={todayReligiousDay.type === 'eid' ? '#855A00' : '#052F1C'} />
+                <Text style={[styles.fridayBadgeText, todayReligiousDay.type === 'eid' && { color: '#855A00' }]}>
+                  {t(todayReligiousDay.type === 'eid' ? 'hatim.eidCardTitle' : 'hatim.kandilCardTitle').toUpperCase()}
+                </Text>
+              </View>
+              <Ionicons name={todayReligiousDay.type === 'eid' ? 'moon' : 'star'} size={18} color="#FFD700" />
+            </View>
+            <Text style={styles.fridayTitle}>
+              {t(`religiousDays.names.${todayReligiousDay.key}`, { day: todayReligiousDay.day })}
+            </Text>
+            <Text style={styles.fridayDesc}>
+              {t(todayReligiousDay.type === 'eid' ? 'hatim.eidCardDesc' : 'hatim.kandilCardDesc')}
+            </Text>
+            <TouchableOpacity
+              activeOpacity={0.85}
+              onPress={handleShareReligiousDayGreeting}
+              style={[styles.fridayShareBtn, todayReligiousDay.type === 'eid' && { backgroundColor: '#FFF3CD' }]}
+            >
+              <Ionicons name="logo-whatsapp" size={18} color={todayReligiousDay.type === 'eid' ? '#855A00' : '#052F1C'} />
+              <Text style={[styles.fridayShareBtnText, todayReligiousDay.type === 'eid' && { color: '#855A00' }]}>
+                {t(todayReligiousDay.type === 'eid' ? 'hatim.eidShareBtn' : 'hatim.kandilShareBtn')}
+              </Text>
+            </TouchableOpacity>
+          </LinearGradient>
+        )}
 
         {/* Friday Special Card */}
         {isFriday && (
@@ -448,6 +604,10 @@ export default function HomeScreen() {
             <Text style={[styles.cardTitle, { color: colors.primary }]}>
               {dailyWisdom.type === 'verse' ? t('home.verseOfTheDay') : t('home.hadithOfTheDay')}
             </Text>
+            <View style={{ flex: 1 }} />
+            <TouchableOpacity onPress={handleShareWisdom} style={styles.cardShareBtn} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+              <Ionicons name="share-social-outline" size={18} color={colors.primary} />
+            </TouchableOpacity>
           </View>
           
           <View style={styles.wisdomBody}>
@@ -473,6 +633,10 @@ export default function HomeScreen() {
                 <Ionicons name="chatbubble-ellipses" size={20} color={colors.primary} />
               </View>
               <Text style={[styles.cardTitle, { color: colors.primary }]}>{t('home.hadithOfTheDay')}</Text>
+              <View style={{ flex: 1 }} />
+              <TouchableOpacity onPress={handleShareHadith} style={styles.cardShareBtn} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+                <Ionicons name="share-social-outline" size={18} color={colors.primary} />
+              </TouchableOpacity>
             </View>
             <View style={styles.wisdomBody}>
               <Text style={[styles.wisdomContent, { color: colors.text }]}>{dailyHadith.text}</Text>
@@ -496,12 +660,27 @@ export default function HomeScreen() {
             <View style={[styles.cardIconWrapper, { backgroundColor: colors.accent + '20' }]}>
               <Ionicons name="hand-left" size={20} color={colors.accent} />
             </View>
-            <Text style={[styles.cardTitle, { color: colors.primary }]}>{t('home.duaOfTheDay')}</Text>
-            <View style={{ flex: 1 }} />
-            <Ionicons name="chevron-forward" size={18} color={colors.textMuted} />
+            <View style={{ flex: 1, marginLeft: 10 }}>
+              <Text style={[styles.cardTitle, { color: colors.primary }]}>{t('home.duaOfTheDay')}</Text>
+              <Text style={{ fontSize: FontSize.xs, color: colors.textMuted, marginTop: 2, fontWeight: '500' }}>
+                📅 {formatGregorianDate()} · {formatHijriDate()}
+              </Text>
+            </View>
+            <TouchableOpacity
+              onPress={handleShareDailyDua}
+              style={styles.cardShareBtn}
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+            >
+              <Ionicons name="share-social-outline" size={18} color={colors.primary} />
+            </TouchableOpacity>
           </View>
 
           <View style={styles.wisdomBody}>
+            {dailyDua.title ? (
+              <Text style={{ fontSize: FontSize.md, fontWeight: '700', color: colors.text, marginBottom: 6 }}>
+                {dailyDua.title}
+              </Text>
+            ) : null}
             <Text style={[styles.arabicText, { color: colors.primary }]}>
               {dailyDua.arabic}
             </Text>
@@ -527,8 +706,13 @@ export default function HomeScreen() {
               colors={[colors.primary + '05', colors.secondary + '10']}
               style={styles.esmaContainer}
             >
-              <View style={styles.esmaBadge}>
-                <Text style={[styles.esmaBadgeText, { color: colors.accent }]}>{t('home.esmaOfTheDay') ? t('home.esmaOfTheDay').toUpperCase() : 'GÜNÜN ESMASI'}</Text>
+              <View style={styles.esmaTopRow}>
+                <View style={styles.esmaBadge}>
+                  <Text style={[styles.esmaBadgeText, { color: colors.accent }]}>{t('home.esmaOfTheDay') ? t('home.esmaOfTheDay').toUpperCase() : 'GÜNÜN ESMASI'}</Text>
+                </View>
+                <TouchableOpacity onPress={handleShareEsma} style={styles.cardShareBtn} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+                  <Ionicons name="share-social-outline" size={18} color={colors.primary} />
+                </TouchableOpacity>
               </View>
               <Text style={[styles.esmaArabic, { color: colors.primary }]}>{dailyEsma.arabic}</Text>
               <Text style={[styles.esmaTurkish, { color: colors.text }]}>{localizeEsma(dailyEsma, i18n.language).turkish}</Text>
@@ -541,6 +725,32 @@ export default function HomeScreen() {
 
         {/* Daily Checklist */}
         <DailyChecklist />
+
+        {/* Hayra Vesile Ol / Uygulamayı Paylaş Kartı */}
+        <LinearGradient
+          colors={['#064e2b', '#0A5C36', '#032516']}
+          style={[styles.inviteCard, Shadows.premium]}
+        >
+          <View style={styles.inviteHeaderRow}>
+            <View style={styles.inviteBadge}>
+              <Ionicons name="sparkles" size={12} color="#052F1C" />
+              <Text style={styles.inviteBadgeText}>HAYRA VESİLE OL</Text>
+            </View>
+            <Ionicons name="heart" size={20} color="#D4AF37" />
+          </View>
+          <Text style={styles.inviteTitle}>Ezan Vakti'ni Sevdiklerinizle Paylaşın</Text>
+          <Text style={styles.inviteDesc}>
+            "Kim hayırlı bir işe vesile olursa, ona o hayrı yapan kadar ecir verilir." Sevdiklerinizin namazlarını ve hatimlerini takip etmelerine vesile olun.
+          </Text>
+          <TouchableOpacity
+            activeOpacity={0.85}
+            onPress={handleInviteApp}
+            style={styles.inviteShareBtn}
+          >
+            <Ionicons name="logo-whatsapp" size={18} color="#052F1C" />
+            <Text style={styles.inviteShareBtnText}>WhatsApp & Gruplarda Tavsiye Et</Text>
+          </TouchableOpacity>
+        </LinearGradient>
       </View>
 
       <View style={{ height: 100 }} />
@@ -819,6 +1029,73 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   fridayShareBtnText: {
+    color: '#052F1C',
+    fontSize: 13,
+    fontWeight: '800',
+    letterSpacing: 0.5,
+  },
+  cardShareBtn: {
+    padding: 6,
+    borderRadius: BorderRadius.full,
+  },
+  esmaTopRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    marginBottom: Spacing.md,
+  },
+  inviteCard: {
+    padding: Spacing.lg,
+    borderRadius: BorderRadius.xl,
+    borderWidth: 1.5,
+    borderColor: '#D4AF37',
+    marginTop: Spacing.md,
+  },
+  inviteHeaderRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: Spacing.sm,
+  },
+  inviteBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#D4AF37',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: BorderRadius.full,
+    gap: 4,
+  },
+  inviteBadgeText: {
+    color: '#052F1C',
+    fontSize: 10,
+    fontWeight: '900',
+    letterSpacing: 1,
+  },
+  inviteTitle: {
+    color: '#ffffff',
+    fontSize: 17,
+    fontWeight: '800',
+    marginBottom: 6,
+  },
+  inviteDesc: {
+    color: 'rgba(255,255,255,0.85)',
+    fontSize: 12.5,
+    lineHeight: 18,
+    marginBottom: Spacing.md,
+  },
+  inviteShareBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#D4AF37',
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    borderRadius: BorderRadius.lg,
+    gap: 8,
+  },
+  inviteShareBtnText: {
     color: '#052F1C',
     fontSize: 13,
     fontWeight: '800',

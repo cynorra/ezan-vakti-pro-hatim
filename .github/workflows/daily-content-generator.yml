@@ -38,5 +38,6 @@ jobs:
             echo "Icerik degismedi, commit gerekmiyor."
           else
             git commit -m "chore(content): gunluk AI dua ve sifa ayeti beslemesi guncellendi [skip ci]"
+            git pull --rebase origin main || true
             git push origin main
           fi

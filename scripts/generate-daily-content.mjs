@@ -176,7 +176,13 @@ async function askGemini(prompt, isValid, label) {
     return null;
   }
   if (!modelCandidates) {
-    const preferred = ['gemini-flash-latest', 'gemini-flash-lite-latest', 'gemini-3.6-flash', 'gemini-3.5-flash-lite'];
+    const preferred = [
+      'gemini-2.5-flash',
+      'gemini-2.0-flash',
+      'gemini-1.5-flash',
+      'gemini-flash-latest',
+      'gemini-flash-lite-latest',
+    ];
     modelCandidates = Array.from(new Set([...preferred, ...(await getAvailableGeminiModels())])).slice(0, 8);
   }
   for (const model of modelCandidates) {

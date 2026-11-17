@@ -18,7 +18,9 @@
     "dailyTimes": "HORÁRIOS DE ORAÇÃO DIÁRIOS",
     "nextBadge": "PRÓX.",
     "nextPrayer": "PRÓXIMA ORAÇÃO",
-    "prayerSoon": "⏳ HORA DA ORAÇÃO PRÓXIMA"
+    "prayerSoon": "⏳ HORA DA ORAÇÃO PRÓXIMA",
+    "eidGreeting": "Eid Mubarak 🌙",
+    "kandilGreeting": "Blessed Holy Night ✨"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -59,7 +61,17 @@
     "completionShareMessage": "🎉 Completei todos os 30 juzes, terminei meu khatm! Alhamdulillah 📖🕌\n\nEste é meu khatm nº {{count}}. Comece a acompanhar o seu também: {{playStore}}",
     "progressShareMessage": "📖 Completei {{completed}}/30 juzes esta semana ({{percentage}}%).\n\nAcompanhe o seu com Ezan Vakti + Hatim: {{playStore}}",
     "juzCountShort": "juz",
-    "juzTaken": "Alguém acabou de pegar este juz. Por favor, escolha outro."
+    "juzTaken": "Alguém acabou de pegar este juz. Por favor, escolha outro.",
+    "fridayCardTitle": "Blessed Friday",
+    "fridayCardDesc": "Have a blessed Friday. Share blessings and warm greetings with your loved ones.",
+    "fridayShareBtn": "Share Friday Greetings",
+    "fridayShareMessage": "🕌 Blessed Friday! May your day be peaceful and your prayers accepted ✨\n\n📲 Download Ezan Vakti + Hatim for free:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
+    "eidCardTitle": "Eid Mubarak",
+    "eidCardDesc": "May this blessed Eid bring joy, peace, and prosperity to you and your family.",
+    "eidShareBtn": "Share Eid Greetings",
+    "kandilCardTitle": "Blessed Holy Night",
+    "kandilCardDesc": "May your prayers and worship be accepted on this sacred night.",
+    "kandilShareBtn": "Share Blessings"
   },
   "settings": {
     "title": "Configurações",

@@ -18,7 +18,9 @@
     "dailyTimes": "HORAIRES DES PRIÈRES QUOTIDIENNES",
     "nextBadge": "SUIV.",
     "nextPrayer": "PROCHAINE PRIÈRE",
-    "prayerSoon": "⏳ L'HEURE DE LA PRIÈRE PROCHE"
+    "prayerSoon": "⏳ L'HEURE DE LA PRIÈRE PROCHE",
+    "eidGreeting": "Aïd Moubarak 🌙",
+    "kandilGreeting": "Nuit Bénie ✨"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -59,7 +61,17 @@
     "completionShareMessage": "🎉 J'ai terminé les 30 juz, mon khatm est accompli ! Alhamdulillah 📖🕌\n\nC'est mon khatm n°{{count}}. Commencez à suivre le vôtre aussi : {{playStore}}",
     "progressShareMessage": "📖 J'ai terminé {{completed}}/30 juz cette semaine ({{percentage}}%).\n\nSuivez le vôtre avec Ezan Vakti + Hatim : {{playStore}}",
     "juzCountShort": "juz",
-    "juzTaken": "Quelqu'un vient de prendre ce juz. Veuillez en choisir un autre."
+    "juzTaken": "Quelqu'un vient de prendre ce juz. Veuillez en choisir un autre.",
+    "fridayCardTitle": "Vendredi Béni",
+    "fridayCardDesc": "Passez un vendredi béni. Partagez des vœux chaleureux avec vos proches.",
+    "fridayShareBtn": "Partager les vœux du Vendredi",
+    "fridayShareMessage": "🕌 Vendredi béni ! Que la paix soit sur vous et que vos prières soient exaucées ✨\n\n📲 Téléchargez l'application Horaires de Prière & Hatim gratuitement :\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
+    "eidCardTitle": "Aïd Moubarak",
+    "eidCardDesc": "Que cette fête bénie vous apporte joie, paix et santé à vous et à vos proches.",
+    "eidShareBtn": "Partager les vœux de l'Aïd",
+    "kandilCardTitle": "Nuit Bénie",
+    "kandilCardDesc": "Que vos prières et invocations soient acceptées en cette nuit sacrée.",
+    "kandilShareBtn": "Partager les bénédictions"
   },
   "settings": {
     "title": "Paramètres",

@@ -4,13 +4,14 @@ import mobileAds, {
   MaxAdContentRating,
   InterstitialAd,
   AdEventType,
+  TestIds,
 } from 'react-native-google-mobile-ads';
 
 /**
- * Official Live AdMob Interstitial ID directly from .env with fallback to live registered ID
- * NOTE: Never uses TestIds under any circumstances.
+ * Official Live AdMob Interstitial ID directly from .env with fallback to live registered ID.
+ * In development, TestIds.INTERSTITIAL is used to ensure reliable testing and prevent AdMob policy violations.
  */
-export const INTERSTITIAL_AD_UNIT_ID = Platform.select({
+const LIVE_INTERSTITIAL_AD_UNIT_ID = Platform.select({
   android:
     process.env.EXPO_PUBLIC_ADMOB_INTERSTITIAL_ID_ANDROID ||
     'ca-app-pub-4674211063760769/3925185177',
@@ -21,6 +22,8 @@ export const INTERSTITIAL_AD_UNIT_ID = Platform.select({
     process.env.EXPO_PUBLIC_ADMOB_INTERSTITIAL_ID_ANDROID ||
     'ca-app-pub-4674211063760769/3925185177',
 });
+
+export const INTERSTITIAL_AD_UNIT_ID = __DEV__ ? TestIds.INTERSTITIAL : LIVE_INTERSTITIAL_AD_UNIT_ID;
 
 let interstitialInstance: InterstitialAd | null = null;
 let isInterstitialLoaded = false;

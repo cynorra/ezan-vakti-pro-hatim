@@ -18,7 +18,9 @@
     "dailyTimes": "DAGELIJKSE GEBEDSTIJDEN",
     "nextBadge": "VOLG.",
     "nextPrayer": "VOLGENDE GEBED",
-    "prayerSoon": "⏳ GEBEDSTIJD IS NABIJ"
+    "prayerSoon": "⏳ GEBEDSTIJD IS NABIJ",
+    "eidGreeting": "Eid Mubarak 🌙",
+    "kandilGreeting": "Blessed Holy Night ✨"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -59,7 +61,17 @@
     "completionShareMessage": "🎉 Ik heb alle 30 juz voltooid, mijn khatm is af! Alhamdulillah 📖🕌\n\nDit is mijn khatm #{{count}}. Begin ook met het bijhouden van de jouwe: {{playStore}}",
     "progressShareMessage": "📖 Ik heb deze week {{completed}}/30 juz voltooid ({{percentage}}%).\n\nHoud de jouwe bij met Ezan Vakti + Hatim: {{playStore}}",
     "juzCountShort": "juz",
-    "juzTaken": "Iemand anders heeft deze juz zojuist genomen. Kies een andere."
+    "juzTaken": "Iemand anders heeft deze juz zojuist genomen. Kies een andere.",
+    "fridayCardTitle": "Blessed Friday",
+    "fridayCardDesc": "Have a blessed Friday. Share blessings and warm greetings with your loved ones.",
+    "fridayShareBtn": "Share Friday Greetings",
+    "fridayShareMessage": "🕌 Blessed Friday! May your day be peaceful and your prayers accepted ✨\n\n📲 Download Ezan Vakti + Hatim for free:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
+    "eidCardTitle": "Eid Mubarak",
+    "eidCardDesc": "May this blessed Eid bring joy, peace, and prosperity to you and your family.",
+    "eidShareBtn": "Share Eid Greetings",
+    "kandilCardTitle": "Blessed Holy Night",
+    "kandilCardDesc": "May your prayers and worship be accepted on this sacred night.",
+    "kandilShareBtn": "Share Blessings"
   },
   "settings": {
     "title": "Instellingen",

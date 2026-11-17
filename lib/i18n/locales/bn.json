@@ -18,7 +18,9 @@
     "dailyTimes": "দৈনিক নামাজের সময়সূচি",
     "nextBadge": "পরবর্তী",
     "nextPrayer": "পরবর্তী নামাজ",
-    "prayerSoon": "⏳ নামাজের সময় ঘনিয়ে এসেছে"
+    "prayerSoon": "⏳ নামাজের সময় ঘনিয়ে এসেছে",
+    "eidGreeting": "Eid Mubarak 🌙",
+    "kandilGreeting": "Blessed Holy Night ✨"
   },
   "prayerTimes": {
     "imsak": "ফজর",
@@ -59,7 +61,17 @@
     "completionShareMessage": "🎉 আলহামদুলিল্লাহ, আমি ৩০ পারা সম্পন্ন করে খতম শেষ করেছি! 📖🕌\n\nএটি আমার #{{count}} তম খতম। আপনিও শুরু করুন: {{playStore}}",
     "progressShareMessage": "📖 এই সপ্তাহে আমি {{completed}}/30 পারা সম্পন্ন করেছি ({{percentage}}%)।\n\nEzan Vakti + Hatim দিয়ে আপনার অগ্রগতি ট্র্যাক করুন: {{playStore}}",
     "juzCountShort": "পারা",
-    "juzTaken": "অন্য কেউ এই জুজটি নিয়ে নিয়েছেন। দয়া করে অন্য একটি বেছে নিন।"
+    "juzTaken": "অন্য কেউ এই জুজটি নিয়ে নিয়েছেন। দয়া করে অন্য একটি বেছে নিন।",
+    "fridayCardTitle": "Blessed Friday",
+    "fridayCardDesc": "Have a blessed Friday. Share blessings and warm greetings with your loved ones.",
+    "fridayShareBtn": "Share Friday Greetings",
+    "fridayShareMessage": "🕌 Blessed Friday! May your day be peaceful and your prayers accepted ✨\n\n📲 Download Ezan Vakti + Hatim for free:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
+    "eidCardTitle": "Eid Mubarak",
+    "eidCardDesc": "May this blessed Eid bring joy, peace, and prosperity to you and your family.",
+    "eidShareBtn": "Share Eid Greetings",
+    "kandilCardTitle": "Blessed Holy Night",
+    "kandilCardDesc": "May your prayers and worship be accepted on this sacred night.",
+    "kandilShareBtn": "Share Blessings"
   },
   "settings": {
     "title": "সেটিংস",

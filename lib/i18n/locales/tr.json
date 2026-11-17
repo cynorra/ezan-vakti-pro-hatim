@@ -35,7 +35,9 @@
     "dailyTimes": "GÜNLÜK VAKİTLER",
     "nextBadge": "SIRADAKİ",
     "nextPrayer": "SIRADAKİ VAKİT",
-    "prayerSoon": "⏳ VAKTE AZ KALDI"
+    "prayerSoon": "⏳ VAKTE AZ KALDI",
+    "eidGreeting": "Bayramınız Mübarek Olsun 🌙",
+    "kandilGreeting": "Kandiliniz Mübarek Olsun ✨"
   },
   "prayerTimes": {
     "imsak": "İmsak",
@@ -83,7 +85,13 @@
     "fridayCardDesc": "Cumanız mübarek olsun. Sevdiklerinizle Cuma tebriğini paylaşın.",
     "fridayShareBtn": "Cuma Mesajı Paylaş",
     "fridayShareMessage": "🕌 Hayırlı Cumalar! Cumanız mübarek, dualarınız ve ibadetleriniz kabul olsun ✨\n\n📲 Ezan Vakti + Hatim uygulamasını ücretsiz indirin:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
-    "juzTaken": "Bu cüz az önce başka biri tarafından alındı. Lütfen başka bir cüz seçin."
+    "juzTaken": "Bu cüz az önce başka biri tarafından alındı. Lütfen başka bir cüz seçin.",
+    "eidCardTitle": "Mübarek Bayram Tebriği",
+    "eidCardDesc": "Bayramınız mübarek olsun. Sevdiklerinizle bayram sevincini ve tebriğini paylaşın.",
+    "eidShareBtn": "Bayram Mesajı Paylaş",
+    "kandilCardTitle": "Mübarek Kandil Gecesi",
+    "kandilCardDesc": "Bu kutlu gecede dualarınız kabul, kandiliniz mübarek olsun.",
+    "kandilShareBtn": "Kandil Mesajı Paylaş"
   },
   "settings": {
     "title": "Ayarlar",

@@ -18,7 +18,9 @@
     "dailyTimes": "DNEVNA VAKIZI NAMAZA",
     "nextBadge": "SLIJ.",
     "nextPrayer": "SLJEDEĆI NAMAZ",
-    "prayerSoon": "⏳ VRIJEME NAMAZA JE BLIZU"
+    "prayerSoon": "⏳ VRIJEME NAMAZA JE BLIZU",
+    "eidGreeting": "Eid Mubarak 🌙",
+    "kandilGreeting": "Blessed Holy Night ✨"
   },
   "prayerTimes": {
     "imsak": "Sabah",
@@ -59,7 +61,17 @@
     "completionShareMessage": "🎉 Proučio/la sam svih 30 džuzeva i završio/la svoju hatmu! Elhamdulillah 📖🕌\n\nOvo je moja hatma br. {{count}}. Započnite i vi praćenje: {{playStore}}",
     "progressShareMessage": "📖 Ove sedmice sam završio/la {{completed}}/30 džuzeva ({{percentage}}%).\n\nPratite svoj napredak uz Ezan Vakti + Hatim: {{playStore}}",
     "juzCountShort": "džuz",
-    "juzTaken": "Neko je upravo uzeo ovaj džuz. Molimo odaberite drugi."
+    "juzTaken": "Neko je upravo uzeo ovaj džuz. Molimo odaberite drugi.",
+    "fridayCardTitle": "Blessed Friday",
+    "fridayCardDesc": "Have a blessed Friday. Share blessings and warm greetings with your loved ones.",
+    "fridayShareBtn": "Share Friday Greetings",
+    "fridayShareMessage": "🕌 Blessed Friday! May your day be peaceful and your prayers accepted ✨\n\n📲 Download Ezan Vakti + Hatim for free:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
+    "eidCardTitle": "Eid Mubarak",
+    "eidCardDesc": "May this blessed Eid bring joy, peace, and prosperity to you and your family.",
+    "eidShareBtn": "Share Eid Greetings",
+    "kandilCardTitle": "Blessed Holy Night",
+    "kandilCardDesc": "May your prayers and worship be accepted on this sacred night.",
+    "kandilShareBtn": "Share Blessings"
   },
   "settings": {
     "title": "Postavke",

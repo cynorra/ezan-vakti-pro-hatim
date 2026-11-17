@@ -18,7 +18,9 @@
     "dailyTimes": "ORELE DE RUGĂCIUNE ZILNICE",
     "nextBadge": "URM.",
     "nextPrayer": "URMĂTOAREA RUGĂCIUNE",
-    "prayerSoon": "⏳ ORA DE RUGĂCIUNE SE APROPIE"
+    "prayerSoon": "⏳ ORA DE RUGĂCIUNE SE APROPIE",
+    "eidGreeting": "Eid Mubarak 🌙",
+    "kandilGreeting": "Blessed Holy Night ✨"
   },
   "prayerTimes": {
     "imsak": "Fajr",
@@ -59,7 +61,17 @@
     "completionShareMessage": "🎉 Am citit toate cele 30 de juz-uri și am terminat khatmul! Alhamdulillah 📖🕌\n\nAcesta este khatmul meu #{{count}}. Începe să-ți monitorizezi lectura: {{playStore}}",
     "progressShareMessage": "📖 Am completat {{completed}}/30 de juz-uri în această săptămână ({{percentage}}%).\n\nUrmărește progresul cu Ezan Vakti + Hatim: {{playStore}}",
     "juzCountShort": "juz",
-    "juzTaken": "Cineva tocmai a luat acest juz. Te rugăm să alegi altul."
+    "juzTaken": "Cineva tocmai a luat acest juz. Te rugăm să alegi altul.",
+    "fridayCardTitle": "Blessed Friday",
+    "fridayCardDesc": "Have a blessed Friday. Share blessings and warm greetings with your loved ones.",
+    "fridayShareBtn": "Share Friday Greetings",
+    "fridayShareMessage": "🕌 Blessed Friday! May your day be peaceful and your prayers accepted ✨\n\n📲 Download Ezan Vakti + Hatim for free:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
+    "eidCardTitle": "Eid Mubarak",
+    "eidCardDesc": "May this blessed Eid bring joy, peace, and prosperity to you and your family.",
+    "eidShareBtn": "Share Eid Greetings",
+    "kandilCardTitle": "Blessed Holy Night",
+    "kandilCardDesc": "May your prayers and worship be accepted on this sacred night.",
+    "kandilShareBtn": "Share Blessings"
   },
   "settings": {
     "title": "Setări",

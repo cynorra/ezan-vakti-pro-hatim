@@ -18,7 +18,9 @@
     "dailyTimes": " TÄGLICHE GEETSZEITEN",
     "nextBadge": "NÄCHSTE",
     "nextPrayer": "NÄCHSTES GEBET",
-    "prayerSoon": "⏳ GEBETSUHRZEIT STEHT BEVOR"
+    "prayerSoon": "⏳ GEBETSUHRZEIT STEHT BEVOR",
+    "eidGreeting": "Eid Mubarak / Gesegnetes Fest 🌙",
+    "kandilGreeting": "Gesegnete Nacht ✨"
   },
   "prayerTimes": {
     "imsak": "Fadschr",
@@ -59,7 +61,17 @@
     "completionShareMessage": "🎉 Ich habe alle 30 Juz gelesen und meinen Khatm beendet! Alhamdulillah 📖🕌\n\nDas ist mein Khatm Nr. {{count}}. Fange auch an, deine zu verfolgen: {{playStore}}",
     "progressShareMessage": "📖 Ich habe diese Woche {{completed}}/30 Juz gelesen ({{percentage}}%).\n\nVerfolge deine mit Ezan Vakti + Hatim: {{playStore}}",
     "juzCountShort": "Juz",
-    "juzTaken": "Jemand anderes hat diesen Dschuz bereits ausgewählt. Bitte wähle einen anderen."
+    "juzTaken": "Jemand anderes hat diesen Dschuz bereits ausgewählt. Bitte wähle einen anderen.",
+    "fridayCardTitle": "Gesegneter Freitag",
+    "fridayCardDesc": "Möge dein Freitag voller Segen sein. Teile Segenswünsche mit deinen Liebsten.",
+    "fridayShareBtn": "Freitagsgrüße teilen",
+    "fridayShareMessage": "🕌 Gesegneten Freitag! Möge Allah deine Gebete und guten Taten annehmen ✨\n\n📲 Gebetszeiten & Hatim App kostenlos herunterladen:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
+    "eidCardTitle": "Gesegnetes Fest",
+    "eidCardDesc": "Wir wünschen Ihnen und Ihrer Familie ein frohes und gesegnetes Fest.",
+    "eidShareBtn": "Festgrüße teilen",
+    "kandilCardTitle": "Gesegnete Nacht",
+    "kandilCardDesc": "Mögen deine Gebete in dieser gesegneten Nacht erhört werden.",
+    "kandilShareBtn": "Segenswünsche teilen"
   },
   "settings": {
     "title": "Einstellungen",

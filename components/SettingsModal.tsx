@@ -8,6 +8,7 @@ import { Colors, Spacing, FontSize, BorderRadius, Shadows } from '@/constants/th
 import Constants from 'expo-constants';
 import { PLAY_STORE_URL } from '@/lib/share';
 import { CALCULATION_METHODS, CALCULATION_METHOD_IDS, CalculationMethodId } from '@/lib/prayer-times';
+import { playTestEzanSound } from '@/lib/notifications';
 import {
   getLocationPermissionState,
   openAppSettings,
@@ -262,6 +263,16 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                     saveSetting('ezan_sound', sounds[nextIndex]);
                   }}
                 />
+                <TouchableOpacity
+                  style={[styles.testSoundBtn, { borderColor: colors.primary + '30', backgroundColor: colors.primary + '10' }]}
+                  onPress={() => playTestEzanSound(ezanSound)}
+                  activeOpacity={0.7}
+                >
+                  <Ionicons name="volume-medium" size={16} color={colors.primary} />
+                  <Text style={[styles.testSoundBtnText, { color: colors.primary }]}>
+                    {t('settings.testSound', { defaultValue: 'Seçili Ezan Sesini Test Et (Çal)' })}
+                  </Text>
+                </TouchableOpacity>
                 <SettingRow
                   icon="alarm-outline"
                   label={t('settings.reminder')}
@@ -575,5 +586,21 @@ const styles = StyleSheet.create({
     marginTop: Spacing.sm,
     textAlign: 'center',
     fontStyle: 'italic',
+  },
+  testSoundBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.xs,
+    paddingVertical: Spacing.xs,
+    paddingHorizontal: Spacing.md,
+    borderRadius: BorderRadius.md,
+    borderWidth: 1,
+    marginHorizontal: Spacing.md,
+    marginVertical: Spacing.xs,
+  },
+  testSoundBtnText: {
+    fontSize: FontSize.xs,
+    fontWeight: '600',
   },
 });

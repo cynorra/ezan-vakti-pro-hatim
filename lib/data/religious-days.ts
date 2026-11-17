@@ -82,3 +82,10 @@ export function getUpcomingReligiousDays(language: string, count = 3, today = ne
     .filter((d) => d.date >= todayIso && (turkish || !TURKEY_ONLY_DAYS.has(d.key)))
     .slice(0, count);
 }
+
+/** Returns today's religious day (if any), respecting language observances. */
+export function getTodayReligiousDay(language: string, today = new Date()): ReligiousDay | undefined {
+  const todayIso = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+  const turkish = language.startsWith('tr');
+  return religiousDays.find((d) => d.date === todayIso && (turkish || !TURKEY_ONLY_DAYS.has(d.key)));
+}

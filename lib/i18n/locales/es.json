@@ -18,7 +18,9 @@
     "dailyTimes": "HORARIOS DE REZO DIARIO",
     "nextBadge": "SIG.",
     "nextPrayer": "PRÓXIMO REZO",
-    "prayerSoon": "⏳ LA HORA DEL REZO ESTÁ CERCA"
+    "prayerSoon": "⏳ LA HORA DEL REZO ESTÁ CERCA",
+    "eidGreeting": "Eid Mubarak 🌙",
+    "kandilGreeting": "Noche Bendita ✨"
   },
   "prayerTimes": {
     "imsak": "Fayr",
@@ -59,7 +61,17 @@
     "completionShareMessage": "🎉 ¡Completé los 30 juz, he terminado mi khatm! Alhamdulillah 📖🕌\n\nEste es mi khatm #{{count}}. Empieza a registrar el tuyo también: {{playStore}}",
     "progressShareMessage": "📖 Completé {{completed}}/30 juz esta semana ({{percentage}}%).\n\nSigue el tuyo con Ezan Vakti + Hatim: {{playStore}}",
     "juzCountShort": "juz",
-    "juzTaken": "Alguien acaba de tomar este juz. Por favor, elige otro."
+    "juzTaken": "Alguien acaba de tomar este juz. Por favor, elige otro.",
+    "fridayCardTitle": "Viernes Bendito",
+    "fridayCardDesc": "Que tengas un viernes lleno de bendiciones y paz. Comparte con tus seres queridos.",
+    "fridayShareBtn": "Compartir saludo de Viernes",
+    "fridayShareMessage": "🕌 ¡Viernes Bendito! Que la paz y las bendiciones de Dios estén contigo ✨\n\n📲 Descarga gratis la app Horarios de Oración y Corán:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
+    "eidCardTitle": "Eid Mubarak",
+    "eidCardDesc": "Que este bendito Eid traiga paz, salud y alegría a ti y a tu familia.",
+    "eidShareBtn": "Compartir saludo de Eid",
+    "kandilCardTitle": "Noche Bendita",
+    "kandilCardDesc": "Que tus súplicas sean escuchadas en esta noche sagrada.",
+    "kandilShareBtn": "Compartir bendiciones"
   },
   "settings": {
     "title": "Ajustes",

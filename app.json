@@ -2,7 +2,7 @@
   "expo": {
     "name": "Ezan Vakti + Hatim",
     "slug": "ezan-vakti-hatim",
-    "version": "1.0.12",
+    "version": "1.0.13",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
@@ -23,7 +23,7 @@
       }
     },
     "android": {
-      "versionCode": 17,
+      "versionCode": 18,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0d7a3e"
@@ -52,12 +52,17 @@
         "expo-notifications",
         {
           "icon": "./assets/notification-icon.png",
-          "color": "#0d7a3e"
+          "color": "#0d7a3e",
+          "sounds": [
+            "./assets/sounds/ezan_istanbul.mp3",
+            "./assets/sounds/ezan_mekke.mp3",
+            "./assets/sounds/ezan_medine.mp3",
+            "./assets/sounds/ezan_misir.mp3"
+          ]
         }
       ],
       "expo-font",
       "@react-native-firebase/app",
-      "@react-native-firebase/crashlytics",
       [
         "react-native-google-mobile-ads",
         {

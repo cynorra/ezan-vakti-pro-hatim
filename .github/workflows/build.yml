@@ -84,8 +84,9 @@ jobs:
       - name: Collect artifacts
         run: |
           mkdir -p out
-          mv android/app/build/outputs/bundle/release/*.aab out/
-          mv android/app/build/outputs/apk/release/*.apk out/
+          cp android/app/build/outputs/bundle/release/*.aab out/ 2>/dev/null || true
+          cp android/app/build/outputs/apk/release/*.apk out/ 2>/dev/null || true
+          ls -la out/
 
       - name: Upload Android Artifacts (AAB & APK)
         uses: actions/upload-artifact@v4

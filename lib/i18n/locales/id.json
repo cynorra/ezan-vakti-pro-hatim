@@ -18,7 +18,9 @@
     "dailyTimes": "JADWAL SHALAT HARIAN",
     "nextBadge": "BERIKUTNYA",
     "nextPrayer": "SHALAT BERIKUTNYA",
-    "prayerSoon": "⏳ WAKTU SHALAT SUDAH DEKAT"
+    "prayerSoon": "⏳ WAKTU SHALAT SUDAH DEKAT",
+    "eidGreeting": "Selamat Hari Raya Idul Fitri / Adha 🌙",
+    "kandilGreeting": "Malam yang Diberkahi ✨"
   },
   "prayerTimes": {
     "imsak": "Subuh",
@@ -59,7 +61,17 @@
     "completionShareMessage": "🎉 Alhamdulillah, saya telah menyelesaikan 30 juz dan mengkhatamkan Al-Qur'an! 📖🕌\n\nIni adalah khatam ke-{{count}} saya. Mulai pantau khatam Anda: {{playStore}}",
     "progressShareMessage": "📖 Minggu ini saya telah menyelesaikan {{completed}}/30 juz ({{percentage}}%).\n\nPantau kemajuan Anda dengan Ezan Vakti + Hatim: {{playStore}}",
     "juzCountShort": "juz",
-    "juzTaken": "Seseorang baru saja mengambil juz ini. Silakan pilih yang lain."
+    "juzTaken": "Seseorang baru saja mengambil juz ini. Silakan pilih yang lain.",
+    "fridayCardTitle": "Jumat Berkah",
+    "fridayCardDesc": "Semoga Jumat Anda penuh berkah. Bagikan ucapan dan doa kepada orang tersayang.",
+    "fridayShareBtn": "Bagikan Ucapan Jumat",
+    "fridayShareMessage": "🕌 Jumat Berkah! Semoga Allah menerima segala amal ibadah dan doa kita ✨\n\n📲 Unduh aplikasi Jadwal Sholat & Khatam Al-Quran gratis:\nhttps://play.google.com/store/apps/details?id=com.cynnora.ezanvakti",
+    "eidCardTitle": "Selamat Hari Raya",
+    "eidCardDesc": "Taqabbalallahu minna wa minkum. Selamat hari raya untuk Anda dan keluarga.",
+    "eidShareBtn": "Bagikan Ucapan Hari Raya",
+    "kandilCardTitle": "Malam Berkah",
+    "kandilCardDesc": "Semoga doa dan ibadah kita diterima di malam yang mulia ini.",
+    "kandilShareBtn": "Bagikan Berkah"
   },
   "settings": {
     "title": "Pengaturan",
