@@ -13,6 +13,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useTranslation } from 'react-i18next';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { SEOHead } from '@/components/SEOHead';
+import { InlineBanner } from '@/components/InlineBanner';
 
 const STEP_KEYS = [1, 2, 3, 4, 5, 6, 7, 8];
 
@@ -66,6 +67,7 @@ export default function AbdestScreen() {
         </View>
 
         <View style={{ height: 60 }} />
+        <InlineBanner />
       </ScrollView>
     </View>
   );

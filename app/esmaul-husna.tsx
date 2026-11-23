@@ -5,6 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows } from '@/constants/theme';
 import { esmaulHusna, localizeEsma } from '@/lib/data/esma';
 import { useTranslation } from 'react-i18next';
+import { InlineBanner } from '@/components/InlineBanner';
 
 export default function EsmaulHusnaScreen() {
   const { t, i18n } = useTranslation();
@@ -56,6 +57,7 @@ export default function EsmaulHusnaScreen() {
         keyExtractor={(item) => item.id.toString()}
         contentContainerStyle={styles.listContent}
         showsVerticalScrollIndicator={false}
+        ListFooterComponent={<InlineBanner />}
         renderItem={({ item }) => (
           <View style={[styles.card, { backgroundColor: colors.surface, borderColor: colors.border }, Shadows.light]}>
             <View style={styles.cardHeader}>

@@ -75,6 +75,7 @@ import {
   localizeDailyMessage,
   RemoteContentFeed,
 } from '@/lib/services/content-sync';
+import { InlineBanner } from '@/components/InlineBanner';
 
 const NOTIFICATION_PROMPTED_KEY = 'notification_permission_prompted';
 // '0' when the user switched prayer notifications off in Settings.
@@ -543,6 +544,8 @@ export default function HomeScreen() {
             <Text style={[styles.quickAccessLabel, { color: colors.text }]}>{t('quickAccess.abdest')}</Text>
           </TouchableOpacity>
         </View>
+
+        <InlineBanner />
 
         {/* Religious Days Card */}
         <ReligiousDaysCard />

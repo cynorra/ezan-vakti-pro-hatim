@@ -158,6 +158,28 @@ export const showInterstitialAd = async (): Promise<boolean> => {
   }
 };
 
+// Interstitials only at natural breaks: never in the first 2 minutes, at most one every 4 minutes
+// and 5 per session. Prayer notifications and app launch never trigger one.
+const SESSION_START = Date.now();
+const FIRST_AD_DELAY_MS = 2 * 60 * 1000;
+const MIN_GAP_MS = 4 * 60 * 1000;
+const MAX_PER_SESSION = 5;
+let lastInterstitialAt = 0;
+let interstitialsShown = 0;
+
+export const showInterstitialIfDue = async (_reason: string): Promise<boolean> => {
+  const now = Date.now();
+  if (now - SESSION_START < FIRST_AD_DELAY_MS) return false;
+  if (interstitialsShown >= MAX_PER_SESSION) return false;
+  if (lastInterstitialAt && now - lastInterstitialAt < MIN_GAP_MS) return false;
+  const shown = await showInterstitialAd();
+  if (shown) {
+    lastInterstitialAt = now;
+    interstitialsShown += 1;
+  }
+  return shown;
+};
+
 /**
  * Helper to check the current consent status
  */

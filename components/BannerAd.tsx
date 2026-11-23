@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Platform, useWindowDimensions } from 'react-native';
+import { View, StyleSheet, Platform, useWindowDimensions, ViewStyle } from 'react-native';
 import { BannerAd as AdMobBanner, BannerAdSize } from 'react-native-google-mobile-ads';
 
 // Official Live AdMob Banner IDs directly from .env with fallback to real registered unit ID
@@ -20,10 +20,13 @@ export const BANNER_AD_UNIT_ID = LIVE_BANNER_AD_UNIT_ID;
 
 interface BannerAdProps {
   size?: BannerAdSize;
+  /** Extra spacing for in-content placements; only applied while an ad is actually showing. */
+  style?: ViewStyle;
 }
 
 export const BannerAd: React.FC<BannerAdProps> = ({
   size = BannerAdSize.ANCHORED_ADAPTIVE_BANNER,
+  style,
 }) => {
   const { width } = useWindowDimensions();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -55,6 +58,7 @@ export const BannerAd: React.FC<BannerAdProps> = ({
           opacity: isLoaded ? 1 : 0,
           height: isLoaded ? undefined : 0,
         },
+        isLoaded ? style : null,
       ]}
     >
       <AdMobBanner

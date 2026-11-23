@@ -16,6 +16,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useTranslation } from 'react-i18next';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { SEOHead } from '@/components/SEOHead';
+import { InlineBanner } from '@/components/InlineBanner';
 
 const ZEKAT_RATE = 0.025;
 
@@ -116,6 +117,7 @@ export default function ZekatScreen() {
           ))}
 
           <View style={{ height: 60 }} />
+          <InlineBanner />
         </ScrollView>
       </KeyboardAvoidingView>
     </View>

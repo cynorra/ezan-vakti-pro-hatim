@@ -29,6 +29,7 @@ import { quranJuzData, Juz } from '@/lib/data/quran-juz';
 import { hatimService, JuzTakenError, SharedHatim, SharedHatimJuz } from '@/lib/services/hatim-service';
 import { PLAY_STORE_URL } from '@/lib/share';
 import { localWeekStartKey } from '@/lib/date-keys';
+import { InlineBanner } from '@/components/InlineBanner';
 
 const HATIM_USER_NAME_KEY = 'hatim_user_name';
 
@@ -558,6 +559,7 @@ export default function HatimScreen() {
           </View>
         )}
         <View style={{ height: 120 }} />
+        <InlineBanner />
       </ScrollView>
 
       {/* Jüz Detay Modal */}
