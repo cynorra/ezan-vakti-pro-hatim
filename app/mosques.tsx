@@ -139,6 +139,7 @@ export default function MosquesScreen() {
           keyExtractor={(item) => item.id.toString()}
           contentContainerStyle={styles.listContent}
           ListFooterComponent={<InlineBanner />}
+          ItemSeparatorComponent={({ leadingItem }: any) => ((mosques.indexOf(leadingItem) + 1) % 6 === 0 ? <InlineBanner /> : null)}
           renderItem={({ item }) => (
             <View style={[styles.mosqueCard, { backgroundColor: colors.surface }, Shadows.light]}>
               <View style={[styles.mosqueIconWrapper, { backgroundColor: colors.primary + '15' }]}>

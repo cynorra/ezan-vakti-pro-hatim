@@ -119,6 +119,7 @@ export default function QuranIndexScreen() {
             contentContainerStyle={styles.list}
             initialNumToRender={20}
             ListFooterComponent={<InlineBanner />}
+            ItemSeparatorComponent={({ leadingItem }: any) => (Number(leadingItem?.n) % 10 === 0 ? <InlineBanner /> : null)}
             renderItem={({ item: s }) => (
               <TouchableOpacity
                 onPress={() => open(s.n)}

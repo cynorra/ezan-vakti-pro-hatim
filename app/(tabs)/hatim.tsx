@@ -30,6 +30,7 @@ import { hatimService, JuzTakenError, SharedHatim, SharedHatimJuz } from '@/lib/
 import { PLAY_STORE_URL } from '@/lib/share';
 import { localWeekStartKey } from '@/lib/date-keys';
 import { InlineBanner } from '@/components/InlineBanner';
+import { showInterstitialIfDue } from '@/lib/ads';
 
 const HATIM_USER_NAME_KEY = 'hatim_user_name';
 
@@ -242,6 +243,7 @@ export default function HatimScreen() {
     setProgress(newProgress);
     saveProgress(newProgress);
     logEvent('individual_juz_toggle', { juz_number: juzNumber, completed: newProgress[juzNumber] });
+    if (newProgress[juzNumber]) showInterstitialIfDue('juz_completed');
     safeHaptics.impactAsync(
       newProgress[juzNumber]
         ? Haptics.ImpactFeedbackStyle.Medium
