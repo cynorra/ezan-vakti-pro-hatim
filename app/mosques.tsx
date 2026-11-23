@@ -18,6 +18,7 @@ import { Colors, Spacing, FontSize, BorderRadius, Shadows } from '@/constants/th
 import { SEOHead } from '@/components/SEOHead';
 import { fetchNearbyMosques, NearbyMosque } from '@/lib/services/mosque-service';
 import { loadSavedLocation, DEFAULT_LOCATION } from '@/lib/location-settings';
+import { InlineBanner } from '@/components/InlineBanner';
 
 export default function MosquesScreen() {
   const { t, i18n } = useTranslation();
@@ -137,6 +138,7 @@ export default function MosquesScreen() {
           data={mosques}
           keyExtractor={(item) => item.id.toString()}
           contentContainerStyle={styles.listContent}
+          ListFooterComponent={<InlineBanner />}
           renderItem={({ item }) => (
             <View style={[styles.mosqueCard, { backgroundColor: colors.surface }, Shadows.light]}>
               <View style={[styles.mosqueIconWrapper, { backgroundColor: colors.primary + '15' }]}>

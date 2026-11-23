@@ -16,6 +16,8 @@ import {
   QuranPrefs,
   Position,
 } from '@/lib/quran';
+import { InlineBanner } from '@/components/InlineBanner';
+import { showInterstitialIfDue } from '@/lib/ads';
 
 const MIN_FONT = 20;
 const MAX_FONT = 44;
@@ -60,6 +62,7 @@ export default function QuranReaderScreen() {
   const goTo = useCallback(
     (n: number) => {
       if (n < 1 || n > 114) return;
+      showInterstitialIfDue('quran_surah_change');
       router.replace({ pathname: '/quran/[id]', params: { id: String(n), ayah: '1' } });
     },
     [router]
@@ -91,6 +94,7 @@ export default function QuranReaderScreen() {
 
   const Footer = (
     <View style={styles.footer}>
+      <InlineBanner />
       <View style={styles.navRow}>
         <TouchableOpacity
           disabled={surahNo <= 1}

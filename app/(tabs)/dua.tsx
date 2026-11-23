@@ -23,6 +23,7 @@ import { ShareableDuaCard } from '@/components/ShareableDuaCard';
 import { dailyDuas, duaCategories, getDailyDua, localizeDua, Dua } from '@/lib/data/duas';
 import { formatDuaShareMessage } from '@/lib/share';
 import { getHijriDate } from '@/lib/hijri';
+import { InlineBanner } from '@/components/InlineBanner';
 
 const CATEGORY_ICONS: Record<string, string> = {
   all: 'apps-outline',
@@ -288,6 +289,7 @@ export default function DuaScreen() {
             </View>
           ))}
           <View style={{ height: 100 }} />
+          <InlineBanner />
         </ScrollView>
 
         {/* Off-screen Image Card for Dynamic Capture */}

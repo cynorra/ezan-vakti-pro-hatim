@@ -23,6 +23,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SEOHead } from '@/components/SEOHead';
 import { logTesbihStarted, logEvent } from '@/lib/analytics';
 import { useTranslation } from 'react-i18next';
+import { showInterstitialIfDue } from '@/lib/ads';
 
 interface Dhikr {
   id: string;
@@ -130,6 +131,7 @@ export default function TesbihScreen() {
       safeHaptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
       logEvent('tesbih_target_reached', { dhikr_name: dhikr.name, target: dhikr.target });
       triggerMilestoneAnimation();
+      showInterstitialIfDue('tesbih_target');
 
       // Otomatik bir sonraki zikre gecis
       setTimeout(() => {

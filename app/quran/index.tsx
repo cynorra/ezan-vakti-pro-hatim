@@ -5,6 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows } from '@/constants/theme';
 import { getQuran, getJuzStarts, getLastRead, getBookmarks, getSurah, Position } from '@/lib/quran';
+import { InlineBanner } from '@/components/InlineBanner';
 
 type Tab = 'surah' | 'juz' | 'marks';
 
@@ -117,6 +118,7 @@ export default function QuranIndexScreen() {
             keyExtractor={(s) => String(s.n)}
             contentContainerStyle={styles.list}
             initialNumToRender={20}
+            ListFooterComponent={<InlineBanner />}
             renderItem={({ item: s }) => (
               <TouchableOpacity
                 onPress={() => open(s.n)}
