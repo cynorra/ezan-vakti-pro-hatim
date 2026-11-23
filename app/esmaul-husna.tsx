@@ -58,6 +58,7 @@ export default function EsmaulHusnaScreen() {
         contentContainerStyle={styles.listContent}
         showsVerticalScrollIndicator={false}
         ListFooterComponent={<InlineBanner />}
+        ItemSeparatorComponent={({ leadingItem }: any) => (Number(leadingItem?.id) % 9 === 0 ? <InlineBanner /> : null)}
         renderItem={({ item }) => (
           <View style={[styles.card, { backgroundColor: colors.surface, borderColor: colors.border }, Shadows.light]}>
             <View style={styles.cardHeader}>
