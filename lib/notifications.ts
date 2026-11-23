@@ -43,7 +43,10 @@ async function getEnabledPrayerNames(): Promise<Record<string, boolean> | null> 
 // Ezan ses dosyaları assets/sounds/ ve android/app/src/main/res/raw/ içerisine eklenmiştir.
 export const SOUND_FILES_READY = true;
 export const EZAN_SOUND_KEY = 'ezan_sound';
-export const DEFAULT_EZAN_SOUND = 'İstanbul Ezanı';
+// Gentle by default: a calm notification, no full-screen pop-up. Adhan recordings stay opt-in.
+export const SOFT_SOUND = 'Hafif Bildirim';
+export const SILENT_SOUND = 'Sessiz';
+export const DEFAULT_EZAN_SOUND = SOFT_SOUND;
 
 export interface EzanChannelConfig {
   id: string;
@@ -52,6 +55,8 @@ export interface EzanChannelConfig {
 }
 
 export const EZAN_CHANNELS: Record<string, EzanChannelConfig> = {
+  [SOFT_SOUND]: { id: 'prayer-soft', name: 'Hafif Bildirim', sound: 'default' },
+  [SILENT_SOUND]: { id: 'prayer-silent', name: 'Sessiz', sound: '' },
   'İstanbul Ezanı': { id: 'ezan-istanbul', name: 'İstanbul Ezanı', sound: 'ezan_istanbul.mp3' },
   'Mekke Ezanı': { id: 'ezan-mekke', name: 'Mekke Ezanı', sound: 'ezan_mekke.mp3' },
   'Medine Ezanı': { id: 'ezan-medine', name: 'Medine Ezanı', sound: 'ezan_medine.mp3' },
@@ -115,6 +120,20 @@ export async function configureNotificationChannel() {
   // Ezan seslerine özel yüksek öncelikli bildirim kanalları
   for (const config of Object.values(EZAN_CHANNELS)) {
     try {
+      if (config.id === 'prayer-soft' || config.id === 'prayer-silent') {
+        const silent = config.id === 'prayer-silent';
+        await Notifications.setNotificationChannelAsync(config.id, {
+          name: `Namaz Vakti (${config.name})`,
+          // DEFAULT = sound but no heads-up pop-up; LOW = completely quiet
+          importance: silent ? Notifications.AndroidImportance.LOW : Notifications.AndroidImportance.DEFAULT,
+          vibrationPattern: silent ? undefined : [0, 120],
+          lightColor: '#0d7a3e',
+          sound: silent ? null : 'default',
+          bypassDnd: false,
+          lockscreenVisibility: Notifications.AndroidNotificationVisibility.PUBLIC,
+        });
+        continue;
+      }
       await Notifications.setNotificationChannelAsync(config.id, {
         name: `Ezan Vakti (${config.name})`,
         importance: Notifications.AndroidImportance.MAX,
@@ -238,7 +257,8 @@ async function schedulePrayerNotification(
   city: string,
   reminderMins: number,
   sound: string | true,
-  selectedEzanName?: string
+  selectedEzanName?: string,
+  next?: { name: string; time: string }
 ) {
   const i18nKey = PRAYER_NAME_TO_I18N_KEY[prayerName];
   const displayName = i18nKey ? i18n.t(`prayerTimes.${i18nKey}`) : prayerName;
@@ -247,16 +267,28 @@ async function schedulePrayerNotification(
 
   const isEzanPrayer = ['İmsak', 'Öğle', 'İkindi', 'Akşam', 'Yatsı'].includes(prayerName);
   const activeEzan = selectedEzanName || (await getSelectedEzanSound());
-  const ezanConfig = isEzanPrayer ? EZAN_CHANNELS[activeEzan] : null;
+  const selectedConfig = EZAN_CHANNELS[activeEzan] ?? EZAN_CHANNELS[SOFT_SOUND];
+  const isGentleMode = selectedConfig.id === 'prayer-soft' || selectedConfig.id === 'prayer-silent';
+  // Adhan recordings only for the five prayers; sunrise and every gentle mode use the calm channel.
+  const ezanConfig = isEzanPrayer || isGentleMode ? selectedConfig : EZAN_CHANNELS[SOFT_SOUND];
+  const reminderConfig = isGentleMode ? selectedConfig : EZAN_CHANNELS[SOFT_SOUND];
 
   if (at.getTime() > now) {
     await safeSchedule({
       identifier: `${PRAYER_PREFIX}${dayKey}-${prayerName}`,
       content: {
         title: i18n.t('notifications.prayerTitle', { prayer: displayName }),
-        body: i18n.t('notifications.prayerBody', { prayer: displayName, city }),
-        sound: ezanConfig ? ezanConfig.sound : sound,
-        channelId: ezanConfig ? ezanConfig.id : 'default',
+        body: next
+          ? i18n.t('notifications.prayerBodyNext', {
+              prayer: displayName,
+              city,
+              next: PRAYER_NAME_TO_I18N_KEY[next.name] ? i18n.t(`prayerTimes.${PRAYER_NAME_TO_I18N_KEY[next.name]}`) : next.name,
+              time: next.time,
+              defaultValue: '{{city}} • Next: {{next}} {{time}}',
+            })
+          : i18n.t('notifications.prayerBody', { prayer: displayName, city }),
+        sound: ezanConfig.sound || 'default',
+        channelId: ezanConfig.id,
         data: { screen: 'home', prayerName, city },
       } as any,
       trigger: { type: Notifications.SchedulableTriggerInputTypes.DATE, date: at },
@@ -270,8 +302,8 @@ async function schedulePrayerNotification(
       content: {
         title: i18n.t('notifications.prayerPreReminderTitle', { prayer: displayName, minutes: reminderMins }),
         body: i18n.t('notifications.prayerPreReminderBody', { prayer: displayName, city, minutes: reminderMins }),
-        sound: 'default',
-        channelId: 'default',
+        sound: reminderConfig.sound || 'default',
+        channelId: reminderConfig.id,
         data: { screen: 'home', prayerName, city },
       } as any,
       trigger: { type: Notifications.SchedulableTriggerInputTypes.DATE, date: reminderAt },
@@ -502,11 +534,15 @@ export async function scheduleAllPrayers(
       { name: 'Akşam', time: times.maghrib },
       { name: 'Yatsı', time: times.isha },
     ];
-    for (const prayer of prayers) {
+    for (let idx = 0; idx < prayers.length; idx++) {
+      const prayer = prayers[idx];
+      // "Next prayer" shown in the notification body; after Yatsı it is tomorrow's İmsak.
+      const following = prayers[idx + 1] ?? { name: 'İmsak', time: getTimes(new Date(day.getFullYear(), day.getMonth(), day.getDate() + 1)).fajr };
+      const next = /^\d{2}:\d{2}$/.test(following.time) ? following : undefined;
       const settingsKey = PRAYER_NAME_TO_SETTINGS_KEY[prayer.name];
       const isEnabled = !enabledPrayers || enabledPrayers[settingsKey] !== false;
       const at = prayerDate(day, prayer.time, timezone);
-      if (isEnabled && at) await schedulePrayerNotification(prayer.name, at, city, reminderMins, sound, selectedEzan);
+      if (isEnabled && at) await schedulePrayerNotification(prayer.name, at, city, reminderMins, sound, selectedEzan, next);
     }
   }
 

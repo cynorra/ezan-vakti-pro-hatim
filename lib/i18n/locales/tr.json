@@ -122,7 +122,9 @@
       "istanbul": "İstanbul Ezanı",
       "mecca": "Mekke Ezanı",
       "medina": "Medine Ezanı",
-      "egypt": "Mısır Ezanı"
+      "egypt": "Mısır Ezanı",
+      "soft": "Hafif bildirim (önerilen)",
+      "silent": "Sessiz"
     }
   },
   "qibla": {
@@ -184,7 +186,8 @@
     "prayerTitle": "🕌 {{prayer}} Vakti Geldi",
     "prayerBody": "{{city}} için {{prayer}} vakti girdi. Haydi namaza, huzur ve dua vaktini kaçırma 🤲",
     "prayerPreReminderTitle": "⏳ {{prayer}} Vaktine {{minutes}} Dk Kaldı",
-    "prayerPreReminderBody": "{{city}} için {{prayer}} vakti yaklaşıyor. Abdest ve namaz hazırlığı için güzel bir an 🕌"
+    "prayerPreReminderBody": "{{city}} için {{prayer}} vakti yaklaşıyor. Abdest ve namaz hazırlığı için güzel bir an 🕌",
+    "prayerBodyNext": "{{city}} • Sonraki: {{next}} {{time}}"
   },
   "ramadan": {
     "badge": "RAMAZAN",
