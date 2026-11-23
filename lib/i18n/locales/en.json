@@ -119,7 +119,9 @@
       "istanbul": "Istanbul Adhan",
       "mecca": "Makkah Adhan",
       "medina": "Madinah Adhan",
-      "egypt": "Egyptian Adhan"
+      "egypt": "Egyptian Adhan",
+      "soft": "Gentle notification (recommended)",
+      "silent": "Silent"
     }
   },
   "qibla": {
@@ -176,7 +178,8 @@
     "kazaDebtReminder": "You have {{count}} missed prayers waiting, you could catch up on a few tonight 🕌",
     "streakReminder": "Your {{streak}}-day streak is going, keep it up today too 🔥",
     "prayerTitle": "{{prayer}} Time",
-    "prayerBody": "It's {{prayer}} time for {{city}}."
+    "prayerBody": "It's {{prayer}} time for {{city}}.",
+    "prayerBodyNext": "{{city}} • Next: {{next}} {{time}}"
   },
   "ramadan": {
     "badge": "RAMADAN",

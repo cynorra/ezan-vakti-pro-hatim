@@ -74,7 +74,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   const { t, i18n } = useTranslation();
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
-  const [ezanSound, setEzanSound] = useState('İstanbul Ezanı');
+  const [ezanSound, setEzanSound] = useState('Hafif Bildirim');
   const [reminderTime, setReminderTime] = useState('15 dk önce');
   const [showLangPicker, setShowLangPicker] = useState(false);
   const [showMethodPicker, setShowMethodPicker] = useState(false);
@@ -149,6 +149,8 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   };
 
   const SOUND_LABEL_KEYS: Record<string, string> = {
+    'Hafif Bildirim': 'settings.sounds.soft',
+    'Sessiz': 'settings.sounds.silent',
     'İstanbul Ezanı': 'settings.sounds.istanbul',
     'Mekke Ezanı': 'settings.sounds.mecca',
     'Medine Ezanı': 'settings.sounds.medina',
@@ -255,9 +257,9 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 <SettingRow
                   icon="volume-high-outline"
                   label={t('settings.sound')}
-                  value={t(SOUND_LABEL_KEYS[ezanSound] ?? 'settings.sounds.istanbul')}
+                  value={t(SOUND_LABEL_KEYS[ezanSound] ?? 'settings.sounds.soft')}
                   onPress={() => {
-                    const sounds = ['İstanbul Ezanı', 'Mekke Ezanı', 'Medine Ezanı', 'Mısır Ezanı'];
+                    const sounds = ['Hafif Bildirim', 'Sessiz', 'İstanbul Ezanı', 'Mekke Ezanı', 'Medine Ezanı', 'Mısır Ezanı'];
                     const nextIndex = (sounds.indexOf(ezanSound) + 1) % sounds.length;
                     setEzanSound(sounds[nextIndex]);
                     saveSetting('ezan_sound', sounds[nextIndex]);
