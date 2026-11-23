@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Platform, useWindowDimensions } from 'react-native';
-import { BannerAd as AdMobBanner, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
+import { BannerAd as AdMobBanner, BannerAdSize } from 'react-native-google-mobile-ads';
 
 // Official Live AdMob Banner IDs directly from .env with fallback to real registered unit ID
 const LIVE_BANNER_AD_UNIT_ID = Platform.select({
@@ -15,8 +15,8 @@ const LIVE_BANNER_AD_UNIT_ID = Platform.select({
     'ca-app-pub-4674211063760769/3925185177',
 });
 
-// Always use TestIds in development to comply with Google AdMob policy and ensure banner visibility during testing
-export const BANNER_AD_UNIT_ID = __DEV__ ? TestIds.BANNER : LIVE_BANNER_AD_UNIT_ID;
+// Always the real banner unit, in every build type
+export const BANNER_AD_UNIT_ID = LIVE_BANNER_AD_UNIT_ID;
 
 interface BannerAdProps {
   size?: BannerAdSize;
