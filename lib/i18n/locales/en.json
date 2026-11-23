@@ -222,7 +222,8 @@
   "quickAccess": {
     "mosques": "Nearby Mosques",
     "zekat": "Zakat Calculator",
-    "abdest": "Wudu Guide"
+    "abdest": "Wudu Guide",
+    "quran": "Quran"
   },
   "location": {
     "selectCity": "Select City",
@@ -298,5 +299,34 @@
       "dhikr": "Dhikr",
       "charity": "Good Deed / Charity"
     }
+  },
+  "reliability": {
+    "exactTitle": "Adhan on the exact minute",
+    "exactBody": "To sound the adhan exactly at prayer time, allow \"Alarms & reminders\" for this app on the next screen.",
+    "batteryTitle": "Keep the adhan reliable",
+    "batteryBody": "Some phones delay alarms to save battery. Find this app in the list and choose \"Don't optimize\" / \"Unrestricted\".",
+    "openSettings": "Open settings",
+    "later": "Later"
+  },
+  "quran": {
+    "title": "Holy Quran",
+    "resume": "Continue where you left off",
+    "ayah": "Ayah",
+    "surahs": "Surahs",
+    "juz": "Juz",
+    "juzOne": "Juz",
+    "bookmarks": "Bookmarks",
+    "search": "Search surah (name or number)",
+    "meccan": "Meccan",
+    "medinan": "Medinan",
+    "noBookmarks": "No bookmarks yet. Tap the bookmark icon on an ayah while reading.",
+    "prev": "Previous surah",
+    "next": "Next surah",
+    "smaller": "Smaller text",
+    "larger": "Larger text",
+    "translation": "Translation",
+    "share": "Share",
+    "bookmark": "Bookmark",
+    "credit": "Arabic text: Tanzil Project (tanzil.net), Uthmani. Turkish meaning: Elmalili Muhammed Hamdi Yazir."
   }
 }

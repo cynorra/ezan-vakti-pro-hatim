@@ -54,6 +54,7 @@ import {
   configureNotificationChannel,
   cancelAllNotifications,
 } from '@/lib/notifications';
+import { promptPrayerAlertReliability } from '@/lib/reliability';
 import { getHijriDate } from '@/lib/hijri';
 import { SettingsModal } from '@/components/SettingsModal';
 import { DailyChecklist } from '@/components/DailyChecklist';
@@ -188,12 +189,19 @@ export default function HomeScreen() {
   // the user finding the toggle in Settings.
   const askNotificationsOnce = async () => {
     try {
-      if (await AsyncStorage.getItem(NOTIFICATION_PROMPTED_KEY)) return;
+      if (await AsyncStorage.getItem(NOTIFICATION_PROMPTED_KEY)) {
+        if (await hasNotificationPermission()) promptPrayerAlertReliability();
+        return;
+      }
       await AsyncStorage.setItem(NOTIFICATION_PROMPTED_KEY, '1');
-      if (await hasNotificationPermission()) return;
+      if (await hasNotificationPermission()) {
+        promptPrayerAlertReliability();
+        return;
+      }
       if (await requestNotificationPermissions()) {
         setNotificationsEnabled(true);
         logEvent('prayer_notifications_enabled', { source: 'first_launch' });
+        promptPrayerAlertReliability();
       }
     } catch (error) {
       console.log('Notification prompt error:', error);
@@ -505,6 +513,14 @@ export default function HomeScreen() {
 
         {/* Hızlı Erişim */}
         <View style={styles.quickAccessRow}>
+          <TouchableOpacity
+            style={[styles.quickAccessItem, { backgroundColor: colors.surface }, Shadows.light]}
+            onPress={() => router.push('/quran')}
+            accessibilityRole="button"
+          >
+            <Ionicons name="book" size={22} color={colors.primary} />
+            <Text style={[styles.quickAccessLabel, { color: colors.text }]}>{t('quickAccess.quran', { defaultValue: "Kur'an" })}</Text>
+          </TouchableOpacity>
           <TouchableOpacity
             style={[styles.quickAccessItem, { backgroundColor: colors.surface }, Shadows.light]}
             onPress={() => router.push('/mosques')}
