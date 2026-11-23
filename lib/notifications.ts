@@ -473,7 +473,8 @@ export async function scheduleMiddayInspirationReminder() {
 // Prayer times shift every day, so one repeating "daily at HH:MM" notification drifts
 // (by ~30 min over a month). Each of the next days gets its own dated notification;
 // opening the app reschedules the window. iOS allows only 64 pending notifications.
-const PRAYER_DAYS_AHEAD = Platform.OS === 'ios' ? 3 : 7;
+// Android keeps up to ~500 alarms per app: 21 days x 6 prayers x (alert + pre-reminder) = 252.
+const PRAYER_DAYS_AHEAD = Platform.OS === 'ios' ? 3 : 21;
 
 export async function scheduleAllPrayers(
   getTimes: (date: Date) => PrayerTimes,

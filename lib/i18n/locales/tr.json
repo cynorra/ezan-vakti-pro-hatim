@@ -230,7 +230,8 @@
   "quickAccess": {
     "mosques": "Yakın Camiler",
     "zekat": "Zekat Hesapla",
-    "abdest": "Abdest Rehberi"
+    "abdest": "Abdest Rehberi",
+    "quran": "Kur'an"
   },
   "location": {
     "selectCity": "Şehir Seç",
@@ -306,5 +307,34 @@
       "dhikr": "Zikirler",
       "charity": "İyilik/Sadaka"
     }
+  },
+  "reliability": {
+    "exactTitle": "Ezan tam vaktinde okunsun",
+    "exactBody": "Ezanın tam namaz vaktinde çalabilmesi için bir sonraki ekranda bu uygulama için \"Alarmlar ve hatırlatıcılar\" iznini açın.",
+    "batteryTitle": "Ezanın aksamaması için",
+    "batteryBody": "Bazı telefonlar pil tasarrufu için alarmları geciktirir. Listede bu uygulamayı bulup \"Optimize etme\" / \"Kısıtlama yok\" seçeneğini seçin.",
+    "openSettings": "Ayarları aç",
+    "later": "Sonra"
+  },
+  "quran": {
+    "title": "Kur'an-ı Kerim",
+    "resume": "Kaldığın yerden devam et",
+    "ayah": "Ayet",
+    "surahs": "Sureler",
+    "juz": "Cüzler",
+    "juzOne": "Cüz",
+    "bookmarks": "Yer İmleri",
+    "search": "Sure ara (isim veya numara)",
+    "meccan": "Mekki",
+    "medinan": "Medeni",
+    "noBookmarks": "Henüz yer imi yok. Okurken bir ayetin yer imi simgesine dokunun.",
+    "prev": "Önceki sure",
+    "next": "Sonraki sure",
+    "smaller": "Yazıyı küçült",
+    "larger": "Yazıyı büyüt",
+    "translation": "Meal",
+    "share": "Paylaş",
+    "bookmark": "Yer imi",
+    "credit": "Arapça metin: Tanzil Projesi (tanzil.net), Osmani. Meal: Elmalılı Muhammed Hamdi Yazır."
   }
 }
