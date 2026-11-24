@@ -55,10 +55,10 @@ export const BannerAd: React.FC<BannerAdProps> = ({
         {
           maxWidth: width,
           overflow: 'hidden',
-          opacity: isLoaded ? 1 : 0,
-          height: isLoaded ? undefined : 0,
         },
-        isLoaded ? style : null,
+        // Until an ad has loaded the banner keeps a real size (the SDK does not request into a
+        // zero-height view) but is invisible and takes no layout space.
+        isLoaded ? style : styles.pending,
       ]}
     >
       <AdMobBanner
@@ -81,6 +81,13 @@ export const BannerAd: React.FC<BannerAdProps> = ({
 };
 
 const styles = StyleSheet.create({
+  pending: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    height: 60,
+    opacity: 0,
+  },
   container: {
     alignItems: 'center',
     justifyContent: 'center',
