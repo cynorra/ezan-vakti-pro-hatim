@@ -54,6 +54,9 @@ export interface EzanChannelConfig {
   sound: string;
 }
 
+// Calm chime for the "X minutes before the prayer" reminder (synthesised, no licensing issue).
+export const REMINDER_CHANNEL = { id: 'prayer-reminder', name: 'Vakit Öncesi Hatırlatma', sound: 'prayer_reminder.mp3' };
+
 export const EZAN_CHANNELS: Record<string, EzanChannelConfig> = {
   [SOFT_SOUND]: { id: 'prayer-soft', name: 'Hafif Bildirim', sound: 'default' },
   [SILENT_SOUND]: { id: 'prayer-silent', name: 'Sessiz', sound: '' },
@@ -116,6 +119,19 @@ export async function configureNotificationChannel() {
     lightColor: '#D4AF37',
     sound: 'default',
   });
+
+  try {
+    await Notifications.setNotificationChannelAsync(REMINDER_CHANNEL.id, {
+      name: REMINDER_CHANNEL.name,
+      importance: Notifications.AndroidImportance.DEFAULT,
+      vibrationPattern: [0, 120],
+      lightColor: '#0d7a3e',
+      sound: REMINDER_CHANNEL.sound,
+      lockscreenVisibility: Notifications.AndroidNotificationVisibility.PUBLIC,
+    });
+  } catch (err) {
+    console.warn('[notifications] failed to create reminder channel:', err);
+  }
 
   // Ezan seslerine özel yüksek öncelikli bildirim kanalları
   for (const config of Object.values(EZAN_CHANNELS)) {
@@ -271,7 +287,7 @@ async function schedulePrayerNotification(
   const isGentleMode = selectedConfig.id === 'prayer-soft' || selectedConfig.id === 'prayer-silent';
   // Adhan recordings only for the five prayers; sunrise and every gentle mode use the calm channel.
   const ezanConfig = isEzanPrayer || isGentleMode ? selectedConfig : EZAN_CHANNELS[SOFT_SOUND];
-  const reminderConfig = isGentleMode ? selectedConfig : EZAN_CHANNELS[SOFT_SOUND];
+  const reminderConfig = selectedConfig.id === 'prayer-silent' ? selectedConfig : REMINDER_CHANNEL;
 
   if (at.getTime() > now) {
     await safeSchedule({

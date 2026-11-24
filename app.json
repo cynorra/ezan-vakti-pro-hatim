@@ -57,7 +57,8 @@
             "./assets/sounds/ezan_istanbul.mp3",
             "./assets/sounds/ezan_mekke.mp3",
             "./assets/sounds/ezan_medine.mp3",
-            "./assets/sounds/ezan_misir.mp3"
+            "./assets/sounds/ezan_misir.mp3",
+            "./assets/sounds/prayer_reminder.mp3"
           ]
         }
       ],
