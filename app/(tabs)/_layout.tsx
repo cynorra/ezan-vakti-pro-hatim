@@ -18,9 +18,8 @@ export default function TabLayout() {
     initializeAds();
   }, []);
 
-  const tabBarHeight = Platform.OS === 'ios'
-    ? (insets.bottom > 0 ? 60 + insets.bottom : 88)
-    : (60 + insets.bottom);
+  const bottomInset = insets.bottom > 0 ? insets.bottom : (Platform.OS === 'ios' ? 24 : 8);
+  const tabBarHeight = 62 + bottomInset;
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.background }}>
@@ -28,26 +27,28 @@ export default function TabLayout() {
         screenOptions={{
           tabBarActiveTintColor: colors.primary,
           tabBarInactiveTintColor: colors.textMuted,
-          headerShown: false, // Sayfa içlerinde özel header kullanacağız
+          headerShown: false,
+          tabBarHideOnKeyboard: true,
           tabBarStyle: {
             backgroundColor: colors.surface,
-            borderTopWidth: 0,
+            borderTopWidth: 1,
+            borderTopColor: colors.border,
             height: tabBarHeight,
-            paddingBottom: insets.bottom > 0 ? insets.bottom : (Platform.OS === 'ios' ? 28 : 12),
-            paddingTop: 12,
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
+            paddingBottom: bottomInset,
+            paddingTop: 8,
             ...Shadows.medium,
+            elevation: 16,
+            zIndex: 50,
+          },
+          tabBarItemStyle: {
+            paddingVertical: 2,
           },
           tabBarLabelStyle: {
             fontSize: 10,
             fontWeight: '700',
-            marginTop: 4,
+            marginTop: 2,
             textTransform: 'uppercase',
-            letterSpacing: 0.5,
-            paddingBottom: Platform.OS === 'android' && insets.bottom > 0 ? 4 : 0,
+            letterSpacing: 0.4,
           },
         }}
       >
@@ -107,13 +108,14 @@ export default function TabLayout() {
         />
       </Tabs>
       <View
+        pointerEvents="box-none"
         style={{
           position: 'absolute',
           bottom: tabBarHeight,
           left: 0,
           right: 0,
           backgroundColor: 'transparent',
-          zIndex: 99,
+          zIndex: 10,
         }}
       >
         <BannerAd />

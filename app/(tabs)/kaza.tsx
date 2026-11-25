@@ -19,6 +19,7 @@ import { SEOHead } from '@/components/SEOHead';
 import { useTranslation } from 'react-i18next';
 import { logEvent } from '@/lib/analytics';
 import { PLAY_STORE_URL } from '@/lib/share';
+import { InlineBanner } from '@/components/InlineBanner';
 
 interface KazaData {
   sabah: number;
@@ -145,21 +146,21 @@ export default function KazaScreen() {
           </View>
           <Text style={[styles.prayerName, { color: colors.text }]}>{title}</Text>
         </View>
-        
+
         <View style={styles.counterSection}>
-          <TouchableOpacity 
+          <TouchableOpacity
             activeOpacity={0.7}
-            style={[styles.btn, { backgroundColor: colors.background }]} 
+            style={[styles.btn, { backgroundColor: colors.background }]}
             onPress={() => updateCount(key, -1)}
           >
             <Ionicons name="remove" size={24} color={colors.error || '#e74c3c'} />
           </TouchableOpacity>
-          
+
           <Text style={[styles.countText, { color: colors.primary }]}>{kazaData[key]}</Text>
-          
-          <TouchableOpacity 
+
+          <TouchableOpacity
             activeOpacity={0.7}
-            style={[styles.btn, { backgroundColor: colors.background }]} 
+            style={[styles.btn, { backgroundColor: colors.background }]}
             onPress={() => updateCount(key, 1)}
           >
             <Ionicons name="add" size={24} color={colors.success || '#2ecc71'} />
@@ -173,7 +174,7 @@ export default function KazaScreen() {
 
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title="Kaza Namazı Takipçisi | Ezan Vakti ve Hatim"
         description="Kılınmamış kaza namazlarınızı kaydedin ve takip edin. Sabah, öğle, ikindi, akşam, yatsı ve vitir kaza hesaplama."
       />
@@ -183,8 +184,8 @@ export default function KazaScreen() {
           <Text style={styles.headerSubtitle}>{t('kaza.subtitle') || 'Kılınmamış Namazların Takibi'}</Text>
         </LinearGradient>
 
-        <ScrollView 
-          style={styles.mainContent} 
+        <ScrollView
+          style={styles.mainContent}
           contentContainerStyle={styles.scrollContent}
           showsVerticalScrollIndicator={false}
         >
@@ -231,7 +232,8 @@ export default function KazaScreen() {
           {renderPrayerCard('aksam', t('kaza.aksam') || 'Akşam', 'moon-outline')}
           {renderPrayerCard('yatsi', t('kaza.yatsi') || 'Yatsı', 'star-outline')}
           {renderPrayerCard('vitir', t('kaza.vitir') || 'Vitir', 'heart-outline')}
-          
+
+          <InlineBanner />
           <View style={{ height: 100 }} />
         </ScrollView>
       </View>

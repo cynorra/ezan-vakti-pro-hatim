@@ -1,4 +1,4 @@
-﻿name: Daily AI Content Generator (Dua & Ayet)
+name: Daily AI Content Generator (Dua & Ayet)
 
 on:
   schedule:

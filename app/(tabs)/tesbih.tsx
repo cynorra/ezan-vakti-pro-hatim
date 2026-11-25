@@ -24,6 +24,7 @@ import { SEOHead } from '@/components/SEOHead';
 import { logTesbihStarted, logEvent } from '@/lib/analytics';
 import { useTranslation } from 'react-i18next';
 import { showInterstitialIfDue } from '@/lib/ads';
+import { InlineBanner } from '@/components/InlineBanner';
 
 interface Dhikr {
   id: string;
@@ -310,6 +311,7 @@ export default function TesbihScreen() {
             ))}
           </ScrollView>
         </View>
+        <InlineBanner />
         <View style={{ height: 100 }} />
       </ScrollView>
 

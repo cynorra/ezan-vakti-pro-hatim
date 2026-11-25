@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { View, StyleSheet, Platform, useWindowDimensions, ViewStyle } from 'react-native';
 import { BannerAd as AdMobBanner, BannerAdSize } from 'react-native-google-mobile-ads';
+import { initializeAds, onAdsReady } from '@/lib/ads';
 
 // Official Live AdMob Banner IDs directly from .env with fallback to real registered unit ID
 const LIVE_BANNER_AD_UNIT_ID = Platform.select({
@@ -29,35 +30,45 @@ export const BannerAd: React.FC<BannerAdProps> = ({
   style,
 }) => {
   const { width } = useWindowDimensions();
+  const [sdkReady, setSdkReady] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [reloadKey, setReloadKey] = useState(0);
+  const retryTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // If ad encounters a transient error or no-fill, retry gracefully after 30s instead of permanently hiding
+  useEffect(() => {
+    initializeAds();
+    const unsub = onAdsReady(() => setSdkReady(true));
+    return () => {
+      unsub();
+      if (retryTimer.current) clearTimeout(retryTimer.current);
+    };
+  }, []);
+
+  // If ad encounters a transient error or no-fill, retry gracefully after 25s
   const handleAdFailedToLoad = (error: any) => {
     if (__DEV__) {
       console.log('[AdMob Banner Load Error]:', error);
     }
     setIsLoaded(false);
-    const timer = setTimeout(() => {
+    if (retryTimer.current) clearTimeout(retryTimer.current);
+    retryTimer.current = setTimeout(() => {
       setReloadKey((k) => k + 1);
-    }, 30000);
-    return () => clearTimeout(timer);
+    }, 25000);
   };
 
-  if (!BANNER_AD_UNIT_ID || width === 0) {
+  if (Platform.OS === 'web' || !BANNER_AD_UNIT_ID || width === 0 || !sdkReady) {
     return null;
   }
 
   return (
     <View
+      pointerEvents={isLoaded ? 'auto' : 'none'}
       style={[
         styles.container,
         {
           maxWidth: width,
           overflow: 'hidden',
         },
-        // Until an ad has loaded the banner keeps a real size (the SDK does not request into a
-        // zero-height view) but is invisible and takes no layout space.
         isLoaded ? style : styles.pending,
       ]}
     >
@@ -82,10 +93,7 @@ export const BannerAd: React.FC<BannerAdProps> = ({
 
 const styles = StyleSheet.create({
   pending: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    height: 60,
+    height: 1,
     opacity: 0,
   },
   container: {

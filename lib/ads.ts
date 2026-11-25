@@ -42,43 +42,78 @@ const withTimeout = <T>(promise: Promise<T>, ms: number): Promise<T> =>
     ),
   ]);
 
-export const initializeAds = async (): Promise<boolean> => {
-  try {
-    // 1. Request consent info update (Google User Messaging Platform)
-    const consentInfo = await withTimeout(
-      AdsConsent.requestInfoUpdate({ tagForUnderAgeOfConsent: false }),
-      8000
-    );
+let adsInitialized = false;
+let initPromise: Promise<boolean> | null = null;
+const readyListeners = new Set<() => void>();
 
-    // 2. If consent form is available and required, show the form to the user
-    if (consentInfo.isConsentFormAvailable && consentInfo.status === 'REQUIRED') {
-      await AdsConsent.showForm();
-    }
+export const onAdsReady = (cb: () => void): (() => void) => {
+  if (adsInitialized) {
+    cb();
+    return () => {};
+  }
+  readyListeners.add(cb);
+  return () => {
+    readyListeners.delete(cb);
+  };
+};
 
-    // 3. Configure Mobile Ads settings
-    await mobileAds().setRequestConfiguration({
-      maxAdContentRating: MaxAdContentRating.G,
-      tagForChildDirectedTreatment: false,
-      tagForUnderAgeOfConsent: false,
-    });
-
-    // 4. Initialize the Mobile Ads SDK
-    await mobileAds().initialize();
-
-    // 5. Preload the first interstitial ad in the background
-    loadInterstitialAd();
-
-    return true;
-  } catch (error) {
-    // Attempt fallback initialization of Mobile Ads directly in case UMP fails (e.g. offline)
+const notifyAdsReady = () => {
+  adsInitialized = true;
+  readyListeners.forEach((cb) => {
     try {
+      cb();
+    } catch {}
+  });
+  readyListeners.clear();
+};
+
+export const initializeAds = async (): Promise<boolean> => {
+  if (adsInitialized) return true;
+  if (initPromise) return initPromise;
+
+  initPromise = (async () => {
+    try {
+      // 1. Configure Mobile Ads settings first
+      await mobileAds()
+        .setRequestConfiguration({
+          maxAdContentRating: MaxAdContentRating.G,
+          tagForChildDirectedTreatment: false,
+          tagForUnderAgeOfConsent: false,
+        })
+        .catch(() => {});
+
+      // 2. Request consent info update (Google User Messaging Platform) with timeout
+      try {
+        const consentInfo = await withTimeout(
+          AdsConsent.requestInfoUpdate({ tagForUnderAgeOfConsent: false }),
+          5000
+        );
+        if (consentInfo.isConsentFormAvailable && consentInfo.status === 'REQUIRED') {
+          await withTimeout(AdsConsent.showForm(), 10000);
+        }
+      } catch (_consentError) {
+        // Proceed with initialization even if UMP is not configured or times out
+      }
+
+      // 3. Initialize the Mobile Ads SDK
       await withTimeout(mobileAds().initialize(), 8000);
+      notifyAdsReady();
+
+      // 4. Preload the first interstitial ad in the background
       loadInterstitialAd();
+
       return true;
-    } catch (_fallbackError) {
+    } catch (_error) {
+      try {
+        await mobileAds().initialize();
+      } catch {}
+      notifyAdsReady();
+      loadInterstitialAd();
       return false;
     }
-  }
+  })();
+
+  return initPromise;
 };
 
 /**

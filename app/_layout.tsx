@@ -18,6 +18,13 @@ export default function RootLayout() {
   const [showSplash, setShowSplash] = useState(true);
   const router = useRouter();
 
+  // Safety fallback: ensure splash overlay is always unmounted even if animation is interrupted
+  useEffect(() => {
+    if (!showSplash) return;
+    const t = setTimeout(() => setShowSplash(false), 3500);
+    return () => clearTimeout(t);
+  }, [showSplash]);
+
   useEffect(() => {
     const openFromNotification = (response: Notifications.NotificationResponse | null) => {
       if (!response) return;

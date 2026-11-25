@@ -1,0 +1,522 @@
+<en-US>
+• New: offline Quran reader with Turkish meaning, bookmarks and adjustable text size
+• Gentler prayer alerts by default: soft, silent or adhan sound, plus a calm chime before prayer time
+• More reliable adhan: easy prompts to allow exact alarms and unrestricted battery
+• Improvements and fixes
+</en-US>
+<af>
+• Nuut: Koran-leser sonder internet met Turkse betekenis, boekmerke en verstelbare teksgrootte
+• Sagter gebedskennisgewings by verstek: sag, stil of adhan-klank, plus 'n kalm klokkie voor gebedstyd
+• Meer betroubare adhan: maklike aanwysings vir presiese alarms en onbeperkte battery
+• Verbeterings en regstellings
+</af>
+<am>
+• አዲስ፦ ያለ ኢንተርኔት የሚሰራ ቁርዓን አንባቢ ከቱርክኛ ትርጉም፣ ዕልባቶችና የሚስተካከል የጽሑፍ መጠን ጋር
+• በነባሪ ለስላሳ የሶላት ማሳወቂያዎች፦ ለስላሳ፣ ዝምታ ወይም አዛን፤ ከሶላት ጊዜ በፊት የሚሰማ ረጋ ያለ ደወል
+• የበለጠ አስተማማኝ አዛን፦ ትክክለኛ ማንቂያዎችንና ያልተገደበ ባትሪን ለመፍቀድ ቀላል መመሪያ
+• ማሻሻያዎችና ጥገናዎች
+</am>
+<ar>
+• جديد: قارئ قرآن بدون إنترنت مع المعنى بالتركية والعلامات المرجعية وحجم خط قابل للتعديل
+• تنبيهات صلاة أهدأ افتراضيًا: صوت خفيف أو صامت أو الأذان، مع نغمة هادئة قبل وقت الصلاة
+• أذان أكثر موثوقية: إرشادات سهلة للسماح بالمنبهات الدقيقة وبطارية غير مقيّدة
+• تحسينات وإصلاحات
+</ar>
+<az-AZ>
+• Yeni: internetsiz Quran oxuyucu, türkcə mənalar, əlfəcinlər və tənzimlənən yazı ölçüsü
+• Susmaya görə daha sakit namaz bildirişləri: yüngül, səssiz və ya azan səsi, həmçinin namaz vaxtından əvvəl sakit zəng
+• Daha etibarlı azan: dəqiq həyəcan siqnalı və məhdudiyyətsiz batareya üçün asan yönləndirmə
+• Təkmilləşdirmələr və düzəlişlər
+</az-AZ>
+<be>
+• Новае: чытальнік Карана без інтэрнэту з турэцкім перакладам, закладкамі і наладжвальным памерам тэксту
+• Па змаўчанні спакайнейшыя апавяшчэнні пра намаз: ціхі сігнал, бязгучны рэжым або азан, плюс мяккі гук перад часам малітвы
+• Больш надзейны азан: простыя падказкі, каб дазволіць дакладныя будзільнікі і працу без абмежавання батарэі
+• Паляпшэнні і выпраўленні
+</be>
+<bg>
+• Ново: четец на Корана без интернет с турски превод, отметки и регулируем размер на текста
+• По-спокойни известия за молитва по подразбиране: тих сигнал, без звук или азан, плюс нежен звън преди времето за молитва
+• По-надежден азан: лесни подсказки за разрешаване на точни аларми и неограничена батерия
+• Подобрения и поправки
+</bg>
+<bn-BD>
+• নতুন: ইন্টারনেট ছাড়া কুরআন পাঠ, তুর্কি অনুবাদ, বুকমার্ক ও পরিবর্তনযোগ্য লেখার আকার
+• ডিফল্টভাবে আরও শান্ত নামাজের বিজ্ঞপ্তি: হালকা, নীরব বা আজান, সঙ্গে নামাজের আগে একটি শান্ত ঘণ্টা
+• আরও নির্ভরযোগ্য আজান: সঠিক অ্যালার্ম ও সীমাহীন ব্যাটারির অনুমতির সহজ নির্দেশনা
+• উন্নতি ও সমাধান
+</bn-BD>
+<ca>
+• Novetat: lector de l'Alcorà sense connexió amb significat en turc, marcadors i mida de text ajustable
+• Avisos de pregària més suaus per defecte: so suau, silenci o adhan, i un so tranquil abans de l'hora de la pregària
+• Adhan més fiable: indicacions senzilles per permetre alarmes exactes i bateria sense restriccions
+• Millores i correccions
+</ca>
+<cs-CZ>
+• Novinka: Korán offline s tureckým překladem, záložkami a nastavitelnou velikostí písma
+• Klidnější upozornění na modlitbu ve výchozím nastavení: jemný zvuk, ticho nebo azán a uklidňující zvonění před časem modlitby
+• Spolehlivější azán: snadné pokyny k povolení přesných budíků a neomezené baterie
+• Vylepšení a opravy
+</cs-CZ>
+<da-DK>
+• Nyt: Koran-læser uden internet med tyrkisk betydning, bogmærker og justerbar tekststørrelse
+• Mildere bedeadvarsler som standard: blød lyd, lydløs eller adhan samt en rolig klokke før bedetiden
+• Mere pålidelig adhan: nemme vejledninger til at tillade præcise alarmer og ubegrænset batteri
+• Forbedringer og rettelser
+</da-DK>
+<de-DE>
+• Neu: Koran-Leser ohne Internet mit türkischer Bedeutung, Lesezeichen und einstellbarer Schriftgröße
+• Sanftere Gebetsbenachrichtigungen als Standard: leiser Ton, stumm oder Adhan sowie ein ruhiger Gong vor der Gebetszeit
+• Zuverlässigerer Adhan: einfache Hinweise, um exakte Alarme und uneingeschränkten Akku zu erlauben
+• Verbesserungen und Fehlerbehebungen
+</de-DE>
+<el-GR>
+• Νέο: αναγνώστης του Κορανίου χωρίς διαδίκτυο με τουρκική μετάφραση, σελιδοδείκτες και ρυθμιζόμενο μέγεθος κειμένου
+• Πιο ήπιες ειδοποιήσεις προσευχής από προεπιλογή: απαλός ήχος, σίγαση ή αντάν, και ένας ήρεμος ήχος πριν την ώρα προσευχής
+• Πιο αξιόπιστο αντάν: εύκολες οδηγίες για ακριβή ξυπνητήρια και απεριόριστη μπαταρία
+• Βελτιώσεις και διορθώσεις
+</el-GR>
+<en-AU>
+• New: offline Quran reader with Turkish meaning, bookmarks and adjustable text size
+• Gentler prayer alerts by default: soft, silent or adhan sound, plus a calm chime before prayer time
+• More reliable adhan: easy prompts to allow exact alarms and unrestricted battery
+• Improvements and fixes
+</en-AU>
+<en-CA>
+• New: offline Quran reader with Turkish meaning, bookmarks and adjustable text size
+• Gentler prayer alerts by default: soft, silent or adhan sound, plus a calm chime before prayer time
+• More reliable adhan: easy prompts to allow exact alarms and unrestricted battery
+• Improvements and fixes
+</en-CA>
+<en-GB>
+• New: offline Quran reader with Turkish meaning, bookmarks and adjustable text size
+• Gentler prayer alerts by default: soft, silent or adhan sound, plus a calm chime before prayer time
+• More reliable adhan: easy prompts to allow exact alarms and unrestricted battery
+• Improvements and fixes
+</en-GB>
+<en-IN>
+• New: offline Quran reader with Turkish meaning, bookmarks and adjustable text size
+• Gentler prayer alerts by default: soft, silent or adhan sound, plus a calm chime before prayer time
+• More reliable adhan: easy prompts to allow exact alarms and unrestricted battery
+• Improvements and fixes
+</en-IN>
+<en-SG>
+• New: offline Quran reader with Turkish meaning, bookmarks and adjustable text size
+• Gentler prayer alerts by default: soft, silent or adhan sound, plus a calm chime before prayer time
+• More reliable adhan: easy prompts to allow exact alarms and unrestricted battery
+• Improvements and fixes
+</en-SG>
+<en-ZA>
+• New: offline Quran reader with Turkish meaning, bookmarks and adjustable text size
+• Gentler prayer alerts by default: soft, silent or adhan sound, plus a calm chime before prayer time
+• More reliable adhan: easy prompts to allow exact alarms and unrestricted battery
+• Improvements and fixes
+</en-ZA>
+<es-419>
+• Novedad: lector del Corán sin conexión con significado en turco, marcadores y tamaño de texto ajustable
+• Avisos de oración más suaves por defecto: sonido suave, silencio o adhan, y un tono tranquilo antes de la hora de oración
+• Adhan más fiable: indicaciones sencillas para permitir alarmas exactas y batería sin restricciones
+• Mejoras y correcciones
+</es-419>
+<es-ES>
+• Novedad: lector del Corán sin conexión con significado en turco, marcadores y tamaño de texto ajustable
+• Avisos de oración más suaves por defecto: sonido suave, silencio o adhan, y un tono tranquilo antes de la hora de oración
+• Adhan más fiable: indicaciones sencillas para permitir alarmas exactas y batería sin restricciones
+• Mejoras y correcciones
+</es-ES>
+<es-US>
+• Novedad: lector del Corán sin conexión con significado en turco, marcadores y tamaño de texto ajustable
+• Avisos de oración más suaves por defecto: sonido suave, silencio o adhan, y un tono tranquilo antes de la hora de oración
+• Adhan más fiable: indicaciones sencillas para permitir alarmas exactas y batería sin restricciones
+• Mejoras y correcciones
+</es-US>
+<et>
+• Uus: Koraani lugeja ilma internetita türgi tähendusega, järjehoidjate ja reguleeritava teksti suurusega
+• Vaikimisi rahulikumad palveteavitused: pehme heli, vaikne või adhan ning rahulik kõlin enne palveaega
+• Usaldusväärsem adhan: lihtsad juhised täpsete äratuste ja piiranguteta aku lubamiseks
+• Täiustused ja parandused
+</et>
+<eu-ES>
+• Berria: Koran irakurgailua Interneterik gabe, turkierazko esanahiarekin, laster-markekin eta testu-tamaina doigarriarekin
+• Lehenespenez otoitz-jakinarazpen leunagoak: soinu leuna, isilik edo adhan, eta otoitz-ordua baino lehen kanpai lasaia
+• Adhan fidagarriagoa: alarma zehatzak eta bateria mugarik gabe baimentzeko jarraibide errazak
+• Hobekuntzak eta konponketak
+</eu-ES>
+<fa>
+• جدید: قرآن‌خوان آفلاین با ترجمه ترکی، نشانک‌ها و اندازه متن قابل تنظیم
+• اعلان‌های آرام‌تر نماز به‌صورت پیش‌فرض: صدای ملایم، بی‌صدا یا اذان، به‌علاوه زنگ آرام پیش از وقت نماز
+• اذان قابل‌اعتمادتر: راهنمای ساده برای اجازه دادن به آلارم‌های دقیق و باتری بدون محدودیت
+• بهبودها و رفع اشکال‌ها
+</fa>
+<fa-AE>
+• جدید: قرآن‌خوان آفلاین با ترجمه ترکی، نشانک‌ها و اندازه متن قابل تنظیم
+• اعلان‌های آرام‌تر نماز به‌صورت پیش‌فرض: صدای ملایم، بی‌صدا یا اذان، به‌علاوه زنگ آرام پیش از وقت نماز
+• اذان قابل‌اعتمادتر: راهنمای ساده برای اجازه دادن به آلارم‌های دقیق و باتری بدون محدودیت
+• بهبودها و رفع اشکال‌ها
+</fa-AE>
+<fa-AF>
+• جدید: قرآن‌خوان آفلاین با ترجمه ترکی، نشانک‌ها و اندازه متن قابل تنظیم
+• اعلان‌های آرام‌تر نماز به‌صورت پیش‌فرض: صدای ملایم، بی‌صدا یا اذان، به‌علاوه زنگ آرام پیش از وقت نماز
+• اذان قابل‌اعتمادتر: راهنمای ساده برای اجازه دادن به آلارم‌های دقیق و باتری بدون محدودیت
+• بهبودها و رفع اشکال‌ها
+</fa-AF>
+<fa-IR>
+• جدید: قرآن‌خوان آفلاین با ترجمه ترکی، نشانک‌ها و اندازه متن قابل تنظیم
+• اعلان‌های آرام‌تر نماز به‌صورت پیش‌فرض: صدای ملایم، بی‌صدا یا اذان، به‌علاوه زنگ آرام پیش از وقت نماز
+• اذان قابل‌اعتمادتر: راهنمای ساده برای اجازه دادن به آلارم‌های دقیق و باتری بدون محدودیت
+• بهبودها و رفع اشکال‌ها
+</fa-IR>
+<fi-FI>
+• Uutta: Koraanin lukija ilman verkkoyhteyttä turkinkielisellä merkityksellä, kirjanmerkeillä ja säädettävällä tekstikoolla
+• Oletuksena rauhallisemmat rukoushälytykset: hiljainen ääni, mykistys tai adhan sekä rauhallinen soitto ennen rukousaikaa
+• Luotettavampi adhan: helpot ohjeet tarkkojen hälytysten ja rajoittamattoman akun sallimiseen
+• Parannuksia ja korjauksia
+</fi-FI>
+<fil>
+• Bago: offline na Quran reader na may kahulugang Turkish, mga bookmark at naaayos na laki ng teksto
+• Mas banayad na mga abiso sa panalangin bilang default: malambot, tahimik o adhan, kasama ang kalmadong tunog bago ang oras ng panalangin
+• Mas maaasahang adhan: madaling gabay para payagan ang eksaktong alarm at walang limitasyong baterya
+• Mga pagpapabuti at pag-aayos
+</fil>
+<fr-CA>
+• Nouveau : lecteur du Coran hors ligne avec sens en turc, signets et taille de texte réglable
+• Alertes de prière plus douces par défaut : son léger, silence ou adhan, plus une sonnerie apaisante avant l'heure de la prière
+• Adhan plus fiable : invites simples pour autoriser les alarmes exactes et la batterie sans restriction
+• Améliorations et corrections
+</fr-CA>
+<fr-FR>
+• Nouveau : lecteur du Coran hors ligne avec sens en turc, signets et taille de texte réglable
+• Alertes de prière plus douces par défaut : son léger, silence ou adhan, plus une sonnerie apaisante avant l'heure de la prière
+• Adhan plus fiable : invites simples pour autoriser les alarmes exactes et la batterie sans restriction
+• Améliorations et corrections
+</fr-FR>
+<gl-ES>
+• Novidade: lector do Corán sen conexión con significado en turco, marcadores e tamaño de texto axustable
+• Avisos de oración máis suaves por defecto: son suave, silencio ou adhan, e un son tranquilo antes da hora de oración
+• Adhan máis fiable: indicacións sinxelas para permitir alarmas exactas e batería sen restricións
+• Melloras e correccións
+</gl-ES>
+<gu>
+• નવું: ઇન્ટરનેટ વિના કુરાન રીડર, તુર્કી અર્થ, બુકમાર્ક અને બદલી શકાય તેવા અક્ષરનું કદ
+• ડિફોલ્ટ રૂપે વધુ શાંત નમાઝ સૂચનાઓ: હળવો અવાજ, મૌન અથવા અઝાન, સાથે નમાઝના સમય પહેલાં શાંત ઘંટડી
+• વધુ ભરોસાપાત્ર અઝાન: ચોક્કસ એલાર્મ અને અમર્યાદિત બેટરીની મંજૂરી માટે સરળ માર્ગદર્શન
+• સુધારાઓ અને ફિક્સ
+</gu>
+<hi-IN>
+• नया: बिना इंटरनेट कुरआन रीडर, तुर्की अर्थ, बुकमार्क और बदलने योग्य टेक्स्ट आकार
+• डिफ़ॉल्ट रूप से अधिक शांत नमाज़ अलर्ट: हल्की आवाज़, मौन या अज़ान, साथ में नमाज़ से पहले एक शांत घंटी
+• ज़्यादा भरोसेमंद अज़ान: सटीक अलार्म और असीमित बैटरी की अनुमति के लिए आसान निर्देश
+• सुधार और बग फ़िक्स
+</hi-IN>
+<hr>
+• Novo: čitač Kurana bez interneta s turskim značenjem, oznakama i podesivom veličinom teksta
+• Mirnije obavijesti o molitvi prema zadanim postavkama: tihi zvuk, bez zvuka ili ezan te mirno zvonjenje prije vremena molitve
+• Pouzdaniji ezan: jednostavne upute za dopuštanje točnih alarma i neograničene baterije
+• Poboljšanja i ispravci
+</hr>
+<hu-HU>
+• Új: internet nélküli Korán-olvasó török jelentéssel, könyvjelzőkkel és állítható szövegmérettel
+• Alapértelmezetten nyugodtabb imaértesítések: halk hang, néma vagy azán, valamint egy nyugodt csengés az imaidő előtt
+• Megbízhatóbb azán: egyszerű útmutató a pontos ébresztők és a korlátlan akkumulátor engedélyezéséhez
+• Fejlesztések és javítások
+</hu-HU>
+<hy-AM>
+• Նոր․ առանց ինտերնետի Ղուրանի ընթերցիչ թուրքերեն իմաստով, էջանիշերով և կարգավորվող տառաչափով
+• Լռելյայն ավելի հանգիստ աղոթքի ծանուցումներ․ մեղմ ձայն, անձայն կամ ազան, ինչպես նաև հանգիստ զանգ աղոթքի ժամից առաջ
+• Ավելի հուսալի ազան․ պարզ հուշումներ ճշգրիտ զարթուցիչների և անսահմանափակ մարտկոցի թույլտվության համար
+• Բարելավումներ և ուղղումներ
+</hy-AM>
+<id>
+• Baru: pembaca Al-Qur'an offline dengan arti bahasa Turki, penanda, dan ukuran teks yang dapat diatur
+• Pemberitahuan salat yang lebih lembut secara default: suara halus, senyap, atau azan, plus lonceng tenang sebelum waktu salat
+• Azan lebih andal: panduan mudah untuk mengizinkan alarm tepat dan baterai tanpa batasan
+• Peningkatan dan perbaikan
+</id>
+<is-IS>
+• Nýtt: Kóranlesari án nettengingar með tyrkneskri merkingu, bókamerkjum og stillanlegri textastærð
+• Mildari bænatilkynningar sjálfgefið: mjúkt hljóð, þögn eða aðan, auk rólegrar bjöllu fyrir bænastund
+• Áreiðanlegri aðan: einfaldar leiðbeiningar til að leyfa nákvæm vekjara og ótakmarkaða rafhlöðu
+• Endurbætur og lagfæringar
+</is-IS>
+<it-IT>
+• Novità: lettore del Corano offline con significato in turco, segnalibri e dimensione del testo regolabile
+• Avvisi di preghiera più delicati per impostazione predefinita: suono leggero, silenzioso o adhan, più un suono calmo prima dell'ora di preghiera
+• Adhan più affidabile: indicazioni semplici per consentire sveglie esatte e batteria senza restrizioni
+• Miglioramenti e correzioni
+</it-IT>
+<iw-IL>
+• חדש: קורא קוראן ללא חיבור לאינטרנט עם פירוש בטורקית, סימניות וגודל טקסט מותאם
+• התראות תפילה עדינות יותר כברירת מחדל: צליל קל, שקט או אדאן, וצלצול רגוע לפני זמן התפילה
+• אדאן אמין יותר: הנחיות פשוטות לאישור התראות מדויקות וסוללה ללא הגבלה
+• שיפורים ותיקונים
+</iw-IL>
+<ja-JP>
+• 新機能：オフラインで読めるクルアーン（トルコ語の意味付き）、しおり、文字サイズ調整
+• 礼拝の通知を標準でより穏やかに：やさしい音、無音、またはアザーン。礼拝時刻の前には落ち着いたチャイム
+• アザーンの信頼性を向上：正確なアラームとバッテリー制限なしを許可するための簡単なご案内
+• 改善と不具合の修正
+</ja-JP>
+<ka-GE>
+• ახალი: ყურანის წამკითხველი ინტერნეტის გარეშე თურქული განმარტებით, სანიშნებითა და რეგულირებადი ტექსტის ზომით
+• ნაგულისხმევად უფრო მშვიდი ლოცვის შეტყობინებები: რბილი ხმა, უხმო ან აზანი, ასევე მშვიდი ზარი ლოცვის დრომდე
+• უფრო საიმედო აზანი: მარტივი მითითებები ზუსტი მაღვიძარებისა და შეუზღუდავი ბატარეის დასაშვებად
+• გაუმჯობესებები და შესწორებები
+</ka-GE>
+<kk>
+• Жаңа: интернетсіз Құран оқу құралы, түрікше мағынасы, бетбелгілер және реттелетін мәтін өлшемі
+• Әдепкі бойынша тыныштау намаз хабарландырулары: жұмсақ дыбыс, үнсіз немесе азан, сондай-ақ намаз уақытына дейін тыныш қоңырау
+• Сенімдірек азан: дәл оятқыштар мен шектеусіз батареяға рұқсат беруге арналған оңай нұсқаулар
+• Жақсартулар мен түзетулер
+</kk>
+<km-KH>
+• ថ្មី៖ កម្មវិធីអានគម្ពីរគួរអានដោយគ្មានអ៊ីនធឺណិត មានអត្ថន័យជាភាសាទួរគី ចំណាំ និងទំហំអក្សរដែលអាចកែបាន
+• ការជូនដំណឹងសឡាតស្ងប់ស្ងាត់ជាងមុនតាមលំនាំដើម៖ សំឡេងស្រាល ស្ងាត់ ឬអាហ្សាន ព្រមទាំងសំឡេងកណ្ដឹងស្ងប់មុនពេលសឡាត
+• អាហ្សានអាចទុកចិត្តបានជាងមុន៖ ការណែនាំងាយៗដើម្បីអនុញ្ញាតម៉ោងរោទ៍ច្បាស់លាស់ និងថ្មគ្មានដែនកំណត់
+• ការកែលម្អ និងការជួសជុល
+</km-KH>
+<kn-IN>
+• ಹೊಸದು: ಇಂಟರ್ನೆಟ್ ಇಲ್ಲದೆ ಕುರ್‌ಆನ್ ರೀಡರ್, ಟರ್ಕಿಷ್ ಅರ್ಥ, ಬುಕ್‌ಮಾರ್ಕ್‌ಗಳು ಮತ್ತು ಹೊಂದಿಸಬಹುದಾದ ಪಠ್ಯ ಗಾತ್ರ
+• ಡೀಫಾಲ್ಟ್ ಆಗಿ ಹೆಚ್ಚು ಶಾಂತ ನಮಾಜ್ ಅಧಿಸೂಚನೆಗಳು: ಮೃದು ಧ್ವನಿ, ಮೌನ ಅಥವಾ ಅಝಾನ್, ಜೊತೆಗೆ ನಮಾಜ್ ಸಮಯದ ಮೊದಲು ಶಾಂತ ಗಂಟೆ
+• ಹೆಚ್ಚು ವಿಶ್ವಾಸಾರ್ಹ ಅಝಾನ್: ನಿಖರ ಅಲಾರಂ ಮತ್ತು ಮಿತಿಯಿಲ್ಲದ ಬ್ಯಾಟರಿಗೆ ಅನುಮತಿಸಲು ಸುಲಭ ಮಾರ್ಗದರ್ಶನ
+• ಸುಧಾರಣೆಗಳು ಮತ್ತು ಪರಿಹಾರಗಳು
+</kn-IN>
+<ko-KR>
+• 새 기능: 인터넷 없이 읽는 쿠란, 터키어 뜻풀이, 북마크, 글자 크기 조절
+• 기본값으로 더 부드러운 예배 알림: 가벼운 소리, 무음 또는 아잔, 예배 시간 전의 차분한 알림음
+• 더 안정적인 아잔: 정확한 알람과 배터리 제한 해제를 허용하도록 쉽게 안내
+• 개선 및 오류 수정
+</ko-KR>
+<ky-KG>
+• Жаңы: интернетсиз Куран окугуч, түркчө маани, бетбелгилер жана жөнгө салынуучу текст өлчөмү
+• Демейки боюнча тынчыраак намаз эскертмелери: жумшак добуш, үнсүз же азан, ошондой эле намаз убактысына чейин тынч коңгуроо
+• Ишенимдүүраак азан: так ойготкучтарга жана чектөөсүз батареяга уруксат берүү үчүн оңой көрсөтмөлөр
+• Жакшыртуулар жана оңдоолор
+</ky-KG>
+<lo-LA>
+• ໃໝ່: ເຄື່ອງອ່ານອັລກຸຣອານແບບບໍ່ຕ້ອງໃຊ້ອິນເຕີເນັດ ມີຄວາມໝາຍພາສາເທີກີ ບຸກມາກ ແລະ ປັບຂະໜາດຕົວໜັງສືໄດ້
+• ການແຈ້ງເຕືອນລະໝາດທີ່ສະຫງົບຂຶ້ນຕາມຄ່າເລີ່ມຕົ້ນ: ສຽງເບົາ ງຽບ ຫຼື ອາຊານ ພ້ອມສຽງກະດິ່ງສະຫງົບກ່ອນເວລາລະໝາດ
+• ອາຊານທີ່ເຊື່ອຖືໄດ້ຂຶ້ນ: ຄຳແນະນຳງ່າຍໆເພື່ອອະນຸຍາດໂມງປຸກທີ່ແນ່ນອນ ແລະ ແບັດເຕີຣີ່ບໍ່ຈຳກັດ
+• ການປັບປຸງ ແລະ ການແກ້ໄຂ
+</lo-LA>
+<lt>
+• Nauja: Korano skaitytuvas be interneto su turkišku aiškinimu, žymėmis ir reguliuojamu teksto dydžiu
+• Pagal nutylėjimą ramesni maldos pranešimai: švelnus garsas, tyla arba azanas, taip pat rami skambutis prieš maldos laiką
+• Patikimesnis azanas: paprasti nurodymai leisti tikslius žadintuvus ir neribotą bateriją
+• Patobulinimai ir pataisymai
+</lt>
+<lv>
+• Jaunums: Korāna lasītājs bez interneta ar turku nozīmi, grāmatzīmēm un regulējamu teksta izmēru
+• Pēc noklusējuma mierīgāki lūgšanu paziņojumi: maiga skaņa, klusums vai azāns, kā arī mierīgs zvans pirms lūgšanas laika
+• Uzticamāks azāns: vienkārši norādījumi, lai atļautu precīzus modinātājus un neierobežotu bateriju
+• Uzlabojumi un labojumi
+</lv>
+<mk-MK>
+• Ново: читач на Куранот без интернет со турско значење, обележувачи и приспособлива големина на текстот
+• Потивки известувања за молитва по стандард: тивок звук, без звук или езан, плус мирно ѕвонче пред времето за молитва
+• Посигурен езан: лесни насоки за дозвола на точни аларми и неограничена батерија
+• Подобрувања и поправки
+</mk-MK>
+<ml-IN>
+• പുതിയത്: ഇന്റർനെറ്റ് ഇല്ലാതെ ഖുർആൻ വായന, തുർക്കിഷ് അർത്ഥം, ബുക്ക്മാർക്കുകൾ, ക്രമീകരിക്കാവുന്ന അക്ഷര വലുപ്പം
+• ഡിഫോൾട്ടായി ശാന്തമായ നമസ്കാര അറിയിപ്പുകൾ: മൃദുവായ ശബ്ദം, നിശബ്ദം അല്ലെങ്കിൽ അദാൻ, നമസ്കാര സമയത്തിന് മുമ്പ് ശാന്തമായ മണിയും
+• കൂടുതൽ വിശ്വസനീയമായ അദാൻ: കൃത്യമായ അലാറങ്ങളും പരിധിയില്ലാത്ത ബാറ്ററിയും അനുവദിക്കാൻ എളുപ്പ നിർദ്ദേശങ്ങൾ
+• മെച്ചപ്പെടുത്തലുകളും പരിഹാരങ്ങളും
+</ml-IN>
+<mn-MN>
+• Шинэ: интернетгүй Коран унших, турк утга, тэмдэглэгээ болон тохируулах боломжтой үсгийн хэмжээ
+• Анхдагчаар намуухан залбирлын мэдэгдэл: зөөлөн дуу, дуугүй эсвэл азан, мөн залбирлын цагаас өмнө тайван хонх
+• Илүү найдвартай азан: яг хугацааны сэрүүлэг, хязгааргүй батерейг зөвшөөрөх энгийн заавар
+• Сайжруулалт ба засвар
+</mn-MN>
+<mr-IN>
+• नवीन: इंटरनेटशिवाय कुरआन वाचक, तुर्की अर्थ, बुकमार्क आणि बदलता येणारा मजकूर आकार
+• डीफॉल्टनुसार अधिक शांत नमाज सूचना: हलका आवाज, मूक किंवा अज़ान, तसेच नमाजाच्या वेळेआधी शांत घंटा
+• अधिक विश्वासार्ह अज़ान: अचूक अलार्म आणि अमर्यादित बॅटरीला परवानगी देण्यासाठी सोपी मार्गदर्शने
+• सुधारणा आणि दुरुस्त्या
+</mr-IN>
+<ms>
+• Baharu: pembaca Al-Quran luar talian dengan terjemahan Turki, penanda buku dan saiz teks boleh laras
+• Pemberitahuan solat yang lebih lembut secara lalai: bunyi lembut, senyap atau azan, serta loceng tenang sebelum waktu solat
+• Azan lebih dipercayai: panduan mudah untuk membenarkan penggera tepat dan bateri tanpa had
+• Penambahbaikan dan pembetulan
+</ms>
+<ms-MY>
+• Baharu: pembaca Al-Quran luar talian dengan terjemahan Turki, penanda buku dan saiz teks boleh laras
+• Pemberitahuan solat yang lebih lembut secara lalai: bunyi lembut, senyap atau azan, serta loceng tenang sebelum waktu solat
+• Azan lebih dipercayai: panduan mudah untuk membenarkan penggera tepat dan bateri tanpa had
+• Penambahbaikan dan pembetulan
+</ms-MY>
+<my-MM>
+• အသစ်: အင်တာနက်မလိုသော ကုရ်အာန်ဖတ်ရှုစနစ်၊ တူရကီအဓိပ္ပာယ်၊ စာညှပ်များနှင့် ချိန်ညှိနိုင်သော စာလုံးအရွယ်အစား
+• မူလအနေဖြင့် ပိုမိုတည်ငြိမ်သော ဆွလာသတိပေးချက်များ- နူးညံ့သောအသံ၊ အသံတိတ် သို့မဟုတ် အဇန်၊ ထို့အပြင် ဆွလာအချိန်မတိုင်မီ တည်ငြိမ်သောခေါင်းလောင်းသံ
+• ပိုမိုယုံကြည်ရသော အဇန်- တိကျသောနှိုးစက်များနှင့် ကန့်သတ်မထားသော ဘက်ထရီကို ခွင့်ပြုရန် လွယ်ကူသောလမ်းညွှန်
+• တိုးတက်မှုများနှင့် ပြင်ဆင်မှုများ
+</my-MM>
+<ne-NP>
+• नयाँ: इन्टरनेटबिना कुरआन रिडर, टर्किस अर्थ, बुकमार्क र समायोज्य अक्षर आकार
+• पूर्वनिर्धारित रूपमा थप शान्त नमाज सूचना: हल्का आवाज, मौन वा अजान, साथै नमाजको समयअघि शान्त घण्टी
+• थप भरपर्दो अजान: सही अलार्म र असीमित ब्याट्रीलाई अनुमति दिन सजिलो निर्देशन
+• सुधार र समाधानहरू
+</ne-NP>
+<nl-NL>
+• Nieuw: Koranlezer zonder internet met Turkse betekenis, bladwijzers en instelbare tekstgrootte
+• Rustigere gebedsmeldingen als standaard: zacht geluid, stil of adhan, plus een rustige bel vóór de gebedstijd
+• Betrouwbaardere adhan: eenvoudige aanwijzingen om exacte alarmen en onbeperkte batterij toe te staan
+• Verbeteringen en bugfixes
+</nl-NL>
+<no-NO>
+• Nytt: Koranleser uten internett med tyrkisk betydning, bokmerker og justerbar tekststørrelse
+• Mildere bønnevarsler som standard: myk lyd, stille eller adhan, pluss en rolig klokke før bønnetiden
+• Mer pålitelig adhan: enkle veiledninger for å tillate nøyaktige alarmer og ubegrenset batteri
+• Forbedringer og rettelser
+</no-NO>
+<pa>
+• ਨਵਾਂ: ਇੰਟਰਨੈੱਟ ਤੋਂ ਬਿਨਾਂ ਕੁਰਾਨ ਰੀਡਰ, ਤੁਰਕੀ ਅਰਥ, ਬੁੱਕਮਾਰਕ ਅਤੇ ਬਦਲਣਯੋਗ ਟੈਕਸਟ ਆਕਾਰ
+• ਮੂਲ ਰੂਪ ਵਿੱਚ ਵਧੇਰੇ ਸ਼ਾਂਤ ਨਮਾਜ਼ ਸੂਚਨਾਵਾਂ: ਹਲਕੀ ਆਵਾਜ਼, ਚੁੱਪ ਜਾਂ ਅਜ਼ਾਨ, ਨਾਲ ਨਮਾਜ਼ ਤੋਂ ਪਹਿਲਾਂ ਸ਼ਾਂਤ ਘੰਟੀ
+• ਵਧੇਰੇ ਭਰੋਸੇਯੋਗ ਅਜ਼ਾਨ: ਸਟੀਕ ਅਲਾਰਮ ਅਤੇ ਅਸੀਮਿਤ ਬੈਟਰੀ ਦੀ ਆਗਿਆ ਲਈ ਆਸਾਨ ਹਦਾਇਤਾਂ
+• ਸੁਧਾਰ ਅਤੇ ਫ਼ਿਕਸ
+</pa>
+<pl-PL>
+• Nowość: czytnik Koranu offline z tureckim znaczeniem, zakładkami i regulowanym rozmiarem tekstu
+• Domyślnie spokojniejsze powiadomienia o modlitwie: delikatny dźwięk, cisza lub azan oraz spokojny dzwonek przed czasem modlitwy
+• Bardziej niezawodny azan: proste wskazówki, jak zezwolić na dokładne alarmy i nieograniczoną baterię
+• Ulepszenia i poprawki
+</pl-PL>
+<pt-BR>
+• Novidade: leitor do Alcorão offline com significado em turco, marcadores e tamanho de texto ajustável
+• Avisos de oração mais suaves por padrão: som suave, silêncio ou adhan, mais um toque calmo antes da hora da oração
+• Adhan mais confiável: instruções simples para permitir alarmes exatos e bateria sem restrições
+• Melhorias e correções
+</pt-BR>
+<pt-PT>
+• Novidade: leitor do Alcorão offline com significado em turco, marcadores e tamanho de texto ajustável
+• Avisos de oração mais suaves por padrão: som suave, silêncio ou adhan, mais um toque calmo antes da hora da oração
+• Adhan mais confiável: instruções simples para permitir alarmes exatos e bateria sem restrições
+• Melhorias e correções
+</pt-PT>
+<rm>
+• Nov: lectur dal Curan senza internet cun significaziun en turc, segnalibers e grondezza da text ajustabla
+• Avertiments da la preghiera pli moderats sco standard: tun flaivel, silenzi u adhan, ed in tun quiet avant il temp da preghiera
+• Adhan pli segir: instrucziuns simplas per permetter alarmas exactas e batteria senza restricziuns
+• Meglieraziuns e currecturas
+</rm>
+<ro>
+• Nou: cititor de Coran offline cu înțeles în turcă, marcaje și dimensiune reglabilă a textului
+• Notificări de rugăciune mai blânde implicit: sunet ușor, silențios sau adhan, plus un clopoțel liniștit înainte de ora rugăciunii
+• Adhan mai fiabil: indicații simple pentru a permite alarme exacte și baterie nerestricționată
+• Îmbunătățiri și remedieri
+</ro>
+<ru-RU>
+• Новое: чтение Корана без интернета с турецким переводом, закладками и настраиваемым размером текста
+• Более спокойные уведомления о намазе по умолчанию: тихий сигнал, без звука или азан, а также мягкий звонок перед временем молитвы
+• Более надёжный азан: простые подсказки для разрешения точных будильников и работы без ограничений батареи
+• Улучшения и исправления
+</ru-RU>
+<si-LK>
+• අලුත්: අන්තර්ජාලයකින් තොරව කුර්ආන් කියවනය, තුර්කි අර්ථය, පිටු සළකුණු සහ වෙනස් කළ හැකි අකුරු ප්‍රමාණය
+• පෙරනිමියෙන් වඩා සන්සුන් සලාත් දැනුම්දීම්: මෘදු ශබ්දය, නිශ්ශබ්ද හෝ අදාන්, සලාත් වේලාවට පෙර සන්සුන් සීනුවක්ද
+• වඩා විශ්වසනීය අදාන්: නිවැරදි අනතුරු ඇඟවීම් සහ සීමා රහිත බැටරිය ඉඩ දීමට පහසු මග පෙන්වීම්
+• වැඩිදියුණු කිරීම් සහ නිවැරදි කිරීම්
+</si-LK>
+<sk>
+• Novinka: čítačka Koránu offline s tureckým významom, záložkami a nastaviteľnou veľkosťou textu
+• Pokojnejšie upozornenia na modlitbu predvolene: jemný zvuk, ticho alebo azán a pokojný zvonček pred časom modlitby
+• Spoľahlivejší azán: jednoduché pokyny na povolenie presných budíkov a neobmedzenej batérie
+• Vylepšenia a opravy
+</sk>
+<sl>
+• Novo: bralnik Korana brez interneta s turškim pomenom, zaznamki in nastavljivo velikostjo besedila
+• Privzeto mirnejša obvestila o molitvi: nežen zvok, tiho ali ezan ter mirno zvonjenje pred časom molitve
+• Zanesljivejši ezan: preprosta navodila za dovoljenje natančnih alarmov in neomejene baterije
+• Izboljšave in popravki
+</sl>
+<sq>
+• E re: lexues i Kuranit pa internet me kuptim në turqisht, shënues dhe madhësi teksti të rregullueshme
+• Njoftime më të qeta të namazit si parazgjedhje: tingull i butë, i heshtur ose ezan, plus një zile e qetë para kohës së namazit
+• Ezan më i besueshëm: udhëzime të thjeshta për të lejuar alarme të sakta dhe bateri pa kufizime
+• Përmirësime dhe korrigjime
+</sq>
+<sr>
+• Ново: читач Курана без интернета са турским значењем, обележивачима и подесивом величином текста
+• Мирнија обавештења о молитви подразумевано: тих звук, без звука или езан, и мирно звоно пре времена молитве
+• Поузданији езан: једноставна упутства за дозвољавање тачних аларма и неограничене батерије
+• Побољшања и исправке
+</sr>
+<sv-SE>
+• Nytt: Koranläsare utan internet med turkisk betydelse, bokmärken och justerbar textstorlek
+• Lugnare bönenotiser som standard: mjukt ljud, tyst eller adhan, plus en lugn klocka före bönetiden
+• Pålitligare adhan: enkla instruktioner för att tillåta exakta alarm och obegränsat batteri
+• Förbättringar och felrättningar
+</sv-SE>
+<sw>
+• Mpya: msomaji wa Qur'ani bila intaneti wenye maana ya Kituruki, alamisho na ukubwa wa maandishi unaorekebishwa
+• Arifa za swala laini zaidi kwa chaguo-msingi: sauti nyepesi, kimya au adhana, pamoja na kengele tulivu kabla ya wakati wa swala
+• Adhana ya kuaminika zaidi: maelekezo rahisi ya kuruhusu kengele sahihi na betri isiyo na kikomo
+• Maboresho na marekebisho
+</sw>
+<ta-IN>
+• புதியது: இணையம் இல்லாமல் குர்ஆன் வாசிப்பு, துருக்கிய பொருள், புக்மார்க்குகள் மற்றும் மாற்றக்கூடிய எழுத்து அளவு
+• இயல்பாக அமைதியான தொழுகை அறிவிப்புகள்: மென்மையான ஒலி, அமைதி அல்லது அதான், தொழுகை நேரத்துக்கு முன் அமைதியான மணி
+• மேலும் நம்பகமான அதான்: துல்லியமான அலாரங்களையும் வரம்பற்ற பேட்டரியையும் அனுமதிக்க எளிய வழிகாட்டுதல்
+• மேம்பாடுகள் மற்றும் திருத்தங்கள்
+</ta-IN>
+<te-IN>
+• కొత్తది: ఇంటర్నెట్ లేకుండా ఖురాన్ రీడర్, టర్కిష్ అర్థం, బుక్‌మార్క్‌లు మరియు మార్చగల అక్షర పరిమాణం
+• డిఫాల్ట్‌గా మరింత ప్రశాంతమైన నమాజ్ నోటిఫికేషన్లు: సున్నితమైన శబ్దం, మౌనం లేదా అజాన్, నమాజ్ సమయానికి ముందు ప్రశాంతమైన గంట
+• మరింత నమ్మదగిన అజాన్: ఖచ్చితమైన అలారాలు మరియు పరిమితి లేని బ్యాటరీని అనుమతించడానికి సులభమైన సూచనలు
+• మెరుగుదలలు మరియు పరిష్కారాలు
+</te-IN>
+<th>
+• ใหม่: เครื่องอ่านอัลกุรอานแบบออฟไลน์ พร้อมความหมายภาษาตุรกี ที่คั่นหน้า และปรับขนาดตัวอักษรได้
+• การแจ้งเตือนละหมาดที่นุ่มนวลขึ้นเป็นค่าเริ่มต้น: เสียงเบา เงียบ หรืออะซาน พร้อมเสียงระฆังสงบก่อนเวลาละหมาด
+• อะซานเชื่อถือได้มากขึ้น: คำแนะนำง่าย ๆ เพื่ออนุญาตนาฬิกาปลุกที่แม่นยำและแบตเตอรี่แบบไม่จำกัด
+• การปรับปรุงและแก้ไข
+</th>
+<tr-TR>
+• Yeni: internetsiz Kur'an okuyucu, Türkçe meal, yer imleri ve ayarlanabilir yazı boyutu
+• Varsayılan olarak daha sakin namaz bildirimleri: hafif, sessiz veya ezan sesi; vakitten önce huzurlu bir hatırlatma sesi
+• Daha güvenilir ezan: tam zamanlı alarm ve pil kısıtlamasını kaldırma için kolay yönlendirme
+• İyileştirmeler ve hata düzeltmeleri
+</tr-TR>
+<uk>
+• Нове: читання Корану без інтернету з турецьким перекладом, закладками та регульованим розміром тексту
+• Спокійніші сповіщення про намаз за замовчуванням: тихий сигнал, без звуку або азан, а також м'який дзвінок перед часом молитви
+• Надійніший азан: прості підказки, щоб дозволити точні будильники та роботу без обмежень батареї
+• Покращення та виправлення
+</uk>
+<ur>
+• نیا: انٹرنیٹ کے بغیر قرآن ریڈر، ترکی معنی، بُک مارکس اور تبدیل ہونے والا متن کا سائز
+• بطورِ طے شدہ زیادہ پُرسکون نماز الرٹس: ہلکی آواز، خاموش یا اذان، ساتھ نماز سے پہلے پُرسکون گھنٹی
+• زیادہ قابلِ بھروسا اذان: درست الارم اور لامحدود بیٹری کی اجازت کے لیے آسان رہنمائی
+• بہتریاں اور اصلاحات
+</ur>
+<vi>
+• Mới: trình đọc Kinh Qur'an ngoại tuyến có nghĩa tiếng Thổ Nhĩ Kỳ, dấu trang và cỡ chữ tùy chỉnh
+• Thông báo giờ cầu nguyện nhẹ nhàng hơn theo mặc định: âm thanh nhẹ, im lặng hoặc adhan, cùng chuông êm dịu trước giờ cầu nguyện
+• Adhan đáng tin cậy hơn: hướng dẫn dễ dàng để cho phép báo thức chính xác và pin không giới hạn
+• Cải tiến và sửa lỗi
+</vi>
+<zh-CN>
+• 新功能：离线《古兰经》阅读器，附土耳其语释义、书签和可调字号
+• 默认更柔和的礼拜提醒：轻柔提示音、静音或阿赞，礼拜时间前还有舒缓的钟声
+• 更可靠的阿赞：简单引导，允许精确闹钟和不受限制的电池使用
+• 改进与问题修复
+</zh-CN>
+<zh-HK>
+• 新功能：離線《古蘭經》閱讀器，附土耳其語釋義、書籤與可調字級
+• 預設更柔和的禮拜提醒：輕柔提示音、靜音或阿贊，禮拜時間前還有舒緩的鐘聲
+• 更可靠的阿贊：簡單引導，允許精確鬧鐘與不受限制的電池使用
+• 改善與問題修正
+</zh-HK>
+<zh-TW>
+• 新功能：離線《古蘭經》閱讀器，附土耳其語釋義、書籤與可調字級
+• 預設更柔和的禮拜提醒：輕柔提示音、靜音或阿贊，禮拜時間前還有舒緩的鐘聲
+• 更可靠的阿贊：簡單引導，允許精確鬧鐘與不受限制的電池使用
+• 改善與問題修正
+</zh-TW>
+<zu>
+• Okusha: isifundi seQur'an ngaphandle kwe-inthanethi esinencazelo yesiTurkey, amabhukimakhi nosayizi wombhalo oguqulwayo
+• Izaziso zomthandazo ezithambile ngokuzenzakalelayo: umsindo ophansi, ukuthula noma i-adhan, kanye nensimbi ethule ngaphambi kwesikhathi somthandazo
+• I-adhanethembekile kakhulu: iziqondiso ezilula zokuvumela ama-alamu aqondile nebhethri elingenamkhawulo
+• Ukuthuthukiswa nokulungiswa
+</zu>
