@@ -19,13 +19,27 @@ const LIVE_BANNER_AD_UNIT_ID = Platform.select({
 // Always the real banner unit, in every build type
 export const BANNER_AD_UNIT_ID = LIVE_BANNER_AD_UNIT_ID;
 
+export const INLINE_BANNER_AD_UNIT_ID = Platform.select({
+  android:
+    process.env.EXPO_PUBLIC_ADMOB_INLINE_BANNER_ID_ANDROID ||
+    LIVE_BANNER_AD_UNIT_ID,
+  ios:
+    process.env.EXPO_PUBLIC_ADMOB_INLINE_BANNER_ID_IOS ||
+    LIVE_BANNER_AD_UNIT_ID,
+  default: LIVE_BANNER_AD_UNIT_ID,
+});
+
+const RETRY_DELAYS_MS = [30000, 60000, 120000];
+
 interface BannerAdProps {
+  unitId?: string;
   size?: BannerAdSize;
   /** Extra spacing for in-content placements; only applied while an ad is actually showing. */
   style?: ViewStyle;
 }
 
 export const BannerAd: React.FC<BannerAdProps> = ({
+  unitId = BANNER_AD_UNIT_ID,
   size = BannerAdSize.ANCHORED_ADAPTIVE_BANNER,
   style,
 }) => {
@@ -33,6 +47,7 @@ export const BannerAd: React.FC<BannerAdProps> = ({
   const [sdkReady, setSdkReady] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [reloadKey, setReloadKey] = useState(0);
+  const retryCount = useRef(0);
   const retryTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -44,19 +59,22 @@ export const BannerAd: React.FC<BannerAdProps> = ({
     };
   }, []);
 
-  // If ad encounters a transient error or no-fill, retry gracefully after 25s
+  // Exponential backoff (30s -> 60s -> 120s, max 3 retries) to avoid AdMob rate-limit throttling
   const handleAdFailedToLoad = (error: any) => {
     if (__DEV__) {
       console.log('[AdMob Banner Load Error]:', error);
     }
     setIsLoaded(false);
+    if (retryCount.current >= RETRY_DELAYS_MS.length) return;
+    const delay = RETRY_DELAYS_MS[retryCount.current];
+    retryCount.current += 1;
     if (retryTimer.current) clearTimeout(retryTimer.current);
     retryTimer.current = setTimeout(() => {
       setReloadKey((k) => k + 1);
-    }, 25000);
+    }, delay);
   };
 
-  if (Platform.OS === 'web' || !BANNER_AD_UNIT_ID || width === 0 || !sdkReady) {
+  if (Platform.OS === 'web' || !unitId || width === 0 || !sdkReady) {
     return null;
   }
 
@@ -74,7 +92,7 @@ export const BannerAd: React.FC<BannerAdProps> = ({
     >
       <AdMobBanner
         key={reloadKey}
-        unitId={BANNER_AD_UNIT_ID}
+        unitId={unitId}
         size={size}
         requestOptions={{
           requestNonPersonalizedAdsOnly: false,
@@ -84,6 +102,7 @@ export const BannerAd: React.FC<BannerAdProps> = ({
           if (__DEV__) {
             console.log('[AdMob Banner Loaded Successfully]');
           }
+          retryCount.current = 0;
           setIsLoaded(true);
         }}
       />

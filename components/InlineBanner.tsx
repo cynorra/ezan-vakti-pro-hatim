@@ -1,5 +1,6 @@
 import React from 'react';
-import { BannerAd } from '@/components/BannerAd';
+import { BannerAd, INLINE_BANNER_AD_UNIT_ID } from './BannerAd';
 
-/** In-content banner. Takes no space until an ad has actually loaded. */
-export const InlineBanner: React.FC = () => <BannerAd style={{ marginVertical: 12 }} />;
+export const InlineBanner: React.FC = () => (
+  <BannerAd unitId={INLINE_BANNER_AD_UNIT_ID} style={{ marginVertical: 12 }} />
+);
