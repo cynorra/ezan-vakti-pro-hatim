@@ -7,6 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows } from '@/constants/theme';
 import Constants from 'expo-constants';
 import { PLAY_STORE_URL } from '@/lib/share';
+import { openPlayStoreReview } from '@/lib/reviewPrompt';
 import { CALCULATION_METHODS, CALCULATION_METHOD_IDS, CalculationMethodId } from '@/lib/prayer-times';
 import { playTestEzanSound } from '@/lib/notifications';
 import {
@@ -130,8 +131,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   };
 
   const handleRateApp = () => {
-    // Opens the Play Store app directly; falls back to the web listing.
-    Linking.openURL('market://details?id=com.cynnora.ezanvakti').catch(() => Linking.openURL(PLAY_STORE_URL));
+    openPlayStoreReview();
   };
 
   const handleFeedback = () => {

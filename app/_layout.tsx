@@ -4,6 +4,7 @@ import { Colors } from '@/constants/theme';
 import { useColorScheme, Text } from 'react-native';
 import * as Notifications from 'expo-notifications';
 import { AnimatedSplash } from '@/components/AnimatedSplash';
+import { RateAppModal } from '@/components/RateAppModal';
 import '@/lib/i18n';
 
 // Sistem yazı boyutu büyütülse dahi premium tasarımımızın kaymasını ve bozulmasını engeller
@@ -73,6 +74,7 @@ export default function RootLayout() {
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       </Stack>
       {showSplash && <AnimatedSplash onFinish={() => setShowSplash(false)} />}
+      <RateAppModal ready={!showSplash} />
     </>
   );
 }
