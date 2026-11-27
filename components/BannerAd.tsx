@@ -19,15 +19,19 @@ const LIVE_BANNER_AD_UNIT_ID = Platform.select({
 // Always the real banner unit, in every build type
 export const BANNER_AD_UNIT_ID = LIVE_BANNER_AD_UNIT_ID;
 
-export const INLINE_BANNER_AD_UNIT_ID = Platform.select({
-  android:
-    process.env.EXPO_PUBLIC_ADMOB_INLINE_BANNER_ID_ANDROID ||
-    LIVE_BANNER_AD_UNIT_ID,
-  ios:
-    process.env.EXPO_PUBLIC_ADMOB_INLINE_BANNER_ID_IOS ||
-    LIVE_BANNER_AD_UNIT_ID,
+export const SCREEN_BANNER_IDS = {
   default: LIVE_BANNER_AD_UNIT_ID,
-});
+  home: 'ca-app-pub-4674211063760769/6661809248',
+  kible: 'ca-app-pub-4674211063760769/7831420686',
+  tesbih: 'ca-app-pub-4674211063760769/9096400898',
+  hatim: 'ca-app-pub-4674211063760769/8657417194',
+  dua: 'ca-app-pub-4674211063760769/6031253856',
+  kaza: 'ca-app-pub-4674211063760769/9150699229',
+} as const;
+
+export type BannerPlacement = keyof typeof SCREEN_BANNER_IDS;
+
+export const INLINE_BANNER_AD_UNIT_ID = SCREEN_BANNER_IDS.default;
 
 const RETRY_DELAYS_MS = [30000, 60000, 120000];
 

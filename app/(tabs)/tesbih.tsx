@@ -311,7 +311,7 @@ export default function TesbihScreen() {
             ))}
           </ScrollView>
         </View>
-        <InlineBanner />
+        <InlineBanner placement="tesbih" />
         <View style={{ height: 100 }} />
       </ScrollView>
 

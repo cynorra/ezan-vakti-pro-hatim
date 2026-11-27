@@ -289,7 +289,7 @@ export default function DuaScreen() {
             </View>
           ))}
           <View style={{ height: 100 }} />
-          <InlineBanner />
+          <InlineBanner placement="dua" />
         </ScrollView>
 
         {/* Off-screen Image Card for Dynamic Capture */}

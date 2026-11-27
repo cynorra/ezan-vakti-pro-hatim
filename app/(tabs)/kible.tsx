@@ -14,6 +14,7 @@ import * as Haptics from 'expo-haptics';
 import { safeHaptics } from '@/lib/haptics';
 import { Colors, Spacing, FontSize, BorderRadius, Shadows, Gradients } from '@/constants/theme';
 import { SEOHead } from '@/components/SEOHead';
+import { InlineBanner } from '@/components/InlineBanner';
 import { logQiblaSearched } from '@/lib/analytics';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
@@ -253,6 +254,7 @@ export default function KibleScreen() {
             {t('qibla.hint')}
           </Text>
         )}
+        <InlineBanner placement="kible" />
       </View>
     </View>
     </>

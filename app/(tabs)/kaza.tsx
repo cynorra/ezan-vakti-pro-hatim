@@ -233,7 +233,7 @@ export default function KazaScreen() {
           {renderPrayerCard('yatsi', t('kaza.yatsi') || 'Yatsı', 'star-outline')}
           {renderPrayerCard('vitir', t('kaza.vitir') || 'Vitir', 'heart-outline')}
 
-          <InlineBanner />
+          <InlineBanner placement="kaza" />
           <View style={{ height: 100 }} />
         </ScrollView>
       </View>

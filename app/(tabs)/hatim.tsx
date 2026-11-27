@@ -561,7 +561,7 @@ export default function HatimScreen() {
           </View>
         )}
         <View style={{ height: 120 }} />
-        <InlineBanner />
+        <InlineBanner placement="hatim" />
       </ScrollView>
 
       {/* Jüz Detay Modal */}

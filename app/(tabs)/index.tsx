@@ -545,7 +545,7 @@ export default function HomeScreen() {
           </TouchableOpacity>
         </View>
 
-        <InlineBanner />
+        <InlineBanner placement="home" />
 
         {/* Religious Days Card */}
         <ReligiousDaysCard />
